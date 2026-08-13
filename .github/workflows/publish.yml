@@ -1,0 +1,48 @@
+name: Publish paperboy briefs
+
+on:
+  schedule:
+    - cron: "20 10 * * *"   # 06:20 ET — after the daily run
+    - cron: "20 13 * * 0"   # 09:20 ET Sunday — after the weekly run
+    - cron: "0 23 * * *"    # 19:00 ET — safety net
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paperboy-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install WeasyPrint
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libpango-1.0-0 libpangoft2-1.0-0 \
+            libharfbuzz0b libffi-dev fonts-dejavu
+          pip install --quiet weasyprint pillow
+
+      - name: Collect and render
+        id: relay
+        env:
+          PAPERBOY_OUTBOX: ${{ vars.PAPERBOY_OUTBOX }}
+          GDRIVE_API_KEY: ${{ secrets.GDRIVE_API_KEY }}
+        run: python tools/relay.py
+
+      - name: Commit
+        if: steps.relay.outputs.published != '0'
+        run: |
+          git config user.name  "Paperboy"
+          git config user.email "paperboy@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "publish: $(date -u +%Y-%m-%d)"
+          git push
