@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-08-13",
+  "kind": "weekly",
+  "dateline": "Week of August 10, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-13-weekly.html",
+  "pdf": "pdf/2026-08-13-weekly.pdf",
+  "standfirst": "A placeholder, so this address resolves. The first real weekly report publishes Sunday at 09:00 Eastern."
+ },
+ {
+  "date": "2026-08-13",
   "kind": "daily",
   "dateline": "Thursday, August 13, 2026",
   "month": "August 2026",
