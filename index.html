@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="icon.png">
+<title>Paperboy — Thursday, August 13, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Thursday, August 13, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Paperboy is publishing here now. The first real brief lands tomorrow at 06:00 Eastern.</p>
+<ul class="jump"><li><a href="#setup">Setup</a></li></ul>
+<div class="section" id="setup">
+<hr class="rule-hair"><p class="topic">Setup</p>
+<div class="item">
+<h2>The web edition is live</h2>
+<p class="field">What happened</p><p>This page is what the daily brief will look like. It always shows the most recent daily; the weekly lives at <a href="weekly.html">weekly.html</a>, and every past issue is in the archive linked at the bottom.</p>
+<p class="field">What it means</p><p>Add this page to your home screen and it opens like an app, straight to the current brief, with no navigation and no app to install.</p>
+<p class="field">Watch next</p><p>Tomorrow, 06:00 ET.</p>
+</div>
+</div>
+<div class="foot">
+<span><a href="archive.html">Archive</a></span>
+<span><a href="pdf/2026-08-13-daily.pdf">PDF</a></span>
+</div></div></body></html>
