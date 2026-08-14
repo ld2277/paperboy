@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-08-14",
+  "kind": "daily",
+  "dateline": "Friday, August 14, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-14-daily.html",
+  "pdf": "pdf/2026-08-14-daily.pdf",
+  "standfirst": "US stocks closed at a record high on cooling inflation, even as strong earnings from Cisco, Applied Materials and Cerebras were met with falling share prices \u2014 investors are grading AI infrastructure spending on a curve of pure perfection."
+ },
+ {
   "date": "2026-08-13",
   "kind": "weekly",
   "dateline": "Week of August 10, 2026",
