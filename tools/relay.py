@@ -11,6 +11,12 @@ GitHub runner with a normal network stack — collects it and publishes.
         |
         v  (this script, 06:20)
     issues/2026-08-13-daily.html + pdf/ + index.html + archive.html
+                                 + state/brief-log.md
+
+The brief's `log` field is the run log the next Claude run reads to avoid
+repeating headlines. It is written back on every run from the newest brief
+seen -- published or already published -- so a repo whose log has fallen
+behind repairs itself on the next Action run rather than at the next publish.
 
 Anything already listed in issues.json is skipped, so re-running is harmless
 and a missed day is picked up by the next run.
@@ -116,6 +122,30 @@ def render_pdf(brief, path):
 
 # -------------------------------------------------------------------- main
 
+LOG_PATH = os.path.join(REPO_ROOT, "state", "brief-log.md")
+
+
+def write_log(text):
+    """Persist the run log. Returns True if the file changed on disk.
+
+    Never fail the run over it -- a stale log costs a repeated headline, a
+    crashed relay costs the whole edition."""
+    if not text or not text.strip():
+        return False
+    try:
+        if os.path.exists(LOG_PATH):
+            with open(LOG_PATH) as fh:
+                if fh.read() == text:
+                    return False
+        os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+        with open(LOG_PATH, "w") as fh:
+            fh.write(text)
+        return True
+    except Exception as exc:  # noqa: BLE001
+        print(f"  log not written: {exc}")
+        return False
+
+
 def already_published(kind, date):
     manifest = os.path.join(REPO_ROOT, "issues.json")
     if not os.path.exists(manifest):
@@ -130,6 +160,7 @@ def main():
 
     repo = Repo.at(REPO_ROOT)
     published = []
+    latest_log = None
 
     for file_id, name in briefs:
         try:
@@ -142,6 +173,11 @@ def main():
         if missing:
             print(f"  {name}: malformed, missing {missing} — skipped")
             continue
+
+        # Briefs arrive oldest name first, so the last assignment wins and
+        # the log always comes from the newest brief in the outbox.
+        if isinstance(brief.get("log"), str):
+            latest_log = brief["log"]
 
         if already_published(brief["kind"], brief["date"]):
             print(f"  {name}: already published")
@@ -160,11 +196,18 @@ def main():
     else:
         print(f"published {len(published)}: {', '.join(published)}")
 
-    # Surfaced to the workflow so it can skip an empty commit.
+    log_updated = write_log(latest_log)
+    if log_updated:
+        print("run log updated")
+
+    # Surfaced to the workflow so it can skip an empty commit. `changed` is
+    # what the commit step gates on: a log-only run still needs committing.
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as fh:
             fh.write(f"published={len(published)}\n")
+            fh.write(f"log_updated={int(log_updated)}\n")
+            fh.write(f"changed={int(bool(published) or log_updated)}\n")
 
 
 if __name__ == "__main__":
