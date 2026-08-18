@@ -39,7 +39,7 @@ jobs:
         run: python tools/relay.py
 
       - name: Commit
-        if: steps.relay.outputs.published != '0'
+        if: steps.relay.outputs.changed != '0'
         run: |
           git config user.name  "Paperboy"
           git config user.email "paperboy@users.noreply.github.com"
