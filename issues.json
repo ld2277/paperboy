@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-08-23",
+  "kind": "weekly",
+  "dateline": "Week of August 17, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-23-weekly.html",
+  "pdf": "pdf/2026-08-23-weekly.pdf",
+  "standfirst": "The United States put a 50% tariff on Canadian goods under a dormant 1930 statute, and Canada walked out of the talks. Chief Justice Roberts, acting alone, let the East Wing ballroom go back up. And Korean chip exports nearly tripled in twenty days \u2014 the AI buildout is now visible in a G20 country's national accounts."
+ },
+ {
+  "date": "2026-08-23",
+  "kind": "daily",
+  "dateline": "Sunday, August 23, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-23-daily.html",
+  "pdf": "pdf/2026-08-23-daily.pdf",
+  "standfirst": "Trade talks with Canada collapsed and 50% tariffs took effect Saturday; Ottawa retaliates dollar for dollar on September 8."
+ },
+ {
   "date": "2026-08-21",
   "kind": "daily",
   "dateline": "Friday, August 21, 2026",
