@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-08-30",
+  "kind": "weekly",
+  "dateline": "Week of August 24, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-30-weekly.html",
+  "pdf": "pdf/2026-08-30-weekly.pdf",
+  "standfirst": "The week the AI build-out stopped being an equity story and became a price story: Nvidia sold $96.2bn of it, memory swallowed two-thirds of next year's cloud hardware budget, and a new Fed chair stood up at Jackson Hole and blamed the central bank for 65 months of inflation. Elsewhere, Iceland shut the door on Brussels, France's second quarter turned out not to have grown at all, and the Himalayan flood toll passed 750."
+ },
+ {
+  "date": "2026-08-30",
+  "kind": "daily",
+  "dateline": "Sunday, August 30, 2026",
+  "month": "August 2026",
+  "href": "issues/2026-08-30-daily.html",
+  "pdf": "pdf/2026-08-30-daily.pdf",
+  "standfirst": "The Nepal\u2013Tibet flood toll passed 750 overnight with more than 3,000 still missing, and Sony and Warner sued Anthropic and its two founders personally over how Claude was trained."
+ },
+ {
   "date": "2026-08-29",
   "kind": "daily",
   "dateline": "Saturday, August 29, 2026",
