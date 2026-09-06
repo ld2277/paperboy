@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-09-06",
+  "kind": "weekly",
+  "dateline": "Week of August 31, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-06-weekly.html",
+  "pdf": "pdf/2026-09-06-weekly.pdf",
+  "standfirst": "Four AI labs shipped inside seven days, and the most capable of them arrived with its maker's written admission that it can no longer reliably read the model's reasoning. Everything else \u2014 Nvidia buying the open-model distribution layer, a superintelligence ban filed in the Senate, envoys shuttling between Moscow and Kyiv while the pause they brokered broke overnight \u2014 sat downstream of that."
+ },
+ {
+  "date": "2026-09-06",
   "kind": "daily",
   "dateline": "Sunday, September 6, 2026",
   "month": "September 2026",
