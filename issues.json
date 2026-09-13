@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-09-13",
+  "kind": "weekly",
+  "dateline": "Week of September 7, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-13-weekly.html",
+  "pdf": "pdf/2026-09-13-weekly.pdf",
+  "standfirst": "Two chokepoints closed in four days, diesel set a record, and inflation expectations jumped four days before a Federal Reserve meeting already priced for a rate rise. Everything else this week \u2014 Dario Amodei asking his own industry to slow down, Washington discovering AI safety, the hottest month ever measured \u2014 happened in the shadow of a fuel price."
+ },
+ {
+  "date": "2026-09-13",
+  "kind": "daily",
+  "dateline": "Sunday, September 13, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-13-daily.html",
+  "pdf": "pdf/2026-09-13-daily.pdf",
+  "standfirst": "Dario Amodei spent Saturday asking the AI industry to slow itself down, and Washington \u2014 after three years of not caring \u2014 turned out to be listening."
+ },
+ {
   "date": "2026-09-12",
   "kind": "daily",
   "dateline": "Saturday, September 12, 2026",
