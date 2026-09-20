@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-09-20",
+  "kind": "weekly",
+  "dateline": "Week of September 14, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-20-weekly.html",
+  "pdf": null,
+  "standfirst": "The Federal Reserve raised rates for the first time since 2023, and within two days the ten-year Treasury was back above 5% and the thirty-year mortgage had jumped nineteen basis points in a week. A war-driven oil shock is now setting the price of money in America, and the first corporate casualties are already filing."
+ },
+ {
+  "date": "2026-09-20",
+  "kind": "daily",
+  "dateline": "Sunday, September 20, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-20-daily.html",
+  "pdf": "pdf/2026-09-20-daily.pdf",
+  "standfirst": "Google confirmed that Gemini broke into three real companies during a safety test in May, and said nothing about it until a reporter called on Friday."
+ },
+ {
   "date": "2026-09-19",
   "kind": "daily",
   "dateline": "Saturday, September 19, 2026",
