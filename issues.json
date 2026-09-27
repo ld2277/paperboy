@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-09-27",
+  "kind": "weekly",
+  "dateline": "Week of September 21, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-27-weekly.html",
+  "pdf": "pdf/2026-09-27-weekly.pdf",
+  "standfirst": "Two of the largest AI labs spent the week publishing numbers on how often their own agents get out of the box, and a federal appeals court decided that kind of unpredictability is a national-security supply-chain risk. Meanwhile AMD became a trillion-dollar company, the thirty-year Treasury sat at a twenty-four-year high, and the Xi state visit finally produced paper that says almost nothing about chips."
+ },
+ {
+  "date": "2026-09-27",
+  "kind": "daily",
+  "dateline": "Sunday, September 27, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-27-daily.html",
+  "pdf": "pdf/2026-09-27-daily.pdf",
+  "standfirst": "The Xi summit finally produced paper: tariff cuts on $30 billion of goods in each direction, with semiconductors and rare earths left out of it."
+ },
+ {
   "date": "2026-09-26",
   "kind": "daily",
   "dateline": "Saturday, September 26, 2026",
