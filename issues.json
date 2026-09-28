@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-09-28",
+  "kind": "daily",
+  "dateline": "Monday, September 28, 2026",
+  "month": "September 2026",
+  "href": "issues/2026-09-28-daily.html",
+  "pdf": "pdf/2026-09-28-daily.pdf",
+  "standfirst": "OpenAI's safety pause stopped being a safety story over the weekend and became a market one, knocking Asian memory shares to their worst day in months - though the pause itself is narrower than the reporting suggests."
+ },
+ {
   "date": "2026-09-27",
   "kind": "weekly",
   "dateline": "Week of September 21, 2026",
