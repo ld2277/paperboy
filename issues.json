@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-10-01",
+  "kind": "daily",
+  "dateline": "Thursday, October 1, 2026",
+  "month": "October 2026",
+  "href": "issues/2026-10-01-daily.html",
+  "pdf": "pdf/2026-10-01-daily.pdf",
+  "standfirst": "Micron sold $54.2bn of memory in a single quarter at an 86.8% gross margin, and the stock closed three cents higher."
+ },
+ {
   "date": "2026-09-30",
   "kind": "daily",
   "dateline": "Wednesday, September 30, 2026",
