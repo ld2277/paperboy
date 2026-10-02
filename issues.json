@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-10-02",
+  "kind": "daily",
+  "dateline": "Friday, October 2, 2026",
+  "month": "October 2026",
+  "href": "issues/2026-10-02-daily.html",
+  "pdf": "pdf/2026-10-02-daily.pdf",
+  "standfirst": "Tencent is reported to have rented its way around US export controls, leasing about 100,000 Nvidia chips inside Oracle data centres in Southeast Asia - and not one of the three companies will confirm it."
+ },
+ {
   "date": "2026-10-01",
   "kind": "daily",
   "dateline": "Thursday, October 1, 2026",
