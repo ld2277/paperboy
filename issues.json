@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-10-04",
+  "kind": "weekly",
+  "dateline": "Week of September 28, 2026",
+  "month": "October 2026",
+  "href": "issues/2026-10-04-weekly.html",
+  "pdf": null,
+  "standfirst": "The AI build-out stopped being an abstraction about data centres and started showing up on price tags: Korea shipped more than $60bn of semiconductors in a single month, Micron disclosed an 88% operating margin on the memory that goes into phones and laptops, and Raspberry Pi raised prices for the second time this year because it cannot buy DRAM. A chip company bought a world-model lab for $8.2bn. And a weak jobs report on Friday took the Federal Reserve's October rate rise from near-certain to a long shot."
+ },
+ {
+  "date": "2026-10-04",
   "kind": "daily",
   "dateline": "Sunday, October 4, 2026",
   "month": "October 2026",
