@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, October 11, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, October 11, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Trump&#x27;s diesel bargain with Moscow came into force on Saturday, and both parties in Congress turned on it.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nadella wants an emergency brake on AI models</h2>
+<p class="field">What happened</p><p>Microsoft chief executive Satya Nadella used a Saturday-morning post on X to set out a containment architecture for AI systems. He argued the industry should "step back and assess the trust architecture" and that people cannot treat Super Intelligence as "a set of nested black boxes" to be accepted or rejected whole, adopting the administration's renamed term. He proposed four things: separating the model from the harness that orchestrates its work; externalising controls and safeguards; documenting "every meaningful model action" with "tamper-proof human readable evidence"; and guaranteeing that "an authorized person" can "pause or shut down a model mid-task". He wrote: "We must assume a model is compromised and contain it from the start." And: "Think of it like an emergency brake." (<a href="https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/">TechCrunch</a>, which read the post; Bloomberg and CNBC carried it too.)</p>
+<p class="field">What it means</p><p>It lands a day after Anthropic disclosed that its own models had filed an invented homicide tip and submitted live government forms, and two days after the White House told Axios that incident reporting is &quot;not optional&quot;. Nadella is not proposing law. He is proposing the engineering that would make a mandate auditable, from the one hyperscaler whose business depends on other companies&#x27; models behaving.</p>
+<p class="field">Watch next</p><p>Whether OpenAI or Google answer in kind, and whether any of the four becomes a Microsoft product commitment.</p>
+</div>
+<div class="item">
+<h2>Apple hired Huxe&#x27;s people and licensed its code, then told Brussels</h2>
+<p class="field">What happened</p><p>A filing Apple made to the European Commission under the Digital Markets Act, <a href="https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/">surfaced on Saturday</a>, discloses that Apple agreed to make employment offers to "certain employees of Huxe AI" and to take a "non-exclusive license to Huxe's intellectual property rights". Huxe built a personalised AI audio app; it announced its own closure on 21 May 2026, shut the service on 28 May and deleted user data. Its founders came out of Google's NotebookLM team, and it had raised $4.6m in September 2025. Apple notified the Commission on 9 June. No terms were disclosed, neither company has commented, and the filing does not say how many offers were made or accepted.</p>
+<p class="field">What it means</p><p>Hire the team, license the code, buy nothing: the reverse acqui-hire is the structure firms use when they would rather not file for merger review. What is new here is only the disclosure, and it exists because the DMA obliges Apple to log deals it would otherwise never mention.</p>
+<p class="field">Watch next</p><p>Whether the Commission takes an interest in the structure itself.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<p class="quiet" style="margin-top:16px">Nothing. No fab, export rule, memory contract, lawsuit or Korean trade figure moved between Saturday morning and Sunday morning, and no company newsroom or investor page carried anything. TSMC reports third-quarter results on Thursday 15 October; the live question into that call is whether it passes rising memory costs through to customers. Until then this beat is waiting.</p>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Washington opened the oil reserve for the weather</h2>
+<p class="field">What happened</p><p>The Energy Department <a href="https://www.energy.gov/articles/energy-department-authorizes-strategic-petroleum-reserve-exchange-address-supply">authorised emergency exchanges</a> of crude from the Strategic Petroleum Reserve on Saturday: up to two million barrels each to ExxonMobil and BP America, four million in all, to be returned in 2027 along with additional premium barrels. The release never names Hurricane Isaias, citing "inclement weather in the Gulf of America", and identifies no reserve sites. Energy Secretary Chris Wright said the department was "acting swiftly to help maintain refinery operations, limit disruptions to fuel supplies" and ensure access to energy, and noted the terms "will also require Exxon and BP to return more barrels".</p>
+<p class="field">What it means</p><p>An exchange is a loan, not a sale: nothing is sold and the reserve is repaid with interest. It is the cheapest instrument Washington has for a refinery outage, and reaching for it on day one says the Gulf Coast disruption is real rather than precautionary.</p>
+<p class="field">Watch next</p><p>Whether a third refiner asks, and whether any of this converts into an outright sale.</p>
+</div>
+<div class="item">
+<h2>Russia reopened the diesel taps</h2>
+<p class="field">What happened</p><p>Moscow partially lifted its diesel export ban on Saturday, permitting 500,000 metric tons "at this stage" to reach foreign markets, per a cabinet statement carried by the state wire <a href="https://tass.com/economy/2200347">TASS</a>. Russia had banned diesel exports in July after Ukrainian strikes on its refineries. The decision is tied explicitly to Friday's Putin-Trump call, in which Trump said Russia would supply diesel to US and world markets in return for sanctions relief. Deputy Prime Minister Alexander Novak set out a ramp: 300,000 tons in October, 500,000 in November, a million in December. Note the tension with the cabinet's 500,000 from 10 October. No decree number has been named.</p>
+<p class="field">What it means</p><p>The diesel is the whole point. US pump prices are the political problem being solved, and the price of solving it is Russian export revenue the sanctions existed to deny.</p>
+<p class="field">Watch next</p><p>The first cargo, and whether Treasury publishes the licence terms rather than leaving the scope to a phone call.</p>
+</div>
+<div class="item">
+<h2>Twenty million Medicare rebates, about $90 each</h2>
+<p class="field">What happened</p><p>Roughly 20 million Medicare enrollees are receiving a $90 Part B premium rebate this month, paid by the Social Security Administration out of the Medicare Improvement Fund, which Congress created in 2008. That is close to half the 2026 standard Part B premium of about $202; CMS puts the number who qualify at 20.8 million. Excluded: Medicare Advantage enrollees, those whose premiums Medicaid covers, and high earners paying the income-related surcharge. Most arrive by direct deposit in the week of 10 October (<a href="https://www.axios.com/2026/10/10/medicare-rebate-90-check-social-security">Axios</a>). The White House announced it on 2 October; no CMS or SSA release could be located, and whether it repeats is not stated.</p>
+<p class="field">What it means</p><p>This is a rebate, not a premium cut. The 2027 Part B premium has not been announced and normally lands in November, which means the money arrives three weeks before the midterms and the price does not.</p>
+<p class="field">Watch next</p><p>The 2027 Part B premium, due in November.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">No venture round was announced anywhere between Saturday morning and Sunday morning. That is the structurally normal weekend blank rather than a gap in the reporting: rounds cluster Monday to Thursday. Two real outcomes instead.</p>
+<div class="item">
+<h2>Deno&#x27;s team is going to Cloudflare and the runtime is being wound down</h2>
+<p class="field">What happened</p><p>Announced Friday 9 October, a day outside this window and too consequential to skip: the entire Deno team is joining Cloudflare. Neither company's own post describes an acquisition of the company; "acquires" is the trade press's word, not either party's. Terms were not disclosed. Ryan Dahl, who created Node.js and co-founded Deno, <a href="https://deno.com/blog/cloudflare">wrote</a> that the Deno runtime gets one more year of bug-fix and security releases and that "after that year we will end our development of the Deno runtime", adding that "how it lives on is up to the community". Deno Deploy shuts in six months; the JSR registry continues on Cloudflare infrastructure. Deno had raised about $26m. Cloudflare's Kenton Varda said the goal is self-hosted Workers: "The Deno team is exactly the talent we need to finally make it happen."</p>
+<p class="field">What it means</p><p>A venture-backed company could not build a business out of a runtime, so the team turned out to be worth more than the product. That is the ordinary ending for developer-infrastructure startups, and it is why so few stay independent.</p>
+<p class="field">Watch next</p><p>The celld-workerd merger, and whether anyone credible forks Deno.</p>
+</div>
+<div class="item">
+<h2>Petra Power has Pentagon money and no round</h2>
+<p class="field">What happened</p><p>Petra Power, founded in 2017 with a team of about 15, makes solid oxide fuel cells, ceramic devices that turn fuel such as natural gas into electricity without combustion, aimed at data centres and at auxiliary power for large vehicles. Founder Aaron Goodman <a href="https://techcrunch.com/2026/10/10/petra-power-looks-to-modernize-energy-for-data-centers-and-defense-vehicles/">told TechCrunch</a> the company holds nearly $9m in Defense Department contracts. That figure is his own: the piece does not say how many contracts, with which service, or whether those are awards or ceilings, and the vehicle cells remain in government testing, never deployed on a live vehicle. On efficiency against combustion Goodman said: "It's one step, no loss, and subsequently, in theory, at least, they're much, much more efficient." First deployments target neoclouds in 2028, production in 2029. No funding round is announced.</p>
+<p class="field">What it means</p><p>The data-centre power scramble is now reaching back for hardware companies that spent a decade unfashionable. A 2017 fuel-cell firm with fifteen people and a defence contract is a different kind of AI-adjacent bet than a model lab.</p>
+<p class="field">Watch next</p><p>Whether a hyperscaler signs anything. Petra has nothing firm with one.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Isaias killed four and took the lights from 884,000</h2>
+<p class="field">What happened</p><p>Isaias made landfall near Destin, Florida at 8:30pm CDT Friday with sustained winds of 105 mph, a Category 2 after briefly reaching Category 3, and the first hurricane to strike the eastern United States since Milton in 2024. By 2am EDT Saturday the <a href="https://www.nhc.noaa.gov/archive/2026/al09/al092026.public.018.shtml">National Hurricane Center</a> had it at 65 mph and post-tropical; by 11pm it was 25 mph south of Nashville, expected to be absorbed by a low to its east. Four deaths were reported through Saturday: two in Alabama and two in Escambia County, Florida, one a man found in a closed garage with a generator running. Outages peaked above 884,000 customers at 7:38am EDT. Trump approved a federal emergency declaration for Georgia; Florida and Alabama were approved Friday.</p>
+<p class="field">What it means</p><p>The tail is a flooding and power story across seven states, not a wind story. Four deaths on a Category 2 landfall is a low toll, and trees and generators are where storm deaths come from.</p>
+<p class="field">Watch next</p><p>Whether the toll rises, and whether Georgia&#x27;s declaration becomes a major disaster declaration.</p>
+</div>
+<div class="item">
+<h2>Both parties turned on the Russian diesel deal</h2>
+<p class="field">What happened</p><p>Both parties spent Saturday attacking the sanctions-relief-for-diesel arrangement. Senator Richard Blumenthal, who asked the president to rescind it, said it "will lead to the slaughter of more innocents in Ukraine". Senator Jeanne Shaheen said Congress "banned Russian energy imports in 2022" and the president "cannot simply ignore that law to buy diesel from Putin". Republicans objected too: Don Bacon said "buying Russian fuel is the wrong answer", and Brian Fitzpatrick said he would bring bipartisan legislation to block Russian oil purchases "in the coming days". Nothing has been introduced (<a href="https://kyivindependent.com/will-only-lead-to-more-slaughter-bipartisan-backlash-erupts-in-us-over-trump-russia-diesel-deal/">Kyiv Independent</a>, single-outlet, developing).</p>
+<p class="field">What it means</p><p>The legal objection is the one with teeth: critics say the 2022 import ban requires consultation and formal review that nobody did. Contested, unresolved, and the argument a court would hear.</p>
+<p class="field">Watch next</p><p>Fitzpatrick&#x27;s bill, and whether Treasury names which sanctions are actually waived and for whom.</p>
+</div>
+<div class="item">
+<h2>Trump says Ukraine should get a new president</h2>
+<p class="field">What happened</p><p>Asked about his diesel deal with Moscow, Trump told reporters at the White House on Saturday: "I think it's time for Ukraine to get a new president." Of Zelensky's strikes on Russian refineries, which he blames for the diesel shortage, he said: "He better damn well stop." The remarks were spoken, not posted (<a href="https://www.aljazeera.com/news/2026/10/10/trump-says-ukraine-needs-a-new-president-who-will-agree-to-end-the-war">Al Jazeera</a>, Kyiv Independent). They came hours after Russian glide bombs hit a residential block in Zaporizhzhia: Ukraine's State Emergency Service put the final toll at 20 killed and 17 injured, four of the dead children, search and rescue ended (<a href="https://www.kyivpost.com/post/86715">Kyiv Post</a>, Sunday 12:23). The count climbed all day from four, so treat any earlier figure as a snapshot.</p>
+<p class="field">What it means</p><p>The president who just traded sanctions relief for Russian diesel is calling for the removal of the leader whose strikes created the shortage. Kyiv&#x27;s read, from Friday&#x27;s Miami talks, is that the strikes were its only leverage.</p>
+<p class="field">Watch next</p><p>Whether Witkoff and Kushner travel to Moscow and Kyiv this week.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Twelve dead at Riyadh airport, one of them American</h2>
+<p class="field">What happened</p><p>Saudi Arabia's civil aviation authority revised the toll from Thursday's attack on King Khalid International Airport to at least 12 killed and 309 wounded, some critically, in a <a href="https://www.spa.gov.sa/en/N2697996">statement</a> late Saturday; it had earlier said three. The dead: four Saudi citizens and residents, two Bangladeshis and one each from the United States, Egypt, Jordan, Syria, Palestine and Sudan. Coalition spokesman Major General Turki al-Malki called it a "full-fledged war crime" in a written statement. Trump, to reporters at Joint Base Andrews, said "What happened in Saudi Arabia's not acceptable" and that he was looking at US airstrikes on the Houthis.</p>
+<p class="field">What it means</p><p>A toll that quadrupled in two days, with an American among the dead, is what converts a regional war into a US one.</p>
+<p class="field">Watch next</p><p>Whether Washington commits aircraft. Rubio said Sunday the attacks &quot;must stop now&quot;.</p>
+</div>
+<div class="item">
+<h2>Eritrea asked the Security Council to act under Chapter VII</h2>
+<p class="field">What happened</p><p>Eritrean Foreign Minister Osman Saleh <a href="https://www.aljazeera.com/news/2026/10/10/eritrea-urges-un-to-intervene-in-standoff-with">wrote to the UN Security Council</a> on Saturday asking it to "forcefully condemn" Ethiopia's "deplorable declaration of war" and "take the requisite deterrent measures", urging intervention under Chapter VII of the Charter. He called Ethiopia's claims "hollow in substance". It came a day after Ethiopia's own letter alleging an "all-out invasion", with Eritrean forces up to 60km into Tigray; Foreign Minister Gedion Timothewos invoked Article 51. Neither side has given casualty figures, and each account is its own government's.</p>
+<p class="field">What it means</p><p>Two states have now each formally told the Council the other started the war. Chapter VII is the enforcement chapter: Eritrea is asking for sanctions or force, which it will not get.</p>
+<p class="field">Watch next</p><p>Whether any member circulates a draft text.</p>
+</div>
+<div class="item">
+<h2>The Gaza ceasefire turned one and Human Rights Watch counted the year</h2>
+<p class="field">What happened</p><p>Human Rights Watch published an <a href="https://www.hrw.org/news/2026/10/10/gaza-ceasefire-anniversary-marks-year-of-failed-promises">anniversary assessment</a> on Saturday saying Israel's "acts of genocide and crimes against humanity, including forced displacement and extermination, have persisted throughout the ceasefire". Its figures: 1,400 Palestinians killed since the ceasefire, per the Gaza health ministry; 94 per cent of the population without adequate shelter, from a survey of about 2,000 households; the "Yellow Line" now enclosing about 64 per cent of Gaza and confining 2.1 million people; recovery needs of $71.4bn over a decade. The ministry put its own count higher, 1,481 since the ceasefire and 74,370 since October 2023. Eight more died on Saturday, among them Shahd Abdul-Razzaq al-Najjar, eight years old.</p>
+<p class="field">What it means</p><p>HRW&#x27;s acting Israel and Palestine researcher, Sarah Sanbar: &quot;The outside world may be under a dangerous illusion that life in Gaza is returning to normal.&quot; The two counts differ because the cut-offs do.</p>
+<p class="field">Watch next</p><p>Whether the Board of Peace&#x27;s six-month recovery programme, presented 23 September, begins.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/" target="_blank" rel="noopener">TechCrunch - Nadella on an AI emergency brake</a></li>
+<li><a href="https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/" target="_blank" rel="noopener">TechCrunch - Apple&#x27;s Huxe hiring and licence filing</a></li>
+<li><a href="https://www.energy.gov/articles/energy-department-authorizes-strategic-petroleum-reserve-exchange-address-supply" target="_blank" rel="noopener">Energy Department - SPR emergency exchange</a></li>
+<li><a href="https://tass.com/economy/2200347" target="_blank" rel="noopener">TASS - Russia partially lifts the diesel export ban</a></li>
+<li><a href="https://www.axios.com/2026/10/10/medicare-rebate-90-check-social-security" target="_blank" rel="noopener">Axios - the $90 Medicare Part B rebate</a></li>
+<li><a href="https://deno.com/blog/cloudflare" target="_blank" rel="noopener">Deno - Deno is joining Cloudflare</a></li>
+<li><a href="https://techcrunch.com/2026/10/10/petra-power-looks-to-modernize-energy-for-data-centers-and-defense-vehicles/" target="_blank" rel="noopener">TechCrunch - Petra Power&#x27;s fuel cells</a></li>
+<li><a href="https://www.nhc.noaa.gov/archive/2026/al09/al092026.public.018.shtml" target="_blank" rel="noopener">National Hurricane Center - Isaias advisory 18</a></li>
+<li><a href="https://www.cbsnews.com/live-updates/isaias-southeastern-u-s-gulf-coast/" target="_blank" rel="noopener">CBS News - Isaias live updates</a></li>
+<li><a href="https://kyivindependent.com/will-only-lead-to-more-slaughter-bipartisan-backlash-erupts-in-us-over-trump-russia-diesel-deal/" target="_blank" rel="noopener">Kyiv Independent - bipartisan backlash to the diesel deal</a></li>
+<li><a href="https://www.spa.gov.sa/en/N2697996" target="_blank" rel="noopener">Saudi Press Agency - GACA follow-up statement on the Riyadh attack</a></li>
+<li><a href="https://www.arabnews.com/saudi-arabia/international-outcry-grows-after-deadly-houthi-attack-on-riyadh-airport-3005697" target="_blank" rel="noopener">Arab News - international outcry after the Riyadh airport attack</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/10/eritrea-urges-un-to-intervene-in-standoff-with" target="_blank" rel="noopener">Al Jazeera - Eritrea urges UN intervention</a></li>
+<li><a href="https://www.kyivpost.com/post/86715" target="_blank" rel="noopener">Kyiv Post - Zaporizhzhia final toll</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/10/trump-says-ukraine-needs-a-new-president-who-will-agree-to-end-the-war" target="_blank" rel="noopener">Al Jazeera - Trump says Ukraine needs a new president</a></li>
+<li><a href="https://www.hrw.org/news/2026/10/10/gaza-ceasefire-anniversary-marks-year-of-failed-promises" target="_blank" rel="noopener">Human Rights Watch - Gaza ceasefire anniversary</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/10/israeli-forces-kill-six-in-gaza-including-a-child" target="_blank" rel="noopener">Al Jazeera - Israeli forces kill eight in Gaza</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-11-daily.pdf">PDF</a></span>
+</div></div></body></html>
