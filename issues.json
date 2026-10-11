@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-10-11",
+  "kind": "weekly",
+  "dateline": "Week of October 5, 2026",
+  "month": "October 2026",
+  "href": "issues/2026-10-11-weekly.html",
+  "pdf": "pdf/2026-10-11-weekly.pdf",
+  "standfirst": "America began buying Russian diesel this week, and the instrument that allowed it was not an executive order but a general licence signed by a Treasury official, uncapped and good until April 2027. Congress erupted across party lines and then discovered it has no floor to vote on until after the midterms. Elsewhere: a Fed governor was summoned to a White House hearing, Anthropic named the model that filed a false murder tip, and France's budget was thrown out by its own finance committee."
+ },
+ {
+  "date": "2026-10-11",
   "kind": "daily",
   "dateline": "Sunday, October 11, 2026",
   "month": "October 2026",
