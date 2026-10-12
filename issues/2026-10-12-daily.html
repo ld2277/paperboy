@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Monday, October 12, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Monday, October 12, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Trump declared an energy ceasefire between Russia and Ukraine on Truth Social; Zelensky said it was news to him, Moscow has said nothing, and a Kharkiv power plant was hit hours later.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nvidia in early talks over Reflection AI, its own portfolio company</h2>
+<p class="field">What happened</p><p>The <a href="https://siliconangle.com/2026/10/11/nvidia-reportedly-in-early-talks-to-buy-acqui-hire-or-invest-more-in-reflection-ai/">Financial Times reported on Sunday</a> that Nvidia is in early talks over Reflection AI, the open-weight model developer, with three structures under discussion: an outright purchase, a larger stake bundled with chip and compute supply, or an acqui-hire. Nvidia has already put $800m into Reflection, having led a $2bn round in October 2025, and Reflection's most recent round priced at a $25bn pre-money valuation. People familiar with the matter said an agreement could come within weeks, and that the talks could still collapse. Neither company has commented publicly. This is the FT's reporting only, relayed elsewhere, and it is not confirmed.</p>
+<p class="field">What it means</p><p>Nvidia has spent two years funding the companies that buy its chips, and buying one outright would collapse the distinction entirely. The structure being discussed — a stake paid partly in compute — is the arrangement regulators have started asking about. Note the stage: talks, not a deal, and three incompatible versions of it.</p>
+<p class="field">Watch next</p><p>Any statement from either company, and whether the structure named is equity or supply.</p>
+</div>
+<div class="item">
+<h2>Amazon reported in talks to buy Decart for up to $7bn, months after Anthropic walked away</h2>
+<p class="field">What happened</p><p>The Wall Street Journal <a href="https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/">reported on Sunday</a>, citing people familiar, that Amazon is in talks to acquire the Israeli startup Decart for up to $7bn, with a deal possibly finalised within days absent a collapse or a rival bidder. Decart raised $300m at a $4bn valuation in May and more than $400m in total, from Radical Ventures, Nvidia Ventures, Adobe Ventures, Sequoia and Benchmark. Founded in 2023, it sells software that compiles neural networks onto specific processors, cutting porting work from months to about two weeks, alongside its Lucy and Oasis world models. Bloomberg reported last month that Anthropic had been in talks to buy Decart and pulled out of a reported $6bn deal after due diligence; why is not known.</p>
+<p class="field">What it means</p><p>A 75% mark-up in five months on a company whose core product is a compiler, not a model. The more interesting fact is the one that already happened: somebody looked at the books at $6bn and said no. Treat the $7bn as one report carried widely, not as three confirmations.</p>
+<p class="field">Watch next</p><p>An announcement this week, or the absence of one; and whether Anthropic&#x27;s walk-away is ever explained.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Korea&#x27;s memory giants sold off hard while the rest of the chip complex rallied</h2>
+<p class="field">What happened</p><p>The KOSPI <a href="https://en.fnnews.com/news/202610121518291365">closed Monday at 6,384.24</a>, down 241.69 points or 3.65%, with Samsung Electronics off 4.39% to 250,500 won and SK hynix off 4.52% to 1,605,000 won; the KOSDAQ fell 4.83%. Foreigners net sold 2.02 trillion won (about $1.51bn) on the main board, taking October's foreign net selling to roughly 10 trillion won. Seoul was shut on Friday for Hangeul Day, so it absorbed Thursday's US tech selloff in a single session. Foreign ownership of Samsung <a href="https://en.sedaily.com/finance/2026/10/11/foreign-ownership-of-samsung-falls-to-financial-crisis-level">fell to 46.38% on 8 October</a>, the lowest since January 2008, when it was 46.35%.</p>
+<p class="field">What it means</p><p>The divergence is the story. From 31 August to 8 October, <a href="https://en.sedaily.com/finance/2026/10/12/samsung-sk-hynix-left-behind-in-global-chip-rally">Micron rose 11.90% and TSMC's ADRs 12.55%, against Samsung's 0.77% and SK hynix's 0.43%</a>. Samsung guided to a record 107.4 trillion won quarterly operating profit and was sold anyway. One analyst tied Monday's move to the argument over OpenAI's revenue: Korea is now where the AI trade gets expressed in reverse.</p>
+<p class="field">Watch next</p><p>TSMC&#x27;s third-quarter results on Wednesday 15 October, the first hard read on whether the rally has earnings behind it.</p>
+</div>
+<div class="item">
+<h2>Robots pitched as the next memory demand leg, with DRAM content forecast to rise twentyfold</h2>
+<p class="field">What happened</p><p>Counterpoint Research projects humanoid-robot DRAM demand rising from about <a href="https://koreajoongangdaily.com/business/humanoid-robots-eyed-as-next-driver-of-memory-chip-demand/12915302">8,300 terabits this year to 172,000 terabits in 2030</a>, with DRAM per robot going from 19GB to 39GB as shipments rise from roughly 60,000 units to 500,000. Nvidia's Jetson Thor platform carries 128GB of LPDDR5X. Micron frames vehicles as the nearer version of the same demand, with Level 4 and above needing over 200GB of memory; its chief executive Sanjay Mehrotra said "Autonomous vehicles are the first major deployment of physical AI" and that it "can become a significant driver of memory and storage demand by the end of this decade."</p>
+<p class="field">What it means</p><p>This is the bull case the Korean names are not being paid for today. It is also a forecast, not an order book — 2030 demand curves are the easiest thing in this industry to publish and the hardest to collect on.</p>
+<p class="field">Watch next</p><p>Whether any robotics customer appears in a memory maker&#x27;s actual disclosed mix.</p>
+</div>
+<div class="item">
+<h2>Korea&#x27;s biggest chip show opens Wednesday, with SK hynix showing HBM4E</h2>
+<p class="field">What happened</p><p>SEDEX 2026 <a href="https://en.sedaily.com/finance/2026/10/12/koreas-largest-chip-show-opens-with-ai-memory-physical-ai">runs 14 to 16 October</a> at COEX in Seoul with 300 companies, about 70 more than last year. SK hynix will show HBM4E, the seventh HBM generation, plus high-bandwidth flash; Samsung will show HBM, next-generation 3D memory and foundry work. SK hynix president Ahn Hyun gives the opening keynote, "Asking the Direction of Memory Innovation in the AI Era." Korean trade press separately reports ASML raising replacement-part prices 10% from January 2027 — unconfirmed, with no ASML statement and no original source named.</p>
+<p class="field">What it means</p><p>Ahn&#x27;s keynote is the next scheduled chance for SK hynix to say something about allocation, which is the number the market actually wants and has not had in nine weeks of asking.</p>
+<p class="field">Watch next</p><p>Allocation or pricing language in the keynote; and whether ASML or either buyer confirms a parts increase.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Crude gave back the war premium on Trump&#x27;s ceasefire claim</h2>
+<p class="field">What happened</p><p>Brent fell $1.37, or 1.31%, to $103.35 and WTI $1.30, or 1.42%, to $90.55 <a href="https://finance.yahoo.com/energy/articles/oil-climbs-mideast-conflict-tanker-232559304.html">as of 0037 GMT Monday</a>, after Trump said Russia and Ukraine had agreed to stop striking each other's energy facilities. Brent later traded around $103.43, down 1.2%, having touched $105.63 intraday. Gold held near $4,200 an ounce for a third session of gains, and US cash Treasuries were shut for Columbus Day. KCM Trade's Tim Waterer said "Questions remain over the validity and longevity of any such ceasefire."</p>
+<p class="field">What it means</p><p>The market is pricing a political announcement, not a verified agreement, and doing it while Houthi missiles land at Riyadh&#x27;s main airport. Russian barrels returning and Gulf supply risk rising pull opposite ways on the same screen; a dollar off Brent is a modest bet on which wins.</p>
+<p class="field">Watch next</p><p>Wednesday&#x27;s EIA diesel print, and whether any Russian official says anything at all about a ceasefire.</p>
+</div>
+<div class="item">
+<h2>India&#x27;s central bank mounts its heaviest rupee defence in years, and names a new reserve</h2>
+<p class="field">What happened</p><p>After the rupee hit a record low near 97 to the dollar, the Reserve Bank <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63783">announced measures on Saturday 10 October</a>. The instrument is new: <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13738&amp;Mode=0">A.P. (DIR Series) Circular No. 26</a> creates a Foreign Exchange Risk Reserve, requiring banks to hold with the RBI, in cash, 20% of the rupee equivalent of the notional on contracts above $2m. It applies narrowly, to rupee-involving derivatives hedging current-account exposure. A separate window under which the RBI <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63784">sells dollars to IOC, HPCL and BPCL</a> took effect today. The MPC had <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742">raised the repo rate 25bp to 5.50% on 7 October</a>, unanimously, moving to calibrated tightening.</p>
+<p class="field">What it means</p><p>A cash reserve against derivative notionals makes shorting the rupee expensive on purpose. Bloomberg puts the defence&#x27;s cost so far at $51bn of reserves in four weeks — the wire&#x27;s figure, not the RBI&#x27;s. Emkay&#x27;s Madhavi Arora called the package &quot;tactical fixes, not structural solutions.&quot;</p>
+<p class="field">Watch next</p><p>Whether the FERR is widened beyond current-account hedges, and the next reserves print.</p>
+</div>
+<div class="item">
+<h2>The EU&#x27;s China hybrid deal has numbers attached, but no published text and two incompatible readings</h2>
+<p class="field">What happened</p><p>Numbers from an unpublished internal document — a cap of 350,000 Chinese hybrids a year for four years, rising 6% annually from the second — circulated on Monday, originating with Bloomberg and carried on by AFP. No such document appears on the <a href="https://policy.trade.ec.europa.eu/news_en">Commission's trade news page</a>, whose newest item is dated 28 September. What exists is a political understanding from Maros Sefcovic's 8 to 9 October Beijing talks, which he calls "a first step" and says needs EU leaders' endorsement. China's commerce ministry <a href="https://cnevpost.com/2026/10/12/china-eu-hybrid-trade-allows-growth/">said on Monday</a> that EU hybrid imports from China rose to 302,000 in 2025 from 107,000 in 2024, and framed the arrangement as allowing growth from that base. It cited neither 350,000 nor 6%.</p>
+<p class="field">What it means</p><p>Brussels is briefing a halving and Beijing an increase, from the same arrangement, with nothing on paper either way. Start dates differ too: 1 December has been floated alongside 2027. The only confirmed number here is MOFCOM&#x27;s 2025 baseline.</p>
+<p class="field">Watch next</p><p>The European Council on 15 and 16 October, and whether the Commission tables an actual safeguard instrument.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Europe closed a modest week at EUR818m, against a September that was an outlier</h2>
+<p class="field">What happened</p><p>Tech.eu's weekly tally, <a href="https://tech.eu/2026/10/12/european-tech-weekly-recap-eur818m-in-deals-and-septembers-highlights/">published Monday morning</a>, puts the preceding week at more than 70 European tech funding deals worth over EUR818m, plus more than ten exits and M&amp;A transactions. The largest named rounds were Spiko in France at $90m Series B led by NEA, Yazen in Sweden at EUR50m, Sensible Biotechnologies in the UK at $47m, Namespace in Switzerland at $42m Series B seven months after its Series A, Hadrian in the Netherlands at $40m and Noah in the UK at a $38m seed. The comparison is unflattering: September saw EUR15.8bn across 300 deals, up almost 394% in value and 82% in volume on August, with the UK taking EUR7.3bn and cloud EUR5.5bn. These are Tech.eu's own figures.</p>
+<p class="field">What it means</p><p>September was a single-month distortion, not a new level, and the week just gone is closer to the real run-rate. EUR818m across seventy-odd deals means a median round in the single-digit millions — the European market is broad and shallow, which is its usual shape.</p>
+<p class="field">Watch next</p><p>TechCrunch Disrupt opens on 13 October, so expect rounds timed to it from Tuesday.</p>
+</div>
+<div class="item">
+<h2>Ramp priced at $60bn pre-money, which is a fintech at AI-lab scale</h2>
+<p class="field">What happened</p><p>Ramp raised approximately $1.85bn at a $60bn pre-money valuation, <a href="https://finsmes.com/2026/10/ramp-raises-approx-1-85-billion-in-funding-at-60-billion-pre-money-valuation.html">co-led by Dragoneer and Thrive Capital</a> with Founders Fund participating. The New York corporate-spend and payments company, founded by Eric Glyman and Karim Atiyeh, says it serves over 70,000 businesses and has passed a $1.5bn annualised revenue run-rate. The round broke on Bloomberg on 9 October, just before this brief's window, and was written up on Monday; it is worded as reported, with no company confirmation or quote located. A run-rate is not revenue, and every outlet carrying this traces to one source.</p>
+<p class="field">What it means</p><p>Forty times a run-rate, for a company selling expense cards. The AI names have reset what late-stage private pricing looks like, and the comparison set has moved with them — which is the mechanism by which a bubble in one sector becomes a repricing everywhere else.</p>
+<p class="field">Watch next</p><p>Whether Ramp confirms the round itself, and whether any of its backers mark it publicly.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>A federal judge halted the administration&#x27;s $20m DHS ad campaign on Sunday night</h2>
+<p class="field">What happened</p><p>Judge Jennifer L. Rochon of the Southern District of New York issued a <a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.674638/gov.uscourts.nysd.674638.41.0.pdf">temporary restraining order and a stay under 5 U.S.C. 705</a> on Sunday evening in <em>Common Cause v. Department of Homeland Security</em>, No. 1:26-cv-08882 (JLR). It runs 14 days and provides that defendants "shall not enter into, renew, or expand any agreement authorizing the development, creation," placement or airing of the ads. It stays OMB's $20m apportionment and a 20 September purchase order between Customs and Border Protection and Lepugh, Inc. Defendants include DHS, Secretary Markwayne Mullin, OMB and Russell Vought. The administration argued the campaign was ending anyway: "the alleged offending conduct will end tomorrow."</p>
+<p class="field">What it means</p><p>The theory is the appropriations bar on public money for &quot;publicity or propaganda&quot; — rarely litigated because rarely tested this openly. A TRO decides nothing on the merits, but a section 705 stay of an apportionment constrains money already obligated.</p>
+<p class="field">Watch next</p><p>Tuesday&#x27;s hearing, Rochon&#x27;s full opinion, and the DNC&#x27;s separate suit in the District of Columbia.</p>
+</div>
+<div class="item">
+<h2>Republicans join the revolt over the Russian diesel easing, with a bill promised</h2>
+<p class="field">What happened</p><p>The <a href="https://kyivindependent.com/will-only-lead-to-more-slaughter-bipartisan-backlash-erupts-in-us-over-trump-russia-diesel-deal/">backlash to the 9 October announcement</a> that sanctions would be eased to open global markets to Russian diesel is bipartisan, and the objection is statutory: Congress banned imports of Russian energy products in 2022, with lifting conditions tied to Russian withdrawal from Ukraine. Senator Jeanne Shaheen said the president "cannot simply ignore that law to buy diesel from Putin." Senator Lisa Murkowski said he "should be using those authorities instead," meaning the tariff powers in the sanctions act named for the late Senator Lindsey Graham. Representative Brian Fitzpatrick said a bipartisan bill blocking all Russian oil purchases "will pass overwhelmingly." All written statements, not interviews.</p>
+<p class="field">What it means</p><p>Fitzpatrick&#x27;s confidence runs into the calendar. The House returns 9 November and the Senate 6 November, and the licence authorising this runs to April 2027. &quot;Will pass overwhelmingly&quot; describes a vote that cannot be scheduled for four weeks.</p>
+<p class="field">Watch next</p><p>Whether a bill is actually introduced, and whether any US refiner says publicly that it will take Russian barrels.</p>
+</div>
+<div class="item">
+<h2>The fight over livestreaming a military execution is now inside the administration</h2>
+<p class="field">What happened</p><p>Homeland Security Secretary Markwayne Mullin defended the plan to livestream the 3 December firing-squad execution of Nidal Hasan on CBS's <em>Face the Nation</em> on Sunday, <a href="https://aljazeera.com/news/2026/10/11/us-homeland-security-secretary-sees-no-risk-from-livestreamed-execution">saying "I don't see an elevated risk at this point at all because of this."</a> Senator Thom Tillis attacked it on NBC's <em>Meet the Press</em>: "Terrorist organisations will use this as a recruiting tool." Senator Lisa Murkowski said on X it was what she would expect "from terrorists and dictators." Trump, outside the White House on Saturday, said there were "two thoughts" on showing it and that he would "make a decision, ultimately." Only the president can approve a military execution; Hasan would be the first US service member executed since 1961.</p>
+<p class="field">What it means</p><p>The Republican objection is not to the death sentence, which is settled, but to broadcasting it — and it comes from the people who normally supply the votes. That the president still has not decided is the news.</p>
+<p class="field">Watch next</p><p>A presidential decision, and whether the Vice President&#x27;s reported position against the livestream is confirmed.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Trump declared an energy ceasefire; Kyiv had not heard of it and Moscow has not spoken</h2>
+<p class="field">What happened</p><p>Trump posted on Truth Social on Sunday: "Effective immediately, there is an ENERGY CEASEFIRE in the War between Russia and Ukraine. Both parties have agreed. Do not break it!" — <a href="https://www.cbsnews.com/news/zelenskyy-trump-new-ukrainian-president/">then "Thank you for your attention to this matter."</a> Zelensky <a href="https://www.axios.com/2026/10/11/trump-russia-ukraine-energy-ceasefire-zelensky">told Axios</a> it "was news for me. But if Russians agree to an energy ceasefire, Ukraine will agree," adding: "please tell us when the ceasefire begins. We are ready, and we will accept it." The post came less than an hour after Zelensky told ABC's <em>This Week</em>: "Please tell Putin, give us two months, 60 days of total ceasefire, 60 days, and we will organize elections." Hours later he said "there was a strike on CHP-5 in Kharkiv" — his account, unverified. No Russian comment has been located.</p>
+<p class="field">What it means</p><p>A ceasefire one party announces, a second has not been told about and a third has not acknowledged is not a ceasefire. Zelensky&#x27;s election offer is the real concession: Ukrainian law bars elections under martial law, so the 60-day pause is what would make his own offer legal.</p>
+<p class="field">Watch next</p><p>Any Kremlin statement, the proposed end-of-October technical talks, and whether strikes on energy actually stop.</p>
+</div>
+<div class="item">
+<h2>Ethiopian forces reached Adigrat as Ethiopia and Eritrea exchanged war language at the UN</h2>
+<p class="field">What happened</p><p>Ethiopian government and allied forces <a href="https://www.aljazeera.com/news/2026/10/11/ethiopia-eritrea-ramp-up-rhetoric-are-they-inching-towards-war">entered Adigrat on Saturday</a>, about 30km from the Eritrean border, having taken Idaga Hamus and Abiy-Adi. Both foreign ministers have written to the Security Council. Ethiopia's Gedion Timothewos called an alleged Eritrean incursion "a blatant act of aggression that engages Ethiopia's inherent right to self-defence," saying Eritrean troops advanced up to 60km into Tigray. Eritrea's Osman Saleh asked the Council to condemn Ethiopia's "deplorable declaration of war." ACLED reported Eritrean troops crossing near Zalambessa; Eritrea has not commented and Al Jazeera could not verify it. No Council product has been located.</p>
+<p class="field">What it means</p><p>Every territorial claim comes from a party to the fighting, which is why the letters matter more than the map: two member states invoked self-defence and declaration-of-war language within a day. Tom Gardner of The Economist called it &quot;the most dangerous moment for the region since that 1998 to 2000 war.&quot;</p>
+<p class="field">Watch next</p><p>Whether the Council meets, and whether Eritrea acknowledges troops across the border.</p>
+</div>
+<div class="item">
+<h2>A year into the Gaza ceasefire, the Yellow Line has taken another twelve points of the Strip</h2>
+<p class="field">What happened</p><p>Al Jazeera's <a href="https://www.aljazeera.com/news/2026/10/12/maps-show-how-israels-yellow-line-keeps-squeezing-palestinians-in-gaza">mapping analysis, published Monday</a>, finds Palestinians confined to about 35% of Gaza, some 128 sq km, against the 47% or 172 sq km they held when the ceasefire began. The figures are contested and the methods differ: OCHA puts access restrictions over 65% of the territory, Israel told the Security Council in June it controls about 70%, and Forensic Architecture estimated 58% in December 2025. On Sunday, Israeli forces moved concrete blocks "dozens of metres west" in Shujayea, displacing families. Beyond the Yellow Line sits a further Israeli-drawn "orange line" zone, mapped to aid agencies in March, inside which movement needs military coordination.</p>
+<p class="field">What it means</p><p>The ceasefire froze the fighting, not the line. Density is the mechanism: 2.1 million people on 35% of the Strip is about 16,000 per square kilometre against 6,000 before the war, with over 950,000 in displacement sites the UN says risk flooding this winter.</p>
+<p class="field">Watch next</p><p>Further block movements; and Israel&#x27;s election on 27 October, with the IDF opening at least 850 military polling stations from the evening of 20 October. The date rests on a 2023 Central Elections Committee ruling and the Library of Congress, not on any official page we could fetch.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://siliconangle.com/2026/10/11/nvidia-reportedly-in-early-talks-to-buy-acqui-hire-or-invest-more-in-reflection-ai/" target="_blank" rel="noopener">SiliconANGLE - Nvidia reportedly in early talks over Reflection AI</a></li>
+<li><a href="https://siliconangle.com/2026/10/11/report-amazon-in-talks-with-ai-startup-decart-over-possible-7b-acquisition/" target="_blank" rel="noopener">SiliconANGLE - Amazon in talks with Decart over possible $7B acquisition</a></li>
+<li><a href="https://en.fnnews.com/news/202610121518291365" target="_blank" rel="noopener">Financial News (Seoul) - KOSPI closes at 6,384.24, down 3.65%</a></li>
+<li><a href="https://www.ajupress.com/view/20261012153519049" target="_blank" rel="noopener">AJP - Seoul shares plunge on foreign selling</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/10/11/foreign-ownership-of-samsung-falls-to-financial-crisis-level" target="_blank" rel="noopener">Seoul Economic Daily - Foreign ownership of Samsung falls to financial-crisis level</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/10/12/samsung-sk-hynix-left-behind-in-global-chip-rally" target="_blank" rel="noopener">Seoul Economic Daily - Samsung, SK hynix left behind in global chip rally</a></li>
+<li><a href="https://koreajoongangdaily.com/business/humanoid-robots-eyed-as-next-driver-of-memory-chip-demand/12915302" target="_blank" rel="noopener">Korea JoongAng Daily - Humanoid robots eyed as next driver of memory demand</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/10/12/koreas-largest-chip-show-opens-with-ai-memory-physical-ai" target="_blank" rel="noopener">Seoul Economic Daily - Korea&#x27;s largest chip show opens with AI memory, physical AI</a></li>
+<li><a href="https://finance.yahoo.com/energy/articles/oil-climbs-mideast-conflict-tanker-232559304.html" target="_blank" rel="noopener">Reuters via Yahoo Finance - Oil falls on hopes a Russia-Ukraine energy ceasefire will boost supplies</a></li>
+<li><a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63783" target="_blank" rel="noopener">RBI - Regulatory measures for the foreign exchange market, 10 October 2026</a></li>
+<li><a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13738&amp;Mode=0" target="_blank" rel="noopener">RBI - A.P. (DIR Series) Circular No. 26: Foreign Exchange Risk Reserve</a></li>
+<li><a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63784" target="_blank" rel="noopener">RBI - Dollar sale facility for public sector oil marketing companies</a></li>
+<li><a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742" target="_blank" rel="noopener">RBI - Monetary Policy Statement 2026-27, MPC resolution of 7 October 2026</a></li>
+<li><a href="https://www.business-standard.com/finance/news/rupee-posts-biggest-gain-in-6-months-after-rbi-measures-to-support-currency-126101200099_1.html" target="_blank" rel="noopener">Business Standard / Bloomberg - Rupee posts biggest gain in six months</a></li>
+<li><a href="https://policy.trade.ec.europa.eu/news_en" target="_blank" rel="noopener">European Commission - DG Trade news (newest item 28 September 2026)</a></li>
+<li><a href="https://cnevpost.com/2026/10/12/china-eu-hybrid-trade-allows-growth/" target="_blank" rel="noopener">CnEVPost - China says EU hybrid trade arrangement allows growth</a></li>
+<li><a href="https://tech.eu/2026/10/12/european-tech-weekly-recap-eur818m-in-deals-and-septembers-highlights/" target="_blank" rel="noopener">Tech.eu - European tech weekly recap: EUR818m in deals</a></li>
+<li><a href="https://finsmes.com/2026/10/ramp-raises-approx-1-85-billion-in-funding-at-60-billion-pre-money-valuation.html" target="_blank" rel="noopener">FinSMEs - Ramp raises approx. $1.85bn at $60bn pre-money</a></li>
+<li><a href="https://storage.courtlistener.com/recap/gov.uscourts.nysd.674638/gov.uscourts.nysd.674638.41.0.pdf" target="_blank" rel="noopener">S.D.N.Y. - TRO and 5 U.S.C. 705 stay, No. 1:26-cv-08882 (JLR), 11 October 2026</a></li>
+<li><a href="https://www.axios.com/2026/10/12/trump-taxpayer-funded-ads-judge-order" target="_blank" rel="noopener">Axios - Judge orders halt to taxpayer-funded DHS ads</a></li>
+<li><a href="https://kyivindependent.com/will-only-lead-to-more-slaughter-bipartisan-backlash-erupts-in-us-over-trump-russia-diesel-deal/" target="_blank" rel="noopener">Kyiv Independent - Bipartisan backlash erupts over the Trump-Russia diesel deal</a></li>
+<li><a href="https://aljazeera.com/news/2026/10/11/us-homeland-security-secretary-sees-no-risk-from-livestreamed-execution" target="_blank" rel="noopener">Al Jazeera - US homeland security secretary sees no risk from livestreamed execution</a></li>
+<li><a href="https://www.cbsnews.com/news/zelenskyy-trump-new-ukrainian-president/" target="_blank" rel="noopener">CBS News - Trump&#x27;s energy ceasefire post and Zelensky</a></li>
+<li><a href="https://www.axios.com/2026/10/11/trump-russia-ukraine-energy-ceasefire-zelensky" target="_blank" rel="noopener">Axios - Trump says Russia and Ukraine agreed to an immediate energy ceasefire</a></li>
+<li><a href="https://kyivindependent.com/russia-struck-kharkivs-power-plant-shortly-after-trump-announced-energy-ceasefire/" target="_blank" rel="noopener">Kyiv Independent - Russia struck Kharkiv&#x27;s power plant shortly after the announcement</a></li>
+<li><a href="https://www.spokesman.com/stories/2026/oct/11/ukraines-zelenskiy-tells-abc-he-will-organize-elec/" target="_blank" rel="noopener">The Spokesman-Review / Reuters - Zelensky tells ABC he will organize elections</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/11/ethiopia-eritrea-ramp-up-rhetoric-are-they-inching-towards-war" target="_blank" rel="noopener">Al Jazeera - Ethiopia, Eritrea ramp up rhetoric: are they inching towards war?</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/12/maps-show-how-israels-yellow-line-keeps-squeezing-palestinians-in-gaza" target="_blank" rel="noopener">Al Jazeera - Maps show how Israel&#x27;s Yellow Line keeps squeezing Palestinians in Gaza</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/idf-soldiers-to-vote-at-850-stations-across-country-and-in-enemy-territory-starting-oct-20/" target="_blank" rel="noopener">Times of Israel liveblog - IDF to operate at least 850 military polling stations from 20 October</a></li>
+<li><a href="https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/" target="_blank" rel="noopener">Library of Congress, In Custodia Legis - FAQs: Israel&#x27;s upcoming election on 27 October 2026</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-12-daily.pdf">PDF</a></span>
+</div></div></body></html>
