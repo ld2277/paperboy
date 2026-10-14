@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Wednesday, October 14, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Wednesday, October 14, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">ASML told the market it cannot supply the lithography machines its customers want in 2027 or 2028 - the strongest demand signal of the window, and it arrived in the middle of a week of memory stocks de-rating.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Google ships Gemini 4 Argon, at half price until December</h2>
+<p class="field">What happened</p><p>Google made <b>Gemini 4 Argon</b> generally available on 13 October, at <a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud">$2 per million input tokens and $10 per million output</a> &mdash; introductory rates that <a href="https://ai.google.dev/gemini-api/docs/latest-model">rise to $4 and $20 on 1 December</a>, with cached input going from $0.10 to $0.20. It reaches developers through the Gemini API, AI Studio, Google Cloud and the Antigravity coding tool, and business users in the Gemini app; it is not on the free tier or the AI Pro plan. Google says Argon ties first on CWE-Bench v1 at 68% for remediating security vulnerabilities, cuts indirect prompt-injection success to 0.7% across 15 adaptive attempts, and that teams using it in Antigravity raised agentic code submissions by more than 35% and cut rollbacks by nearly a third. Those are all Google's own numbers. It is also expanding its Fairwind programme, which hands vetted government, critical-infrastructure and cybersecurity partners a build with the cyber guardrails removed.</p>
+<p class="field">What it means</p><p>The pricing is the story. A seven-week half-price window is customer acquisition, not a price cut, and it says Google would rather buy switching behaviour from OpenAI and Anthropic than win it on published scores — which it conspicuously does not give for the headline indices it claims to lead.</p>
+<p class="field">Watch next</p><p>Whether the 1 December step-up holds, and independent evals of the 68% and 0.7% claims.</p>
+</div>
+<div class="item">
+<h2>An OpenAI engineer is charged with bugging a conference room</h2>
+<p class="field">What happened</p><p>The Justice Department charged <b>Abdulrahman Alfozan</b>, 35, a Saudi national and an OpenAI engineer since July 2025, under <a href="https://www.justice.gov/usao-ndca/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai-san">18 U.S.C. 2511(1)(b)</a> with using a device to intercept oral communications. Per the DOJ, prompts about building, installing and concealing a recorder ran 24 to 30 September from an account linked to his spouse; the device went into a USB port behind a television in an executive conference room on or about 28 September, hidden in a piece of toilet paper and its contents encrypted; OpenAI personnel found it on 30 September. On 5 October he is alleged to have looked behind the same television, and to have left a bag in which OpenAI security found a second device. He was arrested on 9 October and remains in custody. US Attorney Craig Missakian: "For us it is a matter of national security." This is a charge, not a finding.</p>
+<p class="field">What it means</p><p>An espionage case inside a frontier lab, caught by a physical sweep rather than a software control, with the alleged tradecraft documented in chatbot logs. OpenAI&#x27;s line that it has &quot;no indications of this individual inappropriately accessing or exfiltrating model weights, source code, or customer data&quot; came via its newsroom account on X, not a filing.</p>
+<p class="field">Watch next</p><p>A detention hearing on 19 October before Magistrate Judge Alex Tse. Neither DOJ release gives a case number.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>ASML says it cannot supply 2027 or 2028</h2>
+<p class="field">What happened</p><p>ASML reported third-quarter net sales of <a href="https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026">EUR 11,662m</a> on 14 October at a 57.5% gross margin, net income of EUR 4,960m and basic earnings of EUR 12.95 a share, having shipped 113 new lithography systems and eight used ones. It guided the fourth quarter to EUR 14.2bn to 15.2bn at about 57%, implying a full year of EUR 44bn to 45bn, declared an interim dividend of EUR 1.88 payable 4 November, and bought back about EUR 4.1bn of stock in the quarter. The sentence that matters: "we now expect that our supply as currently planned for both 2027 and 2028 will not fully meet the demand of our customers". Chief executive Christophe Fouquet said customers "continue to increase their short- and medium-term equipment demand forecasts with us", and some are asking to place orders for 2029 and 2030. Low-NA EUV and immersion capacity is going up 30% for 2027, with a further 30% under investigation for 2028.</p>
+<p class="field">What it means</p><p>A toolmaker conceding it cannot meet two years of demand is the strongest capex signal in this window, and it sits awkwardly beside a week of memory stocks de-rating. One caveat does real work: ASML disclosed <b>no bookings figure</b>, and none appears in the financial statements either, so the demand claim rests entirely on management's characterisation of it. The market read was contested &mdash; Xinhua's Tokyo wrap called the results a miss while noting analysts did not think them weak.</p>
+<p class="field">Watch next</p><p>Whether the 2028 capacity decision is confirmed, and TSMC&#x27;s investor conference.</p>
+</div>
+<div class="item">
+<h2>Seoul falls a sixth day, Tokyo a fifth, and Taipei rallies without TSMC</h2>
+<p class="field">What happened</p><p>Seoul's KOSPI ended Wednesday at <a href="https://www.koreajoongangdaily.com/business/kospi-drops-for-6th-day-on-renewed-ai-concerns-ahead-of-us-inflation-data/12920899">6,008.81, down 26.54 points (0.44%)</a> and a sixth straight loss, having opened higher at 6,062.08 and spiked 2.57% inside the first half-hour before reversing; the KOSDAQ ended at 823.88, down 13.15 (1.57%). SK hynix ended at 1,420,000 won, down 1.66%, while Samsung Electronics rose 0.65%, and the won closed daytime trade 6.8 won stronger at 1,338.3. Tokyo extended its losing run to a fifth session, the Nikkei 225 ending at 67,744.29, down 33.23 (0.05%), and the TOPIX at 4,096.78, down 13.89 (0.34%). Taipei went the other way: the TAIEX ended at <a href="https://focustaiwan.tw/business/202610140016">48,625.83, up 284.52 points (0.59%)</a> on NT$928.62bn of turnover &mdash; but TSMC closed unchanged at NT$2,490.00, foreigners sold a net NT$20.04bn, and the gains came from petrochemicals, with Formosa Plastics limit-up at NT$88.90.</p>
+<p class="field">What it means</p><p>A chip index up 0.59% while its largest constituent does not move is a rotation out of semiconductors, not a recovery in them. Korea&#x27;s selling is now seven sessions of foreign outflow, and the de-rating that began on a Chinese DRAM claim has outlasted the claim.</p>
+<p class="field">Watch next</p><p>TSMC&#x27;s third-quarter investor conference, and SK hynix&#x27;s results late this month.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>JPMorgan and Goldman open the quarter on trading, not lending</h2>
+<p class="field">What happened</p><p>JPMorganChase reported net income of <a href="https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm">$15.305bn, up 6%</a>, diluted earnings of $5.57 a share, up 10%, and reported revenue of $50.172bn, up 8%. Managed net interest income rose 13% to $27.0bn and the credit provision fell 19% to $2.743bn. Excluding a $658m investment-securities loss, Jamie Dimon's framing was $15.8bn and a 21% return &mdash; "another quarter of strong results". The engine was markets and banking: Commercial &amp; Investment Bank revenue up 14% to $22.734bn, investment banking fees $2.96bn, up 14%. Goldman Sachs reported <a href="https://www.sec.gov/Archives/edgar/data/0000886982/000088698226000529/a3q26gsearningsresults.htm">net revenues of $18.679bn</a>, net earnings of $5.294bn, $17.01 a share and an 18.7% annualised return on equity.</p>
+<p class="field">What it means</p><p>Both banks earned the quarter on the capital-markets side while net interest income was merely solid. That is a cyclical mix, dependent on deal flow and volatility continuing, and it makes the next two quarters hostage to whether the AI-financing pipeline keeps clearing.</p>
+<p class="field">Watch next</p><p>Morgan Stanley and Bank of America later this week, and whether the trading beat is industry-wide.</p>
+</div>
+<div class="item">
+<h2>Citi posts its best third quarter in a decade; Wells Fargo&#x27;s credit costs climb</h2>
+<p class="field">What happened</p><p>Citigroup's net income rose 40% to <a href="https://www.sec.gov/Archives/edgar/data/0000831001/000110465926115323/c-ex99d1.htm">$5.245bn</a> on revenue of $23.845bn, up 8%, with earnings of $2.85 a share against $1.86. Net interest income was $16.982bn, up about 14%; markets revenue $6.113bn, up 6%; investment banking revenues $1.35bn, up 9%. US consumer cards were the soft spot, net income down 8% to $851m. Jane Fraser pointed to "the best third-quarter revenue in a decade". Wells Fargo earned <a href="https://www.sec.gov/Archives/edgar/data/0000072971/000007297126000318/wfc3qer10-13x26ex991xrelea.htm">$5.951bn</a>, $1.87 a share and up 13% on the year, on revenue of $21.87bn and net interest income of $12.517bn. Its credit provision rose to $1.029bn from $914m in the second quarter and $681m a year earlier, with net charge-offs at 0.38% of average loans. Wealth and investment management client assets rose 11% to $2.739tn.</p>
+<p class="field">What it means</p><p>Two banks, two stories. Wells Fargo&#x27;s provision build is the one number in the whole opening day pointing the other way — rising credit costs at the most consumer-weighted of the four, with charge-offs still historically low but no longer falling.</p>
+<p class="field">Watch next</p><p>Whether card charge-offs keep rising into the fourth quarter.</p>
+</div>
+<div class="item">
+<h2>A flat US session, and Treasuries reopen three basis points lower</h2>
+<p class="field">What happened</p><p>Tuesday's cash session ended mixed. The Dow ended at <a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-tuesday-10132026-nid13102026/">51,670.10, down 180.45 points (0.3%)</a>; the S&amp;P 500 at 7,805.45, down 1.79 points, less than a tenth of a per cent; the Nasdaq composite at 27,204.38, down 41.52 (0.2%); and the Russell 2000 at 2,783.37, down 11.11 (0.4%). Cash Treasuries reopened after the Columbus Day closure with the 10-year note at <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610">5.21%</a>, three basis points below the 9 October level of 5.24%.</p>
+<p class="field">What it means</p><p>The index spread is the information: the Dow and small caps down several tenths while the S&amp;P sat still means a narrow, index-level stalemate rather than a risk-off day.</p>
+<p class="field">Watch next</p><p>September CPI at 08:30 ET on 14 October, after this brief goes out, and PPI on 15 October.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Pluto Security leaves stealth with $42m to watch what AI agents do</h2>
+<p class="field">What happened</p><p>Pluto Security came out of stealth on 13 October having raised <a href="https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache">$42m across two rounds</a> &mdash; an $8.5m seed led by TLV Partners and a $34m Series A led by Jump Capital, with Skinos (the fund of Check Point co-founder Shlomo Kramer) also in. No valuation was disclosed, pre- or post-money, and the $42m is cumulative rather than a round size. The product inventories which AI tools, skills, browser extensions and MCP servers employees are actually running, and can intervene inside a live agent session. Co-founder and chief executive Shahar Bahat: "We're moving from user behavior to agent behavior," and, on trials, "there was not one POC in which we entered and didn't find malicious stuff".</p>
+<p class="field">What it means</p><p>The agent-security category is getting funded well ahead of any standard for what a safe agent configuration looks like. Note the shape of that second quote: a vendor saying every trial found something is marketing, and also probably true, which is the uncomfortable part.</p>
+<p class="field">Watch next</p><p>Whether MCP server inventory becomes a procurement checkbox, and who else raises into this category.</p>
+</div>
+<div class="item">
+<h2>Ubitium raises $14m to make a processor you configure in software</h2>
+<p class="field">What happened</p><p>Dusseldorf-based Ubitium announced a <a href="https://www.finsmes.com/2026/10/ubitium-raises-14m-in-seed-funding.html">$14m seed on 13 October</a>, led by Ibex Investors with OpenOcean joining and KBC Focus Fund, Runa Capital and Inflection returning. The company builds a reconfigurable RISC-V array that software configures at run time instead of fixed-function blocks, aimed at machines that sense, reason and act. Its first chip, the UB108, has run signal processing, AI inference and real-time control on the same array. Total seed funding since its 2024 founding is now $18m, which is cumulative and not this round. Reported by FinSMEs alone; no company announcement was reachable, so treat it as unconfirmed.</p>
+<p class="field">What it means</p><p>The pitch is against the accelerator orthodoxy: rather than a CPU plus a DSP plus an NPU on one die, one array that becomes whichever of those the workload needs. Attractive for power-constrained edge hardware, and hard to prove outside a demo.</p>
+<p class="field">Watch next</p><p>A named design win, or silicon in a shipping robot.</p>
+</div>
+<div class="item">
+<h2>A China-heavy Tuesday tape, with no mega-round in it</h2>
+<p class="field">What happened</p><p>Tuesday's round sheet was busy and small. The largest reported was <a href="https://techstartups.com/2026/10/13/startup-funding-news-today-october-13-2026-astribot-carbonfarm-ubitium-epyr-more/">Astribot</a> (Stardust Intelligence), the Shenzhen humanoid-robot firm, said to be raising about RMB 1bn, roughly $149m, at a stated RMB 15bn valuation &mdash; with neither pre- nor post-money specified, no round letter, and the whole figure resting on one trade aggregator with no company announcement reachable. Below it: Epyr's EUR 15m Series A led by SlateVC, Clueso's $10m Series A, CarbonFarm's EUR 7m. Nothing at mega-round scale landed in the window.</p>
+<p class="field">What it means</p><p>Ten rounds and not one of them large is what a market looks like when the capital is concentrated in a dozen names. The Chinese robotics cluster is the exception, and it is the part of the sheet with the weakest documentation.</p>
+<p class="field">Watch next</p><p>Whether Astribot confirms the round itself, and the TechCrunch Disrupt announcements.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>A judge turns the White House press-credential order into an injunction</h2>
+<p class="field">What happened</p><p>Judge Timothy Kelly entered a <a href="https://storage.courtlistener.com/recap/gov.uscourts.dcd.296754/gov.uscourts.dcd.296754.50.0_2.pdf">memorandum opinion on 13 October</a> granting a preliminary injunction in <i>Cable News Network, Inc. v. Trump</i>, No. 26-3287 (TJK), extending his September temporary restraining order &mdash; the restoration of White House hard-pass credentials for CNN, MS NOW and POLITICO. He found the plaintiffs likely to succeed on three grounds, not one: Fifth Amendment due process, First Amendment retaliation, and viewpoint discrimination in a nonpublic forum. The September order had rested on due process alone. Kelly set a nominal $1 bond under Rule 65(c) and denied the government's two-sentence request for a stay pending appeal.</p>
+<p class="field">What it means</p><p>The two added First Amendment holdings are the development. A due-process ruling says the credentials were pulled without adequate procedure. A viewpoint-discrimination holding says it cannot pull them for this reason at all, and that is much harder to work around.</p>
+<p class="field">Watch next</p><p>The separate order, and whether the government goes to the D.C. Circuit.</p>
+</div>
+<div class="item">
+<h2>A second judge blocks the ICC sanctions, as applied to two US groups</h2>
+<p class="field">What happened</p><p>Judge Jesse Furman granted a preliminary injunction "in substantial part" on 13 October in <a href="https://dawnmena.org/wp-content/uploads/2026/10/US_DIS_NYSD_1_26cv5957_d33818346e3418_OPINION_AND_ORDER_re_28_MOTION_for_Preliminary_Inj.pdf"><i>Democracy for the Arab World Now v. Trump</i></a>, No. 26-cv-5957 (JMF). It bars every defendant except the President from enforcing the civil and criminal penalty provisions of the International Emergency Economic Powers Act against DAWN and the Taxpayer Alliance Against Genocide, for conduct said to breach the services prohibition in Executive Order 14203, February 2025's ICC sanctions order. Furman held that prohibition content-based and not narrowly tailored. He denied an injunction against the President, facial invalidity and universal relief.</p>
+<p class="field">What it means</p><p>Read the denials as carefully as the grant. This is as-applied relief for named plaintiffs, not a strike-down: the sanctions regime stands, and anyone else submitting evidence to the ICC is still exposed. But two courts have now found the services prohibition unconstitutional as applied, which is how a facial challenge gets built.</p>
+<p class="field">Watch next</p><p>A joint letter due 20 October on whether a permanent injunction and final judgment should enter.</p>
+</div>
+<div class="item">
+<h2>Treasury sanctions a cartel network built around a race track</h2>
+<p class="field">What happened</p><p>OFAC designated <a href="https://ofac.treasury.gov/recent-actions/20261013">four individuals and eleven entities</a> on 13 October, all Mexico-based, in what Treasury titled a Cartel del Noreste facilitators network built around a horse-racing enterprise. All fifteen carry the illicit-drugs tag under Executive Order 14059; thirteen also carry the terrorism designation under 13224. The entity list clusters oddly: four propane and natural-gas distributors out of Nuevo Laredo, four construction and asphalt firms, and the La Molienda race track. Treasury's accompanying press release could not be retrieved, so there is no official quote here.</p>
+<p class="field">What it means</p><p>Gas distribution and asphalt are the tell. This is a designation aimed at a cartel&#x27;s legitimate cash-handling infrastructure rather than its narcotics, and the dual terrorism tag is what gives it secondary-sanctions reach over anyone who banks these firms.</p>
+<p class="field">Watch next</p><p>No new executive order or memorandum was signed in the window, and this tranche&#x27;s Federal Register notice had not appeared by Wednesday morning.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Explosions over Riyadh again, and Trump says an Iran decision is near</h2>
+<p class="field">What happened</p><p>Saudi civil defence reported air-raid alerts over Riyadh and Kharj province on the morning of 14 October; the cause was not established. Hours later the Houthis <a href="https://www.timesofisrael.com/liveblog-october-14-2026/">claimed</a> they had struck Aramco facilities in Dhahran, King Khalid International Airport and an Aramco refinery in Riyadh, and said operations would continue "in the coming days" &mdash; a party's account of its own operations, and not confirmation. The day before, a Saudi-led coalition issued an evacuation warning to civilians ahead of a strike on an oil site in Houthi-held Sanaa. Qatar Airways has suspended Riyadh and Dammam flights and Etihad has cancelled Riyadh services until 19 October. Trump said his administration would "make a decision on Iran very soon".</p>
+<p class="field">What it means</p><p>The aviation suspensions are the measurable part. Two Gulf carriers writing off a week of Riyadh and Dammam flying is an insurance judgement.</p>
+<p class="field">Watch next</p><p>Whether the 19 October resumptions hold, and whether Aramco acknowledges damage at any named facility.</p>
+</div>
+<div class="item">
+<h2>Israeli forces raid two Palestinian NGOs and Ramallah&#x27;s main hospital</h2>
+<p class="field">What happened</p><p>Israeli forces conducted a <a href="https://www.aljazeera.com/news/2026/10/13/israeli-forces-raid-palestinian-ngos-and-hospital-in-occupied-west-bank">daylight raid in central Ramallah on 13 October</a>, searching the offices of the Union of Palestinian Women's Committees and the Addameer prisoner-support group and confiscating Addameer's equipment, and entering the courtyard of the Palestine Medical Complex, the largest public hospital in the occupied West Bank. The Palestinian health ministry said a child was hit by live ammunition in Ramallah and el-Bireh; Wafa reported four photojournalists detained near Idhna. Both organisations are among the six Palestinian groups Israel designated as terrorist in 2021. No Israeli military statement on the raid was located.</p>
+<p class="field">What it means</p><p>The target set is the point. Addameer documents detention and the women&#x27;s committees run welfare programmes; neither is an armed formation, and both were designated in 2021 on a basis never published in full. Confiscating a documentation group&#x27;s equipment removes the record before it removes the organisation.</p>
+<p class="field">Watch next</p><p>Whether the groups&#x27; European donors respond, and any Israeli account of the hospital entry.</p>
+</div>
+<div class="item">
+<h2>EU ministers clear the summit text, and hear Hungary under Article 7</h2>
+<p class="field">What happened</p><p>General affairs ministers met in Luxembourg on <a href="https://www.consilium.europa.eu/en/meetings/gac/2026/10/13/">13 October</a> to prepare the European Council of 15 to 16 October, working from draft conclusions on the 2028 to 2034 budget, Ukraine, the Middle East, enlargement and defence. The Irish presidency tabled a revised budget "negotiating box" on 10 October carrying draft figures by heading; Thomas Byrne said it is "designed to act as a catalyst and move EU budget negotiations toward a timely agreement". Ministers also heard Hungary under the Article 7 procedure the Parliament triggered in September 2018: nothing was concluded or decided.</p>
+<p class="field">What it means</p><p>An Article 7 hearing that produces no finding is the procedure working as designed, which is to say barely. The negotiating box is the real movement: once headings carry numbers, the budget fight becomes arithmetic between capitals rather than principle.</p>
+<p class="field">Watch next</p><p>The 15 to 16 October European Council, and whether Ukraine financing is on its agenda at all.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026" target="_blank" rel="noopener">ASML - Q3 2026 results</a></li>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud" target="_blank" rel="noopener">Google Cloud - Gemini 4 Argon</a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/latest-model" target="_blank" rel="noopener">Google - Gemini API model and pricing reference</a></li>
+<li><a href="https://www.justice.gov/usao-ndca/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai-san" target="_blank" rel="noopener">DOJ, N.D. Cal. - Saudi national arrested over recording device at OpenAI</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000019617/000162828026065582/a3q26erfexhibit991narrative.htm" target="_blank" rel="noopener">JPMorganChase - Q3 2026 earnings (8-K Ex-99.1)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000886982/000088698226000529/a3q26gsearningsresults.htm" target="_blank" rel="noopener">Goldman Sachs - Q3 2026 results (8-K)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000831001/000110465926115323/c-ex99d1.htm" target="_blank" rel="noopener">Citigroup - Q3 2026 results (8-K Ex-99.1)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000072971/000007297126000318/wfc3qer10-13x26ex991xrelea.htm" target="_blank" rel="noopener">Wells Fargo - Q3 2026 results (8-K Ex-99.1)</a></li>
+<li><a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-tuesday-10132026-nid13102026/" target="_blank" rel="noopener">AP - How major US stock indexes fared, Tuesday 13 October</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury - daily yield curve, October 2026</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-drops-for-6th-day-on-renewed-ai-concerns-ahead-of-us-inflation-data/12920899" target="_blank" rel="noopener">Korea JoongAng Daily - KOSPI drops for sixth day</a></li>
+<li><a href="https://focustaiwan.tw/business/202610140016" target="_blank" rel="noopener">Focus Taiwan - TAIEX closes higher, 14 October</a></li>
+<li><a href="https://english.news.cn/asiapacific/20261014/47429fce9dd5484699328fda9639da0c/c.html" target="_blank" rel="noopener">Xinhua - Tokyo stocks edge lower, 14 October</a></li>
+<li><a href="https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache" target="_blank" rel="noopener">TechCrunch - Pluto Security raises $42m</a></li>
+<li><a href="https://www.finsmes.com/2026/10/ubitium-raises-14m-in-seed-funding.html" target="_blank" rel="noopener">FinSMEs - Ubitium raises $14m seed</a></li>
+<li><a href="https://storage.courtlistener.com/recap/gov.uscourts.dcd.296754/gov.uscourts.dcd.296754.50.0_2.pdf" target="_blank" rel="noopener">Memorandum opinion, CNN v. Trump, No. 26-3287 (D.D.C.)</a></li>
+<li><a href="https://dawnmena.org/wp-content/uploads/2026/10/US_DIS_NYSD_1_26cv5957_d33818346e3418_OPINION_AND_ORDER_re_28_MOTION_for_Preliminary_Inj.pdf" target="_blank" rel="noopener">Opinion and order, DAWN v. Trump, No. 26-cv-5957 (S.D.N.Y.)</a></li>
+<li><a href="https://ofac.treasury.gov/recent-actions/20261013" target="_blank" rel="noopener">OFAC - counter narcotics and counter terrorism designations, 13 October</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog-october-14-2026/" target="_blank" rel="noopener">Times of Israel - liveblog, 14 October</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/13/israeli-forces-raid-palestinian-ngos-and-hospital-in-occupied-west-bank" target="_blank" rel="noopener">Al Jazeera - Israeli forces raid Palestinian NGOs and hospital</a></li>
+<li><a href="https://www.consilium.europa.eu/en/meetings/gac/2026/10/13/" target="_blank" rel="noopener">Council of the EU - General Affairs Council, 13 October</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-14-daily.pdf">PDF</a></span>
+</div></div></body></html>
