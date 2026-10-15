@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Thursday, October 15, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Thursday, October 15, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">A 3.7% September inflation print broke the AI trade: Wednesday&#x27;s hot CPI became Thursday&#x27;s worst day in Seoul since April, with circuit breakers on both Korean indexes - and then TSMC raised its forecast for the year and left its capex budget alone.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic publishes its midterm election measures, and admits the gap in them</h2>
+<p class="field">What happened</p><p>On 14 October Anthropic <a href="https://www.anthropic.com/news/2026-us-midterms">set out what it is doing</a> for the 3 November US midterms: a Democracy Works voting-information integration later this month, election-night results in Claude, new classifiers aimed at misuse split across many steps, and account bans tied to a fake-news network it says pushed Russian, Iranian and North Korean narratives. It also published an evenhandedness evaluation scoring Opus 5.5, Sonnet 5.5 and Haiku 5.5 at 99%, and commissioned red-teaming from the Institute for Strategic Dialogue and the McCain Institute, which found Claude refuses a single harmful request but can miss a campaign broken into innocuous-looking tasks.</p>
+<p class="field">What it means</p><p>The admitted gap is the real disclosure. Every frontier lab&#x27;s safety story rests on refusing bad requests one at a time, and an influence operation does not arrive one at a time. The 99% is also a self-scored benchmark on a self-defined axis.</p>
+<p class="field">Watch next</p><p>Whether the Democracy Works integration ships before 3 November, and whether any lab ever publishes campaign-level rather than prompt-level refusal rates.</p>
+</div>
+<div class="item">
+<h2>Google gives 200 European scientists its frontier models and $3m of compute</h2>
+<p class="field">What happened</p><p>Google DeepMind and Google Cloud said on 14 October they will give up to 200 European scientific researchers access to AlphaFold 3, WeatherNext, AlphaGenome, AlphaEvolve and AlphaEarth Foundations, plus $3m in compute credits. Access runs through RAISE, the Resource for AI Science in Europe - which is a <a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">European Commission initiative</a>, not a joint programme. The Commission's own RAISE pages mention no Google involvement and no credits; Google says only that it is making models available through RAISE, and claims no agreement with Brussels. Who selects the 200 and when access begins are unstated.</p>
+<p class="field">What it means</p><p>Three million dollars of compute is a rounding error against the capex figures elsewhere in this brief. The asset being given away is model access; the thing being bought is a position inside European research infrastructure while the AI Act is still being implemented.</p>
+<p class="field">Watch next</p><p>Whether the Commission publishes anything of its own on the arrangement, and who the first cohort turns out to be.</p>
+</div>
+<div class="item">
+<h2>xAI holds Grok Voice&#x27;s price through a generation</h2>
+<p class="field">What happened</p><p>xAI released <a href="https://x.ai/news/grok-voice-3">Grok Voice 3.0</a> on 14 October, a speech-to-speech model it says ranks first on Artificial Analysis's Speech-to-Speech Index at 86.9 and scores 97% on Full Duplex Bench, with sub-second latency. API pricing is unchanged from Grok Voice 2.0 at $0.08 a minute, and agents pointed at grok-voice-latest were migrated automatically. xAI also says it runs voice in Tesla vehicles and Starlink call centres, where roughly 70% of calls are resolved without a human. Every one of those is a company figure.</p>
+<p class="field">What it means</p><p>Holding price across a generation is the notable choice, and the opposite of what Google just did in committing Argon&#x27;s rates to double on 1 December. Voice is the one modality where latency rather than reasoning decides who wins.</p>
+<p class="field">Watch next</p><p>An independent Artificial Analysis listing for 3.0, and whether OpenAI or Google answer on price rather than on capability.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>TSMC posts a record quarter, raises the year, and does not touch capex</h2>
+<p class="field">What happened</p><p>TSMC reported Q3 on 15 October: <a href="https://pr.tsmc.com/english/news/3346">revenue of NT$1,494.24bn</a> (US$46.72bn), up 50.9% year on year in NT$ and 41.2% in dollars; net income NT$763.06bn, up 68.7%; gross margin 66.4%. Nodes of 7nm and below made up 79% of wafer revenue. Q4 revenue is guided to US$52.3-54.3bn, the midpoint up 58% on the year. Chief executive C.C. Wei raised full-year 2026 dollar revenue growth to "around 44%" from July's "slightly more than 40%", and CFO Wendell Huang reiterated capex at US$60-64bn, saying 2026-2028 spending will be significantly higher than the past three years.</p>
+<p class="field">What it means</p><p>A flat contradiction of what the market spent the day pricing: the company that actually builds the capacity raised its forecast and left its budget alone on the morning Asia was dumping AI hardware. Its own shares still ended down 2.01% at NT$2,440.00.</p>
+<p class="field">Watch next</p><p>Whether SK hynix&#x27;s late-October results carry the same message, and whether any customer confirms a 2029 slot.</p>
+</div>
+<div class="item">
+<h2>Korea&#x27;s Black Thursday: both indexes circuit-broken for the first time since July</h2>
+<p class="field">What happened</p><p>The KOSPI <a href="https://www.koreatimes.co.kr/economy/20261015/black-thursday-kospi-plunges-7-amid-ai-spending-fears">closed on 15 October at 5,554.22</a>, down 454.59 points or 7.57%, a seventh straight loss; the KOSDAQ fell 7.65% to 760.82. Level-one circuit breakers - an 8% fall held for a minute, then a 20-minute halt - hit the KOSDAQ around 12:23 local and the KOSPI around 12:38, the <a href="https://www.koreajoongangdaily.com/business/stocks-plunge-as-circuit-breakers-hit-kospi-kosdaq-for-first-time-in-over-two-months/12922302">first same-day pair since 29 July</a>. Samsung Electronics fell 9.48% and SK hynix 11.06%. Foreigners sold a net 3.6241tn won on the KOSPI while institutions and individuals bought. The won ended at 1,344.6, 6.3 weaker.</p>
+<p class="field">What it means</p><p>Mirae Asset&#x27;s Seo Sang-young named the mechanism: the market is sensitive to &quot;whether capital raising will be sustainable&quot; not to AI revenue growth. J.P. Morgan&#x27;s Mixo Das said it &quot;is struggling to find a new buyer&quot; now the Samsung and SK hynix buybacks are spent. Taipei fell 3.41% but its financials rose 0.73% - rotation, not capitulation.</p>
+<p class="field">Watch next</p><p>Whether the seventh session is the last one, and Advantest and Tokyo Electron guidance.</p>
+</div>
+<div class="item">
+<h2>Japan will fund up to $21bn for two GlobalFoundries fabs in New York</h2>
+<p class="field">What happened</p><p>GlobalFoundries <a href="https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000252/gfpressreleasefinal.htm">said on 14 October</a> it will operate two new 300mm fabs at its Malta, New York site under a US-Japan initiative funded with up to $21bn of Japanese investment, in two tranches of about $10bn. Each fab would add roughly 900,000 wafers a year, the first online in 2029. GlobalFoundries is technology provider and operator; the Department of Commerce receives equity of about 4%. Renesas, Apple, Cirrus Logic and GM are named as customers, Tokyo Electron as an equipment partner.</p>
+<p class="field">What it means</p><p>Japan buys American capacity with cash; Washington takes stock in the operator. Who owns the output when the capital is foreign and the state holds equity is answered in no published document, and what GlobalFoundries is paid - the part that decides whether this is good for it - is absent.</p>
+<p class="field">Watch next</p><p>Whether Commerce&#x27;s total stake is disclosed - a 7% figure in wire copy appears in no filing.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>September CPI hits 3.7%, and gasoline did over half the work</h2>
+<p class="field">What happened</p><p>Headline <a href="https://www.bls.gov/news.release/cpi.nr0.htm">CPI rose 0.6% in September</a>, seasonally adjusted, after 0.4% in August, taking the twelve-month rate to 3.7% from 3.4%. Core - less food and energy - rose 0.3% for a third month and 2.6% over the year, from 2.4%. The composition is lopsided: energy rose 5.2% and gasoline 9.1%, up 34.2% on the year, and BLS states that gasoline's rise "account[ed] for over half of the monthly all items increase". Shelter rose 0.4%, food was flat, and airline fares are up 22.4% on the year.</p>
+<p class="field">What it means</p><p>A 3.7% headline on a 2.6% core is an energy shock sitting on a slowly drifting core. It is close to the worst possible print before the 27-28 October FOMC: hot enough to be politically impossible to ignore, soft enough underneath that a hold is hard to justify on the data.</p>
+<p class="field">Watch next</p><p>PPI, due 15 October, and the FOMC on 27-28 October.</p>
+</div>
+<div class="item">
+<h2>Bank earnings day two: a $1.2bn charge at BofA, records at Morgan Stanley</h2>
+<p class="field">What happened</p><p>Bank of America <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000070858">earned $6.9bn</a> in Q3, down from $8.3bn, with EPS of $0.91 against $1.04 - entirely because of a $1.2bn non-deductible charge for penalties after it consented on 13 October to OCC and FinCEN orders on its anti-money-laundering and sanctions compliance. Underneath, revenue rose 3% to $30.0bn and net interest income 8% to $16.4bn; investment banking fees fell 11% and sales and trading 5%. Return on tangible common equity was 12.6%, against 15.3%. <a href="https://www.sec.gov/Archives/edgar/data/0000895421/000089542126000288/a3q26msearningsrelease.htm">Morgan Stanley</a> reported net revenues of $20.3bn, EPS of $3.03 and ROTCE of 22.6% - down from 23.5% despite the beat - with record Wealth Management revenue of $9.07bn.</p>
+<p class="field">What it means</p><p>The same split as Tuesday&#x27;s four: fees carried the quarter and lending did not - except at Bank of America, where lending grew in every client segment and the legal bill arrived instead. OFAC separately settled with Bank of America, N.A. for $11.7m on 13 October, a third action not inside the $1.2bn.</p>
+<p class="field">Watch next</p><p>Whether the consent orders carry ongoing obligations, and Q4 card charge-offs.</p>
+</div>
+<div class="item">
+<h2>Worst day since July for the S&amp;P - and the Dow barely moved</h2>
+<p class="field">What happened</p><p>The <a href="https://krmg.com/2026/10/14/how-major-us-stock-indexes-fared-wednesday-10-14-2026/">S&amp;P 500 ended 14 October at 7,718.94</a>, down 86.51 points or 1.1%, its worst day since July. The Nasdaq composite fell 511.51 to 26,692.87 and the Russell 2000 53.84 to 2,729.53, both 1.9%. The Dow lost just 48.62 points to 51,621.48, down 0.1%. Nvidia fell 3.2%, Broadcom 3.1% and AMD 5.7%. The Treasury curve flattened rather than shifted: the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610">two-year par yield rose three basis points to 4.82%</a> while the ten-year fell two to 5.19% and the thirty-year four to 5.52%. Wire copy had the ten-year briefly above 5.32% intraday.</p>
+<p class="field">What it means</p><p>An 1.8-point gap between the Dow and the Nasdaq in one session is not risk-off; it is the AI-capex complex de-rating while industrials and staples absorb the print. The curve says the same - higher for longer at the front, no panic at the back.</p>
+<p class="field">Watch next</p><p>Whether the rotation survives PPI and the FOMC.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Modal raises $750m at $15.75bn, five months after its last round</h2>
+<p class="field">What happened</p><p>Modal, which rents GPU compute to developers as serverless infrastructure, <a href="https://modal.com/blog/1-billion-annualized-run-rate-series-d">announced a $750m Series D</a> on 14 October at a $15.75bn post-money valuation, led by Accel with Kleiner Perkins participating. The company says it recently crossed $1bn in annualised run-rate, that usage has tripled and that it has grown fifteenfold year on year - all company figures, and a run-rate is not revenue. Its Series C closed five months ago. Several aggregators carried the valuation as $15bn; the company's own number is $15.75bn.</p>
+<p class="field">What it means</p><p>This is the inference layer repricing on the same day the hardware layer de-rated, and both can be true at once. The people selling compute by the second have pricing power precisely because the people buying GPUs by the rack are capital-constrained.</p>
+<p class="field">Watch next</p><p>Whether a Series E arrives inside twelve months, and whether the run-rate is ever restated as revenue.</p>
+</div>
+<div class="item">
+<h2>Salience Labs raises $125m with Intel and AMD both in the round</h2>
+<p class="field">What happened</p><p>Oxford-founded Salience Labs <a href="https://siliconangle.com/2026/10/14/salience-labs-raises-125m-in-funding-after-showcasing-worlds-most-advanced-fully-optical-circuit-switching-tech/">announced a $125m Series B</a> on 14 October led by Bullhound Capital, with Intel Capital and AMD Ventures both participating, alongside SBI Group, Hudson River Trading, the British Business Bank and returning backers including Applied Ventures. The company builds an all-optical silicon-photonics switch that routes data on-chip without converting it to electrical signals; it showed a 64-port version at ECOC 2026, with 128- and 256-port parts in development. No valuation was disclosed, pre- or post-money.</p>
+<p class="field">What it means</p><p>Intel Capital and AMD Ventures in the same round is the signal worth reading. Optical switching only matters if the bottleneck in an AI datacentre has moved from the compute to the fabric between it, and two rival chipmakers appear to have concluded that it has.</p>
+<p class="field">Watch next</p><p>A named hyperscaler design win, and whether the 128-port part ships in 2027.</p>
+</div>
+<div class="item">
+<h2>DayOne upsizes its Johor financing to about $7.2bn</h2>
+<p class="field">What happened</p><p>DayOne <a href="https://www.prnewswire.com/news-releases/dayone-upsizes-malaysia-financing-to-us7-2-billion-total-billings-surpass-1gw-and-bookings-reach-2-3gw-302908384.html">said on 14 October</a> that the senior secured syndicated term financing behind its Johor data-centre platform has been upsized to approximately US$7.2bn in total, from about US$3.5bn raised in May 2025, through a seven-lender consortium; it says more than 30 banks have provided project financing and that it has raised over US$6bn of equity since 2024. As of 20 September billings had passed 1GW, more than eightfold up in under two years from 121MW at the end of 2024, and bookings reached about 2.3GW across 15 customers, against 1.25GW at the end of 2025. Reservations of 1.1GW are excluded from those figures and may never be exercised.</p>
+<p class="field">What it means</p><p>Debt, not equity, is the marginal dollar in datacentre buildout now - which is exactly the sensitivity Seoul was trading on this morning. DayOne has separately filed a registration statement for a US listing; this financing release says nothing about it, and the two should not be merged.</p>
+<p class="field">Watch next</p><p>The IPO filing&#x27;s terms, and whether reservations convert into bookings.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The Third Circuit strikes the federal gun ban as applied to a drink-driving conviction</h2>
+<p class="field">What happened</p><p>Sitting en banc, the Third Circuit held 18 U.S.C. 922(g)(1) - the federal felon-in-possession ban - <a href="https://www2.ca3.uscourts.gov/opinarch/241091p.pdf">unconstitutional as applied to Edward Williams</a>, affirming summary judgment in his favour. The opinion issued 13 October, a day before this brief's window, and landed on the 14th. Judge Matey wrote for seven judges and Chief Judge Chagares concurred in the judgment, making eight; Judges Freeman and Shwartz dissented. The predicate was a 2005 Pennsylvania conviction for driving at the highest rate of alcohol, his second such matter. The court found the government's analogues - habitual-drunkard laws - time-limited and not aimed at firearm misuse, and said Williams "has done nothing violent, let alone dangerous, for over twenty years".</p>
+<p class="field">What it means</p><p>As-applied, not facial, so the statute stands. But a federal appeals court has now told the government that &quot;felony&quot; is not a category it may disarm wholesale, and the conduct-specific test the court applied invites every non-violent predicate to be litigated one defendant at a time.</p>
+<p class="field">Watch next</p><p>A certiorari petition, and whether other circuits adopt the conduct-specific framing.</p>
+</div>
+<div class="item">
+<h2>DHS cuts the refugee termination response window to ten days, effective on publication</h2>
+<p class="field">What happened</p><p>DHS published an <a href="https://www.federalregister.gov/documents/2026/10/14/2026-20956/removing-30-day-refugee-termination-notice">interim final rule on 14 October</a>, effective the same day, rewriting 8 CFR 207.9 to give a refugee ten days - thirteen if the notice is mailed - to respond to a notice of intent to terminate their status, down from thirty. The rule puts about 186,000 cases potentially within scope: refugees admitted between FY2015 and FY2025 who have not yet adjusted status. DHS skipped notice and comment, invoking both good cause and the foreign-affairs exception, and waived the thirty-day delay; comments are nonetheless invited until 13 November. It cites executive orders 14161 and 14163 and an internal review it calls Operation PARRIS, and says the changes "restore integrity to the immigration system".</p>
+<p class="field">What it means</p><p>The procedural posture is the story. A rule that is already binding, justified in part on the ground that border control is a foreign-affairs function, is the hardest kind to enjoin quickly - and the 186,000 is the government&#x27;s own estimate of its reach.</p>
+<p class="field">Watch next</p><p>A challenge in the next fortnight, and whether the comment period changes anything.</p>
+</div>
+<div class="item">
+<h2>Washington&#x27;s quietest window of the month</h2>
+<p class="field">What happened</p><p>No executive order, memorandum or proclamation was signed or published on 14 or 15 October; the newest presidential action remains 7 October. Congress is out, with the House back on 9 November and the Senate on 6 November. OFAC's only action dated 14 October was a deletion: <a href="https://ofac.treasury.gov/recent-actions/20261014">five SDN entries</a>, all name variants of one Venezuelan, Jorge Jesus Rodriguez Gomez, removed with no executive order or statute cited and no explanation offered.</p>
+<p class="field">What it means</p><p>An unexplained delisting is not nothing. Removals are how sanctions policy signals without announcing, and a lone Venezuela deletion in an otherwise empty week is worth noticing.</p>
+<p class="field">Watch next</p><p>Whether more Venezuela removals follow, and the stack of authorities expiring 11 December as the lame duck opens.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>A ballistic strike on Kyiv&#x27;s CHPP-4, three days into an &quot;energy ceasefire&quot; with no text</h2>
+<p class="field">What happened</p><p>Kyiv was hit overnight into 14 October by what both Zelensky and Mayor Klitschko called a massive ballistic missile strike; Zelensky said the main target was <a href="https://meduza.io/en/news/2026/10/14/russian-strike-on-kyiv-kills-three-injures-over-20-parts-of-city-lose-power">CHPP-4</a>, one of the capital's main power plants. Ukraine's State Emergency Service reported three killed and 21 injured, including one death in Holosiivskyi and two bodies recovered from an apartment fire after a strike late on 13 October; Klitschko's early-morning count was lower and explicitly preliminary. Russia's defence ministry said it struck communications and energy facilities in Kyiv, Kyiv region and Kharkiv region - its own account of its own operation, not confirmation.</p>
+<p class="field">What it means</p><p>Trump announced an energy ceasefire on 11 October in a social-media post with no details. Four days on: no published text, no Russian assent, and a strike on a power plant. Zelensky said Ukraine&#x27;s forces had &quot;received all relevant orders&quot;; on 13 October the Kremlin had nothing to add.</p>
+<p class="field">Watch next</p><p>Whether any written instrument ever appears, and the end-of-October trilateral talks.</p>
+</div>
+<div class="item">
+<h2>The Nord Stream sabotage trial opens in Hamburg</h2>
+<p class="field">What happened</p><p>The trial of Serhii K., a 50-year-old Ukrainian named only by initial under German privacy rules, <a href="https://www.aljazeera.com/news/2026/10/14/ukrainian-ex-officer-goes-on-trial-in-germany-over-nord-stream-blasts">opened on 14 October</a> at Hamburg's Hanseatic Higher Regional Court. Prosecutors allege he organised the operation that destroyed the pipelines on 26 September 2022 by order of Ukrainian state agencies, leading divers and an explosives expert who sailed from Rostock on a hired yacht and set timed charges near Bornholm. The charges include attacking civilian infrastructure - framed as a war crime - and causing explosions. He was arrested in Italy in August 2025 and extradited that November. He did not speak; his lawyers denied involvement and sought dismissal.</p>
+<p class="field">What it means</p><p>The court must decide whether the pipelines were civilian infrastructure or a military target; one defence lawyer called them &quot;a weapon in the hand of the Russians&quot;. That is the whole case, and a German court answering it has consequences well past this defendant.</p>
+<p class="field">Watch next</p><p>The ruling on the dismissal motion; the trial should run into early 2027.</p>
+</div>
+<div class="item">
+<h2>Rubio calls Abiy as the Horn war pulls in the diplomats</h2>
+<p class="field">What happened</p><p>Secretary of State Rubio telephoned Ethiopian prime minister Abiy Ahmed on 14 October urging de-escalation and dialogue under the 2018 Ethiopia-Eritrea peace agreement, saying the region cannot withstand more conflict. Human Rights Watch said civilians have been killed and injured by shelling in southern Tigray, without giving figures or assigning blame. Control of Zalambessa, the border town reported on 13 October to have been entered by Ethiopian federal forces, remains unconfirmed. Eritrea denies any incursion and calls Addis Ababa&#x27;s accusations a declaration of war.</p>
+<p class="field">What it means</p><p>Both have written to the Security Council: Eritrea asking for Chapter VII action, Ethiopia asserting self-defence against advances it puts at up to 60km inside its territory. The Council held closed consultations on 13 October at US request and published nothing.</p>
+<p class="field">Watch next</p><p>Whether the Council produces any product, and whether Eritrea treats the Rubio call as cover to pull back.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">BLS - Consumer Price Index, September 2026</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury - Daily par yield curve, October 2026</a></li>
+<li><a href="https://krmg.com/2026/10/14/how-major-us-stock-indexes-fared-wednesday-10-14-2026/" target="_blank" rel="noopener">AP - How major US stock indexes fared, Wednesday 14 October</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000895421/000089542126000288/a3q26msearningsrelease.htm" target="_blank" rel="noopener">Morgan Stanley - Q3 2026 earnings release (8-K)</a></li>
+<li><a href="https://pr.tsmc.com/english/news/3346" target="_blank" rel="noopener">TSMC - Q3 2026 results</a></li>
+<li><a href="https://focustaiwan.tw/business/202610150013" target="_blank" rel="noopener">Focus Taiwan - TSMC raises 2026 forecast; TAIEX close</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261015/black-thursday-kospi-plunges-7-amid-ai-spending-fears" target="_blank" rel="noopener">Korea Times - KOSPI plunges 7% on AI spending fears</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/stocks-plunge-as-circuit-breakers-hit-kospi-kosdaq-for-first-time-in-over-two-months/12922302" target="_blank" rel="noopener">Korea JoongAng Daily - Circuit breakers hit KOSPI and KOSDAQ</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000252/gfpressreleasefinal.htm" target="_blank" rel="noopener">GlobalFoundries - Selected to operate two New York fabs (6-K)</a></li>
+<li><a href="https://www.anthropic.com/news/2026-us-midterms" target="_blank" rel="noopener">Anthropic - Preparing for the 2026 US midterms</a></li>
+<li><a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en" target="_blank" rel="noopener">European Commission - RAISE, Resource for AI Science in Europe</a></li>
+<li><a href="https://x.ai/news/grok-voice-3" target="_blank" rel="noopener">xAI - Grok Voice 3.0</a></li>
+<li><a href="https://modal.com/blog/1-billion-annualized-run-rate-series-d" target="_blank" rel="noopener">Modal - $1bn annualised run-rate and Series D</a></li>
+<li><a href="https://siliconangle.com/2026/10/14/salience-labs-raises-125m-in-funding-after-showcasing-worlds-most-advanced-fully-optical-circuit-switching-tech/" target="_blank" rel="noopener">SiliconANGLE - Salience Labs raises $125m</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/dayone-upsizes-malaysia-financing-to-us7-2-billion-total-billings-surpass-1gw-and-bookings-reach-2-3gw-302908384.html" target="_blank" rel="noopener">DayOne - Malaysia financing upsized to US$7.2bn</a></li>
+<li><a href="https://www2.ca3.uscourts.gov/opinarch/241091p.pdf" target="_blank" rel="noopener">Third Circuit - Williams v. Attorney General (en banc), No. 24-1091</a></li>
+<li><a href="https://www.federalregister.gov/documents/2026/10/14/2026-20956/removing-30-day-refugee-termination-notice" target="_blank" rel="noopener">Federal Register - Removing 30-day refugee termination notice (91 FR 65077)</a></li>
+<li><a href="https://ofac.treasury.gov/recent-actions/20261014" target="_blank" rel="noopener">OFAC - Venezuela-related designation removal, 14 October</a></li>
+<li><a href="https://meduza.io/en/news/2026/10/14/russian-strike-on-kyiv-kills-three-injures-over-20-parts-of-city-lose-power" target="_blank" rel="noopener">Meduza - Russian strike on Kyiv kills three</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/14/ukrainian-ex-officer-goes-on-trial-in-germany-over-nord-stream-blasts" target="_blank" rel="noopener">Al Jazeera - Nord Stream trial opens in Germany</a></li>
+<li><a href="https://www.courthousenews.com/nord-stream-sabotage-trial-opens-against-ex-ukrainian-officer/" target="_blank" rel="noopener">Courthouse News - Nord Stream sabotage trial opens</a></li>
+<li><a href="https://www.securitycouncilreport.org/whatsinblue/" target="_blank" rel="noopener">Security Council Report - Horn of Africa: closed consultations</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-15-daily.pdf">PDF</a></span>
+</div></div></body></html>
