@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, October 18, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, October 18, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Trump imposed the Russia sanctions Congress passed 86-11, then waived all of them in the same executive order, two days before they were due to bite.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>DeepSeek ships a million-token open-weight update under MIT</h2>
+<p class="field">What happened</p><p>DeepSeek published <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017">DeepSeek-V4.1-Flash-1017</a> on Saturday, weights on Hugging Face under an MIT licence, calling it a minor update and <a href="https://api-docs.deepseek.com/news/news261017/">a Pareto improvement in performance and cost</a>. It describes a mixture-of-experts with a 552-billion-parameter backbone, activating about 8 billion parameters per token on input and 16 billion on output, plus a separate 196-billion-parameter sparsely accessed memory; the 763-billion figure on the model page sums stored tensors rather than stating a size. Context runs to a million tokens. Its own table reports Terminal-Bench 4.0 at 42.3 from 31.2 and DeepSWE v1.1 at 77.0 from 74.2, both vendor-run and so far unreplicated.</p>
+<p class="field">What it means</p><p>Three frontier-scale open-weight releases in a fortnight, after Reflection&#x27;s Beam and Meta&#x27;s Muse Spark Open. This one is a Chinese lab publishing nine days into Beijing&#x27;s consultation on licensing model exports, which exempts technology already public but not new releases of it. The timing is not accidental.</p>
+<p class="field">Watch next</p><p>Independent SWE-bench runs, and whether usage holds when DeepSeek starts billing its Search and Fetch APIs on 31 October.</p>
+</div>
+<div class="item">
+<h2>Meta narrowed the scraping clause. It did not remove it</h2>
+<p class="field">What happened</p><p>Meta rewrote the contested provision in its commercial terms before they take effect on 30 October. The word train is gone from the permitted-use list: the original let Meta <a href="https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/">provide, develop, improve, research, train, and maintain the integrity of</a> its products, and the revision reads provide, develop, improve, research, and maintain advertising and business products. What survives is the authorisation to crawl domains associated with a business's products or services, and no robots.txt language was added. <a href="https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/">TechCrunch reported that Meta had removed the provision</a>; Nieman Lab set the before and after side by side and found it narrowed instead.</p>
+<p class="field">What it means</p><p>Develop is now doing the work train used to do, and nobody has defined business product. Lawyers told Nieman Lab the revision does not address their concerns, and robots.txt compliance stays voluntary. Read the edit as a presentational fix under pressure, not a retreat.</p>
+<p class="field">Watch next</p><p>Whether the News/Media Alliance gets the 30 October date moved, and whether any publisher sues before it.</p>
+</div>
+<div class="item">
+<h2>Anthropic&#x27;s Clark floats a 44 trillion dollar US economy</h2>
+<p class="field">What happened</p><p>At the IMF and World Bank annual meetings in Bangkok on Saturday, Anthropic co-founder Jack Clark <a href="https://whbl.com/2026/10/17/anthropics-clark-says-ais-impact-accelerating-quickly-and-could-vastly-boost-us-gdp/">said one of the company's internal economic models</a> projects AI lifting US output to 44 trillion dollars by 2030, against a little over 30 trillion today. He conceded the number sounds very outlandish and said growth on that scale would need entirely new industries and inventions to appear. He also urged cooperation on unusual and serious rules.</p>
+<p class="field">What it means</p><p>Set it beside Gartner&#x27;s figure from the same week: over 3.5 trillion dollars of AI investment exposed to impairment by 2030. The gap between the two forecasts is the whole argument about whether this is a cycle or a bubble, and a vendor projecting a 45 percent jump in national output is marketing with a spreadsheet.</p>
+<p class="field">Watch next</p><p>Whether any finance ministry or central bank writes an AI productivity assumption into a published forecast.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Seoul says the chip cycle runs at least through next year</h2>
+<p class="field">What happened</p><p>South Korea's finance minister Lee Hyoung-il, on the sidelines of the Bangkok meetings on Saturday, said the semiconductor upcycle has further to run. <a href="https://www.tokenpost.com/news/business/34139">At present, we judge that this round of growth can be sustained at least until next year</a>, he said, adding that the semiconductor supply-demand gap remains huge, and the supply side is still expanding. He attributed part of the recent volatility in Korean equities to semiconductors' outsized weight in the economy, and said the boom should push 2026 tax receipts above the earlier estimate, without giving a figure. The remarks came in a CNBC interview; no Korean government release accompanied them, and the finance ministry has published nothing.</p>
+<p class="field">What it means</p><p>A finance minister talking the cycle up three days after the KOSPI fell 7.57 percent in a single session is doing two jobs at once, and the tax-receipt line is the honest tell: Seoul&#x27;s budget now has a direct stake in memory pricing. The claim itself is unremarkable and widely shared. What makes it worth a line is that it is the first time a government rather than a vendor has put a date on the cycle, and the date is soft.</p>
+<p class="field">Watch next</p><p>SK hynix reports late this month, and Samsung follows. Either one guiding below consensus would make this remark look like an attempt to get ahead of bad news.</p>
+</div>
+<div class="item">
+<h2>ASML&#x27;s capacity warning lands on Korea&#x27;s fab timetables</h2>
+<p class="field">What happened</p><p>The Korea Times reported on Saturday that ASML's guidance of 30 percent capacity increases in each of 2027 and 2028 may still not cover demand, quoting chief executive Christophe Fouquet that the expansion <a href="https://koreatimes.co.kr/business/companies/20261017/securing-equipment-emerges-as-new-variable-for-koreas-chip-expansion-plans">will not allow us to meet our customer demand</a> and finance chief Roger Dassen that the company is holding off accepting orders for 2029 and 2030 while it assesses both customer readiness and its own capacity. With lead times of eighteen months to two years on low-NA EUV and immersion DUV tools, machines arriving now reflect orders placed around 2025. SK hynix is targeting October 2027 for production at its first Yongin fab; Samsung plans first Yongin operations in 2029 and is due to break ground this month; the Jeonnam-Gwangju cluster has no company schedule at all, with local authorities aiming at 2027 construction and 2030 mass production. Samsung and SK hynix both declined to confirm their order status.</p>
+<p class="field">What it means</p><p>The binding constraint on new capacity is shifting from capital and land to lithography slots, and slots are allocated years before a fab exists. A Korean site that has not placed orders by now is not opening in 2029, whatever the groundbreaking photograph says. That also quietly resolves an argument about whether the memory shortage is a demand story or a supply one.</p>
+<p class="field">Watch next</p><p>Samsung&#x27;s Yongin groundbreaking this month, any order disclosure from either Korean maker, and ASML&#x27;s January capital-budget update.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Microsoft walks away from Nscale&#x27;s Essex site weeks before its IPO</h2>
+<p class="field">What happened</p><p>The Telegraph reported early on Sunday that <a href="https://www.globalbankingandfinance.com/microsoft-pulls-out-uk-data-center-deal-nscale-telegraph/">Microsoft has ended its agreement</a> with British cloud provider Nscale for a data centre at Loughton in Essex. Nscale <a href="https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm">filed an S-1 with the SEC on 18 September</a> for a New York listing under NSCL. It puts active and contracted total contract value at 103.4 billion dollars as of 31 August, up from 38.0 billion at end-2025, and discloses Microsoft statements of work worth up to approximately 43.8 billion through December 2033 and Anthropic agreements of up to approximately 44.6 billion. That is about 85 percent of the book by our arithmetic, and both are ceilings, not booked revenue.</p>
+<p class="field">What it means</p><p>This is customer concentration moving. A neocloud whose equity story is two contracts has had one counterparty walk away from a site, and the only two who can confirm it will not.</p>
+<p class="field">Watch next</p><p>An amended S-1, a statement from either company, and whether the listing prices this quarter, against a site UK Power Networks said in September could not get grid power before the 2030s.</p>
+</div>
+<div class="item">
+<h2>Anthropic is said to be paying double digits for chip debt</h2>
+<p class="field">What happened</p><p>The Financial Times reported early on Saturday that Anthropic is <a href="https://www.globalbankingandfinance.com/anthropic-offers-blackstone-double-digit-yield/">offering Blackstone funds a yield of more than 10 percent</a> on roughly 9 billion dollars of debt secured on five years of chip lease payments. Reuters could not verify it; neither company commented. For comparison, the AI XPV Platform <a href="https://www.blackstone.com/news/press/broadcom-apollo-and-blackstone-establish-landmark-strategic-platform-to-accelerate-more-than-20-gigawatts-of-global-ai-deployments/">Broadcom, Apollo and Blackstone announced on 9 June</a> raised 35 billion dollars, senior notes near 5.75 percent and junior paper near 8.5 percent, with the senior tranches backstopped by Broadcom. The platform is on the record; the pricing is not.</p>
+<p class="field">What it means</p><p>If the number is right, the junior cost of AI compute financing has gone from 8.5 percent in June to above 10 percent in October, on a structure with no corporate backstop. That is the credit market repricing one borrower twice in four months, and it fits CoreWeave&#x27;s bonds above 15 percent. One outlet, unconfirmed.</p>
+<p class="field">Watch next</p><p>Whether the tranche clears, any rating action on XPV, and the next AI borrower to market.</p>
+</div>
+<div class="item">
+<h2>Bangkok closes with optimism, worry and a walkout</h2>
+<p class="field">What happened</p><p>The IMF and World Bank annual meetings ended in Bangkok on Saturday. Kristalina Georgieva summed up the mood as <a href="https://www.aljazeera.com/economy/2026/10/17/war-spillovers-debt-threaten-low-income-nations-imf-chief-warns">optimism and worry</a>, said vulnerable countries are missing the AI boom while paying higher borrowing costs, and that low-income countries spend 8 to 14 percent of revenue on debt service. Delegates <a href="https://www.brecorder.com/news/40444660/imfc-chair-al-jadaan-says-all-members-supported-chairs-statement-despite-walkout">walked out during remarks by Russia's finance minister</a> at the IMFC; the chair, Saudi finance minister Mohammed Al-Jadaan, played it down. His statement warned that escalating conflict could disrupt trade routes and lift commodity prices, refined energy products among them.</p>
+<p class="field">What it means</p><p>The chair&#x27;s statement is the interesting document: a Saudi finance minister warning about trade routes and refined-product prices while Houthi missiles land on Riyadh&#x27;s airport is not making a general point. The debt-service range is what turns a commodity shock into defaults.</p>
+<p class="field">Watch next</p><p>The Fund&#x27;s next World Economic Outlook revision.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing. Both dated funding indices went dark for the weekend: finsmes carried fifteen stories, every one dated Friday, and techstartups&#x27; newest article was Friday too. No launches, no founder news. Reprinting Friday&#x27;s tape would be worse than a blank page, so here is the blank page.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Trump waives the Russia sanctions he signed into law, two days before they bite</h2>
+<p class="field">What happened</p><p>An executive order dated Friday, posted Saturday, <a href="https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/">Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026</a>, imposes the Act's duties and waives all of them in the same document. <a href="https://www.govinfo.gov/content/pkg/PLAW-119publ111/pdf/PLAW-119publ111.pdf">Public Law 119-111</a> passed the Senate 86-11, was signed on 18 September and took effect thirty days later, on Sunday 18 October. Section 2 imposes a 500 percent duty on Russian goods and 100 percent duties on imports from the five largest buyers of Russian crude and gas and from the five leading sanctions-evasion facilitators. Section 4 waives all of that, plus the vessel-blocking and shadow-fleet provisions, under the Act's section 115 national-interest waiver and a certification to Congress. Sanctions under separate executive authorities are untouched. No reasoning is given, and no date for restoring anything.</p>
+<p class="field">What it means</p><p>The waiver is lawful and the mechanism is the one Congress wrote, which is the point: a veto-proof majority built an instrument with a certification-shaped hole in it. It also spares China and India, the largest buyers of Russian crude, a supply-side easing into a tape where Brent settled at 109.86 dollars on Friday.</p>
+<p class="field">Watch next</p><p>The certification report to Congress, and whether anything moves when the chambers return on 9 November.</p>
+</div>
+<div class="item">
+<h2>The backlash crosses party lines, and lands on a family name</h2>
+<p class="field">What happened</p><p>Thom Tillis called the waiver <a href="https://www.axios.com/2026/10/17/trump-russia-sanctions">beyond irresponsible</a> and John Cornyn said Lindsey would be appalled, on Saturday. Darline Graham, Lindsey Graham's sister, <a href="https://www.thedailybeast.com/nepo-senator-darline-graham-cornered-on-donald-trump-trashing-her-dead-brother-lindsey-grahams-legacy">appointed to his South Carolina seat in July</a>, said she would personally keep the pressure on Russia and does not trust Putin. Chuck Schumer said that by giving the Russian economy life support, Trump's deal with the devil keeps getting dirtier. The White House's Taylor Rogers said enforcing the provisions now would impede efforts to negotiate a durable and comprehensive peace agreement. <a href="https://www.aljazeera.com/news/2026/10/17/trump-faces-bipartisan-backlash-over-russia-sanctions-waiver">Zelensky wrote</a> that a US sanctions blackout and financial rewards for Putin only encourage him to keep attacking.</p>
+<p class="field">What it means</p><p>A bill that passed 86-11 means roughly forty Republican senators voted for sanctions their president has switched off, seventeen days before an election. The objections are on the record; the votes are not, because Congress is in recess until 9 November.</p>
+<p class="field">Watch next</p><p>Whether any Republican critic attaches the Act to must-pass legislation in November.</p>
+</div>
+<div class="item">
+<h2>Fox has Trump at 36 percent, his worst in either term</h2>
+<p class="field">What happened</p><p>A <a href="https://www.foxnews.com/politics/fox-news-poll-cost-living-concerns-weigh-gop-midterms">Fox News poll released Wednesday evening</a> put Trump's job approval at 36 percent, his lowest in any Fox survey across both terms, and his inflation approval at 22 percent against 77 percent disapproval. It surveyed 1,202 registered voters from 9 to 12 October, and found corruption narrowly displacing inflation as the most intensely felt issue.</p>
+<p class="field">What it means</p><p>The headline is not the number that matters. A 22 percent rating on inflation, from a pollster the White House cannot dismiss, is the midterm in one figure, and the corruption shift changes what the election is even about.</p>
+<p class="field">Watch next</p><p>Early-vote totals, and whether other pollsters find the same corruption shift before 3 November.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>France counts 1,200 detained after a day of protests</h2>
+<p class="field">What happened</p><p>Protests ran across France on Saturday. Interior minister Laurent Nunez <a href="https://www.europe1.fr/societe/en-direct-mobilisation-du-17-octobre-800000-participants-selon-les-organisateurs-550000-selon-laurent-nunez-1156250">put the nationwide turnout at 550,000, including 110,000 in Paris</a>; organisers claimed 800,000. Sebastien Lecornu said about 1,200 were detained and 150 police injured. Protesters forced Marseille's town hall, burned part of Lyon's tourism office, gutted Limoges town hall and ransacked Bordeaux's prefecture; one protester in Saint-Etienne lost a hand to a police grenade. It <a href="https://www.aljazeera.com/news/2026/10/17/france-wave-of-nationwide-protests">began with high-school students</a> over dilapidated buildings and teacher shortages and widened into a cost-of-living revolt.</p>
+<p class="field">What it means</p><p>The turnout is ordinary by French standards. The damage is not, and the blame is already partisan: Lecornu pointed at ultra-left groups, Melenchon at police command. Le Monde found no organisation coordinating the online call, which is what makes this hard for a government in its last year: nobody to negotiate with.</p>
+<p class="field">Watch next</p><p>Whether the CGT calls another date, and what the government concedes before the budget.</p>
+</div>
+<div class="item">
+<h2>Sisi asks Egypt&#x27;s parliament for authority to defend Saudi Arabia</h2>
+<p class="field">What happened</p><p>At a Military Academy graduation on Saturday, President Abdel Fattah el-Sisi said Egypt was ready to defend Saudi Arabia if asked. <a href="https://www.arabnews.com/middle-east/egypts-sisi-seeks-parliament-approval-to-authorize-support-for-saudi-arabia-3006835">I hope parliament convenes in an emergency session</a>, he said, adding that he would carry out any measure to protect or defend you. The House <a href="https://www.thenationalnews.com/news/gulf/2026/10/17/egypts-sisi-seeks-parliamentary-approval-to-defend-saudi-arabia-if-asked/">said it would meet on Sunday</a>. Behind it is the Houthi campaign. Saudi authorities put the toll from the <a href="https://www.aljazeera.com/news/2026/10/10/attack-on-airport-in-saudi-capital-riyadh-leaves-several-injured">10 October strike on Riyadh's King Khalid International Airport</a> at 12 killed and 309 wounded, and The National counts 17 killed across roughly twenty attacks this month. The Saudi-Turkish-Pakistani <a href="https://english.alarabiya.net/News/middle-east/2026/10/05/saudi-arabia-turkey-pakistan-to-activate-collective-deterrence-under-mecca-pact">Mecca Defence Alliance</a> activated collective deterrence on 5 October.</p>
+<p class="field">What it means</p><p>No troop numbers, no Saudi request on the record, and Sisi&#x27;s account of Riyadh&#x27;s wishes is Sisi&#x27;s. But recalling parliament to pre-authorise force is not rhetoric, and Egypt has a reason of its own: the Houthis hold much of Yemen&#x27;s Red Sea coast, and Suez traffic runs through Bab al-Mandeb.</p>
+<p class="field">Watch next</p><p>Sunday&#x27;s parliamentary session, and whether Riyadh says anything at all.</p>
+</div>
+<div class="item">
+<h2>Iran&#x27;s tanker claim doubles overnight, with nothing to anchor it</h2>
+<p class="field">What happened</p><p>Al Jazeera reported early Sunday that the IRGC <a href="https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz">says two tankers, each carrying about 2 million barrels, caught fire after striking mines</a> in Hormuz. On Friday it described one vessel. No names, IMO numbers, flags or crew statuses have been given. The only independently sourced incidents remain UKMTO's advisories of 16 October off Jubail, <a href="https://www.ukmto.org/-/media/ukmto/products/20261017-ukmto_warning-175-26.pdf">one tanker struck on the aft port quarter by a rocket-propelled grenade</a> from a small boat, crew unharmed; UKMTO has not established whether they describe one vessel or two. Kpler put Hormuz flows at 11.6 million barrels a day to 13 October, 68 percent of pre-war.</p>
+<p class="field">What it means</p><p>Both governments <a href="https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels">now claim to control the strait</a>, and neither has a third party behind it. We printed two tankers off Jubail yesterday; UKMTO's own caveat says that may have been one. Watch the flow, not the casualties: 68 percent of baseline is what Brent near 110 dollars prices.</p>
+<p class="field">Watch next</p><p>An owner or flag state naming a vessel, and Gulf war-risk rates.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener">DeepSeek - DeepSeek-V4.1-Flash-1017 model card</a></li>
+<li><a href="https://api-docs.deepseek.com/news/news261017/" target="_blank" rel="noopener">DeepSeek - release notes, 17 October 2026</a></li>
+<li><a href="https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/" target="_blank" rel="noopener">Nieman Lab - Legal experts warn Meta&#x27;s new terms still grant broad scraping permissions</a></li>
+<li><a href="https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/" target="_blank" rel="noopener">TechCrunch - Meta removes language that raised scraping and AI training concerns</a></li>
+<li><a href="https://whbl.com/2026/10/17/anthropics-clark-says-ais-impact-accelerating-quickly-and-could-vastly-boost-us-gdp/" target="_blank" rel="noopener">Anthropic&#x27;s Clark says AI&#x27;s impact accelerating quickly (Reuters via WHBL)</a></li>
+<li><a href="https://www.tokenpost.com/news/business/34139" target="_blank" rel="noopener">Korea&#x27;s finance minister on the semiconductor cycle (TokenPost)</a></li>
+<li><a href="https://koreatimes.co.kr/business/companies/20261017/securing-equipment-emerges-as-new-variable-for-koreas-chip-expansion-plans" target="_blank" rel="noopener">Korea Times - Securing equipment emerges as new variable for Korea&#x27;s chip expansion plans</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm" target="_blank" rel="noopener">SEC - Nscale Ltd Form S-1, filed 18 September 2026</a></li>
+<li><a href="https://www.globalbankingandfinance.com/microsoft-pulls-out-uk-data-center-deal-nscale-telegraph/" target="_blank" rel="noopener">Microsoft pulls out of UK data centre deal with Nscale (Telegraph, via wire)</a></li>
+<li><a href="https://www.globalbankingandfinance.com/anthropic-offers-blackstone-double-digit-yield/" target="_blank" rel="noopener">Anthropic offers Blackstone double-digit yield (FT, via wire)</a></li>
+<li><a href="https://www.blackstone.com/news/press/broadcom-apollo-and-blackstone-establish-landmark-strategic-platform-to-accelerate-more-than-20-gigawatts-of-global-ai-deployments/" target="_blank" rel="noopener">Blackstone - Broadcom, Apollo and Blackstone establish AI XPV Platform</a></li>
+<li><a href="https://www.aljazeera.com/economy/2026/10/17/war-spillovers-debt-threaten-low-income-nations-imf-chief-warns" target="_blank" rel="noopener">Al Jazeera - War spillovers and debt threaten low-income nations, IMF chief warns</a></li>
+<li><a href="https://www.brecorder.com/news/40444660/imfc-chair-al-jadaan-says-all-members-supported-chairs-statement-despite-walkout" target="_blank" rel="noopener">Business Recorder - IMFC chair Al-Jadaan on the walkout</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/" target="_blank" rel="noopener">White House - Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026</a></li>
+<li><a href="https://www.govinfo.gov/content/pkg/PLAW-119publ111/pdf/PLAW-119publ111.pdf" target="_blank" rel="noopener">GovInfo - Public Law 119-111, approved 18 September 2026</a></li>
+<li><a href="https://www.axios.com/2026/10/17/trump-russia-waiver-putin-republicans-democrats" target="_blank" rel="noopener">Axios - Trump&#x27;s Russia waiver draws instant bipartisan backlash</a></li>
+<li><a href="https://www.axios.com/2026/10/17/trump-russia-sanctions" target="_blank" rel="noopener">Axios - Trump waives Russia sanctions</a></li>
+<li><a href="https://www.thedailybeast.com/nepo-senator-darline-graham-cornered-on-donald-trump-trashing-her-dead-brother-lindsey-grahams-legacy" target="_blank" rel="noopener">The Daily Beast - Sen. Darline Graham on the waiver</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/17/trump-faces-bipartisan-backlash-over-russia-sanctions-waiver" target="_blank" rel="noopener">Al Jazeera - Trump faces bipartisan backlash over Russia sanctions waiver</a></li>
+<li><a href="https://www.foxnews.com/politics/fox-news-poll-cost-living-concerns-weigh-gop-midterms" target="_blank" rel="noopener">Fox News Poll - cost-of-living concerns weigh on GOP midterms</a></li>
+<li><a href="https://www.europe1.fr/societe/en-direct-mobilisation-du-17-octobre-800000-participants-selon-les-organisateurs-550000-selon-laurent-nunez-1156250" target="_blank" rel="noopener">Europe 1 - live coverage of the 17 October mobilisation</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/17/france-wave-of-nationwide-protests" target="_blank" rel="noopener">Al Jazeera - France hit by wave of nationwide protests</a></li>
+<li><a href="https://www.arabnews.com/middle-east/egypts-sisi-seeks-parliament-approval-to-authorize-support-for-saudi-arabia-3006835" target="_blank" rel="noopener">Arab News - Egypt&#x27;s Sisi seeks parliament approval to authorise support for Saudi Arabia</a></li>
+<li><a href="https://www.thenationalnews.com/news/gulf/2026/10/17/egypts-sisi-seeks-parliamentary-approval-to-defend-saudi-arabia-if-asked/" target="_blank" rel="noopener">The National - Sisi seeks parliamentary approval to defend Saudi Arabia if asked</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/10/attack-on-airport-in-saudi-capital-riyadh-leaves-several-injured" target="_blank" rel="noopener">Al Jazeera - Attack on Riyadh airport, 10 October</a></li>
+<li><a href="https://english.alarabiya.net/News/middle-east/2026/10/05/saudi-arabia-turkey-pakistan-to-activate-collective-deterrence-under-mecca-pact" target="_blank" rel="noopener">Al Arabiya - Saudi Arabia, Turkiye and Pakistan activate collective deterrence</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/18/iran-says-two-tankers-catch-fire-after-hitting-mines-in-strait-of-hormuz" target="_blank" rel="noopener">Al Jazeera - Iran says two tankers catch fire after hitting mines in Hormuz</a></li>
+<li><a href="https://www.ukmto.org/-/media/ukmto/products/20261017-ukmto_warning-175-26.pdf" target="_blank" rel="noopener">UKMTO - Warning 175-26, 16 October 2026</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels" target="_blank" rel="noopener">Al Jazeera - US and Iran both claim control of the Strait of Hormuz</a></li>
+<li><a href="https://www.finsmes.com/" target="_blank" rel="noopener">FinSMEs - daily funding index</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-18-daily.pdf">PDF</a></span>
+</div></div></body></html>
