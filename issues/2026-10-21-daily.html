@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Wednesday, October 21, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Wednesday, October 21, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">SpaceX earned more from renting out AI compute than from Starlink last quarter, posted its first operating profit as a public company, and told shareholders its board and Tesla’s have each put a merger on a committee agenda.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Washington orders DeepSeek stripped out of federal civilian systems</h2>
+<p class="field">What happened</p><p>A Homeland Security order <a href="https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive">published in the Federal Register on 20 October</a> (91 FR 66346) bars information technology “developed by Hangzhou DeepSeek Artificial Intelligence Co., Ltd” and its affiliates from federal civilian procurement, and directs the “removal of all DeepSeek and DeepSeek-affiliate products” already installed. Also covered: “third-party products and services developed using DeepSeek implementations,” which catches any vendor that built on the Chinese lab’s open weights. It sets out no effective date, no compliance deadline and no exception process, though the <a href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21447.pdf">signed order appears only as unsearchable appendix images</a>, so one may exist out of sight. China’s foreign ministry <a href="https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/">accused Washington of “overstretching the concept of national security.”</a></p>
+<p class="field">What it means</p><p>The downstream clause is the sharp end. Banning a model is a procurement memo; banning everything built on its weights obliges every federal software vendor to audit its own stack, and DeepSeek weights sit in a great many stacks. With no deadline published, agencies will over-comply.</p>
+<p class="field">Watch next</p><p>Whether a deadline surfaces on docket DHS-2026-0628, and whether any vendor gets named.</p>
+</div>
+<div class="item">
+<h2>Google open-sources TorchTPU, and the CUDA moat is attacked at the framework</h2>
+<p class="field">What happened</p><p>At PyTorch Conference 2026 on 20 October Google <a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus">released TorchTPU</a>, a native PyTorch stack for its TPUs built with Meta’s PyTorch team. Amazon shipped its equivalent, <a href="https://www.aboutamazon.com/md/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai">TorchNeuron for Trainium</a>, at the same conference, the same day. Google’s performance figures are its own: “up to 52% Model Flops Utilization” on Qwen 3 8B with “near-linear scaling and stability across up to 8,192 Ironwood TPUs”. Meta’s director of PyTorch engineering, Jana van Greunen: “We cannot be constrained by a single hardware architecture.” No licence is named.</p>
+<p class="field">What it means</p><p>Nvidia’s lock-in was never really the silicon; it is fifteen years of CUDA kernels under every framework. Two hyperscalers shipping drop-in PyTorch backends in one afternoon is an attempt to turn the switching cost into a config change. These are vendor benchmarks, so treat the throughput numbers as marketing until an outsider runs them.</p>
+<p class="field">Watch next</p><p>Whether the upstream PyTorch patches land, and the first independent Trainium or Ironwood benchmark.</p>
+</div>
+<div class="item">
+<h2>OpenAI buys Orchestra Bio and folds it into Rosalind</h2>
+<p class="field">What happened</p><p>OpenAI <a href="https://openai.com/index/openai-to-acquire-orchestra-bio/">said on 20 October that it “has acquired” Orchestra Bio</a>, which it describes as “a platform where people and AI agents work together to advance drug programs” — agents that track studies and campaigns rather than design molecules. The team and technology go into Rosalind, OpenAI’s life-sciences model set, and Rosalind Workbench. Price and structure were not disclosed and the announcement carries no named quote. <a href="https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%E2%81%A0-to-beef-up-its-biotech-business">TechCrunch, not OpenAI, reports</a> that Orchestra had raised around $20m from Andreessen Horowitz, Atria and 8VC.</p>
+<p class="field">What it means</p><p>This is operations software, not discovery: trial scheduling and programme tracking. The read is that OpenAI thinks the way into pharma is the project-management layer, rather than the chemistry.</p>
+<p class="field">Watch next</p><p>Whether Rosalind Workbench gets priced, and whether a pharma customer says anything on the record.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Seoul takes it all back, plus some</h2>
+<p class="field">What happened</p><p>The KOSPI <a href="https://www.koreajoongangdaily.com/business/kospi-rebounds-over-3-on-eased-ai-spending-woes/12932490">closed Wednesday at 5,735.66, up 182.92 points or 3.29%</a>, more than reversing Tuesday’s 3.73% fall. Samsung Electronics closed up 5.67% at 223,500 won and SK hynix up 5.81% at 1.29m won — the two names that sat out Monday’s rally and then led Tuesday’s rout. All of this is Yonhap’s reporting; we found no independent second source.</p>
+<p class="field">What it means</p><p>Minus 3.73% then plus 3.29% in two sessions, on no new information about either company. That is positioning, not news — the market is trading who funds the buildout, not who sells the chips.</p>
+<p class="field">Watch next</p><p>Bank of Korea decides Thursday 22 October, expected to hold at 3%. SK hynix reports 28 October, Samsung 29 October.</p>
+</div>
+<div class="item">
+<h2>Samsung and SK hynix are quietly upgrading their Chinese memory fabs</h2>
+<p class="field">What happened</p><p>Reuters <a href="https://wkzo.com/2026/10/21/exclusive-samsung-sk-hynix-upgrading-china-plants-to-make-more-advanced-chips-people-say/">reported Wednesday, citing four people familiar</a>, that Samsung is converting its Xi’an plant — about 40% of its global NAND output, currently around 200 layers — to 286-layer V9 NAND under an internal project called Monami, targeting 5,000 wafers a month in December 2026 and 40,000 a month by December 2027. SK hynix is said to be taking Dalian from 192 layers to 240 or more. Both companies went on the record. Samsung said the work meets “growing demand from global customers, including those in the US” and that it “is not expanding production capacity”; SK hynix said it has been installing equipment in consultation with the US government. The Bureau of Industry and Security would not say what it has licensed. Per Omdia, YMTC took 38.5% of China’s NAND market in the second quarter, up from 28% in 2025, passing Samsung’s 33.5%.</p>
+<p class="field">What it means</p><p>BIS said in 2025 it would license operating these fabs but not upgrades or capacity. Two Korean firms are upgrading anyway, openly, and the agency will not say whether that is permitted. The forcing function is YMTC, taking the Chinese market whether or not Washington lets anyone compete. The layer counts rest on one wire’s anonymous sources; the company statements do not.</p>
+<p class="field">Watch next</p><p>Whether BIS says anything on licences, and SK hynix’s 28 October call.</p>
+</div>
+<div class="item">
+<h2>Amazon takes a warrant on 3M’s data-centre glass</h2>
+<p class="field">What happened</p><p>3M disclosed in <a href="https://www.prnewswire.com/news-releases/3m-reports-third-quarter-2026-results-raises-full-year-eps-guidance-302913342.html">Tuesday’s third-quarter release</a> an “expanded strategic commercial relationship with Amazon to deploy and scale 3M’s optical connectivity and other Data Center related products,” and said it has issued Amazon a warrant to buy up to 3.2m 3M shares “based upon the achievement of” $6bn in cumulative sales of those products over the next seven years. The $6bn is the warrant’s threshold, not committed Amazon spend. 3M raised full-year adjusted earnings guidance to $9.10 to $9.15 a share, and <a href="https://stockanalysis.com/stocks/mmm/">closed up 5.78% at $171.37</a>.</p>
+<p class="field">What it means</p><p>Yesterday’s item here was a forecast 180m fibre-kilometre shortfall running to 2028. Today a hyperscaler is securing optical supply with equity upside rather than price. That is what a buyer does when the thing it fears is allocation, not cost.</p>
+<p class="field">Watch next</p><p>Whether another optical supplier discloses a similar structure, and whether a hyperscaler capex guide names interconnect.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>SpaceX’s AI business just passed Starlink, and a Tesla merger is on a committee agenda</h2>
+<p class="field">What happened</p><p>SpaceX’s <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm">third-quarter filing</a> shows revenue of $14.58bn, up 161%, and its first operating profit since June’s listing: $2.79bn against a $273m loss a year ago, net income $4.40bn. The Super Intelligence segment — selling compute — booked $7.56bn, up 830%, overtaking Starlink’s $5.25bn. Capital spending was $19.6bn in the quarter, $48.1bn over nine months. On the earnings call, <a href="https://techcrunch.com/2026/10/20/spacex-and-tesla-boards-form-special-committees-to-review-merger/">per TechCrunch</a>, Musk said the SpaceX and Tesla boards have each formed special committees of independent directors to examine a merger at shareholders’ request, with him excluded: “Because I’m a conflicted party, I can’t actually be in the discussions of the special committees.” Neither company has filed anything describing it. Shares <a href="https://stockanalysis.com/stocks/spcx/">closed at $147.79</a>, and rose about 8.5% in Wednesday pre-market trading.</p>
+<p class="field">What it means</p><p>A rocket company now earns more from renting out GPUs than from satellite broadband. The merger talk follows from it: if SpaceX is a compute business and Tesla is a robotics business, one balance sheet is easier to argue than a launch provider plus a carmaker. Musk controls over half of SpaceX’s votes; Tesla would need 50% of all shareholders, not just those voting.</p>
+<p class="field">Watch next</p><p>Any 8-K naming the committee members, and Tesla’s own results after Wednesday’s close.</p>
+</div>
+<div class="item">
+<h2>Netflix is making money and missing its advertising number</h2>
+<p class="field">What happened</p><p>Third-quarter revenue was $12.9bn, up 12%, with operating margin at 34.6% against 28.2% a year ago, diluted EPS $0.87. The damage is in the guidance. Netflix now expects 2026 advertising revenue of <a href="https://s22.q4cdn.com/959853165/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf">“~$2.7B vs. approximately $3B previously,”</a> blaming “slightly slower than expected rollout of some ad product capabilities,” and cut full-year free cash flow to about $12.0bn from $12.5bn, mostly a fourth-quarter property closing. Shares <a href="https://stockanalysis.com/stocks/nflx/">closed at $68.69, down 1.66%</a>, and fell about 6% pre-market Wednesday.</p>
+<p class="field">What it means</p><p>A $300m shortfall on a $2.7bn line is a tenth of the advertising business, and advertising is now the growth story. Blaming product rollout rather than demand is the more comfortable of the two explanations available, and also the one that implies it recurs.</p>
+<p class="field">Watch next</p><p>Whether the ad number moves again at the Q4 print, and the restructuring charge.</p>
+</div>
+<div class="item">
+<h2>Salesforce buys Braze for $5.66bn</h2>
+<p class="field">What happened</p><p>Salesforce <a href="https://salesforce.com/news/press-releases/2026/10/20/salesforce-signs-definitive-agreement-to-acquire-braze">signed a definitive agreement on 20 October</a> to acquire the marketing-engagement company Braze at $47.50 a share in cash for its Class A stock, an enterprise value of about $5.66bn, expected to close in Salesforce’s fiscal 2028 subject to Braze shareholder and regulatory approval. No premium is stated. Separately, Tuesday’s US close had the <a href="https://www.krmg.com/2026/10/20/how-major-us-stock-indexes-fared-tuesday-10-20-2026/">Dow up 1% at 52,495.88, the S and P 500 up 0.3% at 7,712.57 and the Nasdaq composite flat at 26,424.82</a>.</p>
+<p class="field">What it means</p><p>Braze was the independent alternative to Salesforce Marketing Cloud, which is the point: this removes a competitor and buys the messaging layer agents will need to act through. A close pushed into fiscal 2028 is an unusually long runway, which usually means the parties expect a regulatory look.</p>
+<p class="field">Watch next</p><p>Braze’s merger proxy for the break fee, and whether a second bidder appears.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Reliable Robotics adds $115m, upsizing its Series D to $275m</h2>
+<p class="field">What happened</p><p>The Mountain View autonomous-aircraft company <a href="https://www.finsmes.com/2026/10/reliable-robotics-raises-115m-in-new-capital.html">raised $115m in new capital</a>, upsizing a previously announced $160m Series D to $275m and taking total funding to $380m. Nimble Partners led, with Silicon Valley Bank, RockCreek and six others participating. FinSMEs puts the valuation “over $1 billion,” which would make it a new unicorn; no post-money figure is disclosed and there is no company release, so treat the valuation as unconfirmed. Its systems do gate-to-gate automation — taxi, take-off, en-route management and landing — on already-certified airframes, aimed at commercial and defence operators.</p>
+<p class="field">What it means</p><p>Retrofitting certified aircraft rather than building a new one is the cheaper route through the FAA, and defence autonomy money is the reason a hardware company this capital-hungry can upsize a round mid-flight.</p>
+<p class="field">Watch next</p><p>An FAA certification milestone, and whether a company release confirms the valuation.</p>
+</div>
+<div class="item">
+<h2>AuxoAI takes $20.7m for forward-deployed enterprise AI</h2>
+<p class="field">What happened</p><p>San Francisco-based AuxoAI <a href="https://www.finsmes.com/2026/10/auxoai-raises-20-7m-in-series-a-funding.html">closed a $20.7m Series A led by NTTVC</a>, with angels including ServiceNow president Amit Zavery and Norwest partner emeritus George Still Jr. The company pairs a forward-deployed team of strategists and engineers with Damia, a proprietary workbench for enterprise AI deployments, and says it serves more than 40 clients in manufacturing, consumer goods, healthcare and telecom. Single-outlet; no company release found.</p>
+<p class="field">What it means</p><p>An operator-heavy cap table rather than a fund-heavy one, for a business that is consultancy with software attached. The forward-deployed model is in fashion because enterprises keep discovering that the model is the easy part and the integration is the bill.</p>
+<p class="field">Watch next</p><p>Whether a named enterprise customer goes on the record.</p>
+</div>
+<div class="item">
+<h2>Firefly raises $20m for “physical AI” safety systems</h2>
+<p class="field">What happened</p><p>New York-based Firefly — <a href="https://www.finsmes.com/2026/10/firefly-raises-20m-in-series-a-funding.html">not the aerospace company of the same name</a> — raised a $20m Series A led by Definition Capital, with BoxGroup and Susa Ventures participating. It describes itself as “a physical AI platform for safety,” combining its own hardware and software with equipment a site already has, such as cameras and radios, into one system that flags incidents, automates routine operations and coordinates live response. Proceeds fund hiring and expansion into education, healthcare and enterprise. Single-outlet, no company release. Thin day generally: every round here comes from FinSMEs, and Crunchbase publishes nothing before mid-afternoon.</p>
+<p class="field">What it means</p><p>The interesting bet is the integration layer rather than new sensors — schools and hospitals already own the cameras and nobody is watching them. That is a procurement story, which means slow deals and sticky ones.</p>
+<p class="field">Watch next</p><p>A school-district or health-system contract, which is where this either works or does not.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Republicans are quietly writing down the redistricting payoff to almost nothing</h2>
+<p class="field">What happened</p><p>House Republicans drew new maps expecting a large gain and are now, <a href="https://www.axios.com/2026/10/20/republicans-redistricting-boost-shrinking-midterms">per Axios</a>, privately contemplating a net of one seat nationwide. Republicans have spent $133m on television across the 15 redrawn districts, per AdImpact, against the 16 friendly seats they thought they had drawn in early summer. Strategists now expect seven to twelve of the fifteen; the pessimistic case is Republicans plus seven, Democrats plus six. Courts threw out the Missouri map and forced Utah to redraw; California’s new map adds four safe Democratic seats. Rep. Tom Emmer, Republican of Minnesota: “Texas, I’d be surprised if we got all five.” The net-one figure is anonymous strategist sentiment, not a model.</p>
+<p class="field">What it means</p><p>Mid-decade redistricting was the party’s hedge against a bad environment. If it nets one seat after $133m, the hedge failed, partly legal, partly because the maps assumed Latino voters in south Texas and Florida would keep moving right.</p>
+<p class="field">Watch next</p><p>Texas’s 28th and 34th, where the House Republican super PAC has pulled out of one and spent $18m in the other.</p>
+</div>
+<div class="item">
+<h2>Seven in ten Americans do not think Trump would accept losing</h2>
+<p class="field">What happened</p><p>A second tranche from the <a href="https://abcnews.com/Politics/6-10-americans-confident-election-conducted-fairly-accurately/story?id=137385192">ABC News, Washington Post and Ipsos survey</a> — Ipsos KnowledgePanel, fielded 9 to 13 October, 2,545 adults including 2,032 registered and likely voters, margin of error two points — finds 70% of adults not confident Trump would accept the result if Republicans lose, half of them not at all confident, against 28% who are. The congressional ballot among likely voters is Democrats 52, Republicans 44. For scale, a December 2023 Washington Post and University of Maryland poll found 71% not confident about 2024 — the distrust is flat, not new.</p>
+<p class="field">What it means</p><p>An eight-point likely-voter lead is the number that matters for seats, and it sits four points from the other Ipsos poll released this week. The acceptance number is better read as a stable feature of the electorate than as a new alarm.</p>
+<p class="field">Watch next</p><p>Whether the next release narrows the registered-to-likely gap, and the 3 November result.</p>
+</div>
+<div class="item">
+<h2>Early voting passes 12.6m, and a correction to our own number</h2>
+<p class="field">What happened</p><p>As of 3.27pm Eastern on 20 October, <a href="https://www.axios.com/2026/10/20/midterms-early-voting-states-data">12,618,084 early votes had been reported nationally</a>, per the University of Florida Election Lab tracker as carried by Axios. Georgia leads on share, past a million ballots, equal to 25.9% of its entire 2022 turnout; Virginia is at 770,916 and 25.5%. And a correction: we printed North Carolina running 48% ahead of 2022 on Monday. The supported figure is <a href="https://abc11.com/post/early-voting-turnout-surges-north-carolina/19956761/">more than 37% ahead of the same point in 2022 as of 18 October</a>, with registered Democrats at 240,206 against Republicans at 102,845.</p>
+<p class="field">What it means</p><p>The state shares are denominated against 2022 total turnout and the North Carolina figure is a same-point comparison. They are different measures, which is how our 48% got loose.</p>
+<p class="field">Watch next</p><p>Whether the Democratic skew in North Carolina’s early vote survives the final weekend, which is when Republicans historically vote.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Six days out, Netanyahu is trying to clear two small parties off the ballot</h2>
+<p class="field">What happened</p><p>With Israel voting on 27 October and <a href="https://www.timesofisrael.com/everything-you-need-to-know-tois-guide-to-the-37-parties-that-israelis-can-finally-choose-from/">37 parties on the ballot</a>, Netanyahu spent the week working on his own flank. He and Religious Zionism chairman Bezalel Smotrich <a href="https://www.timesofisrael.com/netanyahu-smotrich-meet-winters-rabbi-to-pressure-him-to-quit-race-he-stays-defiant/">met Rabbi Eli Sadan</a>, spiritual mentor of People of Israel chairman Ofer Winter, to press Winter to quit. Winter’s party disclosed the meeting and he refused: “Guys, get it through your heads. The people of Israel want a different kind of politics.” Netanyahu separately phoned Moti Leitner, per Channel 12, to get his Charedi Public party out; Leitner also refused. Both sit near the 3.25% threshold, so their votes are wasted votes. Neither Likud nor the prime minister’s office has responded. <a href="https://www.timesofisrael.com/liveblog-october-21-2026">On Wednesday a new poll put</a> Winter below the threshold and the pro-Netanyahu bloc on 49 seats.</p>
+<p class="field">What it means</p><p>This is threshold arithmetic, not persuasion: a right-wing list that falls short takes its votes out of the bloc entirely, and 49 is twelve short of a majority. Running underneath it, Channel 12 reported last week that Netanyahu aide Jonatan Urich <a href="https://www.timesofisrael.com/report-pms-key-aide-urich-admitted-to-receiving-hundreds-of-thousands-of-shekels-from-qatar/">admitted taking “hundreds of thousands of shekels” from Qatar</a> — single-outlet, from interrogation transcripts, and Urich denies working for Qatar after 7 October.</p>
+<p class="field">Watch next</p><p>Whether Winter or Leitner withdraws, and the final polls before the 27 October vote.</p>
+</div>
+<div class="item">
+<h2>Albania’s student revolt is into its ninth day and the prime minister is calling it a hybrid war</h2>
+<p class="field">What happened</p><p>Protests that began on 13 October ran <a href="https://www.the-messenger.com/news/world/article_43211756-d2a1-54e8-8083-c39345db7dcd.html">to an eighth straight day on Tuesday</a>, with Edi Rama alternating between offers of talks and accusations of foreign manipulation. Officials <a href="https://www.tiranatimes.com/albanias-student-revolt-broadens-as-trust-in-dialogue-erodes/">set out chairs labelled “dialogue” outside the prime minister’s office</a>; <a href="https://www.inalbania.info/rama-offers-dialogue-to-student-protesters-but-they-reject-his-invitation/">protesters threw them aside</a> and resumed calling for his resignation, after Rama posted a video captioned “Dialogue. But with whom?” A day earlier he had said <a href="https://europeanwesternbalkans.com/2026/10/19/rama-there-will-be-no-negotiations-with-those-who-use-violence-against-the-police/">“there will be no negotiations with anyone holding this,”</a> and he now calls the unrest <a href="https://www.24newshd.tv/21-Oct-2026/albania-pm-blames-hybrid-war-week-unrest">“a hybrid war that gains traction precisely because it is rooted in genuine grievances, not mere fantasy.”</a> Albanian police <a href="https://srpske.rs/en/news/svet/2026/10/18/tirana-protest-fifth-day-supreme-court-fire-167-arrested">put arrests at 167 as of 17 October</a>; the health ministry counted 272 injured in Tirana over five days, 169 of them police. Nobody has substantiated the foreign-hand claim.</p>
+<p class="field">What it means</p><p>An EU candidate government eight days into street confrontation, blaming outside forces its own analysts cannot find, is the shape of the French autumn: a leaderless movement with nobody for the state to negotiate with. Rama’s problem is that the grievance is real and he has just conceded as much.</p>
+<p class="field">Watch next</p><p>Whether the lecturers’ unions accept talks, and France’s own “acte II” on Saturday 24 October for the comparison.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive" target="_blank" rel="noopener">Federal Register — DHS order excluding and removing DeepSeek products (91 FR 66346)</a></li>
+<li><a href="https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21447.pdf" target="_blank" rel="noopener">govinfo — the signed DeepSeek order as published (PDF)</a></li>
+<li><a href="https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/" target="_blank" rel="noopener">TechCrunch — US orders federal agencies to remove DeepSeek</a></li>
+<li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus" target="_blank" rel="noopener">Google Cloud — TorchTPU is now open source</a></li>
+<li><a href="https://www.aboutamazon.com/md/news/innovation-at-amazon/torchneuron-pytorch-aws-trainium-chips-ai" target="_blank" rel="noopener">About Amazon — TorchNeuron for AWS Trainium</a></li>
+<li><a href="https://openai.com/index/openai-to-acquire-orchestra-bio/" target="_blank" rel="noopener">OpenAI — OpenAI acquires Orchestra Bio</a></li>
+<li><a href="https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%E2%81%A0-to-beef-up-its-biotech-business" target="_blank" rel="noopener">TechCrunch — OpenAI acquires Orchestra Bio</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-rebounds-over-3-on-eased-ai-spending-woes/12932490" target="_blank" rel="noopener">Korea JoongAng Daily — Kospi rebounds over 3% (Yonhap)</a></li>
+<li><a href="https://wkzo.com/2026/10/21/exclusive-samsung-sk-hynix-upgrading-china-plants-to-make-more-advanced-chips-people-say/" target="_blank" rel="noopener">Reuters, via WKZO — Samsung and SK hynix upgrading China plants</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/3m-reports-third-quarter-2026-results-raises-full-year-eps-guidance-302913342.html" target="_blank" rel="noopener">3M — third-quarter 2026 results and the Amazon warrant</a></li>
+<li><a href="https://stockanalysis.com/stocks/mmm/" target="_blank" rel="noopener">StockAnalysis — 3M (MMM) price history</a></li>
+<li><a href="https://s22.q4cdn.com/959853165/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf" target="_blank" rel="noopener">Netflix — Q3 2026 shareholder letter (PDF)</a></li>
+<li><a href="https://stockanalysis.com/stocks/nflx/" target="_blank" rel="noopener">StockAnalysis — Netflix (NFLX) price history</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" target="_blank" rel="noopener">SEC — SpaceX third-quarter 2026 results exhibit</a></li>
+<li><a href="https://techcrunch.com/2026/10/20/spacex-and-tesla-boards-form-special-committees-to-review-merger/" target="_blank" rel="noopener">TechCrunch — SpaceX and Tesla boards form special committees</a></li>
+<li><a href="https://stockanalysis.com/stocks/spcx/" target="_blank" rel="noopener">StockAnalysis — SpaceX (SPCX) price history</a></li>
+<li><a href="https://salesforce.com/news/press-releases/2026/10/20/salesforce-signs-definitive-agreement-to-acquire-braze" target="_blank" rel="noopener">Salesforce — definitive agreement to acquire Braze</a></li>
+<li><a href="https://www.krmg.com/2026/10/20/how-major-us-stock-indexes-fared-tuesday-10-20-2026/" target="_blank" rel="noopener">AP, via KRMG — how major US stock indexes fared, Tuesday 20 October</a></li>
+<li><a href="https://www.finsmes.com/2026/10/reliable-robotics-raises-115m-in-new-capital.html" target="_blank" rel="noopener">FinSMEs — Reliable Robotics raises $115m</a></li>
+<li><a href="https://www.finsmes.com/2026/10/auxoai-raises-20-7m-in-series-a-funding.html" target="_blank" rel="noopener">FinSMEs — AuxoAI raises $20.7m Series A</a></li>
+<li><a href="https://www.finsmes.com/2026/10/firefly-raises-20m-in-series-a-funding.html" target="_blank" rel="noopener">FinSMEs — Firefly raises $20m Series A</a></li>
+<li><a href="https://www.axios.com/2026/10/20/republicans-redistricting-boost-shrinking-midterms" target="_blank" rel="noopener">Axios — Republicans see shrinking boost from redistricting</a></li>
+<li><a href="https://abcnews.com/Politics/6-10-americans-confident-election-conducted-fairly-accurately/story?id=137385192" target="_blank" rel="noopener">ABC News — ABC/Washington Post/Ipsos poll on election confidence</a></li>
+<li><a href="https://www.axios.com/2026/10/20/midterms-early-voting-states-data" target="_blank" rel="noopener">Axios — where midterms early voting is surging</a></li>
+<li><a href="https://abc11.com/post/early-voting-turnout-surges-north-carolina/19956761/" target="_blank" rel="noopener">ABC11 — early voting turnout surges in North Carolina</a></li>
+<li><a href="https://www.timesofisrael.com/netanyahu-smotrich-meet-winters-rabbi-to-pressure-him-to-quit-race-he-stays-defiant/" target="_blank" rel="noopener">Times of Israel — Netanyahu and Smotrich meet Winter’s rabbi</a></li>
+<li><a href="https://www.timesofisrael.com/everything-you-need-to-know-tois-guide-to-the-37-parties-that-israelis-can-finally-choose-from/" target="_blank" rel="noopener">Times of Israel — guide to the 37 parties on the ballot</a></li>
+<li><a href="https://www.timesofisrael.com/report-pms-key-aide-urich-admitted-to-receiving-hundreds-of-thousands-of-shekels-from-qatar/" target="_blank" rel="noopener">Times of Israel — report that Urich admitted Qatari payments</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog-october-21-2026" target="_blank" rel="noopener">Times of Israel — liveblog, 21 October</a></li>
+<li><a href="https://www.the-messenger.com/news/world/article_43211756-d2a1-54e8-8083-c39345db7dcd.html" target="_blank" rel="noopener">AP, via The Messenger — Albanian protests, eighth day</a></li>
+<li><a href="https://www.inalbania.info/rama-offers-dialogue-to-student-protesters-but-they-reject-his-invitation/" target="_blank" rel="noopener">inAlbania — Rama offers dialogue, protesters reject it</a></li>
+<li><a href="https://www.tiranatimes.com/albanias-student-revolt-broadens-as-trust-in-dialogue-erodes/" target="_blank" rel="noopener">Tirana Times — Albania’s student revolt broadens</a></li>
+<li><a href="https://europeanwesternbalkans.com/2026/10/19/rama-there-will-be-no-negotiations-with-those-who-use-violence-against-the-police/" target="_blank" rel="noopener">European Western Balkans — Rama: there will be no negotiations</a></li>
+<li><a href="https://srpske.rs/en/news/svet/2026/10/18/tirana-protest-fifth-day-supreme-court-fire-167-arrested" target="_blank" rel="noopener">Srpske — Tirana protests, 167 arrested per Albanian police</a></li>
+<li><a href="https://www.24newshd.tv/21-Oct-2026/albania-pm-blames-hybrid-war-week-unrest" target="_blank" rel="noopener">24NewsHD — Rama blames a hybrid war</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-21-daily.pdf">PDF</a></span>
+</div></div></body></html>
