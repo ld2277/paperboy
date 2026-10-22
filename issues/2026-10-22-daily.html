@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Thursday, October 22, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Thursday, October 22, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Meta invented a new class of stock to pay for AI, and had its controlling shareholder approve it by written consent before the market opened.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic ships an agent whose job is to write you a daily brief</h2>
+<p class="field">What happened</p><p>Anthropic launched <a href="https://claude.com/resources/articles/claude-duet">Claude Duet</a> on 21 October, describing it as “a new app where Claude works as a proactive agent” that sends a daily brief, handles assigned tasks and asks for approval before acting. It is built on Claude Opus 5.5. A research preview opened the same day by waitlist, starting with Pro and Max subscribers in the US and under the same usage limits as the rest of Claude, as a standalone iOS and Android app and on claude.ai. The launch was posted to claude.com rather than the company <a href="https://www.anthropic.com/news">newsroom</a>, which carried only an unrelated governance item that day.</p>
+<p class="field">What it means</p><p>The frontier labs are converging on the same bet: that the product is not a chat window but an agent holding standing instructions. Pricing it inside existing subscriptions rather than as a new tier says Anthropic wants adoption before it wants revenue.</p>
+<p class="field">Watch next</p><p>General availability, non-US rollout, and whether the waitlist clears before Gemini 4 Argon prices on 1 December.</p>
+</div>
+<div class="item">
+<h2>OpenAI&#x27;s models land on Google Cloud, in private preview rather than general release</h2>
+<p class="field">What happened</p><p>Google Cloud said on 21 October it is bringing three OpenAI frontier models — GPT-Astra, GPT-6.1 Sol and GPT-6 Luna — into <a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">its model garden</a>, transacted through Google Cloud Marketplace. The status is narrower than the coverage suggested: “rolling out now in private preview to select enterprise customers,” access by interest form, with Gemini for business and Google Antigravity listed as coming soon. Usage lands on one Google Cloud invoice, draws down existing cloud commitments and counts toward Flexible Savings Plans across model providers. Zero Data Retention and Confidential Compute are also pending.</p>
+<p class="field">What it means</p><p>Google is now reselling its sharpest rival inside the console it sells Gemini from. The commitment drawdown is the real mechanism: it lets an enterprise spend a Google contract on OpenAI tokens, which is how a cloud keeps a customer it would otherwise lose outright.</p>
+<p class="field">Watch next</p><p>General availability, whether Anthropic gets the same shelf, and any disclosed revenue split.</p>
+</div>
+<div class="item">
+<h2>A physicist joins Anthropic&#x27;s Long-Term Benefit Trust</h2>
+<p class="field">What happened</p><p>Anthropic said on 21 October that Christopher Stubbs, an experimental physicist and former Dean of Science at Harvard, has <a href="https://www.anthropic.com/news">joined its Long-Term Benefit Trust</a> — the body that holds a class of Anthropic stock and appoints a subset of its board.</p>
+<p class="field">What it means</p><p>Small, but the Trust is the structural answer Anthropic gives when asked who checks the company. Who sits on it is the only observable part of that answer.</p>
+<p class="field">Watch next</p><p>Whether the Trust&#x27;s full composition is disclosed ahead of any new funding round.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Lam Research sets a record and the stock drops 8%</h2>
+<p class="field">What happened</p><p>Lam reported its September quarter on 21 October: <a href="https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm">revenue of $8.22bn</a>, up 22% sequentially, GAAP gross margin of 52.3%, GAAP operating margin of 40.0% and GAAP diluted earnings of $2.19 a share. It guided December to $8.60bn plus or minus $400m and EPS of $2.33 — a beat and a raise. Chief executive Tim Archer said operational execution “helped Lam deliver record revenue, profit, and earnings per share in the September quarter”. China was 35% of revenue, Korea 20%, Taiwan 18%. The stock was <a href="https://stockanalysis.com/stocks/lrcx/">down 8.2% pre-market</a> on Thursday from a $260.81 close; KLA fell 2.9% after hours and Applied Materials 5.2%, neither of which reports for weeks.</p>
+<p class="field">What it means</p><p>This is the AI-capex caution trade, and it has stopped caring about the print. When the best quarter in a company&#x27;s history gets sold, what is being priced is 2027 orders rather than 2026 revenue.</p>
+<p class="field">Watch next</p><p>KLA and SK hynix on 28 October, Samsung on 29 October.</p>
+</div>
+<div class="item">
+<h2>Nvidia reportedly wants all three memory makers on TSMC 3nm</h2>
+<p class="field">What happened</p><p>Seoul Economic Daily reported, on anonymous sources, that Nvidia has asked Samsung, SK hynix and Micron to fabricate the base die of its <a href="https://www.techzine.eu/news/infrastructure/145117/nvidia-standardizes-hbm-production-at-tsmc/">NVHBM parts</a> — a modified HBM4E unveiled in August — on TSMC's 3nm process, and to standardise on 1c-generation DRAM, shifting part of the memory controller off the GPU and onto the base die. Claimed gains are up to 30% more bandwidth and 15% lower power than standard HBM4E. None of the named companies has confirmed any of it. UBS is cited estimating HBM demand rising 91% next year, to roughly 61.5bn gigabits against about 54.6bn of expected production.</p>
+<p class="field">What it means</p><p>If true, it hands TSMC a toll booth on the memory stack as well as the logic die, and strands Samsung&#x27;s own 4nm base-die line. One outlet, anonymous sourcing, no company comment — read it as a claim.</p>
+<p class="field">Watch next</p><p>Any confirmation from the three memory makers; SK hynix&#x27;s 28 October call.</p>
+</div>
+<div class="item">
+<h2>Bank of Korea holds at 3%, and says the chip boom is running hotter than it forecast</h2>
+<p class="field">What happened</p><p>The Bank of Korea's Monetary Policy Board <a href="https://www.koreatimes.co.kr/economy/20261022/bok-keeps-rate-steady-at-3-but-further-hikes-remain-on-table">held the base rate at 3.00%</a> on 22 October, unanimously across all seven members, pausing after quarter-point rises in July and August took it up from 2.50%. This is a tightening cycle, not an easing one. The board said growth for 2026 and 2027 will come in considerably higher than its <a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?nttId=11064193">August forecasts</a> of 3.3% and 2.9%, driven by semiconductor-led exports and investment, and that 2027 inflation will exceed the 2.3% headline and 2.5% core it previously projected, staying above target for a considerable time. Governor Hyun Song Shin took office in April. The Bank's own English statement was not retrievable, so the wording here is Yonhap's rendering.</p>
+<p class="field">What it means</p><p>Seoul is the cleanest read anywhere on whether the AI buildout is physically real: it shows up as export volume in a current-account economy well before it shows up as revenue at a US hyperscaler. The Bank is saying the volume is larger than it modelled two months ago.</p>
+<p class="field">Watch next</p><p>SK hynix on 28 October, Samsung on 29 October, and the next BOK decision.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Meta invents a non-voting share class to pay for AI, and approves it without a vote</h2>
+<p class="field">What happened</p><p>Meta <a href="https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066710/meta-20261021.htm">filed a preliminary information statement</a> on 21 October disclosing a recapitalisation that creates a new non-voting Class C share class. The board approved it on 19 October with Mark Zuckerberg abstaining; the Chan Zuckerberg LLCs, holding 315,826,951 Class B shares and about 56.1% of combined voting power, delivered written consent the next day. No shareholder meeting will be held and no proxies were solicited. Every Class A and Class B share receives one Class C share as a dividend, after which Meta expects the Class A market price to “reflect the effect of a two-for-one stock split.” A Founder Alignment Agreement staples 80% of Zuckerberg's new shares to a continued-leadership condition, releasing 2.5% a quarter over 32 quarters.</p>
+<p class="field">What it means</p><p>This is a company building a currency it can print without diluting its founder&#x27;s control, and saying so: the special committee found the new class gives Meta “the critical ability to raise equity capital to finance our evolution and growth.”</p>
+<p class="field">Watch next</p><p>The definitive information statement and the 19 January 2027 effective date.</p>
+</div>
+<div class="item">
+<h2>Earnings night: Meta&#x27;s tax mirage, Tesla&#x27;s margin, IBM&#x27;s sell-off</h2>
+<p class="field">What happened</p><p>Meta's revenue rose 26% to <a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx">$64,601m</a>, but a $9.89bn charge from its August settlement with 52 attorneys general cut operating income 37% to $12,988m and halved operating margin to 20%. Net income still rose 264% to $9,860m — an artefact of an $18,954m tax provision a year earlier at an 87% effective rate, against 24% now. Meta narrowed 2026 capex to $135-145bn and gave no 2027 number. <a href="https://www.sec.gov/Archives/edgar/data/0001318605/000162828026066738/exhibit9914.htm">Tesla's revenue</a> was flat at $28,046m, net income fell 43% to $787m and operating margin dropped 322 basis points to 2.6%, with no numeric outlook. <a href="https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS">IBM</a> grew revenue 5% to $17.1bn, software up 8%, and raised its free-cash-flow guide; the stock fell <a href="https://stockanalysis.com/stocks/ibm/">5.8% pre-market</a>.</p>
+<p class="field">What it means</p><p>Three beats, three different punishments. The market is reading capex and margin, not revenue — and past a Meta net-income number that measures last year&#x27;s tax bill, not this year&#x27;s business.</p>
+<p class="field">Watch next</p><p>Alphabet, Microsoft and Amazon next week; the FOMC on 27-28 October.</p>
+</div>
+<div class="item">
+<h2>Brent jumps 3% on an Iranian claim nobody independent has verified</h2>
+<p class="field">What happened</p><p>Iranian state television reported that seven oil tankers caught fire and were damaged in the Strait of Hormuz. AP wrote that <a href="https://www.wsls.com/business/2026/10/22/asian-shares-retreat-after-strong-profits-lead-a-rally-on-wall-street/">“if the report is verified”</a> it would be the largest number of vessels damaged there in a single day since the Iran war began on 28 February. Nobody independent has counted seven: <a href="https://splash247.com/iran-claims-seven-vessels-hit-in-new-wave-of-hormuz-attacks/">Splash247 reports</a> Iran “has supplied no vessel names, flag details, casualty figures or independently verifiable evidence,” and UKMTO logged two incidents involving unidentified tankers. The IMO's running tally is 119 confirmed maritime security incidents and 24 seafarer deaths since February. Brent rose 3.2% to $112.27 and US crude 2.8% to $99.80; the Nikkei fell 2.7%, the Kospi 3.5%, the Hang Seng 3% and the CAC 40 1.3%.</p>
+<p class="field">What it means</p><p>The market is pricing a claim rather than an event. That is what a thin, unverifiable information environment does to a $112 barrel. Wall Street had closed up the day before, the S&P 500 <a href="https://krmg.com/2026/10/21/how-major-us-stock-indexes-fared-wednesday-10-21-2026/">at 7,757.17</a>, near but not at its October high.</p>
+<p class="field">Watch next</p><p>A flag state or owner naming a vessel; the next UKMTO weekly; war-risk rates.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Peak Energy takes $108m from GM Ventures for sodium-ion grid storage</h2>
+<p class="field">What happened</p><p>Sacramento's Peak Energy raised a <a href="https://www.finsmes.com/2026/10/peak-energy-raises-108m-in-series-b-funding.html">$108m Series B</a> on 21 October led by General Motors Ventures, with Maverick Silicon, Infinite Capital, Eclipse, Xora Innovation and LG Technology Ventures joining. Valuation was not disclosed. It builds sodium-ion batteries for grid storage using a passive-cooling design it says lowers operating cost and fire risk, runs a 4GWh factory in Sacramento due to start production in the first quarter of 2027, and is pointing the money at US manufacturing and the data-centre market.</p>
+<p class="field">What it means</p><p>Sodium-ion trades energy density for a cheaper, non-lithium supply chain — a sensible swap for a battery that sits still next to a data centre. A carmaker leading the round is GM hedging into grid storage.</p>
+<p class="field">Watch next</p><p>Whether the Q1 2027 production date holds, and a named data-centre customer.</p>
+</div>
+<div class="item">
+<h2>Blacksmith raises $66m from Sequoia at a $1bn valuation</h2>
+<p class="field">What happened</p><p>San Francisco's Blacksmith raised a <a href="https://www.finsmes.com/2026/10/blacksmith-raises-66m-in-series-c-funding.html">$66m Series C</a> on 21 October led by Sequoia Capital, with Premji Invest, Peak XV, GV and Y Combinator participating, at a $1bn valuation and $125m raised in total. It runs a continuous-integration platform for software builds and tests, claiming roughly twice the speed at about 60% lower cost on average, and says it manages nearly 10MW of compute across US and European data centres for more than 10,000 companies. Those performance figures are the company's own.</p>
+<p class="field">What it means</p><p>Continuous integration is a boring, enormous line item every engineering team pays and nobody loves. Owning your own 10MW to undercut the incumbents on price is the entire thesis, and it is a capital-intensive one.</p>
+<p class="field">Watch next</p><p>Whether GitHub or GitLab answers on price.</p>
+</div>
+<div class="item">
+<h2>The rest of the board, and why this section is short</h2>
+<p class="field">What happened</p><p>A one-day slice of Wednesday's postings: <a href="https://www.finsmes.com/2026/10/hive-raises-27m-in-series-b-funding.html">Hive</a>, of Kitchener, Ontario, took $27m in a Series B from Frontier Growth for an events-marketing platform that integrates more than 40 ticketing providers and serves over 1,600 clients. <a href="https://www.finsmes.com/">Also listed</a>: CapitalOS at $21.9m, Arctic Therapeutics at $21.5m, Firstwork at $15m, Azoma at $11.5m, and an undisclosed IBM Ventures stake in Leena AI. Nothing dated 22 October had posted when this brief was built, and Crunchbase's venture desk publishes nothing before mid-afternoon UTC.</p>
+<p class="field">What it means</p><p>Not a judgement on the venture market, just an artefact of a six-in-the-morning slot. A dawn brief sees yesterday&#x27;s rounds or none.</p>
+<p class="field">Watch next</p><p>Crunchbase&#x27;s week-in-review on Friday.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Democrats sue over election pressure — and the DNC is not on the complaint</h2>
+<p class="field">What happened</p><p>The Democratic Senatorial and Congressional Campaign Committees, the Democratic Governors Association, Chuck Schumer, Hakeem Jeffries, the Nevada State Democratic Party and one individual voter sued President Trump, the Justice Department, Attorney General Todd Blanche, DHS and Secretary Markwayne Mullin late on 20 October in federal court in Washington — <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Complaint-Oct.-20-2026.pdf">DSCC v. Trump, No. 1:26-cv-3674</a>. The complaint alleges the administration is pressuring states to purge voters and to segregate, withhold or refuse to count ballots, and opens: “For over a decade now, President Donald J. Trump has bombarded the American people with lies and misinformation.” It says the department holds a list of more than 20,000 registered voters it alleges are ineligible; of more than 7,000 with Los Angeles addresses the county reviewed, more than a quarter listed a US birthplace and nearly 40% had already been cancelled.</p>
+<p class="field">What it means</p><p>Twelve days out, the live fight is over which ballots get counted rather than who wins them. A Justice Department spokesperson, Kiersten Pels, <a href="https://abcnews.com/Politics/democrats-sue-trump-administration-alleged-election-pressure-campaign/story?id=137463447">told ABC News</a> that “California cannot facilitate the violation of federal law.”</p>
+<p class="field">Watch next</p><p>Whether the court sets an expedited schedule before 3 November, and whether any state complies in the meantime.</p>
+</div>
+<div class="item">
+<h2>Early voting passes 14 million</h2>
+<p class="field">What happened</p><p>About 14.3m ballots had been cast in the general election as of Wednesday — roughly 9.1m by mail and 5.2m in person — according to the University of Florida's Election Lab <a href="https://spectrumlocalnews.com/tx/austin/politics/2026/10/21/midterm-election-early-voting">as cited by Spectrum News</a>, up from 12.6m two days earlier. The Election Lab renders its national counts client-side and served placeholders when checked, so this is one outlet's reading of the tracker rather than two. In-person early voting opened on 20 October in Hawaii, Louisiana, Missouri, Utah and Wisconsin; Michigan and New York begin on Saturday. Texas runs to 30 October.</p>
+<p class="field">What it means</p><p>Pace is the only hard pre-election data that exists, and it is running ahead of 2022. Composition is where the forecasting disagreement actually lives, and no national party split has been published.</p>
+<p class="field">Watch next</p><p>The final weekend&#x27;s composition, and Michigan and New York from Saturday.</p>
+</div>
+<div class="item">
+<h2>Democratic confidence in the count has fallen 20 points since 2022</h2>
+<p class="field">What happened</p><p>A new <a href="https://apnorc.org/projects/just-under-half-of-voters-are-very-confident-that-votes-in-the-upcoming-midterms-will-be-counted-accurately/">AP-NORC poll</a> finds 55% of Democrats confident that midterm votes will be counted accurately, down from 75% after the 2022 midterms. Republican confidence moved the other way, from 26% to 38%. The survey ran 8-12 October among 1,119 adults including 925 registered voters, with a margin of error of 3.9 percentage points for adults and 4.2 for registered voters, on NORC's AmeriSpeak panel.</p>
+<p class="field">What it means</p><p>Confidence in American elections now tracks which party holds the White House, for both parties, almost symmetrically. That is a different problem from fraud and a harder one to fix, because nothing an election official does addresses it.</p>
+<p class="field">Watch next</p><p>Whether either figure moves after 3 November.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel votes Monday with both blocs short, and one party erased from the ballot</h2>
+<p class="field">What happened</p><p>Israel's Central Elections Committee announced on 21 October that Blue and White's <a href="https://www.timesofisrael.com/liveblog_entry/blue-and-white-ballot-slips-to-be-removed-from-polling-stations-after-all-party-members-withdraw-from-election/">ballot slips will be removed</a> from polling stations after every member of the party withdrew: its entry is marked with an X on the posters of participating parties, any vote for it is invalid, and votes already cast at military stations and diplomatic missions abroad are invalidated. Benny Gantz pulled the party on 19 October. <a href="https://www.jpost.com/israel-news/politics-and-diplomacy/article-912371">Four polls</a> published on 20 and 21 October put Gadi Eisenkot's Yashar first on 20 to 24 seats and Likud second on 18 to 21, with the pro-Netanyahu bloc on 48 to 51 against 50 to 55 for the opposition — both short of 61.</p>
+<p class="field">What it means</p><p>Netanyahu's problem is arithmetic on his own flank. Ofer Winter's People of Israel polls at 2.8%, below the 3.25% threshold, so every vote it draws destroys a right-wing seat rather than moving one. Hence a finance minister <a href="https://www.jpost.com/israel-news/politics-and-diplomacy/article-912440">offering a ministry</a> to a man polling out: “I will give up a ministerial position allocated to my party for you if you withdraw and do not endanger the right.” Winter refused.</p>
+<p class="field">Watch next</p><p>The 27 October result; whether Winter or the Charedi Public party withdraws first.</p>
+</div>
+<div class="item">
+<h2>Brazil&#x27;s run-off is a one-point race three days out</h2>
+<p class="field">What happened</p><p>Quaest published a poll on 21 October showing <a href="https://www.933thedrive.com/2026/10/21/bolsonaros-lead-over-lula-narrows-ahead-brazil-runoff-quaest-poll-shows/">Flavio Bolsonaro on 45% and Lula on 44%</a> ahead of Sunday's run-off, against 46-44 a week earlier. It was fielded 17-20 October among 2,154 people with a two-point margin of error, registered with the electoral court as BR-08535/2026 and commissioned by Rede Globo; the figures are shares of total votes, with 9% blank, null or abstaining and 2% undecided. Bolsonaro, 45, is a senator for Rio de Janeiro and the eldest son of Jair Bolsonaro. He led the 4 October first round 56,104,503 votes to 53,879,538.</p>
+<p class="field">What it means</p><p>A one-point gap inside a two-point margin has been a statistical tie for a fortnight, and the week&#x27;s movement is smaller than the error. Anyone claiming momentum is guessing.</p>
+<p class="field">Watch next</p><p>Sunday&#x27;s result, and whether the loser concedes it.</p>
+</div>
+<div class="item">
+<h2>WFP cuts Gaza food aid by a third</h2>
+<p class="field">What happened</p><p>The World Food Programme said on 19 October that funding shortfalls have forced it to <a href="https://www.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza">cut assistance in Gaza by around one-third</a>. Half a million people lose access; it now reaches 1.1m of the most vulnerable, down from 1.6m a month earlier. Recipients get one food parcel instead of two, with rations halved; hot meals fall from 250,000 to 150,000 a day, with families in hard-to-reach areas near the yellow line fed every other day; cash assistance is reduced for 75,000 families. WFP needs $450m for Gaza and the West Bank from October to March. It puts about 1.4m people, 67% of Gaza's population, at IPC Phase 3 or worse — better than the 1.6m and 77% at the end of 2025, but “the improvement remains modest and fragile.”</p>
+<p class="field">What it means</p><p>The hunger numbers improved and the aid shrank, in the same month. The West Bank caseload was already halved from 400,000 to 200,000 in September.</p>
+<p class="field">Watch next</p><p>Whether the $450m appeal draws pledges, and the next IPC analysis.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener">Anthropic - Introducing Claude Duet</a></li>
+<li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Anthropic - Newsroom</a></li>
+<li><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers" target="_blank" rel="noopener">Google Cloud - OpenAI models on Google Cloud</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm" target="_blank" rel="noopener">SEC - Lam Research FQ1 2027 results (8-K Ex. 99.1)</a></li>
+<li><a href="https://stockanalysis.com/stocks/lrcx/" target="_blank" rel="noopener">StockAnalysis - LRCX</a></li>
+<li><a href="https://www.techzine.eu/news/infrastructure/145117/nvidia-standardizes-hbm-production-at-tsmc/" target="_blank" rel="noopener">Techzine - Nvidia standardises HBM base dies at TSMC</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261022/bok-keeps-rate-steady-at-3-but-further-hikes-remain-on-table" target="_blank" rel="noopener">Korea Times - BOK keeps rate steady at 3%</a></li>
+<li><a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?nttId=11064193" target="_blank" rel="noopener">Bank of Korea - August 2026 Monetary Policy Decision</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001326801/000162828026066710/meta-20261021.htm" target="_blank" rel="noopener">SEC - Meta preliminary information statement (Schedule 14C)</a></li>
+<li><a href="https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx" target="_blank" rel="noopener">Meta - Third Quarter 2026 Results</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001318605/000162828026066738/exhibit9914.htm" target="_blank" rel="noopener">SEC - Tesla Q3 2026 update (8-K Ex. 99.1)</a></li>
+<li><a href="https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS" target="_blank" rel="noopener">IBM - Third Quarter 2026 Results</a></li>
+<li><a href="https://stockanalysis.com/stocks/ibm/" target="_blank" rel="noopener">StockAnalysis - IBM</a></li>
+<li><a href="https://www.wsls.com/business/2026/10/22/asian-shares-retreat-after-strong-profits-lead-a-rally-on-wall-street/" target="_blank" rel="noopener">AP - Asian shares retreat after strong profits lead a rally on Wall Street</a></li>
+<li><a href="https://splash247.com/iran-claims-seven-vessels-hit-in-new-wave-of-hormuz-attacks/" target="_blank" rel="noopener">Splash247 - Iran claims seven vessels hit in new wave of Hormuz attacks</a></li>
+<li><a href="https://krmg.com/2026/10/21/how-major-us-stock-indexes-fared-wednesday-10-21-2026/" target="_blank" rel="noopener">AP - How major US stock indexes fared, Wednesday 21 October 2026</a></li>
+<li><a href="https://www.finsmes.com/" target="_blank" rel="noopener">FinSMEs - funding round index</a></li>
+<li><a href="https://www.finsmes.com/2026/10/peak-energy-raises-108m-in-series-b-funding.html" target="_blank" rel="noopener">FinSMEs - Peak Energy raises $108m Series B</a></li>
+<li><a href="https://www.finsmes.com/2026/10/blacksmith-raises-66m-in-series-c-funding.html" target="_blank" rel="noopener">FinSMEs - Blacksmith raises $66m Series C</a></li>
+<li><a href="https://www.finsmes.com/2026/10/hive-raises-27m-in-series-b-funding.html" target="_blank" rel="noopener">FinSMEs - Hive raises $27m Series B</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Complaint-Oct.-20-2026.pdf" target="_blank" rel="noopener">DSCC v. Trump, No. 1:26-cv-3674 (D.D.C.) - complaint</a></li>
+<li><a href="https://abcnews.com/Politics/democrats-sue-trump-administration-alleged-election-pressure-campaign/story?id=137463447" target="_blank" rel="noopener">ABC News - Democrats sue Trump administration over alleged election pressure campaign</a></li>
+<li><a href="https://spectrumlocalnews.com/tx/austin/politics/2026/10/21/midterm-election-early-voting" target="_blank" rel="noopener">Spectrum News - Midterm election early voting</a></li>
+<li><a href="https://apnorc.org/projects/just-under-half-of-voters-are-very-confident-that-votes-in-the-upcoming-midterms-will-be-counted-accurately/" target="_blank" rel="noopener">AP-NORC - Confidence that midterm votes will be counted accurately</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/blue-and-white-ballot-slips-to-be-removed-from-polling-stations-after-all-party-members-withdraw-from-election/" target="_blank" rel="noopener">Times of Israel - Blue and White ballot slips to be removed from polling stations</a></li>
+<li><a href="https://www.jpost.com/israel-news/politics-and-diplomacy/article-912371" target="_blank" rel="noopener">Jerusalem Post - Election polls, 21 October 2026</a></li>
+<li><a href="https://www.jpost.com/israel-news/politics-and-diplomacy/article-912440" target="_blank" rel="noopener">Jerusalem Post - Smotrich offers Winter a ministerial post to withdraw</a></li>
+<li><a href="https://www.933thedrive.com/2026/10/21/bolsonaros-lead-over-lula-narrows-ahead-brazil-runoff-quaest-poll-shows/" target="_blank" rel="noopener">Quaest poll via wire - Bolsonaro&#x27;s lead over Lula narrows ahead of Brazil run-off</a></li>
+<li><a href="https://www.wfp.org/news/funding-cuts-force-wfp-drastically-reduce-lifesaving-assistance-gaza" target="_blank" rel="noopener">WFP - Funding cuts force WFP to drastically reduce lifesaving assistance in Gaza</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-22-daily.pdf">PDF</a></span>
+</div></div></body></html>
