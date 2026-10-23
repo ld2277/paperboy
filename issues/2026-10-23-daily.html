@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Friday, October 23, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Friday, October 23, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Chip stocks had their worst day since June on nothing worse than good earnings, and Seoul took the whole move back overnight.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nvidia starts shipping AI datacentres as flat-pack</h2>
+<p class="field">What happened</p><p>At GTC Berlin on Thursday Nvidia introduced <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment">DSX POD</a>, a reference design for complete Vera Rubin AI factories pre-cabled and validated inside modular containers at the works, which Nvidia says cuts deployment at a prepared site from about six months to as little as 14 days, with delivery worldwide in early 2027. A <a href="https://investor.nvidia.com/news/press-release-details/2026/European-Ecosystem-Builds-Worlds-Most-Efficient-AI-Factories-With-NVIDIA-DSX/default.aspx">second release the same day</a> claims its DSX MaxLPS software lets operators produce the same number of tokens with up to 30% less power; Nscale, testing four GB300 NVL72 racks in Iceland, reported 49% higher inference throughput inside an unchanged 264-kilowatt budget. Jensen Huang, founder and CEO: “An AI factory creates value when it starts producing tokens — not when construction is complete”.</p>
+<p class="field">What it means</p><p>The binding constraint on the buildout stopped being chips and became grid connections and construction crews. Selling a validated container against a 14-day install is Nvidia competing with the schedule, not with AMD. Every figure above is the vendor&#x27;s own.</p>
+<p class="field">Watch next</p><p>Whether a named partner puts a signed POD order on the record.</p>
+</div>
+<div class="item">
+<h2>Saudi Arabia&#x27;s Humain takes 84MW of Nvidia compute, and reserves most of it for an American</h2>
+<p class="field">What happened</p><p><a href="https://www.thenationalnews.com/future/technology/2026/10/22/saudi-arabias-humain-expands-nvidia-deal-with-84mw-ai-computing-plan/">Humain</a>, the PIF-owned Saudi AI company, said at GTC Berlin it will take up to 84 megawatts of Nvidia compute, roughly 27,000 GPUs. Those totals come from Humain's own announcement. The phasing does not: The National reports 14MW of Blackwell HGX B300, about 6,000 GPUs, from the fourth quarter, then 70MW of Vera Rubin from mid-2027 — 50MW for an unnamed US client, 20MW for Humain Cloud, both subject to final agreements. <a href="https://econotimes.com/HUMAIN-Plans-Up-to-84-Megawatts-of-AI-Capacity-With-NVIDIA-1760537">EconoTimes notes</a> Humain's release gave no dates and no customer detail, so the schedule rests on one outlet. No dollar value, no locations. Chief executive Tareq Amin told The National: “We are moving quickly to bring the next generations of Nvidia-accelerated computing into Saudi Arabia at meaningful scale.”</p>
+<p class="field">What it means</p><p>The line to stare at is the 50MW set aside for an unidentified American buyer. Saudi capacity sold back to US customers is the export-control argument as a commercial structure, and it works only while Washington keeps signing licences.</p>
+<p class="field">Watch next</p><p>Whether the US client is named, and whether a definitive agreement follows.</p>
+</div>
+<div class="item">
+<h2>Nvidia and the Institute for Protein Design put a protein designer in the open</h2>
+<p class="field">What happened</p><p>Also dated 22 October, Nvidia and the UW Medicine Institute for Protein Design released <a href="https://blogs.nvidia.com/gtc-berlin-2026-news/">RFD4-Proteina</a>, an open protein-design model shipped as part of Nvidia BioNeMo, paired with a search tool so researchers can steer it with molecular inputs and target properties. Named uses include detecting signs of disease and designing enzymes that break down pesticides. David Baker, who shared the 2024 Nobel Prize in chemistry, appears in the accompanying video. No benchmarks and no licence terms were published.</p>
+<p class="field">What it means</p><p>Open-weights protein design is the most awkward corner of the open-model case: the release that lets an academic lab iterate also removes the gatekeeper. A launch with no published licence is where to look for how seriously that is handled.</p>
+<p class="field">Watch next</p><p>The licence terms and a published benchmark.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>SK hynix pulls the Solidigm listing, with Korean regulators already in the way</h2>
+<p class="field">What happened</p><p>Before Friday's Seoul open SK hynix disclosed it has <a href="https://www.koreajoongangdaily.com/business/sk-hynix-pulls-back-from-solidigm-ipo-amid-market-uncertainty-and-regulatory-pushback/12934956">suspended</a> both the planned US listing of Solidigm, its California NAND arm, and the pre-IPO fundraising around it; the direct-investment route is on hold too. The filing attributes the decision to increased market volatility and a broader correction in semiconductor stocks, and says it does not reflect any change in Solidigm's growth prospects; <a href="https://www.koreatimes.co.kr/business/companies/20261023/sk-hynix-halts-solidigm-ipo-plan-amid-regulatory-pressure">Korea Times</a> describes it as halting review of both options together. Regulators got there first: <a href="https://www.koreajoongangdaily.com/business/fss-chief-says-putting-solidigm-on-nasdaq-would-breach-split-listing-rules/12928113">FSS Governor Lee Chan-jin</a> told a National Assembly audit on 19 October that both regulators consider the listing to run afoul of Korea's split-listing rules, and <a href="https://www.koreajoongangdaily.com/business/solidigm-us-ipo-would-face-korea-splitlisting-rules-fsc-says/12933787">FSC Chairman Lee Eog-weon</a> said on 22 October that it falls under those guidelines. All translated from Korean, so paraphrased, not quoted.</p>
+<p class="field">What it means</p><p>Solidigm was the funding vehicle for a US NAND fab. Losing it in the week chip equities fell 7% shows how fast the window shut, and the objection means Seoul can block the route even if markets reopen. The fab now gets funded off SK hynix&#x27;s balance sheet or not at all.</p>
+<p class="field">Watch next</p><p>SK hynix&#x27;s third-quarter call on 28 October, and whether the US fab survives without outside capital.</p>
+</div>
+<div class="item">
+<h2>Chip stocks have their worst day since June, and Seoul takes it all back overnight</h2>
+<p class="field">What happened</p><p>The Philadelphia Semiconductor Index <a href="https://indexes.nasdaqomx.com/Index/History/SOX">closed Thursday at 10,731.98</a>, down 774.77 points, or 6.73%, which the <a href="https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-drop-over-1-093849296.html">wire called</a> its biggest daily drop since 23 June. <a href="https://stockanalysis.com/stocks/nvda/">Nvidia fell 4.40%</a>, <a href="https://stockanalysis.com/stocks/mu/">Micron 6.26%</a>, and <a href="https://stockanalysis.com/stocks/intc/">Intel 8.04%</a>, AMD 8.10% and Marvell 8.70%. None of them reported anything; <a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results">Intel does not report until 29 October</a>. Seoul then round-tripped it: the Kospi <a href="https://www.kedglobal.com/korean-stock-market/newsView/ked202610230002">opened at 5,403.17</a>, down nearly 3%, and <a href="https://www.koreajoongangdaily.com/business/kospi-closes-marginally-higher-on-bargain-hunting/12935698">closed at 5,550.30</a>, up 16.53 points, with SK hynix up 4.42%. Thursday's close was 5,533.77, down 3.52%.</p>
+<p class="field">What it means</p><p>A sector falling 7% on no company news and recovering overnight on a cancelled listing is not trading on orders. It is trading on a view about what AI capex costs the people doing it, and that view moves faster than any order book.</p>
+<p class="field">Watch next</p><p>KLA and SK hynix on 28 October, Samsung and Intel on 29 October.</p>
+</div>
+<div class="item">
+<h2>Disco posts a 45% operating margin at the back end of the line</h2>
+<p class="field">What happened</p><p>Disco, the Tokyo-listed maker of the tools that cut finished wafers into chips, <a href="https://www.disco.co.jp/jp/ir/library/doc/fr/fr20261022.pdf">reported first-half results</a> on 22 October: net sales of 257.1 billion yen, up 32.1%, operating income of 116.6 billion yen, up 47.9%, and an operating margin of 45.4%. Gross margin was 71.5%. It guided the nine months to December at 389.5 billion yen of sales and 174.7 billion of operating income, up 38.4% — its usual one-quarter-ahead practice, not a full-year forecast — and raised the interim dividend by 15 yen. The filing claims no record, so neither do we.</p>
+<p class="field">What it means</p><p>Disco sits behind the front end, so its book turns late. A 45% operating margin and a 38% profit guide say the advanced-packaging bottleneck is still binding, which is the part of the chain the equity market spent Thursday discounting anyway.</p>
+<p class="field">Watch next</p><p>Whether the December guide is beaten, and what KLA says on 28 October.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>A rout in the AI complex, a rally in everything else</h2>
+<p class="field">What happened</p><p>Thursday's selling was narrow to the point of being two markets. The <a href="https://www.krmg.com/2026/10/22/how-major-us-stock-indexes-fared-thursday-10-22-2026/">Nasdaq composite closed at 26,008.86</a>, down 694.00 points or 2.6%, and the S and P 500 at 7,663.43, down 93.74 or 1.2% — but the Dow finished up 11.89 at 52,867.98 and the Russell 2000 up 3.01 at 2,784.03. <a href="https://www.staradvertiser.com/2026/10/22/breaking-news/nasdaq-plunges-2-6-as-ai-spending-fears-spark-tech-selloff/">Meta fell 7.0%</a> having beaten expectations and Tesla 3.1% despite better-than-expected free cash flow, while Blackstone rose 8.4%, Spotify 11.1% and Lockheed Martin 7.0%. Paul Nolte of Murphy and Sylvest: “Investors are starting to realize that there are some holes in the AI story.”</p>
+<p class="field">What it means</p><p>This is rotation, not a sell-off. The money came out of the AI complex and stayed in equities, which is why the small-cap index closed green on a tape that took 694 points off the Nasdaq.</p>
+<p class="field">Watch next</p><p>Alphabet, Microsoft and Amazon next week, and whether any of them names a 2027 capex number.</p>
+</div>
+<div class="item">
+<h2>WD grows 55%, guides to 70%, and the stock does nothing</h2>
+<p class="field">What happened</p><p>WD, as it now styles itself, <a href="https://www.sec.gov/Archives/edgar/data/0000106040/000162828026066882/a4ex991-pressreleaseq127.htm">reported fiscal first-quarter results</a> on Thursday: revenue of $4.38 billion, up 55% year over year; non-GAAP earnings of $4.64 a share; operating cash flow of $1.60 billion; and a dividend raised 17% to $0.175, payable 17 December. It guided the December quarter to $5.1 billion plus or minus $100 million, which the release itself calls “up 66% to 72% year-over-year”, with non-GAAP earnings of $5.80. Chief executive Irving Tan said fiscal 2027 was “off to a strong start, with results exceeding expectations”. The stock <a href="https://stockanalysis.com/stocks/wdc/">closed down 6.43% at $354.19</a> and fell another 0.52% in Friday pre-market.</p>
+<p class="field">What it means</p><p>Fifty-five per cent growth, a 17% dividend rise and a 70% growth guide bought nothing. That is the cleanest data point of the week for the split now defining this market: AI hardware demand is accelerating, and AI hardware equities are being marked on what the spending does to cash flow, not revenue.</p>
+<p class="field">Watch next</p><p>SLB's third quarter, <a href="https://investorcenter.slb.com/news-releases/news-release-details/slb-announces-date-third-quarter-2026-results-conference-call">due at 7:00am Eastern today</a>, for the first read outside tech.</p>
+</div>
+<div class="item">
+<h2>Brent settles at a five-month high on a claim nobody has verified</h2>
+<p class="field">What happened</p><p>Brent <a href="https://www.investing.com/commodities/brent-oil-historical-data">settled Thursday at $113.17</a>, up 4.00%, its highest close since 4 May, after Wednesday's $108.82, and traded around $114 on Friday morning. <a href="https://www.investing.com/commodities/crude-oil-historical-data">WTI settled at $99.47</a> and traded near $100.40. The driver is an assertion, not lost supply: Iran's Revolutionary Guard said it struck four tankers in the northern Gulf and that three more hit mines west of Hormuz, Iranian state television put the count at seven ships, and the Associated Press could not verify it. Trump calls the claim an attempt to raise prices before the midterms. A correction to our own record: Thursday's brief carried Brent at $112.27, an intraday print; that day's settlement was $113.17.</p>
+<p class="field">What it means</p><p>A $6 weekly gain with no confirmed barrel lost is a pure risk premium, reversible in one session, and a poor guide to the actual state of the strait. It is also feeding the inflation argument into an FOMC that meets on Tuesday.</p>
+<p class="field">Watch next</p><p>A flag state or owner naming a damaged vessel, war-risk rates, and the FOMC on 27 and 28 October.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Founders Fund and the OpenAI Startup Fund co-lead $45m for a cancer implant</h2>
+<p class="field">What happened</p><p>San Francisco's Coherence Neuro raised a <a href="https://www.coherenceneuro.com/articles">$45 million Series A</a> co-led by Founders Fund and the OpenAI Startup Fund, with Lux Capital, 8VC, Timeless, Olive Capital and Ahren new on the register; angels include Neuralink's head neurosurgeon Matthew MacDougall. The company's own framing is theranostic neurotechnology — implantable devices that read live biological signals from a tumour and treat it as it changes. Proceeds go to a first chronic human trial in glioblastoma, an FDA breakthrough device application and preclinical work in pancreatic cancer. On the stage: <a href="https://www.finsmes.com/2026/10/coherence-neuro-raises-45m-in-series-a-funding.html">the company and FinSMEs both call it a Series A</a>, while several aggregators labelled the same $45 million a seed.</p>
+<p class="field">What it means</p><p>Two of the most aggressive software funds co-leading an implanted oncology device is the clearest sign yet that the AI-hardware thesis has moved into the body. A breakthrough designation is a review pathway, not an approval.</p>
+<p class="field">Watch next</p><p>The FDA decision and a first-patient date in the glioblastoma trial.</p>
+</div>
+<div class="item">
+<h2>A $30m pre-seed for robots that can feel what they are holding</h2>
+<p class="field">What happened</p><p>Zurich's Enact Intelligence raised <a href="https://thenextweb.com/news/enact-intelligence-30m-pre-seed-robot-touch">$30 million in a pre-seed round</a> — FinSMEs's headline called it a seed, its body and The Next Web both say pre-seed, and the distinction is the story. Three firms backed it, redalpine, Notion Capital and firstminute capital, with no lead named; angels include Mistral's Arthur Mensch, Yann LeCun and Path Robotics' Andrew Lonsberry. The technology measures force inside the actuators themselves rather than through separate touch sensors, giving whole-body force awareness meant to transfer across robot form factors. Founder and chief executive is Manuel Yves Galliker.</p>
+<p class="field">What it means</p><p>Thirty million dollars before a seed round, with no lead, is what a scarce-team market looks like. The technical bet is the interesting part: proprioception rather than skin says touch sensing has been the wrong abstraction for manipulation.</p>
+<p class="field">Watch next</p><p>A named industrial deployment, and whether a priced seed follows at a markup.</p>
+</div>
+<div class="item">
+<h2>Optivolt raises $32m to put the power electronics inside the panel</h2>
+<p class="field">What happened</p><p>Optivolt raised a <a href="https://www.finsmes.com/2026/10/optivolt-raises-32m-in-series-a-funding.html">$32 million Series A led by VXI Capital</a>, with RA Capital, Valo Ventures and Atlas Innovate participating, taking the total raised to $42 million. Its Power Balancer sits inside the panel and shifts energy between cell groups in real time to recover output lost to shade, weather, soiling and wear. Founder and chief executive Rohit Kalyanpur is spending it on manufacturing and on moving from residential rooftops into utility-scale projects. On the day's board: FinSMEs had posted nothing for 23 October by 10:00 GMT and <a href="https://news.crunchbase.com/venture">Crunchbase's venture desk</a> nothing past 21 October, so Thursday's rounds are all there is this morning.</p>
+<p class="field">What it means</p><p>Panel-level power electronics is a decade-old idea that mostly failed on cost. The utility-scale pitch is new, and it is really a bet that datacentre-driven power demand has made every recovered watt worth paying for.</p>
+<p class="field">Watch next</p><p>A named utility-scale pilot, and whether a panel maker designs it in rather than bolting it on.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The Justice Department appeals a ruling the judge has not made</h2>
+<p class="field">What happened</p><p>The Justice Department filed a <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/74-2026-10-26-Notice-of-appeal.pdf">notice of appeal to the Ninth Circuit</a> on 22 October in United States v. State of California, No. 2:26-cv-12025 (C.D. Cal.), arguing that Judge David O. Carter's silence on its emergency application “is a constructive denial” that “has the practical effect of denying a preliminary injunction”. DOJ had <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-21-Motion-Expedited-TRO-Proceedings.pdf">asked him to rule by noon that day</a>; a hearing is set for 27 October at 1:00pm. The <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-15-Complaint.pdf">suit, filed 15 October</a> against the state, Secretary of State Shirley N. Weber and Los Angeles County Registrar-Recorder Dean C. Logan, seeks to stop officials counting the ballots of more than 20,000 people federal agencies have flagged as likely non-citizens unless citizenship is verified first, and leans on 18 U.S.C. 611, a criminal statute. The case was <a href="https://www.democracydocket.com/news-alerts/trump-doj-appeals-california-ballot-case-before-judge-even-rules/">reassigned to Carter on 21 October</a> from Judge John Holcomb; Carter dismissed an earlier DOJ suit over California's voter rolls in January.</p>
+<p class="field">What it means</p><p>Appealing a non-ruling eleven days out is a statement that the schedule is the remedy being sought. Whatever the Ninth Circuit does with it, the filing puts a federal appellate clock over Los Angeles County&#x27;s count — and this is a separate matter from the two D.D.C. suits running against the administration.</p>
+<p class="field">Watch next</p><p>Whether the Ninth Circuit acts before 3 November, and Monday&#x27;s hearing before Carter.</p>
+</div>
+<div class="item">
+<h2>Maine is tied, and its two electorates are 52 points apart</h2>
+<p class="field">What happened</p><p>A <a href="https://www.foxnews.com/politics/fox-news-poll-nail-biter-maine-senate-race">Fox News poll released at 6:00pm on 22 October</a> has <a href="https://www.mainepublic.org/politics/2026-07-25/troy-jackson-wins-the-democratic-nomination-to-challenge-sen-susan-collins">Democratic nominee Troy Jackson</a> and Susan Collins level at 49% each — fieldwork 16 to 20 October, 1,689 registered voters at plus or minus two points and 1,514 likely voters at plus or minus 2.5. The poll does not label which population the topline is drawn from; the surrounding text implies likely voters. The composition is the actual finding: among the roughly one in five who have already cast a ballot, Jackson leads by 40 points, while Collins leads those planning to vote on election day by 12. Favourability is near-identical, Jackson 47 to 49 and Collins 47 to 51. Trump's approval in Maine is 37 to 62, with 54% strongly disapproving, and Maine voters prefer a Democratic-led Senate 53 to 45.</p>
+<p class="field">What it means</p><p>A 52-point gap between the early and election-day electorates means this is not a poll about Maine&#x27;s opinion but about Maine&#x27;s turnout machinery. Collins has outrun her party before; she has not had to do it with a president this far underwater at home and a fifth of the vote already banked against her.</p>
+<p class="field">Watch next</p><p>Maine&#x27;s reported absentee returns over the final weekend, and whether Collins puts daylight between herself and Trump on air.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel&#x27;s last legal polls leave both blocs short and the pollsters further apart than the blocs</h2>
+<p class="field">What happened</p><p>Israeli law bars publishing polls in the four days before a vote, so Thursday's were the last. <a href="https://www.timesofisrael.com/netanyahu-and-eisenkot-in-dead-heat-five-days-before-election-final-toi-poll-shows/">The Times of Israel's final poll</a> puts the two Jewish-led blocs at 51 seats each, Gadi Eisenkot's Yashar the largest party on 23 against Likud's 21, so neither reaches 61 if campaign pledges hold. Its fieldwork line reads 14 and 15 October, odd for a final poll, so treat the dating as unresolved. <a href="https://jewishinsider.com/2026/10/final-israeli-polls-stalemate-tuesdays-election/">Jewish Insider's roundup</a> points the other way, averaging 54 for the Netanyahu bloc against 50; across six mainstream television and newspaper polls the Eisenkot bloc led on average, 52 to 50, while Channel 14 and i24, whose pollsters have worked for Likud, project a 61-seat Netanyahu majority. Ofer Winter's People of Israel polls 3% against a 3.25% threshold and <a href="https://www.timesofisrael.com/people-of-israel-charedi-public-vow-to-stay-in-race-despite-pressure-from-pm-and-allies">refuses to go</a>: “I did not surrender in the past. I am not surrendering today.”</p>
+<p class="field">What it means</p><p>The spread between houses is wider than the gap between blocs, which makes the numbers close to useless as prediction. The threshold arithmetic is not: a party stuck at 3% burns roughly four seats of right-wing vote, hence the public pressure on Winter.</p>
+<p class="field">Watch next</p><p>Tuesday&#x27;s count, whether Winter&#x27;s vote is wasted, and Wednesday&#x27;s coalition arithmetic.</p>
+</div>
+<div class="item">
+<h2>Russia agrees to talks, then fires 21 ballistic missiles at Kyiv</h2>
+<p class="field">What happened</p><p>Steve Witkoff met Putin for three hours at Constantine Palace in St Petersburg on 21 October; <a href="https://www.pbs.org/newshour/world/putin-agrees-to-resume-trilateral-russia-ukraine-u-s-talks-next-month">Putin agreed in principle</a> to resume three-way talks with Ukraine and the United States, with no date set and nothing expected before 10 November. Overnight, <a href="https://www.pbs.org/newshour/world/russian-missiles-pound-kyiv-as-moscow-says-over-800-ukrainian-drones-downed">Zelenskyy said</a> Russia fired 21 ballistic missiles at Kyiv in three waves, three carrying cluster munitions, in strikes across 12 regions. AP, citing Ukrainian officials, puts the toll at at least four killed across Ukraine, five of the wounded children; <a href="https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin">AFP puts four killed in Kyiv alone</a> and four children. Two women aged 50 and 60 were killed at a market in Lozova, Kharkiv. Russia's Defence Ministry claims it downed 808 Ukrainian drones, its own account of its own air defence. Zelenskyy: “Russia has not changed the way it wages this war, and it is taking no steps that would signal a genuine desire to end it.”</p>
+<p class="field">What it means</p><p>An agreement in principle with no date, no venue and no ceasefire costs Moscow nothing and buys the appearance of motion through the US midterms. The strike package the same night is the price signal.</p>
+<p class="field">Watch next</p><p>Whether a date or venue is named; earlier rounds were in Abu Dhabi and Geneva.</p>
+</div>
+<div class="item">
+<h2>Brazil&#x27;s run-off is a statistical tie two days out</h2>
+<p class="field">What happened</p><p><a href="https://timesbrasil.com.br/brasil/decisao-2026-flavio-tem-47-dos-votos-e-lula-46-aponta-datafolha/">Datafolha's final run-off poll</a>, published 22 October, has Flávio Bolsonaro on 47% and Lula on 46% of total votes, with 5% intending to spoil their ballot and 2% undecided; <a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-presidente-outubro-2026-segundo-turno-3/">on valid votes it is a 50-50 tie</a>. Fieldwork ran 20 to 22 October among 2,154 voters, margin of error two points, for Globo and Folha de S.Paulo. The previous Datafolha, on 15 October, had Flávio 47 and Lula 45, so Lula is up one inside the error. Quaest's 45-44, reported here on Thursday, is also on total votes; it should not be read against the 50-50 valid-vote cut.</p>
+<p class="field">What it means</p><p>Two pollsters, two bases, one conclusion: inside the error with two days to run, and the blank and null vote at 5% is larger than the gap. Sunday turns on differential turnout, not on anything left to measure.</p>
+<p class="field">Watch next</p><p>Sunday&#x27;s count, whether the loser concedes on the night, and Monday&#x27;s open.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment" target="_blank" rel="noopener">NVIDIA — NVIDIA Introduces DSX POD AI Factories (GTC Berlin, 22 Oct)</a></li>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2026/European-Ecosystem-Builds-Worlds-Most-Efficient-AI-Factories-With-NVIDIA-DSX/default.aspx" target="_blank" rel="noopener">NVIDIA — European Ecosystem Builds Worlds Most Efficient AI Factories With NVIDIA DSX</a></li>
+<li><a href="https://www.thenationalnews.com/future/technology/2026/10/22/saudi-arabias-humain-expands-nvidia-deal-with-84mw-ai-computing-plan/" target="_blank" rel="noopener">The National — Saudi Arabias Humain expands Nvidia deal with 84MW AI computing plan</a></li>
+<li><a href="https://econotimes.com/HUMAIN-Plans-Up-to-84-Megawatts-of-AI-Capacity-With-NVIDIA-1760537" target="_blank" rel="noopener">EconoTimes — HUMAIN plans up to 84 megawatts of AI capacity with NVIDIA</a></li>
+<li><a href="https://blogs.nvidia.com/gtc-berlin-2026-news/" target="_blank" rel="noopener">NVIDIA — GTC Berlin 2026 news hub</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/sk-hynix-pulls-back-from-solidigm-ipo-amid-market-uncertainty-and-regulatory-pushback/12934956" target="_blank" rel="noopener">Korea JoongAng Daily — SK hynix pulls back from Solidigm IPO</a></li>
+<li><a href="https://www.koreatimes.co.kr/business/companies/20261023/sk-hynix-halts-solidigm-ipo-plan-amid-regulatory-pressure" target="_blank" rel="noopener">Korea Times — SK hynix halts Solidigm IPO plan amid regulatory pressure</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/fss-chief-says-putting-solidigm-on-nasdaq-would-breach-split-listing-rules/12928113" target="_blank" rel="noopener">Korea JoongAng Daily — FSS chief says putting Solidigm on Nasdaq would breach split-listing rules</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/solidigm-us-ipo-would-face-korea-splitlisting-rules-fsc-says/12933787" target="_blank" rel="noopener">Korea JoongAng Daily — Solidigm US IPO would face Korea split-listing rules, FSC says</a></li>
+<li><a href="https://indexes.nasdaqomx.com/Index/History/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Sector (SOX) index history</a></li>
+<li><a href="https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-drop-over-1-093849296.html" target="_blank" rel="noopener">Wire report — Nasdaq futures drop as chip stocks plunge 6.7%</a></li>
+<li><a href="https://stockanalysis.com/stocks/nvda/" target="_blank" rel="noopener">StockAnalysis — NVIDIA (NVDA) close, 22 October</a></li>
+<li><a href="https://stockanalysis.com/stocks/mu/" target="_blank" rel="noopener">StockAnalysis — Micron (MU) close, 22 October</a></li>
+<li><a href="https://stockanalysis.com/stocks/intc/" target="_blank" rel="noopener">StockAnalysis — Intel (INTC) close and pre-market</a></li>
+<li><a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results" target="_blank" rel="noopener">Intel — Intel to report third-quarter 2026 financial results (29 October)</a></li>
+<li><a href="https://www.kedglobal.com/korean-stock-market/newsView/ked202610230002" target="_blank" rel="noopener">KED Global — Korean stock market, 23 October</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-closes-marginally-higher-on-bargain-hunting/12935698" target="_blank" rel="noopener">Korea JoongAng Daily — Kospi closes marginally higher on bargain hunting (23 Oct)</a></li>
+<li><a href="https://www.disco.co.jp/jp/ir/library/doc/fr/fr20261022.pdf" target="_blank" rel="noopener">DISCO Corporation — FY2026 interim results (tanshin), 22 October</a></li>
+<li><a href="https://www.krmg.com/2026/10/22/how-major-us-stock-indexes-fared-thursday-10-22-2026/" target="_blank" rel="noopener">AP — How major US stock indexes fared, Thursday 22 October 2026</a></li>
+<li><a href="https://www.staradvertiser.com/2026/10/22/breaking-news/nasdaq-plunges-2-6-as-ai-spending-fears-spark-tech-selloff/" target="_blank" rel="noopener">AP/Reuters via Star-Advertiser — Nasdaq plunges 2.6% as AI spending fears spark tech selloff</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000106040/000162828026066882/a4ex991-pressreleaseq127.htm" target="_blank" rel="noopener">WD — Fiscal Q1 2027 results, SEC Form 8-K Exhibit 99.1</a></li>
+<li><a href="https://stockanalysis.com/stocks/wdc/" target="_blank" rel="noopener">StockAnalysis — Western Digital (WDC) close and pre-market</a></li>
+<li><a href="https://investorcenter.slb.com/news-releases/news-release-details/slb-announces-date-third-quarter-2026-results-conference-call" target="_blank" rel="noopener">SLB — Announcement of date for third-quarter 2026 results</a></li>
+<li><a href="https://www.investing.com/commodities/brent-oil-historical-data" target="_blank" rel="noopener">Investing.com — Brent crude (front month) historical settlements</a></li>
+<li><a href="https://www.investing.com/commodities/crude-oil-historical-data" target="_blank" rel="noopener">Investing.com — WTI crude historical settlements</a></li>
+<li><a href="https://www.coherenceneuro.com/articles" target="_blank" rel="noopener">Coherence Neuro — Announcing our $45m Series A</a></li>
+<li><a href="https://www.finsmes.com/2026/10/coherence-neuro-raises-45m-in-series-a-funding.html" target="_blank" rel="noopener">FinSMEs — Coherence Neuro raises $45M in Series A funding</a></li>
+<li><a href="https://thenextweb.com/news/enact-intelligence-30m-pre-seed-robot-touch" target="_blank" rel="noopener">The Next Web — Enact Intelligence raises $30M pre-seed for force-aware robots</a></li>
+<li><a href="https://www.finsmes.com/2026/10/optivolt-raises-32m-in-series-a-funding.html" target="_blank" rel="noopener">FinSMEs — Optivolt raises $32M in Series A funding</a></li>
+<li><a href="https://news.crunchbase.com/venture" target="_blank" rel="noopener">Crunchbase News — Venture section</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/74-2026-10-26-Notice-of-appeal.pdf" target="_blank" rel="noopener">United States v. State of California — Notice of appeal, Dkt. 74 (C.D. Cal., 22 October)</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-21-Motion-Expedited-TRO-Proceedings.pdf" target="_blank" rel="noopener">United States v. State of California — Motion to expedite TRO proceedings, Dkt. 67</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-15-Complaint.pdf" target="_blank" rel="noopener">United States v. State of California — Complaint, 15 October 2026</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/trump-doj-appeals-california-ballot-case-before-judge-even-rules/" target="_blank" rel="noopener">Democracy Docket — Trump DOJ appeals California ballot case before judge even rules</a></li>
+<li><a href="https://www.foxnews.com/politics/fox-news-poll-nail-biter-maine-senate-race" target="_blank" rel="noopener">Fox News Poll — Maine Senate race (released 22 October, 6:00pm EDT)</a></li>
+<li><a href="https://www.mainepublic.org/politics/2026-07-25/troy-jackson-wins-the-democratic-nomination-to-challenge-sen-susan-collins" target="_blank" rel="noopener">Maine Public — Troy Jackson wins the Democratic nomination to challenge Sen. Susan Collins</a></li>
+<li><a href="https://www.timesofisrael.com/netanyahu-and-eisenkot-in-dead-heat-five-days-before-election-final-toi-poll-shows/" target="_blank" rel="noopener">The Times of Israel — Netanyahu and Eisenkot in dead heat, final ToI poll</a></li>
+<li><a href="https://jewishinsider.com/2026/10/final-israeli-polls-stalemate-tuesdays-election/" target="_blank" rel="noopener">Jewish Insider — Final Israeli polls point to stalemate in Tuesdays election</a></li>
+<li><a href="https://www.timesofisrael.com/people-of-israel-charedi-public-vow-to-stay-in-race-despite-pressure-from-pm-and-allies" target="_blank" rel="noopener">The Times of Israel — People of Israel and Charedi Public vow to stay in race</a></li>
+<li><a href="https://www.pbs.org/newshour/world/putin-agrees-to-resume-trilateral-russia-ukraine-u-s-talks-next-month" target="_blank" rel="noopener">AP via PBS NewsHour — Putin agrees to resume trilateral Russia-Ukraine-US talks</a></li>
+<li><a href="https://www.pbs.org/newshour/world/russian-missiles-pound-kyiv-as-moscow-says-over-800-ukrainian-drones-downed" target="_blank" rel="noopener">AP via PBS NewsHour — Russian missiles pound Kyiv as Moscow says over 800 drones downed</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/22/russian-strikes-hit-kyiv-after-witkoff-meets-putin" target="_blank" rel="noopener">AFP via Al Jazeera — Russian strikes hit Kyiv after Witkoff meets Putin</a></li>
+<li><a href="https://timesbrasil.com.br/brasil/decisao-2026-flavio-tem-47-dos-votos-e-lula-46-aponta-datafolha/" target="_blank" rel="noopener">Times Brasil — Datafolha run-off poll, 22 October</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-presidente-outubro-2026-segundo-turno-3/" target="_blank" rel="noopener">Gazeta do Povo — Datafolha segundo turno, outubro 2026</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-23-daily.pdf">PDF</a></span>
+</div></div></body></html>
