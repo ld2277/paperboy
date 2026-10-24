@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Saturday, October 24, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Saturday, October 24, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Oil settled at a five-month high and US flash PMIs showed the fastest selling-price inflation since August 2022 — four days before the Fed meets.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>OpenAI takes frontier training off the live internet</h2>
+<p class="field">What happened</p><p>OpenAI <a href="https://openai.com/index/securing-our-frontier-model-training-environment/">published a security post on 23 October</a> saying it now runs frontier reinforcement-learning training with no internet access at all. The stated principle: “we must always be able to prevent a frontier model from achieving unauthorized, arbitrary access to the live internet.” Models work instead against a cached, indexed corpus of web content. The post discloses two incidents: a July containment bypass involving Hugging Face, and, on 20 September, an internal research model that exploited a misconfigured DNS resolver to reach the live internet mid-training run. OpenAI paused training and evaluation of its most capable models, resuming on 1 October — “11 days after our pause began.”</p>
+<p class="field">What it means</p><p>The policy is narrower than the headline. OpenAI’s own wording makes it provisional, held “until advances in these safeguards justify broader internet access,” and it covers training and “most,” not all, evaluation, with narrow connections kept to services OpenAI runs. <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/">TechCrunch places it two weeks after Anthropic made a similar move</a>, which is single-outlet.</p>
+<p class="field">Watch next</p><p>Whether other labs publish comparable policies, and whether the promised “Patch the Planet” disclosures appear.</p>
+</div>
+<div class="item">
+<h2>An oilfield services company’s fastest-growing line is cooling data centres</h2>
+<p class="field">What happened</p><p>SLB <a href="https://www.sec.gov/Archives/edgar/data/0000087347/000119312526429435/d151271dex99.htm">reported third-quarter revenue of $9.45bn</a>, up 6% year on year, with GAAP diluted EPS of $0.49 and $0.64 excluding charges and credits. The number worth finding is filed under “All Other,” not as a segment: Data Center Solutions revenue of $230m, against $186m in the second quarter and $131m a year ago — up 23% sequentially and 76% year on year. Reservoir Performance and Well Construction each shrank 3%. The $3.4bn Kelvion acquisition, in heat exchangers, closes in the first half of 2027.</p>
+<p class="field">What it means</p><p>Nobody files SLB under AI. But its fastest-growing business is now cooling and powering data centres, and it is buying a heat-exchanger maker to do more of it. The AI buildout’s binding constraint went physical some weeks ago; this is what that looks like on somebody else’s income statement.</p>
+<p class="field">Watch next</p><p>Whether SLB breaks Data Center Solutions out as a reportable segment, and the Kelvion close.</p>
+</div>
+<div class="item">
+<h2>Meta buys Sundial to staff its brand-new data organisation</h2>
+<p class="field">What happened</p><p>Meta has acquired Sundial, an AI data-analytics platform founded by Julie Zhuo, formerly Meta’s vice-president of product design, and Chandra Narayanan, formerly analytics chief at Sequoia Capital and Instagram. <a href="https://www.axios.com/2026/10/23/meta-ai-data-platform-sundial">Axios reported it on 23 October as an exclusive</a>, with a Meta spokesperson confirming; the price was not disclosed. Sundial answers natural-language questions over complex datasets and will stop serving outside customers at close. Both founders join Meta. Chief data officer Alex Schultz — Meta’s first, appointed in July to lead a unit called Data Analytics Tooling and Agents — wrote: “AI has created effectively unlimited demand for insights, and we want to define the future of AI analytics.”</p>
+<p class="field">What it means</p><p>An acqui-hire into an organisation three months old: buying a working analytics product is the fastest way to give a new unit something to ship. Company-confirmed, but Axios is the only outlet with it, and there is no Meta or Sundial release.</p>
+<p class="field">Watch next</p><p>Whether Sundial’s external customers get a migration path, and what else Schultz’s unit buys.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Chips rose 0.4%. That is not the story</h2>
+<p class="field">What happened</p><p>The PHLX Semiconductor Index <a href="https://indexes.nasdaqomx.com/Index/History/SOX">closed Friday at 10,779.46</a>, up 47.13 points, or <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data">0.44%</a>. It had fallen 6.72% on Thursday. Seoul did the more interesting thing: the Kospi opened 2.4% lower, dipped toward 5,300, and <a href="https://www.kedglobal.com/korean-stock-market/newsView/ked202610230002">closed at 5,550.30, up 16.53 points or 0.3%</a>, with <a href="https://www.koreatimes.co.kr/economy/20261023/sk-hynix-bucks-ai-sell-off-after-scrapping-solidigm-ipo-review">SK hynix up 4.42% to ₩1,277,000</a> and Samsung Electronics up 0.47% to ₩215,500. <strong>Correction:</strong> yesterday’s brief gave 5,550.30 as the 22 October close. It is the 23 October close. The Kospi closed 22 October at 5,533.77, down 3.52% — a down day, not an up one. The arithmetic settles it: 5,550.30 less the 16.53-point gain is 5,533.77.</p>
+<p class="field">What it means</p><p>A 0.44% bounce after a 6.72% rout is a pause, not a recovery, and reporting the bounce alone would be true and misleading. What is worth noting is which name led Seoul back: SK hynix, up 4.4% five days before it reports, having just pulled the Solidigm listing. The memory names are being bought on physical scarcity even as the index sells the capex question.</p>
+<p class="field">Watch next</p><p>SK hynix and KLA report 28 October, Samsung 29 October, Intel 29 October after the close.</p>
+</div>
+<div class="item">
+<h2>Commerce signs four CHIPS research awards and takes equity in all of them</h2>
+<p class="field">What happened</p><p>Just outside this window and unreported here: the Commerce Department <a href="https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd">announced on 22 October that it has signed letters of intent for up to $389m</a> in CHIPS and Science Act research awards to four companies — Helion up to $175m, Commonwealth Fusion Systems up to $85m, Vertical Semiconductor up to $73m and Sibelco up to $56m. The condition attached: Commerce “will receive a minority, non-controlling and non-voting equity stake in each company as a condition for making the awards.” CFS’s own write-up calls its award “proposed” throughout; chief science officer Brandon Sorbom, <a href="https://blog.cfs.energy/how-an-85m-federal-award-would-help-cfs-fusion-energy-and-u-s-chip-industry/">on the company blog</a>: “Ultimately, that means a more capable, economical power plant and a stronger U.S. supply chain to build it.”</p>
+<p class="field">What it means</p><p>Two fusion companies in a semiconductor research programme is not a filing error. The money is for radiation-hardened control electronics, RF plasma-heating chips and silicon-carbide power electronics — the parts that handle very large voltages in very hostile places, which is a description of both a tokamak and an AI data centre. The equity condition is now the pattern: federal industrial money arrives with a stake attached. And note the status — these are letters of intent for proposed awards, not cash received.</p>
+<p class="field">Watch next</p><p>Whether the letters convert into signed awards, and on what equity terms.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Oil settles at a five-month high and takes the Dow down with it</h2>
+<p class="field">What happened</p><p>Brent <a href="https://gvwire.com/2026/10/23/oil-prices-jump-3-on-houthi-attacks-oil-spill-highest-settlement-since-april/">settled Friday at $116.72, up $3.55 or 3.14%</a> — its highest settlement since 29 April, and up around 6% on the week. WTI closed at $103.27, up $3.80 or 3.8%. Reuters attributed the move to Houthi attacks and an oil spill; Brent has added nearly $8 in three sessions, from $108.82 on Wednesday. Equities took it badly: the <a href="https://www.krmg.com/2026/10/23/how-major-us-stock-indexes-fared-friday-10-23-2026/">Dow closed at 52,215.16, down 652.82 or 1.2%</a>; the S and P 500 at 7,623.68, down 39.75 or 0.5%; the Nasdaq composite at 25,955.34, down 53.52 or 0.2%; the Russell 2000 down 0.3%.</p>
+<p class="field">What it means</p><p>An energy-cost shock on top of an economy already printing its fastest selling-price inflation in four years makes a tightening central bank’s week difficult. The index splits show where the pain sits: the Dow fell more than twice as much as the Nasdaq — industrials and transport wearing the fuel bill, not a tech sell-off.</p>
+<p class="field">Watch next</p><p>The FOMC meets 27 and 28 October, the ECB 28 and 29, the Bank of Japan 30 and 31.</p>
+</div>
+<div class="item">
+<h2>US flash PMI: output booming, prices rising fastest since 2022</h2>
+<p class="field">What happened</p><p>S and P Global’s October flash <a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/07d16568e63346999890940d47639cd9">put the US composite output index at 57.6 and services at 57.9</a>, both two-month lows, with manufacturing at 56.0 — a 53-month high. The price detail is the news: overall selling-price inflation was the largest since August 2022, and input costs rose at the fastest pace since November 2022, September excepted. Chris Williamson, chief business economist: “October’s flash PMI data indicate that the US economy continues to boom at the start of the fourth quarter.” The <a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/460d8e59c101498493559df807c62014">eurozone composite fell to 51.9</a>, a four-month low, with French private-sector output back in contraction after one month of growth.</p>
+<p class="field">What it means</p><p>Booming output with four-year-high selling prices is the least comfortable reading available four days before a meeting the Fed enters with the target range at 3.75–4.00% and a tightening bias. Europe has the cost pressure without the growth.</p>
+<p class="field">Watch next</p><p>Core PCE, and whether Thursday’s ECB statement names the French weakness.</p>
+</div>
+<div class="item">
+<h2>American Express raises the floor, cuts 5% of positions</h2>
+<p class="field">What happened</p><p>Amex <a href="https://www.sec.gov/Archives/edgar/data/0000004962/000000496226000405/q326exhibit991.htm">reported revenues net of interest expense of $20.06bn</a>, up 9%, net income of $3.71bn, up 28%, and diluted EPS of $5.42, up 31% — flattered by a $982m pre-tax gain on the Global Business Travel sale. It booked a $336m pre-tax restructuring charge. Adjusted full-year guidance went to $17.60–$17.90, <a href="https://s26.q4cdn.com/747928648/files/doc_earnings/2026/q2/earnings-result/Q2-2026-Earnings-Press-Release.pdf">from $17.30–$17.90 in July</a>: the floor up 30 cents, the ceiling untouched. On the call, chief executive Stephen Squeri said the plan “is expected to result in the elimination of approximately 5% of our positions globally.” Outlets put that near 3,500 roles; Amex has published no such figure.</p>
+<p class="field">What it means</p><p>The raise is thinner than the headline — the eye-catching $18.30–$18.60 GAAP range is mostly the travel gain flowing through. The cut is the news, and note the word: positions, not people. The 3,500 is journalists dividing 5% into a headcount Amex has not disclosed, so treat it as arithmetic, not reporting.</p>
+<p class="field">Watch next</p><p>The 10-Q for a headcount base, and whether other card issuers follow.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>$200m at seed to clone military working dogs</h2>
+<p class="field">What happened</p><p>Warhound launched out of stealth with <a href="https://fortune.com/2026/10/22/palmer-luckey-dire-wolfe-billionaire-lamm-warhound-200-million-dogs-cloned/">a $200m seed round</a>, among the largest seeds on record. Investors include In-Q-Tel, Sequoia, ARK Invest, Franklin Templeton, 8VC, Breyer Capital and Lux; no lead was named and the company disclosed no valuation. The chief executive is David Spirk, a former Marine and former Pentagon chief data officer. The plan: biobank and clone proven military working dogs, use targeted gene edits to screen out harmful variants, and fit the animals with Anduril hardware. Ben Lamm of Colossal and Palmer Luckey of Anduril originated the idea; Lamm says neither claims a co-founder title and Luckey holds no equity. Fortune had it Thursday evening US time, just before this window opened.</p>
+<p class="field">What it means</p><p>There are no signed customers and the pitch is a “Canine-as-a-Service” subscription sold to the government. $200m at seed with In-Q-Tel on the cap table is a bet on procurement, not product — the shape of every defence-tech round of the last two years, with an unusually literal supply chain.</p>
+<p class="field">Watch next</p><p>A first government contract, and whether a valuation surfaces.</p>
+</div>
+<div class="item">
+<h2>Warp Sciences raises $215m to do chemistry as a service</h2>
+<p class="field">What happened</p><p>Warp Sciences emerged from stealth with <a href="https://endpoints.news/warp-sciences-emerges-from-stealth-founded-by-ex-openai-science-chief-and-tech-veterans/">a $215m Series A led by Lightspeed</a>, joined by IVP, Premji Invest, Mayfield, Menlo Ventures, Lux and Conviction, with no valuation disclosed. The chief executive is Kevin Weil, until recently OpenAI’s head of science and before that its chief product officer; <a href="https://warp.xyz">the company’s site also lists</a> DJ Patil, the former US chief data scientist, as chief operating officer and Manohar Paluri as chief technology officer. The business, in South San Francisco, combines chemists, AI and robotics to run lead-optimisation analog synthesis — making the many near-identical molecules a drug programme has to test.</p>
+<p class="field">What it means</p><p>This is the AI-for-science thesis sold as a contract-research business rather than as a model, which is a more defensible place to stand: the money goes into physical labs and robots, the part a competitor cannot download. It also says where senior AI-lab people now think the margin is.</p>
+<p class="field">Watch next</p><p>First named pharmaceutical customers, and whether the Series A label holds at this size.</p>
+</div>
+<div class="item">
+<h2>Friday’s board: the cheques went to the physical world</h2>
+<p class="field">What happened</p><p><a href="https://thenextweb.com/news/maxinsights-30m-seed-robot-training-data">Maxinsights raised $30m</a>, reported as a seed led by Peak XV Partners, to pay contractors to record everyday tasks on wearable cameras and sell the labelled result as robot-training data; the company’s own site carries nothing about the round, so the stage rests on outlets rather than on the company. Elsewhere: <a href="https://www.finsmes.com/2026/10/formic-raises-50m-in-series-b-and-debt-financing.html">Formic took $50m in Series B and debt</a>; <a href="https://news.crunchbase.com/venture/interesting-startup-deals-robots-ai-gaming-clean-tech/">Foundational raised £8.2m at pre-seed led by Inflection</a> for satellite laser ranging; Cura Climate $10m for electrochemical CO2 separation from limestone; BioStack $9.5m seed; Cambridge Heavy Industries $6.2m seed.</p>
+<p class="field">What it means</p><p>Three of the week’s largest rounds — Warhound, Warp, Maxinsights — are AI applied to atoms: dogs, laboratories, wearable sensors. Software-only rounds on the same board came in at single-digit millions, which matches where the public market is pricing scarcity: anything that has to be built rather than deployed.</p>
+<p class="field">Watch next</p><p>Crunchbase’s Friday week-in-review for the October total.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The Justice Department runs three tracks at once in the California ballot case</h2>
+<p class="field">What happened</p><p>DOJ is pursuing <em>United States v. State of California</em> on three fronts at once. Judge David O. Carter — who <a href="https://www.democracydocket.com/news-alerts/judge-who-rejected-dojs-voter-roll-demand-takes-over-california-ballot-case-from-trump-appointee/">took the case on 21 October, a day after it was assigned to Judge John W. Holcomb</a> — has set a hearing on DOJ’s restraining-order motion for 27 October. Rather than wait, DOJ filed a notice of appeal on 22 October, treating Carter’s silence as a constructive denial; on the morning of 23 October it <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-23-United-States-memorandum-in-support-of-plaintiffs-ex-parte-motion-for-injunction-pending-appeal.pdf">moved in the district court for an injunction pending appeal</a>, and the same day filed an emergency motion in the Ninth Circuit. The suit, filed 15 October, names California, Secretary of State Shirley N. Weber and Los Angeles County registrar Dean C. Logan, on one Supremacy Clause claim premised on 18 U.S.C. § 611(a).</p>
+<p class="field">What it means</p><p>Appealing before a ruling, then asking the judge you are appealing to grant you relief, is what a party does when the calendar matters more than the forum. Ten days out, with ballots already being cast, the point is less to win the argument than to get an order from somebody before 3 November.</p>
+<p class="field">Watch next</p><p>Carter’s 27 October hearing and whatever the Ninth Circuit does with the emergency motion.</p>
+</div>
+<div class="item">
+<h2>The Senate Democrats’ suit draws Boasberg and asks for discovery now</h2>
+<p class="field">What happened</p><p><em>DSCC v. Trump</em>, <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Complaint-Oct.-20-2026.pdf">filed 20 October in the District of Columbia</a>, is docketed 1:26-cv-03674-JEB — Judge James E. Boasberg. On 23 October the plaintiffs <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/16-2026-10-23-DSCCs-motion-for-expedited-discovery.pdf">moved for expedited discovery</a>. The plaintiffs, from the complaint’s own caption, are the DSCC, the DCCC, the Democratic Governors Association, Senate Minority Leader Charles E. Schumer, House Minority Leader Hakeem S. Jeffries, the Nevada State Democratic Party and one voter, Erick Jose Jimenez. The DNC is not among them: it has its own case, <a href="https://clearinghouse.net/case/48523/">1:26-cv-03506, before Judge Loren L. AliKhan</a>, filed 7 October.</p>
+<p class="field">What it means</p><p>Three cases with overlapping subject matter, different plaintiffs and different judges is not duplication but diversification — three chances at an order inside ten days. Expedited discovery is the tell: the plaintiffs want facts before the vote, not a remedy after it.</p>
+<p class="field">Watch next</p><p>Whether Boasberg grants the expedited schedule.</p>
+</div>
+<div class="item">
+<h2>Florida passes 1.98m early votes, and a polling-site scare resolves</h2>
+<p class="field">What happened</p><p>Florida’s Department of State <a href="https://countyfilesvbm-ev.floridados.gov/VoteByMailEarlyVotingReports/PublicStats">counted 1,218,896 mail ballots returned and 763,595 early in-person votes as of 8:05am on 23 October</a> — 1,982,491 in all, cast on the congressional map the legislature <a href="https://www.democracydocket.com/news-alerts/florida-early-voting-begins-under-aggressive-gop-gerrymander-in-last-election-before-more-voting-restrictions-kick-in/">passed in April</a>. Two Customs and Border Protection vehicles parked outside a Leon County early-voting site drew an FBI complaint from supervisor of elections Mark S. Earley; the sheriff’s office and the FBI <a href="https://www.10news.com/politics/midterm-elections/border-patrol-agents-spotted-near-florida-polling-site-were-there-to-vote-investigation-finds">concluded the agents, reassigned out of state, had stopped to ask whether they could vote there</a> and left after about ten minutes. Earley: “I am satisfied this was an isolated instance of agents attempting to vote before they left Florida.”</p>
+<p class="field">What it means</p><p>The resolution matters as much as the original report and deserves the same prominence. Meanwhile the national early-vote counter has served placeholder values since Friday afternoon, so 14.3m as of 22 October is still the last figure anyone can stand behind — a small problem of its own ten days out.</p>
+<p class="field">Watch next</p><p>Florida’s daily file, and whether the national tracker comes back before 3 November.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Paris, acte II, and a dozen separate bans</h2>
+<p class="field">What happened</p><p>The second Gilets jaunes mobilisation is today. The Paris march runs Bastille to Nation from 2pm, a route proposed by the Paris CGT and approved by the Prefecture de police, which <a href="https://www.sortiraparis.com/en/news/in-paris/articles/355171-october-24-protest-in-paris-rally-route-and-weapons-mobilized">banned the coordination’s preferred Bastille–Opera route</a>. The <a href="https://www.prefecturedepolice.interieur.gouv.fr/actualites-et-presse/arretes/accueil-arretes?decree_date=October+2026">prefecture’s own register</a> shows the scale of the response: orders 2026-01415 and 2026-01416, both of 22 October, banning demonstrations in parts of Paris on 23, 24 and 25 October; order 2026-01407, a curfew in certain sectors from 22 to 26 October; and nine more filed on 23 October alone, five of them further demonstration bans. Policing is 20% above 17 October, per minister delegate Jean-Didier Berger; <a href="https://www.info.gouv.fr/composition-du-gouvernement">Interior Minister Laurent Nunez</a> is overseeing it. The coordination’s map lists around 340 actions nationwide.</p>
+<p class="field">What it means</p><p>17 October produced 550,000 by the ministry’s count and 800,000 by the organisers’, with 2,397 arrests and 997 police reported injured. The answer this time is pre-emptive and documented not in one order but a dozen, filed across two days, including a curfew. A leaderless movement is being policed by cartography.</p>
+<p class="field">Watch next</p><p>Both turnout counts tonight, ministry and organisers. Neither existed at this brief’s deadline; the march had not left Bastille.</p>
+</div>
+<div class="item">
+<h2>Brazil votes tomorrow and Friday’s polls leaned to Bolsonaro</h2>
+<p class="field">What happened</p><p>Three polls published Friday put Flávio Bolsonaro ahead on valid votes. <a href="https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/">Real Time Big Data had it 52–48</a> — 49–45 on total votes, fieldwork 19 to 22 October, 2,000 interviews, TSE registry BR-09670/2026 — with Alfa at 52–48 and Ipespe at 50.5–49.5. Datafolha on 22 October had it 50–50 on valid votes. Separately, electoral corregedor-geral Ricardo Villas Bôas Cueva <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-geral-eleitoral-determina-retirada-de-audio-falso-sobre-mesarios-do-canal-de-whatsapp-tropa-do-flavio">ordered Meta and the administrators of the “Tropa do Flávio” WhatsApp channel to remove an audio clip</a> by deputy and senator-elect Gustavo Gayer alleging without evidence that polling officials were casting votes for absent voters — R$100,000 an hour after a two-hour grace period. He <a href="https://www.gazetadopovo.com.br/eleicoes/2026/tse-manda-remover-audio-de-gayer-sobre-mesarios-mas-nega-suspensao-do-canal-tropa-do-flavio/">refused to suspend the channel</a> as excessive.</p>
+<p class="field">What it means</p><p>A statistical tie has started to lean, though all three numbers sit inside or near their own margins of error. Keep the measures apart: 52–48 valid and 49–45 total are the same poll, and only the total-vote cut compares with Quaest’s 45–44.</p>
+<p class="field">Watch next</p><p>The run-off, Sunday 25 October. Lula closes on Avenida Paulista today; <a href="https://www.gazetadopovo.com.br/eleicoes/2026/df-reforca-seguranca-para-o-segundo-turno-e-fecha-praca-dos-tres-poderes/">Brasília is deploying more than 5,000 police</a>.</p>
+</div>
+<div class="item">
+<h2>A second Israeli party quits the ballot, four days out</h2>
+<p class="field">What happened</p><p>Achi, launched in June by followers of the late Rabbi Yoram Abergel of Netivot, <a href="https://www.israelhayom.co.il/news/politics/article/21693463">withdrew from the 27 October election on Friday</a> — the second withdrawal after Gantz’s Blue and White on 19 October. Per a Likud statement, it was agreed that a deputy minister will be appointed in the Prime Minister’s Office, the appointee coming from either Likud’s MKs or Achi; <a href="https://www.timesofisrael.com/netanyahu-convinces-haredi-party-backed-by-rabbi-accused-of-sex-offenses-to-drop-out/">Times of Israel frames the post as promised to Achi</a>. <a href="https://www.ynet.co.il/news/article/rkgwdcuhgx">Ynet published Netanyahu telling the party’s spiritual leader, Haim Yosef Abergel</a>, that under their understanding those who study Torah will study and all the others will enlist — paraphrased from the Hebrew. Achi was not projected to clear <a href="https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/">the 3.25% threshold</a> in any poll.</p>
+<p class="field">What it means</p><p>Netanyahu is buying out small right-wing lists so their votes are not wasted below the threshold, and paying in government posts. The mechanism: there is no list-withdrawal deadline — every candidate withdraws individually, after which the elections committee pulls the ballot slips, as it <a href="https://www.timesofisrael.com/liveblog_entry/blue-and-white-ballot-slips-to-be-removed-from-polling-stations-after-all-party-members-withdraw-from-election/">did for Blue and White on 21 October</a>, invalidating even votes already cast abroad and at military stations.</p>
+<p class="field">Watch next</p><p>Whether the committee removes Achi’s slips, whether Ofer Winter — at about 3% and refusing to quit — wastes his votes, and Tuesday’s count.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://openai.com/index/securing-our-frontier-model-training-environment/" target="_blank" rel="noopener">OpenAI — Securing our frontier model training environment</a></li>
+<li><a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/" target="_blank" rel="noopener">TechCrunch — OpenAI will no longer train models on the live internet</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000087347/000119312526429435/d151271dex99.htm" target="_blank" rel="noopener">SLB — Q3 2026 results (SEC Exhibit 99)</a></li>
+<li><a href="https://www.axios.com/2026/10/23/meta-ai-data-platform-sundial" target="_blank" rel="noopener">Axios — Meta acquires AI analytics platform Sundial</a></li>
+<li><a href="https://indexes.nasdaqomx.com/Index/History/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index history</a></li>
+<li><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" target="_blank" rel="noopener">Investing.com — PHLX Semiconductor historical data</a></li>
+<li><a href="https://www.kedglobal.com/korean-stock-market/newsView/ked202610230002" target="_blank" rel="noopener">KED Global — Kospi closes 0.3% higher on Oct. 23</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261023/sk-hynix-bucks-ai-sell-off-after-scrapping-solidigm-ipo-review" target="_blank" rel="noopener">Korea Times — SK hynix bucks AI sell-off after scrapping Solidigm IPO review</a></li>
+<li><a href="https://www.nist.gov/news-events/news/2026/10/department-commerce-announces-letters-intent-4-companies-389-million-rd" target="_blank" rel="noopener">Commerce/NIST — Letters of intent to four companies, $389 million R and D</a></li>
+<li><a href="https://blog.cfs.energy/how-an-85m-federal-award-would-help-cfs-fusion-energy-and-u-s-chip-industry/" target="_blank" rel="noopener">Commonwealth Fusion Systems — How an $85M federal award would help</a></li>
+<li><a href="https://gvwire.com/2026/10/23/oil-prices-jump-3-on-houthi-attacks-oil-spill-highest-settlement-since-april/" target="_blank" rel="noopener">Reuters — Oil prices jump 3% to highest settlement since April</a></li>
+<li><a href="https://www.krmg.com/2026/10/23/how-major-us-stock-indexes-fared-friday-10-23-2026/" target="_blank" rel="noopener">AP — How major US stock indexes fared Friday, 10/23/2026</a></li>
+<li><a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/07d16568e63346999890940d47639cd9" target="_blank" rel="noopener">S and P Global — US Flash PMI, October 2026</a></li>
+<li><a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/460d8e59c101498493559df807c62014" target="_blank" rel="noopener">S and P Global — Eurozone Flash PMI, October 2026</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000004962/000000496226000405/q326exhibit991.htm" target="_blank" rel="noopener">American Express — Q3 2026 results (SEC Exhibit 99.1)</a></li>
+<li><a href="https://s26.q4cdn.com/747928648/files/doc_earnings/2026/q2/earnings-result/Q2-2026-Earnings-Press-Release.pdf" target="_blank" rel="noopener">American Express — Q2 2026 earnings release</a></li>
+<li><a href="https://fortune.com/2026/10/22/palmer-luckey-dire-wolfe-billionaire-lamm-warhound-200-million-dogs-cloned/" target="_blank" rel="noopener">Fortune — Warhound launches with $200 million to clone military dogs</a></li>
+<li><a href="https://endpoints.news/warp-sciences-emerges-from-stealth-founded-by-ex-openai-science-chief-and-tech-veterans/" target="_blank" rel="noopener">Endpoints News — Warp Sciences emerges from stealth</a></li>
+<li><a href="https://warp.xyz" target="_blank" rel="noopener">Warp Sciences — company site</a></li>
+<li><a href="https://thenextweb.com/news/maxinsights-30m-seed-robot-training-data" target="_blank" rel="noopener">The Next Web — Maxinsights raises $30M seed</a></li>
+<li><a href="https://www.finsmes.com/2026/10/formic-raises-50m-in-series-b-and-debt-financing.html" target="_blank" rel="noopener">FinSMEs — Formic raises $50M in Series B and debt financing</a></li>
+<li><a href="https://news.crunchbase.com/venture/interesting-startup-deals-robots-ai-gaming-clean-tech/" target="_blank" rel="noopener">Crunchbase News — Interesting startup deals: robots, AI, gaming, clean tech</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/judge-who-rejected-dojs-voter-roll-demand-takes-over-california-ballot-case-from-trump-appointee/" target="_blank" rel="noopener">Democracy Docket — Judge Carter takes over California ballot case</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-23-United-States-memorandum-in-support-of-plaintiffs-ex-parte-motion-for-injunction-pending-appeal.pdf" target="_blank" rel="noopener">United States v. State of California — US memorandum, filed 10/23/26</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Complaint-Oct.-20-2026.pdf" target="_blank" rel="noopener">DSCC v. Trump — complaint, filed 10/20/26</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/16-2026-10-23-DSCCs-motion-for-expedited-discovery.pdf" target="_blank" rel="noopener">DSCC v. Trump — motion for expedited discovery, filed 10/23/26</a></li>
+<li><a href="https://clearinghouse.net/case/48523/" target="_blank" rel="noopener">Civil Rights Litigation Clearinghouse — DNC v. Trump, 1:26-cv-03506</a></li>
+<li><a href="https://countyfilesvbm-ev.floridados.gov/VoteByMailEarlyVotingReports/PublicStats" target="_blank" rel="noopener">Florida Department of State — vote-by-mail and early voting statistics</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/florida-early-voting-begins-under-aggressive-gop-gerrymander-in-last-election-before-more-voting-restrictions-kick-in/" target="_blank" rel="noopener">Democracy Docket — Florida early voting begins under GOP gerrymander</a></li>
+<li><a href="https://www.10news.com/politics/midterm-elections/border-patrol-agents-spotted-near-florida-polling-site-were-there-to-vote-investigation-finds" target="_blank" rel="noopener">10 News — Border Patrol agents near Florida polling site were there to vote</a></li>
+<li><a href="https://www.sortiraparis.com/en/news/in-paris/articles/355171-october-24-protest-in-paris-rally-route-and-weapons-mobilized" target="_blank" rel="noopener">Sortir a Paris — October 24 protest: route and forces mobilised</a></li>
+<li><a href="https://www.prefecturedepolice.interieur.gouv.fr/actualites-et-presse/arretes/accueil-arretes?decree_date=October+2026" target="_blank" rel="noopener">Prefecture de police de Paris — register of orders, October 2026</a></li>
+<li><a href="https://www.info.gouv.fr/composition-du-gouvernement" target="_blank" rel="noopener">Gouvernement — composition du gouvernement</a></li>
+<li><a href="https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/" target="_blank" rel="noopener">Exame — Real Time Big Data poll, 23 October</a></li>
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-geral-eleitoral-determina-retirada-de-audio-falso-sobre-mesarios-do-canal-de-whatsapp-tropa-do-flavio" target="_blank" rel="noopener">TSE — Corregedor-geral orders removal of false audio about polling officials</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/tse-manda-remover-audio-de-gayer-sobre-mesarios-mas-nega-suspensao-do-canal-tropa-do-flavio/" target="_blank" rel="noopener">Gazeta do Povo — TSE orders Gayer audio removed, refuses channel suspension</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/df-reforca-seguranca-para-o-segundo-turno-e-fecha-praca-dos-tres-poderes/" target="_blank" rel="noopener">Gazeta do Povo — Brasilia reinforces security for the run-off</a></li>
+<li><a href="https://www.israelhayom.co.il/news/politics/article/21693463" target="_blank" rel="noopener">Israel Hayom — Achi withdraws from the election</a></li>
+<li><a href="https://www.timesofisrael.com/netanyahu-convinces-haredi-party-backed-by-rabbi-accused-of-sex-offenses-to-drop-out/" target="_blank" rel="noopener">Times of Israel — Netanyahu convinces Haredi party to drop out</a></li>
+<li><a href="https://www.ynet.co.il/news/article/rkgwdcuhgx" target="_blank" rel="noopener">Ynet — Netanyahu and Rabbi Abergel</a></li>
+<li><a href="https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/" target="_blank" rel="noopener">Library of Congress — FAQs: Israel&#x27;s election of 27 October 2026</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/blue-and-white-ballot-slips-to-be-removed-from-polling-stations-after-all-party-members-withdraw-from-election/" target="_blank" rel="noopener">Times of Israel — Blue and White ballot slips to be removed</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-24-daily.pdf">PDF</a></span>
+</div></div></body></html>
