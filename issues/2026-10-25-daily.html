@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, October 25, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, October 25, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Brazil&#x27;s polls opened an hour after this was written, on a run-off so close that which candidate leads depends on whether you count blank ballots.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Block says it trained a human-sounding voice model on a single Nvidia rack, and will not show its work</h2>
+<p class="field">What happened</p><p>Block — Jack Dorsey's payments company — unveiled <a href="https://block.xyz/dessa">Dessa</a>, a full-duplex speech model, meaning it listens and talks at the same time, and can interrupt or murmur agreement mid-sentence the way people do. Block's own page calls it “the most authentic full-duplex speech model ever built” and says “We trained Dessa from scratch on nothing but human conversation” — no text, no pretrained base — on “only one NVIDIA GB200 NVL72”. Dorsey announced it on 23 October; <a href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/">TechCrunch wrote it up on Saturday</a>. What Block has not published is everything a sceptic would want: no weights, no code, no model card, no benchmarks, no parameter count and no licence. Access is a waitlist.</p>
+<p class="field">What it means</p><p>Two things are worth separating. The frugality claim is real but smaller than it sounds — a GB200 NVL72 is a rack of 72 GPUs, not one chip, so “one” is doing a lot of work in that sentence. And with no benchmarks at all, every performance claim here is a company talking about itself. The interesting part is the architecture: a speech-to-speech model trained without text is a bet that the text-first pipeline everyone else uses is the thing making voice assistants feel dead.</p>
+<p class="field">Watch next</p><p>Block promises launch links “soon”. Weights or a benchmark would make this a story; another demo reel would not.</p>
+</div>
+<div class="item">
+<h2>Forced to name one candidate, Grok picked the Republican 92% of the time and GPT the Democrat 97%</h2>
+<p class="field">What happened</p><p>A study by Convovo, a research studio led by Cornell professor Tapan Parikh, queried Grok 4.7 and GPT-6.1 Sol across nearly 500 House, Senate and governor races with a prompt that forbade hedging. <a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/">Per TechCrunch's reporting</a>, Grok named the Republican in 92% of answers and GPT the Democrat in 97%; the two agreed less than 10% of the time. GPT picked the Democrat in 57 of 67 heavily Republican districts; Grok picked the Republican in 47 of 72 deep-blue ones. With web search switched off across 30 races, Grok refused in 27 while GPT still picked the Democrat in 24 — Parikh's reading: “it's in the weights”. OpenAI says ChatGPT “is designed to be objective by default”.</p>
+<p class="field">What it means</p><p>Treat the numbers with care. <a href="https://convovo.ai/ballot/">Convovo's own project page</a> publishes none of them and its method section is empty, so this is one outlet reporting figures the researcher supplied. The durable finding is the one that needs no statistics: the same question put to two leading models returns opposite answers, and in Grok's case the sources cited were a Christian conservative voter guide, Turning Point Action and X. <a href="https://www.pewresearch.org/short-reads/2026/10/23/few-americans-say-they-are-asking-ai-chatbots-for-2026-election-information/">Pew puts chatbot use for election information at 8%</a> of US adults, which is the only independently checkable figure here.</p>
+<p class="field">Watch next</p><p>Whether Convovo publishes a method and dataset, and whether either lab says anything before 3 November.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Korea ran a $116.6bn current account surplus in one quarter — more than Germany and Japan combined</h2>
+<p class="field">What happened</p><p>Korea's second-quarter current account surplus was <a href="https://www.koreatimes.co.kr/economy/20261025/koreas-q2-current-account-surplus-tops-germany-japan-combined-on-chip-boom">$116.6bn</a>, up 310% from $28.4bn a year earlier — an increase of $88.2bn. On IMF cross-country data it ranked second of 36 economies behind China, ahead of Germany at $52.3bn and Japan at $50.6bn, whose combined $102.9bn fell $13.7bn short of Korea's. The engine is explicit: semiconductor exports were $113.89bn in the second quarter, up 181.6%, and $148.02bn in the third, up 218.7%. The Bank of Korea's own <a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?nttId=11065372&menuNo=400423">balance-of-payments releases</a> put the first half at <a href="https://en.fnnews.com/news/202610250816106368">$191.01bn, or 18.8% of GDP</a>, against a full-year record of $123.1bn in 2025.</p>
+<p class="field">What it means</p><p>This is what the AI buildout looks like in national accounts rather than in a vendor slide. One country is now exporting roughly $38bn of chips a month, and the surplus it throws off in three months exceeds its own annual record. It also makes Korea acutely exposed: Korea University&#x27;s Kang Sung-jin warned the government “should not formulate policies on the assumption that the semiconductor boom will continue”, and the IMF&#x27;s own projection path has the surplus fading to $295.7bn by 2029.</p>
+<p class="field">Watch next</p><p>SK hynix reports on 28 October and Samsung on 29 October. The BOK&#x27;s $450bn full-year figure is a 22 October assessment carried in the Korean press, not a published forecast — watch for it on paper.</p>
+</div>
+<div class="item">
+<h2>Taiwan&#x27;s factory output rose 19.17% in September, its 31st straight month of growth</h2>
+<p class="field">What happened</p><p>Taiwan's Ministry of Economic Affairs reported September industrial production up 19.17% year on year to an index of 140.76, the 31st consecutive month of expansion, with the gain attributed to AI demand. Separately the Taiwan Institute of Economic Research put manufacturing sentiment at a 55-month high while attaching risk warnings; Young Optics guided to sequentially lower shipments this quarter (<a href="https://www.taipeitimes.com/News/biz">Taipei Times, 24 October</a>).</p>
+<p class="field">What it means</p><p>Taiwan&#x27;s industrial production index is one of the few hard, official, monthly reads on whether AI demand is actually being built rather than announced, and it keeps saying yes. Thirty-one months is long enough that the comparison base is no longer easy, which makes a 19% print more impressive than it looks. The TIER sentiment number is the soft counterpart and it is at a four-and-a-half-year high — forward-looking, and therefore the thing that breaks first if hyperscaler capex guidance disappoints next week.</p>
+<p class="field">Watch next</p><p>Alphabet, Microsoft and Amazon report next week and none has given a 2027 capex number. Taiwan&#x27;s October production print lands in late November.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Apollo&#x27;s chief economist put the AI bear case in one sentence, and the credit market started agreeing</h2>
+<p class="field">What happened</p><p>In <a href="https://www.apollo.com/wealth/the-daily-spark">notes published across last week</a>, Apollo chief economist Torsten Sløk wrote that “the core economic flaw in the AI bull case is that the marginal cost of producing compute exceeds the marginal benefit it delivers to users, raising questions about claims of unlimited demand for data centers”, and that “so far, the AI payoff for firms has been slow to materialize”. He argues the technology has delivered zero financial payoff to corporate America outside tech, and cites Ramp data showing 80% of the top 1% of AI spenders are venture-backed — i.e. paying compute bills out of fundraising, not revenue. <a href="https://fortune.com/2026/10/24/ai-core-economic-flaw-bull-case-stock-bond-trades-credit-default-swaps-data-centers">Fortune, collecting the week's notes</a>, adds that Meta's five-year credit default swap hit a record 114.79 basis points and CoreWeave's reached 1,145.</p>
+<p class="field">What it means</p><p>The capex numbers are not in dispute. Meta's <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm">third-quarter filing</a> guides 2026 capital expenditure, including finance-lease principal, to $135–145bn, and gives no 2027 figure at all. What is newly in dispute is who pays if the revenue lags, and credit is where that argument shows up first: <a href="https://stockanalysis.com/stocks/crwv/">CoreWeave's stock is down more than 30% this month</a>. Sløk's “outside of tech” framing is the sharp end — a much broader claim than one about hyperscalers.</p>
+<p class="field">Watch next</p><p>Alphabet, Microsoft and Amazon next week, and whether any of them puts a 2027 number on paper. Fortune names no data provider for either CDS level; treat both as its reporting.</p>
+</div>
+<div class="item">
+<h2>Iran rules out any US naval return to the Gulf as Brent holds near a six-month high</h2>
+<p class="field">What happened</p><p>Major General Ali Abdollahi, chief of staff of Iran's armed forces, said on Saturday that the US president could only dream of American troops entering the Persian Gulf again, and spoke of drawing the US and Israel deeper into a quagmire (<a href="https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks">Al Jazeera</a>; <a href="https://www.tasnimnews.ir/en/news/2026/10/24/3730522/top-iranian-commander-us-forces-barred-from-entering-persian-gulf">Iranian state media's own wording differs</a>, so this is a paraphrase rather than a quote). It answered Trump, who told a Florida rally on Friday the US military “may do another Epic Fury”. Brent settled at $116.72 on Friday, a six-month high and up about 6% on the week. Nour News, tied to Iran's Supreme National Security Council, said reopening the Strait of Hormuz is conditional on US concessions.</p>
+<p class="field">What it means</p><p>The escalation in the window is rhetorical — no OPEC+ decision, no closure, no reopening — but the tanker attrition underneath it is real and badly measured. The IRGC's repeated claim that supertankers struck mines has no third-party corroboration: the Joint Maritime Information Center found “no substantiation”, CENTCOM denies it flatly, and not one vessel has ever been named. <a href="https://splash247.com/hormuz-attacks-overwhelm-ukmto/">UKMTO says it cannot establish the true number</a> because targeted ships are not reporting to it — 135 incidents since 28 February.</p>
+<p class="field">Watch next</p><p>Oil opens Monday into an Israeli election on Tuesday, a <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm">tightening Fed</a> on 27–28 October and the OPEC+ seven on 1 November.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">No venture round was announced anywhere in the window — <a href="https://www.finsmes.com/">the funding boards are still on Friday's</a>. One piece of corporate news, and it is a report of a report.</p>
+<div class="item">
+<h2>Instacart has hired a bank and talked to DoorDash; Uber reportedly walked away</h2>
+<p class="field">What happened</p><p><a href="https://techcrunch.com/2026/10/24/instacart-reportedly-discussed-selling-itself-with-doordash-and-uber/">TechCrunch relayed on Saturday</a> that The Information reported Instacart has hired an investment bank to weigh its options and held acquisition talks with DoorDash, and that Bloomberg reported separate talks with Uber from which Uber withdrew. Both outlets describe the discussions as early and possibly leading nowhere. Instacart's market capitalisation is above $13bn and the stock is up 25% this year; it rose more than 9.2% on Friday on the reports while Uber and DoorDash fell. Instacart did not respond to a request for comment, and neither DoorDash nor Uber has commented.</p>
+<p class="field">What it means</p><p>Nothing here is confirmed by any party, and the original reporting is Friday&#x27;s — treat it as a scoop being passed along rather than a deal. The logic is still legible: Instacart has spent two years being told it is a grocery-advertising business inside a delivery business, and a sale to the one competitor with national density would settle that argument. That Uber reportedly looked and left is the more informative half.</p>
+<p class="field">Watch next</p><p>A confirmation, a leak of terms, or the silence that means the talks died. Instacart&#x27;s next quarter would be the natural venue.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>A Ninth Circuit panel will hear the California ballot case by Zoom on a Sunday afternoon</h2>
+<p class="field">What happened</p><p>In an order <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-24-Order-scheduling-oral-argument.pdf">filed on Saturday</a>, a Ninth Circuit panel of Judges Bennett, Bumatay and Sanchez set remote oral argument in <em>United States v. California</em>, No. 26-7070, for “Sunday, October 25, 2026, at 1 p.m. PDT” — 60 minutes, 30 to each side, with California, Secretary of State Shirley Weber and Los Angeles Registrar-Recorder Dean Logan free to divide theirs “however they see fit”. Appellees could file an optional reply by noon the same day. At issue are ballots from <a href="https://storage.courtlistener.com/recap/gov.uscourts.cacd.1043513/gov.uscourts.cacd.1043513.1.0_2.pdf">more than 20,000 registered voters</a> federal agencies say are likely non-citizens. California's motion to dismiss calls 18 U.S.C. § 611 a “misdemeanor criminal prohibition on individual noncitizen voting” that “does not purport to set any rules governing election administration”.</p>
+<p class="field">What it means</p><p>Appellate panels do not sit on Sunday afternoons. The calendar is the holding: with the election on 3 November and every mail ballot already sent out by 10 October, the court has decided the question cannot wait for the district judge — who has still not ruled and has his own hearing on 27 October. That is exactly the posture California is attacking as premature, and it is the posture the <em>Purcell</em> principle, which disfavours late changes to election rules, was written for.</p>
+<p class="field">Watch next</p><p>The ruling, which could come within hours of the argument, then Carter on 27 October. <a href="https://www.jurist.org/news/2026/10/doj-appeals-to-ninth-circuit-as-california-says-judge-has-not-ruled-on-request-to-segregate-20000-mail-ballots/">Logan's “unverified allegations” line</a> comes from a county press statement, not his filing.</p>
+</div>
+<div class="item">
+<h2>Florida has already cast 2.33m ballots, Democrats ahead by mail and Republicans in person</h2>
+<p class="field">What happened</p><p>Florida's <a href="https://countyfilesvbm-ev.floridados.gov/VoteByMailEarlyVotingReports/PublicStats">own vote-by-mail and early-voting counter</a>, timestamped 24 October at 5:02pm, shows 1,320,003 mail ballots returned — 566,514 Democratic, 472,385 Republican, 249,233 unaffiliated, 31,871 other — and 1,007,584 early in-person votes: 446,330 Republican, 364,370 Democratic, 171,955 unaffiliated, 24,929 other. Democrats lead mail returns by 94,129; Republicans lead early in-person by 81,960. The state publishes no combined total; 2,327,587 is our sum of its two columns, and every column adds to its stated subtotal.</p>
+<p class="field">What it means</p><p>The split is the point, and it is a reversal of the pattern that held through 2020: Republicans now bank votes by walking into a polling place and Democrats by post. That matters legally as well as politically, because almost every live ballot case — California&#x27;s included — turns on mail ballots, which is now the method the other party&#x27;s voters disproportionately use. It also means the early numbers tell you about mobilisation and nothing about the result.</p>
+<p class="field">Watch next</p><p>The counter updates daily to 3 November. Nothing in it is a count of votes for anyone.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Brazil votes today in a run-off where the leader depends on which denominator you use</h2>
+<p class="field">What happened</p><p>Three polls landed on Saturday and the answer changes with the arithmetic. <a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-outubro-2026-vespera-segundo-turno/">Quaest</a> had Flávio Bolsonaro over Lula 51–49 on valid votes, 46–45 on its stimulated total and 44–42 spontaneous — Flávio ahead on every measure (n=3,702, margin 2 points). <a href="https://www.aljazeera.com/news/2026/10/24/brazils-lula-and-bolsonaro-about-even-ahead-of-election-run-off-poll">CNT/MDA</a> showed 46.3–45.0 on the full distribution, which is 50.7–49.3 on valid votes, and its lead widened, not narrowed, from eight days earlier. <a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-outubro-2026-vespera-segundo-turno/">Futura Inteligência</a> had 50.1–49.9 on valid votes but 46.6–46.1 to <em>Lula</em> in Gazeta do Povo's spontaneous scenario — the only table in which Lula leads, and a single-outlet one. Polls opened at 8am Brasília time, an hour after this was written.</p>
+<p class="field">What it means</p><p>A race this close is decided by the people the pollsters classify as undecided, blank or spoiled, precisely the group the denominator choice moves in and out of the count. Anyone citing one number today is picking a table. The institutional machinery is running hard: <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/falta-1-dia-25-mil-militares-atuarao-no-2o-turno-das-eleicoes-2026">about 25,000 troops in 301 municipalities</a> and an integrity test on voting machines in all 27 federal units.</p>
+<p class="field">Watch next</p><p>Polls close at 5pm Brasília (8pm UTC) and Brazil counts fast. <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-do-tse-determina-que-meta-e-x-apresentem-relatorios-a-cada-seis-horas-sobre-publicacoes-de-nikolas-e-marcal">Meta and X owe the electoral court six-hourly reach reports</a> on two pro-Bolsonaro accounts, with a final one due six hours after close.</p>
+</div>
+<div class="item">
+<h2>Tel Aviv fills up for an October 7 inquiry as Israel&#x27;s final poll leaves Netanyahu 11 short</h2>
+<p class="field">What happened</p><p>The October Council — survivors, former hostages and bereaved families — rallied at Hostages Square on Saturday night under the title “In Three Days, Vote for a State Commission of Inquiry”, with Democrats chairman Yair Golan marching in from Rabin Square and Gadi Eisenkot, Bennett, Lapid and Liberman attending. <a href="https://www.timesofisrael.com/we-can-start-a-different-story-masses-in-tel-aviv-demand-oct-7-inquiry-days-before-election/">Organisers claimed over 100,000 and police offered no estimate</a>; the Hebrew press put it far lower — Ynet and Israel Hayom reported thousands, Davar tens of thousands. Likud petitioned to block television coverage as election propaganda; committee chairman Justice Noam Sohlberg refused for want of a factual basis. <a href="https://www.israelnationalnews.com/news/435081">Channel 12's final poll</a>, published Saturday evening, gave Eisenkot's Yashar 23 seats and Likud 21, with the anti-Netanyahu bloc on 70 against 50.</p>
+<p class="field">What it means</p><p>Netanyahu&#x27;s problem is not one bad poll but four parties sitting under the 3.25% threshold — Winter&#x27;s at 2.5%, Hendel&#x27;s at 2.4% — each wasting votes that would otherwise be his. That is why he spent the week buying out small lists rather than campaigning. The inquiry demand unites everything opposite him, and it is a demand about his own conduct.</p>
+<p class="field">Watch next</p><p>Polling on 27 October, then coalition arithmetic. Eisenkot leads Netanyahu 44–38 on suitability for prime minister.</p>
+</div>
+<div class="item">
+<h2>Albania&#x27;s protests get a party, and a casualty figure that will not survive contact with the health ministry</h2>
+<p class="field">What happened</p><p>Saturday's protest in Tirana was an unannounced national one at the prime minister's office, fronted by Democratic Party MPs marching from party headquarters, with roughly 2,000 police deployed — a distinct strand from the student occupation now in its twelfth day. Cushions Edi Rama had laid out for his offered dialogue were burned. <a href="https://www.aljazeera.com/news/2026/10/24/thousands-gather-at-new-albanian-antigovernment-rally">Al Jazeera reported “more than 300 protesters and police injured, authorities said Saturday”</a>, naming no body. Albania's health ministry puts Saturday's injuries at 23 — six police, 13 protesters, three journalists and one MP. The 320 figure belongs to 13–21 October, cumulatively.</p>
+<p class="field">What it means</p><p>Worth stating plainly, because the wire number is already being rewritten elsewhere: the daily balances across this wave have run 9, 11, 13, 21 and 23, and nothing supports 300 in a day. Rama blamed Russia and Iran on 19 October, not Saturday; on Saturday he named no states. The real development is structural: an opposition party has put itself at the head of a leaderless revolt, which is usually how one ends.</p>
+<p class="field">Watch next</p><p>Whether the students reconverge with the party or refuse it. Cumulative arrest totals remain genuinely unresolved — 167, 271 and a police count of 69 arrests with 20 proceedings all circulate, and <a href="https://albaniandailynews.com/news/tirana-court-orders-release-of-27-protesters-rules-18-arrests-illegal">Tirana's courts have ruled both ways</a> on the same detentions.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://block.xyz/dessa" target="_blank" rel="noopener">Block — Dessa</a></li>
+<li><a href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/" target="_blank" rel="noopener">TechCrunch — Block&#x27;s new voice model sounds eerily human</a></li>
+<li><a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener">TechCrunch — Forced to pick, Grok&#x27;s AI model chooses Republicans. OpenAI&#x27;s picks Democrats</a></li>
+<li><a href="https://convovo.ai/ballot/" target="_blank" rel="noopener">Convovo — AI Ballot project page</a></li>
+<li><a href="https://www.pewresearch.org/short-reads/2026/10/23/few-americans-say-they-are-asking-ai-chatbots-for-2026-election-information/" target="_blank" rel="noopener">Pew Research Center — Few Americans say they are asking AI chatbots for 2026 election information</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261025/koreas-q2-current-account-surplus-tops-germany-japan-combined-on-chip-boom" target="_blank" rel="noopener">The Korea Times — Korea&#x27;s Q2 current account surplus tops Germany, Japan combined on chip boom</a></li>
+<li><a href="https://www.bok.or.kr/eng/bbs/E0000634/view.do?nttId=11065372&amp;menuNo=400423" target="_blank" rel="noopener">Bank of Korea — Balance of Payments, August 2026</a></li>
+<li><a href="https://en.fnnews.com/news/202610250816106368" target="_blank" rel="noopener">FN News — Korea&#x27;s H1 current account surplus</a></li>
+<li><a href="https://www.taipeitimes.com/News/biz" target="_blank" rel="noopener">Taipei Times — Business</a></li>
+<li><a href="https://www.apollo.com/wealth/the-daily-spark" target="_blank" rel="noopener">Apollo — The Daily Spark (Torsten Sløk)</a></li>
+<li><a href="https://fortune.com/2026/10/24/ai-core-economic-flaw-bull-case-stock-bond-trades-credit-default-swaps-data-centers" target="_blank" rel="noopener">Fortune — The &#x27;core economic flaw&#x27; in the AI bull case</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm" target="_blank" rel="noopener">Meta Platforms — Q3 2026 results (8-K Exhibit 99.1)</a></li>
+<li><a href="https://stockanalysis.com/stocks/crwv/" target="_blank" rel="noopener">StockAnalysis — CoreWeave (CRWV)</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks" target="_blank" rel="noopener">Al Jazeera — Iran says won&#x27;t allow US warships to get close as Trump ponders new attacks</a></li>
+<li><a href="https://www.tasnimnews.ir/en/news/2026/10/24/3730522/top-iranian-commander-us-forces-barred-from-entering-persian-gulf" target="_blank" rel="noopener">Tasnim News — Top Iranian commander: US forces barred from entering Persian Gulf</a></li>
+<li><a href="https://splash247.com/hormuz-attacks-overwhelm-ukmto/" target="_blank" rel="noopener">Splash247 — Hormuz attacks overwhelm UKMTO</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" target="_blank" rel="noopener">Federal Reserve — FOMC statement, 16 September 2026</a></li>
+<li><a href="https://techcrunch.com/2026/10/24/instacart-reportedly-discussed-selling-itself-with-doordash-and-uber/" target="_blank" rel="noopener">TechCrunch — Instacart reportedly discussed selling itself with DoorDash and Uber</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-24-Order-scheduling-oral-argument.pdf" target="_blank" rel="noopener">Order scheduling oral argument, United States v. California, No. 26-7070 (9th Cir. Oct. 24, 2026)</a></li>
+<li><a href="https://storage.courtlistener.com/recap/gov.uscourts.cacd.1043513/gov.uscourts.cacd.1043513.1.0_2.pdf" target="_blank" rel="noopener">Complaint, United States v. California, No. 2:26-cv-12025 (C.D. Cal., filed Oct. 15, 2026)</a></li>
+<li><a href="https://www.jurist.org/news/2026/10/doj-appeals-to-ninth-circuit-as-california-says-judge-has-not-ruled-on-request-to-segregate-20000-mail-ballots/" target="_blank" rel="noopener">JURIST — DOJ appeals to Ninth Circuit as California says judge has not ruled</a></li>
+<li><a href="https://countyfilesvbm-ev.floridados.gov/VoteByMailEarlyVotingReports/PublicStats" target="_blank" rel="noopener">Florida Division of Elections — Vote-By-Mail and Early Voting Public Stats</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-outubro-2026-vespera-segundo-turno/" target="_blank" rel="noopener">Gazeta do Povo — Quaest, presidential run-off eve</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/24/brazils-lula-and-bolsonaro-about-even-ahead-of-election-run-off-poll" target="_blank" rel="noopener">Al Jazeera — Brazil&#x27;s Lula and Bolsonaro about even ahead of run-off, poll shows</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-outubro-2026-vespera-segundo-turno/" target="_blank" rel="noopener">Gazeta do Povo — Futura Inteligência, presidential run-off eve</a></li>
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/falta-1-dia-25-mil-militares-atuarao-no-2o-turno-das-eleicoes-2026" target="_blank" rel="noopener">TSE — About 25,000 military personnel to serve in the second round</a></li>
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-do-tse-determina-que-meta-e-x-apresentem-relatorios-a-cada-seis-horas-sobre-publicacoes-de-nikolas-e-marcal" target="_blank" rel="noopener">TSE — Corregedor determines Meta and X report every six hours</a></li>
+<li><a href="https://www.timesofisrael.com/we-can-start-a-different-story-masses-in-tel-aviv-demand-oct-7-inquiry-days-before-election/" target="_blank" rel="noopener">The Times of Israel — Masses at anti-gov&#x27;t rally demand Oct. 7 inquiry</a></li>
+<li><a href="https://www.israelnationalnews.com/news/435081" target="_blank" rel="noopener">Israel National News — Channel 12 final poll</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/24/thousands-gather-at-new-albanian-antigovernment-rally" target="_blank" rel="noopener">Al Jazeera — Thousands gather at new Albanian antigovernment rally</a></li>
+<li><a href="https://albaniandailynews.com/news/tirana-court-orders-release-of-27-protesters-rules-18-arrests-illegal" target="_blank" rel="noopener">Albanian Daily News — Tirana court orders release of 27 protesters</a></li>
+<li><a href="https://www.finsmes.com/" target="_blank" rel="noopener">FinSMEs — funding board</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-25-daily.pdf">PDF</a></span>
+</div></div></body></html>
