@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Week of October 19, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Week of October 19, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The argument about the AI buildout stopped being a forecast this week and became a contract: Meta&#x27;s own filing discloses $121bn of commitments falling due in 2027, Lam Research called next year&#x27;s equipment spending above $200bn while admitting it cannot get the components, and the semiconductor index fell 6.7% in a single session. Three governments were meanwhile asked whether they still command a majority and none could answer: France&#x27;s social-security budget was rejected 115 to 1, Israel&#x27;s final polls put neither bloc at 61, and Albania&#x27;s prime minister answered three weeks of revolt with a law against protest. Brazil votes as this is published.</p>
+<ul class="jump"><li><a href="#top-story">Top story</a></li><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#france">France</a></li><li><a href="#world-politics">World Politics</a></li><li><a href="#profile">Profile</a></li><li><a href="#calendar">Calendar</a></li></ul>
+<div class="section" id="top-story">
+<hr class="rule-hair"><p class="topic">Top story of the week</p>
+<div class="item"><h2>The AI buildout stopped being a forecast and became a contract</h2></div>
+<div class="longform">
+<p class="drop">For three years the argument about the artificial-intelligence buildout has been an argument about the future, conducted in forecasts that nobody could falsify. This week it acquired a paper trail. Buried in <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm">Meta's quarterly filing</a>, not in the earnings release that the headlines were written from, is a sentence disclosing <strong>$454.52 billion of non-cancelable contractual commitments</strong> as of 30 September, mostly third-party cloud capacity, servers and network infrastructure, data-centre energy agreements and Reality Labs hardware, &ldquo;with approximately $45.85 billion and $121.41 billion due in 2026 and 2027, respectively.&rdquo; A further $14.72bn of contingent cloud obligations sits alongside it. Set that $121.41bn against the same balance sheet's <strong>$11.22bn of cash and equivalents</strong> and <strong>$80.92bn of long-term debt</strong>, up from $58.74bn, and the shape of the next fifteen months is no longer a matter of opinion.</p>
+<p>The earnings release itself was more modest than its coverage. Meta <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm">said</a> it expects 2026 capital expenditures, including principal payments on finance leases, &ldquo;to be in the range of $135-145 billion, narrowed from our prior outlook of $130-145 billion&rdquo; &mdash; and the word the company chose is the right one. The <a href="https://www.sec.gov/Archives/edgar/data/0001326801/000162828026050596/meta-06302026xexhibit991.htm">July guidance</a> topped out at $145bn too. Only the floor moved, by $5bn. For 2027 Meta gave no capex figure at all; on the <a href="https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf">call</a> the chief financial officer, Susan Li, said the company is &ldquo;quite early in developing our budget and capacity plans for next year&rdquo;. Revenue rose 26% to $64.6bn, but the operating margin halved to 20% on a $9.89bn charge tied to an August agreement with 52 attorneys general over teen mental health.</p>
+<p class="pull">The key distinction for investors is delay versus cancellation.</p>
+<p>Meta's suppliers are less coy about 2027, because they are selling into it. <a href="https://newsroom.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026">Lam Research</a>, the second-largest maker of chip-fabrication equipment, reported a record September quarter &mdash; revenue $8.22bn, a 40.0% GAAP operating margin, China back up to 35% of sales from 26% &mdash; and then put a number on next year that nobody else has matched. An <a href="https://investor.lamresearch.com/image/Q1_2027-slides-full_final.pdf">investor slide</a> carries the heading &ldquo;WFE: CY26 mid-$150B range | Preliminary CY27 &gt;$200B&rdquo;: wafer-fab equipment spending rising by a third in a single year. The same slide carries the sentence that undid it, naming &ldquo;Cleanroom space availability and supply chain constraints for certain components limiting&rdquo; the industry's ability to meet demand. <a href="https://www.trendforce.com/presscenter/news/20261014-13269.html">TrendForce</a>, separately, has the nine largest cloud providers spending $957bn in 2026, up 106%, and above $1.5 trillion in 2027 &mdash; a forecast it raised this month from 50% growth to 60%.</p>
+<p>The market traded the second sentence, not the first. The PHLX Semiconductor Index fell <strong>6.72% on Thursday 22 October</strong>, a drop of 773.6 points to <a href="https://www.investing.com/indices/phlx-semiconductor-historical-data">10,732.0</a>, the day after Lam's constraint language reached print and by far the largest single-session move of the month. It recovered 0.44% on Friday to close at <a href="https://indexes.nasdaqomx.com/Index/History/SOX">10,779.46</a>, leaving the week down 3.21%. An index that had spent the year pricing an uninterrupted buildout spent one session pricing a delayed one.</p>
+<p>The credit market has been doing that for longer, and this week it produced the first dated, attributed numbers anyone has been able to reach. Oracle's five-year credit-default swap &mdash; the annual cost of insuring $10m of its debt against default &mdash; was <a href="https://www.forbes.com/sites/mayrarodriguezvalladares/2026/10/22/the-half-trillion-dollar-silicon-gamble-inside-the-ai-debt-boom/">around 308 basis points on 21 October, per FactSet data</a>, against 141bp on 2 January; CoreWeave's was around 1,066bp, having touched a record 1,195bp intraday on 15 October on ICE's numbers. S&amp;P <a href="https://ppc.land/s-p-cuts-oracle-to-bbb-as-ai-buildout-widens-cash-deficit-to-42bn/">cut Oracle to BBB-</a> in July on a forecast fiscal-2027 free-operating-cash-flow deficit of nearly $42bn. The asymmetry matters: an equity holder who changes their mind can sell on Monday. A 2027 delivery commitment cannot be sold, and a data centre half-built is not worth half a data centre.</p>
+<p>Which is why the most useful framing of the week came from Apollo's chief economist, Torsten Sl&oslash;k, in a <a href="https://www.apollo.com/wealth/insights-news/insights/daily-spark/winners-and-losers-if-the-data-center-buildout-is-delayed">note published on 21 October</a>. Compute demand, he argues, is significantly greater than supply, so what matters is the speed of the buildout rather than its existence &mdash; and &ldquo;The key distinction for investors is delay versus cancellation.&rdquo; A cancellation destroys the asset; a delay merely pushes the cash flows out while leaving it intact &mdash; survivable for anyone who already owns operating capacity, secured power or a powered site, and ruinous for a developer carrying construction debt against revenue that has moved a year to the right. He puts transformer lead times at up to 26 months.</p>
+<p>The case against all of this is not that the demand is imaginary. It is verifiable, and it keeps turning up in national statistics rather than in vendor decks: Korea&#x27;s second-quarter current-account surplus of $116.6bn, driven by a 181.6% surge in semiconductor exports, and Taiwanese industrial production up 19.17% in September, its thirty-first consecutive month of growth. What does not verify is the return. Sl&amp;oslash;k&#x27;s reading of corporate data is that there is no AI payoff visible outside the technology sector, and that 80% of the top 1% of AI spenders are venture-backed against 13% of the median spender &amp;mdash; a figure that belongs to Ramp, not to him. Enormous physical demand, financed by people selling to each other, describes a boom and also describes its mechanism.</p>
+<p>What to watch is specific and close. <a href="https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx">Alphabet</a> and Microsoft report on Wednesday 28 October, <a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results">Intel</a> and <a href="https://ir.aboutamazon.com/events/event-details/2026/Q3-2026-Amazoncom-Inc-Earnings-Conference-Call/default.aspx">Amazon</a> on Thursday 29 October, with <a href="https://ir.kla.com/news-events/press-releases/detail/522/kla-announces-first-quarter-fiscal-year-2027-earnings-date">KLA</a> and <a href="https://news.skhynix.com/en/?p=13734">SK hynix</a> on the 28th, Samsung on the 29th and <a href="https://ir.appliedmaterials.com/events-and-presentations">Applied Materials</a> on 12 November. Two things matter more than the revenue lines. First, whether any hyperscaler prints a 2027 capital-expenditure figure, which would turn Meta's silence into an outlier. Second, and more revealing: whether any of them extends the assumed useful life of its servers, which lowers reported depreciation and flatters earnings at precisely the moment the assets are being questioned. Meta's filing already shows $10.80bn in escrow under multi-year infrastructure agreements, due for release between 2028 and 2030. Somebody has already decided when this ends.</p>
+</div></div>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2><span class="num">1</span>A magistrate orders Meta to name everyone who approved torrenting from shadow libraries</h2>
+<p class="field">What happened</p><p>Magistrate Judge Thomas Hixson <a href="https://torrentfreak.com/images/kadrey-meta-hixson-order.pdf">ordered Meta</a> on 19 October to identify every person who made or approved decisions about obtaining pirated books for AI training &mdash; specifically those who approved the 2023 LibGen download and the April 2024 Anna's Archive download, everyone who decided whether or how to seed or to mitigate seeding when Meta acquired the material over BitTorrent, and the participants in the discussion that preceded the 2023 download. An expert estimated Meta's uploads from AWS servers <a href="https://torrentfreak.com/judge-orders-meta-to-name-employees-who-approved-torrenting-annas-archive-and-libgen/">did not exceed roughly 30%</a> of what it downloaded between April and July 2024.</p>
+<p class="field">Context</p><p>The order was entered in the <em>Kadrey v. Meta</em> class action and the live question is Entrepreneur Media's claim of contributory infringement by seeding &mdash; not whether training on books is fair use, but whether Meta redistributed them while acquiring them. That is a materially worse posture for a defendant, because seeding is distribution.</p>
+<p class="field">Who's affected</p><p>Named Meta employees, who move from corporate anonymity to deposition exposure; every other lab that used BitTorrent to assemble a training corpus; and plaintiffs&#x27; lawyers across the dozen active training-data suits, who now have a template.</p>
+<p class="field">What it means</p><p>Fair use has been the whole battlefield, and it was never going to cover the acquisition method. Discovery aimed at individuals rather than entities is how a documents case becomes a testimony case, and it is the step most likely to produce an internal email that settles the matter one way or the other. Note the status: this is a discovery order, not a liability finding.</p>
+<p class="field">Watch next</p><p>Whether Meta appeals the order or complies, and the names when they are produced. Separately, the Third Circuit's mid-October ruling against ROSS in <em>Thomson Reuters v. ROSS Intelligence</em> &mdash; which rejected fair use for training on Westlaw headnotes and recognised a licensing market for training data, while leaving generative questions open &mdash; is now generating a wave of law-firm analysis and is the better precedent to watch.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2><span class="num">1</span>Lam Research calls 2027 equipment spending above $200bn, and admits it cannot get the parts</h2>
+<p class="field">What happened</p><p>Lam <a href="https://newsroom.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026">reported</a> September-quarter revenue of <strong>$8.22bn</strong>, up 22% sequentially, with a 52.3% GAAP gross margin, a 40.0% GAAP operating margin, diluted EPS of $2.19 and deferred revenue up to $2.66bn from $2.43bn. December guidance is revenue of &ldquo;$8.60 Billion +/- $400 Million&rdquo; and EPS of &ldquo;$2.33 +/- $0.15&rdquo;. China was 35% of sales, up from 26%. An <a href="https://investor.lamresearch.com/image/Q1_2027-slides-full_final.pdf">investor slide</a> headed &ldquo;WFE: CY26 mid-$150B range | Preliminary CY27 &gt;$200B&rdquo; carries the preliminary outlook, alongside the line naming &ldquo;Cleanroom space availability and supply chain constraints for certain components limiting&rdquo; the industry's ability to meet end demand.</p>
+<p class="field">Context</p><p>Wafer-fab equipment spending is the single best forward indicator of chip supply, because tools ordered now produce wafers in eighteen months. A move from the mid-$150bns to above $200bn implies the industry believes 2028 demand justifies capacity nobody has yet built.</p>
+<p class="field">Who's affected</p><p>KLA, Applied Materials and ASML, who sell into the same budget; the memory makers, since Lam puts total memory at a record 46% of systems revenue, up 120% year on year; and Chinese customers, whose 35% share Lam expects to fall sharply in the December quarter.</p>
+<p class="field">What it means</p><p>Two numbers in one deck, pointing opposite ways. The &gt;$200bn says demand; the constraint line says the industry cannot convert it on schedule. That is Sl&amp;oslash;k&#x27;s delay case stated by a supplier rather than an economist, which is why it was the equipment maker and not the chip designer that broke the index.</p>
+<p class="field">Watch next</p><p>KLA on 28 October and Applied Materials on 12 November will be asked the same question. Lam says it will refine the 2027 number on its January call, and expects ten new tier-one fabs to come online during 2027. The company-hosted figures are on the slide deck; the spoken detail circulates only through third-party transcripts carrying machine-generation disclaimers.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2><span class="num">1</span>Tesla: revenue flat, operating margin down to 2.6%, R&amp;D and capex both roughly doubled</h2>
+<p class="field">What happened</p><p>Tesla <a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm">reported</a> third-quarter revenue of <strong>$28,046m</strong>, essentially flat against $28,095m a year earlier, with automotive revenue down 3% to $20,560m, energy generation and storage down 15.6% to $2,881m and services up 32.5% to $4,605m. Gross margin rose 160 basis points to 19.6%, but operating income was only <strong>$718m</strong> for a 2.6% operating margin, down 322 basis points, as research and development climbed to $2,761m from $1,630m and capital expenditure to $4,732m from $2,248m. GAAP net income attributable to common stockholders was $787m, or $0.22 a share, against $1,697m and $0.48 on a non-GAAP basis. Deliveries fell 2% to 486,532 while production rose 4% to 464,391, and regulatory-credit revenue collapsed to $113m from $417m. The filing notes that &ldquo;Production has begun for Tesla Semi in Nevada and Optimus in Fremont.&rdquo;</p>
+<p class="field">Context</p><p>This is the fourth consecutive quarter in which Tesla&#x27;s automotive business has shrunk while its spending on things that are not cars has grown. The regulatory-credit collapse removes a line that was pure margin.</p>
+<p class="field">Who's affected</p><p>Tesla shareholders, who are now funding two pre-revenue manufacturing programmes out of a 2.6% operating margin; suppliers to the Nevada and Fremont lines; and the energy-storage business, whose 15.6% decline is the quarter&#x27;s least-discussed number.</p>
+<p class="field">What it means</p><p>The widely headlined &amp;ldquo;43% profit drop&amp;rdquo; is GAAP net income, not revenue, which was flat, and not operating income, which fell 55.8%. Worth saying precisely, because the three numbers support three different stories. What the filing actually describes is a company converting an automotive margin into an industrial R&amp;amp;D programme, with inventory of unsold margin to burn.</p>
+<p class="field">Watch next</p><p>Whether the energy decline continues, since storage was supposed to be the second leg. Semi and Optimus production starting means the capex line does not come down soon.</p>
+</div>
+</div>
+<div class="section" id="france">
+<hr class="rule-hair"><p class="topic">France</p>
+<div class="item">
+<h2><span class="num">1</span>The social-security budget collapsed four days before the deadline everyone was watching</h2>
+<p class="field">What happened</p><p>On Friday 23 October the Assembl&eacute;e nationale rejected the second part of the 2027 social-security financing bill by <strong>115 against, 1 for and 22 abstentions</strong> on <a href="https://www.assemblee-nationale.fr/dyn/17/scrutins/9097">scrutin public no 9097</a> &mdash; 138 voting, 116 expressed. With no revenues adopted, the spending part could not be examined at all, and the text was <a href="https://www.assemblee-nationale.fr/dyn/actualites-accueil-hub/rejet-en-premiere-lecture-du-projet-de-loi-de-financement-de-la-securite-sociale-pour-2027">rejected whole at first reading</a> and transmitted to the Senate as texte adopt&eacute; no 358, which the <a href="https://www.senat.fr/dossier-legislatif/plfss2027.html">Senate's own dossier</a> now records. The <strong>solemn vote scheduled for Tuesday 27 October is moot</strong>, four days before the Article 47-1 twenty-day deadline that the <a href="https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1119828/file/organisation%20PLF%202027.pdf">Assembly's own calendar</a> sets for that date. The group breakdown is not the one being reported: the Rassemblement National cast 60 against, but the governing bloc split &mdash; Ensemble pour la R&eacute;publique two against and four abstentions, Horizons five abstentions and nothing against &mdash; and the single vote in favour came from Les D&eacute;mocrates.</p>
+<p class="field">Context</p><p>The social-security bill was rejected whole in committee on 16 October, which was non-binding, and the chamber restarted from the government's text. LFI's <a href="https://www.assemblee-nationale.fr/dyn/17/scrutins/8895">motion de rejet pr&eacute;alable</a>, tabled by Mathilde Panot, was defeated on 20 October by 259 to 128. The Senate will now work from the government's original text, without any Assembly amendments.</p>
+<p class="field">Who's affected</p><p>Every social-security budget line in France; the Lecornu government, which has now lost a finance bill without facing a confidence vote; and the Senate, which gets a clean text and a short window.</p>
+<p class="field">What it means</p><p>The significant fact is what did not happen. There has been <strong>no censure motion in this budget cycle</strong> &mdash; the Assembly's <a href="https://www.assemblee-nationale.fr/dyn/engagements_responsabilite-motions_censures/motions-de-censure">own register</a> shows seventeen in this legislature, the most recent two tabled in February 2026 on the previous year's budget &mdash; and no Article 49.3. The government let the text die on a free vote rather than force it through and risk a censure it might lose. That is a calculation about survival, not about the budget, and it leaves the 26 November fifty-day limit, after which the government may implement the bill by ordinance, as the real instrument.</p>
+<p class="field">Watch next</p><p>The Senate's first reading, reported for 9 November. The <a href="https://www.assemblee-nationale.fr/dyn/static/seance/conference.pdf">Conference des presidents</a> has moved the main budget's first-part solemn vote to <strong>Tuesday 3 November at 15:00</strong>, with the second part also beginning that day. The fifty-day limit falls on 26 November; the main budget's forty-day and whole-text solemn votes on 17 November; the seventy-day limit on 17 December. December 31 appears nowhere in the Assembly's calendar and is not operative. The 9 November date and the cancellation of Tuesday's vote are reported by <a href="https://nosparlementaires.fr/actualites/plfss-2027-calendrier-examen-date-par-date">outlets</a> rather than confirmed on a chamber document.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2><span class="num">1</span>Brazil votes today, with Flavio Bolsonaro ahead in every one of the final seven polls</h2>
+<p class="field">What happened</p><p>Polls opened at 11:00 UTC and close at 20:00 UTC, after this report was built, so there is no result here. What the final week produced was unusually consistent: <a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/o-que-dizem-as-pesquisas-para-presidente-na-vespera-do-segundo-turno/">seven final polls, all measured on valid votes, with Fl&aacute;vio Bolsonaro ahead in all seven</a> &mdash; AtlasIntel 50.8 to 49.2 (fieldwork 18-23 October, n=4,990, margin 1), <a href="https://www.cnnbrasil.com.br/eleicoes/cnt-mda-flavio-tem-507-dos-votos-validos-lula-493/">CNT/MDA 50.7 to 49.3</a> (21-23 October, n=2,032 face-to-face, margin 2.2), Datafolha 51 to 49 (23-24 October, n=4,050), <a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-outubro-2026-vespera-segundo-turno/">Futura 50.1 to 49.9</a> (23-24 October, n=2,000, self-commissioned), Gerp 52 to 48, Nexus/BTG 50.5 to 49.5 and Quaest 51 to 49 (23-24 October, n=3,702, for Editora Globo). Lula leads in exactly one table in the entire set: Futura's <em>spontaneous</em> scenario, where respondents are not read the candidates' names, at 46.6 to 46.1. Datafolha's spontaneous reading has Fl&aacute;vio 47 to 45, Quaest's 44 to 42.</p>
+<p class="field">Context</p><p>The first round left the two separated by under two percentage points. Everything since has been inside every margin of error, which is why the denominator has done so much work in the coverage: a stimulated total that includes blanks and undecideds can show a different leader from the valid-vote count that actually decides the election.</p>
+<p class="field">Who's affected</p><p>An electorate voting under compulsory rules for the literate between 18 and 70; the Brazilian congress either candidate would have to govern with; and the regional order, where a Bolsonaro restoration and a fourth Lula term point in opposite directions on everything from Amazon policy to Mercosur.</p>
+<p class="field">What it means</p><p>A week in which seven of seven pollsters put the same candidate ahead by about a point of valid votes is not a coin flip, but it is well within the range where turnout decides it. The honest statement is that Fl&amp;aacute;vio has led narrowly and consistently, that no pollster has had Lula ahead on the measure that counts, and that a one-point lead across a 100-million-vote electorate is not a prediction.</p>
+<p class="field">Watch next</p><p>The count tonight. The <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/falta-1-dia-25-mil-militares-atuarao-no-2o-turno-das-eleicoes-2026">Tribunal Superior Eleitoral has 25,000 military personnel</a> deployed across 301 municipalities, with logistical support in 39 more across eight states, and <a href="https://exame.com/brasil/que-horas-sai-o-resultado-do-2o-turno-veja-a-previsao-para-este-domingo/">begins publishing at 17:00 Bras&iacute;lia</a> &mdash; 20:00 UTC &mdash; though it sets no time for confirming a winner. On the eve, the electoral corregedor Ricardo Villas B&ocirc;as Cueva <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-do-tse-determina-que-meta-e-x-apresentem-relatorios-a-cada-seis-horas-sobre-publicacoes-de-nikolas-e-marcal">ordered Meta and X</a> to report every six hours on the reach of posts by Nikolas Ferreira and Pablo Mar&ccedil;al, to keep a priority channel open with the electoral authority and not to artificially expand those accounts' reach, with Meta told to stop auto-recommending the posts to non-followers from midnight &mdash; on pain of R$500,000 a company per proven infraction. The decision is monocratic and goes to the full court for review.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Israel&#x27;s last legal polling day: three pollsters, three arithmetics, nobody at 61</h2>
+<p class="field">What happened</p><p>Israel votes on <strong>Tuesday 27 October</strong>, and publication of polls was barred from Saturday until exit polls at 22:00 on the day. The <a href="https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/">three final polls</a>, published Friday 23 October, agree on the shape and not the detail. Channel 12's Midgam poll (Manu Geva, n=1,018, margin 4.4%) has Yashar! 23, Likud 21, B'Yachad 15, the Democrats 10, the Joint List 9, Yisrael Beytenu 8, Otzma Yehudit 8, Shas 8, UTJ 7, Religious Zionism 6 and Ra'am 5, with blocs at <strong>56 change, 50 coalition, 14 Arab</strong>. Channel 13's Madad poll (Shmuel Rosner and Noah Slepkov, n=1,875, margin 2.3%) has 54/50/16; Kan's Kantar poll (Dudu Hasid, n=1,106, margin 3.0%) has 52/50/14. None of the three states a fieldwork date. A <a href="https://www.jpost.com/israel-election-2026/article-912743">Maariv poll published this morning</a> has the change bloc at 54 to Netanyahu's 48, down three on the week, with the Reservists-Economic list crossing at 4 and Ofer Winter's People of Israel at 3% against the <strong><a href="https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/">3.25% of total valid votes</a></strong> threshold; its four-poll average gives the opposition 54 to Netanyahu's 49.5.</p>
+<p class="field">Context</p><p>One party has actually withdrawn: <a href="https://www.timesofisrael.com/netanyahu-convinces-haredi-party-backed-by-rabbi-accused-of-sex-offenses-to-drop-out/">Achi, backed by Rabbi Chaim Yosef David Abergel, dropped out on Friday 23 October</a> under pressure from Netanyahu, four days before polls open, while Winter and Moti Leitner's Charedi Public refused to. Separately, <a href="https://www.israelnationalnews.com/news/434840">Benny Gantz decided on 19 October not to run</a>.</p>
+<p class="field">Who's affected</p><p>Gadi Eisenkot, the frontrunner, who leads Netanyahu on suitability but cannot assemble 61 from Zionist parties alone; Mansour Abbas of Ra&#x27;am, open to the change bloc that several of its own members refuse to sit with him in; and the four lists hovering at the threshold, where a few thousand votes decide eight seats.</p>
+<p class="field">What it means</p><p>The two framings circulating are the same seats differently bracketed. &amp;ldquo;Anti-Netanyahu 70 against a coalition of 50&amp;rdquo; and &amp;ldquo;both blocs short of 61&amp;rdquo; describe one arithmetic: the Zionist change bloc is 54 to 56 and reaches about 70 only by counting the Joint List and Ra&#x27;am. Since several change-bloc parties have ruled out governing with Ra&#x27;am, the 70 is a number that cannot be converted into a government, and that is the whole story of this election.</p>
+<p class="field">Watch next</p><p>Tuesday&#x27;s count and the coalition arithmetic that follows. If no government forms, repeat elections in early 2027 with Netanyahu as caretaker &amp;mdash; which is itself an outcome some of the parties below the threshold are playing for.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Albania: three weeks of revolt, and a prime minister who answers it with legislation</h2>
+<p class="field">What happened</p><p>Saturday's demonstration in Tirana was <a href="https://albaniandailynews.com/news/protests-enter-day-12-as-nationwide-demonstration-draws-support-from-unions-doctors-and-artists">day twelve of a student movement</a> that began about 13 October and has drawn in lecturers, doctors, trade unions, opposition politicians and the diaspora, demanding Edi Rama's resignation. He has refused and <a href="https://euronews.al/en/rama-unveils-package-against-violence-and-urban-anarchy-peaceful-protest-is-protected-violence-is-punished-and-those-responsible-must-pay-for-the-damage/">announced six legislative instruments</a> instead: a normative act compensating vandalised small businesses, a special law on damages, amendments to the law on assemblies, an electronic register of people involved in urban violence, an amendment to the teachers' code of ethics and criminal-code changes. The detail is <a href="https://euronews.al/en/rama-explains-measures-against-violence-fines-of-up-to-500000-lek-for-those-who-remain-at-violent-gatherings-parents-to-pay-for-minors-over-14/">sharper than the framing</a>: fines up to 500,000 lek for remaining at a violent gathering after a police warning, with journalists, medics, observers and passers-by exempt; parents liable for fines incurred by children over 14; police able to restrict gatherings for up to 72 hours near schools, hospitals and places of worship; and concealing one's identity at a gathering criminalised, which Rama attributed to the French model. On Saturday a 28-year-old, Erjon Vishkulli, <a href="https://exit.al/en/exit-explains/protester-loses-eye-after-police-fire-rubber-bullets-in-tirana-i48120">lost his left eye</a> to a police rubber bullet.</p>
+<p class="field">Context</p><p>On 20 October Rama called the unrest <a href="https://euronews.al/en/this-is-hybrid-warfare-rama-reports-around-200-police-officers-injured-compared-to-just-80-protesters/">&ldquo;hybrid warfare&rdquo;</a> and blamed foreign actors, reporting &ldquo;nearly 200 injured police officers and 80 injured protesters&rdquo;. He has named no state; a review of his speeches has him blaming unnamed foreign forces, malign interference and &ldquo;Antifa&rdquo;, <a href="https://exit.al/en/exit-explains/edi-ramas-long-list-of-enemies-i48113">which he called an anarchist neo-communist movement</a>.</p>
+<p class="field">Who's affected</p><p>Albania&#x27;s EU accession track, which opened four conference chapters this month; the 320 people his own health ministry counts as injured; and the opposition, which has attached itself to a movement it did not start.</p>
+<p class="field">What it means</p><p>His own health ministry is the most effective critic of his account. Its cumulative count for 13 to 21 October is <a href="https://albaniandailynews.com/news/320-injured-during-protests-including-192-police-officers">320 injured &mdash; 192 police, 92 protesters and 36 bystanders including six media workers</a>, a police-to-protester ratio of 2.09 to 1 against the 2.5 to 1 his own figures implied. Its count for Saturday 24 October alone is <a href="https://euronews.al/protesta-e-djeshme-ne-tirane-ministria-e-shendetesise-23-te-lenduar-ne-total-konsulte-e-zgjeruar-sot-per-28-vjecarin-e-plagosur-ne-sy/">23 &mdash; thirteen protesters, six police, three media workers and one MP</a>, inverting the pattern entirely. Al Jazeera's report that &ldquo;more than 300 protesters and police&rdquo; were injured, attributed to unnamed &ldquo;authorities&rdquo; on Saturday, <a href="https://www.aljazeera.com/news/2026/10/24/thousands-gather-at-new-albanian-antigovernment-rally">is the cumulative total recycled as a single day's count</a> and should not be repeated.</p>
+<p class="field">Watch next</p><p>Whether the package reaches a parliamentary vote, and what the EU says about criminalising face coverings in a candidate country. &ldquo;Anyone calling for my resignation is mistaken if they believe they can impose it through violence or by any other means,&rdquo; Rama <a href="https://euronews.al/en/rama-those-calling-for-my-resignation-are-mistaken-if-they-think-they-can-impose-it-through-violence/">said on Sunday</a>, offering to hear objections face to face. Cumulative arrest totals remain contradictory and unresolved.</p>
+</div>
+</div>
+<div class="section" id="profile">
+<hr class="rule-hair"><p class="topic">Profile</p>
+<div class="item"><h2>Edi Rama: the painter who is now writing the law on who may stand in the street</h2></div>
+<div class="longform">
+<p class="drop">Some years into running a country, the prime minister of Albania noticed something about his own hands. &ldquo;I found myself drawing almost all my working time whilst interacting with people in my office or on the phone,&rdquo; Edi Rama told <a href="https://www.mariangoodman.com/artists/95-edi-rama/">his New York gallery</a>, and then went further: &ldquo;I came to appreciate that I wasn't drawing &ndash; my hand was.&rdquo; The drawings &mdash; coloured pen worked over the official documents in front of him &mdash; were not, he decided, a diversionary activity. They have since been printed as wallpaper and hung in a Chelsea gallery to emulate the walls of his Tirana office. This is not a hobby a politician admits to. It is the organising fact of the man.</p>
+<p>Rama has been prime minister since September 2013, which makes him one of the longest-serving leaders in Europe, and for the past three weeks he has been facing the most sustained challenge to that tenure: a student movement that began on about 13 October and has since drawn in lecturers, doctors, trade unions and the opposition, demanding his resignation. He has refused it, and this week he answered it with legislation.</p>
+<p>He was born in 1964, the son of Kristaq Rama, one of the Albanian communist state's most prolific sculptors &mdash; a childhood spent inside the regime's official aesthetic rather than outside it. He became a painter himself and, by the gallery's account, a &ldquo;former professor of painting at the Academy of Fine Arts,&rdquo; then <a href="https://www.mariangoodman.com/exhibitions/60-edi-rama/">a practising artist in Paris until 1998</a>, when he was asked to come home as minister of culture. Two years later he was mayor of Tirana, a job he held until 2011.</p>
+<p>What he did with it is the thing he is known for outside Albania, and it was an artist's intervention rather than an administrator's. Beginning after his election in 2000, he had the facades of the city's grey communist-era apartment blocks painted in bright colours and patterns, working the schemes out himself in coloured pen on architects' drawings. Anri Sala, a former student of his, made a film about it, <em>Dammi i Colori</em>, in 2003. Rama's own description of the project, given to the <a href="https://www.nevadaart.org/art/exhibitions/edi-rama-work/">Nevada Museum of Art</a>, is the most revealing sentence he has produced about his own politics: it was &ldquo;a political action, with colors.&rdquo; In 2004 he was the first winner of the <a href="https://www.worldmayor.com/">World Mayor Prize</a>.</p>
+<p>The unusual part is that the art career did not stop when the political one accelerated. He showed at the Venice Biennale in 2003 and again in 2017; the Marian Goodman Gallery gave him a solo show in New York from 11 November to 23 December 2016; the Nevada Museum of Art gave him his first American solo museum exhibition, from November 2019 to May 2020. With Sala he made the <em>Inversion Drawings</em>, in which Sala worked on the reverse of Rama's sheets, revealing, as the gallery puts it, the ghosts of their reverse images. A sitting head of government with a gallery CV is close to unique. It has also supplied a steady stock of foreign admirers for whom Albanian prosecution files are somebody else's reading.</p>
+<p>Those files are the other half of the record, and they belong to his governments rather than to him personally; Rama has never been charged with anything. His interior minister Saimir Tahiri was <a href="https://euronews.al/en/former-interior-minister-cleared-on-drug-charges-guilty-of-abuse-of-office/">cleared of drug trafficking in 2019</a> but <a href="https://euronews.al/en/saimir-tahiri-reacts-to-guilty-verdict-its-an-injustice/">sentenced on appeal in February 2022</a> to three years and four months for abuse of office. His environment minister Lefter Koka was <a href="https://euronews.al/en/10-year-imprisonment-for-former-minister-of-environment-in-incinerator-case/">sentenced in September 2023</a> over the Fier incinerator contract, ten years reduced to six years and eight months, with a separate Elbasan conviction in October. His former deputy prime minister Arben Ahmetaj was declared internationally wanted in July 2023 and denies wrongdoing. His deputy prime minister Belinda Balluku was <a href="https://euronews.al/en/albanias-constitutional-court-rejects-government-appeal-upholds-ballukus-suspension/">suspended from office by court order</a>, upheld in February 2026 when the Constitutional Court split four to four, and in March <a href="https://euronews.al/en/parliament-rejects-spaks-request-for-ballukus-arrest-german-embassy-reacts/">parliament refused</a> to lift her immunity so prosecutors could arrest her. In February 2025 the mayor of Tirana, Erion Veliaj &mdash; his own successor and ally &mdash; was <a href="https://euronews.al/en/what-you-need-to-know-about-the-arrest-of-the-mayor-of-tirana-erion-veliaj/">arrested</a> and held in pre-trial detention, with Rama complaining that the investigation <a href="https://euronews.al/en/rama-investigations-against-veliaj-resemble-state-security-methods-his-private-life-was-probed/">resembled &ldquo;State Security methods&rdquo;</a>.</p>
+<p>On the press, the assessments are consistent and unflattering without being judicial findings. <a href="https://rsf.org/en/country/albania">Reporters Without Borders</a> ranks Albania 83rd of 180 this year, down from 80th, and writes that &ldquo;Politicians limit editorial independence&rdquo; through politicised regulators and appointments to public media, with private ownership concentrated in four or five companies holding interests in heavily regulated sectors. <a href="https://freedomhouse.org/country/albania/freedom-world/2026">Freedom House</a> rates the country 69 out of 100, Partly Free, and says plainly that &ldquo;Corruption and bribery remain major problems.&rdquo; His <a href="https://euronews.al/en/how-does-italy-albania-migration-agreement-work-what-does-each-country-benefit-from/">migrant-processing deal with Italy</a> &mdash; a disembarkation point at Sh&euml;ngjin and a 3,000-place centre at Gjad&euml;r, designed for 36,000 arrivals a year at a cost Giorgia Meloni put at &euro;670m &mdash; <a href="https://euronews.al/en/first-16-migrants-arrive-from-italy-in-gjader-of-albania/">received its first sixteen people on 14 October 2024</a> and watched a <a href="https://euronews.al/en/deal-for-migrants-court-of-rome-all-refugees-to-return-to-italy/">Roman court order all of them returned to Italy four days later</a>. The centres have handled dozens.</p>
+<p>Which brings him to this week, and to a package of six legislative instruments <a href="https://euronews.al/en/rama-unveils-package-against-violence-and-urban-anarchy-peaceful-protest-is-protected-violence-is-punished-and-those-responsible-must-pay-for-the-damage/">announced on Sunday</a> in response to the protests. It compensates vandalised small businesses, amends the law on assemblies, creates an electronic register of people involved in urban violence, amends the teachers' code of ethics and proposes criminal-code changes. It <a href="https://euronews.al/en/rama-explains-measures-against-violence-fines-of-up-to-500000-lek-for-those-who-remain-at-violent-gatherings-parents-to-pay-for-minors-over-14/">fines people up to 500,000 lek</a> for staying at a gathering after a police warning, makes parents liable for the fines of children over 14, allows 72-hour restrictions near schools, hospitals and places of worship, and criminalises concealing one's identity at a gathering &mdash; which Rama attributed, pointedly, to the French model. Five days earlier he had called the unrest &ldquo;hybrid warfare,&rdquo; blaming <a href="https://euronews.al/en/this-is-hybrid-warfare-rama-reports-around-200-police-officers-injured-compared-to-just-80-protesters/">unnamed foreign actors</a> and reporting &ldquo;nearly 200 injured police officers and 80 injured protesters.&rdquo; His own health ministry's cumulative count, published the next day, was <a href="https://albaniandailynews.com/news/320-injured-during-protests-including-192-police-officers">192 police and 92 protesters</a>; its count for Saturday 24 October alone was <a href="https://euronews.al/protesta-e-djeshme-ne-tirane-ministria-e-shendetesise-23-te-lenduar-ne-total-konsulte-e-zgjeruar-sot-per-28-vjecarin-e-plagosur-ne-sy/">thirteen protesters and six police</a>. On Saturday a 28-year-old named Erjon Vishkulli <a href="https://exit.al/en/exit-explains/protester-loses-eye-after-police-fire-rubber-bullets-in-tirana-i48120">lost his left eye</a> to a police rubber bullet.</p>
+<p>&ldquo;Anyone calling for my resignation is mistaken if they believe they can impose it through violence or by any other means,&rdquo; Rama <a href="https://euronews.al/en/rama-those-calling-for-my-resignation-are-mistaken-if-they-think-they-can-impose-it-through-violence/">said on Sunday</a>, offering to listen to objections face to face. It is a defensible position, and it is also the end of a long arc. The man who made his name painting the fronts of buildings so that people would look at them differently is now drafting the rules for who may gather in front of them, and whether their faces may be covered. He is still, by all accounts, drawing while he does it.</p>
+</div></div>
+<div class="section" id="calendar">
+<hr class="rule-hair"><p class="topic">On the calendar</p><ul class="cal">
+<li><span class="when">Oct 26</span>DHS first document batch due to Judge AliKhan in <em>NAACP v. US</em></li>
+<li><span class="when">Oct 27</span>Israel votes; exit polls at 22:00 local. FOMC day one. Judge Carter's hearing in <em>US v. California</em></li>
+<li><span class="when">Oct 28</span>FOMC decision. ECB day one. Alphabet and Microsoft report; KLA and SK hynix report. DHS second batch to AliKhan; answers sought in the Boasberg case</li>
+<li><span class="when">Oct 29</span>ECB decision, 14:15 CET. Intel, Amazon and Samsung report. Bank of Japan day one. Alberta&#x27;s official referendum results. Joint status report to AliKhan</li>
+<li><span class="when">Oct 30</span>Bank of Japan decision and Outlook Report. Meta&#x27;s publisher terms take effect</li>
+<li><span class="when">Oct 31</span>DeepSeek&#x27;s billing change</li>
+<li><span class="when">Nov 1</span>OPEC+ meets on December production targets</li>
+<li><span class="when">Nov 3</span>US midterm elections. French PLF first-part solemn vote, 15:00. EU 2027 budget conciliation opens</li>
+<li><span class="when">Nov 5</span>French intersyndicale strike: CFDT, CGT, FO, UNSA and FSU</li>
+<li><span class="when">Nov 7</span>First Russian diesel tanker expected at a US port</li>
+<li><span class="when">Nov 9</span>French Senate opens its PLFSS first reading (reported). COP31 opens in Antalya, to 20 November</li>
+<li><span class="when">Nov 10</span>China&#x27;s MOFCOM export-control suspension lapses, including the 0.1% de minimis rule. CDC Ebola suspension expires. US October CPI</li>
+<li><span class="when">Nov 12</span>Applied Materials reports</li>
+<li><span class="when">Nov 13</span>DHS/USCIS interim final rule comments close</li>
+<li><span class="when">Nov 16</span>EU budget conciliation closes</li>
+<li><span class="when">Nov 17</span>French PLF forty-day limit and whole-text solemn vote</li>
+<li><span class="when">Nov 18-19</span>APEC summit, Shenzhen</li>
+<li><span class="when">Nov 20</span>Character.AI bids due (D. Del. 26-11603); auction 23 November, hearing 24 November</li>
+<li><span class="when">Nov 23</span>Bank of Israel decision</li>
+<li><span class="when">Nov 26</span>French PLFSS fifty-day limit; the government&#x27;s ordinance power opens</li>
+<li><span class="when">Nov 27</span>China&#x27;s suspension of gallium, germanium and antimony licensing for the US ends</li>
+<li><span class="when">Dec 1</span>Gemini 4 Argon pricing takes effect, $4 and $20</li>
+<li><span class="when">Dec 2</span>EU AI Act: Article 50(2) watermarking grace period ends; Article 5 transitional period ends</li>
+<li><span class="when">Dec 11</span>Five US federal authorities expire: the continuing resolution, the OMB grants-rule bar, surface transportation, the NFIP and EPA&#x27;s TSCA fee authority</li>
+<li><span class="when">Dec 17</span>French PLF seventy-day limit</li>
+</ul></div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm" target="_blank" rel="noopener">SEC EDGAR - Meta Platforms Form 10-Q, 30 September 2026</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm" target="_blank" rel="noopener">SEC EDGAR - Meta Platforms Q3 2026 earnings release</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001326801/000162828026050596/meta-06302026xexhibit991.htm" target="_blank" rel="noopener">SEC EDGAR - Meta Platforms Q2 2026 earnings release</a></li>
+<li><a href="https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf" target="_blank" rel="noopener">Meta Platforms - Q3 2026 earnings call transcript</a></li>
+<li><a href="https://newsroom.lamresearch.com/2026-10-21-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-September-27,-2026" target="_blank" rel="noopener">Lam Research - results for the quarter ended 27 September 2026</a></li>
+<li><a href="https://investor.lamresearch.com/image/Q1_2027-slides-full_final.pdf" target="_blank" rel="noopener">Lam Research - September 2026 quarter investor slides</a></li>
+<li><a href="https://www.trendforce.com/presscenter/news/20261014-13269.html" target="_blank" rel="noopener">TrendForce - cloud service provider capex and AI server forecast</a></li>
+<li><a href="https://www.investing.com/indices/phlx-semiconductor-historical-data" target="_blank" rel="noopener">PHLX Semiconductor Index - historical settlements</a></li>
+<li><a href="https://indexes.nasdaqomx.com/Index/History/SOX" target="_blank" rel="noopener">Nasdaq - PHLX Semiconductor Index history</a></li>
+<li><a href="https://www.forbes.com/sites/mayrarodriguezvalladares/2026/10/22/the-half-trillion-dollar-silicon-gamble-inside-the-ai-debt-boom/" target="_blank" rel="noopener">Mayra Rodriguez Valladares - inside the AI debt boom (Forbes)</a></li>
+<li><a href="https://ppc.land/s-p-cuts-oracle-to-bbb-as-ai-buildout-widens-cash-deficit-to-42bn/" target="_blank" rel="noopener">S&amp;P cuts Oracle to BBB- as AI buildout widens cash deficit</a></li>
+<li><a href="https://www.apollo.com/wealth/insights-news/insights/daily-spark/winners-and-losers-if-the-data-center-buildout-is-delayed" target="_blank" rel="noopener">Torsten Slok - Winners and Losers if the Data Center Buildout Is Delayed</a></li>
+<li><a href="https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx" target="_blank" rel="noopener">Alphabet announces the date of its Q3 2026 results call</a></li>
+<li><a href="https://www.intc.com/news-events/press-releases/detail/1782/intel-to-report-third-quarter-2026-financial-results" target="_blank" rel="noopener">Intel to report third quarter 2026 financial results</a></li>
+<li><a href="https://ir.aboutamazon.com/events/event-details/2026/Q3-2026-Amazoncom-Inc-Earnings-Conference-Call/default.aspx" target="_blank" rel="noopener">Amazon - Q3 2026 earnings conference call</a></li>
+<li><a href="https://ir.kla.com/news-events/press-releases/detail/522/kla-announces-first-quarter-fiscal-year-2027-earnings-date" target="_blank" rel="noopener">KLA announces its first quarter fiscal 2027 earnings date</a></li>
+<li><a href="https://news.skhynix.com/en/?p=13734" target="_blank" rel="noopener">SK hynix - third quarter 2026 earnings announcement</a></li>
+<li><a href="https://ir.appliedmaterials.com/events-and-presentations" target="_blank" rel="noopener">Applied Materials - events and presentations</a></li>
+<li><a href="https://torrentfreak.com/images/kadrey-meta-hixson-order.pdf" target="_blank" rel="noopener">Kadrey v. Meta - order of Magistrate Judge Hixson</a></li>
+<li><a href="https://torrentfreak.com/judge-orders-meta-to-name-employees-who-approved-torrenting-annas-archive-and-libgen/" target="_blank" rel="noopener">Judge orders Meta to name employees who approved torrenting</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm" target="_blank" rel="noopener">SEC EDGAR - Tesla Q3 2026 update</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/17/scrutins/9097" target="_blank" rel="noopener">Assemblee nationale - scrutin public no 9097, 23 October 2026</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/actualites-accueil-hub/rejet-en-premiere-lecture-du-projet-de-loi-de-financement-de-la-securite-sociale-pour-2027" target="_blank" rel="noopener">Assemblee nationale - PLFSS 2027 rejected at first reading</a></li>
+<li><a href="https://www.senat.fr/dossier-legislatif/plfss2027.html" target="_blank" rel="noopener">Senat - PLFSS 2027 legislative dossier</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/contenu/visualisation/1119828/file/organisation%20PLF%202027.pdf" target="_blank" rel="noopener">Assemblee nationale - organisation of the 2027 budget debate</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/17/scrutins/8895" target="_blank" rel="noopener">Assemblee nationale - scrutin public no 8895, 20 October 2026</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/engagements_responsabilite-motions_censures/motions-de-censure" target="_blank" rel="noopener">Assemblee nationale - register of censure motions</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/static/seance/conference.pdf" target="_blank" rel="noopener">Assemblee nationale - Conference des presidents, 20 October 2026</a></li>
+<li><a href="https://nosparlementaires.fr/actualites/plfss-2027-calendrier-examen-date-par-date" target="_blank" rel="noopener">Nos Parlementaires - the PLFSS 2027 timetable</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/o-que-dizem-as-pesquisas-para-presidente-na-vespera-do-segundo-turno/" target="_blank" rel="noopener">Gazeta do Povo - what the final run-off polls say</a></li>
+<li><a href="https://www.cnnbrasil.com.br/eleicoes/cnt-mda-flavio-tem-507-dos-votos-validos-lula-493/" target="_blank" rel="noopener">CNT/MDA - Flavio 50.7% of valid votes to Lula&#x27;s 49.3%</a></li>
+<li><a href="https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/futura-inteligencia-presidente-outubro-2026-vespera-segundo-turno/" target="_blank" rel="noopener">Futura Inteligencia - final run-off poll</a></li>
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/falta-1-dia-25-mil-militares-atuarao-no-2o-turno-das-eleicoes-2026" target="_blank" rel="noopener">TSE - 25,000 military personnel to serve in the run-off</a></li>
+<li><a href="https://exame.com/brasil/que-horas-sai-o-resultado-do-2o-turno-veja-a-previsao-para-este-domingo/" target="_blank" rel="noopener">Exame - when the run-off result is expected</a></li>
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/corregedor-do-tse-determina-que-meta-e-x-apresentem-relatorios-a-cada-seis-horas-sobre-publicacoes-de-nikolas-e-marcal" target="_blank" rel="noopener">TSE - Meta and X ordered to report every six hours</a></li>
+<li><a href="https://www.timesofisrael.com/final-polls-before-election-show-both-blocs-short-of-majority-small-parties-out-of-knesset/" target="_blank" rel="noopener">Times of Israel - final polls show both blocs short of a majority</a></li>
+<li><a href="https://www.jpost.com/israel-election-2026/article-912743" target="_blank" rel="noopener">Jerusalem Post - Maariv&#x27;s final poll</a></li>
+<li><a href="https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/" target="_blank" rel="noopener">Library of Congress - FALQs on Israel&#x27;s 27 October election</a></li>
+<li><a href="https://www.timesofisrael.com/netanyahu-convinces-haredi-party-backed-by-rabbi-accused-of-sex-offenses-to-drop-out/" target="_blank" rel="noopener">Times of Israel - Achi drops out of the election</a></li>
+<li><a href="https://www.israelnationalnews.com/news/434840" target="_blank" rel="noopener">Arutz Sheva - Gantz decides not to run</a></li>
+<li><a href="https://albaniandailynews.com/news/protests-enter-day-12-as-nationwide-demonstration-draws-support-from-unions-doctors-and-artists" target="_blank" rel="noopener">Albanian Daily News - protests enter day 12</a></li>
+<li><a href="https://euronews.al/en/rama-unveils-package-against-violence-and-urban-anarchy-peaceful-protest-is-protected-violence-is-punished-and-those-responsible-must-pay-for-the-damage/" target="_blank" rel="noopener">Euronews Albania - Rama unveils his package against urban violence</a></li>
+<li><a href="https://euronews.al/en/rama-explains-measures-against-violence-fines-of-up-to-500000-lek-for-those-who-remain-at-violent-gatherings-parents-to-pay-for-minors-over-14/" target="_blank" rel="noopener">Euronews Albania - the fines in Rama&#x27;s package</a></li>
+<li><a href="https://exit.al/en/exit-explains/protester-loses-eye-after-police-fire-rubber-bullets-in-tirana-i48120" target="_blank" rel="noopener">Exit.al - protester loses an eye after police fire rubber bullets</a></li>
+<li><a href="https://euronews.al/en/this-is-hybrid-warfare-rama-reports-around-200-police-officers-injured-compared-to-just-80-protesters/" target="_blank" rel="noopener">Euronews Albania - Rama reports about 200 police injured to 80 protesters</a></li>
+<li><a href="https://exit.al/en/exit-explains/edi-ramas-long-list-of-enemies-i48113" target="_blank" rel="noopener">Exit.al - Edi Rama&#x27;s long list of enemies</a></li>
+<li><a href="https://albaniandailynews.com/news/320-injured-during-protests-including-192-police-officers" target="_blank" rel="noopener">Albanian Daily News - 320 injured during protests, including 192 police</a></li>
+<li><a href="https://euronews.al/protesta-e-djeshme-ne-tirane-ministria-e-shendetesise-23-te-lenduar-ne-total-konsulte-e-zgjeruar-sot-per-28-vjecarin-e-plagosur-ne-sy/" target="_blank" rel="noopener">Albanian Health Ministry - 23 injured on 24 October</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/24/thousands-gather-at-new-albanian-antigovernment-rally" target="_blank" rel="noopener">Al Jazeera - thousands gather at a new Albanian anti-government rally</a></li>
+<li><a href="https://euronews.al/en/rama-those-calling-for-my-resignation-are-mistaken-if-they-think-they-can-impose-it-through-violence/" target="_blank" rel="noopener">Euronews Albania - Rama rejects calls to resign</a></li>
+<li><a href="https://www.mariangoodman.com/artists/95-edi-rama/" target="_blank" rel="noopener">Marian Goodman Gallery - Edi Rama</a></li>
+<li><a href="https://www.mariangoodman.com/exhibitions/60-edi-rama/" target="_blank" rel="noopener">Marian Goodman Gallery - Edi Rama, November-December 2016</a></li>
+<li><a href="https://www.nevadaart.org/art/exhibitions/edi-rama-work/" target="_blank" rel="noopener">Nevada Museum of Art - Edi Rama: WORK</a></li>
+<li><a href="https://www.worldmayor.com/" target="_blank" rel="noopener">City Mayors Foundation - winners of the World Mayor Prize</a></li>
+<li><a href="https://euronews.al/en/former-interior-minister-cleared-on-drug-charges-guilty-of-abuse-of-office/" target="_blank" rel="noopener">Euronews Albania - Tahiri cleared on drug charges, guilty of abuse of office</a></li>
+<li><a href="https://euronews.al/en/saimir-tahiri-reacts-to-guilty-verdict-its-an-injustice/" target="_blank" rel="noopener">Euronews Albania - Saimir Tahiri sentenced on appeal</a></li>
+<li><a href="https://euronews.al/en/10-year-imprisonment-for-former-minister-of-environment-in-incinerator-case/" target="_blank" rel="noopener">Euronews Albania - former environment minister sentenced in the incinerator case</a></li>
+<li><a href="https://euronews.al/en/albanias-constitutional-court-rejects-government-appeal-upholds-ballukus-suspension/" target="_blank" rel="noopener">Euronews Albania - Constitutional Court upholds Balluku&#x27;s suspension</a></li>
+<li><a href="https://euronews.al/en/parliament-rejects-spaks-request-for-ballukus-arrest-german-embassy-reacts/" target="_blank" rel="noopener">Euronews Albania - parliament rejects SPAK&#x27;s request to arrest Balluku</a></li>
+<li><a href="https://euronews.al/en/what-you-need-to-know-about-the-arrest-of-the-mayor-of-tirana-erion-veliaj/" target="_blank" rel="noopener">Euronews Albania - the arrest of Tirana mayor Erion Veliaj</a></li>
+<li><a href="https://euronews.al/en/rama-investigations-against-veliaj-resemble-state-security-methods-his-private-life-was-probed/" target="_blank" rel="noopener">Euronews Albania - Rama on the Veliaj investigation</a></li>
+<li><a href="https://rsf.org/en/country/albania" target="_blank" rel="noopener">Reporters Without Borders - Albania</a></li>
+<li><a href="https://freedomhouse.org/country/albania/freedom-world/2026" target="_blank" rel="noopener">Freedom House - Albania, Freedom in the World 2026</a></li>
+<li><a href="https://euronews.al/en/how-does-italy-albania-migration-agreement-work-what-does-each-country-benefit-from/" target="_blank" rel="noopener">Euronews Albania - how the Italy-Albania migration agreement works</a></li>
+<li><a href="https://euronews.al/en/first-16-migrants-arrive-from-italy-in-gjader-of-albania/" target="_blank" rel="noopener">Euronews Albania - the first 16 migrants arrive at Gjader</a></li>
+<li><a href="https://euronews.al/en/deal-for-migrants-court-of-rome-all-refugees-to-return-to-italy/" target="_blank" rel="noopener">Euronews Albania - Court of Rome orders the first group returned to Italy</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-25-weekly.pdf">PDF</a></span>
+</div></div></body></html>

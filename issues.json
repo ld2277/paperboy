@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-10-25",
+  "kind": "weekly",
+  "dateline": "Week of October 19, 2026",
+  "month": "October 2026",
+  "href": "issues/2026-10-25-weekly.html",
+  "pdf": "pdf/2026-10-25-weekly.pdf",
+  "standfirst": "The argument about the AI buildout stopped being a forecast this week and became a contract: Meta's own filing discloses $121bn of commitments falling due in 2027, Lam Research called next year's equipment spending above $200bn while admitting it cannot get the components, and the semiconductor index fell 6.7% in a single session. Three governments were meanwhile asked whether they still command a majority and none could answer: France's social-security budget was rejected 115 to 1, Israel's final polls put neither bloc at 61, and Albania's prime minister answered three weeks of revolt with a law against protest. Brazil votes as this is published."
+ },
+ {
+  "date": "2026-10-25",
   "kind": "daily",
   "dateline": "Sunday, October 25, 2026",
   "month": "October 2026",
