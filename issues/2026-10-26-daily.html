@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Monday, October 26, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Monday, October 26, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Lula won a fourth term 51.79 to 48.21, defying seven final polls that all had Flavio Bolsonaro ahead, and Bolsonaro says he will ask for the election to be annulled.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Sweden&#x27;s Government Offices block ChatGPT and Claude from today</h2>
+<p class="field">What happened</p><p>From today, staff at the <b>Regeringskansliet</b> — Sweden's Government Offices — can no longer reach the ChatGPT or Claude web interfaces from their work computers. An internal email quoted by <a href="https://www.svt.se/nyheter/inrikes/ai-tjanster-sparras-pa-regeringskansliet">SVT</a> says the services “kommer inte längre att nås från Regeringskansliets tjänstedatorer från och med den 26 oktober”. Digitalisation director Mikael Wettercrantz told Ekot, which broke the story on 23 October, that using AI services without the employer's consent can have consequences for “our” information security — the Government Offices', not the country's. Microsoft Copilot stays, security tightened. Skatteverket, the tax agency, and SIS, which runs institutional care, have imposed parallel restrictions; Kronofogden calls it a possible next step. Scope matters: this is a technical block on one employer's service computers, sent by internal email — not a regulation, and not all of Swedish government.</p>
+<p class="field">What it means</p><p>The reason is not model quality, it is data residency and logging. A civil servant pasting a draft into a consumer chat window creates a record the employer cannot see, govern or retrieve, which is an archival and secrecy problem before it is an AI problem. Copilot survives because Microsoft already holds the government&#x27;s documents under a contract. Expect that to be the pattern across European public sectors: the incumbent with the existing data agreement wins by default, whatever the benchmarks say.</p>
+<p class="field">Watch next</p><p>Whether Kronofogden follows, and whether any Swedish agency issues a formal instruction rather than an IT block.</p>
+</div>
+<div class="item">
+<h2>Musk: most of the 200-plus neoclouds will not survive</h2>
+<p class="field">What happened</p><p>Alongside his debt post (see Semiconductors), Musk said on Sunday that debt markets have “almost entirely shut off access to money” over the past few weeks for companies without substantial revenue independent of AI data centres, and that “the 200+ neoclouds are going to see guppy-level death and consolidation” — some will survive, “not many” (<a href="https://www.foxbusiness.com/technology/spacex-secures-40b-financing-gpus-elon-musk-warns-ai-cloud-industry-consolidation">Fox Business</a>). He ruled out buying distressed rivals. Blackstone's Jon Gray said on 22 October that CoreWeave's underlying business is strong but faces a financing challenge: “They'll find a way through it.”</p>
+<p class="field">What it means</p><p>The cost of capital is now the entire competitive story in GPU rental. A neocloud&#x27;s margin is the spread between a depreciating asset bought with borrowed money and a contract that may be shorter than the loan. When the borrowing closes, the business does not shrink gradually, it stops. Musk saying this while announcing forty billion dollars of his own is self-serving, which does not make it wrong.</p>
+<p class="field">Watch next</p><p>CoreWeave&#x27;s next refinancing, and whether any mid-tier neocloud misses a payment in public.</p>
+</div>
+<div class="item">
+<h2>Still no Anthropic S-1 on EDGAR</h2>
+<p class="field">What happened</p><p>Reporting around 20 October put an Anthropic listing as soon as mid-November. As of this morning there is no S-1, F-1 or draft registration statement on <a href="https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&amp;forms=S-1">EDGAR</a> with Anthropic as the filer. A full-text search returns 58 S-1 hits containing the word, every one filed by a different registrant — Nscale, Cerebras, SpaceX and Reddit among them — and the 31 filers whose names begin “Anthropic” are all third-party investment vehicles filing Form D.</p>
+<p class="field">What it means</p><p>Absence proves little. A confidential draft registration statement does not appear on EDGAR until the issuer flips it public, usually around a fortnight before a roadshow. If mid-November is real, that flip has to happen within the next two weeks, which makes EDGAR the thing to watch rather than the press.</p>
+<p class="field">Watch next</p><p>A public registration statement filed by Anthropic PBC. Chased every run.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Musk says SpaceX closed $40bn of GPU debt; Bloomberg says the talks are still going</h2>
+<p class="field">What happened</p><p>Musk posted on Sunday that “SpaceX closed $40B of debt for GPUs, but we're investment grade and have Starlink &amp; launch revenue,” and in a follow-up called it “primarily callable debt for GPU purchases that will arrive in Q1 and Q2,” adding: “Not a major factor this quarter.” Bloomberg's headline the same day was “Musk Claims $40 Billion Chips Debt Closed, Yet Talks Ongoing”; <a href="https://www.foxbusiness.com/technology/spacex-secures-40b-financing-gpus-elon-musk-warns-ai-cloud-industry-consolidation">Fox Business</a> said it was not clear whether investors had agreed the pricing. Bloomberg reported on 23 October that the facility is structured off SpaceX's balance sheet, possibly through a special-purpose vehicle, with Goldman Sachs leading investor talks. SpaceX, listed on Nasdaq as SPCX, has filed nothing with the SEC about the debt: its last filings are a 20 October 8-K and a 22 October S-8. That <a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm">8-K</a> reports third-quarter revenue of $14,575m, up 161 per cent, of which $7,560m came from the Super Intelligence segment, up 830 per cent year on year. The $35–40bn fourth-quarter capex figure attributed to finance chief Bret Johnsen came from the earnings call, not the filing. Treat “closed” as the issuer's word.</p>
+<p class="field">What it means</p><p>Forty billion dollars borrowed against chips that have not shipped, in a vehicle designed not to appear on the balance sheet, is the clearest statement yet of how this buildout is being paid for. “Investment grade” is Musk&#x27;s own characterisation; no rating agency is cited and SpaceX carries no public rating. The callable structure is the real tell — it buys the option to walk away if the GPUs arrive into a worse market than the one they were ordered for.</p>
+<p class="field">Watch next</p><p>An 8-K disclosing the facility, or its continued absence; and the first-quarter delivery window Musk named.</p>
+</div>
+<div class="item">
+<h2>Memory splits Seoul: SK hynix up, Samsung down</h2>
+<p class="field">What happened</p><p>The Kospi opened Monday at 5,499.05, down 51.25 points or 0.92 per cent. Samsung Electronics opened 1.16 per cent lower at 213,000 won while SK hynix opened 2.58 per cent higher at 1,310,000 won (<a href="https://shattered.io/kospi-opens-lower-samsung-down-sk-hynix-up-memory-stocks-2026/">TradingKey via Shattered</a>, early session). Elsewhere in Asia the Nikkei 225 fell 318.16 points, 0.51 per cent, to 62,375 and the Hang Seng rose 91.63, while India's <a href="https://www.indiatvnews.com/business/markets/26-october-2026-stock-market-updates-sensex-sheds-133-points-nifty-near-22-500-amid-elevated-brent-crude-price-it-stocks-falls-infosys-hcl-tech-2026-10-26-1057916">Sensex</a> opened 133.79 points lower with Infosys down 3.07 per cent, attributed to the oil price. Hyundai Asset Management's Cho Sang-hyun has said the memory shortage shows no sign of resolving “until at least 2028” — an earlier interview, not a Monday remark.</p>
+<p class="field">What it means</p><p>Two Korean memory makers moving in opposite directions on the same morning is the market separating pure memory exposure from everything else. SK hynix trades as a proxy for high-bandwidth memory; Samsung carries a foundry, a handset business and a mobile-DRAM book alongside it. When the trade is the shortage itself, the less diversified name wins.</p>
+<p class="field">Watch next</p><p>Fourth-quarter DRAM and NAND contract prices, and the Bank of Japan&#x27;s 29–30 October meeting for the yen&#x27;s effect on Japanese chip names.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Brent gives back part of a 6 per cent week; Murban decouples above $118</h2>
+<p class="field">What happened</p><p>Crude retreated in early Asian trade on Monday after Friday's settlement near six-month highs. At around 10:50 Beijing time WTI was $101.1, down 2.08 per cent, and Brent $114.6, down $2.15, after a week in which Brent rose 6 per cent to close around $116.72. Abu Dhabi's Murban went the other way, up about 3 per cent to above $118, roughly $3.40 above Brent; natural gas fell 3.9 per cent (<a href="https://gulfnews.com/business/energy/crude-oils-weird-monday-brent-wti-slip-as-attacks-rattle-markets-murban-jumps-3-to-118-1.500723522">Gulf News</a>). The outlet said “the trigger for Monday's movement was not immediately clear” and read it as profit-taking, while Houthi-claimed attacks on Saudi facilities and airports kept supply fears alive. Saudi Arabia has not confirmed those claims and no hit on oil infrastructure has been independently confirmed; treat the attacks as claimed, not established.</p>
+<p class="field">What it means</p><p>The Murban premium is the number that matters. Murban loads at Fujairah, outside the Strait of Hormuz, which Brent does not price at all. A grade trading above the global benchmark because of where it loads is the market pricing a closure nobody wants to name. Brent slipping while Murban climbs is not a contradiction, it is two different risks being quoted at once.</p>
+<p class="field">Watch next</p><p>Whether the Murban–Brent spread holds above $3, and any Saudi confirmation or denial of damage.</p>
+</div>
+<div class="item">
+<h2>Brazil&#x27;s result repriced the real before Sao Paulo could open</h2>
+<p class="field">What happened</p><p>Brazilian assets sold off in Asian hours after Lula's win. <a href="https://www.infomoney.com.br/politica/ao-vivo-eleicoes-segundo-turno-2026/">InfoMoney</a> reported the Tokyo-listed Brazil ETF down about 13 per cent, the real down 10 per cent in futures and EWZ, the main US-listed Brazil fund, down around 20 per cent after hours, with Bradesco BBI cutting Brazilian equities to neutral. <a href="https://theprint.in/world/brazil-heads-back-to-the-future-as-flavio-bolsonaro-refuses-to-recognize-lula-win/3081579/">ThePrint</a> put the Tokyo-listed Bovespa tracker down about 15 per cent. The figures disagree because they are different instruments in different sessions: read it as a 13 to 20 per cent repricing depending on what you are looking at, not one number.</p>
+<p class="field">What it means</p><p>The market had priced the polls and the polls were wrong, so this is a positioning unwind more than a verdict on policy nobody has heard yet. The size of the first move matters less than whether it survives the Sao Paulo open, when domestic money can actually trade. A fiscal framework and a finance minister will set the real level.</p>
+<p class="field">Watch next</p><p>The B3 open and the onshore real; and Lula&#x27;s first cabinet signals, the finance ministry above all.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing raised, nothing shipped, nothing filed. A weekend window produced no new funding round worth your attention; the live rounds are still Legora&#x27;s $550m at $8.8bn and Flapping Airplanes&#x27; $1bn, both from last week. The startup story that matters this morning is the S-1 Anthropic has not filed, and that is in the AI section.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Three discovery deadlines this week, and not in the case you have read about</h2>
+<p class="field">What happened</p><p>The case that actually ordered records produced is <i>NAACP v. United States</i> before Judge Loren AliKhan, where three of six discovery requests were granted: DHS records due today, 26 October; threat assessments on 28 October; a status report on 29 October. The request for voter data was denied. It is routinely confused with the two separate <i>DSCC v. Trump</i> cases. In the first, 1:26-cv-01114 in the District of Columbia before Judge Carl Nichols, a preliminary injunction was denied on 28 May and affirmed on 28 July, but a 13 September order enjoining the USPS rule remains in force. The second is a new suit filed 20 October before Judge James Boasberg, where expedited discovery was requested on 23 October and has not been granted. No new order appeared in any of the three <a href="https://www.courtlistener.com/?q=DSCC+v.+Trump">dockets</a> over the weekend.</p>
+<p class="field">What it means</p><p>Three cases, three judges, one piece of shorthand. Headlines reading “judge grants expedited discovery” belong to AliKhan&#x27;s case, not Boasberg&#x27;s, and the difference decides what is binding on anyone right now: one live injunction covering the USPS rule, one production schedule, and one request still pending. Getting them confused is how a brief ends up reporting a court order that does not exist.</p>
+<p class="field">Watch next</p><p>Whether DHS produces on time today, and the 29 October status report.</p>
+</div>
+<div class="item">
+<h2>The 11 December cliff passed a quiet weekend</h2>
+<p class="field">What happened</p><p>Five authorities, not seven, expire on 11 December under the stopgap agreed in September. There was no movement over the weekend: no framework, no leadership statement, no scheduled markup. Eight Senate races remain genuinely in play and ballot-access litigation is live in four courts.</p>
+<p class="field">What it means</p><p>Six weeks out with nothing moving is the normal shape of these things; the deal, if there is one, arrives in the final ten days. What is different this time is that five separate authorities are harder to extend in one clean vote than a single lapsing one, which raises the odds of a partial deal that leaves two or three of them to expire unnoticed.</p>
+<p class="field">Watch next</p><p>The first scheduled markup, and whether leadership puts a number on the extension&#x27;s length.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Lula wins a fourth term 51.79 to 48.21; Bolsonaro refuses to recognise it</h2>
+<p class="field">What happened</p><p>Brazil's electoral court declared Luiz Inacio Lula da Silva re-elected late on Sunday with 64,256,232 valid votes, 51.79 per cent, against 59,826,041 and 48.21 per cent for Flavio Bolsonaro of the PL, a margin of about 4.4 million (<a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026">TSE</a>). Court president Kassio Nunes Marques announced it just after midnight Brasilia time. Of more than 158 million registered voters 128.2 million voted, and abstention fell to 19.21 per cent from 21.08 per cent in the first round. Bolsonaro did not concede: “É impossível reconhecer o resultado das eleições no contexto como essas coisas aconteceram,” and “Vamos usar nosso jurídico, vamos pedir a anulação dessas eleições” (<a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-nao-reconhece-vitoria-de-lula-e-tentara-anulacao-do-pleito">Agência Brasil</a>). That is an announced intention; no petition has been filed. His stated grounds are a two-hour extension of voting granted by Supreme Court justice Cristiano Zanin over voter-transport failures in Bahia and Sao Paulo — an extension his own campaign had also requested, over rain in the south.</p>
+<p class="field">What it means</p><p>Seven final polls on valid votes had Bolsonaro ahead in all seven; Lula led in exactly one scenario, Futura&#x27;s spontaneous-recall question. So the second story is the polling miss, and it is a large one in a country with a long record of accurate electoral polling. On the annulment, an intention to petition is not a case, and the grounds are weakened considerably by his own campaign having asked for the same relief hours earlier.</p>
+<p class="field">Watch next</p><p>Whether a petition is actually filed, and at which court; the finance ministry appointment; and plenary review of Justice Cueva&#x27;s 23 October platform order, still a monocratic ruling with a fine per proven infraction rather than per day.</p>
+</div>
+<div class="item">
+<h2>Israel votes Tuesday with neither bloc at 61</h2>
+<p class="field">What happened</p><p>Israelis vote tomorrow, 27 October. The last KAN poll before the pre-election polling ban took effect on Friday put the opposition bloc at 52 of 120 seats and Netanyahu's at 50, neither near the 61 needed, with the balance held by parties in neither camp including Ra'am and the Joint List (<a href="https://www.aljazeera.com/news/2026/10/26/israels-election-five-key-things-to-know">Al Jazeera</a>). The threshold is 3.25 per cent of total valid votes. Two ballot-access questions resolved before the vote: the Central Elections Committee voted to bar the Joint List and Ra'am and the Supreme Court reversed it, so both are running; and Balad's Sami Abu Shehadeh ended his candidacy after the High Court declined to rule on his committee disqualification but indicated a majority would uphold it. He withdrew under that threat; he was not disqualified by the court.</p>
+<p class="field">What it means</p><p>At 52 to 50 the election is decided by the parties in neither bloc, which in practice means the Arab parties the committee just tried to remove from the ballot. Note that “both blocs short of 61” and “anti-Netanyahu 70 to 50” are the same seat count bracketed differently, depending on whether Ra&#x27;am and the Joint List count as opposition. With polling banned, Tuesday&#x27;s exit numbers are the next real information.</p>
+<p class="field">Watch next</p><p>Turnout in Arab localities, and whether any party lands below 3.25 per cent — a wasted 3 per cent moves the arithmetic more than a swing does.</p>
+</div>
+<div class="item">
+<h2>Tirana protesters burn Rama&#x27;s dialogue chairs</h2>
+<p class="field">What happened</p><p>Hours after Edi Rama presented a package of anti-unrest measures on Sunday, protesters gathered outside the education ministry, moved to the boulevard outside his office, and smashed and then burned the chairs he had placed there as an invitation to dialogue (<a href="https://euronews.al/en/protests-continue-in-tirana-this-sunday-as-protesters-gather-outside-the-prime-ministers-office/">Euronews Albania</a>). The package is six proposed instruments, not law: amendments to the law on gatherings carrying fines of up to 500,000 lek, about $6,200, for anyone who stays at a violent gathering after a police warning — journalists, medics, observers and passers-by exempt, parents liable for children over 14 — plus a damage-compensation law and 72-hour police powers near schools and hospitals. Rama, in a video address: “I do not believe that everything they say or demand is wrong.”</p>
+<p class="field">What it means</p><p>A fine for refusing to leave is narrower than a fine for turning up: it targets the crowd that stays, not the crowd that arrives. It still has to pass parliament, where Rama has the votes, which makes the chairs fair theatre on both sides. Nothing is in force yet, and the wire framing of “a fine announced” overstates a bill nobody has voted on.</p>
+<p class="field">Watch next</p><p>Whether the package reaches a parliamentary vote this week, and any updated interior ministry figures; its own counts have twice undercut the prime minister&#x27;s.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026" target="_blank" rel="noopener">TSE - Presidente do TSE anuncia reeleicao de Lula</a></li>
+<li><a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/flavio-nao-reconhece-vitoria-de-lula-e-tentara-anulacao-do-pleito" target="_blank" rel="noopener">Agencia Brasil - Flavio nao reconhece vitoria de Lula</a></li>
+<li><a href="https://www.infomoney.com.br/politica/ao-vivo-eleicoes-segundo-turno-2026/" target="_blank" rel="noopener">InfoMoney - Eleicoes segundo turno 2026, ao vivo</a></li>
+<li><a href="https://theprint.in/world/brazil-heads-back-to-the-future-as-flavio-bolsonaro-refuses-to-recognize-lula-win/3081579/" target="_blank" rel="noopener">ThePrint - Flavio Bolsonaro refuses to recognize Lula win</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/26/israels-election-five-key-things-to-know" target="_blank" rel="noopener">Al Jazeera - Israel&#x27;s election: five key things to know</a></li>
+<li><a href="https://www.timesofisrael.com/facing-ban-from-high-court-balads-abou-shahadeh-ends-election-candidacy" target="_blank" rel="noopener">Times of Israel - Abou Shahadeh ends election candidacy</a></li>
+<li><a href="https://euronews.al/en/protests-continue-in-tirana-this-sunday-as-protesters-gather-outside-the-prime-ministers-office/" target="_blank" rel="noopener">Euronews Albania - Protests continue in Tirana</a></li>
+<li><a href="https://www.inalbania.info/rama-explains-measures-against-violence-fines-of-up-to-500000-lek-for-those-who-remain-at-violent-gatherings-parents-to-pay-for-minors-over-14/" target="_blank" rel="noopener">InAlbania - Rama explains measures against violence</a></li>
+<li><a href="https://www.foxbusiness.com/technology/spacex-secures-40b-financing-gpus-elon-musk-warns-ai-cloud-industry-consolidation" target="_blank" rel="noopener">Fox Business - SpaceX secures $40bn financing for GPUs</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" target="_blank" rel="noopener">SEC - SpaceX 8-K exhibit 99.1, 20 October 2026</a></li>
+<li><a href="https://efts.sec.gov/LATEST/search-index?q=%22Anthropic%22&amp;forms=S-1" target="_blank" rel="noopener">SEC EDGAR full-text search - Anthropic, form S-1</a></li>
+<li><a href="https://www.svt.se/nyheter/inrikes/ai-tjanster-sparras-pa-regeringskansliet" target="_blank" rel="noopener">SVT - AI-tjanster sparras pa Regeringskansliet</a></li>
+<li><a href="https://computersweden.se/article/4239687/regeringskansliet-sparrar-chat-gpt-och-claude.html" target="_blank" rel="noopener">Computer Sweden - Regeringskansliet sparrar Chat GPT och Claude</a></li>
+<li><a href="https://gulfnews.com/business/energy/crude-oils-weird-monday-brent-wti-slip-as-attacks-rattle-markets-murban-jumps-3-to-118-1.500723522" target="_blank" rel="noopener">Gulf News - Crude&#x27;s weird Monday; Murban jumps to $118</a></li>
+<li><a href="https://www.indiatvnews.com/business/markets/26-october-2026-stock-market-updates-sensex-sheds-133-points-nifty-near-22-500-amid-elevated-brent-crude-price-it-stocks-falls-infosys-hcl-tech-2026-10-26-1057916" target="_blank" rel="noopener">India TV - Sensex and Nifty open lower on crude</a></li>
+<li><a href="https://www.courtlistener.com/?q=DSCC+v.+Trump" target="_blank" rel="noopener">CourtListener - DSCC v. Trump dockets</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-26-daily.pdf">PDF</a></span>
+</div></div></body></html>
