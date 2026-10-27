@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Tuesday, October 27, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Tuesday, October 27, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Anthropic filed to go public, and the filing is stranger than the headline: $16.3bn of revenue in half a year, an $80.7bn loss that is almost entirely bookkeeping, and no price attached to any of it.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic files to go public: $16.3bn in half a year, and an $80.7bn loss that is mostly bookkeeping</h2>
+<p class="field">What happened</p><p>Anthropic filed its <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm">Form S-1</a> on Monday, applying to list Class A stock on the Nasdaq Global Select Market under the symbol “ANT.” Revenue for the six months to June was <strong>$16,286m</strong>, against $1,163m a year earlier. The headline <strong>net loss of $80,748m</strong> is almost entirely a non-cash mark: $72,388m is the change in fair value of convertible notes, derivatives and SAFEs. Strip that out and the operating loss was <strong>$693m</strong>, down from $2,135m, with adjusted operating income of $1,618m and $131,651m of cash and short-term investments.</p>
+<p class="field">What it means</p><p>The convertible-note charge is the tell: a company whose own paper has appreciated so violently that accounting for it swamps the business underneath — a business close to breaking even. Two things to hold. The filing names no price, no share count and no valuation, so every trillion-dollar figure circulating is outside the document. And the compute commitments, the number everyone wants, render <em>blank</em> in the filed text; Fortune's own two pieces put the total at $542–567bn and at $630bn. We are not printing one until it is sourceable.</p>
+<p class="field">Watch next</p><p>A price range and share count in an amended filing. The risk factors already concede the company “may not achieve or sustain profitability in the future.”</p>
+</div>
+<div class="item">
+<h2>Microsoft opens a “Voluntary Exit Offer” in four countries — and declines to say how many</h2>
+<p class="field">What happened</p><p>Chief people officer Amy Coleman <a href="https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/">announced</a> on Monday that Microsoft is offering a Voluntary Exit Offer to employees at <strong>Level 70 and below</strong> on selected teams in the United States, Canada, India and the United Kingdom. Coleman wrote that it “gives eligible employees who may be considering a future outside the company a new choice,” adding: “The Voluntary Exit Offer is new for us.” Microsoft's own post gives <em>no number</em>. The widely repeated figure of about 60,000 eligible staff comes from Bloomberg and Business Insider, not Microsoft, which employed approximately 223,000 people at its 30 June year end.</p>
+<p class="field">What it means</p><p>If 60,000 is right, that is roughly a quarter of the company invited to leave — a layoff with the decision handed to the employee. Microsoft&#x27;s silence on the number is the interesting part: a voluntary programme lets it shrink without announcing a target. And “Level 70 and below” is a far wider net than the “VP level and below” gloss in circulation.</p>
+<p class="field">Watch next</p><p>Whether Microsoft discloses take-up. A reported December decision window with 31 December exits is unsupported by anything on the record.</p>
+</div>
+<div class="item">
+<h2>OpenAI says its models broke three open problems, then handed them to unpaid referees</h2>
+<p class="field">What happened</p><p>OpenAI <a href="https://thenextweb.com/news/openai-exponential-time-hypothesis-false-kakeya-yang-mills">announced</a> on Monday that internal models produced three results it is now routing to academics. In computer science it claims a <strong>refutation of the Exponential Time Hypothesis</strong>, found on 16 October and checked in the Lean proof language on 17 October. It also claims a proof of the local smoothing conjecture in every dimension, and an existence proof for certain four-dimensional quantum field theories including QCD — territory of a Clay Millennium problem. Russell Impagliazzo and Ramamohan Paturi, who proposed ETH, and MIT's Ryan Williams will organise scrutiny. They signed no NDAs, are unpaid, and said flatly: “Our involvement should not be taken as certification of the claim.”</p>
+<p class="field">What it means</p><p>None of this is peer-reviewed, and the reviewers say so in the announcement itself. Treat it as a claim with a date attached. The structural problem they raise is the one worth watching: if credit accrues to whoever publishes first or holds the most compute rather than to whoever verifies, the incentive to check anything collapses.</p>
+<p class="field">Watch next</p><p>Whether OpenAI releases the raw ETH working, as Williams says it agreed to.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Seoul snaps back 3.09% and trips a circuit breaker — but this is a rebound, not a record</h2>
+<p class="field">What happened</p><p>The Kospi <a href="https://www.koreajoongangdaily.com/business/kospi-jumps-over-3-on-gains-in-tech-shares-renewed-ai-optimism/12941081">closed up 168.87 points, or 3.09%, at 5,638.34</a> on Tuesday, with SK hynix <strong>+5.18% to ₩1,340,000</strong> and Samsung Electronics <strong>+4.23% to ₩222,000</strong>. The intraday move was wilder: up 4.42% at 5,711.22 by 10:20 a.m., enough to <a href="https://www.koreajoongangdaily.com/business/kospi-surge-triggers-buyside-trading-curb/12940110">trigger a buy-side sidecar</a> that suspended program trading for five minutes from 10:13 a.m. — the mechanism fires when the Kospi 200 futures index rises 5% or more for at least a minute. Korean coverage frames the day as reviving appetite after a recent pullback; neither main outlet calls it a record.</p>
+<p class="field">What it means</p><p>Monday&#x27;s memory split — Samsung down, SK hynix up — resolved into both rising hard once Anthropic&#x27;s filing landed. That is the AI trade reasserting itself through the memory names, the cleanest public proxy for whether the buildout gets paid for. The gap between the 4.42% print and the 3.09% close matters more than either number: the index gave back a third of its gain inside the session, which is what a recovery looks like, not a melt-up.</p>
+<p class="field">Watch next</p><p>SK hynix publishes preliminary third-quarter results on Wednesday 28 October.</p>
+</div>
+<div class="item">
+<h2>SpaceX&#x27;s $40bn GPU lease is real, and it is Apollo — the filing finally exists</h2>
+<p class="field">What happened</p><p>SpaceX filed an <a href="https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm">8-K on Monday</a> disclosing a <strong>binding commitment letter</strong> for a master finance lease with “an entity managed by Apollo Global Management, Inc.” Aggregate principal payments across the lease schedules are expected to total <strong>approximately $40bn</strong>, over terms of “approximately five to five and one-quarter years,” closing before year end with schedules commencing in the first half of 2027. The filing describes the assets only as “graphics processing unit pods and related equipment” — no chip vendor, no product line. The phrase “largest committed GPU financing” does not appear in it, and the 8-K carries no exhibits, so no release and no executive quotes.</p>
+<p class="field">What it means</p><p>This closes a gap we flagged on Sunday, when Musk said the deal was done, Bloomberg reported talks ongoing, and no filing mentioned it. Now the structure is on the record: not debt on SpaceX&#x27;s balance sheet but an operating lease from an Apollo vehicle that owns the hardware. That is easier to say yes to and harder to see through, and it is the template the rest of the buildout will copy.</p>
+<p class="field">Watch next</p><p>Whether closing happens before 31 December, and whether Apollo syndicates the exposure. The 8-K is not yet in EDGAR&#x27;s full-text index, so a search for it still comes back empty.</p>
+</div>
+<div class="item">
+<h2>Cadence raises the year to 21% growth on a record $8.2bn backlog</h2>
+<p class="field">What happened</p><p>Cadence <a href="https://www.sec.gov/Archives/edgar/data/0000813672/000081367226000116/cdns10262026ex9901.htm">reported</a> third-quarter revenue of <strong>$1.633bn, up 22%</strong> from $1.339bn, with non-GAAP diluted earnings of $2.11 a share against GAAP $1.05. Backlog reached a record <strong>$8.2bn</strong>. Full-year guidance went up to revenue of $6.387–6.417bn, or 21% growth at the midpoint, with non-GAAP earnings of $8.37–8.43. Chief executive Anirudh Devgan said Cadence is “exceptionally well positioned to capitalize on the transformational Agentic AI opportunity”; finance chief John Wall cited “strong double-digit growth across all product categories.”</p>
+<p class="field">What it means</p><p>Design software is the least cyclical way to own the chip cycle: Cadence gets paid when customers <em>start</em> designs, years before anything ships. A record backlog with 21% growth guided means the pipeline for 2027 and 2028 silicon is full, a more durable signal than any single fab's capex. The GAAP operating margin fell to 26.2% from 31.8%, so the growth is not free.</p>
+<p class="field">Watch next</p><p>Whether the Maestro AI design models convert into seat growth rather than discounts.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Meta prices $37.5bn, with another $60bn queued for 2027</h2>
+<p class="field">What happened</p><p>Meta <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526432549/d382225dfwp.htm">priced two concurrent offerings</a> on Monday night: <strong>40,000,000 Class A shares at $625.00</strong>, upsized to $25.0bn, against a last reported sale of $630.56; and <strong>250,000,000 depositary shares at $50.00</strong> — $12.5bn — each a twentieth of a 6.50% Series A mandatory convertible preferred share, converting in August 2029. Settlement is 29 October; Morgan Stanley and Goldman Sachs are joint book-runners. A separate <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431036/d116268dfwp.htm">26 October prospectus</a> describes an additional <strong>$60bn at-the-market programme</strong> in Class C stock — but Meta “has not entered into any agreement” for it and it “is not expected to commence until the first quarter of 2027.”</p>
+<p class="field">What it means</p><p>The ~$95bn total doing the rounds is arithmetic, not a Meta figure, and two-thirds of it is a programme that does not exist yet. What is real is $37.5bn raised at a discount to Friday's price, by a company with no financing problem, to fund capex it <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm">guided</a> on 21 October to “$135-145 billion, narrowed from our prior outlook of $130-145 billion.” Equity is the expensive way to fund a data centre. Choosing it anyway says Meta would rather dilute than carry the obligation itself.</p>
+<p class="field">Watch next</p><p>Settlement Thursday. The ~7% share drop being attributed to this was actually 22 October, on earnings; Monday&#x27;s fall was about 2%.</p>
+</div>
+<div class="item">
+<h2>EQT buys Range Resources all-stock, building a $50bn gas pure-play</h2>
+<p class="field">What happened</p><p>EQT <a href="https://ir.eqt.com/investor-relations/news/news-release-details/2026/EQT-Announces-Strategic-Acquisition-of-Range-Resources-Creating-Americas-Undisputed-Natural-Gas-Champion/default.aspx">agreed</a> on Monday to acquire Range Resources, exchanging <strong>0.987 EQT shares for each Range share</strong>. EQT holders will own about 73% of the combined company, Range holders 27%, at a pro forma enterprise value above <strong>$50bn</strong> — the release states no dollar deal price, so that is enterprise value, not a headline price. The company would produce more than 9 Bcfe a day across nearly 3 million net acres with over 30 years of inventory, at an unlevered free-cash-flow breakeven below $2/MMBtu. EQT targets about $325m of annual synergies within two years and more than $600m long term.</p>
+<p class="field">What it means</p><p>This is the AI buildout showing up in the gas patch. Data centres need firm power, firm power in Appalachia means gas, and scale is how you sign twenty-year supply contracts with hyperscalers rather than selling into the spot market. The sub-$2 breakeven is the real asset: it means the combined company makes money at prices that would close most of its competitors.</p>
+<p class="field">Watch next</p><p>Close expected in the first quarter of 2027, subject to antitrust review and both shareholder votes. Range chief executive Dennis Degner joins EQT&#x27;s board.</p>
+</div>
+<div class="item">
+<h2>Wall Street rallies into a Fed meeting almost nobody expects to move</h2>
+<p class="field">What happened</p><p>US stocks <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-26-2026">closed higher</a> on Monday as the Anthropic filing revived the AI trade: Dow <strong>52,361.52 (+0.28%)</strong>, S&P 500 <strong>7,676.80 (+0.70%)</strong>, Nasdaq <strong>26,169.38 (+0.82%)</strong>, Russell 2000 +0.43%. The curve did something odd — the two-year rose 3.0bp to 4.712% while the 30-year fell 1.8bp to 5.297%, with the 10-year at 4.984%. Oil fell, WTI to $101.40 and Brent to $115.20; gold futures gained 0.44% to $4,025.40. Kyle Rodda of Capital.com put the odds plainly: “The markets are only implying a 10% chance of a hike at this meeting.”</p>
+<p class="field">What it means</p><p>A front end backing up while the long end eases is the market pricing a central bank still tightening but close to finished. Remember the direction of travel: the Fed <em>raised</em> to 3.75–4.00% on 16 September, 12–0, under Kevin Warsh. At 10% implied odds the statement language matters far more than the decision, and a 30-year above 5.25% is the constraint on everything in the sections above.</p>
+<p class="field">Watch next</p><p>The FOMC statement on Wednesday 28 October, then the Bank of Japan on 29–30 October with its policy rate at 1.25%.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>China&#x27;s AI and chip listings have already crashed: STAR 50 down 40%, about $480bn gone</h2>
+<p class="field">What happened</p><p>While Seoul rallied, Reuters <a href="https://kathmandupost.com/world/2026/10/27/in-china-the-ai-bubble-has-already-burst">reports</a> that China's AI and semiconductor complex has broken outright. The <strong>STAR 50 index is down 40% in under four months</strong>, erasing roughly <strong>$480bn</strong> of market value, with the CSI 300 off about 20% from its June peak — against a Nasdaq just 6% below a record set three weeks earlier. Goldman Sachs puts AI stocks at 42% of China's market capitalisation and 57% of turnover. The STAR 50 now trades near 100 times trailing earnings, down from a peak near 250. Unitree, whose retail offering was 8,000 times oversubscribed, has halved since its August debut. MetaX and Moore Threads, up 700% and 400% on debut, have each lost half their value since July.</p>
+<p class="field">What it means</p><p>This is what happens to a venture pipeline when the exit window shuts mid-queue. Hong Hao of Lotus Asset Management said it directly: “What&#x27;s happening is now going to put a stop for many of the companies trying to get themselves listed.” Beijing fund manager Dong Baozhen was blunter — “And now we see the bubble bursting.” The Chinese and American AI trades have now fully decoupled in direction, which is new, and it is worth asking which one is early.</p>
+<p class="field">Watch next</p><p>Whether STAR-market IPO approvals slow. Wang Zhuo of Shanghai Zhuozhu expects the sector to “eventually end up in a price war.”</p>
+</div>
+<div class="item">
+<h2>Bedrock Robotics raises $600m at $4.1bn to put autonomy in excavators, not cars</h2>
+<p class="field">What happened</p><p>Bedrock Robotics, founded in 2024, <a href="https://techcrunch.com/2026/10/26/this-startups-self-driving-excavators-help-dig-up-600m-in-new-funding/">announced</a> a <strong>$600m Series C at a $4.1bn valuation</strong>, co-led by CapitalG and Emergence Capital. New investors include the US Innovative Technology Fund, Bessemer and Temasek; existing backers 8VC, Georgian, Valor Equity, Xora, Eclipse, Perry Creek and Nvidia also participated, taking the company to nearly $1bn raised in two years. Deployments cited include a Nevada water treatment plant and a 1.2 million-cubic-yard civil sitework project with Zachry Construction. Chief executive Boris Sofman said “fully autonomous excavators can perform real work of value” and that “the next challenge is delivering that capability to more contractors.” Revenue was not disclosed.</p>
+<p class="field">What it means</p><p>Autonomy has quietly moved to where the economics are easy. An excavator works a fenced site at walking pace with no pedestrians and a contractor who can price a labour hour exactly — none of the problems that have cost robotaxis a decade. Sofman ran Waymo&#x27;s trucking programme, which is the relevant credential: he is applying self-driving money to a problem with a fraction of the liability.</p>
+<p class="field">Watch next</p><p>Whether any customer converts a pilot into a fleet order. No revenue figure means no unit economics to check yet.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Ninth Circuit throws out the DOJ&#x27;s bid to impound California ballots — on jurisdiction, not merits</h2>
+<p class="field">What happened</p><p>A Ninth Circuit panel <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/26/26-7070.pdf">ruled</a> on Monday in <em>United States v. State of California</em>, No. 26-7070, granting the County's motion to dismiss the government's appeal <strong>for lack of appellate jurisdiction</strong> and denying its emergency injunction motion as moot. This is a jurisdictional dismissal, not a ruling on who was right. The per curiam opinion found the claimed emergency “at least in part, is a self-constructed one”: the government filed without seeking urgent relief, repeatedly asked for a ruling by 3 November, then demanded one by the next day. Judge Sanchez noted the proposed order would have sequestered “up to 20,000 ballots” — of more than 331,000 the County had processed since 5 October.</p>
+<p class="field">What it means</p><p>Two concurrences did the work the dismissal avoided. Judge Bennett would have denied on the merits: neither the Elections Clause nor 18 U.S.C. § 611 clearly preempts California's procedures. Judge Sanchez held that <em>Purcell</em>, the doctrine against late changes to election rules, independently bars relief because voting had begun. Judge Bumatay dissented. Careful with the numbers — the government's list of “over 20,000 'likely' noncitizens” counts people, not ballots.</p>
+<p class="field">Watch next</p><p>The district court&#x27;s restraining-order hearing was set for Tuesday 27 October in 2:26-cv-12025.</p>
+</div>
+<div class="item">
+<h2>The DOJ sues to stop Alaska certifying a Senate result, over a candidate with the same name</h2>
+<p class="field">What happened</p><p>The Justice Department's suit, <a href="https://assets.aclu.org/live/uploads/2026/10/006-1-Roy-et-al-Proposed-MTD.pdf">docketed</a> as <em>United States v. State of Alaska</em>, No. 3:26-cv-00376-SLG, was filed 22 October against the state and elections director Carol Beecher. Pleaded under the National Voter Registration Act, it asks the court to block certification of any result affected by voter confusion, pending investigation — the theory being that a second Republican named Daniel J. Sullivan on the ballot may cost incumbent Senator Dan Sullivan his seat. Nothing has been ruled on and no hearing is scheduled. Asked about it on CBS's <em>Face the Nation</em>, Attorney General Todd Blanche said: “I will never, ever, ever talk about communications that I have with the president of the United States.”</p>
+<p class="field">What it means</p><p>President Trump told reporters on 23 October, “I&#x27;m the one that said do it.” The structural problem is that the Alaska Supreme Court ruled in June that the second Sullivan had to be on the ballot — so the federal government is asking a court to void a result produced by a state court&#x27;s reading of state law. Senator Lisa Murkowski broke with her own party&#x27;s Justice Department: “The Department of Justice should never have filed this lawsuit.”</p>
+<p class="field">Watch next</p><p>Rulings on two sets of intervention motions and a motion to dismiss. Republicans hold 53 of 100 seats with 35 up.</p>
+</div>
+<div class="item">
+<h2>A correction to the election-litigation map, because the circulating version is wrong</h2>
+<p class="field">What happened</p><p>Three cases are being conflated. In the NAACP challenge to federal activity at the polls, expedited discovery was granted <strong>in part</strong> on 21 October, and on 23 October the case was <a href="https://www.democracydocket.com/cases/federal-election-interference-at-the-polls-challenge-naacp/">consolidated</a> with the LULAC and DSCC cases, with LULAC as lead. The separate NAACP records case against Assistant Attorney General Harmeet Dhillon had its <strong>restraining order denied</strong> on 22 October. In <em>DSCC v. Trump</em>, 1:26-cv-01114 before Judge Nichols, the 13 September injunction against the USPS rule stands; the newer suit before Judge Boasberg has an expedited-discovery request that remains <strong>requested, not granted</strong>.</p>
+<p class="field">What it means</p><p>The difference between “discovery granted” and “granted in part in a different case” is the difference between a government on the back foot and one that has conceded nothing. Reported deadlines of 26, 28 and 29 October for DHS records could not be verified against any docket this cycle: CourtListener, which served RECAP dockets, now blocks automated access, so the primary route is gone.</p>
+<p class="field">Watch next</p><p>The consolidated LULAC case is the one to follow. Separately, the 11 December funding cliff saw no movement in Congress in the past day.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel votes, and the turnout is the fastest in 45 years</h2>
+<p class="field">What happened</p><p>Polls close at 10 p.m. local, with about 7.3 million eligible voters choosing 120 Knesset members on a 3.25% threshold of total valid votes. The Central Elections Committee reported <strong>16.68% turnout at 10 a.m., more than 1.2 million votes</strong>, against 15.90% at the same hour in 2022 — the highest at that hour since 1981, though that comparison is the outlets' analysis of CEC data, not a CEC statement. Four parties have filed complaints over ballot slips reported missing, defaced or turned face-down. <a href="https://www.timesofisrael.com/liveblog-october-27-2026/">Police separately arrested three men</a> in southern Bedouin communities over an alleged scheme to bribe people to vote Ra'am — arrests and allegations, no charges.</p>
+<p class="field">What it means</p><p>High early turnout is the one variable neither bloc could poll for, since surveys were banned from Friday and the last published figure had it at 52–50. Finance minister Bezalel Smotrich claimed the surge reflects “unusually high voting rates in the Arab sector and left-wing strongholds” — the CEC publishes no breakdown by community, so nothing in the official figures supports that. Yashar called the ballot-slip incidents “a systematic and deliberate attempt to sabotage the democratic process”; the CEC has answered none of the complaints.</p>
+<p class="field">Watch next</p><p>Exit polls after 10 p.m. local. The final tally is expected by 30 October and official results <a href="https://votes26.bechirot.gov.il/">published by 4 November</a>; the first nominee then gets 28 days plus one 14-day extension.</p>
+</div>
+<div class="item">
+<h2>Flávio Bolsonaro drops the annulment plan — for now — and nothing has actually been filed</h2>
+<p class="field">What happened</p><p>Flávio Bolsonaro <a href="https://www.gazetadopovo.com.br/republica/flavio-desiste-anular-eleicao-pedira-cassacao-chapa-lula/">abandoned</a> his plan to seek annulment of Sunday's presidential vote, announcing on Monday that he will instead pursue <em>cassação</em> of the Lula–Alckmin ticket for abuse of economic power. <a href="https://www.poder360.com.br/poder-eleicoes-2026/flavio-desiste-de-pedir-anulacao-da-vitoria-de-lula-nas-urnas/">Poder360 reports</a> he gave it up “por enquanto” — for now. In a video he said: “Então eu vou pedir sim a cassação da chapa do Lula por todos os abusos que ele cometeu.” Critically, <strong>no petition has been filed</strong> — the TSE's own news index carries nothing dated 26 or 27 October. He has not recognised Lula's victory; he said only that the election is over.</p>
+<p class="field">What it means</p><p>Yesterday we flagged the annulment as an announced intention rather than a case. It has been withdrawn without ever becoming one — the grounds, Justice Zanin's order extending voting by two hours, were awkward given that Flávio's own campaign had also sought one. Note the asymmetry in what is live: Lula's campaign <a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-entra-com-acao-no-tse-para-cassar-chapa-de-flavio">did file</a> at the TSE on 21 October to cancel the Flávio–Gaspar ticket's registration, before Justice Cueva, with no deadline for a decision.</p>
+<p class="field">Watch next</p><p>Whether any cassation petition is actually docketed at the TSE. A claim of 20 requests already filed rests on one outlet and does not withstand checking.</p>
+</div>
+<div class="item">
+<h2>Rama&#x27;s anti-protest package, itemised: fines in lek, a police register, and three new crimes</h2>
+<p class="field">What happened</p><p>Edi Rama's <a href="https://telegraf.al/politike/fjala-e-kryeministrit-edi-rama-ne-prezantimin-e-paketes-se-re-kunder-dhunes-dhe-anarkise-urbane/">speech presenting the package</a> on 25 October sets out fines of <strong>10,000–100,000 lek</strong> (about €100–1,000) per participant for joining an unauthorised gathering or ignoring a dispersal order, rising to <strong>up to 500,000 lek</strong> where refusal to disperse is combined with concealing identity. It creates a “Special Electronic Register” of people referred or under investigation for offences against the state, and lets police demand immediate deletion of posts inciting violence. Three new criminal offences: incitement to violence at a protest including online; concealing identity; and deepfake video. It remains a <strong>proposal, not law</strong> — no vote, no adoption, not even a date for parliament.</p>
+<p class="field">What it means</p><p>The up-to-500,000 figure reported as a flat fine on Sunday is the top of a band, attached to a specific combination of conduct. And one category correction matters: remaining at a violent scene after a police warning is an <em>administrative</em> fine in Rama's text, not a crime. He blamed “foreign hands” and referred to the opposition leader without naming him — attributions, not findings.</p>
+<p class="field">Watch next</p><p>State Police <a href="https://www.arbresh.info/shqiperi/bilanci-i-protestave-270-te-arrestuar-344-te-proceduar-9-police-te-pezulluar/">published a 13-day tally</a> on 26 October: 270-plus arrested, 344 criminally processed, 200-plus police injured, nine officers suspended.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm" target="_blank" rel="noopener">Anthropic, PBC — Form S-1 (SEC)</a></li>
+<li><a href="https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/" target="_blank" rel="noopener">Microsoft — Introducing a Voluntary Exit Offer</a></li>
+<li><a href="https://thenextweb.com/news/openai-exponential-time-hypothesis-false-kakeya-yang-mills" target="_blank" rel="noopener">OpenAI&#x27;s claimed ETH refutation — The Next Web</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-jumps-over-3-on-gains-in-tech-shares-renewed-ai-optimism/12941081" target="_blank" rel="noopener">Kospi closes up 3.09% — Korea JoongAng Daily</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-surge-triggers-buyside-trading-curb/12940110" target="_blank" rel="noopener">Korea Exchange triggers buy-side sidecar — Korea JoongAng Daily</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm" target="_blank" rel="noopener">SpaceX — Form 8-K, Apollo master finance lease (SEC)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000813672/000081367226000116/cdns10262026ex9901.htm" target="_blank" rel="noopener">Cadence Q3 2026 results (SEC exhibit)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526432549/d382225dfwp.htm" target="_blank" rel="noopener">Meta — Free Writing Prospectus, final pricing (SEC)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431036/d116268dfwp.htm" target="_blank" rel="noopener">Meta — Free Writing Prospectus, $60bn ATM programme (SEC)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm" target="_blank" rel="noopener">Meta Q3 2026 results and capex outlook (SEC exhibit)</a></li>
+<li><a href="https://ir.eqt.com/investor-relations/news/news-release-details/2026/EQT-Announces-Strategic-Acquisition-of-Range-Resources-Creating-Americas-Undisputed-Natural-Gas-Champion/default.aspx" target="_blank" rel="noopener">EQT to acquire Range Resources — EQT Investor Relations</a></li>
+<li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-26-2026" target="_blank" rel="noopener">Stock market today, 26 October — TheStreet</a></li>
+<li><a href="https://techcrunch.com/2026/10/26/this-startups-self-driving-excavators-help-dig-up-600m-in-new-funding/" target="_blank" rel="noopener">Bedrock Robotics raises $600m — TechCrunch</a></li>
+<li><a href="https://kathmandupost.com/world/2026/10/27/in-china-the-ai-bubble-has-already-burst" target="_blank" rel="noopener">In China, the AI bubble has already burst — Reuters</a></li>
+<li><a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/26/26-7070.pdf" target="_blank" rel="noopener">United States v. State of California, No. 26-7070 (9th Cir.)</a></li>
+<li><a href="https://assets.aclu.org/live/uploads/2026/10/006-1-Roy-et-al-Proposed-MTD.pdf" target="_blank" rel="noopener">United States v. State of Alaska, No. 3:26-cv-00376-SLG (filing)</a></li>
+<li><a href="https://www.cbsnews.com/news/todd-blanche-attroney-general-face-the-nation-transcript-10-25-2026/" target="_blank" rel="noopener">Todd Blanche on Face the Nation, 25 October — CBS News</a></li>
+<li><a href="https://www.democracydocket.com/cases/federal-election-interference-at-the-polls-challenge-naacp/" target="_blank" rel="noopener">NAACP election-interference case docket — Democracy Docket</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog-october-27-2026/" target="_blank" rel="noopener">Israel election liveblog, 27 October — The Times of Israel</a></li>
+<li><a href="https://votes26.bechirot.gov.il/" target="_blank" rel="noopener">Israel Central Elections Committee results site</a></li>
+<li><a href="https://time.com/article/2026/10/27/israel-netanyahu-eisenkot-knesset-election-explainer/" target="_blank" rel="noopener">Israel election explainer — Time</a></li>
+<li><a href="https://www.gazetadopovo.com.br/republica/flavio-desiste-anular-eleicao-pedira-cassacao-chapa-lula/" target="_blank" rel="noopener">Flávio desiste de anular a eleição — Gazeta do Povo</a></li>
+<li><a href="https://www.poder360.com.br/poder-eleicoes-2026/flavio-desiste-de-pedir-anulacao-da-vitoria-de-lula-nas-urnas/" target="_blank" rel="noopener">Flávio desiste de pedir anulação — Poder360</a></li>
+<li><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/campanha-de-lula-entra-com-acao-no-tse-para-cassar-chapa-de-flavio" target="_blank" rel="noopener">Campanha de Lula entra com ação no TSE — Agência Brasil</a></li>
+<li><a href="https://telegraf.al/politike/fjala-e-kryeministrit-edi-rama-ne-prezantimin-e-paketes-se-re-kunder-dhunes-dhe-anarkise-urbane/" target="_blank" rel="noopener">Fjala e Kryeministrit Edi Rama — full text of the package speech</a></li>
+<li><a href="https://www.arbresh.info/shqiperi/bilanci-i-protestave-270-te-arrestuar-344-te-proceduar-9-police-te-pezulluar/" target="_blank" rel="noopener">Bilanci i protestave: 270 të arrestuar — Arbresh</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-27-daily.pdf">PDF</a></span>
+</div></div></body></html>
