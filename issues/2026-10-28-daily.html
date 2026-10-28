@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Wednesday, October 28, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Wednesday, October 28, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">SK hynix booked the first 100-trillion-won quarter in Korean corporate history at an 80% operating margin and said its memory is effectively sold out to 2029 — and the Kospi rose 6.6%.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nvidia and AMD buy into the customer</h2>
+<p class="field">What happened</p><p>Meta's <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431036/d116268dfwp.htm">free-writing prospectus of 26 October</a> names Nvidia, Advanced Micro Devices and Broadcom as “Cornerstone Investors” who have indicated an interest in buying up to an aggregate of $5.0 billion of Class A stock in its offering. The filing says the indications are not binding and gives no per-company split. The companies filled that in themselves on Tuesday: Nvidia's <a href="https://www.globenewswire.com/news-release/2026/10/27/3388683/0/en/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth.html">own release</a> says it will invest $3 billion, <a href="https://www.stocktitan.net/news/AMD/amd-and-meta-advance-strategic-partnership-to-power-meta-s-w7j6r9jk2soy.html">AMD's</a> says $1 billion. No Broadcom figure exists in any filing or release. Alongside the money, Meta will expand deployment of Nvidia's Vera Rubin systems, Vera CPUs, Spectrum-X Ethernet and BlueField-4; AMD's Helios racks are installed and being tested at Meta, with a custom Instinct-based accelerator to follow.</p>
+<p class="field">What it means</p><p>This is the circular financing that has been making credit analysts twitchy, now written into a prospectus: the chip vendors are funding the buyer of the chips. Note what it is not. An indication of interest is not a purchase, “up to” is not a flat amount, and the one number everybody is quoting for Broadcom was produced by subtraction.</p>
+<p class="field">Watch next</p><p>Whether the indications convert when the offering settles. Nvidia reports fiscal Q3 in November.</p>
+</div>
+<div class="item">
+<h2>GSA cuts a 40% Claude deal days before the $1 offer lapses</h2>
+<p class="field">What happened</p><p>The General Services Administration <a href="https://fedscoop.com/gsa-onegov-deal-claude-anthropic/">announced on Tuesday</a> an expanded OneGov agreement with Anthropic giving federal agencies a 40% discount on token-based usage across Claude models, charged on consumption with no minimum purchase. GSA said the model “scales with actual use” and that it “will renew agreements where appropriate.” The timing is the story: Anthropic's previous $1-per-user government offer expires on 31 October. Claims circulating that the deal extends to state, local and tribal governments, or implies $1bn of savings, appear in an aggregator and not in GSA's own account.</p>
+<p class="field">What it means</p><p>The $1 offers were customer acquisition; this is the price that follows. A 40% consumption discount with no floor is a much more ordinary piece of procurement, and it tells you roughly what the vendors think federal usage is now worth holding.</p>
+<p class="field">Watch next</p><p>Whether OpenAI and Google renew their own OneGov terms before 31 October.</p>
+</div>
+<div class="item">
+<h2>DeepMind&#x27;s Genie 4 generates sound as well as worlds</h2>
+<p class="field">What happened</p><p>Google DeepMind <a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">announced Genie 4</a> on Tuesday, its next real-time interactive world model and, per the post, “our first real-time world model to generate audio natively” — music, ambient noise and interactive dialogue generated simultaneously with the scene. Gemini models help hold scenes coherent; users steer with keyboard controls and text prompts. It ships as a research preview for trusted testers, coming to Google AI Ultra subscribers via Project Genie and to early-access partners through the Gemini API. DeepMind concedes that “visual details and object permanence can still shift or drift over time.” Widely repeated claims of a two-minute coherence window, double Genie 3, appear nowhere in the post.</p>
+<p class="field">What it means</p><p>Audio is the part that matters. A world model that only renders pixels is a demo; one that renders a soundscape in step with them is the beginning of a usable simulator for robotics and game development.</p>
+<p class="field">Watch next</p><p>General availability, and whether anyone outside the trusted-tester set measures the drift.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>SK hynix: 80% operating margin, and memory sold out to 2029</h2>
+<p class="field">What happened</p><p>SK hynix <a href="https://news.skhynix.com/en/q3-2026-business-results/">reported third-quarter revenue of KRW 104,615.5 billion</a> — 104.6 trillion won, up 32% on the quarter and 328% on the year — with operating profit up 632% year on year and a company-stated operating margin of 80%, against 76% in Q2 and 47% a year ago. Net profit was KRW 39,775.6 billion, down 58% sequentially. It has long-term agreements with 14 major customers covering more than half of its 2027 and 2028 capacity, says HBM4 will pass HBM3E in volume and revenue in Q4, and expects demand to exceed supply through 2030. DRAM marketing vice-president Park Jun-deok <a href="https://en.sedaily.com/finance/2026/10/28/sk-hynix-says-d-ram-hbm-supply-sold-out-through-2029">said that over the next three years</a> “virtually all of our D-Ram and high-bandwidth memory volumes are effectively sold out.” Shareholder returns for 2026 come to roughly KRW 100 trillion.</p>
+<p class="field">What it means</p><p>An 80% operating margin is not a semiconductor number; it is a toll-booth number. Contracts covering half of two years&#x27; capacity have turned a famously cyclical business into something closer to an annuity, and handed the cost of the AI buildout straight to the hyperscalers. The 58% drop in net profit is the one line that doesn&#x27;t fit; it sits below the operating line.</p>
+<p class="field">Watch next</p><p>Samsung&#x27;s full Q3 results, and whether Micron&#x27;s next guide confirms the sold-out picture.</p>
+</div>
+<div class="item">
+<h2>ASM International raises its 2027 outlook by a quarter</h2>
+<p class="field">What happened</p><p>The Dutch deposition-equipment maker <a href="https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---28th-october-2026">reported Q3 revenue of EUR 1.16 billion</a> against about EUR 1.11 billion expected, adjusted net income of EUR 315.4 million against EUR 206.2 million a year earlier, and a 52% gross margin. It guided Q4 to EUR 1.23 billion and raised its 2027 revenue outlook to more than EUR 5.7 billion at constant currency, from more than EUR 4.6 billion — an uplift of roughly 24% — and added a buyback of up to EUR 300 million. These figures reach us through one aggregator's relay of the company release, not a page we fetched.</p>
+<p class="field">What it means</p><p>Equipment guidance is the leading indicator memory results are not. Lifting a 2027 number by a quarter, more than a year out, says ASMI&#x27;s customers have already committed the capacity plans SK hynix just described from the other end.</p>
+<p class="field">Watch next</p><p>ASML&#x27;s and Lam&#x27;s next capex commentary, to see whether the 2027 step-up is industry-wide.</p>
+</div>
+<div class="item">
+<h2>NXP shows what the rest of the chip industry looks like</h2>
+<p class="field">What happened</p><p>NXP <a href="https://www.sec.gov/Archives/edgar/data/0001413447/000141344726000057/nxp3q26exhibit991.htm">reported Q3 revenue of $3,786 million</a>, up 19% year on year and 8% sequentially, with non-GAAP earnings of $4.20 a share and a Q4 guide midpoint of $3,850 million. Industrial and IoT rose 39% and Comms Infrastructure 54%, but Automotive — still more than half the business — managed 13% and Mobile fell 4%. The shares fell 7.4% after hours. <a href="https://www.sec.gov/Archives/edgar/data/0001137789/000113778926000300/stxq12027pressreleasefinan.htm">Seagate</a> did better on paper and fared no better: revenue of $4,233 million against $2,629 million a year earlier, a December-quarter guide of $4.8 billion, and a 6% fall.</p>
+<p class="field">What it means</p><p>Two things are happening at once. Anything attached to an AI datacentre is repriced as scarce. Everything else — cars, phones, industrial — is a normal cyclical business having a decent quarter, and the market has stopped paying for decent quarters.</p>
+<p class="field">Watch next</p><p>Automotive commentary from Infineon and STMicro, and whether the memory squeeze starts raising costs for the analog names.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The Fed decides this afternoon, into hot inflation and a six-day-old election</h2>
+<p class="field">What happened</p><p>The FOMC's two-day meeting ends today, with the statement at 2:00pm Eastern and Chair Kevin Warsh's press conference half an hour later — after this brief. The target range is <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm">3.75–4.00%</a> following September's quarter-point increase, decided 12–0. The data since has not helped: September CPI came in at <a href="https://www.bls.gov/news.release/cpi.nr0.htm">3.7% year on year and 0.6% on the month</a>, core at 2.6%, both above expectations. The Conference Board's consumer confidence index <a href="https://www.conference-board.org/topics/consumer-confidence">rose to 91.7</a> from a revised 84.2, its first gain in four months, though inflation expectations stayed at 5.8%. Futures showed a hold as overwhelmingly likely.</p>
+<p class="field">What it means</p><p>A central bank that was raising rates in September, into an election a week away, with inflation accelerating, has almost no comfortable options. Standing still is the one that requires the least explanation, which is usually a good guide to what happens.</p>
+<p class="field">Watch next</p><p>The statement and Warsh at 2:00 and 2:30pm ET. September PCE lands Thursday. The Bank of Japan decides Friday from 1.25%, and the Fed's next projections come at the <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">8–9 December meeting</a>.</p>
+</div>
+<div class="item">
+<h2>A narrow rally, and crude takes the refiners down with it</h2>
+<p class="field">What happened</p><p>Tuesday closed with the <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026">Nasdaq Composite up 1.18% at 26,477.81</a> and the S&P 500 up 0.60% at 7,722.60, while the Dow managed 0.03% — breadth was poor and the megacaps did the lifting, Broadcom up 4% and CoreWeave 7.9%. Treasury yields barely moved: <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202610">4.70% at two years, 4.99% at ten, 5.30% at thirty</a>. Front-month Brent <a href="https://energynewsbeat.co/crude-oil/illustration-not-a-news-photo-deal-or-escalate-u-s-oil-back-under-100-one-week-before-the-election/">settled at $113.88, down 1.67%</a> and December WTI at $99.90, and the refiners took the damage — Valero down 9.4%, Marathon Petroleum 7.5%, Phillips 66 7.3%. Boeing fell 10.7% on a $116 million loss. Asia then ran with SK hynix: the Kospi <a href="https://www.ajupress.com/view/20261028153342778">closed at 6,012.44, up 6.63%</a>, its first close above 6,000 in ten sessions.</p>
+<p class="field">What it means</p><p>A 0.6% index gain in which most members fall is not a rally, it is a rotation into four companies. The oil move is the more interesting one: crude fell hard enough to crush refining margins a week before an election in which pump prices are a live issue.</p>
+<p class="field">Watch next</p><p>Brent opened Wednesday back up about 1.2%. Microsoft and Alphabet report after the close.</p>
+</div>
+<div class="item">
+<h2>Visa&#x27;s record year, and nobody cares</h2>
+<p class="field">What happened</p><p>Visa <a href="https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm">closed its fiscal year with net revenue of $45.9 billion</a>, up 15%, and fourth-quarter revenue of $12.1 billion, up 13%, on non-GAAP earnings of $3.48 a share. Payments volume rose 9% and cross-border volume 14% in constant currency. The company returned $25.6 billion over the year, including $20.5 billion of buybacks at an average $335.49, and raised the dividend 16% to 78 cents. Chief executive Ryan McInerney called it “a milestone year.” The shares fell about 2% after hours. The release contains no fiscal-2027 guidance at all, despite secondary coverage describing a guidance cut.</p>
+<p class="field">What it means</p><p>The pattern across Tuesday night was consistent: Visa, Seagate and NXP all beat and all fell. When the index is a percent off its high and four stocks are carrying it, a good quarter from a mature business buys nothing.</p>
+<p class="field">Watch next</p><p>Visa&#x27;s fiscal-2027 outlook, wherever it eventually appears. European banks beat broadly on Wednesday morning, including Santander, Deutsche Bank and BNP Paribas.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Re:Build raises $2.1bn to re-industrialise, backed by General Catalyst and JPMorgan</h2>
+<p class="field">What happened</p><p>Massachusetts-based Re:Build <a href="https://techcrunch.com/2026/10/27/rebuild-which-spun-out-slate-auto-raises-2-1b/">announced $2.1 billion on Tuesday</a>, co-led by General Catalyst and JPMorganChase's Strategic Investment Group. Neither the round type nor the valuation was disclosed and no other investors were named. Founded in 2020 by Amazon's former commercial chief Jeff Wilke, the company partners with industrial firms on design, engineering and manufacturing at scale, including aerospace and defence, and incubates startups — it spun out the EV maker Slate Auto, which has raised at least $1.4 billion. Its network employs more than 2,100 people across more than 2.4 million square feet. Wilke: “We started Re:Build because the deindustrialization of America is an economic failure and national security risk.”</p>
+<p class="field">What it means</p><p>A $2.1bn round with no disclosed valuation is a growth-equity deal wearing venture clothing. The interesting signal is the co-lead: a bank&#x27;s strategic arm putting that much into physical manufacturing is the kind of capital that used to go to private equity roll-ups.</p>
+<p class="field">Watch next</p><p>Whether Slate Auto ships, and what Re:Build does with defence demand.</p>
+</div>
+<div class="item">
+<h2>A Dallas firm closes a $10bn fund for AI and defence</h2>
+<p class="field">What happened</p><p>Disruptive, founded in 2012 by Alex Davis, <a href="https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/">announced a $10 billion fund on Tuesday</a> to back at least ten late-stage companies in AI and defence, with individual cheques as large as $1 billion. It is the firm's first blind-pool fund; it had previously invested deal by deal through special-purpose vehicles. Past positions include Palantir, Airbnb, Spotify, Groq and ElevenLabs. Secondary reporting — relayed rather than confirmed here — has the firm telling limited partners it has returned more than $6 billion on roughly $1.9 billion invested, and puts committed capital before the announcement at $7.5 billion or more. Limited partners were not named.</p>
+<p class="field">What it means</p><p>Ten companies, $10 billion, late stage: this is not venture capital, it is a concentrated public-equity strategy applied to private companies that will not go public soon. The first blind pool after fourteen years of SPVs is the part that should prompt questions about who the LPs are.</p>
+<p class="field">Watch next</p><p>First deployments, and whether the SPV-era returns survive an audited look.</p>
+</div>
+<div class="item">
+<h2>Guidewire pays $1.7bn cash for an agentic underwriting startup</h2>
+<p class="field">What happened</p><p>Insurance-software vendor Guidewire <a href="https://techcrunch.com/2026/10/27/guidewire-buys-hyperexponential-for-1-7b-in-cash">is acquiring Hyperexponential</a>, a UK pricing and underwriting company, for $1.7 billion in cash, with a further $400 million reserved against revenue targets. Founded in 2017 and backed by Andreessen Horowitz and Battery Ventures, Hyperexponential had raised nearly $90 million, and says nearly 600 insurers in 40 countries use its software. The deal is expected to close sometime in 2027. The $400 million is contingent, so the widely quoted “around $2 billion” is a ceiling, not a price.</p>
+<p class="field">What it means</p><p>Roughly nineteen times capital raised, in cash, for a nine-year-old company selling into one of the slowest-moving software buyers there is. Specialty underwriting is exactly the kind of judgement-heavy, data-poor process where a model earns its keep, and the incumbents have decided to buy rather than build.</p>
+<p class="field">Watch next</p><p>Regulatory review, and whether other core-systems vendors follow.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Judge Carter won&#x27;t rush, and that may settle the California ballot fight</h2>
+<p class="field">What happened</p><p>US District Judge David O. Carter heard argument in Los Angeles on Tuesday on the Justice Department's request to bar California from counting mail ballots from more than 20,000 registered voters the administration says are likely noncitizens. He <a href="https://abcnews.com/Politics/judge-appoint-special-master-california-voting-case-setback/story?id=137622503">did not rule</a>, said he would issue an order governing proceedings by Wednesday, and said he was likely to appoint a special master to examine the government's evidence at a hearing roughly two weeks out — which would put any decision past 3 November. From the bench he <a href="https://calmatters.org/politics/2026/10/trump-noncitizen-voting-court/">said that “some of these may be very valid voters, and that's my concern about disenfranchisement”</a>, told prosecutor Bill Essayli that if the problem were as large as claimed “you've got a remedy for goodness sakes — go out and indict,” and said “any threats to state and county election employees cease immediately.” He declined to “just wing it with a ruling” on evidence filed the night before.</p>
+<p class="field">What it means</p><p>Delay is the remedy here. Carter has not said the government is wrong; he has said he will not decide this fast, and the calendar does the rest. The Ninth Circuit <a href="https://www.cbsnews.com/news/appeals-court-dismisses-doj-trump-california-ballots/">dismissed the government's appeal for lack of jurisdiction on Monday</a>, so there is no faster route.</p>
+<p class="field">Watch next</p><p>Carter&#x27;s order, due today. Then whether a special master is appointed, and against which certification deadline — reporting differs between 3 and 11 December.</p>
+</div>
+<div class="item">
+<h2>The evidence itself is contested, and the same play is running in two more states</h2>
+<p class="field">What happened</p><p>Los Angeles County told the court that a preliminary analysis of a 200-name sample drawn from the Justice Department's list was largely people who say they were born in the United States, most with no voting history and no ballot sent. Essayli <a href="https://calmatters.org/politics/2026/10/trump-noncitizen-voting-court/">told the court federal investigators re-checked the same 200 names and found only four citizens</a>; the county has not confirmed the two reviews covered the same list, and the wire accounts differ on whether the federal sample was even the same size. California's lawyer called the government's approach <a href="https://www.taylorvilledailynews.com/judge-hears-justice-dept-suit-claiming-noncitizens-on-california-voter-rolls/">“mysterious database methods”</a>. Federal prosecutors charged 28 people in California last week over alleged unlawful registration or voting — charges, not convictions. The department has also asked an Alaska court to block certification of the Senate result if the Republican incumbent loses narrowly, which Alaska is moving to dismiss, and wrote to Washington state on Monday asking officials not to count ballots from 400 voters.</p>
+<p class="field">What it means</p><p>Two irreconcilable readings of one 200-name sample, six days before an election, is the whole dispute in miniature. Neither side&#x27;s count has been tested by anyone neutral, which is precisely the gap a special master is for.</p>
+<p class="field">Watch next</p><p>Washington's response, and Alaska's dismissal motion. Congress is doing none of this: the Senate's <a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm">last recorded roll call was 30 September</a>, and funding runs to 11 December.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel votes, and nobody wins</h2>
+<p class="field">What happened</p><p>Turnout reached 77.7% at poll close, per the Central Elections Committee — about seven points above 2022 and, on the committee's own framing, the highest at that stage since 2001. The count has moved against Benjamin Netanyahu ever since: at 4:05am his bloc had 63 seats; <a href="https://www.timesofisrael.com/liveblog_entry/with-over-76-of-ballots-counted-pro-netanyahu-bloc-at-54-seats-eisenkot-led-bloc-at-47-arab-parties-increase-to-19/">by 10:58am, with 76.8% of boxes counted, it was 54</a>, against 47 for Gadi Eisenkot's bloc and 19 for the Arab-led parties, outside both. Neither has 61. <a href="https://www.ynetnews.com/article/hjnatbkaml">At the 51.5% mark Likud had 27 seats and Eisenkot's Yashar! 21</a>; Ra'am, below the threshold overnight, is now above it. At Likud headquarters at 3:23am Netanyahu <a href="https://www.timesofisrael.com/liveblog_entry/netanyahu-israel-has-historic-one-time-opportunity-to-defeat-iran-once-and-for-all/">said Israel faces “a historic, one-time opportunity along with our friend President Trump”</a> to remove the Iranian threat. Eisenkot <a href="https://www.ynetnews.com/article/sk6t4202ml">said Netanyahu “is the head of a caretaker government without a mandate of public confidence.”</a></p>
+<p class="field">What it means</p><p>The arithmetic is the story. The 19 seats that would settle it belong to parties most of the opposition rules out governing with, and Eisenkot has refused to serve under Netanyahu even on rotation. That leaves a unity government, a defection, or another election — and Ben-Gvir has already called the first a terrible mistake.</p>
+<p class="field">Watch next</p><p>Some 600,000 to 650,000 double-envelope ballots are still being verified, possibly into Friday. <a href="https://www.aljazeera.com/news/2026/10/28/five-key-takeaways-from-israels-parliamentary-elections">Official results publish 4 November</a>. Herzog then taps an MK, who gets 28 days with <a href="https://en.idi.org.il/articles/63982">one possible 14-day extension</a>. No deadline binds Herzog himself.</p>
+</div>
+<div class="item">
+<h2>The Oleshky ceasefire holds, and spreads</h2>
+<p class="field">What happened</p><p>The local ceasefire in Oleshky, a Russian-occupied city across the Dnipro from Kherson, <a href="https://www.aljazeera.com/news/2026/10/27/russia-halts-strikes-on-ukraines-kherson-as-oleshky-ceasefire-takes-effect">took effect in the early hours of 27 October</a> to let civilians out and aid in. Ukraine's ombudsman Dmytro Lubinets said the first thirty hours passed “without a single incident.” Melania Trump, who brokered it, said on Tuesday it had been “expanded within Kherson Oblast,” and a deputy head of the regional administration confirmed shelling had stopped more widely. <a href="https://kyivindependent.com/ceasefire-in-oleshky-enters-30th-hour-as-russian-strikes-kill-2-injure-17-elsewhere-in-ukraine-over-past-day/">The Kyiv Independent reports it runs to 1 November</a>; wire accounts say only into the weekend. The war did not pause elsewhere: two killed and seventeen injured over the day, and the Ukrainian Air Force says Russia sent 88 Shahed drones overnight.</p>
+<p class="field">What it means</p><p>A humanitarian corridor is not a peace process, and this one covers a city Russia blockaded in the first place. But it is the first arrangement in months both sides have kept for more than a day, and it widened rather than collapsed.</p>
+<p class="field">Watch next</p><p>Whether it survives the weekend, and whether anyone extends the model to another front.</p>
+</div>
+<div class="item">
+<h2>China&#x27;s Fifth Plenum is sitting now, on party discipline</h2>
+<p class="field">What happened</p><p>The Fifth Plenary Session of the 20th Central Committee <a href="https://www.koreatimes.co.kr/world/20261026/what-to-know-about-chinas-plenum-as-xi-seeks-stronger-communist-party-discipline">opened in Beijing on Monday and runs to 29 October</a>, closed-door, chaired by Xi Jinping. The expected output is a decision on “full and rigorous Party self-governance” — discipline, cadre effectiveness, anti-corruption — plus possible leadership changes before the 2027 Party Congress. No communiqué has issued and no expulsions announced. The backdrop is heavy attrition in the Central Committee's military ranks.</p>
+<p class="field">What it means</p><p>A plenum devoted to internal discipline rather than economic policy is itself the signal: Xi is spending a set-piece occasion on his own party machinery a year out from the Congress that decides its composition.</p>
+<p class="field">Watch next</p><p>The communiqué, due tomorrow, and any personnel changes in it.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://news.skhynix.com/en/q3-2026-business-results/" target="_blank" rel="noopener">SK hynix — Q3 2026 business results</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/10/28/sk-hynix-says-d-ram-hbm-supply-sold-out-through-2029" target="_blank" rel="noopener">Seoul Economic Daily — SK hynix says DRAM and HBM sold out through 2029</a></li>
+<li><a href="https://www.ajupress.com/view/20261028153342778" target="_blank" rel="noopener">Aju Press — Kospi closes above 6,000</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431036/d116268dfwp.htm" target="_blank" rel="noopener">Meta — free-writing prospectus naming cornerstone investors (SEC)</a></li>
+<li><a href="https://www.globenewswire.com/news-release/2026/10/27/3388683/0/en/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth.html" target="_blank" rel="noopener">Nvidia — expanded Meta collaboration and $3bn investment</a></li>
+<li><a href="https://www.stocktitan.net/news/AMD/amd-and-meta-advance-strategic-partnership-to-power-meta-s-w7j6r9jk2soy.html" target="_blank" rel="noopener">AMD — Meta partnership and $1bn investment</a></li>
+<li><a href="https://fedscoop.com/gsa-onegov-deal-claude-anthropic/" target="_blank" rel="noopener">FedScoop — GSA OneGov agreement with Anthropic</a></li>
+<li><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener">Google DeepMind — Genie 4</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001413447/000141344726000057/nxp3q26exhibit991.htm" target="_blank" rel="noopener">NXP — Q3 2026 results (SEC EX-99.1)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001137789/000113778926000300/stxq12027pressreleasefinan.htm" target="_blank" rel="noopener">Seagate — FQ1 2027 results (SEC)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001403161/000140316126000126/q42026earningsrelease.htm" target="_blank" rel="noopener">Visa — FQ4 and full-year 2026 results (SEC)</a></li>
+<li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026" target="_blank" rel="noopener">TheStreet — US market close, 27 October</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury — daily yield curve, October 2026</a></li>
+<li><a href="https://energynewsbeat.co/crude-oil/illustration-not-a-news-photo-deal-or-escalate-u-s-oil-back-under-100-one-week-before-the-election/" target="_blank" rel="noopener">Energy News Beat — crude settlements, 27 October</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC calendar</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" target="_blank" rel="noopener">Federal Reserve — 16 September statement</a></li>
+<li><a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">BLS — September Consumer Price Index</a></li>
+<li><a href="https://www.conference-board.org/topics/consumer-confidence" target="_blank" rel="noopener">Conference Board — October consumer confidence</a></li>
+<li><a href="https://techcrunch.com/2026/10/27/rebuild-which-spun-out-slate-auto-raises-2-1b/" target="_blank" rel="noopener">TechCrunch — Re:Build raises $2.1bn</a></li>
+<li><a href="https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/" target="_blank" rel="noopener">TechCrunch — Disruptive raises $10bn fund</a></li>
+<li><a href="https://techcrunch.com/2026/10/27/guidewire-buys-hyperexponential-for-1-7b-in-cash" target="_blank" rel="noopener">TechCrunch — Guidewire buys Hyperexponential</a></li>
+<li><a href="https://calmatters.org/politics/2026/10/trump-noncitizen-voting-court/" target="_blank" rel="noopener">CalMatters — Carter hearing on the DOJ noncitizen-voter suit</a></li>
+<li><a href="https://abcnews.com/Politics/judge-appoint-special-master-california-voting-case-setback/story?id=137622503" target="_blank" rel="noopener">ABC News — judge may appoint special master</a></li>
+<li><a href="https://www.cbsnews.com/news/appeals-court-dismisses-doj-trump-california-ballots/" target="_blank" rel="noopener">CBS News — Ninth Circuit dismisses DOJ appeal</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/with-over-76-of-ballots-counted-pro-netanyahu-bloc-at-54-seats-eisenkot-led-bloc-at-47-arab-parties-increase-to-19/" target="_blank" rel="noopener">Times of Israel — bloc standings at 76.8% counted</a></li>
+<li><a href="https://www.ynetnews.com/article/hjnatbkaml" target="_blank" rel="noopener">Ynet — per-party seats and turnout detail</a></li>
+<li><a href="https://www.ynetnews.com/article/sk6t4202ml" target="_blank" rel="noopener">Ynet — Eisenkot&#x27;s speech</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/28/five-key-takeaways-from-israels-parliamentary-elections" target="_blank" rel="noopener">Al Jazeera — five takeaways from the Israeli election</a></li>
+<li><a href="https://en.idi.org.il/articles/63982" target="_blank" rel="noopener">Israel Democracy Institute — coalition formation timetable</a></li>
+<li><a href="https://kyivindependent.com/ceasefire-in-oleshky-enters-30th-hour-as-russian-strikes-kill-2-injure-17-elsewhere-in-ukraine-over-past-day/" target="_blank" rel="noopener">Kyiv Independent — Oleshky ceasefire enters 30th hour</a></li>
+<li><a href="https://www.koreatimes.co.kr/world/20261026/what-to-know-about-chinas-plenum-as-xi-seeks-stronger-communist-party-discipline" target="_blank" rel="noopener">Korea Times — what to know about China&#x27;s plenum</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-28-daily.pdf">PDF</a></span>
+</div></div></body></html>
