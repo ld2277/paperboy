@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Friday, October 30, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Friday, October 30, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Amazon&#x27;s cloud business reaccelerated to 39% growth and its trailing free cash flow went 42 billion dollars negative in the same breath, which is the clearest price tag yet on the AI build-out.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>AWS grows 39%, and Amazon&#x27;s trailing free cash flow turns 42 billion dollars negative</h2>
+<p class="field">What happened</p><p>Amazon reported third-quarter results after Thursday's close. Net sales rose 12% to 201.9 billion dollars; operating income jumped to 28.1 billion from 17.4 billion, a 13.9% margin the release calls "Amazon's highest operating margin ever". AWS reaccelerated sharply, up 39% to 46.0 billion. Andy Jassy, in the <a href="https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000038/amzn-20260930xex991.htm">filed release</a>: "Our AWS investment in functionality and infrastructure is working, with over 39% year-over-year revenue growth in Q3 ($184 billion revenue run rate) and projected revenue growth rates of over 40% both in 2027 and in 2028." The other side of the ledger: trailing free cash flow is now an outflow of 42.4 billion dollars, against an inflow of 14.8 billion a year ago.</p>
+<p class="field">What it means</p><p>Two 40%-plus growth years promised in a filed document, rather than murmured on a call, is Amazon committing to the thesis in writing. The cash flow line is what that commitment costs: 168.3 billion dollars of operating cash flow over the past year, and the company still cannot outrun its own capex.</p>
+<p class="field">Watch next</p><p>Q4 guidance is 240 to 247 billion dollars of sales and 28.5 to 33.5 billion of operating income. The 220 billion dollar capex line is unchanged from last quarter.</p>
+</div>
+<div class="item">
+<h2>Mistral open-weights a trillion-parameter model and aims it at cyber defence</h2>
+<p class="field">What happened</p><p>Mistral released the weights of Mistral Large 4, which it calls Le Chonk, three weeks after previewing it. It is a natively multimodal mixture-of-experts model of about a trillion parameters, published under a modified MIT licence that permits commercial use and fine-tuning but requires a separate licence to serve the model as a service. Pricing runs 0.70 dollars per million input tokens and 2.10 output. The pitch is cost per task and sovereign control rather than benchmark leadership, with an explicit cyber-defence angle: 51% on the Artificial Analysis Cyber Index, with Booz Allen and Cloudflare as named references. All benchmark figures are company-reported.</p>
+<p class="field">What it means</p><p>The open-weights frontier is now a European competitive instrument rather than a research gesture. A trillion-parameter model that a bank or a defence contractor can run inside its own perimeter answers a question no API price can: who else sees the traffic.</p>
+<p class="field">Watch next</p><p>Mistral is withholding training compute pending a technical report; a widely-cited 3,800-GPU figure appears only in <a href="https://siliconangle.com/2026/10/29/mistral-releases-open-weights-for-mistral-large-4-providing-sovereign-control-for-the-companys-le-chonk-ai-model/">secondary coverage</a>.</p>
+</div>
+<div class="item">
+<h2>Thrive Holdings takes ADT private at a 15.3 billion dollar enterprise value</h2>
+<p class="field">What happened</p><p>ADT agreed on Thursday to be taken private by Thrive Holdings, the private-equity arm spun out of Thrive Capital, at 10.00 dollars a share in cash. The <a href="https://www.sec.gov/Archives/edgar/data/0001703056/000119312526437128/d572133ddefa14a.htm">filed release</a> puts equity value at about 7.6 billion dollars and enterprise value at 15.3 billion, a 45.6% premium to ADT's unaffected close of 6.87 on 27 October. Apollo-managed funds are the sole financing providers, with no financing condition. The release says more than 75 businesses are already part of Thrive Holdings, and that after closing "ADT will form the foundation of Thrive Holdings' smart home security business". ADT closed up 33.20%.</p>
+<p class="field">What it means</p><p>This is the buy-it-and-rebuild-it-with-AI thesis at a scale that needs syndicated debt. The bet is that a 150-year-old alarm-monitoring business with recurring revenue is a better substrate for AI margin than a startup with none.</p>
+<p class="field">Watch next</p><p>Closing is guided to the first quarter of 2027. No AI product for ADT has been named, and OpenAI's reported role as Thrive investor and model supplier sits in <a href="https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/">TechCrunch's reporting</a> only, nowhere in the filing.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Intel&#x27;s data-centre revenue grows 78%, and the stock still falls on the Q4 guide</h2>
+<p class="field">What happened</p><p>Intel reported third-quarter revenue of 16.5 billion dollars, up 21%, with its fastest data-centre growth in fifteen years: Data Center and AI up 78% to 7.3 billion and Foundry up 58% to 6.7 billion, against Client Computing down 5%. The earnings lines point opposite ways depending which set you read, GAAP diluted EPS of 0.60 dollars down 33% against non-GAAP EPS of 0.52 up 126%. Then the <a href="https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results">release</a> guides fourth-quarter revenue to 15.0 to 16.0 billion dollars, below where the quarter just landed, with non-GAAP gross margin stepping from 44.1% down to 38.0%.</p>
+<p class="field">What it means</p><p>Intel finally has the demand problem it wanted, in Xeon and in Foundry, and a supply problem it did not choose. The guide is where October&#x27;s explosion at the Kiryat Gat fab shows up as a number, which makes this the first quarter Intel&#x27;s constraint is physical rather than commercial.</p>
+<p class="field">Watch next</p><p>The release never mentions Kiryat Gat; the extended-shutdown language is call-only. Shares fell more than 22% after hours, per one uncorroborated outlet.</p>
+</div>
+<div class="item">
+<h2>ASE lifts capex a third time and says the bottleneck is now floor space</h2>
+<p class="field">What happened</p><p>ASE Technology, the world's largest chip assembler, reported third-quarter revenue of 244.2 billion New Taiwan dollars, up 44.8% year on year, with gross margin of 22.1% against 21.0% the prior quarter and net income of 27.0 billion. At its investor conference the same day it raised 2026 capex to 11.5 billion US dollars from 10.5 billion, the third increase this year. CFO Joseph Tung, <a href="https://www.taipeitimes.com/News/biz/archives/2026/10/30/2003866836">quoted by the Taipei Times</a>: "I think the biggest bottleneck today is really still space." ASE has 22 construction projects running in Taiwan. Separately, AUO said it would sell its Taichung Phase II site to TSMC for 38.8 billion.</p>
+<p class="field">What it means</p><p>When the binding constraint on AI compute moves from lithography to how many square metres of clean room exist, the shortage stops being solvable with a cheque and becomes a construction schedule. Tung&#x27;s line, that next year&#x27;s demand will exceed what ASE can deliver, is the most concrete supply statement anyone in the chain has made this month.</p>
+<p class="field">Watch next</p><p>The capex raise and the quote rest on one outlet; ASE&#x27;s own filing carries no fourth-quarter guidance and no capex figure.</p>
+</div>
+<div class="item">
+<h2>New York Times reports a Chinese intelligence operation aimed at Nvidia&#x27;s chief executive</h2>
+<p class="field">What happened</p><p>The New York Times reported on Thursday that US authorities investigated a suspected Chinese intelligence operation directed at Jensen Huang, centred on a senior executive at Megaspeed, the Singapore-based AI cloud operator already under investigation over allegedly reselling restricted Nvidia GPUs into China. She was reportedly surveilled for about a year, on concern she had grown close to Huang and could gather intelligence on Nvidia's roadmap and on his lobbying to loosen China chip restrictions; the Justice Department took the inquiry over earlier this year. An Nvidia spokesperson, <a href="https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/">as carried by TechCrunch</a>: "Meetings with customers are part of a C.E.O.'s job." No charges are reported.</p>
+<p class="field">What it means</p><p>Huang has spent two years as the most consequential private diplomat in the US-China technology relationship, arguing publicly for looser export controls. A counterintelligence file opened on the people around him is the cost of that position, and it narrows the room he has to keep making the argument.</p>
+<p class="field">Watch next</p><p>Single-outlet original reporting built on anonymous sources, and the two secondary accounts of it disagree on specifics.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The Bank of Japan holds at 1.25% and more than doubles the pace of its ETF run-off</h2>
+<p class="field">What happened</p><p>The Bank of Japan left its policy rate at around 1.25% on Friday in an eight-to-one vote, Takata Hajime dissenting for 1.5% on the view that the Bank should move faster toward neutral. Unanimously, and with more long-run significance, the Board raised the pace at which it sells its equity ETF holdings from about 0.05% to about 0.1% of market trading value, effective January 2027, which a <a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf">footnote</a> puts at roughly 860 billion yen a year at book value against 330 billion now. The Outlook Report judges underlying inflation "generally consistent with the price stability target of 2 percent" and raises FY2027 core CPI to 2.6%.</p>
+<p class="field">What it means</p><p>Thirteen years after the 2% target was adopted, the Bank is saying it has arrived. The ETF decision matters more: a 37-trillion-yen book had a notional sell-down horizon of about a century, and the new pace cuts that to something within an institutional lifetime. Japan is dismantling the apparatus, not just the rate.</p>
+<p class="field">Watch next</p><p>The full Outlook Report publishes Monday at 14:00 Tokyo time. Its forecasts exclude a proposed consumption-tax cut on food and drink.</p>
+</div>
+<div class="item">
+<h2>US growth accelerates to 3.4%, and September inflation reaccelerates to 3.6%</h2>
+<p class="field">What happened</p><p>The Bureau of Economic Analysis released the advance third-quarter GDP estimate and the September personal income report on Thursday morning. Real GDP grew at a <a href="https://www.bea.gov/sites/default/files/2026-10/gdp3q26-adv.pdf">3.4% annual rate</a>, up from 2.2% and the fastest in a year. The monthly inflation data points the other way: the <a href="https://www.bea.gov/sites/default/files/2026-10/pi0926.pdf">September PCE price index</a> rose 0.5% on the month and 3.6% on the year, core 0.3% and 3.1%. The quarterly deflators inside the GDP report, 2.1% and 2.5%, measure a different object and should not be read against the monthly figures.</p>
+<p class="field">What it means</p><p>A 3.4% print alongside 3.6% inflation is the configuration that makes Wednesday&#x27;s hold look less like patience than a close call, which is roughly what the two dissenting governors said. The composition is softer than the headline: by one tally inventories added 1.61 points and trade subtracted 3.32, leaving underlying growth nearer 1.7%.</p>
+<p class="field">Watch next</p><p>Those contribution figures rest on a single secondary source. The second estimate lands 25 November; the next FOMC meeting is 8 to 9 December.</p>
+</div>
+<div class="item">
+<h2>Caterpillar books a record 78 billion dollar backlog and falls 9%</h2>
+<p class="field">What happened</p><p>Caterpillar reported adjusted profit of 7.20 dollars a share against 4.95 a year ago, on sales of 20.68 billion dollars, up 17.3%. Chairman and CEO Joe Creed, in the <a href="https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf">release</a>: "Our third-quarter results reflect the durability of our end markets, with strong order rates and a record backlog." On the call that backlog was put at 78 billion dollars, roughly double a year earlier, driven by data-centre power generation. The stock fell 9.25% anyway, on a revenue miss and full-year tariff costs guided near 2.2 billion dollars. It was an ugly session: Alphabet fell 12.64% the day after reporting, ServiceNow 26.95%. The Nasdaq closed down 1.38% at 26,184.72, the S and P 500 down 0.30% at 7,720.39 and the Dow down 0.25%. Ten-year Treasury yields fell seven basis points to 4.98%.</p>
+<p class="field">What it means</p><p>Caterpillar is an AI-infrastructure company priced as a machinery cyclical, and the gap between a doubled backlog and a 9% fall is where that confusion lives. The index spread says the rest: the S and P down three-tenths while the Nasdaq drops 1.4% means the damage sits in the names that spent the most on capex.</p>
+<p class="field">Watch next</p><p>The backlog figure and the tariff guidance are call-only, not in the release. Full-year sales guidance of mid-to-high teens was reaffirmed, not raised.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>DoorDash agrees to buy Instacart for about 17 billion dollars</h2>
+<p class="field">What happened</p><p>DoorDash and Instacart announced a definitive agreement on Thursday under which DoorDash acquires Instacart at 65.00 dollars a share, an equity value of about 17 billion dollars and a 26% premium to Instacart's close on 22 October, the last trading day before reports of a possible deal. At least 75% of the consideration is cash, with DoorDash stock capped at 25%; holders elect cash, 0.3372 DoorDash shares, or a mix. JPMorgan has committed a 364-day senior unsecured bridge facility and there is no financing condition. Tony Xu, DoorDash's chief executive, in the <a href="https://company.instacart.com/pressreleases/doordash-to-acquire-instacart-to-help-local-stores-win">announcement</a>: "Grocery is one of the hardest things to get right online." Holders of about 19% of Instacart have agreed to vote in favour. DoorDash says it will keep the Instacart brand, app and enterprise products.</p>
+<p class="field">What it means</p><p>The largest consumer-technology exit of the year, and an admission that neither company could win grocery alone: Instacart owned the retailer relationships, DoorDash the delivery density, and the agent layer meant to sit on top of both is expensive enough that one had to buy the other. Bloomberg reported Instacart also talked to Uber and walked away.</p>
+<p class="field">Watch next</p><p>Closing is guided to the end of 2027 or the first half of 2028, an unusually long runway that tells you what the parties expect from antitrust. Canada&#x27;s Competition Bureau is already reviewing.</p>
+</div>
+<div class="item">
+<h2>Two Palantir veterans raise 17 million dollars from a16z to build world models for construction</h2>
+<p class="field">What happened</p><p>Dream emerged with a 17 million dollar seed round led by Andreessen Horowitz, with SV Angel, XYZ and Zigg Capital also participating. Co-founder Andy Alder led product design at Palantir for an 800-person team building for US defence and intelligence customers; co-founder Arjun Mather was a senior vice president in Palantir's commercial practice. The two met as Stanford roommates. Dream is building world models that automate building design and engineering, aimed at Autodesk's AutoCAD and Revit, and calls its approach structural cognition, producing designs that account for plumbing and HVAC rather than drawing floors in isolation. It says the model is <a href="https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/">trained on more than 100 million square feet</a> of building data drawn from US permit archives, and is deployed on ten active projects in Texas and California.</p>
+<p class="field">What it means</p><p>Permit archives are the interesting part. They are public, structured, enormous, and nobody thought of them as a training corpus, which is the sort of asymmetry that justifies a seed round against incumbents with thirty years of lock-in. Whether a world model can hold a whole building&#x27;s systems in coherent relation is the actual bet, and it is not obviously won.</p>
+<p class="field">Watch next</p><p>The claim to be the only company with a world model that designs whole buildings is the founders&#x27; own and unverified; Motif, Snaptrude and Arcol work the same ground.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Carter appoints a special master in the California ballot case and sets a 13 November hearing</h2>
+<p class="field">What happened</p><p>A day after denying the government's restraining order, Judge David O. Carter on Thursday appointed Daniel B. Garrie as special master to evaluate the administration's claim that some 20,000 noncitizens sit on California's voter rolls, tasked with developing the factual record. He will rule on the renewed preliminary-injunction request after an evidentiary hearing on 13 November, which falls after the election. Separately, late Wednesday the Justice Department asked the Ninth Circuit to decide quickly whether California can be stopped from counting the disputed ballots, citing irreversible ballot processing. <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/26/26-7070.pdf">A panel dismissed the first such appeal for lack of jurisdiction</a> on 26 October, over a dissent from Judge Bumatay.</p>
+<p class="field">What it means</p><p>A special master is a fact-finding device, not a ruling, and the November date means the question of who is actually on the rolls will be litigated after the ballots are counted rather than before. That sequencing is the government&#x27;s loss, whatever the eventual merits.</p>
+<p class="field">Watch next</p><p>Democracy Docket reports DOJ asked the Ninth Circuit to rule by today. County certification is due 3 December; the Secretary of State&#x27;s Statement of Vote follows on 11 December.</p>
+</div>
+<div class="item">
+<h2>Three Los Angeles County election staff are subpoenaed, returnable the day after the election</h2>
+<p class="field">What happened</p><p>Three subpoenas were issued to employees of the Los Angeles County Registrar-Recorder on 21 and 24 October, ordering them to appear in court on 4 November, the day after the election. They demand documents and communications about the letters federal officials sent state election officials in July and October alleging noncitizens on the rolls. A cover letter says the subpoena relates to a criminal investigation by Homeland Security Investigations, with no further detail. Registrar Dean Logan responded that threats and intimidation have no place in elections. The government wants up to 20,000 ballots set aside out of roughly 23 million California voters.</p>
+<p class="field">What it means</p><p>The return date is the detail that carries the meaning. A subpoena enforceable on 4 November cannot produce evidence that changes how ballots are handled on 3 November, which leaves its effect on the people who administer the count rather than on the count.</p>
+<p class="field">Watch next</p><p><a href="https://www.capradio.org/articles/2026/10/29/justice-department-subpoenas-california-officials-in-escalation-of-its-scrutiny-of-local-elections/">Court filings say</a> more than 500,000 votes are already processed in Los Angeles County. The claim that all four California US attorneys are issuing subpoenas rests on one anonymous source.</p>
+</div>
+<div class="item">
+<h2>Boasberg orders the Justice Department to name every state it sent ballot demands to</h2>
+<p class="field">What happened</p><p>Judge James Boasberg of the federal district court in Washington ordered the Justice Department on Thursday to disclose which states beyond California and Washington it has demanded set aside ballots of alleged noncitizens since 1 July, with compliance due at noon today. He left open a ruling by Monday barring further such letters, and noted the government could moot the case by undertaking to send no more before the election. Setting the schedule, Boasberg told counsel they could finish early so people could go trick or treating, &quot;that&#x27;s fine, or you can stay up until the witching hours&quot;. The case is DSCC and others v. Trump.</p>
+<p class="field">What it means</p><p>The question Boasberg is pressing is scope, and the government&#x27;s reluctance to answer it is itself informative: either the letters went to two states or they went to many, and the difference is between a targeted dispute and a national programme.</p>
+<p class="field">Watch next</p><p>Plaintiffs file on their standing claim Saturday; a ruling could come Monday. Congress remains out, with no Senate roll call since 30 September.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>China&#x27;s plenum communique confirms 33 expulsions and elevates Zhang Shengmin to the Politburo</h2>
+<p class="field">What happened</p><p>The <a href="https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202610/t20261029_12049543.html">communique</a> of the Fifth Plenary Session of the 20th Central Committee published on Thursday, ending a three-day blackout. The session, attended by 162 members and 117 alternates, adopted a resolution on persevering with full and rigorous Party self-governance, and heard investigation reports on 18 officials from the discipline inspection commission and 16 from the Central Military Commission, confirming the Politburo's earlier decisions to expel 33 of them. Li Yunze was removed from his Party position but not expelled. Zhang Shengmin was elected to the Political Bureau, and the 21st National Congress was set for Beijing in the second half of 2027.</p>
+<p class="field">What it means</p><p>The expulsions were decided earlier and reported in September; what is new is the formal accounting, which is how the Party converts a purge into institutional record. That sixteen of the thirty-four came from the military rather than the civilian bureaucracy is the number worth holding onto.</p>
+<p class="field">Watch next</p><p>From the text: &quot;Strict management of officials is the key to full and rigorous Party self-governance.&quot; The 2027 congress date is the first firm marker for the next leadership cycle.</p>
+</div>
+<div class="item">
+<h2>Israel&#x27;s final count gives neither bloc a majority, and the arithmetic has no obvious exit</h2>
+<p class="field">What happened</p><p>The Central Elections Committee <a href="https://www.timesofisrael.com/liveblog_entry/central-elections-committee-publishes-final-election-results-knesset-to-be-sworn-in-nov-10/">published final results</a> on Thursday: Likud 27, Yashar 21, B'Yachad 12, the Joint List 11, The Democrats 8, Ra'am 8, Yisrael Beytenu 7, United Torah Judaism 7, Otzma Yehudit 7, Shas 6, Religious Zionism 6, on 77.9% turnout. That leaves Benjamin Netanyahu's bloc on 53 of 120 seats, Gadi Eisenkot's opposition on 48 and the Arab lists on 19, with 61 needed. Eisenkot met Naftali Bennett and Yair Golan on Thursday; Golan met Ra'am's Mansour Abbas separately, posting afterwards: "This is a time for action."</p>
+<p class="field">What it means</p><p>Both blocs are short, and the only bloc that could complete either is the one both have excluded: Eisenkot has ruled out the Arab-led parties and they have rejected the idea in turn. That is structural rather than a negotiating problem, and it points at a defection from Netanyahu&#x27;s 53 or a fourth election.</p>
+<p class="field">Watch next</p><p>Results go to President Herzog on 4 November and the Knesset is sworn in on 10 November. No deadline binds Herzog; the 28-day clock starts only once he names someone.</p>
+</div>
+<div class="item">
+<h2>A Vance letter to Iran&#x27;s security council surfaces as Trump reportedly warns the Gulf to prepare</h2>
+<p class="field">What happened</p><p>US reporting on Thursday revealed a channel nobody knew existed: a letter from Vice President JD Vance to Mohsen Rezaei, secretary of Iran&#x27;s Supreme National Security Council, sent last week via Qatari mediators and delivered Sunday. The New York Times reports Vance proposed renewed comprehensive negotiations with himself leading the US delegation, direct talks, and Iran&#x27;s nuclear programme on the table from the outset, possibly next week in Qatar or Turkey. The Wall Street Journal calls it a framework for negotiations, and separately reports Trump warned Gulf allies to prepare for a brief, intense campaign after the 3 November midterms. Trump, asked whether he had directed Vance to restart talks, said no.</p>
+<p class="field">What it means</p><p>A vice-presidential letter offering direct talks and a presidential warning to prepare for strikes are not contradictory; they are one policy with two audiences. The detail that matters is the addressee: Rezaei&#x27;s security council rather than the foreign ministry, which routes the offer through the establishment that would have to approve any deal.</p>
+<p class="field">Watch next</p><p>Rezaei was expected to reply Thursday. Araghchi said on Wednesday that while Iran&#x27;s armed forces are prepared to defend the homeland, Iran &quot;continues to give diplomacy a chance to succeed&quot;. The Gulf warning is Journal-only.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000038/amzn-20260930xex991.htm" target="_blank" rel="noopener">Amazon.com, Inc. Q3 2026 results (8-K Exhibit 99.1)</a></li>
+<li><a href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener">Mistral AI - Le Chonk: Built for Coders, Trusted by Defenders</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001703056/000119312526437128/d572133ddefa14a.htm" target="_blank" rel="noopener">ADT Inc. - Thrive Holdings merger announcement (DEFA14A)</a></li>
+<li><a href="https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results" target="_blank" rel="noopener">Intel - Third-Quarter 2026 Financial Results</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001122411/000095010326016324/dp255760_6k.htm" target="_blank" rel="noopener">ASE Technology Holding - 3Q26 results (Form 6-K)</a></li>
+<li><a href="https://www.taipeitimes.com/News/biz/archives/2026/10/30/2003866836" target="_blank" rel="noopener">Taipei Times - ASE raises capex, cites space as bottleneck</a></li>
+<li><a href="https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/" target="_blank" rel="noopener">TechCrunch - US investigated Chinese spy plot aimed at Nvidia CEO</a></li>
+<li><a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf" target="_blank" rel="noopener">Bank of Japan - Statement on Monetary Policy, 30 October 2026</a></li>
+<li><a href="https://www.bea.gov/sites/default/files/2026-10/gdp3q26-adv.pdf" target="_blank" rel="noopener">BEA - Gross Domestic Product, Third Quarter 2026 (Advance Estimate)</a></li>
+<li><a href="https://www.bea.gov/sites/default/files/2026-10/pi0926.pdf" target="_blank" rel="noopener">BEA - Personal Income and Outlays, September 2026</a></li>
+<li><a href="https://www.caterpillar.com/content/dam/caterpillarDotCom/releases/3q26/3q26-caterpillar-inc-financial-results.pdf" target="_blank" rel="noopener">Caterpillar Inc. - Third-Quarter 2026 Results</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury - Daily Treasury Par Yield Curve Rates, October 2026</a></li>
+<li><a href="https://company.instacart.com/pressreleases/doordash-to-acquire-instacart-to-help-local-stores-win" target="_blank" rel="noopener">Instacart - DoorDash to acquire Instacart</a></li>
+<li><a href="https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/" target="_blank" rel="noopener">TechCrunch - Ex-Palantir execs launch Dream with 17m from a16z</a></li>
+<li><a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/26/26-7070.pdf" target="_blank" rel="noopener">Ninth Circuit - Order in No. 26-7070, 26 October 2026</a></li>
+<li><a href="https://www.capradio.org/articles/2026/10/29/justice-department-subpoenas-california-officials-in-escalation-of-its-scrutiny-of-local-elections/" target="_blank" rel="noopener">AP via CapRadio - Justice Department subpoenas California officials</a></li>
+<li><a href="https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026/key-dates-deadlines" target="_blank" rel="noopener">California Secretary of State - Key dates, 3 November 2026 general election</a></li>
+<li><a href="https://rollcall.com/2026/10/29/judge-orders-justice-department-to-disclose-noncitizen-voter-letters/" target="_blank" rel="noopener">Roll Call - Judge orders Justice Department to disclose noncitizen voter letters</a></li>
+<li><a href="https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202610/t20261029_12049543.html" target="_blank" rel="noopener">Chinese MFA - Communique of the Fifth Plenary Session of the 20th CPC Central Committee</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/central-elections-committee-publishes-final-election-results-knesset-to-be-sworn-in-nov-10/" target="_blank" rel="noopener">Times of Israel - Central Elections Committee publishes final results</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/29/what-we-know-of-vances-letter-to-rezaei-as-trump-warns-gulf-to-prepare" target="_blank" rel="noopener">Al Jazeera - What we know of Vance&#x27;s letter to Rezaei</a></li>
+<li><a href="https://www.inquirer.com/news/nation-world/jd-vance-peace-talks-iran-20261029.html" target="_blank" rel="noopener">The Inquirer (NYT syndication) - Vance letter proposes Iran talks</a></li>
+<li><a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm" target="_blank" rel="noopener">US Senate - Roll call votes, 119th Congress 2nd session</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-30-daily.pdf">PDF</a></span>
+</div></div></body></html>
