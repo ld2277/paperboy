@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Saturday, October 31, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Saturday, October 31, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Intel&#x27;s worst day in fifty-two years capped a Friday on which the market stopped taking the AI buildout&#x27;s bill on faith.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>OpenAI trims its raise by about $10bn</h2>
+<p class="field">What happened</p><p>The Financial Times reported Friday that OpenAI has cut the target for its current private round by roughly $10bn, to about $20bn, and that the "first close" will bring in less than that because investors trimmed their allocations. The valuation stays at $1.25tn, already down from the $1.4tn discussed a month earlier and the figure <a href="https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/">TechCrunch reported on 22 October</a> against a $30bn target. A UAE consortium including the state-backed MGX is expected to be the largest participant, with OpenAI gaining an option to lease new regional computing capacity. Terms are still being negotiated, OpenAI declined to comment, and the size cut rests on the FT alone.</p>
+<p class="field">What it means</p><p>Nobody is walking away from OpenAI. But allocations shrank in the same week the big four hyperscalers were marked down for their capital spending. A private round is where the AI trade reprices first, and most quietly.</p>
+<p class="field">Watch next</p><p>Whether the first close is announced with a number, and at what valuation outside investors are let in.</p>
+</div>
+<div class="item">
+<h2>Three labs settle on one AI-training opt-out</h2>
+<p class="field">What happened</p><p>Google, Microsoft and OpenAI each published commitments on 30 October to honour a single robots.txt policy token, __usage_ai-training, as a site's signal about generative-AI training. The mechanism is <a href="https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/">IETF Internet-Draft draft-kelley-aipref-training-preference-signal-00</a>, filed the same day by Anthropic's Kevin Kelley; Anthropic itself published nothing. Microsoft honours it from 1 February 2027, with interim grounding preferences in Bing Webmaster Tools from 15 December; Google plans support in early 2027, mapping an opt-out onto a Google-Extended disallow covering Gemini Apps. Meta, Amazon and Apple are not party to it.</p>
+<p class="field">What it means</p><p>Publishers have spent three years maintaining per-crawler rules, so one token is a real simplification. But it is a preference, not a directive: the draft says so outright, search rankings are untouched, and private licensing deals override it. Microsoft&#x27;s Krishna Madhavan put the limit bluntly: &quot;Neither choice guarantees inclusion, traffic, or payment.&quot;</p>
+<p class="field">Watch next</p><p>Whether Meta, Amazon and Apple sign on, and whether the IETF adopts the draft, which today has no standing there.</p>
+</div>
+<div class="item">
+<h2>The buildout&#x27;s financing comes into view</h2>
+<p class="field">What happened</p><p><a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/">TechCrunch totted up</a> more than $740bn of 2026 capital spending plans across Alphabet, Amazon, Meta and Microsoft, and the debt behind them: S and P Global Market Intelligence counts $326bn raised this year by those four plus Oracle, roughly triple last year. Alphabet's third-quarter free cash flow was minus $9.1bn, its second negative quarter running; Amazon's trailing-twelve-month figure is minus $42.4bn against plus $14.8bn a year earlier. The FT reported Friday that Blackstone has warned investors Anthropic may be rated below investment grade after its IPO, in the double-B range.</p>
+<p class="field">What it means</p><p>The spending was never in doubt. The funding structure is what is new. Negative free cash flow at the hyperscalers plus sub-investment-grade credit at the model labs means the buildout is increasingly financed by bond buyers rather than operating cash, and they have a different tolerance for a payback measured in years.</p>
+<p class="field">Watch next</p><p>Anthropic&#x27;s rating when its IPO prices, and whether the hyperscalers return to the debt market this quarter.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Intel&#x27;s worst day in fifty-two years</h2>
+<p class="field">What happened</p><p>Intel closed Friday at $65.76, down $26.31 or 28.58%, its worst single session since July 1974. Thursday&#x27;s quarter was respectable; the guidance was not. Fourth-quarter revenue of $15.0bn to $16.0bn against roughly $17.1bn expected, non-GAAP gross margin of 38.0% from 44.1%, client computing down more than 20% sequentially, no positive free cash flow expected in 2027, and about $300m of revenue lost to an incident at the Israel fab. Lip-Bu Tan, on the call: &quot;Our customers began signaling a PC slowdown based on the memory prices and availability.&quot;</p>
+<p class="field">What it means</p><p>The federal government bought <a href="https://d1io3yog0oux5.cloudfront.net/_57627f36f021419831e44f49449e5f89/intel/news/2025-08-22_Intel_and_Trump_Administration_Reach_Historic_1748.pdf">433,323,000 shares at $20.47</a> in August 2025, so Friday cost that position about $11.4bn on paper, not the $12bn in circulation; the "10% stake" framing is stale too, dilution having taken it nearer 8%. Washington is still well ahead: Intel is up more than 70% year to date.</p>
+<p class="field">Watch next</p><p>AMD reports Tuesday and Qualcomm Wednesday. Both are a read on whether memory inflation is an Intel problem or everyone&#x27;s.</p>
+</div>
+<div class="item">
+<h2>MediaTek&#x27;s accelerator business arrives</h2>
+<p class="field">What happened</p><p><a href="https://www.mediatek.com/investor-relations">MediaTek's third quarter</a>, reported Friday in Taipei, was solid: sales of NT$168.06bn, up 10.4% sequentially, gross margin 46.3%, net profit NT$27.88bn. The forward numbers are the story. Its first AI-accelerator ASIC began shipping in September and should generate about US$2.5bn of fourth-quarter sales; 2027 ASIC revenue is guided to roughly US$16bn, the top of a range the company had put at 15% to 20% of an US$80bn market. MediaTek says that first programme alone would be "around 20% of the total AI accelerator ASIC market." A second enters high-volume production in early 2028.</p>
+<p class="field">What it means</p><p>Custom silicon is how the hyperscalers answer Nvidia&#x27;s pricing, and Broadcom has owned that work. A credible second supplier at a fifth of the market changes the negotiation for every cloud buyer, and gives MediaTek a business with none of the handset cycle in it.</p>
+<p class="field">Watch next</p><p>Whether MediaTek names the second customer. It has said only that the programme serves a customer&#x27;s next-generation infrastructure.</p>
+</div>
+<div class="item">
+<h2>Samsung tells its own staff the boom is temporary</h2>
+<p class="field">What happened</p><p>Ahead of Samsung's 57th founding anniversary on Sunday, the heads of its two halves sent <a href="https://www.koreajoongangdaily.com/business/record-profits-mounting-pressures-samsung-division-heads-urge-caution-in-57th-anniversary/12947391">unusually cautious messages</a>. Jun Young-hyun, vice chairman and head of Device Solutions, told staff that "Booms are temporary and market conditions can change at any time," and that "We must not forget the fundamentals of the semiconductor business," adding it is "difficult to say" the company's technological competitiveness has fully recovered. Roh Tae-moon, who runs Device eXperience, urged staff to strengthen "the fundamental competitiveness of our device business," pointing to intelligent eyewear, robotics and automotive electronics.</p>
+<p class="field">What it means</p><p>The context is a quarter in which the chip division earned KRW 106.5tn of operating profit and the phone-and-appliance division lost KRW 0.8tn. Jun is managing against the memory cycle turning; Roh against a device business that is no longer carrying anyone. Both are writing for staff just told their employer made more quarterly operating profit than any technology company ever has.</p>
+<p class="field">Watch next</p><p>Samsung&#x27;s 2027 capital spending plan, and whether the device division returns to profit.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Refining, not oil, made Big Oil&#x27;s quarter</h2>
+<p class="field">What happened</p><p><a href="https://investor.exxonmobil.com/company-information/press-releases/detail/1213/exxonmobil-announces-third-quarter-2026-results">Exxon earned $15,413m</a> ($3.72 a share) on a GAAP basis in the third quarter and $17,505m adjusted ($4.23); Chevron earned $9,924m ($5.06) and $10,361m adjusted ($5.28), against $3,539m and $1.82 a year earlier. Downstream did it. Exxon's Energy Products segment made $9,053m adjusted against $4,099m in the second quarter, and Chevron's downstream $4,931m against $1,137m, with US refining alone going from $638m to $3,585m. Exxon generated $25.7bn of operating cash and $19.1bn of free cash flow, returned $9.4bn, and guided to $20bn of 2027 buybacks "assuming reasonable market conditions." Chevron's production fell 2.6% to 3,980 MBOED.</p>
+<p class="field">What it means</p><p>One caution on the comparison: Exxon&#x27;s release benchmarks throughout against the second quarter and never prints third-quarter 2025 figures, so &quot;up from a year earlier&quot; is not a claim its own primary supports. Chevron&#x27;s does. Either way these are refining margins rather than barrels.</p>
+<p class="field">Watch next</p><p>Both dividends are payable 10 December. OPEC-plus meets Sunday.</p>
+</div>
+<div class="item">
+<h2>October ends with the Nasdaq down 5.3%</h2>
+<p class="field">What happened</p><p>Friday closed badly: the S and P 500 at 7,580.07, down 1.82%; the Dow at 51,770.31, down 1.09%; the Nasdaq Composite at 25,437.00, down 2.86%. For the month the Nasdaq fell 5.3% while the Dow rose 1.70% and the S and P 500 was roughly flat at minus 0.93%. The VIX rose 12.91% to 19.42 and gold fell 3.63%, while Treasuries rallied: the <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202610">ten-year closed at 4.94%</a> from 4.98%, the thirty-year at 5.31%. Separately, Eurostat put euro-area third-quarter growth at 0.4%, down from a revised 0.6%, with France contracting 0.1% and Italy flat.</p>
+<p class="field">What it means</p><p>A 5.3% month in the Nasdaq against a 1.7% gain in the Dow is a rotation, not a crash: money leaving the AI complex for energy and industrials, which is why Exxon and Chevron touched record highs during Friday&#x27;s session. The euro-area number gets the weekly&#x27;s attention.</p>
+<p class="field">Watch next</p><p>ISM manufacturing Monday, the Treasury refunding Wednesday, and October payrolls Friday 6 November, consensus plus 55,000.</p>
+</div>
+<div class="item">
+<h2>Brent&#x27;s December contract expires at a six-month high</h2>
+<p class="field">What happened</p><p>The December Brent contract went off the board Friday at $117.64, up $2.76 or 2.4%, after touching $118; January Brent settled at $113.43 and WTI at $104.12, up 2.08%. Brent gained 13.6% over October, its fourth consecutive monthly rise, and WTI 15.2%. The driver is the Strait of Hormuz, where Iran&#x27;s Revolutionary Guard Navy says tankers ignoring its navigation warnings have struck naval mines and US Central Command says the main transit lanes have been cleared. Roughly a fifth of the world&#x27;s oil and gas moves through the strait.</p>
+<p class="field">What it means</p><p>The $4.20 gap between the expiring December contract and January is the market paying a premium for barrels now rather than in eight weeks. That is the clearest signal so far that traders are pricing an actual supply interruption rather than headline risk.</p>
+<p class="field">Watch next</p><p>OPEC-plus meets Sunday 1 November. January is now the front-month contract.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Nvidia weighs cosigning Nscale&#x27;s construction debt</h2>
+<p class="field">What happened</p><p>Nvidia is in talks to provide credit support, in the form of a residual value guarantee covering construction and electricity costs, for the West Virginia data centre Nscale is building for Anthropic. The Information reported it, Bloomberg corroborated the talks, and nothing is signed. <a href="https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm">Nscale's S-1</a>, filed 18 September, puts the Anthropic agreements at "up to approximately $44.6 billion" for the Monarch Compute Campus in Mason County and total active and contracted value at $103.4bn as of 31 August. The same filing describes a minimum $3.1bn Nvidia subscription, including $1.0bn of convertible notes, expected to close around 16 November. The filing leaves share count and price range blank, so the reported $35bn listing target is press-sourced, not filed.</p>
+<p class="field">What it means</p><p>A chipmaker guaranteeing its customer&#x27;s construction debt is vendor financing with the risk moved off the balance sheet and into a contingent promise. It keeps Nvidia&#x27;s biggest buyers building. It also means Nvidia carries the downside if a neocloud cannot deliver, and Nscale had roughly 25,000 of a planned 500,000 chips running in August. Nvidia&#x27;s total credit and capacity support across neoclouds is put at about $170bn.</p>
+<p class="field">Watch next</p><p>Whether the guarantee shows up in an amended S-1 before Nscale prices.</p>
+</div>
+<div class="item">
+<h2>An AI law firm bids for the remains of Weil Gotshal</h2>
+<p class="field">What happened</p><p>Weil, Gotshal and Manges is winding down. It confirmed to the New York Times that it was preparing a dissolution vote after its heir apparent declined the leadership, rainmakers left and a merger with Willkie Farr was shelved. <a href="https://techcrunch.com/2026/10/30/ai-law-firm-crosby-bids-on-disintegrating-famed-firm-weil-gotshal/">Crosby</a>, a two-year-old AI-first law firm, has bid for some of the assets: the trademark, the brand and unspecified internal data, while trying to hire from Weil's roughly 1,200 lawyers. Terms were not disclosed and there is no guarantee Crosby prevails. It has raised about $85m in total, a $5.8m seed led by Sequoia in 2025 and a $60m Series B in March led by Lux and Index. No new priced rounds were announced Friday or Saturday.</p>
+<p class="field">What it means</p><p>Nobody expected the first real test of AI-native legal services to be buying the name of a firm that billed by the hour for a century. The interesting asset is not the trademark but the data: decades of worked precedent and negotiated language is training material no startup can otherwise buy, and the firms that hold it have had no reason to sell. A dissolution is the one moment they do.</p>
+<p class="field">Watch next</p><p>Who else bids, and whether the data is severable from the confidentiality obligations attached to it.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The Ninth Circuit says no, and this time says it can</h2>
+<p class="field">What happened</p><p>A published order <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/30/26-7231.pdf">filed Friday</a> in United States v. State of California, No. 26-7231, denied the Justice Department's emergency motion for an injunction pending appeal over roughly 20,000 disputed California mail ballots. The panel, Bennett, Bumatay and Sanchez, split two to one, and the significant move is jurisdictional: having dismissed the government's earlier appeal for want of jurisdiction on 26 October, the court this time held it had jurisdiction under 28 U.S.C. 1292(a)(1). On the substance: "Therefore, we hold the law does not 'clearly favor' the United States's preemption argument." Bumatay, dissenting: "California decided long ago that aliens can't vote in its elections."</p>
+<p class="field">What it means</p><p>This is a denial of interim relief, not a merits ruling. But by reaching jurisdiction the panel closed the government&#x27;s procedural off-ramp and ruled on its Elections Clause theory. The order notes the district court&#x27;s next hearing falls &quot;well after Election Day on November 3, 2026,&quot; which is the practical holding.</p>
+<p class="field">Watch next</p><p>Whether the government seeks Supreme Court review before Tuesday.</p>
+</div>
+<div class="item">
+<h2>Boasberg orders the 20,000-name list handed over</h2>
+<p class="field">What happened</p><p>Chief Judge James Boasberg ordered the Justice Department and Homeland Security to turn their list of more than 20,000 California registrants flagged as suspected noncitizens over to lawyers for the Coalition for Humane Immigrant Rights and the <a href="https://vrp.ucla.edu/2848-2/">UCLA Voting Rights Project</a> by 5pm Friday. That case is No. 1:26-cv-03072, and it is not the Democratic committees' separate suit before the same judge, DSCC v. Trump, No. 1:26-cv-03674, where nothing has yet issued. In that second case Boasberg ordered the government on Thursday to identify which states it had sent election demands to since 1 July, took supplemental briefing on standing, and said he would rule by Monday.</p>
+<p class="field">What it means</p><p>Two cases, one judge, three days to an election. The disclosure order is the consequential one: plaintiffs can now check whether their own members and clients are on the list, which is how a chilling-effect claim turns from argument into evidence. Boasberg has called standing his biggest concern in the DSCC case.</p>
+<p class="field">Watch next</p><p>Boasberg&#x27;s DSCC ruling, expected Monday 2 November.</p>
+</div>
+<div class="item">
+<h2>Three days out, the Justice Department sues Alaska</h2>
+<p class="field">What happened</p><p>The Justice Department filed an amended complaint Thursday in United States v. State of Alaska, No. 3:26-cv-00376, before Judge Sharon Gleason, seeking to decertify the state's Senate result if Republican incumbent Dan S. Sullivan loses narrowly. Its theory is that Democrats recruited a same-named spoiler, Daniel J. Sullivan Jr., whom the Alaska Supreme Court cleared to run on 29 June. <a href="https://www.aljazeera.com/news/2026/10/30/trump-administration-renews-bid-to-block-alaska-election-results">A New York Times report on 28 October</a> alleged that staff on Mary Peltola's campaign helped recruit him; her campaign denies it. Governor Mike Dunleavy has ordered a criminal investigation, and the department has issued dozens of subpoenas.</p>
+<p class="field">What it means</p><p>Running a same-named candidate is legal, and both Alaska parties have done it, which is why the federal hook here is unclear. Justin Levitt, a former Justice Department voting-rights official: &quot;Sure makes it seem like the point of the investigation is to become the story.&quot; Separately, Trump reversed Thursday&#x27;s cancellation of his Iowa and Kansas rallies; both now run Sunday.</p>
+<p class="field">Watch next</p><p>Tuesday. Thirty-five Senate seats, all 435 House seats and 36 governorships.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Mines in the Strait of Hormuz, mediators in Tehran</h2>
+<p class="field">What happened</p><p>Iran's Revolutionary Guard Navy said <a href="https://www.ynetnews.com/article/h1fpb6g6ze">four oil tankers had struck naval mines</a> and caught fire in the Strait of Hormuz after ignoring Iranian navigation warnings, having put the figure at three earlier in the week. It has named no vessel and none of this is independently verified. Separately the UK Maritime Trade Operations centre reported two ships hit by unidentified projectiles, and Oman evacuated 25 crew from a Panama-flagged tanker off Musandam. US Central Command, itself an interested party, says the main lanes are clear. On Friday a Qatari delegation arrived in Tehran.</p>
+<p class="field">What it means</p><p>The war is in its ninth month, having begun on 28 February, and the mediation is stuck on sequencing: Washington wants the nuclear file first, Tehran wants the port blockade and oil sanctions lifted first. Trump, at the White House Friday: &quot;There are talks. They want to talk. They keep talking,&quot; and &quot;We have time, frankly.&quot;</p>
+<p class="field">Watch next</p><p>Whether anything moves after Tuesday&#x27;s midterms. US officials have reportedly warned Gulf states to prepare for renewed strikes.</p>
+</div>
+<div class="item">
+<h2>Israel&#x27;s arithmetic works for nobody</h2>
+<p class="field">What happened</p><p>With the count final, <a href="https://www.timesofisrael.com/with-all-votes-counted-netanyahus-bloc-at-53-seats-eisenkots-48-arab-parties-19/">Netanyahu's bloc holds 53</a> of 120 Knesset seats, the opposition bloc led by Gadi Eisenkot 48, and the two Arab-led lists, the Joint List on 11 and Ra'am on 8, hold 19 between them. Sixty-one are needed. Netanyahu posted on X on Friday, in Hebrew, that it is forbidden to form a government with the Arab parties, alongside a video of excerpts from Arab politicians' speeches; the post has reached English only through syndication. Likud has accused the Arab-led parties of stealing the election, a claim police have said they found no basis for.</p>
+<p class="field">What it means</p><p>Eisenkot has set conditions for partners, recognising Israel as a Jewish and democratic state and national service for all, without saying whether the Arab parties meet them. Neither bloc can govern without those 19 seats, and in a week both have made taking them more expensive.</p>
+<p class="field">Watch next</p><p>Herzog receives the results on 4 November. His nominee gets 28 days, extendable, before a 21-day window in which 61 members can name their own candidate.</p>
+</div>
+<div class="item">
+<h2>Lavrov, in Miami, denies Moscow wants a phone call</h2>
+<p class="field">What happened</p><p>The <a href="https://kyivindependent.com/lavrov-denies-kyiv-independent-reporting-on-russian-push-for-putin-zelensky-phone-call/">Kyiv Independent reported</a> that Ukrainian officials privately believe Moscow is angling for a Putin-Zelensky phone call rather than a meeting, with officials warning that a call would give Russia a pretext to walk away without commitments. Sergei Lavrov, at the G20 foreign ministers' meeting in Miami, told Deutsche Welle on Friday to "Don't trust them," and said Zelensky should travel to Moscow instead. Asked on Thursday whether Putin would take a call, Dmitry Peskov said "he hasn't called yet."</p>
+<p class="field">What it means</p><p>The two leaders have spoken twice and met once, all in 2019 and 2020. A call is a far lower bar than a summit, which is exactly its appeal in Moscow and exactly the objection in Kyiv: it produces a readout rather than a document. The underlying report is single-sourced and denied on the record.</p>
+<p class="field">Watch next</p><p>A Kremlin aide says the Abu Dhabi talks will happen after 4 November, depending on conditions at the front.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://investor.exxonmobil.com/company-information/press-releases/detail/1213/exxonmobil-announces-third-quarter-2026-results" target="_blank" rel="noopener">ExxonMobil - Third-quarter 2026 results</a></li>
+<li><a href="https://www.stocktitan.net/news/CVX/chevron-reports-third-quarter-2026-thzdt7uj3l76.html" target="_blank" rel="noopener">Chevron - Third-quarter 2026 results (full release text)</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury - Daily yield curve, October 2026</a></li>
+<li><a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-10302026-nid30102026/" target="_blank" rel="noopener">How the major US stock indexes fared Friday (AP data)</a></li>
+<li><a href="https://d1io3yog0oux5.cloudfront.net/_57627f36f021419831e44f49449e5f89/intel/news/2025-08-22_Intel_and_Trump_Administration_Reach_Historic_1748.pdf" target="_blank" rel="noopener">Intel and the Trump administration - August 2025 equity agreement</a></li>
+<li><a href="https://www.mediatek.com/investor-relations" target="_blank" rel="noopener">MediaTek - Q3 2026 earnings release and prepared remarks</a></li>
+<li><a href="https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results" target="_blank" rel="noopener">Samsung - Q3 2026 results</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/record-profits-mounting-pressures-samsung-division-heads-urge-caution-in-57th-anniversary/12947391" target="_blank" rel="noopener">Korea JoongAng Daily - Samsung division heads urge caution</a></li>
+<li><a href="https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/" target="_blank" rel="noopener">IETF - Machine-Readable Training Preference Signal (draft-00)</a></li>
+<li><a href="https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/" target="_blank" rel="noopener">Bing Search Blog - Clearer preferences for training and grounding</a></li>
+<li><a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/" target="_blank" rel="noopener">TechCrunch - Cracks are emerging in the AI spending boom</a></li>
+<li><a href="https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/" target="_blank" rel="noopener">TechCrunch - Nvidia weighs cosigning for Nscale&#x27;s data center</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm" target="_blank" rel="noopener">Nscale Ltd - Form S-1, filed 18 September 2026</a></li>
+<li><a href="https://techcrunch.com/2026/10/30/ai-law-firm-crosby-bids-on-disintegrating-famed-firm-weil-gotshal/" target="_blank" rel="noopener">TechCrunch - Crosby bids on Weil Gotshal</a></li>
+<li><a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2026/10/30/26-7231.pdf" target="_blank" rel="noopener">Ninth Circuit - United States v. State of California, No. 26-7231 (order)</a></li>
+<li><a href="https://vrp.ucla.edu/2848-2/" target="_blank" rel="noopener">UCLA Voting Rights Project - court orders release of the list</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/judge-orders-doj-to-identify-the-states-it-sent-election-demands/" target="_blank" rel="noopener">Democracy Docket - Judge orders DOJ to identify the states</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/30/trump-administration-renews-bid-to-block-alaska-election-results" target="_blank" rel="noopener">Al Jazeera - Trump administration renews bid on Alaska</a></li>
+<li><a href="https://www.ynetnews.com/article/h1fpb6g6ze" target="_blank" rel="noopener">Ynet - Hormuz tanker claims and Qatari mediation</a></li>
+<li><a href="https://www.koreatimes.co.kr/amp/world/20261031/oil-jumps-2-settles-at-6-month-highs-on-fears-of-escalation-in-iran" target="_blank" rel="noopener">Korea Times - Oil settles at six-month highs</a></li>
+<li><a href="https://www.timesofisrael.com/with-all-votes-counted-netanyahus-bloc-at-53-seats-eisenkots-48-arab-parties-19/" target="_blank" rel="noopener">Times of Israel - Netanyahu&#x27;s bloc at 53, Eisenkot&#x27;s 48</a></li>
+<li><a href="https://kyivindependent.com/lavrov-denies-kyiv-independent-reporting-on-russian-push-for-putin-zelensky-phone-call/" target="_blank" rel="noopener">Kyiv Independent - Lavrov denies push for a Putin-Zelensky call</a></li>
+<li><a href="https://www.newsquawk.com/headlines/week-in-focus-2nd-6th-november-2026-highlights-include-us-midterm-election-nfp-ism-pmis-rba-boe-and-ez-cpi-" target="_blank" rel="noopener">Newsquawk - Week in focus, 2-6 November 2026</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-10-31-daily.pdf">PDF</a></span>
+</div></div></body></html>
