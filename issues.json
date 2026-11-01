@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-11-01",
+  "kind": "weekly",
+  "dateline": "Week of Sunday, November 1, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-01-weekly.html",
+  "pdf": "pdf/2026-11-01-weekly.pdf",
+  "standfirst": "The AI trade spent the week proving its demand and failing to explain its financing, and the chip index fell 7.2% on Friday to say so."
+ },
+ {
+  "date": "2026-11-01",
   "kind": "daily",
   "dateline": "Sunday, November 1, 2026",
   "month": "November 2026",

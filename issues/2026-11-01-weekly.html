@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Week of Sunday, November 1, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Week of Sunday, November 1, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The AI trade spent the week proving its demand and failing to explain its financing, and the chip index fell 7.2% on Friday to say so.</p>
+<ul class="jump"><li><a href="#top-story">Top story</a></li><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#new-technologies">New Technologies</a></li><li><a href="#climate-change">Climate Change</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#vc---pe">VC &amp; PE</a></li><li><a href="#us">US</a></li><li><a href="#eu">EU</a></li><li><a href="#france">France</a></li><li><a href="#world-politics">World Politics</a></li><li><a href="#profile">Profile</a></li><li><a href="#calendar">Calendar</a></li></ul>
+<div class="section" id="top-story">
+<hr class="rule-hair"><p class="topic">Top story of the week</p>
+<div class="item"><h2>The week the AI trade was asked for its receipts</h2></div>
+<div class="longform">
+<p class="drop">Nothing that happened this week suggested anyone has stopped buying artificial intelligence. Microsoft&#x27;s Azure grew 48% in the September quarter, Google Cloud 103%, Amazon Web Services 39%. SK Hynix said last week it is sold out of high-bandwidth memory through 2029. SanDisk reported an 85.0% GAAP gross margin on revenue up 378% year on year. Demand, by every measure a company publishes, is intact and accelerating.</p>
+<p>And yet Friday 30 October was the worst session for American equities since June. The Nasdaq Composite closed at 25,437.00, down 747.73 points or 2.86%; the S&amp;P 500 at 7,580.07, down 1.82%; the Dow at 51,770.31, down 572.25 points. The Philadelphia Semiconductor Index fell 7.2%, its largest drop since June. The SOXX chip ETF closed at $471.51, down 8.24%, roughly 28% below the all-time high of $655.95 it set on 22 June, with 22 of the index&#x27;s 30 members more than a fifth below their May or June peaks. October ended with the Nasdaq down 5.30%, its worst month since March 2025.</p>
+<p>The gap between those two paragraphs is the story of the week, and it is not about demand. It is about who pays for the capacity, and when the money comes back. The arithmetic has been visible for months: something near $740bn of capital spending this year across the hyperscalers, about $326bn of it funded with newly raised debt, and TrendForce putting nine cloud providers&#x27; combined capex at $957bn. What changed this week is that the bill started arriving in forms investors could read. Meta raised $37.5bn on 26 October, split between $12.5bn of mandatory convertibles and $25bn of common stock at $625 a share, and disclosed a further $60bn at-the-market programme from the first quarter of 2027. Four days later Standard &amp; Poor&#x27;s cut Meta&#x27;s outlook to negative while affirming the AA- rating. Anthropic filed its S-1 on Monday 26 October showing $16,286m of first-half revenue against $1,163m a year earlier, and a net loss of $(80,748)m, of which $(72,388)m is a non-cash change in the fair value of convertible notes, derivatives and SAFEs. The operating loss was $(693)m. A company can explain that distinction. A market pricing risk at a 3.75-4.00% policy rate, with two Fed governors dissenting for a hike, is less willing to sit through the explanation.</p>
+<p>Then Intel supplied something new: evidence that the AI buildout has a victim. The company&#x27;s shares closed Friday at $65.76, down 28.58% - its worst day since 1974, on Yahoo Finance&#x27;s analysis of closing prices back to 1973 - after guiding fourth-quarter revenue to $15.0bn-$16.0bn and GAAP gross margin to 37.1%, from 43.0%. Chief executive Lip-Bu Tan told analysts the cause was not AI weakness but AI strength, transmitted through the memory market into the price of a laptop. Intel&#x27;s own data-centre and AI revenue rose 78% year on year to $7.3bn. The problem is everything else.</p>
+<p class="pull">In recent weeks, our customers began signaling a PC slowdown based on the memory prices and availability</p>
+<p>The second cause was more sombre and less discussed. A fatal accident at Intel&#x27;s Fab 28 in Kiryat Gat, Israel, early in October killed two workers and injured a third, and shut the plant for about two weeks. Tan listed it third among the constraints on server-chip supply, after Intel 3 yield issues and a substrate shortage. Chief financial officer David Zinsner put the revenue impact at about $300m in the fourth quarter, with a similar figure expected in the first, and roughly 200 basis points of gross margin. Almost all of it, he said, relates to 10-nanometre server products.</p>
+<p>So the week resolves into a single mechanism with three ends. Memory and storage are sold out and pricing like it, which is why SanDisk prints 85% margins and Samsung has lifted 2026 capital spending to a record 84.4 trillion won. Those prices land in the bill of materials for every PC and server, which is why Intel is guiding down and why its customers are managing inventory against softer sell-through. And the capital funding the original demand is increasingly borrowed, which is why an outlook change at Meta and a convertible-note fair-value line at Anthropic now move a chip index. None of this is a bubble popping. It is a supply chain repricing in public, with the cost of capital attached.</p>
+<p>What would change the picture is cash. Apple reports fiscal fourth-quarter results on Monday 2 November, AMD on Tuesday, Qualcomm and Arm on Wednesday - Arm closed Friday about 21% below its high and is the week&#x27;s highest-beta print. Anthropic&#x27;s filing sets no share count and no price range, and Renaissance Capital reads it as implying a roadshow from the week of 9 November and pricing the week of 16 November; that would be the first public comparable the late-stage AI cap table has ever had. And on Friday 6 November the October employment report lands, consensus +55,000, into a market that has spent a week deciding the discount rate matters more than the growth rate.</p>
+</div></div>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2><span class="num">1</span>Gemini 4 Carbon takes the leaderboard, and goes to cyber defenders before the public</h2>
+<p class="field">What happened</p><p>Google DeepMind introduced <a href="https://artificialanalysis.ai/models">Gemini 4 Carbon</a> on Wednesday 28 October. On version 5.0 of the Artificial Analysis Intelligence Index it ranks first at high reasoning with 59, ahead of Claude Opus 5.5 on 58 and GPT-6 Astra on 57 - the first time Google has held the top spot. It is not publicly available: access goes first to selected cybersecurity defenders, then to trusted partners through Google's Fairwind Program. Introductory pricing is $2 and $10 per million input and output tokens, a 50% discount through end-2026 against a $4 and $20 list.</p>
+<p class="field">Context</p><p>Weeks after Gemini 4 Argon, and in the same seven days as Mistral&#x27;s open-weight release and a new OpenAI model rated critical for cybersecurity. Gating a frontier launch on offensive capability is now the default.</p>
+<p class="field">Who's affected</p><p>Anthropic, which loses the index lead it held with Opus 5.5; enterprise security teams in the Fairwind queue; Google&#x27;s TPU demand; and US government evaluators running Carbon through voluntary pre-release testing.</p>
+<p class="field">What it means</p><p>Google Cloud grew 103% last quarter, and a model at the top of the index is the strongest available answer to Friday&#x27;s selloff: the capex is buying something real. Whether it buys it faster than the cost of capital rises is a separate question this does not settle.</p>
+<p class="field">Watch next</p><p>General availability, and whether Google&#x27;s three self-reported security benchmarks survive outside scrutiny.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Mistral publishes the weights on a trillion-parameter model and calls it Le Chonk</h2>
+<p class="field">What happened</p><p>On Thursday 29 October Mistral published open weights for <a href="https://mistral.ai/news/mistral-large-4-oss/">Mistral Large 4</a>, three weeks after introducing it in public preview: about a trillion total parameters, about 52bn active per token, a one-million-token context window, $0.70 and $2.10 per million tokens. Mistral's own claim is narrower than the wire coverage - it scores 48% on the Artificial Analysis Coding Agent Index and is "effectively tied with the leading open-weight model, GLM-5.3, while using 47% fewer tokens per task on average." The licence is a modified MIT, except that anyone running a model-as-a-service offering needs a separate commercial deal.</p>
+<p class="field">Context</p><p>The pitch is sovereignty: Mistral frames the release around cyber defence &quot;to enterprises and governments globally,&quot; and benchmarks itself against a Chinese open-weight model rather than an American closed one.</p>
+<p class="field">Who's affected</p><p>European governments and regulated enterprises wanting frontier capability on their own hardware; Chinese open-weight labs; and inference hardware demand, since an open trillion-parameter model shifts spending from API tokens to owned GPUs.</p>
+<p class="field">What it means</p><p>The commercial carve-out is the whole design - give away the weights to win the sovereignty argument, charge the people who would resell them. It is a credible third position between the American and Chinese labs, and this is the week it gets tested in public.</p>
+<p class="field">Watch next</p><p>Any national government announcing a deployment, and Mistral Large 4&#x27;s placement on the next index revision.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2><span class="num">1</span>Intel&#x27;s worst day since 1974: memory prices broke the PC, and a fatal explosion shut Fab 28</h2>
+<p class="field">What happened</p><p>Intel closed Friday 30 October at $65.76, down 28.58% - its worst day since 1974, on Yahoo Finance's analysis of closing prices back to 1973 - after guiding fourth-quarter revenue to <a href="https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results">$15.0bn to $16.0bn</a> and GAAP gross margin to 37.1% from 43.0%. Lip-Bu Tan told analysts: "In recent weeks, our customers began signaling a PC slowdown based on the memory prices and availability," a correction he said had accelerated over two months. Separately, a fatal accident at Fab 28 in Kiryat Gat, Israel, early in October killed two workers, injured a third and shut the plant about two weeks - about $300m of fourth-quarter revenue and 200 basis points of margin, per David Zinsner, with a similar hit expected in the first quarter. Data-centre and AI revenue rose 78% year on year to $7.3bn.</p>
+<p class="field">Context</p><p>The drop erased about $12bn from the US government&#x27;s roughly 10% stake, per CNBC, though Intel is still up more than 70% for the year. Tan ranked the Israeli shutdown third among server-supply constraints, behind Intel 3 yields and a substrate shortage.</p>
+<p class="field">Who's affected</p><p>Intel&#x27;s Kiryat Gat workforce; the taxpayer&#x27;s position; PC makers - Dell fell about 10% - and corporate IT budgets; and AMD, which closed down 10.88% at $504.80 on read-across.</p>
+<p class="field">What it means</p><p>This is the first hard evidence that the AI buildout has a cost borne somewhere else. Memory sold out at record margins and a laptop that got too expensive are the same fact. Intel carries its own execution problems too, which makes the stock a poor proxy for the industry and an excellent illustration of the mechanism.</p>
+<p class="field">Watch next</p><p>AMD on Tuesday 3 November and Qualcomm on Wednesday, for whether the PC warning generalises.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>SanDisk prints an 85% gross margin, guides up, splits eight-for-one - and gets sold</h2>
+<p class="field">What happened</p><p>Sandisk reported fiscal first-quarter 2027 results on Thursday 29 October: revenue <a href="https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-first-quarter-2027-financial-results">$11,031m</a>, up 23% sequentially and 378% year on year, with GAAP gross margin of 85.0% - up 55.2 points year on year - GAAP operating income of $8,780m and GAAP diluted earnings of $52.60 a share, pre-split. Datacenter revenue rose 61% sequentially to $4,802m; consumer fell 29% to $397m. Second-quarter guidance is $12.2bn to $12.6bn. The board approved an eight-for-one forward split, record date 9 November, split-adjusted trading from 20 November. The stock fell about 8% pre-market Friday and more by the close.</p>
+<p class="field">Context</p><p>Three sold-out statements landed inside eight days: SK Hynix on high-bandwidth memory through 2029, Sandisk&#x27;s NAND quarter, and Seagate guiding up on drives it cannot build fast enough - against Intel saying those prices are killing client demand.</p>
+<p class="field">Who's affected</p><p>NAND buyers facing another sequential price step; Western Digital, Micron, Kioxia and Seagate as read-throughs; and hyperscaler storage procurement.</p>
+<p class="field">What it means</p><p>A 378% revenue increase at an 85% margin, sold off on the day, is the tell of the week: memory is no longer a cheap way to own AI, it is a crowded one. Splitting a roughly $1,300 share price is a company acting as though the cycle has further to run.</p>
+<p class="field">Watch next</p><p>Micron&#x27;s next guide, and whether datacenter keeps growing 60% a quarter while consumer shrinks 30%.</p>
+</div>
+</div>
+<div class="section" id="new-technologies">
+<hr class="rule-hair"><p class="topic">New Technologies</p>
+<div class="item">
+<h2><span class="num">1</span>Intel buys Classiq and becomes a full-stack quantum company</h2>
+<p class="field">What happened</p><p>On Monday 26 October Intel agreed to acquire <a href="https://www.intc.com/news-events/press-releases/detail/1784/intel-to-acquire-classiq-to-create-a-full-stack-quantum">Classiq</a>, the six-year-old Tel Aviv quantum software company, pairing its circuit-synthesis compiler with Intel's spin-qubit hardware. Intel's release discloses no price; the reported figure of about $2.3bn is Bloomberg's and neither party has confirmed it. Intel expects to close in the first half of 2027. Classiq has about 130 staff and more than four dozen enterprise customers including Oak Ridge National Laboratory, Rolls-Royce, BMW and Wells Fargo, and had raised about $200m at 2025 valuations estimated between $400m and $600m. Tan said the deal "transforms Intel's Quantum Computing Group into a full-stack quantum computing business."</p>
+<p class="field">Context</p><p>Intel&#x27;s stack is the twelve-qubit Tunnel Falls spin-qubit processor, the Horse Ridge cryogenic control chips, and 18A-Q and 18A-C process variants in Oregon. Chief technology officer Pushkar Ranade was franker than the release: &quot;But this is not going to be a high-margin business from day one.&quot;</p>
+<p class="field">Who's affected</p><p>Classiq&#x27;s staff and enterprise customers; every quantum hardware vendor that relied on Classiq&#x27;s platform neutrality, which Intel says it will keep; and Intel&#x27;s foundry pipeline, since it has signalled willingness to act as a quantum foundry.</p>
+<p class="field">What it means</p><p>The largest quantum software acquisition to date, and the week a decade-old research group became a profit-and-loss line - announced four days before the parent company lost 28% of its market value. Read it as conviction or as poor stage management, but not as a small bet.</p>
+<p class="field">Watch next</p><p>Clearance and the close; one trade account puts it in the second half of 2027 rather than the first.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The FDA proposes a plug-and-play route for personalised gene editing</h2>
+<p class="field">What happened</p><p>On Tuesday 27 October the FDA issued <a href="https://www.biopharmadive.com/news/fda-personalized-gene-therapy-rare-disease-guidance/873004/">draft guidance</a> for gene therapies aimed at different mutations within one disease-causing gene, where each individual mutation is too rare for a conventional trial. A developer would win approval for one mutation the normal way; approvals for other mutations in that gene could then rest on laboratory data rather than new clinical studies, within boundaries pre-specified in the original application - what the agency calls an "individualized feature space." A public meeting followed at White Oak on 28 October. Separately CMS said it plans to widen a Medicaid access programme for cell and gene therapies beyond sickle-cell disease. Prime Medicine rose 15% and Beam Therapeutics 8%.</p>
+<p class="field">Context</p><p>The template is the 2025 case of an infant for whom a bespoke editing treatment was built in months - a result the existing approval architecture had no way to generalise. It is also a visible softening from the line taken by the agency&#x27;s previous leadership.</p>
+<p class="field">Who's affected</p><p>Base- and prime-editing developers, Prime Medicine and Beam above all; families whose children&#x27;s mutations are individually unique; academic n-of-1 programmes; and Medicaid, which carries the cost.</p>
+<p class="field">What it means</p><p>If it survives comment, this is the first regulatory structure built for treatments with a patient population of one. TD Cowen called it plug-and-play optionality, which is the point: the asset stops being a product and becomes a platform.</p>
+<p class="field">Watch next</p><p>The comment deadline, which the coverage does not give - take it from the Federal Register notice - and the first company to pre-specify a feature space in a filing.</p>
+</div>
+</div>
+<div class="section" id="climate-change">
+<hr class="rule-hair"><p class="topic">Climate Change</p>
+<div class="item">
+<h2><span class="num">1</span>Carbon dioxide reaches 426.8 parts per million, and the slowdown is a sink story</h2>
+<p class="field">What happened</p><p>The World Meteorological Organization published <a href="https://wmo.int/media/news/greenhouse-gas-levels-once-again-reach-record-high">Greenhouse Gas Bulletin No. 22</a> on 27 October, the last authoritative concentration data before COP31. For 2025: carbon dioxide at 426.8 parts per million, or 153% of the 1750 pre-industrial baseline; methane at 1,948 parts per billion, 267% of 1750; nitrous oxide at 339.1 parts per billion, 126% of 1750. The 2024-to-2025 increase was lower than the anomalously high jump the year before, but still slightly above the average annual growth of the past decade. Deputy secretary-general Ko Barrett: "The past 11 years have been the warmest on record and this trend is set to continue."</p>
+<p class="field">Context</p><p>It landed the same day as the UNFCCC&#x27;s pledge synthesis and five days after the UN Environment Programme&#x27;s emissions gap report, which projected roughly 2.8C and concluded a 1.5C overshoot is now unavoidable.</p>
+<p class="field">Who's affected</p><p>COP31 negotiators, for whom WMO explicitly intends this as the scientific baseline; every national inventory team; and anyone citing the slower annual increase as progress.</p>
+<p class="field">What it means</p><p>The deceleration is the trap. It reflects land carbon sinks recovering and less wildfire carbon, not emissions falling - natural variability doing work that policy has not. A number that looks like good news is the most quotable thing in the bulletin and the most misleading.</p>
+<p class="field">Watch next</p><p>COP31 opening 9 November, where this is the agreed starting point.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>EPA&#x27;s methane rollback makes flaring the benchmark instead of capture</h2>
+<p class="field">What happened</p><p>EPA's reconsideration of oil and gas methane standards published in the <a href="https://www.govinfo.gov/content/pkg/FR-2026-10-29/pdf/2026-22082.pdf">Federal Register on 29 October</a> at 91 FR 68234, docket EPA-HQ-OAR-2025-0163, amending the new source performance standards and the emission guidelines for existing sources. It would rescind the Super Emitter Program, subcategorise well sites, and - the consequential change - find that routing associated gas from primarily oil wells to a sales line is no longer the best system of emission reduction, with a flare or control device achieving 95% reduction as the benchmark instead. EPA claims $45bn in savings, 210m additional barrels of oil and 1.41 trillion cubic feet of gas. Comments are due 16 December.</p>
+<p class="field">Context</p><p>The sequel to September&#x27;s repeal of most power-plant greenhouse gas standards and the repeal of the endangerment finding. Meanwhile the Justice Department has asked courts to revoke construction approvals for three offshore wind projects, one of which has been delivering power to the New England grid since March.</p>
+<p class="field">Who's affected</p><p>Operators of marginal and conventional wells, the chief beneficiaries of subcategorisation; communities near flaring sites; and state regulators who built programmes on the existing guidelines.</p>
+<p class="field">What it means</p><p>Capture to flare is a policy choosing the cheaper abatement over the better one, and it lands in the same month WMO put methane at 267% of pre-industrial. Note the Federal Register document contradicts itself on the hearing date, giving both 13 and 16 November.</p>
+<p class="field">Watch next</p><p>The hearing, once EPA settles which date it is, and the 16 December comment close.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2><span class="num">1</span>Binance loses $6.3bn to North Korea, and reopens withdrawals on Sunday morning</h2>
+<p class="field">What happened</p><p>Late on Thursday 29 October the largest crypto exchange was breached. Binance says about <a href="https://www.aljazeera.com/economy/2026/10/30/binance-says-2-54bn-in-crypto-funds-frozen-amid-potential-security-issue">$6.3bn</a> was affected - Chainalysis puts it at $5.912bn, Elliptic at $6.43bn - making it the largest crypto theft on record by gross value, more than four times the $1.5bn Bybit hack of February 2025. Roughly $3bn was frozen on-chain, which is not the same as recovered. Binance suspended withdrawals and said it would cover all losses. On Sunday 1 November it reopened them in phases, the first running 06:00 to 09:00 UTC and covering bitcoin, ether, USDT, USDC, BNB and XRP, and said company funds had covered about 95% of the impacted amount. TRM Labs attributed the attack with high confidence to North Korea's TraderTraitor unit.</p>
+<p class="field">Context</p><p>Binance&#x27;s initial statement said the breach &quot;may involve a compromised DevOps engineer&#x27;s laptop,&quot; but chief executive Richard Teng then corrected the simple version: &quot;To be clear: the attacker did not simply use one engineer&#x27;s permissions, and this was not a single &#x27;one-click&#x27; action.&quot; The company later said it had found additional points of breach.</p>
+<p class="field">Who's affected</p><p>Depositors, locked out of withdrawals for roughly two days and promised to be made whole; bitcoin, which fell about 5% and dipped below $77,000 intraday; and listed crypto proxies, with Coinbase down more than 10% on Friday.</p>
+<p class="field">What it means</p><p>TRM&#x27;s Ari Redbord put the real stake plainly: &quot;When North Korea steals at this scale, the money funds weapons proliferation and other destabilising activity.&quot; The exchange survived because it had $6bn of its own to spend - which is reassurance and concentration risk in the same sentence.</p>
+<p class="field">Watch next</p><p>Binance&#x27;s promised technical post-mortem, the remaining withdrawal phases, and whether any regulator opens a formal inquiry.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The OPEC+ seven hold December output flat for a third month</h2>
+<p class="field">What happened</p><p>The seven voluntary-cut countries - Saudi Arabia, Russia, Iraq, Kuwait, Kazakhstan, Algeria and Oman - met on Sunday 1 November and maintained September 2026 required production for December, a third consecutive roll-forward. The combined target stays near 31.0m barrels a day: Saudi Arabia 10.478m, Russia 9.949m, Iraq 4.431m, Kuwait 2.676m, Kazakhstan 1.628m, Algeria 1.007m, Oman 841,000. No timetable was set for raising output, and the production capacity review that will fix 2027 baselines still has no published date. Note the group is seven, not the familiar eight: the UAE left after the 1 March 2026 release. No release for 1 November had appeared on <a href="https://www.opec.org/pr-detail/616-4-october-2026.html">opec.org</a> at publication, so the outcome rests on press accounts.</p>
+<p class="field">Context</p><p>Policy is no longer the binding constraint. Hormuz has been effectively shut since fighting began on 28 February 2026, attacks on commercial vessels near the strait hit a war high of at least 35 in October, and most members are producing below target as a result.</p>
+<p class="field">Who's affected</p><p>Refiners facing a Brent-WTI spread near $13.50 and steep backwardation; Gulf shippers and insurers; and Kazakhstan and Iraq above all, whose 2027 baselines the capacity review resets.</p>
+<p class="field">What it means</p><p>A hold that changes nothing is the point: the group has no spare policy to deploy while a war sets the price. December Brent settled at $117.64 and expired Friday; the new front month, January, settled $113.43, and that $4 step is rollover, not a price fall.</p>
+<p class="field">Watch next</p><p>The capacity review, and the 69th JMMC meeting on 29 November.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2><span class="num">1</span>Agility Robotics lines up $465m and a Nasdaq listing on 5 November</h2>
+<p class="field">What happened</p><p>On Friday 30 October Agility Robotics and Churchill Capital Corp XI announced that, after the redemption deadline expired, their business combination is <a href="https://www.globenewswire.com/news-release/2026/10/30/3392148/0/en/agility-robotics-and-churchill-capital-corp-xi-announce-expected-gross-capital-raise-of-approximately-465-million-and-anticipated-closing-of-business-combination.html">expected to raise approximately $465m</a> gross: about $164m from trust, about $201m of common-stock PIPE at $10.00 a share led by Foxconn, and $100m of equity already received. Existing shareholders roll with a 180-day lock-up. The shareholder meeting is 2 November, closing expected 4 November, and trading as AGLT on Nasdaq expected to begin 5 November. Named investors include Nvidia, Amazon, SoftBank Vision Fund 2, Schaeffler, Foxconn, DCVC and Playground Global.</p>
+<p class="field">Context</p><p>Four days earlier GXO Logistics expanded its Agility deployment from Flowery Branch, Georgia - where Digit has moved more than 100,000 totes - to Statesville, North Carolina and Lebanon, Tennessee, beginning early 2027 with Digit 4 and migrating to Digit 5. Agility&#x27;s RoboFab plant in Salem, Oregon is built for up to 10,000 robots a year.</p>
+<p class="field">Who's affected</p><p>Agility&#x27;s shareholders and staff; Foxconn, moving from supplier to anchor public shareholder; GXO&#x27;s warehouse workforce at three US sites; and Figure, Apptronik and 1X, who now get a public comparable.</p>
+<p class="field">What it means</p><p>The first humanoid company to reach public markets, and the $465m is committed rather than closed - it depends on Monday&#x27;s vote, and only the $100m has actually arrived. The GXO expansion matters more than the listing: it is a paying customer moving from one site to three.</p>
+<p class="field">Watch next</p><p>The 2 November vote, the 4 November close, and the first AGLT print on 5 November.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Cohere opens a record Canadian round with Ottawa on the cap table</h2>
+<p class="field">What happened</p><p>On Thursday 29 October Cohere announced the initial close of a <a href="https://www.prnewswire.co.uk/news-releases/cohere-announces-series-e-fundraise-targeting-cad-7-billion-to-meet-surging-global-demand-for-secure-sovereign-ai-302924051.html">Series E targeting up to C$7bn at a C$35.7bn valuation</a>, led by the companies of Germany's Schwarz Group - the Lidl and Kaufland owner - with Bell Ventures, Bullhound Capital and the Government of Canada new, and Inovia, Nvidia and Prosperity7 returning. The amount actually closed was not disclosed, and "up to C$7bn" is a target, not a receipt. Aidan Gomez called it the largest private capital raise in Canadian history. In a companion post the three co-founders attacked what they call "frontier fatalism," noting that more than 70% of open-model tokens served through OpenRouter came from Chinese models earlier this year, up from 3% fourteen months before.</p>
+<p class="field">Context</p><p>A separate Cohere post says it expects to invest more than C$4bn in Canadian research and AI infrastructure between 2024 and 2031, including a C$309m GPU cloud partnership with Bell. Valuations of US$20.5bn and EUR 23bn circulating in coverage are outlet constructions; C$35.7bn is the company&#x27;s own figure.</p>
+<p class="field">Who's affected</p><p>Canada&#x27;s technology sector and its taxpayers, who now hold an AI equity position; Schwarz Group, buying an enterprise-AI stake outright; Mistral and Aleph Alpha, whose sovereignty pitch Cohere now competes with directly.</p>
+<p class="field">What it means</p><p>A national government and a European grocery conglomerate jointly underwriting a non-American frontier lab is a new financing shape, and it arrived the same week Anthropic filed to go public. Sovereignty has become a fundable thesis rather than a speech.</p>
+<p class="field">Watch next</p><p>The final close and the actual committed figure, which nobody has disclosed.</p>
+</div>
+</div>
+<div class="section" id="vc---pe">
+<hr class="rule-hair"><p class="topic">VC &amp; PE</p>
+<div class="item">
+<h2><span class="num">1</span>Anthropic files to go public, and the loss that frightens people is not cash</h2>
+<p class="field">What happened</p><p>Anthropic filed its <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm">S-1 on Monday 26 October</a>, accession 0001628280-26-067168, applying to list Class A stock on the Nasdaq Global Select Market under the symbol ANT. First-half 2026 revenue was $16,286m against $1,163m a year earlier. The net loss was $(80,748)m - but $(72,388)m of that is a non-cash change in the fair value of convertible notes, derivative liabilities and SAFEs, driven by the rise in the company's own valuation. The operating loss was $(693)m. No share count and no price range are set; both are literal blanks, and the $1,000,000,000 in the fee table is a registration-fee placeholder, not a deal size. A Founder LLC holding Class F stock, whose initial sole members are the seven co-founders, carries votes equal to 50.1% of total voting power.</p>
+<p class="field">Context</p><p>Renaissance Capital estimates the raise could reach $75bn - its own figure, not Anthropic&#x27;s - and reads the filing as implying a roadshow from the week of 9 November and pricing the week of 16 November. The Wall Street Journal, citing people familiar, puts the target valuation at $1.5tn to $2tn.</p>
+<p class="field">Who's affected</p><p>The entire late-stage AI cap table, which gets its first public comparable; index funds facing a potential near-instant large-cap addition; and Nasdaq&#x27;s November calendar, which Renaissance otherwise calls set for a quiet start.</p>
+<p class="field">What it means</p><p>The headline loss is an accounting artefact of success - the notes got more valuable because the company did. The $(693)m operating loss on $16.3bn of revenue is the number that matters, and it is remarkably small. Whether a market that spent Friday repricing AI debt wants to buy that story in three weeks is the real test.</p>
+<p class="field">Watch next</p><p>Whether the roadshow launches the week of 9 November, and the first price range.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Advent raises $30bn, the year&#x27;s largest private-equity pool</h2>
+<p class="field">What happened</p><p>Announced on Tuesday 27 October: Advent International has <a href="https://www.caproasia.com/2026/10/29/united-states-109-billion-private-equity-firm-advent-international-raised-30-billion-for-11th-flagship-private-equity-buyout-fund-new-mid-market-strategy-1-27-billion-for-global-private-equity/">raised about $30bn</a> across two vehicles - close to $27bn for its eleventh flagship buyout fund, above a $26bn target, and over $3bn for a new mid-market strategy. The coverage does not say whether these are final closes or interim commitments. Managing partner James Brocklebank framed it against one of the most demanding fundraising environments; the firm's argument is distributions, reporting about $13bn of realisations across 27 businesses this year against about $10bn invested across 38 businesses including pending deals. Advent manages more than $109bn.</p>
+<p class="field">Context</p><p>Advent appeared on both sides of the market this week, also co-leading Firehawk Defense&#x27;s Series D. The constraint on private-equity fundraising since 2024 has been exits, not appetite.</p>
+<p class="field">Who's affected</p><p>Limited partners starved of distributions, who get a manager actually returning capital; mid-market sellers gaining a new $3bn buyer; and competing mega-funds, which now have a 2026 benchmark.</p>
+<p class="field">What it means</p><p>The largest pool raised this year, and the pitch was realisations rather than marks. In a market where private AI valuations are stepping up 3x in ten months while public comparables derate, the manager who can prove cash back is the one who raises.</p>
+<p class="field">Watch next</p><p>Confirmation of final closes, and Advent&#x27;s first deployment from Fund XI.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2><span class="num">1</span>Election eve: more than 50 million have already voted, and the Senate needs a net four</h2>
+<p class="field">What happened</p><p>Going into Tuesday 3 November, early voting has set a midterm record. Al Jazeera, citing University of Florida analysis, put the total at <a href="https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean">53.14 million as of 6:56am Eastern on Sunday</a>, roughly 29 million in person and 23 million by mail, against about 46 million at the equivalent point in 2022. The Senate stands at 53 Republicans, 45 Democrats and two independents caucusing with Democrats, with 35 seats on the ballot - 33 regular Class 2 seats plus Class 3 specials in Ohio and Florida, both held by appointed Republicans. Republicans defend 22 of the 35. Democrats need a net gain of four to reach 51.</p>
+<p class="field">Context</p><p>The best-documented national survey of the week is PBS News, NPR and Marist, published 27 October: field 19-20 October, 1,280 registered voters, margin of error 3.7 points among registered and 3.8 among likely voters, with likely voters splitting 52% Democratic to 44% Republican, and Trump approval at 40 to 59 among likely voters.</p>
+<p class="field">Who's affected</p><p>Thirty-five Senate seats, the whole House, 36 governorships; election officials in at least five states that received federal demands; and the 20,930 Californians on the Justice Department&#x27;s flagged list.</p>
+<p class="field">What it means</p><p>The genuinely competitive Republican-held races are Maine, the Ohio special, Alaska, Texas, Iowa and Kansas; the most exposed Democratic seats are open ones in Michigan and New Hampshire. Treat the party breakdowns of early votes with care - they cover only states that record party registration and they are registrations, not votes cast. And a prediction-market quote is a price, not a forecast.</p>
+<p class="field">Watch next</p><p>Polls close Tuesday. Certification calendars vary by state and are worth not guessing.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>A federal judge bars the Justice Department from threatening election workers nationwide</h2>
+<p class="field">What happened</p><p>On Friday 30 October Judge Trina L. Thompson of the Northern District of California issued a <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/N.D.-Cal.-26-cv-12800-dckt-000026_000-filed-2026-10-30.pdf">temporary restraining order</a> in SEIU v. Department of Justice, No. 3:26-cv-12800-TLT, barring federal officials - where the action rests solely on an allegation that a voter is ineligible - from coercing state or local election officials into halting ballot processing, demanding removals from registration lists, segregating or not counting ballots, or threatening officials with prosecution. It requires defendants to tell every government that received such a letter that the demands are enjoined. She found a likely violation of the Voting Rights Act's intimidation ban at 52 U.S.C. 10307(b). The order opens: "One of the hallmarks of a fair election is the freedom to exercise the right to vote free from threat, fear, or intimidation." It expires at 5pm on 16 November. The Justice Department appealed on 31 October.</p>
+<p class="field">Context</p><p>Plaintiffs are four organisations - SEIU, AFSCME, LULAC and the NAACP - against the Justice Department, Attorney General Todd Blanche, DHS and Secretary Markwayne Mullin. Separately, an appeals court on 30 October rejected the department&#x27;s demand that California set aside ballots tied to the flagged list.</p>
+<p class="field">Who's affected</p><p>Election workers in every state; the 20,930 Californians named, of whom a UCLA analysis found 8,880 - 42% - match nobody on the current voter roll; and the union and civil-rights members who brought the case.</p>
+<p class="field">What it means</p><p>A temporary restraining order is not a final judgment, and the appeal means this is unsettled going into Tuesday. But a nationwide notification requirement three days before an election is about as far as a district court can reach, and it is the first order to treat the whole letter campaign as a single course of conduct.</p>
+<p class="field">Watch next</p><p>The appeal, and the 16 November expiry. Several related California cases are before other judges and should not be conflated with this one.</p>
+</div>
+</div>
+<div class="section" id="eu">
+<hr class="rule-hair"><p class="topic">EU</p>
+<div class="item">
+<h2><span class="num">1</span>Lagarde will leave the ECB on 7 February 2027, eight months early</h2>
+<p class="field">What happened</p><p>The European Central Bank announced on 29 October that <a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html">President Christine Lagarde will step down on 7 February 2027</a>, having informed the Governing Council and European Council President Antonio Costa; the Council gave her a standing ovation. Her term would have run to October 2027. The release gives no reason. At the same day's press conference, which held the three key rates with the deposit facility at 2.50%, she said she was going early because she wants the freedom of speech and expression, and that "We have an obligation of neutrality" she no longer feels able to keep. She also said a process to identify her successor has already started and there are plenty of excellent candidates.</p>
+<p class="field">Context</p><p>This is a tightening cycle, not an easing one - the deposit rate went from 2.25% in June to 2.50% in September, and the bank has signalled another hike possibly in December. Chief economist Philip Lane&#x27;s term ends in May and Isabel Schnabel&#x27;s board seat falls vacant in early January, so the Council has three appointments inside six months.</p>
+<p class="field">Who's affected</p><p>Euro-area borrowers and sovereign issuers facing a December hike with inflation at 3.8%; France above all, already on negative outlook at A+; and the Council, which must now agree a successor under Article 283.</p>
+<p class="field">What it means</p><p>The timing is the story. One account has the early exit giving leaders time to choose a successor before France&#x27;s spring presidential election - in which Marine Le Pen leads polling. Klaas Knot and Pablo Hernandez de Cos are described as front-runners. A central bank presidency being sequenced around a national election is not reassuring about either.</p>
+<p class="field">Watch next</p><p>Euro-area flash inflation on Wednesday 4 November, the December meeting, and the succession process.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Poland&#x27;s Constitutional Tribunal breaks down, and the rule-of-law fight reverses polarity</h2>
+<p class="field">What happened</p><p>On Friday 30 October <a href="https://www.aljazeera.com/news/2026/10/30/polish-police-deployed-to-top-court-after-head-judge-suspended">police were deployed to Poland's Constitutional Tribunal</a> after its head, Bogdan Swieczkowski, was suspended over allegations he used his position to block judges elected by the current parliamentary majority from taking up their duties. Police blocked access and, by their own account, entered the premises after objects were thrown at officers outside; three people were detained. Anna Korwin-Piotrowska, one of the judges President Karol Nawrocki refused to swear in, has been put in charge. Nawrocki turned his plane around mid-flight to Senegal. Justice Minister Waldemar Zurek said he had asked for the immunity of Swieczkowski and his deputy to be lifted. Donald Tusk said restoring the rule of law "requires decisive action. There is no other way."</p>
+<p class="field">Context</p><p>The dispute has effectively paralysed the court. Former PiS justice minister Zbigniew Ziobro called it &quot;a blatant, criminal attack on the constitutional order.&quot; The Commission had no published position as of Sunday.</p>
+<p class="field">Who's affected</p><p>Every case before the Tribunal; Poland&#x27;s EU funds conditionality, which was unlocked on rule-of-law grounds; and the Commission, which must decide whether a government restoring the rule of law may do it this way.</p>
+<p class="field">What it means</p><p>This inverts the 2016-2023 Article 7 fight exactly: the government is now the party taking contested action against a court, and the opposition is invoking constitutionalism. Brussels has no good template for that, which is why its silence this week is the thing to watch.</p>
+<p class="field">Watch next</p><p>Whether the Commission comments, and whether the immunity request proceeds.</p>
+</div>
+</div>
+<div class="section" id="france">
+<hr class="rule-hair"><p class="topic">France</p>
+<div class="item">
+<h2><span class="num">1</span>The budget&#x27;s revenue side is being dismantled article by article, and Tuesday is the vote</h2>
+<p class="field">What happened</p><p>The Assembly spent the week on the revenue half of the 2027 finance bill and the government kept losing. The signature defeat came on Tuesday 27 October, when deputies voted to <a href="https://lcp.fr/actualites/budget-2027-la-surtaxe-sur-les-benefices-des-grandes-entreprises-supprimee-a-ce-stade">delete article 15 - the one-year extension of the exceptional contribution on large companies' profits - by 79 votes to 77</a>. Nine deletion amendments came from Droite Republicaine, the Rassemblement National, UDR, Horizons and two deputies of the governing group; the rapporteur-general and the government both opposed. Ministers had wanted to cut the rate and bring receipts from about EUR 7bn to EUR 5bn. Eric Coquerel says the deletion adds EUR 5bn to the deficit. Economy minister Roland Lescure said "la realite est evidemment un peu entre les deux." Deputies also voted a per-gigabyte tax and restored the exit tax to its original version.</p>
+<p class="field">Context</p><p>The finance committee rejected the first part 31 to 3. The revenue vote was meant to be 20 October but slipped because debate ended with 15 of 58 articles examined and more than 2,600 amendments outstanding. The social security budget was rejected on 23 October by 115 votes to 1 and goes to the Senate from 9 November. No use of article 49.3 has been announced for 2027 and no censure motion has been filed - the 49.3 stories in circulation concern the 2026 budget, adopted that way on 2 February 2026.</p>
+<p class="field">Who's affected</p><p>Large French companies, which have won a reprieve of several billion unless the Senate restores it; local authorities, which have had a EUR 2.5bn levy and a VAT-fund cut stripped out; pensioners; and bondholders.</p>
+<p class="field">What it means</p><p>If Tuesday&#x27;s vote fails, the whole budget falls at first reading in the Assembly and goes to the Senate in the government&#x27;s own version - which is, perversely, the outcome the government may prefer. That is what a minority government with no majority on any side looks like six months before a presidential campaign.</p>
+<p class="field">Watch next</p><p>The solemn vote Tuesday 3 November afternoon; 17 November for the whole text; 17 December as the constitutional seventy-day deadline.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The second mass Saturday: 320,000 by official count, 290 arrests, 70,000 police</h2>
+<p class="field">What happened</p><p>On Saturday 31 October protests organised by a coalition of student organisations and unions drew <a href="https://www.aljazeera.com/news/2026/10/31/tension-and-clashes-as-hundreds-of-thousands-protest-again-in-france">320,000 nationwide including 70,000 in Paris</a> by the Interior Ministry's count, and nearly 500,000 including 200,000 in Paris by organisers'. About 70,000 police and gendarmes were deployed and the ministry said at least 290 people were arrested. The main Paris march was shifted to the city's eastern edge after a last-minute court battle, with a 9pm curfew for unaccompanied minors around the Champs-Elysees. Marches began peacefully and turned violent near the end point: street furniture set alight, dozens of masked people prying up paving stones, at least one incendiary device thrown. Police used tear gas and baton charges, and tear gas in Lyon.</p>
+<p class="field">Context</p><p>The movement began in September with school students protesting neglected buildings, teacher shortages and an admissions system seen as unfair, and has broadened to the cost of living. On 17 October it drew over 500,000 by government estimates and produced the worst rioting in years. The same weekend the wave spread - water cannon in Cologne, about 130 arrests in Barcelona the week before, clashes in Milan, Turin and Bologna.</p>
+<p class="field">Who's affected</p><p>Sebastien Lecornu, who needs calm streets to reach Tuesday&#x27;s vote; the 290 arrested; retailers on the Paris and Lyon routes; and the Interior Ministry&#x27;s public-order doctrine, now visibly dependent on tear gas at scale.</p>
+<p class="field">What it means</p><p>Al Jazeera&#x27;s report does not link the marches to the budget, and it is worth resisting the connection on this evidence - though Lecornu has met student unions repeatedly this week and is weighing cost-of-living measures. Al Jazeera&#x27;s Natacha Butler, on public trust in the government: &quot;That trust has gone.&quot;</p>
+<p class="field">Watch next</p><p>No date has been set for the next action. Whether Lecornu announces measures before Tuesday.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2><span class="num">1</span>Hormuz: the foreign ministry talks two days, the security council says seven conditions</h2>
+<p class="field">What happened</p><p>Through the weekend Foreign Minister Abbas Araghchi set out the Qatari-mediated sequence in detail on Al Jazeera, and the gap inside Tehran widened rather than closed. Araghchi: "The Qatari side proposed shortening the implementation period of the Iranian proposal to five days," and then "We have reached a proposal at this stage that reduces the implementation period to two days." His conditions: lifting sanctions imposed after the Islamabad memorandum collapsed in July, reducing US forces in the region, restoring the June oil waivers, formal recognition of an Omani-arranged shipping route and closure of all others, an end to the war on all fronts including Israel's strikes on Lebanon, and release of frozen funds including about $6bn in Qatar. He called Washington's opening a positive step and said <a href="https://aninews.in/news/world/middle-east/araghchi-says-iran-qatar-propose-reopening-strait-of-hormuz-within-two-days-if-us-meets-tehrans-conditions20261101115013/">"Reopening the Strait of Hormuz in accordance with our conditions paves the way for the resumption of negotiations."</a> Mohsen Rezaei, Iran's top security official, said no talks would happen and the strait would stay closed unless all seven conditions were met. Vice-President JD Vance has written to Rezaei through Qatari mediators proposing direct talks with the nuclear programme on the table.</p>
+<p class="field">Context</p><p>The war began 28 February 2026. The Qatari draft has been cut from seven days to five to two. Reuters reported Tehran rejected the draft outright, which is consistent with that reporting being right about the security council and wrong about the foreign ministry. Marco Rubio says Trump &quot;hasn&#x27;t made a decision.&quot;</p>
+<p class="field">Who's affected</p><p>Tanker owners and crews; Qatari and Emirati LNG buyers in Japan, Korea and Europe; Indian and Chinese refiners on waiver-dependent barrels; Lebanon, now an explicit Iranian condition; and the $6bn held in Doha.</p>
+<p class="field">What it means</p><p>Two Iranian officials describing incompatible positions in the same 48 hours is the story, not a sourcing failure. On the attacks: the IRGC Navy claims mines, UKMTO says a projectile - a genuine conflict of mechanism, and both are interested parties. CENTCOM&#x27;s claim of 144 redirected vessels and clear lanes is equally a combatant&#x27;s account of its own operation.</p>
+<p class="field">Watch next</p><p>Whether Vance&#x27;s channel produces a meeting. Markets expect any renewed US action after Tuesday&#x27;s midterms.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Israel: the 60-46-14 numbers are presidential recommendations, not seats</h2>
+<p class="field">What happened</p><p>Ynet published the endorsement arithmetic on Sunday 1 November and it resolves the figures in circulation: projected presidential recommendations of <a href="https://www.ynetnews.com/article/sk8eaw4pge">60 for Gadi Eisenkot, 46 for Benjamin Netanyahu, with 14 undecided</a> - United Torah Judaism's seven and Yisrael Beiteinu's seven. With Avigdor Lieberman, Eisenkot reaches 67. The raw bloc split is different: Netanyahu 53, Eisenkot 48, Arab parties 19. By party: Likud 27, Yashar! 21, B'Yachad 12, Joint List 11, Ra'am 8, The Democrats 8, Yisrael Beiteinu 7, Otzma Yehudit 7, UTJ 7, Shas 6, Religious Zionism 6. President Isaac Herzog, at the Weizmann memorial: "The election results are a fact. They are reality," and that candidates "naturally and predictably climb very tall trees. But the election is over" - adding that "we will try to set up ladders so that the leaders can face this reality in a measured and cautious way."</p>
+<p class="field">Context</p><p>Shas fell from 11 seats to 6 and left the government months ago over the failed yeshiva exemption bill, but still counts itself in Netanyahu&#x27;s bloc. UTJ, now chaired by Yaakov Asher, is demanding exemption legislation before committing to anyone. Lieberman has ruled out Netanyahu and also any government dependent on the Arab parties, which is why his seven are genuinely unplaced.</p>
+<p class="field">Who's affected</p><p>Yeshiva students facing conscription; Arab-Israeli voters, whose 19 seats are decisive in this configuration for the first time; and Netanyahu personally, whose corruption trial continues regardless.</p>
+<p class="field">What it means</p><p>Getting the two sets of numbers confused would be the week&#x27;s easiest error: a recommendation count is not a coalition. Herzog&#x27;s tree-and-ladder line exists in at least three English renderings of one Hebrew sentence, so attribute the wording to the outlet.</p>
+<p class="field">Watch next</p><p>CEC chairman Noam Solberg presents official results on Wednesday 4 November; Herzog begins consultations the same day; the mandate must be assigned by 11 November.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Russia restates 2022 maximalism at the G20 while Ukraine strikes 1,200km deep</h2>
+<p class="field">What happened</p><p>The Institute for the Study of War's <a href="https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-31-2026">31 October assessment</a> describes a week in which diplomacy went backwards and the strike war escalated. Sergei Lavrov, at the G20 foreign ministers' meeting in Atlanta on 30 October, said Russia's position is unchanged, blamed Ukrainian long-range strikes for the stall, and said Europeans are trying to squeeze into the process; the Kremlin has renewed its 2021 demand that NATO roll back to its 1997 borders and that European leaders be excluded. ISW counts at least 698,000 Russian casualties since March 2025, per Ukraine's General Staff, for just over 4,000 square kilometres. Ukraine hit the Bashneft-Novoil refinery at Ufa, about 1,200km from the border, on 31 October, and a Rostov plant reported to make solid rocket fuel overnight. Russia struck the grid: about 200,000 households in Dnipropetrovsk and over 80,000 in Kyiv oblast lost power.</p>
+<p class="field">Context</p><p>A localised ceasefire at Oleshky in Kherson oblast took effect on 27 October and both sides completed a humanitarian mission there - the longest either side has observed since 2022, per Ukraine&#x27;s human rights commissioner. Witkoff met Putin in St Petersburg on 21 October and Putin agreed to resume talks after 10 November.</p>
+<p class="field">Who's affected</p><p>More than 280,000 Ukrainian households without power going into November; Russian fuel markets; and hauliers into Crimea, where truck traffic from Rostov has reportedly fallen from 2,000-3,000 a day to 600-800.</p>
+<p class="field">What it means</p><p>The asymmetry is the point: Russia is spending casualties at a rate wildly disproportionate to the ground it takes while refusing the frontline ceasefires Kyiv has offered. Note the 500 PAC-3 interceptors at $2.1bn are a State Department foreign military sale determination - a congressional notification, not a sale and not a delivery, with deliveries reportedly not expected until after 2030.</p>
+<p class="field">Watch next</p><p>Talks resuming after 10 November, and the winter campaign against the grid.</p>
+</div>
+</div>
+<div class="section" id="profile">
+<hr class="rule-hair"><p class="topic">Profile</p>
+<div class="item"><h2>Raphael Lemkin, who needed a word</h2></div>
+<div class="longform">
+<p class="drop">He was born on 24 June, on a farm called Bezwodne near the town of Wolkowysk, in what was then the Russian Empire and is now Vawkavysk in Belarus. The year is either 1900 or 1901; the Nobel committee&#x27;s nomination archive and two American manuscript collections say 1901, Polish scholarship says 1900, and his own obituary gave his age as 58, which settles nothing. It is an appropriate beginning for a man who spent his life insisting that things be named precisely and who could not get his own birth year fixed.</p>
+<p>As a law student in his twenties, Raphael Lemkin followed the 1921 Berlin trial of Soghomon Tehlirian, who had assassinated Talaat Pasha, an architect of the Ottoman destruction of the Armenians. What struck him was the asymmetry: a man could be tried for one killing while the organised killing of a million went unprosecuted because it had been done by a state to its own population. The dialogue usually quoted here - a professor comparing a state&#x27;s treatment of its people to a farmer killing his own chickens - comes from a popular interview book published in 1959, the year Lemkin died, and should be read as reconstruction. The line that is his own, from his unfinished autobiography, is better anyway: &quot;Sovereignty cannot be conceived as the right to kill millions of innocent people.&quot;</p>
+<p>He took a doctorate in law at Jan Kazimierz University in Lwow in 1926 and became a public prosecutor, eventually in Warsaw. In 1933 he wrote a paper for the Fifth International Conference for the Unification of Penal Law in Madrid proposing that international law recognise two crimes, &quot;barbarity&quot; and &quot;vandalism&quot; - the destruction of human groups and of their cultural works. He did not attend. The Polish government withdrew his nomination at the last minute. The proposal was not adopted.</p>
+<p>Six years later the thing he had been describing in the abstract arrived. His train out of Warsaw was bombed; he spent days in a forest, then sheltered in a baker&#x27;s house in Soviet-occupied Poland, then reached his family in the east, who would not leave. He went on alone - Lithuania, then Stockholm, where he lectured on international law, then by air to Moscow, the Trans-Siberian railway to Vladivostok, a small boat the passengers called the floating coffin to Tsuruga in Japan, Yokohama, Vancouver, and finally Seattle in April 1941. At the railway station in Durham, North Carolina, he was met by Malcolm McDermott, a Duke law professor with whom he had translated the Polish criminal code into English in 1932 and whom he had not seen in five years. McDermott had arranged him a post as a special lecturer. By his own count, 49 members of his family, including both his parents, were killed.</p>
+<p>The word came in 1944, in a book about administrative law. Axis Rule in Occupied Europe, published by the Carnegie Endowment for International Peace, is mostly a forensic compilation of German decrees in occupied territory. On page 79 Lemkin stops and does something else: &quot;New conceptions require new terms. By &#x27;genocide&#x27; we mean the destruction of a nation or of an ethnic group.&quot; He built it from the Greek genos and the Latin cide, and - this is the part most often missed - he immediately widened it past mass murder: genocide &quot;is intended rather to signify a coordinated plan of different actions aiming at the destruction of essential foundations of the life of national groups, with the aim of annihilating the groups themselves.&quot;</p>
+<p>Then he spent fifteen years lobbying. At Nuremberg he was a War Department adviser who attached himself to the American prosecution and pushed; accounts of his role range from &quot;assisted&quot; to &quot;a kind of lobbyist,&quot; and nobody has produced a title. He got one sentence into the indictment, under Count Three - &quot;They conducted deliberate and systematic genocide, viz., the extermination of racial and national groups&quot; - and no conviction, because the tribunal&#x27;s charter contained no such crime. So he moved to the United Nations and worked the delegations one at a time, a private citizen with no government behind him. General Assembly resolution 96(I) came on 11 December 1946. The Convention on the Prevention and Punishment of the Crime of Genocide was adopted in Paris on 9 December 1948 and entered into force on 12 January 1951. He was nominated for the Nobel Peace Prize ten times between 1950 and 1959, and never won.</p>
+<p>He died of a heart attack on 28 August 1959, in the Park Avenue offices of a public-relations man, jobless and penniless, living in one room on West 112th Street and subsisting on small donations from emigre groups. Samantha Power&#x27;s account says seven people came to the funeral; no institutional source repeats it, and she cites none. The United States, whose prosecution team he had followed to Nuremberg, did not consent to the Convention until 19 February 1986, by 83 votes to 11, after Senator William Proxmire gave more than 3,000 speeches on it over nineteen years; the implementing statute, the Proxmire Act, was approved on 4 November 1988, twenty-nine years after Lemkin&#x27;s death.</p>
+<p>This week Amnesty International published testimony marking one year since the Rapid Support Forces took El Fasher, documenting unlawful killings, arbitrary detention and torture. Yale&#x27;s Humanitarian Research Lab mapped the city from orbit. There is no outside press access, so what the world knows about what happened there it knows the way Lemkin knew about the Armenians - secondhand, documented by people with no power to stop it, and argued over in the language of a treaty he wrote alone.</p>
+</div></div>
+<div class="section" id="calendar">
+<hr class="rule-hair"><p class="topic">On the calendar</p><ul class="cal">
+<li><span class="when">Mon 2 Nov</span>Apple fiscal Q4, after close, call 5pm ET. Palantir after close. RatingDog China manufacturing PMI (the former Caixin series). US ISM manufacturing, consensus 54.7. Churchill Capital XI shareholder meeting on the Agility Robotics merger. NPC Standing Committee opens, sitting to 6 Nov, no fiscal items. Boasberg said he would rule in DSCC v. Trump by today; DOJ asked the District of Alaska to rule today too.</li>
+<li><span class="when">Tue 3 Nov</span>US midterm elections: 35 Senate seats, the whole House, 36 governorships. France: solemn vote on the revenue half of the 2027 budget, afternoon. AMD after close; Astera Labs, Super Micro, Skyworks. Reserve Bank of Australia, markets pricing about 79% for a hike to 4.85%.</li>
+<li><span class="when">Wed 4 Nov</span>Qualcomm and Arm after close; GlobalFoundries before open. Israel: CEC chairman Noam Solberg presents official results, and Herzog begins coalition consultations. European Commission 2026 enlargement package, presented by Marta Kos, with reports on ten candidate countries. Euro-area flash inflation for October. Riksbank, expected hike to 2.00%. US Treasury quarterly refunding. South African municipal elections. Agility Robotics merger expected to close.</li>
+<li><span class="when">Thu 5 Nov</span>Bank of England decision and Monetary Policy Report, expected to begin a tightening cycle - read the vote split. Norges Bank, expected hold. Canadian federal budget. Orsted Q3 call, with an expected update on Revolution Wind. French industrial production for September. Agility Robotics expected to begin trading on Nasdaq as AGLT.</li>
+<li><span class="when">Fri 6 Nov</span>US October employment report, 8:30am ET, consensus plus 55,000. EU Council methane-delay vote, twice postponed. Apple M6 Macs on sale. Ollie&#x27;s app shuts down. Lavrov in Abu Dhabi to 10 Nov.</li>
+<li><span class="when">Mon 9 Nov</span>COP31 opens in Antalya, running to 20 Nov; Leaders&#x27; Summit 11-12 Nov. French Senate takes up the social security budget. Sandisk eight-for-one split record date. Renaissance Capital reads Anthropic&#x27;s filing as implying a roadshow from this week.</li>
+<li><span class="when">Tue 10 Nov</span>China&#x27;s commerce ministry notice No. 70 expires - the rare-earth control suspension. Trade trackers say the truce runs to 10 January while the legal text still says today. Russia-Ukraine talks to resume after this date, per Putin&#x27;s 21 October agreement with Witkoff. TSMC October revenue due around now.</li>
+<li><span class="when">Wed 11 Nov</span>Deadline for Herzog to assign the Israeli mandate, seven days from official publication.</li>
+<li><span class="when">Fri 13 Nov</span>Vulcan returns to flight with 40 Amazon Leo satellites, its first mission in about nine months. EPA&#x27;s methane hearing, if 13 is the date - the Federal Register notice gives both 13 and 16 November.</li>
+<li><span class="when">Mon 16 Nov</span>Judge Thompson&#x27;s restraining order on election-worker intimidation expires at 5pm. Renaissance reads Anthropic&#x27;s filing as implying pricing this week.</li>
+<li><span class="when">Tue 17 Nov</span>French Assembly solemn vote on the whole 2027 budget, and the end of its forty-day first-reading window.</li>
+<li><span class="when">Later</span>Sandisk split-adjusted trading from 20 Nov. Starship Flight 15, mid-November, attempting a catch of the upper stage. 69th JMMC meeting 29 Nov. Y Combinator fall demo day 2 Dec. G20 leaders&#x27; summit, Doral, 14-15 Dec. EPA methane comments close 16 Dec. French constitutional seventy-day budget deadline 17 Dec. US appropriations lapse 11 Dec.</li>
+</ul></div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results" target="_blank" rel="noopener">Intel - Q3 2026 results and Q4 guidance</a></li>
+<li><a href="https://www.intc.com/news-events/press-releases/detail/1784/intel-to-acquire-classiq-to-create-a-full-stack-quantum" target="_blank" rel="noopener">Intel - agreement to acquire Classiq</a></li>
+<li><a href="https://investor.sandisk.com/news-releases/news-release-details/sandisk-reports-fiscal-first-quarter-2027-financial-results" target="_blank" rel="noopener">Sandisk - fiscal Q1 2027 results and the eight-for-one split</a></li>
+<li><a href="https://artificialanalysis.ai/models" target="_blank" rel="noopener">Artificial Analysis - Intelligence Index v5.0 model table</a></li>
+<li><a href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener">Mistral - Mistral Large 4 open weights</a></li>
+<li><a href="https://techcrunch.com/2026/10/26/microsoft-offers-buyouts-to-around-60000-employees-reports-say/" target="_blank" rel="noopener">TechCrunch - Microsoft&#x27;s Voluntary Exit Offer</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/0001628280-26-067168-index.htm" target="_blank" rel="noopener">SEC EDGAR - Anthropic, PBC Form S-1, filed 26 October 2026</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261029a.htm" target="_blank" rel="noopener">Federal Reserve - FOMC statement, 29 October 2026</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610" target="_blank" rel="noopener">US Treasury - daily par yield curve, October 2026</a></li>
+<li><a href="https://www.opec.org/pr-detail/616-4-october-2026.html" target="_blank" rel="noopener">OPEC - the seven countries&#x27; 4 October statement, with the November levels</a></li>
+<li><a href="https://www.aljazeera.com/economy/2026/10/30/binance-says-2-54bn-in-crypto-funds-frozen-amid-potential-security-issue" target="_blank" rel="noopener">Al Jazeera - Binance confirms the breach</a></li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html" target="_blank" rel="noopener">European Central Bank - Lagarde to step down on 7 February 2027</a></li>
+<li><a href="https://www.prnewswire.co.uk/news-releases/cohere-announces-series-e-fundraise-targeting-cad-7-billion-to-meet-surging-global-demand-for-secure-sovereign-ai-302924051.html" target="_blank" rel="noopener">Cohere - Series E targeting up to C$7bn at C$35.7bn</a></li>
+<li><a href="https://www.globenewswire.com/news-release/2026/10/30/3392148/0/en/agility-robotics-and-churchill-capital-corp-xi-announce-expected-gross-capital-raise-of-approximately-465-million-and-anticipated-closing-of-business-combination.html" target="_blank" rel="noopener">Agility Robotics and Churchill Capital XI - expected $465m raise</a></li>
+<li><a href="https://fortune.com/2026/10/29/serval-servicenow-fight-series-c-3-billion-valuation-sequoia/" target="_blank" rel="noopener">Fortune - Serval&#x27;s $150m at $3bn, and ServiceNow&#x27;s reply</a></li>
+<li><a href="https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down" target="_blank" rel="noopener">TechCrunch - Ollie shuts down</a></li>
+<li><a href="https://www.biopharmadive.com/news/fda-personalized-gene-therapy-rare-disease-guidance/873004/" target="_blank" rel="noopener">BioPharma Dive - the FDA&#x27;s individualized feature space</a></li>
+<li><a href="https://wmo.int/media/news/greenhouse-gas-levels-once-again-reach-record-high" target="_blank" rel="noopener">WMO - Greenhouse Gas Bulletin No. 22</a></li>
+<li><a href="https://unfccc.int/news/un-climate-change-reports-show-paris-agreement-supporting-whole-of-economy-approaches-but-progress" target="_blank" rel="noopener">UNFCCC - 2026 NDC synthesis report</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/N.D.-Cal.-26-cv-12800-dckt-000026_000-filed-2026-10-30.pdf" target="_blank" rel="noopener">SEIU v. DOJ - the signed temporary restraining order, N.D. Cal. 3:26-cv-12800-TLT</a></li>
+<li><a href="https://www.pbs.org/newshour/politics/poll-likely-voters-favor-democrats-as-trump-disapproval-drives-early-turnout" target="_blank" rel="noopener">PBS NewsHour - the NPR and Marist likely-voter poll</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean" target="_blank" rel="noopener">Al Jazeera - more than 50 million early votes</a></li>
+<li><a href="https://www.cbsnews.com/news/alaska-us-attorney-senate-race-two-dan-sullivans/" target="_blank" rel="noopener">CBS News - the two Dan Sullivans and Alaska&#x27;s motion to dismiss</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/30/polish-police-deployed-to-top-court-after-head-judge-suspended" target="_blank" rel="noopener">Al Jazeera - police deployed to Poland&#x27;s Constitutional Tribunal</a></li>
+<li><a href="https://euobserver.com/245395/knife-edge-eu-council-methane-vote-could-hinge-on-commission-action-plan/" target="_blank" rel="noopener">EUobserver - the knife-edge Council methane vote</a></li>
+<li><a href="https://lcp.fr/actualites/budget-2027-la-surtaxe-sur-les-benefices-des-grandes-entreprises-supprimee-a-ce-stade" target="_blank" rel="noopener">LCP - the Assembly deletes the large-company surtax, 79 to 77</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/10/31/tension-and-clashes-as-hundreds-of-thousands-protest-again-in-france" target="_blank" rel="noopener">Al Jazeera - clashes as hundreds of thousands protest again in France</a></li>
+<li><a href="https://totalenergies.com/newsroom/resultats-du-troisieme-trimestre-2026-516472/?lang=eng" target="_blank" rel="noopener">TotalEnergies - third-quarter 2026 results</a></li>
+<li><a href="https://aninews.in/news/world/middle-east/araghchi-says-iran-qatar-propose-reopening-strait-of-hormuz-within-two-days-if-us-meets-tehrans-conditions20261101115013/" target="_blank" rel="noopener">ANI - Araghchi on the two-day Hormuz proposal</a></li>
+<li><a href="https://www.ynetnews.com/article/sk8eaw4pge" target="_blank" rel="noopener">Ynet - the presidential recommendation arithmetic</a></li>
+<li><a href="https://www.facinghistory.org/resource-library/excerpt-axis-rule-occupied-europe-raphael-lemkin" target="_blank" rel="noopener">Lemkin, Axis Rule in Occupied Europe (1944), p. 79 - the definition</a></li>
+<li><a href="https://www.amnesty.org/en/latest/news/2026/10/sudan-el-fasher-civilians-suffer-unlawful-killings-detention-and-torture-one-year-after-citys-capture-by-the-rsf-new-testimony/" target="_blank" rel="noopener">Amnesty International - El Fasher one year after its capture</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-01-weekly.pdf">PDF</a></span>
+</div></div></body></html>
