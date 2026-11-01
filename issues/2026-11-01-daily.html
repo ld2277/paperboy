@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, November 1, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, November 1, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Iran has cut the price of reopening the Strait of Hormuz to a two-day sequence — the first real movement in eight months of war, and it lands hours before OPEC+ meets to confirm it can do nothing about the oil price.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>S&amp;P turns negative on Meta, and the reason is leases</h2>
+<p class="field">What happened</p><p>S&amp;P Global affirmed Meta's AA- rating on Friday but <a href="https://fortune.com/2026/10/31/ai-boom-bust-openai-fundraising-target-meta-credit-warning-cash-flow-capex">moved the outlook to negative</a> from stable. The worry is not new borrowing: it is leased data-centre capacity, which S&amp;P counts as debt. Lease obligations reached $355.7bn against roughly $279bn in the second quarter, and the agency sees leverage breaching its 1.0x downgrade threshold as early as 2027. It projects capex near $140bn this year, above $225bn in 2027 and $252bn in 2028, with free operating cash flow of -$71bn in 2027. S&amp;P wrote that it is unclear when the revenue will generate contributions that exceed those rising costs.</p>
+<p class="field">What it means</p><p>A conditional warning on a strong credit, but it prices an argument that has run all month. Note what Meta did four days earlier: <a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431043/d133631d424b5.htm">priced $37.5bn of fresh capital</a> — $12.5bn of mandatory convertible preferred plus $25bn of common through forward sales at $625 a share — with a $60bn at-the-market programme planned from early 2027. Equity is cheaper than a downgrade.</p>
+<p class="field">Watch next</p><p>S&amp;P&#x27;s 1.3x figure applies once committed capacity comes online in 2028. Reuters&#x27; read of the same report puts the -$39bn deficit in 2026, not 2028.</p>
+</div>
+<div class="item">
+<h2>A federal judge lets the NAACP&#x27;s Clean Air Act suit against xAI proceed</h2>
+<p class="field">What happened</p><p>Judge Debra M. Brown of the Northern District of Mississippi <a href="https://www.selc.org/press-release/court-tosses-request-to-block-clean-air-act-lawsuit-against-musks-xai/">denied xAI's motion to dismiss</a> on Friday in NAACP v. X.AI Corp., No. 3:26-cv-00074, over gas turbines at the Southaven plant xAI calls Colossus 2, across the state line from Memphis. She held that the plaintiffs have Clean Air Act standing, that the turbines are not “mobile sources” under Mississippi's implementation plan — xAI's central defence — and that the Act's citizen-suit provision violates neither Article II nor the private nondelegation doctrine. The complaint alleges 27 unpermitted turbines; local reporting counts 69 temporary units on site now, plus 41 permanent ones permitted in March.</p>
+<p class="field">What it means</p><p>The second loss in two weeks: a government motion to dismiss in the same case failed on 19 October. The nondelegation holding is the one that travels: the administration has argued that citizen suits hand executive power to private parties unconstitutionally, and the theory just lost on an AI data centre, the fact pattern where it will keep being tested.</p>
+<p class="field">Watch next</p><p>xAI&#x27;s answer, and whether the Fifth Circuit takes the appeal, No. 26-60806.</p>
+</div>
+<div class="item">
+<h2>Apple&#x27;s new chief executive on AI, two days before earnings</h2>
+<p class="field">What happened</p><p>John Ternus, Apple's chief executive since the start of September, gave Wired his <a href="https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/">first substantial interview</a> on the company's AI position. Apple does not “want to ship AI for AI's sake,” he said; with good products “people won't have to think about whether it was AI that made this happen,” and “What matters is, did we build something that they really love?” Asked whether agents make apps unnecessary, he called product creation “a deeply human and personal thing.”</p>
+<p class="field">What it means</p><p>Apple reports fiscal fourth-quarter results Monday afternoon and is the one American large-cap whose capital spending has not become the story. Everyone else this quarter spent their call explaining a cash-flow deficit. Apple&#x27;s case for shipping less AI, later, is about to be marked against numbers rather than philosophy.</p>
+<p class="field">Watch next</p><p>Apple&#x27;s fiscal Q4, Monday 2 November, 2:00pm Pacific. AMD Tuesday, Qualcomm Wednesday.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Korea&#x27;s October chip exports nearly tripled</h2>
+<p class="field">What happened</p><p>Korea's trade ministry reported Sunday that October exports were <a href="https://www.koreajoongangdaily.com/business/exports-jump-nearly-94-in-october-to-hit-record-1153-billion-on-chip-demand/12948409">$115.28bn, up 93.7%</a> on a year earlier, with semiconductors at $56.44bn, up 259.4%. Imports were $72.78bn, leaving a $42.5bn surplus. Exports for the first ten months reached $930bn, past $900bn for the first time, and the ministry called $1trn for the year near-certain in November. China took $26.98bn, the United States $24.9bn. Two things the headline hides: the figures are unadjusted, and daily-average exports rose 76.1%, so roughly a tenth of the gain is extra working days against a Chuseok-shortened October 2025. October was also not a record month — September was higher, at $120.94bn.</p>
+<p class="field">What it means</p><p>Korea is the cleanest monthly readout on AI hardware demand anywhere: two companies there supply most of the world&#x27;s high-bandwidth memory, and customs data lands within a day of month-end. Chip export value nearly tripling while memory contract prices rise says the binding constraint is supply, not appetite. It also leaves Korea exposed — close to half of October&#x27;s exports were chips.</p>
+<p class="field">Watch next</p><p>November&#x27;s figure, due 1 December, is the one that crosses $1trn. Industry Minister Kim Jung-kwan paired the number with a warning about protectionism and Middle East instability for smaller exporters.</p>
+</div>
+<div class="item">
+<h2>Altman spends Saturday in Seoul, where the memory is</h2>
+<p class="field">What happened</p><p>Sam Altman ran a leadership seminar for <a href="https://www.koreatimes.co.kr/business/companies/20261031/samsung-execs-meet-open-ais-sam-altman-to-discuss-ai-transformation">about 50 Samsung executives</a> at the company's human-resources centre in Yongin on Saturday, then lunched in Seoul with SK Group chairman Chey Tae-won alongside SK hynix and SK Telecom executives. Samsung's readout has him arguing that advantage comes from using AI to move faster, not from adopting it. Neither side described the SK lunch, and no direct quotes came out of either meeting. The backdrop: OpenAI's October 2025 partnership with SK included a letter of intent on memory supply, and SK hynix has said it is planning capacity against requests for up to 900,000 DRAM wafers a month.</p>
+<p class="field">What it means</p><p>Procurement, not diplomacy. OpenAI&#x27;s announced compute commitments imply memory volumes that do not yet exist, and the two companies that could bring them into existence sit an hour apart. Industry watchers in Seoul assume high-bandwidth memory was the agenda; both companies declined to say so, which is not a denial.</p>
+<p class="field">Watch next</p><p>Whether either Korean firm discloses a supply agreement, and whether OpenAI ties one to its reported funding round.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>OPEC+ meets at noon to confirm it will do nothing</h2>
+<p class="field">What happened</p><p>The seven OPEC+ producers on the voluntary-adjustment track — Saudi Arabia, Russia, Iraq, Kuwait, Kazakhstan, Algeria and Oman, not the United Arab Emirates — meet online at 12:00 GMT today, the date fixed in their <a href="https://www.opec.org/pr-detail/616-4-october-2026.html">4 October communiqué</a>, which held November output at September's required levels. Three people told Reuters on Saturday the group had agreed in principle to leave December targets alone. Nothing had been published when this brief closed. The consequential business is elsewhere: an independent capacity review covering 19 of 22 members has slipped to mid-November, and it sets the 2027 baselines that determine every quota.</p>
+<p class="field">What it means</p><p>A hold changes little physically, because most Gulf members already pump below target — Hormuz, not policy, is the binding constraint. The baselines are the real fight, and Iran&#x27;s would be struck off eight months of war-depressed output. Brent&#x27;s January contract, now the front month, settled Friday at $113.43, up $2.63 and the highest since late April; the expiring December contract went off the board at $117.64.</p>
+<p class="field">Watch next</p><p>opec.org after 12:00 GMT. The full ministerial on 29 November takes the capacity findings.</p>
+</div>
+<div class="item">
+<h2>China&#x27;s three PMIs all slipped below 50</h2>
+<p class="field">What happened</p><p>China's statistics bureau reported Saturday that October's <a href="https://english.news.cn/20261031/b8bbe3a5855e496882fa8cad79a57fe4/c.html">manufacturing PMI fell to 49.3</a> from 50.1, the non-manufacturing business-activity index to 49.7 from 50.2 and the composite output index to 49.7 from 50.7 — all three back under the line dividing growth from contraction. Production dropped 1.9 points to 49.8, new orders 1.1 to 49.4. By size: large firms 50.2, medium 48.4, small 47.5. Price gauges fell hard, raw-material purchasing prices down 4.0 to 56.8 and factory-gate prices down 2.3 to 51.7. Huo Lihui, chief statistician of the bureau's service-industry survey centre, blamed demand pulled forward ahead of the National Day holiday.</p>
+<p class="field">What it means</p><p>One month above 50 and straight back below. The holiday explanation is partial: small firms at 47.5 have been under the line all year, and what strength remains sits in high-tech manufacturing (51.3) and equipment (50.6) — the export lines Korea&#x27;s figures also picked up. The falling prices are the worry, because deflation is the hard problem.</p>
+<p class="field">Watch next</p><p>The RatingDog manufacturing PMI, the private survey Caixin used to sponsor, publishes Monday.</p>
+</div>
+<div class="item">
+<h2>Fitch puts France on negative outlook</h2>
+<p class="field">What happened</p><p>Fitch affirmed France at A+ on Friday but <a href="https://www.globalbankingandfinance.com/fitch-revises-frances-outlook-negative-worsening-debt/">revised the outlook to negative</a>, citing deteriorating public finances, weaker growth and higher bond yields. It projects debt rising from 115.7% of GDP in 2025 to about 124% by 2028, interest costs from 2.5% to 3.3% of GDP, and a 2027 deficit of 5.5% against the government's own 5% target and the EU's 3% ceiling. It also named political fragmentation and the absence of a stable majority. One caveat: fitchratings.com was unreachable, so this rests on two secondary outlets agreeing on date, action and figures.</p>
+<p class="field">What it means</p><p>A funding-cost story. Fitch cut the rating itself last year; moving the outlook to negative rather than back to stable says the next step is down again, and it lands while Paris argues over a budget no majority exists to pass.</p>
+<p class="field">Watch next</p><p>French industrial production for September, Thursday. Whether Moody&#x27;s or S&amp;P follow.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Quiet weekend, and nothing worth your two minutes. No funding roundup published for either Saturday or Sunday, and the week&#x27;s one large venture story — OpenAI cutting its round target to roughly $20bn from $30bn at a $1.25tn valuation, with about $11bn secured — ran in yesterday&#x27;s brief. The xAI ruling is in the AI section above.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The 20,000-name list landed, and reviewers say it contains citizens</h2>
+<p class="field">What happened</p><p>The Justice Department let Chief Judge James Boasberg's 5pm Friday deadline pass, then withdrew its stay request and produced its list of alleged noncitizen registrants in California — the first outside check on it. In CHIRLA v. DHS, No. 1:26-cv-03072, UCLA Voting Rights Project reviewers <a href="https://www.democracydocket.com/news-alerts/immigrant-rights-group-finds-dozens-of-u-s-citizens-on-dojs-california-alleged-noncitizen-voter-list/">filed their reading on Saturday</a>: 20,930 names, of which 8,880, or 42%, are not on California's current voter roll. Matt Barreto, the project's faculty director, said he is “certain that there are at least 22 entries on the CHIRLA citizen list that fully match to the DHS ineligible list.”</p>
+<p class="field">What it means</p><p>This list was the factual basis for the administration&#x27;s claims about noncitizen voting in California, and the first independent look found naturalised citizens on it. Barreto and Michael Rios project that errors and duplications could produce more than 350,000 further false-positive matches of citizen voters statewide — a projection, not a count inside the 20,930, and so far carried by one outlet.</p>
+<p class="field">Watch next</p><p>How Boasberg handles standing. The government still has not explained how DHS matched California&#x27;s rolls.</p>
+</div>
+<div class="item">
+<h2>Alaska calls the ballot demand impossible as the FBI visits $500 donors</h2>
+<p class="field">What happened</p><p>Alaska's attorney general's office <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/76-2026-10-31-Alaska-election-boards-reply-in-support-of-motion-to-dismiss.pdf">filed its reply Saturday</a> in United States v. State of Alaska, No. 3:26-cv-00376-SLG, urging Judge Sharon Gleason to dismiss with prejudice. The Justice Department had asked Friday that she segregate every ballot marked for Daniel J. Sullivan Jr., the second candidate of that name. The state wrote: “If the United States means something different — as it seems to — its ballot segregation proposal is both disturbing and impossible.” Separately the FBI has begun visiting Sullivan's small donors in Petersburg, Sitka and Groton, Massachusetts.</p>
+<p class="field">What it means</p><p>Two days before a ranked-choice Senate election, federal agents are asking $500 donors whether they were deceived; US Attorney Michael Heyman says the inquiry has run for months. Mary Peltola denies recruiting the second Sullivan: “I know I can beat Dan Sullivan. I do not need any help winning this race.” Charles Flint, the Petersburg donor, told the Associated Press “I don&#x27;t feel like I&#x27;ve been misled at all.”</p>
+<p class="field">Watch next</p><p>Gleason may rule without a hearing; none is scheduled. One poll of 578 registered voters on 14-15 October had it 48-47 — inside its 4.1-point margin, so a tie.</p>
+</div>
+<div class="item">
+<h2>Final weekend: 49.6m votes are already cast</h2>
+<p class="field">What happened</p><p>The University of Florida Election Lab counted <a href="https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/">49,564,545 early votes</a> as of Friday evening — about 26.83m in person, 22.86m returned mail ballots, with New Hampshire and Alabama not reporting. Trump, who cancelled both events Thursday and reinstated them Friday, is scheduled in Dubuque, Iowa at 3pm Central today and Salina, Kansas at 7pm. He spent Saturday on tele-rallies, having told a crowd the day before: “Please pretend I'm on the ballot cause in a way I am on the ballot.”</p>
+<p class="field">What it means</p><p>The early-vote total is the only hard number here, and even it is a Friday figure. Everything else circulating about Tuesday is characterisation, and several Senate races that decide control sit inside their polling margins.</p>
+<p class="field">Watch next</p><p>Polls close Tuesday: 35 Senate seats, all 435 House seats, 36 governorships. Boasberg rules Monday on the Democratic committees&#x27; challenge to federal election demands, No. 1:26-cv-03674-JEB.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Iran cuts its terms for reopening Hormuz to two days</h2>
+<p class="field">What happened</p><p>Foreign Minister Abbas Araghchi <a href="https://aljazeera.com/news/2026/10/31/iran-fm-says-us-outreach-a-positive-step-as-delegation-in-qatar-for-talks">told Al Jazeera on Saturday</a> that Tehran had studied a letter from Vice-President JD Vance, calling the American outreach “a positive step” while adding “We see no need to meet with the Americans at this stage.” Under the revised sequence reported Sunday, Washington acts on day one and shipping resumes on day two, cut from five days and seven before that. Iran's conditions: sanctions relief, restored oil waivers, the $6bn frozen in Qatar, an Oman-agreed shipping route, fewer US forces and an end to strikes on Lebanon.</p>
+<p class="field">What it means</p><p>Eight months in, the movement is on sequencing, not substance — what mediators work on when positions have not shifted. Mind the attribution on anything maritime: the Revolutionary Guard navy&#x27;s account of tankers striking mines is Iran&#x27;s account of its own operation, and CENTCOM&#x27;s claim to have redirected 144 ships is Washington&#x27;s account of its own.</p>
+<p class="field">Watch next</p><p>Reuters reports Tehran rejected Doha&#x27;s draft outright, hard to square with Araghchi&#x27;s warmth. Rubio says Trump “hasn&#x27;t made a decision” on resuming strikes.</p>
+</div>
+<div class="item">
+<h2>Herzog offers ladders</h2>
+<p class="field">What happened</p><p>Going into President Herzog's consultations, recommendations stand at <a href="https://www.ynetnews.com/article/sk8eaw4pge">60 of 120 Knesset seats for Gadi Eisenkot</a> — Yashar! 21, B'Yachad 12, The Democrats 8, plus the Joint List's 11 and Ra'am's 8 both likely — against 46 for Netanyahu, with 14 undecided between Yisrael Beiteinu and United Torah Judaism; Yisrael Beiteinu's seven would take him to 67. At a state memorial on Sunday, Herzog said candidates “climb very tall trees” during a campaign, called the results “an established fact,” and said he would “try to provide ladders” so leaders can climb down.</p>
+<p class="field">What it means</p><p>Eisenkot&#x27;s 60 is one short of a majority and leans on two Arab parties whose legitimacy Netanyahu spent the campaign attacking. The ladder line is Herzog signalling he will push for anything but a fifth election. United Torah Judaism&#x27;s price is unchanged: yeshiva military-exemption legislation, the issue that broke the last coalition.</p>
+<p class="field">Watch next</p><p>Consultations open Wednesday 4 November; Herzog has until 11 November to award the mandate, and the holder gets 28 days, extendable by 14.</p>
+</div>
+<div class="item">
+<h2>Lavrov, in Atlanta, says nothing has changed</h2>
+<p class="field">What happened</p><p>Sergei Lavrov spoke on the sidelines of the <a href="https://www.state.gov/secretary-travel/secretary-rubios-travel-to-atlanta-to-host-the-g20-foreign-ministers-meeting-october-30-31-2026">G20 foreign ministers' meeting in Atlanta</a>, which Marco Rubio hosted on 30-31 October. Quoted through Russian agencies, he said Russia's position was known but that he did not know what Ukraine meant to bring to the table. On Washington: “Fundamental issues are not being resolved. Sanctions remain; all the sanctions from [former President Joe] Biden are echoed by the current administration.” Also Friday, the State Department cleared a possible $2.1bn sale of 500 Patriot PAC-3 missiles to Ukraine, funded by Canada, Germany, Norway and an EU loan.</p>
+<p class="field">What it means</p><p>Lavrov&#x27;s job in Atlanta was to lower expectations for Abu Dhabi, and he did. Zelensky wants negotiators from the three countries there between 6 and 10 November, with Europeans in the room; Moscow&#x27;s line is that nothing has shifted since February. The arms approval is the counterweight — a notification, not a delivery.</p>
+<p class="field">Watch next</p><p>Abu Dhabi, 6-10 November, if it happens. Congress has 30 days on the Patriot notification.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.koreajoongangdaily.com/business/exports-jump-nearly-94-in-october-to-hit-record-1153-billion-on-chip-demand/12948409" target="_blank" rel="noopener">Korea JoongAng Daily — October exports $115.3bn</a></li>
+<li><a href="https://www.koreatimes.co.kr/business/companies/20261031/samsung-execs-meet-open-ais-sam-altman-to-discuss-ai-transformation" target="_blank" rel="noopener">Korea Times — Altman and Samsung executives in Yongin</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/10/31/chey-tae-won-meets-openais-sam-altman-to-deepen-ai" target="_blank" rel="noopener">Seoul Economic Daily — Chey Tae-won meets Altman</a></li>
+<li><a href="https://fortune.com/2026/10/31/ai-boom-bust-openai-fundraising-target-meta-credit-warning-cash-flow-capex" target="_blank" rel="noopener">Fortune — S&amp;P revises Meta&#x27;s outlook to negative</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1326801/000119312526431043/d133631d424b5.htm" target="_blank" rel="noopener">SEC — Meta prospectus supplement, 26 October 2026</a></li>
+<li><a href="https://www.selc.org/press-release/court-tosses-request-to-block-clean-air-act-lawsuit-against-musks-xai/" target="_blank" rel="noopener">Southern Environmental Law Center — court denies xAI&#x27;s motion</a></li>
+<li><a href="https://naacp.org/sites/default/files/documents/1%20-%20Complaint.pdf" target="_blank" rel="noopener">NAACP v. X.AI Corp. — complaint</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm" target="_blank" rel="noopener">SEC — SpaceX Form S-1 (xAI acquisition, February 2026)</a></li>
+<li><a href="https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/" target="_blank" rel="noopener">TechCrunch — Apple&#x27;s Ternus on shipping AI</a></li>
+<li><a href="https://www.opec.org/pr-detail/616-4-october-2026.html" target="_blank" rel="noopener">OPEC — statement of the seven participating countries, 4 October 2026</a></li>
+<li><a href="https://aninews.in/news/business/opec-set-to-keep-december-oil-output-targets-unchanged-focus-shifts-to-2027-quotas20261101084757/" target="_blank" rel="noopener">ANI — OPEC+ expected to hold December targets</a></li>
+<li><a href="https://oilprice.com/futures/brent/" target="_blank" rel="noopener">Oilprice — Brent futures settlements, 30 October</a></li>
+<li><a href="https://english.news.cn/20261031/b8bbe3a5855e496882fa8cad79a57fe4/c.html" target="_blank" rel="noopener">Xinhua — China October PMIs</a></li>
+<li><a href="https://www.stats.gov.cn/english/PressRelease/202610/t20261008_1965466.html" target="_blank" rel="noopener">National Bureau of Statistics — September 2026 PMI release</a></li>
+<li><a href="https://www.globalbankingandfinance.com/fitch-revises-frances-outlook-negative-worsening-debt/" target="_blank" rel="noopener">Global Banking and Finance — Fitch revises France to negative</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/immigrant-rights-group-finds-dozens-of-u-s-citizens-on-dojs-california-alleged-noncitizen-voter-list/" target="_blank" rel="noopener">Democracy Docket — citizens found on the DOJ noncitizen list</a></li>
+<li><a href="https://www.winchesterstar.com/associated_press/washington/more-than-40-of-names-on-doj-list-of-alleged-noncitizens-not-on-californias-voter/article_7b7ab34b-5006-5848-8cbc-5e185ff045e1.html" target="_blank" rel="noopener">Associated Press — more than 40% of listed names not on California&#x27;s roll</a></li>
+<li><a href="https://vrp.ucla.edu/wp-content/uploads/2026/09/CHIRLA-2026-09-02-Complaint.pdf" target="_blank" rel="noopener">CHIRLA v. DHS — complaint, No. 1:26-cv-03072</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/76-2026-10-31-Alaska-election-boards-reply-in-support-of-motion-to-dismiss.pdf" target="_blank" rel="noopener">State of Alaska — reply in support of motion to dismiss, 31 October</a></li>
+<li><a href="https://www.pbs.org/newshour/politics/attorneys-for-alaska-say-meritless-trump-demand-to-set-aside-senate-ballots-not-even-possible" target="_blank" rel="noopener">PBS NewsHour / AP — Alaska calls the ballot demand impossible</a></li>
+<li><a href="https://www.pbs.org/newshour/politics/fbi-visits-dan-j-sullivan-donor-in-candidates-hometown-as-alaska-senate-inquiry-widens" target="_blank" rel="noopener">PBS NewsHour / AP — FBI visits a Sullivan donor in his hometown</a></li>
+<li><a href="https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/" target="_blank" rel="noopener">CBS News — campaigns on the weekend before, with early-vote totals</a></li>
+<li><a href="https://www.kcrg.com/2026/11/01/trump-rally-dubuque-where-watch-how-attend/" target="_blank" rel="noopener">KCRG — Trump&#x27;s Dubuque rally details</a></li>
+<li><a href="https://www.democracydocket.com/news-alerts/judge-orders-doj-to-identify-the-states-it-sent-election-demands/" target="_blank" rel="noopener">Democracy Docket — Boasberg orders DOJ to identify the states</a></li>
+<li><a href="https://aljazeera.com/news/2026/10/31/iran-fm-says-us-outreach-a-positive-step-as-delegation-in-qatar-for-talks" target="_blank" rel="noopener">Al Jazeera — Araghchi on the American outreach</a></li>
+<li><a href="https://www.yahoo.com/news/world/articles/iran-offers-48-hour-hormuz-074826722.html" target="_blank" rel="noopener">Yahoo / Investing.com — Iran&#x27;s 48-hour Hormuz sequence</a></li>
+<li><a href="https://www.ynetnews.com/article/sk8eaw4pge" target="_blank" rel="noopener">Ynet — recommendation count before Herzog&#x27;s consultations</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/herzog-party-leaders-must-face-the-reality-of-results-find-solutions-to-prevent-another-election" target="_blank" rel="noopener">Times of Israel — Herzog at the Weizmann memorial</a></li>
+<li><a href="https://www.themoscowtimes.com/2026/10/31/lavrov-says-russian-position-on-ukraine-unchanged-at-g20-summit-a94141" target="_blank" rel="noopener">Moscow Times — Lavrov in Atlanta</a></li>
+<li><a href="https://www.arabnews.com/world/eu-accuses-russia-of-false-narratives-as-lavrov-questions-ukraines-commitment-to-talks-3009069" target="_blank" rel="noopener">Arab News — Lavrov questions Ukraine&#x27;s commitment to talks</a></li>
+<li><a href="https://www.state.gov/secretary-travel/secretary-rubios-travel-to-atlanta-to-host-the-g20-foreign-ministers-meeting-october-30-31-2026" target="_blank" rel="noopener">US State Department — G20 foreign ministers&#x27; meeting, Atlanta</a></li>
+<li><a href="https://www.state.gov/releases/bureau-of-political-military-affairs/2026/10/ukraine-patriot-advanced-capability-3-pac-3-missiles" target="_blank" rel="noopener">US State Department — Patriot PAC-3 MSE approval for Ukraine</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-01-daily.pdf">PDF</a></span>
+</div></div></body></html>
