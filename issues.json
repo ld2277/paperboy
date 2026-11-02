@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-02",
+  "kind": "daily",
+  "dateline": "Monday, November 2, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-02-daily.html",
+  "pdf": "pdf/2026-11-02-daily.pdf",
+  "standfirst": "America votes tomorrow with five Republican Senate seats in play, and the courts have spent the weekend telling the Justice Department it cannot unscramble ballots already cast."
+ },
+ {
   "date": "2026-11-01",
   "kind": "weekly",
   "dateline": "Week of Sunday, November 1, 2026",

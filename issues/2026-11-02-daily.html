@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Monday, November 2, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Monday, November 2, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">America votes tomorrow with five Republican Senate seats in play, and the courts have spent the weekend telling the Justice Department it cannot unscramble ballots already cast.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>OpenAI will spend the day after the midterms asking Congress for “speed limits”</h2>
+<p class="field">What happened</p><p>Axios reported on Sunday that OpenAI has a policy campaign loaded for the moment Tuesday's midterms end, aimed at the lame-duck session opening 9 November rather than the Congress sworn in on 3 January. The centrepiece is a push for mandatory safeguards on the most powerful systems, which the company is calling “speed limits”. It also wants the industry to say “AI compute campuses” instead of “data centres”, and will offer host communities “compacts” plus model state laws. Chris Lehane, chief global affairs officer, is running it. A single scoop, and Axios discloses a licensing deal with OpenAI; it reached us through <a href="https://www.implicator.ai/openai-plans-post-midterms-policy-pr-blitz-pushing-mandatory/">a relay</a>.</p>
+<p class="field">What it means</p><p>The timing is the argument: a company that spent 2026 absorbing state-by-state AI bills wants a federal frame of its own drafting before a new Congress arrives with its own. The renaming push is the real tell — the binding constraint on OpenAI&#x27;s next two years is local fights over land, power and water, not model policy.</p>
+<p class="field">Watch next</p><p>The lame duck opens 9 November. Watch for bill text, not a blog post.</p>
+</div>
+<div class="item">
+<h2>ADNOC becomes the first energy company to put OpenAI inside its decision-making</h2>
+<p class="field">What happened</p><p>Four agreements were signed in Abu Dhabi on Monday, witnessed by the Crown Prince, Sheikh Khaled bin Mohamed bin Zayed, after he met Sam Altman. <a href="https://www.thenationalnews.com/business/energy/2026/11/02/adnoc-signs-agreement-with-openai-and-g42-to-deploy-frontier-ai/">ADNOC, OpenAI and G42</a> — the last through its subsidiary Inception42 — will put OpenAI's frontier models into ADNOC's operational, investment and commercial decision-making, the first energy company to do so. Three more followed the same day: an “AI-native Machine-Readable Government” programme with the Abu Dhabi government, an investment-analysis deal with Mubadala, and a five-year Inception42 agreement spanning government, enterprise and education. Inference runs inside the UAE. No value, compute figure or term was disclosed for the ADNOC deal itself.</p>
+<p class="field">What it means</p><p>The Gulf&#x27;s AI purchases have moved up the stack: last year chips and megawatts, this year the layer where a national oil company allocates capital. The government piece is the durable one — machine-readable regulation rewrites the state&#x27;s own documents into one vendor&#x27;s input format, which outlives any compute contract.</p>
+<p class="field">Watch next</p><p>Whether either side ever puts a number on it. Neither has.</p>
+</div>
+<div class="item">
+<h2>A new frontier-model benchmark launches, and the best score is 12%</h2>
+<p class="field">What happened</p><p>SemiAnalysis published <a href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities">GDPx</a> on Monday, a benchmark of economically valuable work rather than exam questions: <a href="https://gdpx.semianalysis.com/domains">206 tasks across 11 domains</a>, from chip design and finance through cybersecurity and biology to recursive self-improvement. Scoring is pass@1 over three attempts, all domains weighted equally, with an eight-hour default per task and deterministic grading where possible. SemiAnalysis says even the best model scores just 12%, calls Opus 5.5 the best all-around model, and notes that Opus 5.5 and GPT-6 Astra both score lower overall because of safety classifiers. The per-model leaderboard is published as images our fetcher cannot read, so 12% is the only model figure here we can stand behind.</p>
+<p class="field">What it means</p><p>The gap between benchmark saturation and economic usefulness is the whole AI capex debate in one number: models that clear graduate exams finish one task in eight that somebody would pay for, given eight hours. The safety-classifier finding is the uncomfortable part — on this test, refusing cyber and bio work costs you the leaderboard.</p>
+<p class="field">Watch next</p><p>Whether any lab disputes the methodology, and whether the leaderboard appears as text.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Kioxia falls 15.8% — the first crack in the memory cycle, and it is NAND</h2>
+<p class="field">What happened</p><p>Kioxia <a href="https://finance.matsui.co.jp/stock/285A/index">closed down 15.78% at ¥11,345</a> in Tokyo on Monday, from ¥13,470 on Friday, and it fell alone: SK hynix rose, Micron and SanDisk traded higher pre-market. The cause is guidance, not the quarter. <a href="https://www.kioxia-holdings.com/en-jp/ir/news.html">Kioxia's results</a>, filed Friday evening, put July–September revenue at ¥2.48 trillion against its own ¥2.39tn guide, with adjusted operating profit of ¥1.9883tn — an 80.2% margin. But October–December guidance of about ¥2.5tn of revenue, roughly 1% sequential, came in <a href="https://en.sedaily.com/international/2026/10/30/kioxia-outlook-misses-estimates-as-memory-price-surge-cools">around 15% under the ¥2,347.9bn consensus</a> of twelve analysts. A circulating figure of +2,181.1% year-on-year for adjusted operating profit appears in no source we could reach; we are not printing it.</p>
+<p class="field">What it means</p><p>Memory was the one unambiguously good trade of 2026, and this is the first large holder to say the price gains are flattening out. Kioxia is the purest NAND exposure available — no HBM business to offset it — so a 1% sequential guide from a company that just grew revenue fivefold reads as the top of the curve for flash specifically.</p>
+<p class="field">Watch next</p><p>Micron&#x27;s next contract pricing commentary, and whether SanDisk confirms the pattern.</p>
+</div>
+<div class="item">
+<h2>Korea answers the rout with money: Samsung at a record 84.4tn won, Seoul at 21.3tn</h2>
+<p class="field">What happened</p><p>Samsung's <a href="https://news.samsungsemiconductor.com/global/samsung-electronics-announces-third-quarter-2026-results/">third-quarter release</a> puts 2026 capital expenditure at about 84.4 trillion won, 76.8tn of it in chips. Against <a href="https://www.samsung.com/global/ir/reports-disclosures/public-disclosure-view.84547/">Samsung's own 2025 figures</a> — 52.7tn company-wide and 47.5tn in chips — that is a 60% company-wide increase, and the two bases must not be mixed. Hours later President Lee Jae-myung took a <a href="https://www.koreaherald.com/article/10922746">record 820.9tn won 2027 budget</a> to the National Assembly, up 12.8%, with 21.3tn won for semiconductor, AI-data-centre and physical-AI megaprojects, nearly double this year: 4.7tn for frontier AI, 2tn for chip capacity, 2.1tn pre-spent on power, water and industrial sites. The <a href="https://www.koreatimes.co.kr/economy/20261102/kospi-rallies-over-2-as-investors-look-past-us-tech-rout">Kospi closed up 2.24%</a>, SK hynix up 3.81%, on institutional buying alone.</p>
+<p class="field">What it means</p><p>Two balance sheets, one corporate and one sovereign, committing in the same week to the view that last week&#x27;s selloff repriced AI equities rather than AI demand. The detail that matters in Seoul&#x27;s budget is the 2.1tn won spent ahead of the fabs on power and water — Korea is buying the grid before the tools.</p>
+<p class="field">Watch next</p><p>AMD reports Tuesday, Qualcomm and Arm Wednesday. TSMC&#x27;s October revenue lands around 10 November.</p>
+</div>
+<div class="item">
+<h2>China&#x27;s rare-earth suspension lapses on 10 November — unless the date is really 10 January</h2>
+<p class="field">What happened</p><p>Eight days out, two dates are in circulation and nobody has reconciled them on paper. The only published Chinese instrument says 10 November: <a href="https://www.tid.gov.hk/en/tradecircular/files/2025/ci9772025a.pdf">MOFCOM and customs Announcement No. 70 of 2025</a>, reproduced in full by Hong Kong's trade authority, suspends six October 2025 measures — including the rare-earth 0.1% de minimis and re-export regime, and the technology controls — “from today until 10 November 2026”. <a href="https://www.pillsburylaw.com/a/web/oTMwFMStqGaqYLVRdkHW3g/china-suspends-export-controls.pdf">Compliance trackers</a> read it the same way. The competing January date comes from the trade truce, not from any amendment: MOFCOM <a href="https://rawmaterials.net/rare-earth-export-controls-china-confirms-extension-of-trade-arrangements-with-u-s/">extended its broader arrangements with Washington to 10 January 2027</a> in a statement that does not mention rare earths. We found no amending announcement number. Two corrections to carry: it is No. 70 of 2025, and 10 November is the suspension's end date, not an effective date.</p>
+<p class="field">What it means</p><p>A scheduling problem that could become a supply shock by accident. Desks pricing a January cliff are substituting the truce calendar for the legal instrument, and the instrument is what customs officers read. The de minimis rule is the one that reaches foreign-made goods containing Chinese rare earths — which is most of the magnet supply chain.</p>
+<p class="field">Watch next</p><p>10 November. Any new MOFCOM announcement number before then is the whole story.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Asia splits after Wall Street&#x27;s worst day since June</h2>
+<p class="field">What happened</p><p>Friday closed with the <a href="https://www.clickondetroit.com/business/2026/11/02/asian-shares-mostly-advance-but-tech-stocks-remain-volatile-while-oil-sinks-33/">S&amp;P 500 down 1.8%, the Nasdaq composite down 2.9% and the Dow down 1.1%</a>, the worst US session since June. Monday in Asia went both ways, all intraday: Kospi up 2.3%, Shanghai up 1.2%, Hang Seng up 0.6%, Sensex up 1.1%, against the Nikkei down 0.1% and the ASX 200 down 0.6%. US futures turned higher after the Nasdaq 100 fell 3.46% on Friday and briefly entered correction. Gold recovered 1.0% having dropped below $4,000 an ounce last week. The trailing month is the real picture: the Nikkei down more than 6%, the Kospi more than 16%.</p>
+<p class="field">What it means</p><p>A one-day bounce in Seoul on institutional buying is not a bottom, and the month-long numbers say the AI trade is being marked down across Asia rather than rotated within it. With Apple reporting into the close and an election on Tuesday, Monday&#x27;s risk-on move is positioning, not conviction.</p>
+<p class="field">Watch next</p><p>Apple&#x27;s fiscal fourth quarter today after the US close, 2:00pm Pacific. October ISM manufacturing is also due.</p>
+</div>
+<div class="item">
+<h2>China&#x27;s private factory gauge eases to 52.0, and the pricing story turns</h2>
+<p class="field">What happened</p><p>The <a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/048ae0dea1f64839944545370ea523b4">RatingDog China General Manufacturing PMI</a> — the private survey S&amp;P Global compiles, no longer sponsored by Caixin — printed 52.0 for October against 52.1 in September, an eleventh straight month above 50 and above a 51.6 consensus. The internals are the story: output rose at the fastest pace in six months and new orders for a seventeenth month, but export orders slowed to a three-month low, output charges fell for the second time in three months on price competition, export charges fell for the first time in nearly a year, and business confidence hit a nine-month low. The euro-zone print came in at <a href="https://www.aa.com.tr/en/economy/eurozone-manufacturing-growth-remains-solid-in-october-despite-supply-pressures/4108631">52.7 against 52.9</a>, with France and Italy the only two countries contracting and input costs at a five-month high.</p>
+<p class="field">What it means</p><p>Chinese factories are busy and discounting — volumes holding while the prices they charge fall, which is deflation being exported rather than demand collapsing. The euro-zone print is the mirror image: slower growth, faster input costs. Two opposite inflation impulses in the same week.</p>
+<p class="field">Watch next</p><p>China&#x27;s October trade data mid-month, and whether export charges keep falling.</p>
+</div>
+<div class="item">
+<h2>Brent drops on Iran diplomacy — and this one is a real fall, not the rollover</h2>
+<p class="field">What happened</p><p>Brent's front month is now January 2027, December having expired Friday at $117.64. The January contract traded <a href="https://oilprice.com/futures/brent/">around $108.57, down $4.86</a> in Asian hours, about 4% below its $113.43 level; later quotes put Brent <a href="https://www.thenationalnews.com/business/2026/11/02/oil-prices-slide-more-than-3-as-trump-signals-more-time-for-iran-diplomacy/">near $110, down more than 3%</a> with US crude near $100.90. All intraday, and all separate from the rollover step. The driver reported is a possible US–Iran opening, with Trump said to have told Netanyahu he wants to give talks more time. Separately, OPEC+ appears to have met around 1 November and <a href="https://opec.org/pr-detail/616-4-october-2026.html">no production release has published</a> — we tried three candidate paths and all failed while the 4 October release stays live. Say no release is retrievable, not that no meeting occurred.</p>
+<p class="field">What it means</p><p>Crude has carried a closed-strait premium since February, and the market is now pricing a fraction of its removal on second-hand diplomatic signalling. That is thin ground for a four-dollar move, and the risk runs both ways — the same weekend reporting has Netanyahu pressing for strikes the day after the midterms.</p>
+<p class="field">Watch next</p><p>The missing OPEC+ release. And 29 November, which is the 69th JMMC, not a full ministerial.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Serval raises $150m at $3bn — its third round in twelve months</h2>
+<p class="field">What happened</p><p><a href="https://www.serval.com/blog/we-raised-150m-to-make-everyone-a-builder">Serval announced</a> a $150m Series C at a $3bn valuation led by Sequoia, with Elad Gil, First Round, General Catalyst and Redpoint returning. The company's own framing is “our third round in 12 months”; Sequoia led this round and the $75m Series B in December at a $1bn valuation, and the earliest round's lead is named nowhere, so the widely repeated “third straight Sequoia lead” is not supported. <a href="https://fortune.com/2026/10/29/serval-servicenow-fight-series-c-3-billion-valuation-sequoia/">Fortune</a> puts total raised at $277m, headcount at roughly 20 in January growing to about 200, and names Jake Stauch as chief executive. Serval says it will hire over 500 people in twelve months, including 100-plus automation engineers for a services arm, ProServal. The target is ServiceNow.</p>
+<p class="field">What it means</p><p>Three rounds in twelve months at 3x step-ups is the application layer still clearing capital at a speed the infrastructure layer no longer gets — OpenAI spent last week cutting its own round target from $30bn to $20bn. ProServal is the detail: a services business bolted onto a software valuation, which is how enterprise replacement deals get done and also how multiples compress.</p>
+<p class="field">Watch next</p><p>Whether ServiceNow answers on pricing, and go-live adoption — the question Stauch raised himself.</p>
+</div>
+<div class="item">
+<h2>Firehawk raises over $150m at more than $1.4bn to make artillery motors</h2>
+<p class="field">What happened</p><p><a href="https://www.investing.com/news/stock-market-news/us-rocket-motor-maker-with-trump-family-ties-valued-at-14-billion-4977882">Firehawk raised more than $150m</a> at a valuation above $1.4bn, co-led by Advent International and Kyle Bass's Rochefort Asset Management, with Donald Trump Jr.-backed 1789 Capital already on the register. The company plans to produce over 100,000 artillery motors next year under a commercial agreement with General Dynamics — not a Defense Department contract — with early sales aimed at allied nations and a twelve-to-eighteen-month US Army qualification still to run. <a href="https://www.defensedaily.com/firehawk-raises-150-million-plus-to-build-out-rocket-motor-and-missile-integration-plants/business-financial/">Proceeds</a> go to a propellant campus in Oklahoma and a missile integration plant in Mississippi. The valuation and the General Dynamics arrangement rest on a single wire.</p>
+<p class="field">What it means</p><p>Solid rocket motors are the acknowledged bottleneck in Western munitions production, and private capital is now funding capacity ahead of the qualification that would let the US Army buy any of it. Read the structure: commercial agreement with a prime, allied sales first, qualification last. A factory built on expected demand, not on an order.</p>
+<p class="field">Watch next</p><p>Army qualification, twelve to eighteen months out. Groundbreakings before then.</p>
+</div>
+<div class="item">
+<h2>Ollie shuts down: the privacy-first family assistant could not keep up</h2>
+<p class="field">What happened</p><p><a href="https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/">Ollie</a>, a subscription AI assistant for families that plugged into email and calendar to book appointments, plan meals and pay bills, announced its shutdown on Friday and goes dark on 6 November. It had raised a $7.5m seed led by Khosla Ventures and was among the first mainstream consumer apps to earn SOC 2 certification. Customers get data-export and refund instructions in the coming days. Co-founder and chief executive Bill Lennon: “We built an incredible personal assistant with a small team, and learned a ton.” And: “We got close, but ultimately couldn't keep up.” For anyone searching, the unrelated pet-food company of the same name is not shutting down.</p>
+<p class="field">What it means</p><p>Privacy as a differentiator did not survive contact with assistants that ship faster because they care less. The SOC 2 certification — genuinely unusual for a consumer app — bought trust but not velocity, and a $7.5m seed does not fund a feature race against better-capitalised entrants.</p>
+<p class="field">Watch next</p><p>6 November, when the app goes dark.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The midterms are tomorrow: the Senate is genuinely in play, the House leans Democratic</h2>
+<p class="field">What happened</p><p>Republicans go into Tuesday holding <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">53 Senate seats to 47</a>, counting the two independents who caucus with Democrats, and because Vice President JD Vance breaks ties they need only 50. The decisive map is five Republican-held toss-ups — Alaska, Iowa, Maine, South Carolina and Texas — against one Democratic-held toss-up, Michigan. <a href="https://www.foxnews.com/politics/everything-know-house-senate-control-ballot-measures-2026-election-day-poll-closing">One outlet's own ratings</a> run from 54 Democratic seats on a strong night to 52 Republican, and give Democrats as many as 240 of 435 House seats against a 218 majority. <a href="https://www.nga.org/governors/elections/">Thirty-six of fifty governorships</a> are up, plus three territories. Of 145 statewide ballot measures, eleven states carry voter-ID or noncitizen-voting provisions and California votes on taxing billionaire wealth at 5%.</p>
+<p class="field">What it means</p><p>Control turns on five Republican seats in states that are not supposed to be competitive, which tells you more about the environment than any poll does. The last major national survey, <a href="https://www.pbs.org/newshour/politics/poll-likely-voters-favor-democrats-as-trump-disapproval-drives-early-turnout">PBS News/NPR/Marist</a>, was fielded 19–20 October and had Democrats up 52–44 among likely voters against a ±3.8-point margin on each share — roughly on the boundary. Trump's approval was 40–59.</p>
+<p class="field">Watch next</p><p>Kentucky&#x27;s sixth district closes early and is the first real read. Alaska will take days.</p>
+</div>
+<div class="item">
+<h2>Correction: the Justice Department lost in Alaska, and we reported otherwise</h2>
+<p class="field">What happened</p><p>Our weekend brief said the Justice Department had won a preliminary injunction in Alaska on 30 October. That was wrong. DOJ had only moved for one, and on Sunday <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Order-granting-dismissal.pdf">Judge Sharon Gleason dismissed the case entirely</a> — United States v. State of Alaska, 3:26-cv-00376-SLG — for lack of Article III standing on redressability grounds, denying the injunction motion as moot and directing final judgment. The reasoning: the ballots DOJ wanted segregated are already commingled and cannot be traced to the voters who cast them without breaching ballot secrecy, and DOJ offered no workable way to do it. The court wrote that the relief sought “is ‘infeasible’”. Alaska's 22-month ballot-retention requirement is in the order; the phrase “confuse voters” is not. DOJ <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-11-01-Notice-of-appeal.pdf">appealed the same day</a>.</p>
+<p class="field">What it means</p><p>Two defeats for the same theory in four days. A <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-30-TRO-Order.pdf">Ninth Circuit panel</a> on Friday also refused DOJ an injunction pending appeal in the parallel California matter, Bumatay dissenting, after <a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-28-Order-denying-temporary-restraining-order.pdf">the district court denied its restraining order</a> on 28 October. The common ground is practical, not constitutional: once ballots are in the box, courts will not unscramble them. That rule holds for Tuesday too.</p>
+<p class="field">Watch next</p><p>Whether the Ninth Circuit takes the Alaska appeal on any schedule that matters before certification.</p>
+</div>
+<div class="item">
+<h2>DOJ asks for contempt against the group that checked its noncitizen list</h2>
+<p class="field">What happened</p><p>On Sunday the Justice Department <a href="https://abcnews.com/US/wireStory/justice-department-urges-sanctions-database-analysis-critical-noncitizen-137757433">asked Chief Judge James Boasberg</a> to consider holding the Coalition for Humane Immigrant Rights and its lawyers in contempt for publishing their analysis of government data, and suggested he refer the matter for a possible criminal contempt investigation. Boasberg's order of Friday 30 October gave the coalition access to federal data on about 20,000 people the administration alleges are noncitizens registered to vote in California, while barring disclosure of any names. The coalition's Saturday filing reported that more than 40% of those people do not appear in California's voter file at all, and identified 22 likely naturalised citizens. The UCLA Voting Rights Project did the analysis and says the plaintiffs complied fully.</p>
+<p class="field">What it means</p><p>The motion is about a disclosure rule; the finding underneath it is the substance. On the plaintiffs&#x27; arithmetic, two in five names on the government&#x27;s list of alleged noncitizen voters are not registered voters in that state. Asking a judge to refer the lawyers who produced that number for criminal investigation is an aggressive answer to an empirical claim.</p>
+<p class="field">Watch next</p><p>Boasberg&#x27;s response, and whether any name on the list surfaces publicly.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>The UN&#x27;s Western Sahara mission is being liquidated after 35 years</h2>
+<p class="field">What happened</p><p>The Security Council <a href="https://press.un.org/en/2026/sc16498">failed on Friday to renew MINURSO</a>, the mission for the referendum in Western Sahara. Russia vetoed the US draft 11 to one with three abstentions; a Russian counter-draft then failed three to one, the negative vote cast by the United States, with 11 abstentions. The mandate expired on 31 October and <a href="https://www.aljazeera.com/news/2026/11/1/un-warns-of-security-risks-in-western-sahara-as-peacekeeping-mission-ends">1 November began the liquidation phase</a>, assets returning to troop-contributing countries, announced through the Secretary-General's spokesman Stéphane Dujarric. The US draft would have extended the mission a year, removed “referendum” from its name and made Morocco's autonomy proposal the sole basis for talks — which is what Russia and Algeria objected to. One note: the UN's own record prints the abstentions as “China, Pakistan and China”, so we can name only two.</p>
+<p class="field">What it means</p><p>A mission deployed in 1991 to run a referendum that never happened has been shut down by a disagreement over whether to stop pretending it is coming. Removing the word from the mission&#x27;s name was the substance, not a formality — it would have ratified Morocco&#x27;s position in UN text. The 1991 ceasefire line is now unobserved.</p>
+<p class="field">Watch next</p><p>Whether anything replaces it, and whether the ceasefire holds without monitors.</p>
+</div>
+<div class="item">
+<h2>Iran&#x27;s two-day offer on Hormuz comes with seven conditions attached</h2>
+<p class="field">What happened</p><p>Foreign Minister Abbas Araghchi said on Saturday that a Qatar-mediated proposal could reopen the Strait of Hormuz <a href="https://aninews.in/news/world/middle-east/araghchi-says-iran-qatar-propose-reopening-strait-of-hormuz-within-two-days-if-us-meets-tehrans-conditions20261101115013/">within two days — if Washington first meets Iran's seven conditions</a>: lifting the naval blockade, releasing frozen funds, permitting oil sales, approving an Iran-backed shipping route, and settling who manages the strait and collects fees. The two days is a proposed implementation period, cut from five; the conditional is the story. Mohsen Rezaei, secretary of the Supreme National Security Council since August, said <a href="https://www.iranintl.com/en/202610312684">no decision has been made to change Iran's nuclear doctrine</a> and that he had not replied to Vice President Vance's letter, while adding that renewed war could prompt a reassessment. The strait remains closed on day 246. <a href="https://www.iranintl.com/en/202611015366">Axios reports</a> Netanyahu pressing Trump to strike immediately after Tuesday's vote while Trump wants talks to run; Rubio says nothing is decided.</p>
+<p class="field">What it means</p><p>Read the conditions, not the timeline. Lifting the blockade and releasing funds before the strait reopens inverts the sequence Washington has insisted on since February, so “two days” is a negotiating position, not a schedule. The more consequential line is Rezaei&#x27;s: no decision on doctrine, but an open debate about it.</p>
+<p class="field">Watch next</p><p>Wednesday 4 November. Both the strike timing and the diplomacy are waiting on the US election.</p>
+</div>
+<div class="item">
+<h2>Herzog starts coalition consultations Wednesday with nobody near 61</h2>
+<p class="field">What happened</p><p>President Herzog begins consultations <a href="https://www.ynetnews.com/article/sk8eaw4pge">as early as Wednesday 4 November</a>, before the new Knesset is sworn in; at a memorial for Chaim Weizmann on Sunday he urged leaders to drop their campaign positions. The <a href="https://www.aljazeera.com/news/2026/11/1/israel-election-when-will-government-be-formed-who-will-lead-it">seat blocs</a> are 53, 48 and 19 — Netanyahu's bloc, the opposition's Jewish parties, and the Arab-led parties — and neither reaches 61. The circulated 60, 46 and 14 are projected recommendations not yet made; the 14 is Yisrael Beytenu's seven plus UTJ's seven, both undecided. UTJ's new chairman Yaakov Asher collected rabbinical blessings on Saturday without saying whether the party would join a government or under whom, and wants a yeshiva military-exemption law first. Ahmad Tibi said the Joint List was prepared to recommend Gadi Eisenkot, but no formal decision has been taken.</p>
+<p class="field">What it means</p><p>The arithmetic hands the premiership to whoever can pay UTJ&#x27;s price, and that price is the exemption law that broke the last coalition. Eisenkot&#x27;s path to 61 runs through Arab-led parties Lieberman has ruled out sitting with, so he cannot have both. Netanyahu&#x27;s path is shorter and needs the same seven seats.</p>
+<p class="field">Watch next</p><p>Results are presented 4 November, starting a seven-day clock: the mandate must be assigned by 11 November.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.foxnews.com/politics/everything-know-house-senate-control-ballot-measures-2026-election-day-poll-closing" target="_blank" rel="noopener">Fox News — what to know about House and Senate control and ballot measures</a></li>
+<li><a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm" target="_blank" rel="noopener">United States Senate — senators of the 119th Congress</a></li>
+<li><a href="https://www.nga.org/governors/elections/" target="_blank" rel="noopener">National Governors Association — gubernatorial elections</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean" target="_blank" rel="noopener">Al Jazeera — more than 50 million votes cast in US midterm elections</a></li>
+<li><a href="https://www.pbs.org/newshour/politics/poll-likely-voters-favor-democrats-as-trump-disapproval-drives-early-turnout" target="_blank" rel="noopener">PBS NewsHour — final PBS News/NPR/Marist poll</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Order-granting-dismissal.pdf" target="_blank" rel="noopener">US District Court for the District of Alaska — order granting dismissal, 1 November 2026</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-11-01-Notice-of-appeal.pdf" target="_blank" rel="noopener">United States — notice of appeal, 1 November 2026</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-30-TRO-Order.pdf" target="_blank" rel="noopener">US Court of Appeals for the Ninth Circuit — order denying injunction pending appeal, 30 October 2026</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-10-28-Order-denying-temporary-restraining-order.pdf" target="_blank" rel="noopener">US District Court for the Central District of California — order denying temporary restraining order, 28 October 2026</a></li>
+<li><a href="https://abcnews.com/US/wireStory/justice-department-urges-sanctions-database-analysis-critical-noncitizen-137757433" target="_blank" rel="noopener">AP via ABC News — Justice Department urges sanctions over database analysis</a></li>
+<li><a href="https://press.un.org/en/2026/sc16498" target="_blank" rel="noopener">United Nations Security Council — SC/16498, 10126th meeting, 30 October 2026</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/1/un-warns-of-security-risks-in-western-sahara-as-peacekeeping-mission-ends" target="_blank" rel="noopener">Al Jazeera — UN warns of security risks in Western Sahara as peacekeeping mission ends</a></li>
+<li><a href="https://aninews.in/news/world/middle-east/araghchi-says-iran-qatar-propose-reopening-strait-of-hormuz-within-two-days-if-us-meets-tehrans-conditions20261101115013/" target="_blank" rel="noopener">ANI — Araghchi says Iran and Qatar propose reopening Strait of Hormuz within two days if US meets Tehran&#x27;s conditions</a></li>
+<li><a href="https://www.iranintl.com/en/202610312684" target="_blank" rel="noopener">Iran International — Rezaei says no decision made to change nuclear doctrine</a></li>
+<li><a href="https://www.iranintl.com/en/202611015366" target="_blank" rel="noopener">Iran International — Netanyahu presses Trump on strikes after the midterms</a></li>
+<li><a href="https://www.ynetnews.com/article/sk8eaw4pge" target="_blank" rel="noopener">Ynet — Herzog to begin consultations as Eisenkot&#x27;s projected recommendations reach 60</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/1/israel-election-when-will-government-be-formed-who-will-lead-it" target="_blank" rel="noopener">Al Jazeera — Israel election: when will a government be formed and who will lead it</a></li>
+<li><a href="https://www.kioxia-holdings.com/en-jp/ir/news.html" target="_blank" rel="noopener">Kioxia Holdings — investor relations news (H1 FY2026 results, 30 Oct 2026)</a></li>
+<li><a href="https://en.sedaily.com/international/2026/10/30/kioxia-outlook-misses-estimates-as-memory-price-surge-cools" target="_blank" rel="noopener">Seoul Economic Daily — Kioxia outlook misses estimates as memory price surge cools</a></li>
+<li><a href="https://finance.matsui.co.jp/stock/285A/index" target="_blank" rel="noopener">Matsui Securities — Kioxia Holdings (285A) price history</a></li>
+<li><a href="https://news.samsungsemiconductor.com/global/samsung-electronics-announces-third-quarter-2026-results/" target="_blank" rel="noopener">Samsung Electronics — third-quarter 2026 results</a></li>
+<li><a href="https://www.samsung.com/global/ir/reports-disclosures/public-disclosure-view.84547/" target="_blank" rel="noopener">Samsung Electronics IR — FY2025 capex results public disclosure</a></li>
+<li><a href="https://www.koreaherald.com/article/10922746" target="_blank" rel="noopener">The Korea Herald — Korea to invest 21.3 trillion won in AI under 2027 budget</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261102/kospi-rallies-over-2-as-investors-look-past-us-tech-rout" target="_blank" rel="noopener">The Korea Times — Kospi rallies over 2% as investors look past US tech rout</a></li>
+<li><a href="https://www.tid.gov.hk/en/tradecircular/files/2025/ci9772025a.pdf" target="_blank" rel="noopener">Hong Kong Trade and Industry Department — trade circular reproducing MOFCOM/GACC Announcement No. 70 of 2025</a></li>
+<li><a href="https://www.pillsburylaw.com/a/web/oTMwFMStqGaqYLVRdkHW3g/china-suspends-export-controls.pdf" target="_blank" rel="noopener">Pillsbury — China suspends export controls (compliance table)</a></li>
+<li><a href="https://rawmaterials.net/rare-earth-export-controls-china-confirms-extension-of-trade-arrangements-with-u-s/" target="_blank" rel="noopener">RAWMATERIALS.net — China confirms extension of trade arrangements with the US</a></li>
+<li><a href="https://www.implicator.ai/openai-plans-post-midterms-policy-pr-blitz-pushing-mandatory/" target="_blank" rel="noopener">implicator.ai — OpenAI plans post-midterms policy and PR blitz (relaying Axios)</a></li>
+<li><a href="https://www.thenationalnews.com/business/energy/2026/11/02/adnoc-signs-agreement-with-openai-and-g42-to-deploy-frontier-ai/" target="_blank" rel="noopener">The National — ADNOC signs agreement with OpenAI and G42 to deploy frontier AI</a></li>
+<li><a href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities" target="_blank" rel="noopener">SemiAnalysis — GDPx: measuring frontier model capabilities</a></li>
+<li><a href="https://gdpx.semianalysis.com/domains" target="_blank" rel="noopener">GDPx — domains and task counts</a></li>
+<li><a href="https://www.pmi.spglobal.com/Public/Home/PressRelease/048ae0dea1f64839944545370ea523b4" target="_blank" rel="noopener">S&amp;P Global — RatingDog China General Manufacturing PMI, October 2026</a></li>
+<li><a href="https://www.aa.com.tr/en/economy/eurozone-manufacturing-growth-remains-solid-in-october-despite-supply-pressures/4108631" target="_blank" rel="noopener">Anadolu Agency — Eurozone manufacturing growth remains solid in October</a></li>
+<li><a href="https://www.clickondetroit.com/business/2026/11/02/asian-shares-mostly-advance-but-tech-stocks-remain-volatile-while-oil-sinks-33/" target="_blank" rel="noopener">AP — Asian shares mostly advance but tech stocks remain volatile while oil sinks</a></li>
+<li><a href="https://www.thenationalnews.com/business/2026/11/02/oil-prices-slide-more-than-3-as-trump-signals-more-time-for-iran-diplomacy/" target="_blank" rel="noopener">The National — Oil prices slide more than 3% as Trump signals more time for Iran diplomacy</a></li>
+<li><a href="https://oilprice.com/futures/brent/" target="_blank" rel="noopener">Oilprice.com — Brent futures board</a></li>
+<li><a href="https://opec.org/pr-detail/616-4-october-2026.html" target="_blank" rel="noopener">OPEC — press release 616, 4 October 2026</a></li>
+<li><a href="https://www.serval.com/blog/we-raised-150m-to-make-everyone-a-builder" target="_blank" rel="noopener">Serval — we raised $150m to make everyone a builder</a></li>
+<li><a href="https://fortune.com/2026/10/29/serval-servicenow-fight-series-c-3-billion-valuation-sequoia/" target="_blank" rel="noopener">Fortune — Serval raises Series C at $3bn valuation</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/us-rocket-motor-maker-with-trump-family-ties-valued-at-14-billion-4977882" target="_blank" rel="noopener">Reuters — US rocket motor maker with Trump family ties valued at $1.4 billion</a></li>
+<li><a href="https://www.defensedaily.com/firehawk-raises-150-million-plus-to-build-out-rocket-motor-and-missile-integration-plants/business-financial/" target="_blank" rel="noopener">Defense Daily — Firehawk raises $150 million plus</a></li>
+<li><a href="https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/" target="_blank" rel="noopener">TechCrunch — Ollie, a privacy-focused AI assistant, is shutting down</a></li>
+<li><a href="https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/" target="_blank" rel="noopener">Microsoft — introducing a Voluntary Exit Offer</a></li>
+<li><a href="https://www.computerworld.com/article/4241056/microsoft-offers-exits-to-thousands-including-employees-on-ai-and-copilot-teams.html" target="_blank" rel="noopener">Computerworld — Microsoft offers exits to thousands</a></li>
+<li><a href="https://www.novinite.com/articles/241393/Final+Results+Confirm+Yotova&#x27;s+57.5+Victory+Over+Gyurov" target="_blank" rel="noopener">Novinite — final results confirm Yotova&#x27;s 57.5% victory over Gyurov</a></li>
+<li><a href="https://www.kyivpost.com/post/88839" target="_blank" rel="noopener">Kyiv Post — ISW assessment, 1 November 2026</a></li>
+<li><a href="https://npcobserver.com/2026/10/26/china-npc-antartic-cross-border-corruption-criminal-procedure-renewable-energy-tax-administration-law-waico/" target="_blank" rel="noopener">NPC Observer — NPCSC session watch, 25th session</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-02-daily.pdf">PDF</a></span>
+</div></div></body></html>
