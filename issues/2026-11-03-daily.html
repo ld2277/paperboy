@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Tuesday, November 3, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Tuesday, November 3, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">America votes today with a four-seat Senate gap to close, and it does so against a market that has started asking out loud who pays for the AI buildout.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>The AI buildout goes to the capital markets</h2>
+<p class="field">What happened</p><p>Oracle filed a <a href="https://www.sec.gov/Archives/edgar/data/0001341439/000119312526442729/d181425d424b5.htm">preliminary prospectus supplement</a> on 2 November for a $10bn underwritten common-stock offering, alongside a concurrent $10bn senior-notes sale; neither is conditioned on the other, BofA Securities is global coordinator, and the filing's reference price of $130.67 is Oracle's 30 October close. Alphabet priced a roughly EUR 6bn euro bond the same day, its second euro sale of 2026 after EUR 9bn in May. Meta is reported to be weighing at least $20bn of its own, on one outlet's reporting only.</p>
+<p class="field">What it means</p><p>Equity is the tell. Debt for datacentres is a year-old story; a $10bn share sale from a company trading near record levels says management would rather dilute than stretch the balance sheet further. Three of the largest buyers of AI compute raising capital on one day is the market asking, politely, who pays.</p>
+<p class="field">Watch next</p><p>Oracle&#x27;s pricing, and whether the notes tranche clears without a concession.</p>
+</div>
+<div class="item">
+<h2>Anthropic&#x27;s amended filing prices the growth</h2>
+<p class="field">What happened</p><p>Amendment No. 1 to Anthropic's S-1, registration number 333-299633, filed 2 November, puts third-quarter revenue at $17.0bn and nine-month revenue at $33.242bn. The quarter turned a $974m operating profit in the second quarter into a $567m operating loss, and the net loss of roughly $23.3bn is mostly a non-cash charge on convertible notes, on <a href="https://fortune.com/2026/11/02/anthropics-growth-slowed-and-costs-jumped-in-the-third-quarter-updated-ipo-filing-shows/">Fortune's reading of the filing</a>. Compute and lease commitments now total about $895.4bn, roughly $447.5bn of it falling before the end of 2030 and $69.8bn inside twelve months.</p>
+<p class="field">What it means</p><p>The commitments line is the whole document. $895.4bn of contracted spending against $33bn of nine-month revenue is a bet that demand arrives on schedule, and it is the number an IPO buyer prices off, not the growth rate.</p>
+<p class="field">Watch next</p><p>Pricing. Reported investor pushback on the valuation is not traceable to any named outlet&#x27;s own reporting, so no figure here.</p>
+</div>
+<div class="item">
+<h2>Meituan ships a 1.6-trillion-parameter model</h2>
+<p class="field">What happened</p><p>Meituan released <a href="https://technode.com/2026/11/02/meituan-launches-longcat-2-5-multimodal-ai-model-for-extended-coding-tasks/">LongCat-2.5 Preview</a> on 2 November: a 1.6tn-parameter mixture-of-experts model activating about 48bn parameters per token, pitched at long-running agent work and visual coding. It is live through Meituan's own chat service and API; GitHub and Hugging Face releases are promised but not out. No benchmark results, licence terms or independent evaluation came with it, so everything known about the model is the company's description of it.</p>
+<p class="field">What it means</p><p>The interesting part is who shipped it. A food-delivery company fielding a frontier-scale model is what a domestic chip and talent base looks like three years in. Treat the capability claims as marketing until somebody else runs it.</p>
+<p class="field">Watch next</p><p>The weights landing on Hugging Face, and any independent leaderboard picking it up.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Marvell buys Lumentum for $115bn in stock</h2>
+<p class="field">What happened</p><p>Marvell agreed to acquire optics and laser maker Lumentum in an all-stock deal the companies put at about $115bn of enterprise value, <a href="https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity">announced 2 November</a>. Each Lumentum share converts into 4.500 Marvell shares, around $1,132 a share and a 23.9% premium to the 28 October unaffected closes; Marvell holders end up with roughly 67% of the combination. Marvell claims more than $1bn of annual run-rate cost synergies and cites a $550bn addressable market, and does not expect to close until the first half of 2028. Two secondary relays circulated $80bn and $100bn; the company's own release says $115bn.</p>
+<p class="field">What it means</p><p>Optical interconnect is the bottleneck now that accelerators are plentiful and the links between them are not. Paying a quarter premium for it, in stock, in a week when chip equities fell nearly every day, says Marvell expects the scarcity to last past 2028.</p>
+<p class="field">Watch next</p><p>The S-4, antitrust clearance, and both shareholder votes.</p>
+</div>
+<div class="item">
+<h2>Seoul takes the funding question on the chin</h2>
+<p class="field">What happened</p><p>The Kospi <a href="https://en.sedaily.com/finance/2026/11/03/kospi-slides-36-percent-to-5648-as-foreigners-dump-15">closed Tuesday at 5,648.79</a>, down 3.59%, with the Kosdaq off 4.08% at 704.39 and foreigners net sellers of 1.52tn won. Samsung Electronics closed at 219,500 won, down 4.15%; SK hynix at 1,398,000 won, down 5.03%. Two Seoul outlets tie the fall to the overnight US move, the PHLX semiconductor index down 3.4% after a 7.2% drop on Friday, and to the financing wave above. Daishin's Lee Kyoung-min said the run of Big Tech bond issues "stoked concerns over AI funding and weakened sentiment across the AI value chain", in an outlet's translation from Korean.</p>
+<p class="field">What it means</p><p>Memory is the most levered expression of the funding question. Samsung and SK hynix have sold capacity years forward on the assumption the buyers can pay; every prospectus this week is a reminder that paying requires issuing.</p>
+<p class="field">Watch next</p><p>TSMC&#x27;s October revenue, due around 10 November. Japan was shut for a holiday.</p>
+</div>
+<div class="item">
+<h2>AMD reports after tonight&#x27;s close</h2>
+<p class="field">What happened</p><p>AMD publishes third-quarter results after the US close, with the call at 5pm Eastern. The company <a href="https://ir.amd.com/news-events/press-releases/detail/1300/amd-to-report-fiscal-third-quarter-2026-financial-results">guided</a> to roughly $13bn of revenue, plus or minus $300m, at about 56% gross margin; consensus sits near $13.058bn, up about 41% year on year, and options were pricing a move of roughly 9% going in. The live question is the MI450 and Helios rack ramp, which AMD has said begins late in the third quarter and builds through the fourth. Jefferies' Blayne Curtis cautioned that "initial shipments do not guarantee a high-volume ramp."</p>
+<p class="field">What it means</p><p>AMD is the cleanest read on whether anyone besides Nvidia is capturing accelerator demand. A data-centre beat with a vague Helios timeline would hurt the stock more than a miss with a firm one.</p>
+<p class="field">Watch next</p><p>5pm tonight; Qualcomm and Arm Wednesday, Microchip Thursday.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The RBA hikes to a 2008 high, six to three</h2>
+<p class="field">What happened</p><p>The Reserve Bank of Australia raised its cash rate target by 25 basis points (a quarter of a percentage point) to 4.85% on Tuesday, its fifth increase of 2026 and the highest rate since 2008, in <a href="https://www.rba.gov.au/media-releases/2026/mr-26-30.html">media release 2026-30</a>. The vote was six to three, the minority preferring to hold at 4.60%. The statement says inflation is broadly based and now expected to stay above 3% for the coming year, and warns: "This presents upside risks to inflation expectations; some measures are assessed to have risen lately." It also records a slowing economy, falling house prices and rising unemployment.</p>
+<p class="field">What it means</p><p>Australia is the developed world&#x27;s clearest case of a central bank tightening into a visible slowdown, which is precisely the position the Fed has spent a year insisting it will not be put in. The ECB is already there.</p>
+<p class="field">Watch next</p><p>Bullock&#x27;s press conference and the November Statement on Monetary Policy.</p>
+</div>
+<div class="item">
+<h2>Apple&#x27;s record quarter, and the memory bill</h2>
+<p class="field">What happened</p><p>Apple reported September-quarter revenue of $114.5bn, up 12% and a record for the quarter, with diluted earnings of $2.10 a share, up 14% and including five cents of tariff refunds, in <a href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/">Monday's release</a>. Gross margin was 47.9%, about a point of that from the same refunds. Full-year revenue of $479bn is also a record, and the dividend is $0.27, payable 16 November to holders of record on 12 November. Shares fell anyway. The release carries no December-quarter outlook, so the holiday revenue and margin guidance circulating since came off the call rather than any company document, and is not printed here.</p>
+<p class="field">What it means</p><p>Memory prices are Apple&#x27;s problem now. The AI buildout has cleared out DRAM and NAND supply, and a company buying enormous quantities of both at contract prices does not get to opt out of that.</p>
+<p class="field">Watch next</p><p>The 10-K, and whether Apple guides margin down in writing.</p>
+</div>
+<div class="item">
+<h2>Monday gave it back; oil turned round on Tuesday</h2>
+<p class="field">What happened</p><p>Monday's US session surrendered an early gain of more than a point: the S&amp;P 500 fell 0.51% and the Nasdaq Composite 1.07%, while the Dow rose 0.41%, on <a href="https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026">the day's tally</a>. Brent fell 7.6% to $104.77 as Iran signalled openness to talks; no source named the contract month, so read that as the front month, not December. Tuesday reversed it, Brent rising about 1.6% back above $100 intraday after the reported US strikes on Qeshm Island, with European futures opening more than a point lower. October ISM manufacturing printed 55.5, a one-point rise.</p>
+<p class="field">What it means</p><p>Oil is trading each diplomatic headline rather than any supply number, which is what an eight-month strait closure does to a market. Monday&#x27;s equity reversal was chips, not macro: the index fell while the Dow rose.</p>
+<p class="field">Watch next</p><p>Europe&#x27;s cash close and AMD after the bell.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Northwood Space raises $375m for the ground segment</h2>
+<p class="field">What happened</p><p>Northwood Space announced a <a href="https://techcrunch.com/2026/11/02/northwood-space-raises-375m-series-c-at-a-2b-valuation-from-a16z-and-dfj-growth/">$375m Series C</a> on 2 November, co-led by Andreessen Horowitz and DFJ Growth, at a valuation reported at about $2bn. Founded in 2022 and led by Bridgit Mendler, it builds ground stations: the antennas, software and scheduling layer that get data off satellites and into networks. It raised a $100m Series B, also co-led by a16z, in January, and holds a Space Force contract worth nearly $50m to upgrade the satellite control network.</p>
+<p class="field">What it means</p><p>Launch costs collapsed and nobody rebuilt the ground segment, so the bottleneck moved to the dishes. Three rounds in under two years at rising marks is a16z pricing a chokepoint rather than a product.</p>
+<p class="field">Watch next</p><p>Whether the Space Force work converts into a programme of record.</p>
+</div>
+<div class="item">
+<h2>Hypersonica takes EUR 100m for European hypersonics</h2>
+<p class="field">What happened</p><p>Hypersonica, a German-British defence startup, announced a <a href="https://resiliencemedia.co/hypersonica-raises-e100m-more-to-speed-up-and-build-out-its-hypersonic-ambitions/">EUR 100m Series B</a> on 2 November, co-led by Lightspeed and General Catalyst with Plural and 201 Ventures joining, taking it to roughly EUR 125m raised. Its HS-1 prototype flew above Mach 6 for more than 300km in February. The company claims production missiles at about a fifth of the cost of conventional equivalents, with full capability targeted for 2029. A reported EUR 700m valuation traces to a single unreachable outlet and is unconfirmed. Chief executive Philipp Kerth: "We are responding to a very clear demand signal from several European countries and from NATO,"</p>
+<p class="field">What it means</p><p>European defence venture has moved past drones and software into munitions, which take a decade to qualify and a government to buy. The 2029 date is the claim worth tracking; the rest is one flight test.</p>
+<p class="field">Watch next</p><p>Any named European procurement award.</p>
+</div>
+<div class="item">
+<h2>Sequoia puts $45m into post-training as a product</h2>
+<p class="field">What happened</p><p>Trajectory raised a <a href="https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/">$45m Series A</a> at a $300m valuation, announced 2 November, led by Sequoia with Nvidia, Bessemer and Bain Capital Ventures participating. Its three founders, Ronak Malde, Michael Elabd and Arjun Karanam, met at Stanford, two arriving from Google DeepMind and one from Apple's generative-model work. The product, now generally available, hooks into a company's applications, collects expert feedback on where a model goes wrong, and retrains open-source models on it.</p>
+<p class="field">What it means</p><p>The bet is that the scarce input is neither compute nor data but the judgement of somebody who has done the job for thirty years, and that getting that judgement into weights is a product rather than a consulting engagement.</p>
+<p class="field">Watch next</p><p>Named customers, and whether the open-source dependency survives enterprise procurement.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>What is actually on the ballot today</h2>
+<p class="field">What happened</p><p>The Senate stands at 53 Republicans and 47 Democrats and independents on <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">the chamber's own roster</a>, so Democrats need a net gain of four seats for control; 35 states elect a senator, including specials for the appointed seats in Ohio and Florida. The House is 218 Republicans, 214 Democrats, one independent and two vacancies, with 218 the majority of the full chamber. Thirty-nine governorships are up: 36 states plus Guam, the Northern Marianas and the Virgin Islands.</p>
+<p class="field">What it means</p><p>Four seats is the hard number, and the House is the likelier chamber to turn. One structural footnote on that 53: it still rests on an appointed seat, Darline Graham&#x27;s in South Carolina, filled after Lindsey Graham&#x27;s death in July.</p>
+<p class="field">Watch next</p><p>Closing times, Eastern: Georgia 7pm, North Carolina and Ohio 7:30, Maine 8, Iowa 9. Michigan, Texas, Kansas and Alaska close in stages across time zones.</p>
+</div>
+<div class="item">
+<h2>The early vote, and the number that will be misread tonight</h2>
+<p class="field">What happened</p><p>PBS NewsHour put early turnout above 57 million on Monday evening, calling it a midterm record; CBS had "more than 54 million" that morning. Both cite the University of Florida Election Lab, whose <a href="https://election.lab.ufl.edu/early-vote/2026-early-voting/">public tracker</a> rendered every national total as a literal "X" when we checked it, stamped 2:15pm Eastern Monday, so neither figure can be confirmed at source. On party registration, an ABC-syndicated count across more than two dozen states and 30 million-plus ballots had roughly 45% Democrats to 30% Republicans.</p>
+<p class="field">What it means</p><p>That registration gap measures who voted early in the states that record registration. It is not a national split, it is not a vote count, and early-vote composition has forecast nothing useful in three cycles. Expect it quoted as all three tonight.</p>
+<p class="field">Watch next</p><p>Whether the Election Lab publishes a readable final total before polls close.</p>
+</div>
+<div class="item">
+<h2>The courts clear out before the polls open</h2>
+<p class="field">What happened</p><p>The Supreme Court on 2 November denied the Justice Department's emergency application to make California set aside the mail ballots of some 20,000 alleged noncitizens. <a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/26a624.html">The docket</a>, No. 26A624 in <i>United States v. California</i>, shows the application presented to Justice Kagan, referred to the full Court and denied the same day, with no noted dissents. It follows Judge David Carter's 28 October denial and the Ninth Circuit's refusal. Separately the DOJ noticed an appeal on 1 November from Judge Sharon Gleason's dismissal of its Alaska case on standing; no Ninth Circuit number has surfaced yet.</p>
+<p class="field">What it means</p><p>Every pre-election attempt to segregate ballots has now failed, mostly on the simple ground that cast ballots cannot be un-mixed. A denial at the emergency stage decides nothing on the merits, and the merits is where this goes after tonight.</p>
+<p class="field">Watch next</p><p>A Ninth Circuit number on Alaska, and the first post-election filing in California.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>The US strikes Qeshm Island on the eve of the vote</h2>
+<p class="field">What happened</p><p>American forces struck Iranian targets on Qeshm Island, inside the Strait of Hormuz, on Monday, the first attack there since June. An unnamed US official told the AP they were "defensive strikes" against "Iranians using surface-to-air missiles against US assets," per <a href="https://www.aljazeera.com/news/2026/11/3/us-hits-qeshm-island-pezeshkian-signals-more-diplomacy-iran-war-latest">Al Jazeera's account</a>. Neither CENTCOM nor the Pentagon has said anything on the record. IRNA says the Revolutionary Guard downed an American MQ-9 shortly beforehand, which is Iran's own claim with no US confirmation. Vice-President Vance, Monday: "The president and I both feel pretty good about the prospects for potentially coming to a negotiated settlement." Parliament speaker Ghalibaf's reply: "Iran will not submit."</p>
+<p class="field">What it means</p><p>Both tracks are running at full speed, because each side&#x27;s leverage requires it. The more consequential sentence is President Pezeshkian&#x27;s: that Supreme Leader Mojtaba Khamenei has granted the government &quot;certain authorities&quot; over talks, which is what a mandate to concede looks like before anybody concedes.</p>
+<p class="field">Watch next</p><p>Any on-the-record CENTCOM statement, and Brent.</p>
+</div>
+<div class="item">
+<h2>Herzog&#x27;s consultations start Wednesday, Netanyahu last</h2>
+<p class="field">What happened</p><p>President Herzog's consultations on who gets to try to form Israel's next government begin Wednesday, and <a href="https://www.ynetnews.com/article/hy3hwbiagx">the published order</a> is itself the story: Religious Zionism-Zehut at 5pm, Shas at 6:15, Yisrael Beyteinu at 7:15, then Thursday from United Torah Judaism at 8:30am through Otzma Yehudit, the Democrats, Ra'am, the Joint List and Yachad, with Gadi Eisenkot's Yashar at 7:15pm and Netanyahu's Likud at 8:30pm. Herzog receives the results from elections committee chairman Noam Sohlberg on 4 November, starting a seven-day clock to assign the task; the nominee then has 28 days, extendable by 14.</p>
+<p class="field">What it means</p><p>Smallest-party-first is the convention, but scheduling the two men who could actually be prime minister dead last means every recommendation is in before either of them is heard. Herzog has not ruled out a second round of meetings.</p>
+<p class="field">Watch next</p><p>Wednesday 5pm, and 11 November as the outer edge of the consultation clock.</p>
+</div>
+<div class="item">
+<h2>A double-tap in Zaporizhzhia, and a date in Abu Dhabi</h2>
+<p class="field">What happened</p><p>The toll from Monday's Russian strike on a school serving as a humanitarian centre in Komyshuvakha, Zaporizhzhia region, <a href="https://en.interfax.com.ua/news/general/1230402.html">rose to 29 dead and 48 missing</a> on Tuesday, per regional governor Mykhailo Semikin, among them two rescuers and four police officers; earlier counts of 24 and 26 are superseded. Zelensky said the first bomb was followed by "a double-tap strike with nine more bombs". Steve Witkoff announced Monday that the United States will mediate "working-level negotiations between Ukraine and Russia on November 10-11 in Abu Dhabi", with US, French, German, British and NATO officials meeting in Brussels first. Neither Kyiv nor Moscow has confirmed attendance.</p>
+<p class="field">What it means</p><p>An announced date is not a negotiation. A second strike timed for the rescuers, two days before a mediation announcement, is the pattern of the last six months: Russia bargains from whatever it has taken in the week it is bargaining.</p>
+<p class="field">Watch next</p><p>Confirmation from Kyiv or Moscow, and the Brussels meeting this week.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001341439/000119312526442729/d181425d424b5.htm" target="_blank" rel="noopener">Oracle - preliminary prospectus supplement, 2 November (SEC 424B5)</a></li>
+<li><a href="https://fortune.com/2026/11/02/anthropics-growth-slowed-and-costs-jumped-in-the-third-quarter-updated-ipo-filing-shows/" target="_blank" rel="noopener">Fortune - Anthropic&#x27;s amended IPO filing</a></li>
+<li><a href="https://technode.com/2026/11/02/meituan-launches-longcat-2-5-multimodal-ai-model-for-extended-coding-tasks/" target="_blank" rel="noopener">TechNode - Meituan launches LongCat-2.5</a></li>
+<li><a href="https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity" target="_blank" rel="noopener">Marvell - Marvell and Lumentum to combine</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/11/03/kospi-slides-36-percent-to-5648-as-foreigners-dump-15" target="_blank" rel="noopener">Seoul Economic Daily - Kospi close, 3 November</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/kospi-dips-over-3-following-escalating-ai-concerns/12953462" target="_blank" rel="noopener">Korea JoongAng Daily - Kospi dips over 3% on AI concerns</a></li>
+<li><a href="https://ir.amd.com/news-events/press-releases/detail/1300/amd-to-report-fiscal-third-quarter-2026-financial-results" target="_blank" rel="noopener">AMD investor relations - Q3 2026 results date</a></li>
+<li><a href="https://www.rba.gov.au/media-releases/2026/mr-26-30.html" target="_blank" rel="noopener">Reserve Bank of Australia - media release 2026-30</a></li>
+<li><a href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener">Apple - fourth-quarter results</a></li>
+<li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026" target="_blank" rel="noopener">StockTitan - market tally, 2 November</a></li>
+<li><a href="https://techcrunch.com/2026/11/02/northwood-space-raises-375m-series-c-at-a-2b-valuation-from-a16z-and-dfj-growth/" target="_blank" rel="noopener">TechCrunch - Northwood Space Series C</a></li>
+<li><a href="https://resiliencemedia.co/hypersonica-raises-e100m-more-to-speed-up-and-build-out-its-hypersonic-ambitions/" target="_blank" rel="noopener">Resilience Media - Hypersonica Series B</a></li>
+<li><a href="https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/" target="_blank" rel="noopener">TechCrunch - Trajectory Series A</a></li>
+<li><a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm" target="_blank" rel="noopener">US Senate - senators of the 120th Congress</a></li>
+<li><a href="https://clerk.house.gov/Members" target="_blank" rel="noopener">Clerk of the House - members</a></li>
+<li><a href="https://www.nga.org/governors/elections/" target="_blank" rel="noopener">National Governors Association - 2026 elections</a></li>
+<li><a href="https://election.lab.ufl.edu/early-vote/2026-early-voting/" target="_blank" rel="noopener">University of Florida Election Lab - 2026 early voting</a></li>
+<li><a href="https://www.supremecourt.gov/search.aspx?filename=/docket/docketfiles/html/public/26a624.html" target="_blank" rel="noopener">Supreme Court - docket No. 26A624, United States v. California</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/Order-granting-dismissal.pdf" target="_blank" rel="noopener">Democracy Docket - Gleason order granting dismissal (Alaska)</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/10/2026-11-01-Notice-of-appeal.pdf" target="_blank" rel="noopener">Democracy Docket - DOJ notice of appeal, 1 November (Alaska)</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/3/us-hits-qeshm-island-pezeshkian-signals-more-diplomacy-iran-war-latest" target="_blank" rel="noopener">Al Jazeera - US hits Qeshm Island; Pezeshkian signals diplomacy</a></li>
+<li><a href="https://www.ynetnews.com/article/hy3hwbiagx" target="_blank" rel="noopener">Ynet - Herzog&#x27;s consultation schedule</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/herzog-to-start-consultations-with-smallest-parties-first-religious-zionism-meeting-set-for-wednesday-evening/" target="_blank" rel="noopener">Times of Israel - Herzog to start with the smallest parties</a></li>
+<li><a href="https://en.interfax.com.ua/news/general/1230402.html" target="_blank" rel="noopener">Interfax-Ukraine - Komyshuvakha toll rises to 29</a></li>
+<li><a href="https://www.kyivpost.com/post/88971" target="_blank" rel="noopener">Kyiv Post - Witkoff announces Abu Dhabi talks</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-03-daily.pdf">PDF</a></span>
+</div></div></body></html>
