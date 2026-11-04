@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Wednesday, November 4, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Wednesday, November 4, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Democrats took both chambers of Congress, and the first thing markets did was sell the AI trade.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>The AI trade gets a verdict it was not expecting</h2>
+<p class="field">What happened</p><p>The Democratic sweep landed on an AI complex already badly bruised. A Reuters analysis on Wednesday argued the data-centre backlash was a real force in the result: Texas, where Gina Hinojosa unseated Greg Abbott, holds about a quarter of US data-centre capacity due online by 2030 on GLJ Research&#x27;s count, and Data Center Watch tallied at least 45 projects worth $68bn disrupted by local opposition in the second quarter alone. Goldman Sachs&#x27; broad AI basket fell 15% in October and sits more than 24% below its peak. Evercore ISI&#x27;s Amit Daryanani expects that &quot;the initial reaction will be to sell AI names&quot;. Pre-market quotes circulated for CoreWeave, Applied Digital, Nebius and Oracle; we could not verify any of them, so they are not here.</p>
+<p class="field">What it means</p><p>Power bills and land use beat abstractions about compute. Aidan Yao of Amundi called the vote &quot;more like a referendum on AI than a referendum on (Donald) Trump&quot; — an overstatement, but siting fights are now federal politics. Any actual statute still needs Trump&#x27;s signature, so the near-term exposure is permitting, utility regulators and state incentives, not law.</p>
+<p class="field">Watch next</p><p>Qualcomm reports Wednesday evening. The new Congress is sworn in 3 January.</p>
+</div>
+<div class="item">
+<h2>Nvidia reportedly tells data-centre partners to cap China</h2>
+<p class="field">What happened</p><p>The Financial Times reported, citing five unnamed people, that Nvidia has verbally told cloud and data-centre partners to reduce their exposure to Chinese customers and to sell at least 51% of their services to non-Chinese buyers. It broke just before this brief&#x27;s window and we had not carried it. We have it one source removed, through a summary of the FT rather than the FT itself, and the account carries no on-the-record Nvidia comment — so treat the 51% as a reported figure, not a published policy. The same piece recalled charges against Super Micro staff over roughly $2.5bn of servers allegedly routed to China.</p>
+<p class="field">What it means</p><p>A verbal instruction with a hard number is how a company builds an export-control paper trail without publishing a policy anyone can hold it to. It is also a read on where Nvidia thinks enforcement is heading, which is further than the current rules require.</p>
+<p class="field">Watch next</p><p>Whether Nvidia confirms or denies on the record.</p>
+</div>
+<div class="item">
+<h2>Beijing moves to ratify an AI treaty body</h2>
+<p class="field">What happened</p><p>The National People&#x27;s Congress Standing Committee&#x27;s 25th session, sitting 2 to 6 November, has on its agenda a vote to ratify the agreement establishing the World AI Cooperation Organization, alongside ten bills including an Anti-Cross-Border Corruption Law expected to pass Friday, per the NPC Observer tracker. Other items include amendments to the Finance Law, the Criminal Procedure Law, the Renewable Energy Law, the State-Owned Assets Law and the Water Law. The tracker is a reliable reader of the NPCSC&#x27;s published agenda, but an agenda item is not a passed law.</p>
+<p class="field">What it means</p><p>China is assembling the institutional furniture for AI governance it would host, at the same moment American AI politics turns domestic and hostile. Treaty bodies move slowly and mean little at first, but whoever moves first writes the secretariat&#x27;s rules and sets the default membership.</p>
+<p class="field">Watch next</p><p>Friday 6 November, when the session closes.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>AMD&#x27;s data-centre business nearly doubled</h2>
+<p class="field">What happened</p><p>AMD reported third-quarter results after Tuesday's close: revenue a record $13.38bn, up 45% year on year and 16% sequentially, above the top of its own guidance. Data Center revenue was $8.55bn, up 97% year on year, roughly 27% sequentially, and 64% of sales. Diluted EPS was $1.46 GAAP and $2.09 non-GAAP; gross margin 54% GAAP, 56% non-GAAP. Client and Gaming fell 8% to $3.7bn, Gaming alone down 40% to $773m. Free cash flow was $554m against $1.53bn a year earlier. The <a href="https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results">release</a> guides the fourth quarter to "approximately $17 billion, plus or minus 3%" with non-GAAP gross margin near 55%. On the call, not in the release, Lisa Su said AMD now expects revenue to grow more than 80% in 2027, with data centre above 80% of the total.</p>
+<p class="field">What it means</p><p>Third quarter was the first in which AMD shipped MI455 and Helios racks for revenue, and a $17bn guide implies about 27% sequential growth off a record. The cash-flow line is the tell: free cash flow fell by two-thirds while revenue rose 45%, which is what paying up front for capacity looks like.</p>
+<p class="field">Watch next</p><p>Qualcomm&#x27;s fiscal fourth quarter, Wednesday, call at 1:45pm PT.</p>
+</div>
+<div class="item">
+<h2>Seoul&#x27;s seven-percent round trip</h2>
+<p class="field">What happened</p><p>The Kospi fell about 7% from its intraday high on Wednesday, to 5,421.72, before pension-fund buying hauled it back to close at 5,683.80, up 35.01 points or 0.62%. Samsung Electronics closed at 218,000 won, down 0.68%, and SK hynix at 1,396,000 won, down 0.14%. Tokyo closed down 1.42% at 62,188.63 after an intraday drop of more than 3% to a three-month low. Hong Kong went the other way: the Hang Seng closed up 1.67% at 23,919.50 and the Shanghai Composite up 2.16% at 3,686.17. Kim Dae-joon of Korea Investment and Securities: &quot;This was not indiscriminate selling across the whole market but a clear sector rotation driven by policy change.&quot;</p>
+<p class="field">What it means</p><p>A 7% intraday swing reversed by a state pension fund is not a market finding a price, it is a market being held up. The split matters more than the level: Seoul and Tokyo sold the AI supply chain while Hong Kong and Shanghai bought, which is what a US-specific policy shock looks like from Asia.</p>
+<p class="field">Watch next</p><p>Whether Wednesday&#x27;s US session confirms or rejects the Asian read.</p>
+</div>
+<div class="item">
+<h2>Nexperia sues its own parent for $2bn</h2>
+<p class="field">What happened</p><p>Nexperia has sued Wingtech, its Chinese parent, in an Amsterdam court for more than $2bn, Wingtech disclosed on Tuesday. The defendants include founder Zhang Xuezheng, whom the Dutch Enterprise Chamber suspended as chief executive in October 2025. A Chinese court froze roughly $300m of Nexperia assets in August, and Wingtech has a counter-claim of 8bn yuan running the other way. Wingtech shares fell more than 4%. The figures come from the Dutch press reporting Wingtech&#x27;s own disclosure, so they are the company&#x27;s characterisation of the claim rather than a court document we have read.</p>
+<p class="field">What it means</p><p>The Nexperia fight is now a two-jurisdiction asset war between a European subsidiary and the Chinese owner it no longer answers to. Nexperia makes the cheap discrete chips carmakers cannot substitute quickly, so a freeze on either side reaches the automotive supply chain within weeks.</p>
+<p class="field">Watch next</p><p>The Amsterdam hearing schedule, and whether Beijing retaliates on the asset freeze.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Markets went into the result calm and came out undecided</h2>
+<p class="field">What happened</p><p>Tuesday closed with the Nasdaq Composite up 0.83%, the S and P 500 up 0.36%, ending three days of losses, and the Dow down 0.38%, or 197 points. Treasury&#x27;s own curve for 3 November put the 2-year at 4.61%, the 10-year at 4.95% and the 30-year at 5.32%, each a few basis points above Monday. Front-month Brent settled at $103.60, down 1.12%; no reachable page named the contract month, and no page gave a Tuesday WTI settlement. Wednesday&#x27;s direction is genuinely unresolved: one dated page had S and P futures down 1.06% and Nasdaq-100 futures down 1.9%, while an undated quote bar showed gains. We are not printing a Wednesday number.</p>
+<p class="field">What it means</p><p>Treat anything you read about Wednesday&#x27;s open as provisional until there is a close. The structural question is fiscal: a Democratic Congress and a Republican president negotiating a budget, while a Fed under Kevin Warsh has already voted 10-2 to hold at 3.75 to 4% with two members wanting a hike.</p>
+<p class="field">Watch next</p><p>ADP and ISM services were due Wednesday morning. FOMC meets 8-9 December.</p>
+</div>
+<div class="item">
+<h2>Two very different Tuesday evenings</h2>
+<p class="field">What happened</p><p>Arista Networks reported third-quarter revenue of $3.66bn, up 58.5% year on year, and rose about 11% after hours. Amdocs went the other way, guiding fiscal 2027 revenue down 14.3% to 17.9% as reported, or 7% to 11% on a pro-forma constant-currency basis, saying it had revised its &quot;best estimates to reflect the legal dispute with T-Mobile&quot;. Chief executive Shimie Hortig also cited reduced T-Mobile discretionary spending and the completion of the USCellular integration project. Shares fell about 43% after hours. Skyworks guided its December quarter to $1.80bn to $1.90bn after combining with Qorvo and fell about 17%.</p>
+<p class="field">What it means</p><p>Customer concentration is the entire spread between those two numbers. Arista sells AI networking to hyperscalers that are all spending at once; Amdocs sells software to a handful of carriers, one of which is now in a legal dispute with it. Both are cyclical bets dressed as recurring revenue.</p>
+<p class="field">Watch next</p><p>Whether T-Mobile comments, and Amdocs&#x27; first fiscal 2027 quarter.</p>
+</div>
+<div class="item">
+<h2>Organigram bids C$7.80 for Aurora</h2>
+<p class="field">What happened</p><p>Organigram agreed to acquire Aurora Cannabis at C$7.80 a share in cash, Organigram stock, or a combination subject to proration, per Aurora&#x27;s own filing on Tuesday. The price is a 93% premium to Aurora&#x27;s unaffected price on 10 August and 21% above the implied value of Curaleaf&#x27;s hostile bid as of 2 November. Aurora closed up 22.3%. The deal still needs shareholder and regulatory approval.</p>
+<p class="field">What it means</p><p>A hostile bid did its job without winning: Curaleaf&#x27;s approach set a floor that Organigram had to clear by a fifth. Canadian cannabis has spent five years with too many licensed producers and not enough demand, and consolidation at a 93% premium to an August price says how far the sector&#x27;s equity had fallen, not how well it is doing.</p>
+<p class="field">Watch next</p><p>Whether Curaleaf comes back higher, and the shareholder votes.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Fal doubles to $16bn on inference demand</h2>
+<p class="field">What happened</p><p>Fal, which runs inference for generative media models, raised a $1.3bn Series F led by Bessemer, with Nvidia, Sound Ventures and T. Rowe Price taking part. Announced alongside a Series E, the two rounds total $1.65bn. TechCrunch puts the valuation at $16bn, double the $8bn of April, and annualised revenue above $800m — but attributes both figures to Bloomberg rather than to the company, so neither is confirmed by Fal. The company published no quotes with the raise.</p>
+<p class="field">What it means</p><p>Inference, not training, is where usage turns into revenue, and generative video and image work is the most compute-hungry inference there is. Nvidia on the cap table of its own customer&#x27;s customer is the pattern worth watching: the vendor is increasingly financing the demand it books.</p>
+<p class="field">Watch next</p><p>Whether Fal names a revenue figure itself.</p>
+</div>
+<div class="item">
+<h2>A thick European seed tape, from a single source</h2>
+<p class="field">What happened</p><p>All of the following come from one trade briefing we could not corroborate elsewhere, so treat the amounts as reported rather than confirmed. Quint Computing, in Erlangen, raised EUR 9.1m led by Vsquared Ventures with Quantonation, Nucleus Capital, Faber, Vanagon Ventures and ZOHO.VC, plus a EUR 2.2m EIC Pathfinder grant, for a quantum chip it claims cuts error-correction overhead a hundredfold. Tumbleweed, in Vienna, raised EUR 6.9m led by PactVC for pre-certified pods that run lab experiments in orbit. Conlio, in Berlin, raised EUR 6.4m led by Piton Capital for freight-finance automation, and e2e, in Poland, EUR 7m for AI software testing. Amsterdam&#x27;s Fourthline and Spain&#x27;s Veridas completed a merger with up to EUR 65m of financing, combining identity verification and biometric fraud prevention. Creandum closed a $750m eighth fund.</p>
+<p class="field">What it means</p><p>The European seed market is still clearing at single-digit millions while US AI infrastructure clears at billions, and the gap is widening rather than closing. Creandum&#x27;s $750m is the more telling number: the capital exists in Europe, it is just being raised by funds rather than deployed into large rounds.</p>
+<p class="field">Watch next</p><p>Whether any of these rounds gets a second source or a company announcement.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Democrats take both chambers of Congress</h2>
+<p class="field">What happened</p><p>Networks called the House for Democrats on Tuesday evening — NewsNation and Decision Desk HQ at 9:11pm ET, with CNN, NBC and CBS inside the hour — and the Senate just before 11:30pm. The Associated Press followed on both. By early Wednesday Fox had Democrats past 218, but no outlet we could reach had published a final House count, and NBC&#x27;s projection of the eventual majority appeared as &quot;as many as 244&quot; in one relay and &quot;about 255&quot; in another. The AP says Democrats flipped more than two dozen districts, some Trump carried by double digits in 2024, and that Hakeem Jeffries is on course to become the first Black Speaker. Jeffries: &quot;This is not a partisan moment. This is a patriotic one.&quot; Trump posted on Truth Social: &quot;I wasn&#x27;t on the Ballot and if I was, we would have won IN A LANDSLIDE!&quot; He told CBS News: &quot;My message is, congratulations to the Democrats, and I look forward to working with you for the good of our country.&quot; No outlet we read gave a turnout figure.</p>
+<p class="field">What it means</p><p>Divided government with the parties reversed from 2019. Trump&#x27;s two framings — it was not about him, and he will deal — are the same bet: that a Democratic Congress is worth more to him as a negotiating partner than as a foil, at least until the subpoenas start.</p>
+<p class="field">Watch next</p><p>The House count firming up, and the Democratic leadership election.</p>
+</div>
+<div class="item">
+<h2>Seven Senate flips, and two races still counting</h2>
+<p class="field">What happened</p><p>ABC&#x27;s board at 6:15am ET showed 54 and 44 without party labels; seven Democratic flips off a 47-seat caucus gets you to 54, which is our arithmetic rather than any outlet&#x27;s figure. The flips: James Talarico beat Ken Paxton in Texas, 55-43 with 94% reporting; Sherrod Brown beat Jon Husted in the Ohio special, for the seat JD Vance held two years ago; Troy Jackson beat Susan Collins in Maine, 54-46; pastor Adam Hamilton beat Roger Marshall in Kansas, the first Democratic Senate win there in close to a century; Josh Turek beat Ashley Hinson in Iowa; Roy Cooper beat former RNC chairman Michael Whatley in North Carolina; Annie Andrews beat Darline Graham in South Carolina. Jon Ossoff held Georgia 59-41 and Chris Pappas held New Hampshire; the AP called Michigan for Abdul El-Sayed at 2:27am, roughly 52-46, the first Muslim US senator. Ashley Moody held the Florida special.</p>
+<p class="field">What it means</p><p>Kansas and South Carolina should unsettle both parties&#x27; models: not swing states swinging but safe seats lost, which is what happens when the issue set is prices rather than identity.</p>
+<p class="field">Watch next</p><p>Alaska, where Dan Sullivan led Mary Peltola by about 2,470 votes at roughly three-quarters of precincts, with updates due 10, 13 and 18 November and certification targeted for the 25th. Mississippi is closer: Scott Colom led Cindy Hyde-Smith by 28 votes at about 97% counted.</p>
+</div>
+<div class="item">
+<h2>Four governorships flip, and abortion splits the ballot</h2>
+<p class="field">What happened</p><p>Democrats flipped four Republican-held governorships, per NBC: Keisha Lance Bottoms in Georgia, the first Black woman elected a US governor; Gina Hinojosa over Greg Abbott in Texas by about seven points on the AP&#x27;s margins, the state&#x27;s first Latina governor; Amy Acton over Vivek Ramaswamy in Ohio by about five; and Rob Sand in Iowa by about twelve. David Crowley held Wisconsin, where Tony Evers was term-limited, and ABC projected Aaron Ford in Nevada and Jocelyn Benson in Michigan. Byron Donalds won Florida, the first Black Republican elected governor. Governorships stood 26-24 Republican going in and no outlet we reached has published a post-election count, with Alaska and Kansas out. On ballot measures, Virginia approved an abortion-rights amendment with about 62% on a New York Times projection, while Missouri and Idaho rejected them per the AP; Ohio&#x27;s voter-ID measure passed, as did North Carolina&#x27;s photo-ID requirement with about 60%; California rejected both a billionaire tax and a voter-ID amendment.</p>
+<p class="field">What it means</p><p>Abortion measures no longer travel automatically with Democratic candidates: Missouri and Idaho rejected them on a night Democrats won nearly everything else, and voter-ID measures passed where they ran. Voters are separating the question from the party.</p>
+<p class="field">Watch next</p><p>The final governor count. Los Angeles&#x27; mayoral race is still uncalled.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel&#x27;s result is official; nobody has the mandate</h2>
+<p class="field">What happened</p><p>Justice Noam Sohlberg handed President Herzog the official results of the 26th Knesset election on Wednesday. The Central Elections Committee found no irregularities after reviewing 9,069 polling stations and rejected fraud claims; turnout was 77.9%. The split leaves Netanyahu&#x27;s bloc on 53 seats, opposition Jewish parties on 48 and Arab-led parties on 19 — nobody near the 61 needed. Herzog began consultations Wednesday evening with the smallest factions first, an unusual order, finishing Thursday with Yashar! and Likud; the mandate is expected between Friday and Tuesday, and the designee then gets 28 days, extendable by 14. Smotrich and Deri say they will recommend Netanyahu; Liberman, Bennett and Golan say Gadi Eisenkot. No formal recommendation has been delivered. Separately the Shin Bet gave the committee a summary alleging foreign financing and influence involving &quot;thousands of people and possibly more&quot;, without supporting evidence; law-enforcement sources told Haaretz they knew of no operation on that scale.</p>
+<p class="field">What it means</p><p>The arithmetic, not the consultations, decides this: neither bloc reaches 61 without the Arab-led parties or a defection, and Eisenkot&#x27;s path runs through parties that have spent a decade refusing each other. An unevidenced security-service allegation about foreign money, landing the week the mandate is handed out, is the part to watch.</p>
+<p class="field">Watch next</p><p>The mandate, Friday to Tuesday. The Knesset is sworn in 10 November.</p>
+</div>
+<div class="item">
+<h2>Trump calls it a minor attack; Tehran calls the reply unconvincing</h2>
+<p class="field">What happened</p><p>Trump told Fox on Tuesday that the US had struck an Iranian anti-aircraft facility on Qeshm Island the night before, and had watched it being built over roughly two months: &quot;No anti-aircraft, we took some out last night. Minor attack, wasn&#x27;t war.&quot; There is still no on-the-record CENTCOM or Pentagon statement in any coverage we reviewed, which is notable because CENTCOM did issue one on earlier Qeshm strikes in June; unnamed officials have called this one defensive. Mohsen Rezaei, secretary of Iran&#x27;s Supreme National Security Council, posted that Washington&#x27;s reply on the Strait of Hormuz was not convincing and that Iran&#x27;s seven conditions must be addressed fully and explicitly. The IRGC said Wednesday that four tankers had hit mines and were ablaze and that it had seized two more vessels — its own claim, which Al Jazeera could not verify. UKMTO separately reported two projectiles hitting a tanker&#x27;s engine room 14 nautical miles north-east of Limah, Oman, at 19:00 GMT Tuesday, no casualties.</p>
+<p class="field">What it means</p><p>A president calling his own strike minor is managing an audience at home, not signalling to Tehran, and the missing military statement suggests nobody wants this on the record as a campaign. The strait is still shut and the conditions for reopening it have not moved.</p>
+<p class="field">Watch next</p><p>Qatar is relaying proposals in real time, per spokesman Majed al-Ansari.</p>
+</div>
+<div class="item">
+<h2>Russia&#x27;s biggest energy strike of the year, and Moscow confirms Abu Dhabi</h2>
+<p class="field">What happened</p><p>Ukrainian officials said Russia fired 289 drones, 17 ballistic missiles and 59 cruise missiles at the power system overnight into Tuesday, hitting substations, transmission and generation across ten regions; the Kyiv Independent, in its own voice, called it the biggest attack on Ukraine&#x27;s energy facilities this year. DTEK said three thermal plants halted generation, locations undisclosed. In Kharkiv a strike on a medical facility at about 3am injured 73, per prosecutors, with Mayor Ihor Terekhov citing more than 1,000 blown-out windows and about 200 patients evacuated; Ukrinform&#x27;s preliminary account is a FAB-250 guided bomb, not a missile. First Deputy Prime Minister and Energy Minister Denys Shmyhal said three drones went for a substation serving the Khmelnytskyi nuclear plant and that Kyiv informed the IAEA, which has not commented. Dmitry Peskov confirmed a Russian delegation led by Vladimir Medinsky will be in Abu Dhabi on 10-11 November.</p>
+<p class="field">What it means</p><p>Russia is degrading the grid ahead of winter precisely because talks are scheduled, to arrive with leverage. Peskov&#x27;s confirmation is the first from either capital, so the meeting is real — but a working-level delegation led by Medinsky, who ran the 2022 talks that produced nothing, is not a negotiation.</p>
+<p class="field">Watch next</p><p>Abu Dhabi, 10-11 November. Zelensky wants a leaders&#x27; meeting; nobody has agreed to one.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results" target="_blank" rel="noopener">AMD — Third Quarter 2026 Financial Results</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0000002488/000000248826000188/amdq32026earningsslidesf.htm" target="_blank" rel="noopener">AMD — Q3 2026 earnings slides (Form 8-K exhibit)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001596532/000159653226000252/ex991q326-earningsrelease.htm" target="_blank" rel="noopener">Arista Networks — Q3 2026 earnings release (8-K exhibit)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001683541/000110465926121740/tm2628773d2_ex99-1.htm" target="_blank" rel="noopener">Aurora Cannabis — Organigram arrangement release (6-K exhibit)</a></li>
+<li><a href="https://www.stocktitan.net/news/DOX/amdocs-limited-reports-fourth-quarter-fiscal-2026-results-full-year-d6puxu1q9khh.html" target="_blank" rel="noopener">Amdocs — Q4 and full-year fiscal 2026 results</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily yield curve, November 2026</a></li>
+<li><a href="https://www.bls.gov/news.release/jolts.nr0.htm" target="_blank" rel="noopener">BLS — Job Openings and Labor Turnover, September 2026</a></li>
+<li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-3-2026" target="_blank" rel="noopener">Stock market today, 3 November 2026</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/11/04/kospi-swings-7-percent-before-closing-higher-as-us" target="_blank" rel="noopener">Kospi swings 7% before closing higher</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/analysistrumps-midterm-drubbing-demonstrates-the-power-of-datacentre-opponents-4998061" target="_blank" rel="noopener">Analysis: the power of data-centre opponents</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/nvidia-tells-data-center-partners-to-limit-china-sales-ft-4993618" target="_blank" rel="noopener">Nvidia tells data-centre partners to limit China sales (FT)</a></li>
+<li><a href="https://npcobserver.com/" target="_blank" rel="noopener">NPC Observer — 25th session of the NPC Standing Committee</a></li>
+<li><a href="https://nltimes.nl/2026/11/03/nijmegen-based-nexperia-sues-chinese-parent-company-wingtech-2-billion" target="_blank" rel="noopener">Nexperia sues Wingtech for $2bn</a></li>
+<li><a href="https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/" target="_blank" rel="noopener">Fal raises $1.3bn at a $16bn valuation</a></li>
+<li><a href="https://www.kut.org/politics/2026-11-04/democrats-win-full-control-of-congress-ushering-in-a-new-era-of-divided-government" target="_blank" rel="noopener">Democrats win full control of Congress (NPR)</a></li>
+<li><a href="https://www.pbs.org/newshour/politics/democrats-win-control-of-the-u-s-house" target="_blank" rel="noopener">Democrats win control of the US House (PBS NewsHour)</a></li>
+<li><a href="https://abcnews.com/Politics/balance-power-congress-stake-2026-midterm-elections/story?id=137777679" target="_blank" rel="noopener">Balance of power in Congress (ABC News)</a></li>
+<li><a href="https://www.wkar.org/election-2026/2026-11-04/abdul-el-sayed-defeats-mike-rogers-in-michigan-senate-race-making-history" target="_blank" rel="noopener">El-Sayed defeats Rogers in Michigan (AP via WKAR)</a></li>
+<li><a href="https://www.nbcnewyork.com/elections/democrats-flip-four-governorships-extend-inroads-red-states/6567488/" target="_blank" rel="noopener">Democrats flip four governorships (NBC News)</a></li>
+<li><a href="https://www.yahoo.com/news/politics/articles/mississippi-senate-race-too-close-070013857.html" target="_blank" rel="noopener">Mississippi Senate race too close to call</a></li>
+<li><a href="https://www.ktoo.org/2026/11/03/sullivan-and-peltola-locked-in-tight-u-s-senate-race-as-more-results-come-in-2/" target="_blank" rel="noopener">Sullivan and Peltola locked in tight Alaska Senate race</a></li>
+<li><a href="https://justthenews.com/politics-policy/elections/2026-ballot-measure-results-voters-decide-abortion-voter-id-and-tax" target="_blank" rel="noopener">2026 ballot measure results</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/4/israel-vote-results-confirmed-as-election-commission-rejects-fraud-claims" target="_blank" rel="noopener">Israel vote results confirmed as commission rejects fraud claims</a></li>
+<li><a href="https://www.timesofisrael.com/liveblog_entry/herzog-receives-formal-election-results-denounces-coarse-and-racist-rhetoric-against-arab-community/" target="_blank" rel="noopener">Herzog receives formal election results (Times of Israel)</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/4/iran-says-us-reply-to-hormuz-plan-unconvincing-trump-confirms-strikes" target="_blank" rel="noopener">Iran says US reply to Hormuz plan unconvincing; Trump confirms strikes</a></li>
+<li><a href="https://kyivindependent.com/russia-unleashes-biggest-mass-attack-on-ukraines-energy-this-year-2/" target="_blank" rel="noopener">Russia launches biggest mass attack on Ukraine&#x27;s energy this year</a></li>
+<li><a href="https://www.kyivpost.com/post/89050" target="_blank" rel="noopener">Shmyhal on the Khmelnytskyi substation (Kyiv Post)</a></li>
+<li><a href="https://en.interfax.com.ua/news/general/1230478.html" target="_blank" rel="noopener">Peskov confirms Russian delegation for Abu Dhabi (Interfax-Ukraine)</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-04-daily.pdf">PDF</a></span>
+</div></div></body></html>
