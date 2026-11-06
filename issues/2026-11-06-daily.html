@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Friday, November 6, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Friday, November 6, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The AI trade broke in earnest: chip stocks had their worst day since the Covid crash, and Asia opened to circuit breakers and two bear markets.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>The data-centre backlash acquires a price</h2>
+<p class="field">What happened</p><p>Thursday was the day markets put a number on political risk to the AI buildout. The PHLX Semiconductor Index <a href="https://indexes.nasdaq.com/Index/History/SOX">closed down 12.25%</a> at 9,011.14, its worst day since 16 March 2020, and the Nasdaq Composite fell 5.5%. The trigger was not a data point but two governors-elect: Ohio’s Amy Acton has backed a "conditional moratorium" on data centres and Texas’s Gina Hinojosa <a href="https://www.forbes.com/sites/fionariley/2026/11/05/chipmaker-selloff-deepens-amid-post-election-concerns-for-future-of-data-centers/">pledged an immediate one</a>. MRB Partners wrote in a note, cited by CNBC, that "The U.S. mid-term election results will add to headwinds for big tech and the data center buildout."</p>
+<p class="field">What it means</p><p>Two days ago the sweep was a macro story about rates and spending. Now it is a permitting story. The $720bn-odd of hyperscaler capital spending penciled in for 2026 assumes land, power and local consent, and a governor who can slow an interconnection queue is a more immediate threat than any bill in Congress.</p>
+<p class="field">Watch next</p><p>Both governors-elect are sworn in in January. Until then, whether any sitting state regulator moves first.</p>
+</div>
+<div class="item">
+<h2>Thinking Machines ships a 594-billion-parameter model and keeps the weights</h2>
+<p class="field">What happened</p><p>Mira Murati’s Thinking Machines Lab <a href="https://thinkingmachines.ai/news/inkling-2-small/">released Inkling 2 Small</a> on Thursday: a mixture-of-experts model with 594bn total parameters and 17bn active, which takes image inputs. It is live on the lab’s Tinker platform with closed weights. The company says it will publish full weights under an Apache 2.0 licence the following week, and that "The release of Inkling’s weights is pending further safety evaluations by us and our partners." It also concedes the model "still trails closed-weights models" on its own alignment tests.</p>
+<p class="field">What it means</p><p>A staged release — ship the API, hold the weights for red-teaming — is the compromise the open-weights argument has been circling for two years. If the lab actually publishes next week, it hands every rival a template for shipping openly without the irreversibility. If the date slips, it was marketing.</p>
+<p class="field">Watch next</p><p>The promised weight release, due within the week.</p>
+</div>
+<div class="item">
+<h2>China blocks the Chinese half of SoftBank’s ABB robotics deal</h2>
+<p class="field">What happened</p><p>ABB <a href="https://new.abb.com/news/detail/140154/update-on-divestment-of-abb-robotics">said on Thursday</a> that SoftBank had told it China’s Office of the Working Mechanism for Foreign Investment Security Review "has prohibited the acquisition of the ABB Robotics business in China." SoftBank’s own statement on Friday says it was notified on 4 November and describes the prohibition as limited to China. Neither company says the wider transaction — valued at $5.375bn when ABB announced the divestment in October 2025 — is dead; both say it remains subject to approvals. The reported objection, per the Financial Times, is that Chinese-made assets and data could be used to train AI models in Japan, including OpenAI’s.</p>
+<p class="field">What it means</p><p>Read it as China treating industrial robotics data as an AI input rather than a machine-tools asset. That is a broader definition of strategic than chip export controls, and it catches deals nobody screened for AI exposure: a robot-arm divestment agreed a year ago now reads as a data transfer.</p>
+<p class="field">Watch next</p><p>Whether SoftBank carves out the China unit and closes the rest, and whether ABB restates the price.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Chips have their worst day since the Covid crash, then Asia catches it</h2>
+<p class="field">What happened</p><p>The SOX closed Thursday at 9,011.14, <a href="https://pro.thestreet.com/market-commentary/ai-rout-sends-the-tech-sector-to-its-worst-day-since-the-covid-crash">down 12.25%</a> — its worst session since 16 March 2020 and about 38% below its June record. Micron and AMD each fell roughly 17%, Arm 13%, Intel 10%, Nvidia and Qualcomm about 9%. Asia then took it harder. Seoul’s <a href="https://en.sedaily.com/finance/2026/11/06/kospi-falls-below-5000-for-first-time-in-nine-months">KOSPI hit a level-one circuit breaker</a> at 9:03am, suspending main-board trading for 20 minutes after an 8.55% fall from Wednesday’s close; it ended down 6.02%, with SK hynix off 10.44%. Tokyo’s Nikkei 225 fell as much as 7.1% intraday and finished in bear-market territory, more than 20% below its 22 June peak. Taiwan’s Taiex lost 1,873.08 points, or 4.51%, with TSMC off 4.69% after recovering from a 10% limit-down fall.</p>
+<p class="field">What it means</p><p>Nothing broke in the semiconductor business this week; MACOM’s numbers below are the opposite of a warning. What broke is the assumption that AI capital spending compounds without a political veto. Memory and accelerators, the two most capex-levered links in the chain, fell twice as far as the logic names.</p>
+<p class="field">Watch next</p><p>Monday’s Asian open, and whether foreign investors extend a seventh straight session of net selling in Seoul.</p>
+</div>
+<div class="item">
+<h2>Korea’s chip exports nearly quadruple, five days before the selloff</h2>
+<p class="field">What happened</p><p>Korea’s October exports were <a href="https://biz.heraldcorp.com/article/10921622">$115.28bn, up 93.7%</a> on the year, with semiconductors at $56.44bn, up 259.4% — about 49% of everything the country sold abroad. It was the second-highest month on record, behind September’s $121.1bn; Korea JoongAng Daily and the Korea Times both called it a record, which it is not. Part of the jump is the calendar: the Chuseok holiday moved out of October, and the working-day-adjusted daily average rose 76.0% rather than 93.7%. Imports were $72.78bn, leaving a $42.5bn surplus. Exports for January to October, $930bn, already beat last year’s full-year record.</p>
+<p class="field">What it means</p><p>The hardest available number on AI demand says it is accelerating, and it was published five days before equity markets decided otherwise. Both can be true at once: the physical demand is real, and the multiple being paid for it was not. Nothing in the trade data has turned.</p>
+<p class="field">Watch next</p><p>Korea’s trade ministry expects annual exports to pass $1trn during November — only the US, China and Germany have done it.</p>
+</div>
+<div class="item">
+<h2>MACOM beats hard into the rout</h2>
+<p class="field">What happened</p><p>MACOM <a href="https://ir.macom.com/news-releases/news-release-details/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026">reported fiscal fourth-quarter</a> revenue of $424.8m, up 62.7% on the year and 24.1% on the quarter, with GAAP net income of $139.4m ($1.78 diluted) and adjusted net income of $163.3m ($2.09). Adjusted gross margin was 61.3%. It guided the current quarter to $450m-$460m of revenue and $2.21-$2.29 of adjusted EPS — above the quarter it just reported. The stock fell about 15% intraday anyway. One housekeeping note: the "$261.2m revenue, $0.94 adjusted EPS" circulating against MACOM’s name are its fiscal 2025 comparatives, not this quarter.</p>
+<p class="field">What it means</p><p>The release gives no segment breakdown, so the data-centre attribution being made for MACOM comes from the earnings call rather than the numbers. Even so, a 62% revenue gain with guidance above the trailing quarter is not a company watching demand roll over.</p>
+<p class="field">Watch next</p><p>Whether the next set of accelerator and networking quarters corroborates Korea’s export data or the share prices.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The Bank of England raises rates for the first time since 2023</h2>
+<p class="field">What happened</p><p>The Monetary Policy Committee voted <a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026">8-1 to raise Bank Rate</a> a quarter point to 4%, its first increase since August 2023 and the end of six consecutive cuts. Catherine Mann wanted half a point. The summary is blunt about why: "UK CPI inflation increased to 3.5% in September" and "It is now expected to rise to around 5% by the middle of next year," so "the degree of inflationary pressure in the pipeline is now sufficient to warrant an increase in Bank Rate." It added that "Monetary policy is not on a pre-set path." The Czech National Bank raised its own repo rate to 4.00% the same day, 4-3.</p>
+<p class="field">What it means</p><p>Britain now has a central bank forecasting 5% inflation nine months out and tightening into an oil shock. That is the Middle East war — &quot;now in its ninth month,&quot; as the Bank puts it — arriving in the policy rate rather than in the headlines, and it points the opposite way to the growth scare repricing American rates.</p>
+<p class="field">Watch next</p><p>The next decision is 17 December.</p>
+</div>
+<div class="item">
+<h2>Wall Street gives back the whole post-midterm rally in a day</h2>
+<p class="field">What happened</p><p>The <a href="https://ca.finance.yahoo.com/news/major-us-stock-indexes-fared-212218583.html">S&amp;P 500 fell 334.89 points, or 4.4%, to 7,353.73</a>; the Dow lost 1,833.06 to 51,523.06; the Nasdaq Composite fell 1,421.52, or 5.5%, to 24,315. That erases Wednesday’s rally and then some. The VIX closed at 28.18, up about 70%, its highest finish since 30 March. Treasuries rallied hard at the front end, the two-year yield dropping 12 basis points to <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">4.46%</a> and the ten-year six to 4.84%. Oil went the other way: December WTI <a href="https://www.rigzone.com/news/wire/oil_rebounds_after_sharp_iran_war_selloff-05-nov-2026-185023-article/">settled at $90.52</a>, up 2.7%, and January Brent at $98.29, up 3.9%, as Gulf exports recovered toward pre-war levels.</p>
+<p class="field">What it means</p><p>A 12bp rally in two-year notes alongside a 5% drop in the Nasdaq is a growth scare, not an inflation scare: the market is pricing a slower buildout rather than a hotter Fed. Oil rising into it is the awkward part, and the reason the two-year may not be right.</p>
+<p class="field">Watch next</p><p>October payrolls at 8:30am ET today, the first print since September’s +29,000 and a 4.2% unemployment rate.</p>
+</div>
+<div class="item">
+<h2>Airbnb reaccelerates; Atlassian’s guidance does the opposite</h2>
+<p class="field">What happened</p><p>Airbnb <a href="https://news.airbnb.com/airbnb-q3-2026-financial-results/">said revenue grew 19% to $4.9bn</a> in the third quarter, with net income of $1.9bn, adjusted EBITDA of $2.5bn (up 22%, a 52% margin) and gross booking value of $27.7bn, up 21%. The board authorised buying back up to a further $12bn of stock; shares closed down 3.54% at $170.13, then rose about 11% after hours. Atlassian went the other way: it beat, with revenue up 24% to $1.77bn and non-GAAP EPS of $1.65 against $1.43 expected, then guided fiscal 2027 subscription recurring revenue growth to "approximately 18.5%" against 22.5% in the quarter just reported. It fell 16-18% after hours.</p>
+<p class="field">What it means</p><p>Same tape, opposite reactions, one rule. Nobody is paying for a beat this week; they are paying for the second derivative. Airbnb’s chief executive said on the call that it is &quot;rare for a marketplace of our size to reaccelerate growth&quot; — which is precisely the quality being repriced out of everything else.</p>
+<p class="field">Watch next</p><p>Berkshire Hathaway’s third-quarter 10-Q was still unfiled on Friday morning; it customarily lands on a Saturday.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Shield buys Echodyne for $5.3bn and raises $2.5bn at $28.8bn</h2>
+<p class="field">What happened</p><p>Shield, the defence-autonomy company formerly called Shield AI, <a href="https://shield.ai/shield-to-acquire-echodyne-in-a-transaction-valued-at-5-3-billion-and-raise-2-5-billion-at-a-28-8-billion-valuation/">agreed to acquire</a> radar maker Echodyne in a deal valued at $5.3bn — $4.8bn paid and issued at closing plus up to $500m contingent on performance targets. Alongside it, Shield is raising $2.5bn at a $28.8bn post-money valuation: $1bn of Series H equity co-led by Disruptive and Innovation X Capital, $1bn of structured equity from Blackstone-managed funds, and $500m of debt arranged by JPMorgan Chase Bank. Echodyne’s solid-state radars, built on its MESA metamaterial technology, sit in counter-drone systems in more than 40 countries. Closing is expected in early 2027.</p>
+<p class="field">What it means</p><p>Shield is buying the sensor rather than licensing it, which tells you where it thinks the margin in autonomous defence sits — in the thing that sees, not the thing that flies. The capital structure is the other story: a billion of structured equity plus bank debt is a growth company being financed like an industrial.</p>
+<p class="field">Watch next</p><p>Regulatory clearances. The deal is agreed, not closed.</p>
+</div>
+<div class="item">
+<h2>Alethio raises $90m to treat blood cancers rather than manage them</h2>
+<p class="field">What happened</p><p>Alethio Therapeutics, an Oxford spin-out based in Abingdon, <a href="https://www.biopharmadive.com/news/alethio-therapeutics-myeloproliferative-neoplasms-series-a/873775/">raised a $90m Series A</a> co-led by Sofinnova Partners and RA Capital Management, with Cancer Research Horizons, Oxford Science Enterprises and the University of Oxford participating. The money funds treatments for myeloproliferative neoplasms. Its lead asset, ATX-011, is a monoclonal antibody targeting the G6b receptor on platelets and certain bone-marrow cells, and is expected to enter clinical testing in the first half of 2028. Sofinnova’s Graziano Seghezzi put the pitch plainly: "The key words are we’re not controlling the disease, we’re treating it." Valuation was not disclosed.</p>
+<p class="field">What it means</p><p>Ninety million dollars at Series A for an asset three years from the clinic is the kind of round that stopped happening in 2023. European biotech appears to have its risk appetite back, at least where the science is university-derived and the target well characterised.</p>
+<p class="field">Watch next</p><p>Trial initiation in the first half of 2028 — a long wait, which is rather the point of the round.</p>
+</div>
+<div class="item">
+<h2>The European tape: small cheques against physical bottlenecks</h2>
+<p class="field">What happened</p><p>Beneath the mega-rounds, a busy Thursday and Friday. <a href="https://tech.eu/2026/11/05/kabilio-raises-eur10m-to-expand-ai-accounting-platform-and-introduce-ai-agents/">Kabilio</a>, a Spanish AI-accounting platform, raised EUR 10m led by Picus Capital and Visionaries with Spain’s CDTI participating, taking it to EUR 14m since launch; co-founder Álex Valls: "An agent is only as good as the data it works on." <a href="https://tech.eu/2026/11/06/vensum-power-raises-eur9m-to-cut-power-losses-in-ai-data-centres-ev-charging-and-energy-storage/">Vensum Power</a> took EUR 9m to cut power losses in data centres, EV charging and storage. Claimlane raised a EUR 5.6m Series A, Mindmax $3.3m, and Potential Sciences an undisclosed multi-million round backed by the UK’s sovereign AI fund and Stripe’s chief executive. Estonia, separately, approved round-the-clock robotic pharmacies, a European first.</p>
+<p class="field">What it means</p><p>The tape is small cheques against unglamorous bottlenecks — accounting labour, power-conversion losses, returns handling. That is the part of the AI build that gets paid whether or not the hyperscalers slow down, and it is where the European tape has been strongest all autumn.</p>
+<p class="field">Watch next</p><p>Whether this week’s public-market repricing reaches private rounds. Nothing French closed inside the window, which is unusual.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Two Senate seats are still being counted, and neither is settled</h2>
+<p class="field">What happened</p><p>In Mississippi, Scott Colom leads Cindy Hyde-Smith by <a href="https://abcnews.com/Politics/recounts-mississippi-razor-thin-margin-senate-race/story?id=137844445">1,813 votes</a> — 466,775 to 464,962 — at 96% of the expected vote as of 1:45am Friday. Nobody has called it. Mail absentees postmarked by election day are accepted until 10 November, counties certify on 13 November, and the state has no automatic or candidate-requested recount; one would need a court order. Hyde-Smith’s lawyers at Lex Politica sent a <a href="https://www.nrsc.org/wp-content/uploads/2026/11/261105-Demand-re-Preservation-of-Affidavit-Ballots.pdf">preservation demand to all 82 counties</a> on Thursday, requiring affidavit ballots be kept "separate and apart from other 2026 general election ballots." In Alaska, Mary Peltola leads Dan Sullivan by 637, and the Division of Elections has published nothing since Wednesday lunchtime.</p>
+<p class="field">What it means</p><p>Both seats sit with the Democrats on every current count, and both can still move. Alaska is the stranger risk: ranked-choice tabulation runs on 18 November only if nobody clears 50%, and the elimination order turns partly on a fourth candidate — a retired Petersburg teacher also named Dan Sullivan, on about 1.7%.</p>
+<p class="field">Watch next</p><p>Alaska counts again on 10 and 13 November and targets certification around 25 November.</p>
+</div>
+<div class="item">
+<h2>Someone finally publishes a House number, and it is an estimate</h2>
+<p class="field">What happened</p><p>CBS News now says "House Democrats are on pace to win 256 seats, according to the latest CBS News estimate," on a page <a href="https://www.cbsnews.com/live-updates/house-election-results-2026/">stamped 5:25pm Thursday</a> — while noting the figure "includes several races that CBS News has not yet projected" and publishing a range of 251 to 268. That is the first House seat number in print from a decision desk. It is still not a result: three days after the election no outlet has published a called Democrats-X, Republicans-Y tally, and two Louisiana seats go to runoffs on 12 December. Figures of 259 circulating under CBS’s name are not CBS’s.</p>
+<p class="field">What it means</p><p>The gap between &quot;Democrats control the House,&quot; projected Tuesday night, and &quot;Democrats hold N seats&quot; is where the next two years of legislative arithmetic lives. On CBS’s own range the majority lands between 33 and 50 seats clear of the 218 needed — the difference between governing and governing comfortably.</p>
+<p class="field">Watch next</p><p>The Louisiana runoffs on 12 December. No national turnout figure has been published by anyone either.</p>
+</div>
+<div class="item">
+<h2>Two Colorado judges spend the week asking ICE who outranks a court order</h2>
+<p class="field">What happened</p><p>Judge Charlotte Sweeney’s own <a href="https://www.cod.uscourts.gov/Documents/Judges/Calendars/2026-11-09/CNS.pdf">published calendar</a> has her reconvening at 9am Monday in <em>Ramon Quintero Alvarez v. Baltazar</em>, No. 1:26-cv-04891-CNS, to question the head of ICE’s Denver field office about people released on court order and re-detained immediately afterwards. She has opened an inquiry, not found contempt, and told the government’s lawyer his conduct was "bordering on unprofessional conduct." On Thursday a second judge, Nina Wang, heard a related habeas case in which ICE’s assistant Denver field office director, Nichole Black, testified that GPS monitoring of people released during deportation proceedings is headquarters policy. Asked if it was written policy: "Yes." And: "It came from our headquarters."</p>
+<p class="field">What it means</p><p>The question underneath both hearings is whether an agency policy can qualify a judge’s release order. The government’s lawyer conceded he could cite no Supreme Court or Tenth Circuit authority saying it can — a narrow concession with wide consequences, because the policy is national.</p>
+<p class="field">Watch next</p><p>Monday’s hearing. Caveat: the court’s calendar is primary, but every substantive account of these hearings comes from one newsroom, Colorado Politics.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>The ANC heads for its worst municipal result ever</h2>
+<p class="field">What happened</p><p>South Africa’s local government elections, held Wednesday, have the ANC on <a href="https://esp.info/elections/local/2026?ballot=pr">32.0% of the proportional ballot</a> against the Democratic Alliance’s 24.5%, with roughly 70% of voting districts counted — the trackers disagree on exactly how much. Jacob Zuma’s MK Party has 9.2%. The ANC took 46.12% of the proportional ballot in 2021, itself then its worst municipal showing, so it is down about 14 points; the DA is up under three. Turnout was 51.1% on the commission’s figure. Louw Nel of Oxford Economics Africa called a 32% result "the party’s worst nightmare coming true."</p>
+<p class="field">What it means</p><p>Early counts had the two parties within a point, because metropolitan districts report first. As rural and township districts came in, the DA fell away and MK nearly doubled. The ANC is not losing to the official opposition; it is losing to parties that broke off from it, which is far harder to win voters back from.</p>
+<p class="field">Watch next</p><p>Results are declared Sunday, after which parties get two weeks to form coalitions — Johannesburg above all, where nobody is expected to win outright.</p>
+</div>
+<div class="item">
+<h2>Eisenkot has 67 recommendations. He cannot use 19 of them.</h2>
+<p class="field">What happened</p><p>After Thursday’s consultations, Israel’s president has <a href="https://www.aljazeera.com/news/2026/11/6/israels-herzog-to-name-a-candidate-to-form-government-on-sunday">Gadi Eisenkot recommended by factions holding 67 of 120 Knesset seats</a> and Benjamin Netanyahu by 46; United Torah Judaism’s seven recommended nobody. Isaac Herzog said he will name a candidate on Sunday after speaking to party leaders over the weekend, noting the choice is not obvious given "mutual vetoes between the blocs and within the blocs themselves" — in the Times of Israel’s translation. Eisenkot’s own alliance won 48 seats; the other 19 come from the Arab-led Joint List and Ra’am.</p>
+<p class="field">What it means</p><p>Both men have said they will not govern with the Arab-led parties, though Eisenkot’s position on that is now disputed in Israeli coverage rather than settled. Strip the 19 and he has 48 against a Netanyahu bloc of 53 — which is how a candidate with 67 recommendations still fails to form a government.</p>
+<p class="field">Watch next</p><p>Herzog names someone Sunday; the Knesset is sworn in Tuesday. The nominee then has 28 days, extendable by 14.</p>
+</div>
+<div class="item">
+<h2>Congo’s Ebola outbreak passes 5,000 dead while the vaccine trial is still being assembled</h2>
+<p class="field">What happened</p><p>The European CDC’s <a href="https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-03">3 November update</a> puts the Democratic Republic of Congo at 10,532 confirmed cases and 5,126 deaths — an implied case fatality rate near 49% — across 67 of 178 health zones in eight provinces. Ituri accounts for 7,431 cases, North Kivu 2,518. The strain is Bundibugyo, for which no licensed vaccine or treatment exists. On 4 November a WHO expert group <a href="https://www.who.int/news/item/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances">recommended adding two candidates</a> — Oxford’s ChAdOx1, with the Serum Institute of India, and Moderna’s mRNA-1469 — to a ring-vaccination trial in Congo, pending national approvals.</p>
+<p class="field">What it means</p><p>This would be the first time vaccines designed for Bundibugyo are tested during an outbreak of it — a scientific milestone and an indictment of the clock, since the trial is still adding arms. Tedros Adhanom Ghebreyesus put it carefully: &quot;Vaccines alone will not end this outbreak, but they could become a powerful new tool for bringing it under control.&quot;</p>
+<p class="field">Watch next</p><p>National approvals for the two candidates. The ECDC flags that a 31 October harmonisation added 314 deaths later reports did not carry, so the totals are unstable.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://indexes.nasdaq.com/Index/History/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index (SOX) history</a></li>
+<li><a href="https://pro.thestreet.com/market-commentary/ai-rout-sends-the-tech-sector-to-its-worst-day-since-the-covid-crash" target="_blank" rel="noopener">TheStreet — AI rout sends the tech sector to its worst day since the Covid crash</a></li>
+<li><a href="https://ca.finance.yahoo.com/news/major-us-stock-indexes-fared-212218583.html" target="_blank" rel="noopener">Associated Press — How the major US stock indexes fared, 5 November</a></li>
+<li><a href="https://www.forbes.com/sites/fionariley/2026/11/05/chipmaker-selloff-deepens-amid-post-election-concerns-for-future-of-data-centers/" target="_blank" rel="noopener">Forbes — Chipmaker selloff deepens amid post-election concerns for data centers</a></li>
+<li><a href="https://en.sedaily.com/finance/2026/11/06/kospi-falls-below-5000-for-first-time-in-nine-months" target="_blank" rel="noopener">Seoul Economic Daily — KOSPI falls below 5,000 for the first time in nine months</a></li>
+<li><a href="https://www.koreaherald.com/article/10928857" target="_blank" rel="noopener">Korea Herald — KOSPI circuit breaker and Friday close</a></li>
+<li><a href="https://focustaiwan.tw/business/202611060016" target="_blank" rel="noopener">Focus Taiwan — Taiex closes down 4.51%</a></li>
+<li><a href="https://biz.heraldcorp.com/article/10921622" target="_blank" rel="noopener">Herald Business — Korea October exports, second-highest on record</a></li>
+<li><a href="https://ir.macom.com/news-releases/news-release-details/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026" target="_blank" rel="noopener">MACOM — fiscal fourth quarter and fiscal year 2026 results</a></li>
+<li><a href="https://thinkingmachines.ai/news/inkling-2-small/" target="_blank" rel="noopener">Thinking Machines Lab — Inkling 2 Small</a></li>
+<li><a href="https://new.abb.com/news/detail/140154/update-on-divestment-of-abb-robotics" target="_blank" rel="noopener">ABB — update on the divestment of ABB Robotics</a></li>
+<li><a href="https://group.softbank/media/Project/sbg/sbg/news/press/2026/20261106/pdf/20261106_en.pdf" target="_blank" rel="noopener">SoftBank Group — update on the acquisition of ABB’s robotics business</a></li>
+<li><a href="https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026" target="_blank" rel="noopener">Bank of England — Monetary Policy Summary and minutes, November 2026</a></li>
+<li><a href="https://www.cnb.cz/en/monetary-policy/bank-board-decisions/" target="_blank" rel="noopener">Czech National Bank — Bank Board decision, 5 November 2026</a></li>
+<li><a href="https://www.norges-bank.no/en/topics/monetary-policy/Monetary-policy-meetings/2026/november-2026/" target="_blank" rel="noopener">Norges Bank — monetary policy meeting, November 2026</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.rigzone.com/news/wire/oil_rebounds_after_sharp_iran_war_selloff-05-nov-2026-185023-article/" target="_blank" rel="noopener">Rigzone — oil rebounds after the sharp Iran-war selloff</a></li>
+<li><a href="https://www.bls.gov/schedule/news_release/empsit.htm" target="_blank" rel="noopener">Bureau of Labor Statistics — Employment Situation release schedule</a></li>
+<li><a href="https://news.airbnb.com/airbnb-q3-2026-financial-results/" target="_blank" rel="noopener">Airbnb — third-quarter 2026 financial results</a></li>
+<li><a href="https://www.atlassian.com/blog/company-news/shareholder-letter-q1fy27" target="_blank" rel="noopener">Atlassian — Q1 FY27 shareholder letter</a></li>
+<li><a href="https://shield.ai/shield-to-acquire-echodyne-in-a-transaction-valued-at-5-3-billion-and-raise-2-5-billion-at-a-28-8-billion-valuation/" target="_blank" rel="noopener">Shield — acquisition of Echodyne and $2.5bn raise</a></li>
+<li><a href="https://www.biopharmadive.com/news/alethio-therapeutics-myeloproliferative-neoplasms-series-a/873775/" target="_blank" rel="noopener">BioPharma Dive — Alethio Therapeutics Series A</a></li>
+<li><a href="https://tech.eu/2026/11/05/kabilio-raises-eur10m-to-expand-ai-accounting-platform-and-introduce-ai-agents/" target="_blank" rel="noopener">Tech.eu — Kabilio raises EUR 10m</a></li>
+<li><a href="https://tech.eu/2026/11/06/vensum-power-raises-eur9m-to-cut-power-losses-in-ai-data-centres-ev-charging-and-energy-storage/" target="_blank" rel="noopener">Tech.eu — Vensum Power raises EUR 9m</a></li>
+<li><a href="https://abcnews.com/Politics/recounts-mississippi-razor-thin-margin-senate-race/story?id=137844445" target="_blank" rel="noopener">ABC News — Mississippi’s razor-thin Senate margin</a></li>
+<li><a href="https://www.nrsc.org/wp-content/uploads/2026/11/261105-Demand-re-Preservation-of-Affidavit-Ballots.pdf" target="_blank" rel="noopener">Lex Politica — demand re preservation of affidavit ballots (via NRSC)</a></li>
+<li><a href="https://www.cbsnews.com/live-updates/house-election-results-2026/" target="_blank" rel="noopener">CBS News — House election results, live updates</a></li>
+<li><a href="https://www.cod.uscourts.gov/Documents/Judges/Calendars/2026-11-09/CNS.pdf" target="_blank" rel="noopener">US District Court for Colorado — Judge Sweeney’s calendar, 9 November 2026</a></li>
+<li><a href="https://www.coloradopolitics.com/2026/11/05/second-colorado-judge-grills-ice-government-lawyer-about-violations/" target="_blank" rel="noopener">Colorado Politics — second Colorado judge questions ICE over violations</a></li>
+<li><a href="https://esp.info/elections/local/2026?ballot=pr" target="_blank" rel="noopener">ESP election tracker — South Africa 2026 local government, PR ballot</a></li>
+<li><a href="https://techcentral.co.za/anc-worst-nightmare-vote-collapses-municipal-election-results/288072/" target="_blank" rel="noopener">Reuters via TechCentral — ANC’s vote collapses in municipal elections</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/6/israels-herzog-to-name-a-candidate-to-form-government-on-sunday" target="_blank" rel="noopener">Al Jazeera — Herzog to name a candidate to form a government on Sunday</a></li>
+<li><a href="https://www.timesofisrael.com/as-eisenkot-wins-67-nods-to-be-pm-herzog-says-hell-announce-mandate-decision-on-sunday/" target="_blank" rel="noopener">Times of Israel — Eisenkot wins 67 nods; Herzog to announce Sunday</a></li>
+<li><a href="https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-03" target="_blank" rel="noopener">ECDC — communicable disease threats report, 3 November 2026</a></li>
+<li><a href="https://www.who.int/news/item/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances" target="_blank" rel="noopener">WHO — two new candidate vaccines to join the Ebola trial</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-06-daily.pdf">PDF</a></span>
+</div></div></body></html>
