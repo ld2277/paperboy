@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, November 8, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, November 8, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">American voters handed Democrats both chambers of Congress, and within forty-eight hours the result had repriced the AI buildout, broken the Republican leadership and left two Senate seats still being counted.</p>
+<ul class="jump"><li><a href="#top-story">Top story</a></li><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#new-technologies">New Technologies</a></li><li><a href="#climate-change">Climate Change</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#vc-and-pe">VC and PE</a></li><li><a href="#us">US</a></li><li><a href="#eu">EU</a></li><li><a href="#france">France</a></li><li><a href="#world-politics">World Politics</a></li><li><a href="#profile">Profile</a></li><li><a href="#calendar">Calendar</a></li></ul>
+<div class="section" id="top-story">
+<hr class="rule-hair"><p class="topic">Top story of the week</p>
+<div class="item"><h2>The vote that repriced everything</h2></div>
+<div class="longform">
+<p class="drop">Americans voted on Tuesday 3 November and handed the Democratic Party both chambers of Congress. Seven Republican-held Senate seats fell — Iowa, Maine, Texas, Kansas, Ohio, South Carolina and North Carolina — which is the whole of the swing: ABC&#x27;s panel shows Democrats on 54 seats to Republicans&#x27; 44, a gain of seven against a loss of seven, with two races still uncalled. Susan Collins lost Maine to Troy Jackson by six points after nearly thirty years in the Senate. In Texas, James Talarico beat Attorney General Ken Paxton by twelve, and Gina Hinojosa turned Greg Abbott out of the governor&#x27;s mansion. The Rev. Adam Hamilton will be the first Kansas Democrat in the Senate since 1932 — ninety-four years. Keisha Lance Bottoms won Georgia. Republicans flipped not one Democratic House seat.</p>
+<p>Five days on, the counting is the story. Two Senate races remain uncalled, and they are failing to resolve in opposite ways. In Mississippi, Scott Colom leads Cindy Hyde-Smith 467,930 to 465,356 — 49.1% to 48.8%, a margin of 2,574 — at 97% of the expected vote, with the independent Ty Pinkins on 20,028. Every batch has widened the lead. The argument is over the affidavit pile: Mississippi&#x27;s term for a provisional ballot, and there are an unusual number of them. The Secretary of State&#x27;s office has published nothing since 4 November, when it put roughly 3,600 absentee-by-mail ballots outstanding and the affidavit count at unknown. State Republican chair Mike Hurst has since estimated up to 25,000 affidavit or mail ballots; Secretary of State Michael Watson has been quoted at 12,000 to 20,000 affidavits. Nobody is working from a published number.</p>
+<p>The pile is abnormal for traceable reasons: thousands of valid voters were flagged inactive after Watson&#x27;s office contracted with Experian, and a rule change in August removed any process for curing a defective mail ballot while the state website still described the old one. The clocks now do the work — 10 November for mail receipt and affidavit cure, 13 November for counties to transmit certified totals under section 23-15-603. Mississippi has no recount statute at all; the Secretary of State&#x27;s own office told ABC so. A losing candidate may run a ballot-box examination and then sue. Colom would be the first Black senator from Mississippi since Reconstruction.</p>
+<p>Alaska has the mirror-image problem: nothing to argue about, because nothing has been counted. The Division of Elections has posted no new tally since 4 November, leaving Mary Peltola on 102,962 to Dan Sullivan&#x27;s 102,325 — 48.0% to 47.7%, about 600 votes. Neither clears 50%, so the ranked-choice tabulation on 18 November decides it, and the second preferences of the 3,583 voters who picked a different Dan Sullivan are the whole ballgame. The fight has moved to records: Peltola&#x27;s campaign sued Lieutenant Governor Nancy Dahlstrom on 6 November under the Alaska Public Records Act for the identities of voters whose absentee ballots were rejected. The docket shows a complaint and two motions. No judge has ruled.</p>
+<p class="pull">Whenever Trump defies the will of the American people or the law, we will launch investigations, take him to court, and entangle him in legislative razor wire.</p>
+<p>What has resolved is the losing side&#x27;s legal strategy, which collapsed inside a week. On 2 November the Supreme Court denied the administration&#x27;s application for an injunction pending appeal in United States v. California, No. 26A624, in a brief unsigned order with no recorded dissent. On 6 November the Justice Department voluntarily dismissed the companion district-court case, 2:26-cv-12025, before Judge David O. Carter — the suit that sought to sequester ballots cast by people it called likely noncitizens. With or without prejudice is stated nowhere. What is left is not litigation but narration: on Saturday the President reposted two charts questioning Democratic vote totals, one built on projections from 85% of the expected vote, the other asserting that &quot;Democrats materialized 20 million new votes&quot;. He supplied no evidence and did not himself allege fraud.</p>
+<p>Congressional Republicans turned on their own leadership instead. On 4 November Speaker Mike Johnson told staff he will not seek the leader&#x27;s job in the new Congress; there is still no on-the-record statement from him, and speaker.gov has carried nothing since 30 October. Steve Scalise and Jim Jordan are contesting minority leader, and August Pfluger is challenging Tom Emmer for whip, with the votes due on Tuesday. In the Senate, John Thune faces no declared challenger, and the insurgency is procedural: Ron Johnson collected the five signatures that compel a conference meeting and asked Policy Committee Chair Shelley Moore Capito to postpone the leadership election, on the argument that voting before examining a &quot;stunning defeat&quot; would be political malpractice.</p>
+<p>The part that will outlast the week is economic. Data centres were on the ballot in a way nobody had organised for: by the Associated Press&#x27;s count, using analysis by Redbud Consulting, there were 47 local referendums across 44 municipalities in twelve states, and restrictions were approved in 44 of the 45 where counting was complete. Thirty-two of thirty-four winning gubernatorial candidates had backed tighter rules. On Thursday the market did the arithmetic: the S&amp;P 500 fell 4.36%, its worst day since April 2025, the Philadelphia semiconductor index dropped 12.25% in a session, Korea&#x27;s Kospi fell more than 8% and tripped a trading halt, and roughly $2.5 trillion of Nasdaq value evaporated. Friday recovered part of it. Underneath, CoreWeave&#x27;s bond yield went above 16% and ING put about $500m of data-centre loans up for competitive bid. An American election has, for the first time, repriced the cost of building artificial intelligence.</p>
+<p>Three things should not be blurred. The result is settled — the chambers change hands on 3 January 2027, and Alaska and Mississippi determine the size of the Senate majority, not its existence. The counting is ordinary law working slowly, narrated as suspense. And very little changes before January: the sitting Congress is still Republican, it is out of town, and government funding expires on 11 December. The tariff wall survives too, because since February&#x27;s Supreme Court ruling it rests on Section 301 and Section 232 rather than emergency powers, and neither offers a removal path. Watch 10 November for the leadership votes, Mississippi&#x27;s cure deadline and Alaska&#x27;s count; the 13th for Mississippi&#x27;s certification; the 18th for Alaska&#x27;s ranked-choice tabulation; and 12 December for the Louisiana runoffs that finally fix the size of the House.</p>
+</div></div>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2><span class="num">1</span>Data centres lost the midterms</h2>
+<p class="field">What happened</p><p>Local voters spent Tuesday restricting data centres. By the AP's count, using Redbud Consulting analysis, there were 47 referendums across 44 municipalities in twelve states — 21 in Ohio, eight in Maine, seven in Illinois — and restrictions passed in 44 of the 45 contests where counting was complete. Data Center Watch found 32 of 34 winning gubernatorial candidates had backed tighter rules, twelve of them bans or moratoriums. A Morgan Stanley note called Gina Hinojosa's Texas win the most important single result for data-centre development in the country. (<a href="https://www.opb.org/article/2026/11/06/ai-data-centers-took-a-beating-in-the-midterm-elections-a-reckoning-may-be-ahead-for-tech-giants/">AP via OPB</a>)</p>
+<p class="field">Context</p><p>The first US election in which data centres were a cross-party local issue — one Lubbock protest group was co-founded by a Republican — and it lands at the peak of hyperscaler capital spending. Amazon has guided to roughly $220bn this year; Meta is spending about $145bn and ran negative free cash flow of $2.12bn last quarter.</p>
+<p class="field">What it means</p><p>Permitting risk has moved from a risk factor to a priced variable. Note what was not on any ballot: federal AI policy. The binding constraint is a county commission, which is harder to lobby and impossible to pre-empt. Meta&#x27;s president Dina Powell McCormick has already said the company is weighing infrastructure outside the United States.</p>
+<p class="field">Watch next</p><p>State legislative sessions from January, when the new governors&#x27; bills arrive. Ohio and Texas first.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Credit repriced the buildout before equities finished falling</h2>
+<p class="field">What happened</p><p>CoreWeave's 2032 bond yield went above 16% on 6 November, days before its results. In the same session Bloomberg reported ING had put roughly $500m of data-centre loans — about a dozen, minimum bid $10m, bids due 19 November — into a competitive bid-wanted auction, which asks many buyers to price the same paper at once. The portfolio reportedly includes about $25m of exposure to Stargate New Mexico plus loans tied to Vantage and CyrusOne. No price is disclosed and no buyer named. (<a href="https://thedeepdive.ca/ing-reportedly-auctions-500m-data-center-loans-after-midterm-sweep-ai-infrastructure-selloff/">The Deep Dive</a>)</p>
+<p class="field">Context</p><p>Both the bond level and the auction are Bloomberg-exclusive, and we could not pin the CoreWeave bond&#x27;s coupon or prior yield from any reachable source — treat the 16% as reported, not established. Oracle sent a force majeure notice on Stargate New Mexico in September while saying the project remains on schedule.</p>
+<p class="field">What it means</p><p>A bank selling data-centre paper into a competitive auction rather than holding it is the most informative thing that happened all week. If neocloud debt costs 16%, the 2027 accelerator order book gets rephased — which is how a county referendum becomes a semiconductor revenue problem.</p>
+<p class="field">Watch next</p><p>CoreWeave&#x27;s results on 10 November and the ING bid deadline on the 19th.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>OpenAI ships its first Critical-rated cyber model; Anthropic&#x27;s listing value falls a quarter</h2>
+<p class="field">What happened</p><p>On 5 November OpenAI launched GPT-6 Cyber to approved customers only, the first model it has rated Critical for cybersecurity under its own Preparedness Framework. It reports 81 previously unknown high-severity Firefox flaws and, in the Linux kernel, 1,724 vulnerabilities reproduced with working exploits for 948 and 304 critical findings disclosed; fewer than a quarter are fixed. Meanwhile Anthropic's listing talk fell from about $2tn a month ago to $1.5–$1.6tn on 2 November and, per Bloomberg on the 6th, possibly $1.1tn; its S-1 shows nine-month revenue of $33.2bn and $895.4bn of spending commitments. OpenAI has reportedly raised about $11bn of a round at $1.25tn, against $30bn at $1.4tn sought in September. (<a href="https://thenextweb.com/news/openai-gpt-6-cyber-launch-firefox-linux-daybreak-red">TNW</a>)</p>
+<p class="field">Context</p><p>Every GPT-6 Cyber benchmark is OpenAI&#x27;s own and unaudited; every valuation figure is reported rather than priced, and the three Anthropic numbers are marks at different dates, not competing readings of one basis. Moonshot&#x27;s Kimi K3.1 Pro went the other way on safety, published with the same capability class removed from training first, because open weights cannot be recalled.</p>
+<p class="field">What it means</p><p>The first time a lab has shipped a model at its own top risk tier and solved the problem by gating rather than by not shipping. And the figure that matters on the money side is $895.4bn of commitments: set it against a credit market pricing neocloud risk at 16% and you have the sector&#x27;s central tension in two numbers.</p>
+<p class="field">Watch next</p><p>Anthropic&#x27;s amended S-1, due within about two weeks, which is where the price range appears. The patch rate on the Linux and Firefox disclosures.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2><span class="num">1</span>The industry&#x27;s best quarter on record, two days before its worst day</h2>
+<p class="field">What happened</p><p>On 3 November the Semiconductor Industry Association reported third-quarter global sales of $517.7bn, up 24.1% on the second quarter, and September sales — on the three-month moving average basis — of $172.6bn, up 146.8% year on year. By region September's annual growth was 191.7% in the Americas, 141.4% in Asia-Pacific and other, 124.9% in China, 102.5% in Europe and 73.4% in Japan. Two days later the Philadelphia semiconductor index fell 12.25% in one session, from 10,268.65 to 9,011.14, before recovering 4.21% on Friday to 9,390.25. (<a href="https://www.semiconductors.org/global-semiconductor-sales-increase-24-1-from-q2-2026-to-q3-2026/">SIA</a>)</p>
+<p class="field">Context</p><p>Those growth rates are far outside any historical range for the industry, and they are SIA&#x27;s own figures with no second dataset to check them against — attribute them, do not state them flatly. Friday&#x27;s close is still 35.8% below the index&#x27;s 52-week high of 14,634.72, set on 22 June. Microchip fell 22.6% across the two sessions.</p>
+<p class="field">What it means</p><p>Hold the two facts together and the problem is clear: the order book has never been better and the ability to finance the capacity has never been more politically contingent. That gap is where the next year of earnings misses comes from, and it will not appear in a demand statistic.</p>
+<p class="field">Watch next</p><p>TSMC&#x27;s October revenue, due around 10 November — the disclosure page still shows nine months, ending September at NT$511,857m. Korean customs data follows about the 11th.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Huawei&#x27;s next flagship runs on Korean memory stripped off smuggled packages</h2>
+<p class="field">What happened</p><p>The Information reported that Huawei's forthcoming Ascend 960DT runs largely on Samsung and SK hynix high-bandwidth memory obtained through a packaging loophole. US rules ban standalone HBM exports to China, but the December 2024 rule judges a package by its processor where processing is the package's main function — so smugglers bond Korean memory to processors too weak for data-centre use, ship the package to Hong Kong under the processor's code, carry it inland, then heat the package until the solder softens and strip the memory off. Many stacks crack. A Shenzhen broker: “A year ago, a single HBM3E unit changed hands in China for several hundred dollars. Today it's about $4,000.” (<a href="https://thenextweb.com/news/huawei-hbm-smuggling-samsung-sk-hynix-ascend-960dt">TNW</a>)</p>
+<p class="field">Context</p><p>Samsung and SK hynix say they comply, and SK hynix says it has not supplied Huawei since 2020. The account is a single-publication exclusive with no seizure data, named firms or volumes, and the outlet carrying it says it has not independently verified it. Separately, about 600,000 Nvidia chips are reported to be sitting in Hong Kong awaiting Chinese import approval that Beijing has not granted.</p>
+<p class="field">What it means</p><p>The loophole is not an enforcement gap but a gap in the rule&#x27;s logic: a control written around the processor cannot police the memory bolted to it. Korea&#x27;s October chip exports of $56.44bn, up 259.4% on the year and nearly half of all Korean exports, are the macro print of the same shortage.</p>
+<p class="field">Watch next</p><p>Whether Commerce rewrites the package rule. The Bureau of Industry and Security has published nothing since 2 October.</p>
+</div>
+</div>
+<div class="section" id="new-technologies">
+<hr class="rule-hair"><p class="topic">New Technologies</p>
+<div class="item">
+<h2><span class="num">1</span>A whole class of heart drugs fails its first real test</h2>
+<p class="field">What happened</p><p>Novartis's pelacarsen cut lipoprotein(a) by about 78% in 8,350 adults with existing heart disease — and after five years produced no reduction in cardiovascular events against placebo. Steven Nissen of the Cleveland Clinic presented the result in Chicago on 7 November, with simultaneous publication in the New England Journal of Medicine. Novartis had disclosed the endpoint miss a month earlier without specifics; this was the first look at the data. Nissen: “I was shocked. I had high hopes for success.” (<a href="https://www.wvasfm.org/2026-11-07/a-promising-new-medicine-against-heart-disease-fails-unexpectedly">NPR</a>)</p>
+<p class="field">Context</p><p>Elevated Lp(a) affects roughly a fifth of the world&#x27;s population and had been treated as the next modifiable lipid target after LDL cholesterol, so a clean null result damages a drug class rather than a molecule. Amgen and Eli Lilly have candidates reporting over the next few years. The coverage gives no event rates, so the effect size is incomplete rather than contested.</p>
+<p class="field">What it means</p><p>Lowering a biomarker is not the same as preventing a disease, and this is the most expensive demonstration of that in years. The honest open question, from Roger Blumenthal of Johns Hopkins: “You may need to treat earlier, before people have advanced hardening of the arteries.”</p>
+<p class="field">Watch next</p><p>The Amgen and Lilly readouts, and whether regulators keep accepting Lp(a) reduction as a surrogate endpoint.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>A $40-a-year generic of the twice-yearly HIV shot clears the FDA for 120 countries</h2>
+<p class="field">What happened</p><p>On 2 November the FDA granted tentative approval to a generic lenacapavir from India's Dr. Reddy's — the first generic of the twice-yearly injectable HIV prophylaxis Gilead sells as Yeztugo. Tentative approval covers a generic whose brand is still under patent, so it cannot be sold in the United States; it clears the drug for the government programmes that supply other countries. It is expected to cost about $40 per person per year across the 120 low- and middle-income countries where it will be available, against a US list price of $28,218. Gilead has royalty-free licences with six generic makers. (<a href="https://www.wsaw.com/2026/11/02/fda-approves-more-affordable-version-hiv-prevention-shot/">AP</a>)</p>
+<p class="field">Context</p><p>That is a long-acting injectable at roughly the price of daily oral prophylaxis, the first time the two have been comparable. About 20 million people worldwide need it. Unitaid, the Clinton Health Access Initiative and Wits RHI brokered the arrangement.</p>
+<p class="field">What it means</p><p>The binding constraint has moved from price to procurement budgets, at the worst moment for donor funding. Carolyn Amole of CHAI: “The work is not done. Now, we need the funding to actually buy it for everyone who needs it.”</p>
+<p class="field">Watch next</p><p>Whether the Global Fund and PEPFAR budget for volume at $40. Five more generic filings are pending.</p>
+</div>
+</div>
+<div class="section" id="climate-change">
+<hr class="rule-hair"><p class="topic">Climate Change</p>
+<div class="item">
+<h2><span class="num">1</span>COP31 opens tomorrow in Antalya with two presidents</h2>
+<p class="field">What happened</p><p>The 31st UN climate conference runs from 9 to 20 November in Antalya, with the leaders' summit on the 11th and 12th and the high-level segment on the 17th and 18th, concluding on the 19th. The provisional agenda has the conference electing Murat Kurum of Türkiye by acclamation as president of COP31 — and separately assigns Australia's Chris Bowen the distinct office of President of Negotiations, under what the UN's own documents call the Türkiye-Australia partnership modalities. So Türkiye holds the presidency and hosts; Australia runs the negotiating rooms. There is no agenda item named for a finance goal, a just-transition mechanism, stocktake follow-up or Article 6. (<a href="https://unfccc.int/cop31">UNFCCC</a>)</p>
+<p class="field">Context</p><p>The real fights are staged outside those headings: a just-transition mechanism campaigners call the Belém-Antalya Mechanism, a tripling of adaptation finance, and a Turkish-led voluntary pledge to take electricity to 35% of global final energy by 2035 from about 23% now. Attendance is thin — Lula and Spain&#x27;s Pedro Sánchez are expected; India and China are not sending their top leaders.</p>
+<p class="field">What it means</p><p>A split presidency is an admission that neither country could deliver the conference alone, and it creates an obvious failure mode: when the action agenda and the negotiations disagree, nobody knows who speaks for the chair. The test is the cover decision, which is where Brazil&#x27;s new fossil-fuel roadmap — published on 3 November, explicitly voluntary and not negotiable — gets referenced or buried.</p>
+<p class="field">Watch next</p><p>The opening plenary on 9 November and the cover text in the final 48 hours.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>October was the warmest on record, and 2026 will pass 1.5C</h2>
+<p class="field">What happened</p><p>Copernicus put October's global average surface air temperature at 15.35C, 0.90C above the 1991-2020 mean and 1.75C above the 1850-1900 baseline — the warmest October on record and the third consecutive month above 1.5C. It now gives 2026 a greater than 99% chance of finishing above 1.5C, in a range of 1.56C to 1.61C, making it the second calendar year above that level after 2024. Sea surface temperature between 60 degrees south and 60 north hit 20.95C, the highest on record for October, and the Niño 3.4 region averaged 29.94C, a record 3.21C anomaly exceeding the 1982-83, 1997-98 and 2015-16 peaks. (<a href="https://climate.copernicus.eu/copernicus-warmest-october-record-2026-virtually-certain-exceed-15degc">Copernicus</a>)</p>
+<p class="field">Context</p><p>Samantha Burgess, ECMWF&#x27;s strategic lead for climate, gave the attribution in one sentence: “October has continued the pattern of remarkable global warmth, with record global and surface ocean temperatures. An exceptionally strong El Niño is adding further heat to a climate already warmed by human activities, while 2026 is on track to become the second calendar year above 1.5C.”</p>
+<p class="field">What it means</p><p>There is an 80% chance 2026 finishes second-warmest and a 20% chance it ties or beats 2024, which is the useful way to put it — the El Niño is doing part of the work and will unwind. The baseline it is sitting on will not. The WMO&#x27;s October bulletin put 2025 carbon dioxide at 426.8 parts per million, 53% above pre-industrial.</p>
+<p class="field">Watch next</p><p>The November bulletin in early December, and whether the El Niño peaks before year-end.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2><span class="num">1</span>The week the AI trade broke, in three acts</h2>
+<p class="field">What happened</p><p>Stocks rose on Monday and Tuesday as the midterms were digested. On Thursday the AI and semiconductor complex collapsed: the S&amp;P 500 fell 4.36%, its worst session since April 2025, the Nasdaq entered a correction, the VIX jumped nearly 70% intraday, and roughly $2.5 trillion of Nasdaq value was erased, about $1 trillion of it in the seven largest technology companies. Nvidia fell more than 9%, AMD about 17%, Tesla nearly 11%. Asia followed: Korea's Kospi dropped more than 8% and tripped a trading halt. Friday recovered part of it. Week's closes: S&amp;P 7,376.86, Dow 51,285.73, Nasdaq 24,579.42, VIX 25.64 — the index down 2.7% on the week, the Nasdaq 3.4%, the VIX up 32.03%. (<a href="https://www.theclosingprint.net/2026/11/post-market-and-weekly-summary-2026-11-06/">The Closing Print</a>)</p>
+<p class="field">Context</p><p>Sector dispersion is the tell that this was a thematic de-rating rather than broad risk-off: technology fell 8.23% on the week and energy 12.00%, while communication services rose 4.89%, consumer discretionary 1.91% and financials 1.15%. The hedge bid went to metals, not bonds — gold closed at $4,079.50, up 4.63%, while ten-year yields fell only eight basis points to 4.86%.</p>
+<p class="field">What it means</p><p>The AI trade has been the market since 2023, and this is the first time it has been repriced by something other than an earnings number. Note what did not move: credit spreads outside the neocloud complex, and the dollar. For now, a sector event.</p>
+<p class="field">Watch next</p><p>Nvidia&#x27;s results, CoreWeave on 10 November, and whether the ING loan auction clears at a disclosed price.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Brent&#x27;s worst week since the first Covid crash, on a bet the Iran war ends</h2>
+<p class="field">What happened</p><p>Brent fell about 16% on the week, its largest weekly decline since the start of the pandemic, settling the January contract at $98.32; WTI fell about 13%, settling December at $90.83, its worst week since 2022. Never swap those two superlatives. The named cause is de-escalation hope: crude fell about 8% on Wednesday on reports that the President will soon choose between resuming military operations, holding economic pressure, or a negotiated deal. The path was violent, from a Monday open near $102 to a Thursday open near $88. Gasoline futures averaged $2.82 a gallon, down 11.88%. (<a href="https://mansfield.energy/2026/11/06/week-in-review-oil-prices-retreat-on-iran-peace-hopes-and-weaker-global-demand/">Mansfield</a>)</p>
+<p class="field">Context</p><p>The war premium was built on a near-total stoppage of Iranian exports, with only 200,000 to 300,000 barrels a day reaching market via Iraq. Vortexa puts October Gulf crude exports at 14m barrels a day, about 86% of pre-war levels, but refined product exports at 3.1m, barely half of normal. Underneath, JPMorgan says supply exceeded consumption by about 1.1m barrels a day in September and 1.4m in October.</p>
+<p class="field">What it means</p><p>This is a positioning move ahead of a decision that has not been made, and attacks on shipping continued all week while the price fell. The diesel market is telling the truth: you cannot have a sixteen-percent crude collapse alongside distillate stocks at 99.3m barrels, the lowest since 2003, unless the problem is logistics. Freight is the proof — Valero puts US Gulf-to-Asia crude freight at $30 to $35 a barrel against about $5 a year ago, and refining margins more than doubled in the quarter.</p>
+<p class="field">Watch next</p><p>Whether Washington picks strikes, pressure or a deal. OPEC+ meets again on 29 November.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Berkshire&#x27;s cash pile is not a record, and the insurance book is the real story</h2>
+<p class="field">What happened</p><p>Berkshire filed its third-quarter report on 7 November, and the headline number is being reported wrong. The balance sheet at 30 September shows three lines and no total: insurance and other cash of $36,034m, insurance and other short-term Treasury bills of $336,735m, and railroad, utilities and energy cash of $4,666m — $377,435m in all. That is up from $373,311m at the end of 2025, but it is not a record: the same three lines summed to $397,383m at 31 March. The competing figures all reconcile to a basis — $356.9bn is the gross total less $20.5bn of unsettled Treasury bill purchases, $352.3bn is insurance and other only, net of the same. The $381.6bn some outlets ran reconciles to nothing in the filing. (<a href="https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf">Berkshire 10-Q</a>)</p>
+<p class="field">Context</p><p>Net earnings were $22,112m against $30,796m a year earlier; for nine months, $57,885m against $47,769m. Strip after-tax investment gains and the operating line is $12,705m against $13,485m. Berkshire bought back $9,647m of stock in the quarter and $13,757m over nine months on a cash-flow basis. Note 18 sets the floor: buybacks stop if they would take cash, equivalents and Treasury bills below $30bn.</p>
+<p class="field">What it means</p><p>The management discussion says what the cash number hides: “After-tax earnings from insurance underwriting declined 42.9% in the third quarter”, with GEICO&#x27;s loss ratio reflecting higher claims frequency and severity. A $9.6bn buyback at roughly 1.4 times book, funded while underwriting deteriorates, is a statement that Greg Abel finds his own shares the best available asset in his first year as chief executive.</p>
+<p class="field">Watch next</p><p>The 13F on 16 November. Berkshire has been a net seller of equities for several quarters.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2><span class="num">1</span>Europe books sixty deals in five days, and three-quarters of the money is debt</h2>
+<p class="field">What happened</p><p>European startups announced more than 60 deals worth over EUR 1.3bn between 2 and 6 November. The new names: Hypersonica, a UK-German hypersonics company, raised EUR 100m in a Series B co-led by Lightspeed and General Catalyst; Titan OS in Barcelona took about EUR 40m from BlackRock, Mangrove and Highland Europe; the UK proptech Supa raised GBP 21m in seed; Braid EUR 34.1m; bit.bio $25m; Biograil EUR 20m; the Paris cyber-defence startup Gallium Defence EUR 7.1m; the Austrian space company Tumbleweed EUR 6.9m. (<a href="https://tech-insider.org/european-startup-funding-roundup-nov-2-6-2026-60-deals-1-3-billion/">Tech Insider</a>)</p>
+<p class="field">Context</p><p>The headline total is badly skewed: Return&#x27;s EUR 835m is a debt facility from Rabobank and Deutsche Bank, roughly 73% of the verified euro total across fifteen priced rounds. Strip the debt and Europe&#x27;s equity week was unremarkable. One caution — Vaeridion appears as a EUR 30m Series A in one roundup and as over EUR 124m of equity and grants in another; different scopes, and neither should be printed alone.</p>
+<p class="field">What it means</p><p>The composition is the signal, not the total: hypersonics, fluorination chemistry, grid, space and defence, with American megafunds still writing nine-figure cheques into Europe. The continent is being funded for the things it can physically build rather than the things it can model.</p>
+<p class="field">Watch next</p><p>Whether the debt share keeps rising. A venture market clearing mostly in credit facilities is repricing without saying so.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Asia ran on Chinese AI infrastructure; Explorium shut down after $127m</h2>
+<p class="field">What happened</p><p>Asian startups raised $573.5m, of which three deals account for about $417.5m: Beijing's aSand.ai took $200m for AI video generation, co-led by CoStone Capital and Wangsu; Shenzhen's Moffett AI took nearly a billion yuan, about $137.5m, for AI inference chips; India's EloElo Group took $80m. Both Chinese rounds were led by domestic strategics and state-adjacent capital, insulated from Thursday. In Israel, the data-enrichment company Explorium announced on 4 November that it is ceasing operations after almost nine years and more than $127m raised from Insight Partners, Zeev Ventures and others. Founders Omer Har and Or Tamir: “In the end, it saddens us to say it all just wasn't enough.” (<a href="https://www.calcalistech.com/ctechnews/article/skvs9uupme">Calcalist</a>)</p>
+<p class="field">Context</p><p>Explorium sold automated feature discovery for machine learning — finding the external data that makes a model better. That is precisely the problem foundation models absorbed. India&#x27;s week, meanwhile, was corporate rather than venture: MakeMyTrip bought into the ride-pooling company Quick Ride, MobiKwik won a non-banking financial licence, and Affle agreed to buy Perion for over $420m.</p>
+<p class="field">What it means</p><p>Explorium is the shutdown the funding roundups do not show, and the mirror image of OpenAI taking $11bn at $1.25tn in the same week: the applied-machine-learning layer built between 2017 and 2022 is being commoditised from above. China, separately, is demonstrating that a domestic capital base can fund AI hardware through a Western de-rating.</p>
+<p class="field">Watch next</p><p>We could not verify a single in-window round in the Gulf, Latin America or Africa — the publications that cover them either paywall after three deals or had not filed by Sunday. That is a sourcing hole, not a quiet market, and we are adding a dedicated pass next week.</p>
+</div>
+</div>
+<div class="section" id="vc-and-pe">
+<hr class="rule-hair"><p class="topic">VC and PE</p>
+<div class="item">
+<h2><span class="num">1</span>Seven fund closes in five days, and nearly all are small or first-time</h2>
+<p class="field">What happened</p><p>Creandum closed Fund VIII at EUR 668m, about $750m, its largest ever, on 2 November. On the 3rd, Evertrue Capital closed a debut fund at $17m against a $13m target — solo general partner Yvonne Bajela, backed by the British Business Bank — and Robin Capital closed Fund II at EUR 15m under solo GP Robin Haak. On the 4th Singapore's NeoSci Ventures took a S$70m first close on a debut biotech fund backed by Taiwan's National Development Fund and Singapore's EDBI. On the 6th, Brightmind Partners closed about $250m for cybersecurity, Octopus Ventures opened First Cheque II targeting over GBP 20m while acquiring Onstage's portfolio, and Reed Jobs's Yosemite closed Fund II at $350m, backed by Amgen, AbbVie, MIT, Memorial Sloan Kettering and John Doerr. (<a href="https://fundmomentum.vc/blog">Fund Momentum</a>)</p>
+<p class="field">Context</p><p>Read the shape rather than the total: one large incumbent close, then a cluster of $15m to $350m vehicles run by single GPs, first-time managers or firms kickstarting by buying somebody else&#x27;s portfolio — with government and strategic limited partners doing much of the anchoring. Set that beside Advent&#x27;s $30bn and you have a barbell with a thin middle.</p>
+<p class="field">What it means</p><p>This is what a tight institutional market looks like from the manager&#x27;s side. When the anchor investor is a development bank or a pharmaceutical company rather than a pension fund, the fund is being raised on strategic rationale because the financial rationale is not clearing.</p>
+<p class="field">Watch next</p><p>Fourth-quarter capital calls in January, which is when the marks arrive.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2><span class="num">1</span>A judge stops the triumphal arch, hours after it was approved</h2>
+<p class="field">What happened</p><p>On 5 November the National Capital Planning Commission gave final approval to the President's 250-foot triumphal arch at Memorial Circle, 8 to 4, after hours of testimony for which about 130 people signed up. Hours later Judge Tanya Chutkan issued a 33-page memorandum opinion and an order halting construction. Her core holding on the 1925 statute the government relies on: “The sheer improbability that a 100-year-old statute would contain authority, unknown to every previous administration, to erect a 250-foot arch at a principal location in the Nation's capital indicates how far Defendants must stretch to justify this project.” On the late security rationale: “But these recent and unsupported attestations of security aspects of a structure that has been extensively discussed over the last year appear nowhere in the planning documents on which the project was reviewed and approved.” (<a href="https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_26-cv-00544/pdf/USCOURTS-dcd-1_26-cv-00544-0.pdf">Opinion, govinfo</a>)</p>
+<p class="field">Context</p><p>The opinion is captioned in two consolidated cases — Lemmon v. Trump, No. 26-cv-544, and District of Columbia and Commonwealth of Virginia v. National Park Service, No. 26-cv-3838 — and it was the District and Virginia who asked for the order. On irreparable harm Chutkan wrote: “First, the harm is certain.” She set a one-dollar bond. Per ABC the order halts construction at least fourteen days and requires at least thirty minutes&#x27; notice before any work; those operative terms sit in the order rather than the opinion.</p>
+<p class="field">What it means</p><p>The government&#x27;s problem is not the arch but the theory — that a 1925 statute silently authorises monumental construction nobody has ever read it to authorise. Note the sequencing: an approval and an injunction on the same day, which is what happens when a project runs to a political schedule rather than a legal one.</p>
+<p class="field">Watch next</p><p>The fourteen days lapse around 19 November absent further order. Expect a preliminary-injunction fight first.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Voters tightened election rules and expanded abortion rights on the same night</h2>
+<p class="field">What happened</p><p>The statewide measures resist a single storyline. Citizens-only voting requirements passed in Arkansas, Kansas, South Dakota, West Virginia and Alaska — but Arizona's noncitizen-voting ban with voter ID was rejected. Voter ID passed in Nevada, Ohio and North Carolina and failed in California. Colorado rejected mail-ballot ID by more than 63%; Massachusetts approved same-day registration. On abortion, Nevada approved viability-stage rights with over 60% and Virginia passed reproductive-freedom protections, while Idaho's measure to establish a right failed at 56% and Missouri's attempt to repeal its 2024 abortion-rights amendment was rejected at 55%. On redistricting, Missouri voters rejected the Republican-drawn 2025 congressional map 62% to 38% in a referendum, so it cannot be used in 2028. (<a href="https://statecourtreport.org/our-work/analysis-opinion/what-2026-ballot-measure-results-tell-us">State Court Report</a>)</p>
+<p class="field">Context</p><p>These figures are substantially single-outlet and several races were unofficial or uncalled as of 4 November; Missouri&#x27;s own results portal was unreachable. Alaska&#x27;s Ballot Measure 2, which would have repealed ranked-choice voting, is on course to fail with No at nearly 52% at 98% of precincts — but it has not been called, and it would not have governed the count of the election it appeared on. Montana banned corporate political contributions with 65%.</p>
+<p class="field">What it means</p><p>Voters distinguished sharply between procedural tightening they would accept — citizenship requirements, in-person ID — and procedural restriction they would not: mail-ballot ID, registration barriers, supermajority thresholds on their own initiatives. And they treated abortion as a question about rights rather than party, rejecting a Republican repeal in Missouri and a liberal establishment measure in Idaho on the same night.</p>
+<p class="field">Watch next</p><p>State certification through late November finalises the uncalled measures. The Missouri and Maryland redraws become legislative business in 2027.</p>
+</div>
+</div>
+<div class="section" id="eu">
+<hr class="rule-hair"><p class="topic">EU</p>
+<div class="item">
+<h2><span class="num">1</span>Brussels gives four candidates dated accession targets, and tells the rest the truth</h2>
+<p class="field">What happened</p><p>On 4 November the Commission adopted its 2026 enlargement package and, for the first time, attached indicative reform roadmaps with target dates to four candidates. Montenegro could provisionally close its remaining chapters by the end of 2026, having already closed 21, with an accession treaty being drafted. Albania targets concluding negotiations in 2027, Moldova in early 2028 and Ukraine by the end of 2028; the Commission assessed that Ukraine and Moldova have met the conditions to open all remaining clusters. Ursula von der Leyen called the roadmaps “a clear path for the year ahead”. (<a href="https://enlargement.ec.europa.eu/news/2026-enlargement-package-shows-reform-commitment-delivers-progress-towards-eu-membership-2026-11-04_en">European Commission</a>)</p>
+<p class="field">Context</p><p>The negative verdicts are blunter than Brussels has managed in years. Serbia made “no substantive progress” and its alignment with EU foreign policy “remained low”. Bosnia is “increasingly disengaging”. Türkiye&#x27;s backsliding has widened the gap with its declared goal. Georgia&#x27;s accession is “de facto halted”, and the Commission stands by calling it a “candidate country in name only”.</p>
+<p class="field">What it means</p><p>The roadmap device converts enlargement from a process into a scoreboard, which cuts both ways: reformers get something to point at, and the Commission gets a public record to be judged against in 2028. Note the hedge — Montenegro&#x27;s closure is subject to member-state agreement, and these are Commission targets, not legal deadlines.</p>
+<p class="field">Watch next</p><p>The Council must now consider the recommendations, which is where Ukraine&#x27;s cluster openings have died before.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The Commission goes after a recommender algorithm itself</h2>
+<p class="field">What happened</p><p>On 6 November the Commission issued preliminary findings that TikTok breaches the Digital Services Act through what it calls the rabbit-hole effect of its recommender system: the more a user engages with a content type, the more of it the For You feed serves, which the Commission says can harm mental health where the content concerns sadness, isolation or body image, with particular risk to minors. It found the existing mitigations ineffective — few users press “not interested”, and the feed-refresh function reverts after a short time. The suggested remedies are the story: shift recommendations toward explicit user preferences, disable viewing time as a recommendation signal, improve controls, test the algorithm regularly. Exposure is up to 6% of worldwide turnover. (<a href="https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes">European Commission</a>)</p>
+<p class="field">Context</p><p>Henna Virkkunen, executive vice-president for technological sovereignty, security and democracy, put the theory of harm in one sentence: “Every time a user scrolls or likes a video on TikTok, the algorithm serves more of the same, leading users down rabbit holes they cannot easily escape from.” That quote reaches us through a single outlet, because the Commission&#x27;s own press room served a failover page all week. No DSA article number and no deadline for TikTok&#x27;s reply has been published.</p>
+<p class="field">What it means</p><p>Previous DSA enforcement targeted process: ad repositories, researcher access, illegal-content handling. This goes at engagement optimisation as the harm itself. TikTok can afford 6% of turnover far more easily than it can afford losing viewing time as a ranking signal, so the leverage is the remedy, not the fine — and the precedent reaches Meta, YouTube and Snap.</p>
+<p class="field">Watch next</p><p>TikTok&#x27;s written response, and whether it litigates the causal claim, which is the Commission&#x27;s weakest evidentiary link.</p>
+</div>
+</div>
+<div class="section" id="france">
+<hr class="rule-hair"><p class="topic">France</p>
+<div class="item">
+<h2><span class="num">1</span>The Assemblée throws out the 2027 budget: 458 against, nobody in favour</h2>
+<p class="field">What happened</p><p>On Wednesday 4 November, in the second sitting of the day, the Assemblée nationale voted on the revenue section of the 2027 finance bill at first reading. Scrutin 9759: 460 voting, 458 against, two abstentions, nobody in favour. Under French budget procedure, rejecting the revenue section sinks the whole text at first reading. The government had already lost the detail: the same sitting rejected Article 57 and the general revenue table 157 to 86 and threw out the government's own last-resort amendment 168 to 80, while deputies carried deletions of Articles 53 and 54 against it. Several outlets dated the rejection to 5 November; the Assemblée's own register says the 4th. (<a href="https://www.assemblee-nationale.fr/dyn/17/scrutins">Assemblée nationale</a>)</p>
+<p class="field">Context</p><p>Count the present, not the chamber: 460 votants in a house of 577 means about 117 members did not vote, so “unanimous” is defensible only in one narrow and striking sense — not a single deputy voted for the government&#x27;s budget. This is the second consecutive year the French budget has failed to command a majority in the lower house. The 2026 budget was pushed through without a parliamentary vote by Prime Minister Sébastien Lecornu, who then survived two no-confidence votes.</p>
+<p class="field">What it means</p><p>A nil-for budget is not an ordinary defeat; it is the chamber declining to own the problem. Both flanks voted no for opposite reasons, and the abstention of a fifth of the house is its own statement. The machinery will still produce a budget, because it is designed to. The cost is that it will be produced against the Assemblée for the second year running.</p>
+<p class="field">Watch next</p><p>The text now goes to the Senate, reported to begin on 20 November with a vote on 9 December — both dates from secondary sources we could not confirm against a Senate calendar.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>France&#x27;s fiscal watchdog says the government&#x27;s own numbers are no longer a forecast</h2>
+<p class="field">What happened</p><p>On 4 November — the same day the Assemblée killed the budget — the Haut Conseil des finances publiques delivered its opinion on the end-of-year 2026 finance bill, and it reads like a demolition. On growth, recent data make the government's 0.5% target for 2026 “difficilement atteignable”, and the Council says 0.3% “serait plus vraisemblable”. On inflation, the 2.1% forecast is “désormais trop basse, d'un ou deux dixièmes”. On the deficit, the 5.4%-of-GDP forecast is “fragilisée par les évolutions récentes”. Its summary judgement is that the scenario's main figures “ne correspondent plus à une prévision centrale” — they no longer constitute a central forecast. The English is our translation. (<a href="https://www.hcfp.fr/liste-avis/avis-ndeg2026-6-loi-de-finances-de-fin-de-gestion-2026">HCFP</a>)</p>
+<p class="field">Context</p><p>The Council&#x27;s remit is narrow — it assesses the realism of the government&#x27;s assumptions, not its policy — which is what makes that verdict so damaging. These are 2026 figures, on the end-of-year management bill, not the 2027 budget the Assemblée rejected; the opinion on that was issued on 1 October. The Council also noted the government had not updated its energy-price and interest-rate assumptions.</p>
+<p class="field">What it means</p><p>It converts a political argument about austerity into a technical finding that the arithmetic does not hold, and hands every deputy who voted no a non-partisan reason for having done so. Note the squeeze: the watchdog says growth will be lower and inflation higher than the government assumes, while the ECB has just said it will tighten against exactly that inflation. Lower growth, higher inflation, tighter money, no budget, protests in a fourth week.</p>
+<p class="field">Watch next</p><p>Whether the government revises its deficit path before the Senate reading. On the 2027 presidential race we found no in-window poll from any reachable source, and two widely-circulated Sarkozy court dates in late November rest on a niche outlet and a law firm&#x27;s blog — we are not printing either.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2><span class="num">1</span>South Africa&#x27;s governing party posts its worst local result on record; 130 councils are hung</h2>
+<p class="field">What happened</p><p>South Africa voted in local government elections on Wednesday 4 November. By early Sunday, with 23,664 of 23,696 voting districts counted — all but 32 — the national proportional vote stood at ANC 30.9%, Democratic Alliance 24.7%, Jacob Zuma's MK Party 9.8%, Economic Freedom Fighters 6.3%, ActionSA 6.0% and the Inkatha Freedom Party 4.7%. Turnout was 52.2%, up 6.3 points from 45.9% in 2021. The fragmentation is the story: of 205 local councils, 203 were decided and 130 have no majority. Only Cape Town is controlled outright, by the DA. Johannesburg has the DA leading and eThekwini the MK Party, while Tshwane, Ekurhuleni, Nelson Mandela Bay, Buffalo City and Mangaung are hung. (<a href="https://theoutlier.co.za/results">The Outlier</a>)</p>
+<p class="field">Context</p><p>These figures rest on a single live tracker, because the electoral commission&#x27;s own results site is unreachable to us and no second outlet published national percentages. The superlative needs care: 2021 was already the ANC&#x27;s worst local result in history, so 30.9% breaks its own record rather than a 1994 benchmark, and the first democratic local elections were in 1995-96. The commission was due to declare final results at six o&#x27;clock local time today, two hours after our window closed, with a Ramaphosa keynote in Midrand.</p>
+<p class="field">What it means</p><p>The headline number undersells the event. A 30.9% ANC is survivable; 130 of 205 councils with no majority is a governance problem, because South African municipal coalitions have proved unstable at exactly this scale — Johannesburg and Tshwane have cycled through mayors repeatedly since 2016. And the turnout rise says this was mobilised rejection rather than apathy.</p>
+<p class="field">Watch next</p><p>Coalition formation over at least two weeks. Watch ActionSA&#x27;s price in Gauteng, and whether the DA will deal with MK anywhere.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Herzog picks Eisenkot over Netanyahu, and the hard part starts now</h2>
+<p class="field">What happened</p><p>On the evening of Saturday 7 November, after meeting both men, President Isaac Herzog announced he would task Yashar's Gadi Eisenkot with forming Israel's next government, and invited him to the President's Residence for the formal tasking at five o'clock on Sunday afternoon — an hour after our window closed, and as of our last check not confirmed as having happened. Sixty-seven of 120 members recommended Eisenkot, 46 Netanyahu, and the seven of United Torah Judaism recommended nobody. The arithmetic closes exactly: Eisenkot's four-party bloc holds 48 and the two Arab-led parties 19, which is the 67; Netanyahu's bloc holds 53, less UTJ's seven, which is the 46. (<a href="https://www.timesofisrael.com/president-herzog-taps-eisenkot-to-form-coalition-but-path-remains-fraught/">Times of Israel</a>)</p>
+<p class="field">Context</p><p>Recommending is not joining. Adding UTJ&#x27;s seven and Shas&#x27;s six to the 48 reaches exactly 61, and that only requires Shas not to oppose — but Shas has called reports it might join “complete fake news” while saying it remains in the right-wing bloc, and hawks inside Eisenkot&#x27;s own bloc refuse to depend on the Joint List. Netanyahu&#x27;s counter was a video calling for a unity government of “all the parties of the national camp”; Yashar replied that Likud could join only if it drops its alliance with the extremists, and that the offer does not extend to Netanyahu.</p>
+<p class="field">What it means</p><p>The 67-46 split looks decisive and is not. The gap between 67 recommendations and a 61-seat coalition is the Haredi conscription question, and it is not a bargaining chip — it is the founding commitment of Eisenkot&#x27;s bloc and an existential one for the religious parties. If he fails, Netanyahu&#x27;s 46 becomes the largest single bloc again, which is the best reading of why the unity call was made.</p>
+<p class="field">Watch next</p><p>The Knesset is sworn in on 10 November. The 28-day clock runs to about 6 December, or 20 December with the extension.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Hormuz: a standing US task force, an Iranian missile ceiling lifted, Qatar carrying the file</h2>
+<p class="field">What happened</p><p>The military track escalated in kind rather than degree. On Saturday 7 November US Central Command launched Task Force Iron Gate, based in Tampa, to disrupt Iran's movement of weapons, sanctioned materials and dual-use technology across its land borders and the Caspian. The same day the Revolutionary Guard said it had lifted its self-imposed limit on ballistic-missile range. Iranian state media reported blasts on Qeshm Island and at Jask, Sirik and Bandar Abbas. CENTCOM said a US aircraft fired precision munitions at the stern of the St Kitts-flagged M/V Huda in the Gulf of Oman, disabling it, and claims 147 commercial vessels redirected and five merchant ships disabled since July. (<a href="https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes">Al Jazeera</a>)</p>
+<p class="field">Context</p><p>Attribution discipline matters more here than anywhere. The Guard&#x27;s own accounts of tanker casualties do not agree with each other: its navy said two tankers struck mines after entering an unsafe part of the strait with their navigation systems off, while other Guard statements described three non-compliant vessels exploding in an illegal channel. Both are a party&#x27;s account of its own operations, as is everything CENTCOM says about itself. Independently, UKMTO logged a tanker fire off Khasab and Emirati state media reported 22 crew rescued, with no outlet linking either to the Guard&#x27;s claims.</p>
+<p class="field">What it means</p><p>A named standing task force is institutional infrastructure for a long interdiction campaign, not a raid, and lifting the missile ceiling is Iran&#x27;s mirror-image signal. The diplomatic track is real but thin: Qatari mediation on the nuclear file, with Tehran insisting Washington move first, which is the same deadlock as before the war. Each side&#x27;s tradeable asset is the one it needs to keep.</p>
+<p class="field">Watch next</p><p>Trump&#x27;s post-midterm decision between strikes, pressure and a deal. And on Tuesday and Wednesday, the first US-mediated Ukraine-Russia trilateral round since February convenes in Abu Dhabi, with Rustem Umerov leading for Kyiv and Vladimir Medinsky for Moscow.</p>
+</div>
+</div>
+<div class="section" id="profile">
+<hr class="rule-hair"><p class="topic">Profile</p>
+<div class="item"><h2>Gadi Eisenkot: the general who is about to be handed Israel</h2></div>
+<div class="longform">
+<p class="drop">At five o&#x27;clock this afternoon, in the President&#x27;s Residence in Jerusalem, Isaac Herzog is due to hand Gadi Eisenkot the job of forming Israel&#x27;s next government. Sixty-seven of the Knesset&#x27;s 120 members recommended him; forty-six recommended Benjamin Netanyahu; the seven of United Torah Judaism recommended nobody. That is the clearest verdict an Israeli president has had to act on in years, and it is also, as the arithmetic below shows, nothing like a government. At the time of writing the ceremony had not yet taken place.</p>
+<p>He was born in Tiberias to Moroccan Jewish immigrants and raised in Eilat, which in the Israel of the 1960s meant the far edge of everything. The family name was Azenkot before his father arrived; the Hebrew-language writer Elon Gilad, tracing it to a Berber word for deer, suggests it was simply written down in Ashkenazi spelling and stuck. If Eisenkot becomes prime minister he will be the first Mizrahi Jew to hold the office — a fact that says more about Israel&#x27;s first seventy-eight years than about him.</p>
+<p>He joined the Golani Brigade and stayed for forty-one years. He was a company commander in Lebanon in 1982, commanded Golani itself, and took over Northern Command in late 2006, in the wreckage of the Second Lebanon War. In February 2015 he succeeded Benny Gantz as the twenty-first chief of the general staff and held the post until January 2019. In August 2016 the chairman of the US Joint Chiefs, General Joseph Dunford, ambushed him with a Legion of Merit at commander degree in a ceremony outside the Pentagon.</p>
+<p>The thing that will be quoted against him for the rest of his life he said in October 2008, as a major-general running Northern Command, in an interview with Yedioth Ahronoth that Reuters translated. &quot;What happened in the Dahiya quarter of Beirut in 2006 will happen in every village from which Israel is fired on,&quot; he said. &quot;We will apply disproportionate force on it and cause great damage and destruction there. From our standpoint, these are not civilian villages, they are military bases.&quot; And then the line that makes it a policy rather than a warning: &quot;This is not a recommendation. This is a plan. And it has been approved.&quot; He did not coin the phrase &quot;Dahiya doctrine&quot; — others did, and several profiles wrongly date his remarks to his years as chief of staff — but the United Nations fact-finding mission on the 2009 Gaza conflict described the approach as widespread destruction used as deterrence, and he has never withdrawn it.</p>
+<p>Then the war made the argument personal. Eisenkot was sworn in as a minister without portfolio on 12 October 2023 and sat in the emergency war cabinet as an observer rather than a voting member. In early December his son Gal, a 25-year-old reserve master sergeant trained as a combat medic and studying bioinformatics at Tel Aviv University, died of wounds from a bomb in a tunnel shaft in Jabaliya. A day later his nephew Maor Cohen Eisenkot, 19, of Eilat, of Golani&#x27;s 12th Battalion, was killed by an explosive in a mosque in Khan Younis. A second nephew, Captain Yogev Pazy, 22, died in northern Gaza in November 2024. At Gal&#x27;s funeral he said the sacrifice &quot;will not be in vain, and we will be deserving of it&quot;. He resigned from the government on 9 June 2024, a day after Gantz, writing that &quot;outside considerations and politics infiltrated the discussions&quot; and that &quot;it&#x27;s time we left the government&quot;.</p>
+<p>The detail that gets read aloud comes from the same period. At a Knesset intelligence committee meeting in June 2024, Eisenkot handed Netanyahu a copy of Martin Indyk&#x27;s study of Henry Kissinger&#x27;s statecraft and asked him, &quot;Have you read this?&quot; Netanyahu had not. Eisenkot&#x27;s argument was that force without a diplomatic plan cannot produce a lasting victory. Netanyahu&#x27;s reply, as he recounted it to TIME: &quot;I have a different view about the meaning of the word strategy.&quot;</p>
+<p>He left the Knesset on 2 July 2025, writing a one-line letter to Speaker Amir Ohana and adding by hand that &quot;it was a great privilege to serve the people&quot;. On 16 September he launched Yashar — Hebrew for straight, or upright — with 120 founding members drawn from technology, business and the security services, calling the party &quot;a personal and national duty&quot;. Thirteen months later it won 21 seats, the second-largest bloc in the Knesset.</p>
+<p>The campaign against him was uglier than the result suggests. Netanyahu&#x27;s political operation circulated AI-generated videos, one showing Eisenkot pushing aside a young soldier who resembled his dead son in order to embrace the Islamist politician Mansour Abbas; Eisenkot said he &quot;felt contempt&quot; and called it &quot;the lowest he could go&quot;. Yinon Magal, a Channel 14 host, called him a monkey on air. Netanyahu waited days before calling that &quot;highly inappropriate&quot;.</p>
+<p>Now the arithmetic. His own four-party bloc holds 48 seats. The two Arab-led parties hold 19, and all 19 recommended him — which is how he reached 67. But recommending is not joining, and several hawks in his own bloc will not sit in a government dependent on the Joint List. The alternative is 48 plus United Torah Judaism&#x27;s seven and Shas&#x27;s six, which is exactly 61; Shas has called reports it might join &quot;complete fake news&quot;. The obstacle is not personal but constitutional: Eisenkot&#x27;s founding commitment is national service for everyone, which is the one thing the Haredi parties cannot concede. He has also promised a state commission of inquiry into 7 October within fourteen days of taking office, with a mandate reaching back over a decade — explicitly including his own years as chief of staff. He opposes a Palestinian state, favours separation in the West Bank with a reformed Palestinian Authority, has pledged to dismantle illegal outposts, and wants Israel weaned off American military aid within five to ten years.</p>
+<p>He has twenty-eight days from the tasking, extendable by fourteen. If he fails, the mandate can pass elsewhere, and Netanyahu&#x27;s 46 becomes the largest single bloc again. For a man who spent four decades being handed objectives, this is the first one he has to assemble himself.</p>
+</div></div>
+<div class="section" id="calendar">
+<hr class="rule-hair"><p class="topic">On the calendar</p><ul class="cal">
+<li><span class="when">Nov 9</span>COP31 opens in Antalya; Murat Kurum to be elected president by acclamation</li>
+<li><span class="when">Nov 9</span>US government status report due to Judge Chutkan on the arch injunction</li>
+<li><span class="when">Nov 9</span>Stephen Miller becomes White House chief of staff</li>
+<li><span class="when">Nov 9</span>Lecornu meets French unions and employers on wages and purchasing power</li>
+<li><span class="when">Nov 10</span>Senate and House Republicans elect new leadership</li>
+<li><span class="when">Nov 10</span>Mississippi mail-ballot receipt and affidavit-ID cure deadline; DeSoto County count</li>
+<li><span class="when">Nov 10</span>Alaska Division of Elections count update</li>
+<li><span class="when">Nov 10</span>Israel&#x27;s 26th Knesset sworn in</li>
+<li><span class="when">Nov 10</span>EU Budget Council, Brussels, on the 2027 EU budget</li>
+<li><span class="when">Nov 10</span>TSMC October revenue expected; CoreWeave Q3 after the close</li>
+<li><span class="when">Nov 10-11</span>Ukraine-Russia-US trilateral talks, Abu Dhabi</li>
+<li><span class="when">Nov 11-12</span>COP31 leaders&#x27; summit</li>
+<li><span class="when">Nov 13</span>Mississippi counties certify; Alaska count update; ULA Vulcan launch with 40 Amazon Leo satellites</li>
+<li><span class="when">Nov 16</span>Berkshire Hathaway 13F due; De Wever reports back to King Philippe</li>
+<li><span class="when">Nov 17</span>Nvidia Q3 results expected</li>
+<li><span class="when">Nov 18</span>Alaska ballot-acceptance deadline and ranked-choice tabulation; Nvidia briefing requested</li>
+<li><span class="when">Nov 19</span>ING data-centre loan bids due; the arch injunction lapses absent further order</li>
+<li><span class="when">Nov 20</span>French Senate begins the 2027 budget; ILWU Local 26 talks resume</li>
+<li><span class="when">Nov 20</span>COP31 closes</li>
+<li><span class="when">Nov 25</span>Alaska certification target</li>
+<li><span class="when">Nov 27</span>New Zealand official election results</li>
+<li><span class="when">Dec 4</span>US November employment report</li>
+<li><span class="when">Dec 6</span>Eisenkot&#x27;s 28-day coalition deadline, if tasked on 8 November</li>
+<li><span class="when">Dec 8-9</span>FOMC meets; a quarter-point increase is roughly 77% priced</li>
+<li><span class="when">Dec 9</span>French Senate votes on the 2027 budget</li>
+<li><span class="when">Dec 11</span>US appropriations deadline</li>
+<li><span class="when">Dec 12</span>Louisiana&#x27;s LA-5 and LA-6 House runoffs</li>
+<li><span class="when">Jan 3</span>The 120th Congress is sworn in</li>
+</ul></div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf" target="_blank" rel="noopener">Berkshire Hathaway — Form 10-Q, quarter ended 30 September 2026</a></li>
+<li><a href="https://www.semiconductors.org/global-semiconductor-sales-increase-24-1-from-q2-2026-to-q3-2026/" target="_blank" rel="noopener">Semiconductor Industry Association — Q3 2026 global sales</a></li>
+<li><a href="https://investor.tsmc.com/english/monthly-revenue/2026" target="_blank" rel="noopener">TSMC — monthly revenue, 2026</a></li>
+<li><a href="https://www.supremecourt.gov/orders/courtorders/110226zr_3eb4.pdf" target="_blank" rel="noopener">Supreme Court of the United States — order of 2 November 2026, United States v. California</a></li>
+<li><a href="https://www.supremecourt.gov/orders/ordersofthecourt/26" target="_blank" rel="noopener">Supreme Court of the United States — orders of the court, 2026 term</a></li>
+<li><a href="https://www.govinfo.gov/content/pkg/USCOURTS-dcd-1_26-cv-00544/pdf/USCOURTS-dcd-1_26-cv-00544-0.pdf" target="_blank" rel="noopener">Chutkan memorandum opinion, 5 November 2026 (govinfo)</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/" target="_blank" rel="noopener">The White House — presidential actions</a></li>
+<li><a href="https://www.sos.ms.gov/news/official-statement-election-update" target="_blank" rel="noopener">Mississippi Secretary of State — official statement, election update</a></li>
+<li><a href="https://abcnews.com/Politics/mississippi-2026-live-midterm-election-results/story?id=136767242" target="_blank" rel="noopener">ABC News — Mississippi Senate live results</a></li>
+<li><a href="https://alaskapublic.org/news/politics/elections/2026-11-04/6-takeaways-from-alaskas-election" target="_blank" rel="noopener">Alaska Public Media — six takeaways from Alaska&#x27;s election</a></li>
+<li><a href="https://rollcall.com/2026/11/04/mike-johnson-will-not-seek-gop-leader-as-house-flips/" target="_blank" rel="noopener">Roll Call — Mike Johnson will not seek GOP leader</a></li>
+<li><a href="https://www.opb.org/article/2026/11/06/ai-data-centers-took-a-beating-in-the-midterm-elections-a-reckoning-may-be-ahead-for-tech-giants/" target="_blank" rel="noopener">AP via OPB — AI data centers took a beating in the midterms</a></li>
+<li><a href="https://thedeepdive.ca/ing-reportedly-auctions-500m-data-center-loans-after-midterm-sweep-ai-infrastructure-selloff/" target="_blank" rel="noopener">The Deep Dive — ING auctions data-centre loans after the selloff</a></li>
+<li><a href="https://thenextweb.com/news/huawei-hbm-smuggling-samsung-sk-hynix-ascend-960dt" target="_blank" rel="noopener">TNW — Huawei&#x27;s HBM smuggling route</a></li>
+<li><a href="https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/" target="_blank" rel="noopener">TechCrunch — intelligence memo on an executive recruited to spy on Nvidia&#x27;s CEO</a></li>
+<li><a href="https://taipeitimes.com/News/biz/archives/2026/11/07/2003867292" target="_blank" rel="noopener">Taipei Times — the advanced packaging scramble</a></li>
+<li><a href="https://www.theclosingprint.net/2026/11/post-market-and-weekly-summary-2026-11-06/" target="_blank" rel="noopener">The Closing Print — post-market and weekly summary, 6 November 2026</a></li>
+<li><a href="https://mansfield.energy/2026/11/06/week-in-review-oil-prices-retreat-on-iran-peace-hopes-and-weaker-global-demand/" target="_blank" rel="noopener">Mansfield Energy — week in review, oil prices retreat</a></li>
+<li><a href="https://finance.yahoo.com/economy/articles/october-jobs-report-says-us-143257304.html" target="_blank" rel="noopener">Yahoo Finance — the October jobs report</a></li>
+<li><a href="https://boereport.com/2026/11/06/soaring-freight-rates-give-us-refiners-edge-as-crude-discounts-widen/" target="_blank" rel="noopener">Reuters via BOE Report — soaring freight rates give US refiners an edge</a></li>
+<li><a href="https://www.techloy.com/week-45-2026-asia-startup-funding/" target="_blank" rel="noopener">Techloy — Asia startup funding, week 45</a></li>
+<li><a href="https://www.calcalistech.com/ctechnews/article/skvs9uupme" target="_blank" rel="noopener">Calcalist — Explorium ceases operations</a></li>
+<li><a href="https://openvc.substack.com/p/after-the-midterms-the-unicorn-indices" target="_blank" rel="noopener">OpenVC — after the midterms, the unicorn indices</a></li>
+<li><a href="https://unfccc.int/cop31" target="_blank" rel="noopener">UNFCCC — COP31</a></li>
+<li><a href="https://climate.copernicus.eu/copernicus-warmest-october-record-2026-virtually-certain-exceed-15degc" target="_blank" rel="noopener">Copernicus — warmest October on record</a></li>
+<li><a href="https://www.europarl.europa.eu/news/en/press-room/20261021IPR48321/methane-rules-parliament-backs-longer-delay-for-energy-importers-and-producers" target="_blank" rel="noopener">European Parliament — methane rules, longer delay backed</a></li>
+<li><a href="https://enlargement.ec.europa.eu/news/2026-enlargement-package-shows-reform-commitment-delivers-progress-towards-eu-membership-2026-11-04_en" target="_blank" rel="noopener">European Commission — 2026 enlargement package</a></li>
+<li><a href="https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes" target="_blank" rel="noopener">European Commission — preliminary findings on TikTok&#x27;s For You feed</a></li>
+<li><a href="https://www.eunews.it/en/2026/11/06/preliminary-ruling-by-the-eu-commission-tiktoks-for-you-feed-breaches-the-digital-services-act-dsa/" target="_blank" rel="noopener">EUnews — the Commission&#x27;s preliminary DSA ruling on TikTok</a></li>
+<li><a href="https://brusselssignal.eu/2026/11/belgian-king-refuses-de-wevers-resignation-and-orders-coalition-back-to-budget-talks/" target="_blank" rel="noopener">Brussels Signal — the Belgian king refuses De Wever&#x27;s resignation</a></li>
+<li><a href="https://www.assemblee-nationale.fr/dyn/17/scrutins" target="_blank" rel="noopener">Assemblée nationale — scrutins publics, 17th legislature</a></li>
+<li><a href="https://www.hcfp.fr/liste-avis/avis-ndeg2026-6-loi-de-finances-de-fin-de-gestion-2026" target="_blank" rel="noopener">Haut Conseil des finances publiques — avis 2026-6</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/7/more-than-140000-rally-as-new-protests-against-rising-costs-sweep-france" target="_blank" rel="noopener">Al Jazeera — more than 140,000 rally against rising costs in France</a></li>
+<li><a href="https://theoutlier.co.za/results" target="_blank" rel="noopener">The Outlier — South African municipal election results</a></li>
+<li><a href="https://www.timesofisrael.com/president-herzog-taps-eisenkot-to-form-coalition-but-path-remains-fraught/" target="_blank" rel="noopener">Times of Israel — Herzog taps Eisenkot but the path remains fraught</a></li>
+<li><a href="https://www.ynetnews.com/articles/0,7340,L-3604893,00.html" target="_blank" rel="noopener">Ynetnews via Reuters — Israel warns Hizbullah war would invite destruction, 3 October 2008</a></li>
+<li><a href="https://time.com/article/2026/10/25/gadi-eisenkot-exclusive-interview/" target="_blank" rel="noopener">TIME — the former general who could end the Netanyahu era</a></li>
+<li><a href="https://www.timesofisrael.com/us-army-surprises-idf-chief-with-legion-of-merit-medal/" target="_blank" rel="noopener">Times of Israel — the US Army surprises the IDF chief with a Legion of Merit</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes" target="_blank" rel="noopener">Al Jazeera — the US launches a task force against Iran&#x27;s land supply routes</a></li>
+<li><a href="https://kyivindependent.com/russia-to-send-senior-diplomats-military-officials-to-upcoming-peace-talks-in-abu-dhabi/" target="_blank" rel="noopener">Kyiv Independent — Russia to send senior officials to Abu Dhabi</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-08-weekly.pdf">PDF</a></span>
+</div></div></body></html>

@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-11-08",
+  "kind": "weekly",
+  "dateline": "Sunday, November 8, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-08-weekly.html",
+  "pdf": "pdf/2026-11-08-weekly.pdf",
+  "standfirst": "American voters handed Democrats both chambers of Congress, and within forty-eight hours the result had repriced the AI buildout, broken the Republican leadership and left two Senate seats still being counted."
+ },
+ {
+  "date": "2026-11-08",
   "kind": "daily",
   "dateline": "Sunday, November 8, 2026",
   "month": "November 2026",
