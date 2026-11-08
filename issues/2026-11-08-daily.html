@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, November 8, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, November 8, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Israel&#x27;s president has passed over Benjamin Netanyahu, and hands Gadi Eisenkot the job of building a government at five o&#x27;clock this afternoon.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>The bill arrives for AI&#x27;s first real election</h2>
+<p class="field">What happened</p><p>The accounting of what the AI lobby spent on Tuesday's midterms began landing over the weekend, and the numbers do not agree with each other. <a href="https://www.fastcompany.com/91464021/ai-super-pacs-midterms">Fast Company</a> puts Public First, the bipartisan AI-safety network backed by Anthropic, at $24.4m for the cycle, backing 13 candidates of whom eight won. It puts Leading the Future, the pro-industry super PAC that launched with $100m in the bank, at $34.8m actually spent across about 50 candidates, more than 86% of whom won or lead. Bloomberg, reported Saturday evening and reachable nowhere we could fetch, has Public First alone above $63m with 10 of 17 winning.</p>
+<p class="field">What it means</p><p>The spread, $24m to $63m for what is nominally one organisation, is largely a naming problem: &quot;Public First&quot; covers both a 501(c)(4) and three affiliated PACs, and Anthropic&#x27;s $20m in February went to the nonprofit, which cannot run election ads. Take even the low figures and the point holds. AI arrived in a US election as a funded interest on both sides, and nobody can yet say what the money bought.</p>
+<p class="field">Watch next</p><p>Post-general FEC filings, the only thing that will settle the arithmetic.</p>
+</div>
+<div class="item">
+<h2>Voters turned on data centres, and the industry noticed</h2>
+<p class="field">What happened</p><p>Dozens of local ballot measures restricting data-centre development passed on Tuesday, nearly all of those put to voters, and in Texas Greg Abbott lost the governorship to Gina Hinojosa, who campaigned on restricting them. On <a href="https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers">TechCrunch's weekend podcast</a>, Kirsten Korosec called data centres "an increasingly grassroots issue, in part because of how hyperscalers and companies have gone about" it, and the hosts doubted OpenAI's rebranding of sites as "compute campuses" can outrun a term they called toxic.</p>
+<p class="field">What it means</p><p>Compute is the binding constraint on frontier AI, and siting it has just become a local-politics problem in the states with the land and the power. Hinojosa&#x27;s win matters most, because Texas has been the path of least resistance. Separately, The Information reported Saturday that public records appear to show SpaceX building a &quot;Starbase supercomputer&quot; in Texas and that her win may delay some of its plans: single outlet, unverified.</p>
+<p class="field">Watch next</p><p>Whether Hinojosa&#x27;s restrictions survive the Texas legislature, and whether a hyperscaler publishes a revised siting policy.</p>
+</div>
+<div class="item">
+<h2>An American lab sands the politics off a Chinese model</h2>
+<p class="field">What happened</p><p>Nous Research released <a href="https://nousresearch.com/arete">Arete-27B</a>, a post-trained version of Alibaba's Qwen3.8-27B, saying it "post-trained over Alibaba's Qwen3.8-27B to reinforce Western values on a Chinese-trained model." The intervention is small: about 52.8m tokens over two epochs and 1,202 steps, with Inkling as teacher, no reinforcement learning, no preference optimisation, no architectural change. On the lab's own 803-prompt Propaganda_Eval the fact score rose from 2.32 to 2.98 out of 5 with thinking off, and answers containing propaganda fell from 22% to about 1%. Capability held, at 65.60% on Hermes Bench against the base model's 65.77%, a gap the authors call noise. Posted 6 November, picked up Saturday.</p>
+<p class="field">What it means</p><p>The authors&#x27; own conclusion is the claim worth noticing: &quot;the bias layer in a Chinese-aligned model is shallow.&quot; If a few tens of millions of tokens move propaganda rates from 22% to 1% without denting capability, the political conditioning of open Chinese weights is a coat of paint rather than a structural property, which cuts against one of the louder arguments for restricting their use.</p>
+<p class="field">Watch next</p><p>An independent run of Propaganda_Eval by anyone other than Nous.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Three House chairs want Jensen Huang in a room</h2>
+<p class="field">What happened</p><p><a href="https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/">TechCrunch reported Saturday</a> that a US intelligence memo circulated earlier this year claimed Alice Huang, an executive at the Singapore-based AI cloud firm Megaspeed, was recruited by China's Ministry of State Security to spy on Nvidia chief executive Jensen Huang; the Financial Times reported the memo also alleged a romantic relationship. Three House chairmen, John Moolenaar of the Select Committee on the CCP, Brian Mast of Foreign Affairs and Rick Crawford of Intelligence, made public on 5 November a letter requesting a closed-door briefing, writing that "It is vital that Congress determines the extent to which U.S. national security has been placed at risk." They asked Huang to confirm by 11 November and proposed the briefing for 18 November. An Nvidia spokesman said the interactions were "not unusual".</p>
+<p class="field">What it means</p><p>Mind what this is not. No committee has opened a formal investigation, issued a subpoena or scheduled a hearing: three chairmen asked for a briefing. Senator Chris Coons&#x27; &quot;Congress will investigate and get answers&quot; was a post on X, not an act of Congress. And one limb of the underlying reporting has been publicly contradicted. Singapore&#x27;s Ministry of Home Affairs said on 31 October that neither the government nor its officials said what was attributed to them, while confirming that &quot;Investigations into Megaspeed are ongoing.&quot;</p>
+<p class="field">Watch next</p><p>Whether Huang accepts by Wednesday 11 November, and whether a committee escalates past a request.</p>
+</div>
+<div class="item">
+<h2>One company cleared to buy Nvidia&#x27;s H200 is an empty office</h2>
+<p class="field">What happened</p><p>The New York Times reported on Saturday that New Matrix, a Chinese company the Commerce Department authorised to buy Nvidia's H200, gives a registered address in a Beijing industrial park that reporters found empty, wires hanging from the ceiling where the lights should be. Corporate records link its owners to Wise Road Capital, which Commerce added to its export-control list in 2024. A second cleared firm, Mag Infra, drew shell-company suspicion in September and reportedly shares staff and patents with Inspur, itself under US export controls. Megaspeed, a customer rather than a licensee, is suspected of having bought more than 136,000 Nvidia GPUs since 2023 and of leasing compute to companies including Alibaba. Neither Commerce nor Nvidia has commented. We could not reach the original; this is the <a href="https://en.sedaily.com/international/2026/11/08/nvidias-huang-faces-scrutiny-over-h200-china-sales-alleged">Seoul Economic Daily's account</a> of it.</p>
+<p class="field">What it means</p><p>The H200 licence regime was the compromise that let advanced Nvidia parts into China on conditions. If the conditions do not survive a reporter visiting an address, enforcement rests on paperwork. Landing in the same week as the Huang memo, the two will be read as one story whether or not they are. The limits are real: no licence count has been published, the other cleared companies are unnamed, and every account traces back to the same piece.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Berkshire&#x27;s year under Abel, and insurance does the damage</h2>
+<p class="field">What happened</p><p>Berkshire Hathaway filed third-quarter results on Saturday morning. Operating earnings, its own preferred after-tax measure, were $12.705bn against $13.485bn a year earlier, down 5.8%, and the whole decline is insurance: underwriting fell to $1.352bn from $2.369bn. Every industrial segment grew. Net earnings of $22.112bn against $30.796bn are mostly the smaller investment-gains line, which the company again calls &quot;usually meaningless&quot; in any given quarter. Buybacks ran to about $9.6bn in the quarter and $14.4bn so far this year, against a previous quarterly high of $9.26bn in the third quarter of 2020.</p>
+<p class="field">What it means</p><p>Two things to carry away. Greg Abel is repurchasing stock at a pace Warren Buffett never matched after 2021, a change of temperament rather than of accounting. And be careful with the cash headline: adding the three balance-sheet lines gives $377.4bn at 30 September against $365.5bn in June, but $20.5bn of that is unsettled Treasury-bill purchases the money had not yet left for, against $0.8bn in June. Strip those out and the pile shrank. Berkshire publishes no combined figure and holds no earnings call, so both readings are reconstructions.</p>
+<p class="field">Watch next</p><p>The 13F on Monday 16 November, for what Abel has actually been buying.</p>
+</div>
+<div class="item">
+<h2>A third reprieve at Los Angeles and Long Beach</h2>
+<p class="field">What happened</p><p>ILWU Local 26, about 250 security workers covering six container terminals across the two ports, agreed to keep negotiating with the Pacific Maritime Association through 20 November, deferring a strike deadline for the third time in a fortnight. The previous contract expired in July 2025, federal mediators are involved, and the union has already voted to authorise a strike. The association says a stoppage could affect roughly 85% of cargo through Long Beach and a third of the cargo through Los Angeles, and warned on 27 October that dockworkers and clerks on separate contracts were expected to join. Bloomberg's report, read via <a href="https://gcaptain.com/la-port-strike-threat-deferred-again-as-labor-talks-drag-on/">gCaptain</a>; not independently confirmed.</p>
+<p class="field">What it means</p><p>The exposure is wildly out of proportion to the bargaining unit: 250 watchmen hold the gate on roughly a third of American seaborne container traffic, with both ports at record volume. Pushing the deadline to 20 November also moves it into the pre-Christmas peak rather than out of it.</p>
+<p class="field">Watch next</p><p>20 November, and whether the locals on separate contracts commit themselves first.</p>
+</div>
+<div class="item">
+<h2>Binance&#x27;s finance chief leaves, a week after a $6.3bn theft</h2>
+<p class="field">What happened</p><p>Binance chief financial officer Kaiser Ng is leaving and will be replaced by Justin Yek, a little over a week after hackers took $6.3bn of cryptocurrency from Binance users. The exchange froze withdrawals for several days; when it reopened them, users pulled a net $3.6bn within the first few hours. Binance and the FBI attributed the theft to the North Korean group TraderTraitor, and the exchange has said it will bear the loss itself rather than pass it to users. Co-chief executive Yi He said Ng is going to "pursue a new venture after more than five years at Binance" and that a transition plan had been "implemented over the last half year". Bloomberg, via <a href="https://techcrunch.com/2026/11/07/binance-cfo-is-leaving-to-pursue-a-new-venture-after-6-3-billion-hack/">TechCrunch</a>.</p>
+<p class="field">What it means</p><p>Nothing in the account links the departure to the theft, and a transition planned six months ago would predate it. The timing is the story regardless: a $6.3bn loss the exchange has promised to absorb is a balance-sheet event of the first order, and the executive who would have had to explain how it is absorbed is leaving.</p>
+<p class="field">Watch next</p><p>Any Binance disclosure of how the $6.3bn is actually being covered.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing. Not one funding round dated this weekend anywhere we could reach: India, Southeast Asia, China, Latin America, the Gulf, Europe and the United States all checked. Saturday afternoon to Sunday morning is the deadest slot in the venture week, and every weekly roundup closes on Friday.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Mississippi has not counted a vote since Friday night</h2>
+<p class="field">What happened</p><p>The Senate race remains uncalled by AP, ABC, CBS and NBC. The most recent sourced tally, carried on ABC&#x27;s dashboard as of 3:16am Eastern on Sunday and matching AP&#x27;s Friday-evening figures, is Scott Colom 467,930, or 49.1%, to Cindy Hyde-Smith 465,356, or 48.8%, at 97% of expected vote. The margin is 2,574. Nothing moved on Saturday: no county counted, and the Secretary of State&#x27;s office has published nothing since 4 November. DeSoto County, which Colom leads, has more than 2,000 affidavit ballots under review and does not open them until 10 November.</p>
+<p class="field">What it means</p><p>The arithmetic now turns entirely on affidavit ballots, Mississippi&#x27;s term for provisional, and nobody has a reliable count of them: Watson&#x27;s own estimate has been 12,000 to 20,000. Hyde-Smith has not spoken aloud since election night, but she posted in her own name on Friday afternoon: &quot;We are not backing down. This election is not over.&quot; Mississippi has no recount statute.</p>
+<p class="field">Watch next</p><p>10 November, when postmarked mail ballots must arrive, affidavit voters must cure their identification, and DeSoto counts. County certification is 13 November.</p>
+</div>
+<div class="item">
+<h2>Senate Republicans try to put off choosing a leader</h2>
+<p class="field">What happened</p><p>Ron Johnson and several colleagues have circulated a letter seeking to postpone the Senate Republican leadership elections expected on Tuesday, arguing that &quot;We need to have serious discussions within our conference as to what we can do to improve the outcome in 2028,&quot; and that voting now &quot;is certainly not the way leadership elections should be conducted in the world&#x27;s most deliberative body.&quot; Five signatures are needed to compel a conference meeting. John Kennedy and Mike Lee have confirmed they signed; Rick Scott declined to say. Neither the letter nor a list of signatories has been published.</p>
+<p class="field">What it means</p><p>The date is the tell. Roll Call reported on 30 October that both chambers would vote on Tuesday 10 November, but that came from unnamed aides, Bloomberg has since stated it flatly without attribution, and the conference has still said nothing on the record. Nine days after losing both chambers, Senate Republicans cannot agree on whether to hold the vote.</p>
+<p class="field">Watch next</p><p>Tuesday 10 November, and whether the conference confirms the date at all. The House whip race, Tom Emmer against August Pfluger, is set for the same day.</p>
+</div>
+<div class="item">
+<h2>Alaska&#x27;s count is frozen and Peltola&#x27;s side has gone to court</h2>
+<p class="field">What happened</p><p>The Division of Elections has posted no new tally since 4 November, when Mary Peltola led Dan S. Sullivan by about 600 votes. On 6 November, Alaskans for Mary moved in the Superior Court at Anchorage for a temporary restraining order against Lieutenant Governor Nancy Dahlstrom, Division director Carol Beecher and the Division itself, seeking the Absentee Register and the record of why each absentee ballot was rejected, &quot;without further delay&quot;. The action runs on Alaska&#x27;s public-records law rather than its election code. The caption reads &quot;Case No. 3AN-26-&quot; with the digits blank, so there is no case number yet, and no order has issued.</p>
+<p class="field">What it means</p><p>With no official numbers, both campaigns are arguing from their own. Sullivan&#x27;s memo projects him taking the final ranked-choice round with 50.08%; Peltola&#x27;s campaign claims 56.6% of early in-person votes and 56.7% of mail ballots, sourcing neither. The suit is an attempt to replace that with data, and it asks for something narrow enough that a court could grant it quickly.</p>
+<p class="field">Watch next</p><p>The next Division update on 10 November, and any ruling on the restraining order before it.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Herzog passes over Netanyahu</h2>
+<p class="field">What happened</p><p>President Isaac Herzog will task Gadi Eisenkot with forming a government at 5pm Israel time today, 3pm GMT, after factions holding 67 Knesset seats recommended him against 46 for Benjamin Netanyahu, with United Torah Judaism&#x27;s seven members declining to recommend anyone at all. Eisenkot&#x27;s own four-party alliance holds 48 seats; the Arab-led parties who made up the rest of his 67, a record 19, he has ruled out governing with. He posted in Hebrew that &quot;now is the time for the formation of a national emergency government.&quot;</p>
+<p class="field">What it means</p><p>Eisenkot has 28 days, to 6 December, extendable by 14 more to the 20th. The arithmetic that won him the mandate is not the arithmetic that gives him a government. Forty-eight plus the Arab parties is 67 and he will not take it; 48 plus UTJ and Shas is exactly 61, and both of those recommended Netanyahu. Herzog saw it coming on 5 November: his job, he said, is to determine &quot;who has the ability to form a government, and that is not entirely clear, given the mutual vetoes between the blocs.&quot;</p>
+<p class="field">Watch next</p><p>5pm today for the tasking itself, 10 November for the Knesset&#x27;s swearing-in, 6 December for the deadline.</p>
+</div>
+<div class="item">
+<h2>Labour won the party vote. National won the Parliament.</h2>
+<p class="field">What happened</p><p>The Electoral Commission&#x27;s preliminary count gives Labour 710,330 party votes to National&#x27;s 706,680, 29.36% against 29.21%, a margin of 3,650, and gives National 42 seats to Labour&#x27;s 36. National won all 42 in electorates and took no list seats whatever, which together with Te Pati Maori&#x27;s five electorate wins on 0.57% of the party vote produces an 11-seat overhang and a Parliament of 131 rather than the usual 120. A majority is 66. National, ACT&#x27;s 13 and New Zealand First&#x27;s 12 make 67. The Greens hold 16 and The Opportunity Party cleared the threshold on 5.96% for seven. About 399,365 special votes are still uncounted.</p>
+<p class="field">What it means</p><p>A one-seat majority resting on an 11-seat overhang is close to the most fragile thing MMP can produce, and the 399,365 specials, some 14% of the vote, have historically favoured the left. The Opportunity Party is the hinge: Luxon ruled out working with it repeatedly before the election, and Qiulae Wong says she will talk first to whichever party holds the most seats, which on party votes is Labour and on seats is National.</p>
+<p class="field">Watch next</p><p>Official results on Friday 27 November, when the specials are in and the overhang may move.</p>
+</div>
+<div class="item">
+<h2>Three more tankers burning, and a task force for the land routes</h2>
+<p class="field">What happened</p><p>The Revolutionary Guard said on Sunday that &quot;three non-compliant tankers have exploded and caught fire&quot; after entering what it called an &quot;illegal channel&quot; through the Strait of Hormuz, naming no vessels and giving no flags. CENTCOM said one of its aircraft &quot;fired precision munitions at the stern of St. Kitts-flagged M/V Huda,&quot; disabling the ship in the Gulf of Oman after it ignored warnings following an Iranian port call. On Saturday CENTCOM announced Task Force Iron Gate, based in Tampa, to stop Iran moving weapons and sanctioned material across its land borders and the Caspian. Each side is describing its own operations.</p>
+<p class="field">What it means</p><p>The land-and-Caspian task force is the admission worth noting: the naval blockade has run for months and the materiel is going around it. At sea, Al Jazeera reports UKMTO counting at least 11 ships attacked in the week to 6 November and transits about 65% below pre-war levels, figures we could not corroborate anywhere, and the maritime trade press is citing a different body with different numbers.</p>
+<p class="field">Watch next</p><p>Whether the Qatari channel produces indirect talks. Iran&#x27;s seven conditions for reopening the strait remain unpublished.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.berkshirehathaway.com/news/nov0726.pdf" target="_blank" rel="noopener">Berkshire Hathaway - Q3 2026 earnings release</a></li>
+<li><a href="https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf" target="_blank" rel="noopener">Berkshire Hathaway - Q3 2026 Form 10-Q</a></li>
+<li><a href="https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results" target="_blank" rel="noopener">New Zealand Electoral Commission - 2026 general election preliminary results</a></li>
+<li><a href="https://www.president.gov.il/en/president-herzog-concludes-consultations-and-announces-he-will-task-gadi-eisenkot-with-forming-a-government/" target="_blank" rel="noopener">President of Israel - Herzog to task Gadi Eisenkot with forming a government</a></li>
+<li><a href="https://www.israelhayom.com/2026/11/07/herzog-taps-eisenkot-to-form-next-government-after-securing-backing-of-67-mks/" target="_blank" rel="noopener">Israel Hayom - Herzog taps Eisenkot after 67 MKs back him</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government" target="_blank" rel="noopener">Al Jazeera - Israel&#x27;s president picks Eisenkot over Netanyahu</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/7/qeshm-island-and-hormuz-hit-as-mediators-try-to-prevent-us-iran-escalation" target="_blank" rel="noopener">Al Jazeera - Qeshm Island and Hormuz hit as mediators try to prevent escalation</a></li>
+<li><a href="https://gulfnews.com/world/mena/iran-says-3-tankers-caught-fire-in-hormuz-1.500740005" target="_blank" rel="noopener">Gulf News - Iran says three tankers caught fire in Hormuz</a></li>
+<li><a href="https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730" target="_blank" rel="noopener">ABC News (Australia) - Strait of Hormuz: explosions and talks</a></li>
+<li><a href="https://chinaselectcommittee.house.gov/media/press-releases/moolenaar-mast-and-crawford-seek-briefing-from-jensen-huang-on-ties-to-chinese-intelligence-asset" target="_blank" rel="noopener">House Select Committee on the CCP - Moolenaar, Mast and Crawford seek briefing from Jensen Huang</a></li>
+<li><a href="https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/" target="_blank" rel="noopener">TechCrunch - US intelligence memo on the recruitment of an executive to target Nvidia&#x27;s CEO</a></li>
+<li><a href="https://www.mha.gov.sg/media-room/newsroom/clarification-statement-on-wall-street-journals-article/" target="_blank" rel="noopener">Singapore Ministry of Home Affairs - clarification on the Wall Street Journal&#x27;s article</a></li>
+<li><a href="https://en.sedaily.com/international/2026/11/08/nvidias-huang-faces-scrutiny-over-h200-china-sales-alleged" target="_blank" rel="noopener">Seoul Economic Daily - scrutiny over H200 sales to Chinese buyers</a></li>
+<li><a href="https://nousresearch.com/arete" target="_blank" rel="noopener">Nous Research - Arete-27B</a></li>
+<li><a href="https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers" target="_blank" rel="noopener">TechCrunch - after the midterms, rocky ground for Musk and data centres</a></li>
+<li><a href="https://gcaptain.com/la-port-strike-threat-deferred-again-as-labor-talks-drag-on/" target="_blank" rel="noopener">gCaptain - Los Angeles port strike threat deferred again</a></li>
+<li><a href="https://techcrunch.com/2026/11/07/binance-cfo-is-leaving-to-pursue-a-new-venture-after-6-3-billion-hack/" target="_blank" rel="noopener">TechCrunch - Binance CFO leaving after the $6.3bn hack</a></li>
+<li><a href="https://abcnews.com/Politics/live-updates/midterm-elections-live-updates?id=137782085" target="_blank" rel="noopener">ABC News - midterm elections live updates (Mississippi tally)</a></li>
+<li><a href="https://www.mississippifreepress.org/liveblog-mississippis-2026-u-s-senate-election-results/" target="_blank" rel="noopener">Mississippi Free Press - live blog, 2026 US Senate election results</a></li>
+<li><a href="https://www.yahoo.com/news/politics/articles/johnson-staunch-trump-ally-seeks-195351984.html" target="_blank" rel="noopener">The Hill via Yahoo - Johnson seeks to delay Senate GOP leadership elections</a></li>
+<li><a href="https://rollcall.com/2026/10/30/senate-house-gop-set-leadership-elections/" target="_blank" rel="noopener">Roll Call - Senate and House GOP set leadership elections</a></li>
+<li><a href="https://www.democracydocket.com/wp-content/uploads/2026/11/2026-11-06-Alaskans-for-Marys-motion-for-a-temporary-restraining-order.pdf" target="_blank" rel="noopener">Alaskans for Mary v. Dahlstrom - motion for a temporary restraining order</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4182552-adf-neutralises-137-of-164-russian-drones-overnight.html" target="_blank" rel="noopener">Ukrinform - air defence downs 137 of 164 Russian drones overnight</a></li>
+<li><a href="https://www.enca.com/news-top-stories/elections-2026-iec-announce-final-results-6pm" target="_blank" rel="noopener">eNCA - IEC to announce final local government election results</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-08-daily.pdf">PDF</a></span>
+</div></div></body></html>
