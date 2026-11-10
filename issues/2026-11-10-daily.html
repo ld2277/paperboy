@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Tuesday, November 10, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Tuesday, November 10, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The AI trade took back most of last week&#x27;s losses in two sessions, and SoftBank posted a one-quarter loss of ¥1.1 trillion on the day its shares rose 14%.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic ships Fable 5.2, and keeps the dangerous one behind a gate</h2>
+<p class="field">What happened</p><p>Anthropic released <a href="https://www.anthropic.com/news/claude-fable-and-mythos-5-2">Claude Fable 5.2 and Mythos 5.2</a> on Monday. Fable 5.2 is generally available on AWS, Google Cloud and Azure at $8 per million input tokens and $40 per million output, with a “fast mode” at double that. Mythos 5.2 stays restricted to organisations vetted through Anthropic's Cyber Verification and Life Sciences Verification programmes. Anthropic's own figures: FrontierSWE v2 up to 69.9% from 56.3% for Fable 5.1, and roughly 55% fewer safeguard blocks — from “early testing”, in its words, and all vendor-reported.</p>
+<p class="field">What it means</p><p>The gate is the news. A lab shipping its strongest cyber model only to screened customers is doing voluntarily what no rule requires, and setting a benchmark competitors will be measured against. The capability jump is large enough to deserve independent replication.</p>
+<p class="field">Watch next</p><p>Third-party reproduction of the FrontierSWE numbers; whether OpenAI or Google gate anything comparably.</p>
+</div>
+<div class="item">
+<h2>Google introduces two more TPUs — four in a single year</h2>
+<p class="field">What happened</p><p>Google announced <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/">TPU 8tx and TPU 8i Max</a> on Monday, in a post by Amin Vahdat, its chief technologist for AI and infrastructure. They join TPU 8t and TPU 8i from April — “the first time we have introduced four TPU systems in a single year”. Google claims 8tx delivers up to twice lower latency than 8t on multi-step agent work at a near-zero performance penalty. Note the verb: introduced, not shipped. TorchTPU, its native PyTorch backend, was open-sourced on 20 October, separately.</p>
+<p class="field">What it means</p><p>Every TPU generation is a slice of demand Nvidia never gets to price. The cadence — four systems in twelve months — should bother Santa Clara more than any single specification does.</p>
+<p class="field">Watch next</p><p>Nvidia&#x27;s Q3 FY2027 results, Tuesday 17 November, 2 p.m. Pacific.</p>
+</div>
+<div class="item">
+<h2>SoftBank, Grab and Sarawak&#x27;s oil company put $1bn behind a five-gigawatt build</h2>
+<p class="field">What happened</p><p>SoftBank Group, Grab and Petroleum Sarawak signed a <a href="https://group.softbank/en/news/press/20261109">joint development agreement</a> in Kuching on Monday to build AI infrastructure in the Malaysian state. The initial commitment is US$1bn — $800m from SoftBank, $100m each from Grab and PETROS — against a long-term target of five gigawatts of compute capacity. SoftBank leads and holds the majority, and funding releases in stages against development and customer-contract milestones. Masayoshi Son: “We are proud to work with Sarawak to advance AI for the benefit of the region and its people.” No phasing or completion date is given.</p>
+<p class="field">What it means</p><p>Five gigawatts is a target, not a plan — roughly the output of five large nuclear reactors. The milestone-gated funding is the candid part of the release, and the reason to treat the headline number as an aspiration.</p>
+<p class="field">Watch next</p><p>Whether any anchor customer is named; Sarawak&#x27;s own power build-out.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>The plaintiffs&#x27; bar lines up behind Nvidia&#x27;s board inquiry</h2>
+<p class="field">What happened</p><p>Nvidia closed down 4.3% at $178.67 on Monday, the one large decliner in a 2.35% up-tape, after confirming its board is investigating chief executive Jensen Huang. Five plaintiffs' firms — Rosen, Levi and Korsinsky, Schall, Bronstein Gewirtz and Grossman, and the Law Offices of Frank R. Cruz — <a href="https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia">announced investor investigations</a>, and Rosen said it is preparing a class action. No complaint had been confirmed filed. The board says it has “no reason to believe” secrets were compromised; China's foreign ministry called the allegations “nothing but smears”.</p>
+<p class="field">What it means</p><p>Stanford&#x27;s Robert Bartlett frames the likely claim as fraud on the market, turning on how Nvidia earlier described the relationship as unremarkable. That makes the company&#x27;s own prior statements the exhibit — a harder problem than the underlying facts.</p>
+<p class="field">Watch next</p><p>A first complaint on the Northern District of California docket; earnings on the 17th.</p>
+</div>
+<div class="item">
+<h2>Taipei adds 7.6% in two days while $10bn leaves the island</h2>
+<p class="field">What happened</p><p>The Taiex <a href="https://focustaiwan.tw/business">closed on Tuesday</a> up 1,050.22 points, or 2.52%, at 42,711.92 on NT$1.00tn of turnover — about 7.6% recovered in two sessions after Monday's 4.94%. On the same day the central bank governor, Yang Chin-long, said foreign institutional investors had moved roughly US$10bn out of Taiwan since 1 November, including stock profits and dividends remitted abroad, which he characterised as normal business activity. Foreign reserves fell US$4.31bn in October to US$596.44bn, which Focus Taiwan attributes to intervention.</p>
+<p class="field">What it means</p><p>Two readings of one market. Equities are rebuilding on a backstop the stabilisation fund authorised before the rally began; the currency and the foreign money are moving the other way. The index is the noisier of the two signals.</p>
+<p class="field">Watch next</p><p>Whether the run of net foreign selling breaks; the Taiwan dollar, NT$32.865 on Tuesday.</p>
+</div>
+<div class="item">
+<h2>TSMC&#x27;s October revenue rose 59.7% year on year</h2>
+<p class="field">What happened</p><p>TSMC <a href="https://investor.tsmc.com/english/monthly-revenue/2026">posted</a> October consolidated revenue of NT$586,890m, up 59.7% on a year earlier and about 14.7% on September — that monthly change is our arithmetic, as the company does not publish one. The ten months to October come to NT$4,485,617m, up 43.3%. These are unaudited monthly revenue figures, not earnings. Taiwan's October exports also set a record, up close to 60% year on year on the finance ministry's count.</p>
+<p class="field">What it means</p><p>A 60% month at TSMC&#x27;s scale is the hardest evidence available that AI orders have not softened, whatever last week&#x27;s selling implied. It is also the number anyone shorting the AI trade now has to explain away.</p>
+<p class="field">Watch next</p><p>November revenue in early December; Nvidia&#x27;s guidance on the 17th.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Wall Street recovers most of last week&#x27;s losses as crude settles 5.85% lower</h2>
+<p class="field">What happened</p><p>The S&amp;P 500 <a href="https://nvdaily.com/associated_press_national/us-stocks-rally-and-recover-most-of-last-weeks-losses-as-oil-prices-swing-lower/article_32f4403f-890d-5b72-a3ce-9d9f0f2dd843.html">closed Monday at 7,549.94</a>, up 2.35%; the Nasdaq composite at 25,253.14, up 2.74%; the Dow at 52,389.75, up 2.15%; the Russell 2000 at 2,840.81, up 3.15%. Brent settled at $92.57, down 5.85%, having been above $112 at the start of the month. Trump told CNN on Sunday that renewed strikes on Iran were “highly unlikely it's going to be necessary” if Tehran signs “a very strong agreement”. AMD rose 13.3%, Constellation Energy 10.5%. The ten-year Treasury yield went to 4.88% from 4.86%.</p>
+<p class="field">What it means</p><p>Cheaper oil does two jobs at once: it cools the inflation print and it prices a lower chance of the Gulf war restarting. That is why a 5.85% fall in crude lifted equities, and lifted small caps most of all.</p>
+<p class="field">Watch next</p><p>October CPI at 8:30 a.m. Eastern this morning.</p>
+</div>
+<div class="item">
+<h2>Asia follows, and today&#x27;s CPI may have no annual rate at all</h2>
+<p class="field">What happened</p><p>The Kospi <a href="https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/">closed up 4.4%</a> at 5,239.13 on Tuesday, the Nikkei 2.9% at 60,459.58, the Hang Seng 0.6% at 24,584.81 and the Shanghai Composite 0.2% at 3,666.12; Indian markets were shut for a holiday. US October CPI is due at 8:30 a.m. Eastern. Economists polled by Reuters expect 0.3% on the month. The 3.9% annual figure being widely quoted is their own estimate rather than the poll's, because the Bureau of Labor Statistics will not publish October 2025 comparison data.</p>
+<p class="field">What it means</p><p>That distinction matters more than the forecast. With the base month missing, there may be no official year-on-year number to beat or miss, which leaves the monthly print — and the Fed&#x27;s reading of it — carrying the whole decision into December.</p>
+<p class="field">Watch next</p><p>The 8:30 release; the FOMC meets 8 and 9 December.</p>
+</div>
+<div class="item">
+<h2>SoftBank loses ¥1.1tn in a quarter and its shares rise 14%</h2>
+<p class="field">What happened</p><p>SoftBank Group <a href="https://group.softbank/en/event/earnings_2026q2">reported</a> a net loss attributable to owners of ¥1,115,337m for the three months to 30 September, about ¥1.1tn, with its Vision Funds segment down ¥81,581m. The six-month loss is smaller, ¥768,007m. Its Tokyo shares closed up 13.9% on Tuesday — but the results were published after the session, so that move tracked Monday's US tech rebound and was not a reaction to the loss. A US$99.6bn valuation for its OpenAI holding is circulating; it appears in none of SoftBank's published documents.</p>
+<p class="field">What it means</p><p>The quarterly figure is largely mark-to-market on a portfolio that fell in a week when everything AI-adjacent fell. Treat it as a price rather than a verdict. The OpenAI number is the one to handle carefully.</p>
+<p class="field">Watch next</p><p>SoftBank&#x27;s earnings presentation and consolidated report, neither posted yet.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Two American disclosures. Nothing we could date inside the window turned up in Europe, India, Latin America, Africa or the Gulf — a genuinely thin day rather than a gap in the sweep.</p>
+<div class="item">
+<h2>Nominal triples to $3bn eight months after its last round</h2>
+<p class="field">What happened</p><p>Nominal, which builds AI-assisted hardware-testing software for defence and aerospace, <a href="https://techcrunch.com/2026/11/09/ai-hardware-startup-nominal-triples-valuation-to-3b-in-8-months/">raised a $240m Series C</a> at a $3bn valuation, led by Lightspeed with Insight Partners co-leading and Sequoia, General Catalyst and Lux Capital returning. That triples the $1bn set by a $155m Series B extension in March. The company claims 80 commercial and government customers, naming only Anduril, and in October won a $71.2m US Air Force STRATFI award that requires matching private money.</p>
+<p class="field">What it means</p><p>The STRATFI structure is the part worth understanding: the Air Force effectively pays a startup to go and raise. It turns a defence-tech round into a procurement signal, which is why these valuations jump in steps rather than drifting upward.</p>
+<p class="field">Watch next</p><p>Confirmation that the STRATFI match has closed.</p>
+</div>
+<div class="item">
+<h2>Fervo&#x27;s geothermal order book reaches $11.9bn</h2>
+<p class="field">What happened</p><p>Fervo Energy disclosed with its third-quarter results that contracted revenue has reached <a href="https://techcrunch.com/2026/11/09/fervo-now-has-12b-in-orders-for-its-geothermal-power-tech">$11.9bn, up from $7.2bn</a> the previous quarter. It now puts the resource at Cape Station in Utah at 8.4GW against outside estimates nearer 4GW; the 396MW Google project there is on track for end-2028, and recent well blocks have reached 50MW against 33MW for the first one completed. Cash stands at $1.9bn against $301.6m of long-term debt. Chief executive Tim Latimer: “We build Cape Station on our schedule. Google can develop a potential data center on their schedule”.</p>
+<p class="field">What it means</p><p>Geothermal&#x27;s constraint was never demand, it was drilling cost per megawatt. Block output rising half again in a year is what turns it into a credible data-centre power source rather than a research programme with a press office.</p>
+<p class="field">Watch next</p><p>The next quarterly order figure; Cape Station&#x27;s 396MW Google tranche at end-2028.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Massie forces the House to decide on impeaching Hegseth</h2>
+<p class="field">What happened</p><p>Thomas Massie went to the House floor on Monday and <a href="https://massie.house.gov/news/documentsingle.aspx?DocumentID=395863">unveiled eight articles of impeachment</a> against defence secretary Pete Hegseth, saying he would file them as a question of the privileges of the House — the form that forces the chamber to act. Three concern the Iran war and the War Powers Resolution of 1973. The others allege “the extrajudicial killings of at least 243 persons aboard seagoing vessels alleged to be smuggling narcotics”, retaliation against Senator Mark Kelly, the operation that seized Nicolás Maduro, and strikes in Yemen the document puts at 224 civilians and 500 to 600 Houthi fighters.</p>
+<p class="field">What it means</p><p>The House has impeached two Cabinet members ever: Belknap in 1876 and Mayorkas, 214-213, in 2024. Speaker Mike Johnson must first rule whether the resolution qualifies, and has said it would be tabled at once — so the vote that matters is procedural. Massie put his own odds at 50-50 in October.</p>
+<p class="field">Watch next</p><p>Tuesday&#x27;s House program lists a possible procedural motion, votes at 5:30 p.m. Eastern; Roll Call says a floor vote could come by Wednesday.</p>
+</div>
+<div class="item">
+<h2>Republicans pick their minority leaders today, with five senators asking to wait</h2>
+<p class="field">What happened</p><p>In the House, <a href="https://abcnews.com/Politics/jordan-scalise-face-off-house-gop-leader-after/story?id=137980555">Jim Jordan faces Steve Scalise</a> for party leader — Mike Johnson is not standing — and Tom Emmer faces August Pfluger for whip; a candidates' forum is set for 9 a.m. and voting from 1:30 to 5:30 p.m., open only to members who won on 3 November. In the Senate, elections were set for 9 a.m., and on Monday five senators — Ron Johnson, Mike Lee, Ted Budd, Rick Scott and John Kennedy — wrote to conference chairman Tom Cotton asking for a delay and a conference meeting, exactly the five signatures the rules require. No one has publicly challenged John Thune.</p>
+<p class="field">What it means</p><p>Losing seven Senate seats and both chambers would normally force an argument. Thune running unopposed while five members call a same-week vote political malpractice suggests the party would rather defer that argument than hold it.</p>
+<p class="field">Watch next</p><p>Both sets of results land today; we will carry them tomorrow.</p>
+</div>
+<div class="item">
+<h2>Mississippi still has no official count, and no recount law</h2>
+<p class="field">What happened</p><p>The Secretary of State has <a href="https://www.sos.ms.gov/elections-voting/election-results">published no 2026 general-election results at all</a> — the page lists only March's primaries. The best figure available is still unofficial: a 2,574-vote lead for Democrat Scott Colom over Cindy Hyde-Smith at 97% of expected vote, unchanged since Monday afternoon, with WLBT reporting it as “more than 2,000”. Mississippi has no automatic recount and no way for a candidate to demand one. A campaign must first show evidence of discrepancies, then either sue county by county or ask the Senate to investigate.</p>
+<p class="field">What it means</p><p>The missing recount law is doing more work here than the margin. A gap this size in a state with no statewide review means the seat turns on affidavit ballots counted by county officials, with nowhere to appeal the arithmetic.</p>
+<p class="field">Watch next</p><p>County certification closes 13 November; mail ballots postmarked by Election Day are accepted through today.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Israel&#x27;s 26th Knesset convenes with no speaker and no majority</h2>
+<p class="field">What happened</p><p>The Knesset <a href="https://www.jpost.com/israel-election-2026/article-914409">convened for its inaugural session</a> on Tuesday, 120 members each rising to declare “I pledge”; President Herzog opened it and handed the chair to the outgoing speaker, Amir Ohana. Gadi Eisenkot's bloc — with Bennett, Lapid, Lieberman and Golan — has agreed to nominate Matan Kahana as speaker, Lieberman for Foreign Affairs and Defense and Liran Avishar Ben-Horin for Finance. Nobody has been elected to any of it yet. The chamber divides Likud 27, Eisenkot's Yashar 21, B'Yachad 12 — Netanyahu's bloc 53, Eisenkot's 48, the Joint List and Ra'am 19 between them.</p>
+<p class="field">What it means</p><p>Neither bloc has 61. Eisenkot&#x27;s 28-day mandate runs to roughly 6 December, and the arithmetic says he cannot reach a majority without either the Arab parties or a haredi defection. That is what the speaker&#x27;s chair is actually a proxy for.</p>
+<p class="field">Watch next</p><p>Committee composition is expected to go to the plenum on Wednesday 11 November.</p>
+</div>
+<div class="item">
+<h2>The CDU nominates Ilse Aigner for the German presidency</h2>
+<p class="field">What happened</p><p>The CDU's federal executive on Monday <a href="https://www.zdfheute.de/politik/deutschland/friedrich-merz-ilse-aigner-kandidatin-bundespraesidentin-100.html">nominated Ilse Aigner</a>, the CSU president of the Bavarian Landtag, as its candidate for federal president, on Friedrich Merz's proposal; the two appeared together in Berlin at midday. Merz said Germany needed a president “mit Würde und mit Herz”. The SPD presidium backed her the same morning, and Green party and parliamentary leaders urged their delegates to do the same. The AfD and Die Linke will each field a candidate. The Bundesversammlung, 1,260 members, meets on 30 January 2027; the CDU, CSU and SPD together hold a majority of about 50 votes.</p>
+<p class="field">What it means</p><p>A CSU politician as head of state, carried by the SPD and tolerated by the Greens, is the broadest consensus German politics has managed in some time. Merkel called the nomination historic: Aigner would be the first woman in the office.</p>
+<p class="field">Watch next</p><p>30 January 2027, and whether Green delegates follow their leadership.</p>
+</div>
+<div class="item">
+<h2>The G7 meets in Paris while the Gulf shipping war stays unverifiable</h2>
+<p class="field">What happened</p><p>G7 foreign ministers met in Paris from Monday, the venue moved from Marseille at short notice, with Ukraine, the Middle East, maritime security in the <a href="https://www.auswaertiges-amt.de/en/aussenpolitik/2809334-2809334">Strait of Hormuz and the Red Sea</a>, and AI's effect on international security on the agenda. European ministers pressed Marco Rubio that no Ukraine settlement can be struck without Europe; Rubio said there had been no progress with Tehran. Overnight into Tuesday Ukraine's air force reported 162 Russian strike drones and one Iskander-M, of which 135 were downed or jammed, with hits at 19 locations; DTEK said power was cut to much of Dnipro and Kamianske. No communiqué has been published.</p>
+<p class="field">What it means</p><p>Europeans are trying to buy a seat at a negotiation they are not in, reportedly resuming in Abu Dhabi this week. Meanwhile a shipping war nobody can verify grinds on: the IRGC said it struck three tankers near Hormuz, Iran&#x27;s own navy described one tanker hitting a mine. Both are a state&#x27;s account of its own operations.</p>
+<p class="field">Watch next</p><p>The reported US-mediated Abu Dhabi talks, Tuesday and Wednesday; any G7 chair&#x27;s statement.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.anthropic.com/news/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic — Introducing Claude Fable 5.2 and Mythos 5.2</a></li>
+<li><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/" target="_blank" rel="noopener">Google — Introducing TPU 8tx and TPU 8i Max</a></li>
+<li><a href="https://group.softbank/en/news/press/20261109" target="_blank" rel="noopener">SoftBank Group — Sarawak joint development agreement</a></li>
+<li><a href="https://group.softbank/en/event/earnings_2026q2" target="_blank" rel="noopener">SoftBank Group — Q2 FY2026 earnings materials</a></li>
+<li><a href="https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia" target="_blank" rel="noopener">TechCrunch — The race is on to sue Nvidia</a></li>
+<li><a href="https://focustaiwan.tw/business" target="_blank" rel="noopener">Focus Taiwan — business index (Taiex close, central bank)</a></li>
+<li><a href="https://investor.tsmc.com/english/monthly-revenue/2026" target="_blank" rel="noopener">TSMC — monthly revenue, 2026</a></li>
+<li><a href="https://nvdaily.com/associated_press_national/us-stocks-rally-and-recover-most-of-last-weeks-losses-as-oil-prices-swing-lower/article_32f4403f-890d-5b72-a3ce-9d9f0f2dd843.html" target="_blank" rel="noopener">AP — US stocks rally and recover most of last week&#x27;s losses</a></li>
+<li><a href="https://www.ksat.com/business/2026/11/10/asian-stocks-rise-after-technology-shares-advance-on-wall-street-ahead-of-us-inflation-data/" target="_blank" rel="noopener">AP — Asian stocks rise ahead of US inflation data</a></li>
+<li><a href="https://www.bls.gov/schedule/news_release/cpi.htm" target="_blank" rel="noopener">BLS — CPI news release schedule</a></li>
+<li><a href="https://techcrunch.com/2026/11/09/ai-hardware-startup-nominal-triples-valuation-to-3b-in-8-months/" target="_blank" rel="noopener">TechCrunch — Nominal triples valuation to $3bn</a></li>
+<li><a href="https://techcrunch.com/2026/11/09/fervo-now-has-12b-in-orders-for-its-geothermal-power-tech" target="_blank" rel="noopener">TechCrunch — Fervo&#x27;s $12bn in geothermal orders</a></li>
+<li><a href="https://massie.house.gov/UploadedFiles/Hegseth_Articles_of_Impeachment.pdf" target="_blank" rel="noopener">Rep. Thomas Massie — articles of impeachment (PDF)</a></li>
+<li><a href="https://rollcall.com/2026/11/09/massie-moves-to-force-hegseth-impeachment-vote/" target="_blank" rel="noopener">Roll Call — Massie moves to force Hegseth impeachment vote</a></li>
+<li><a href="https://rollcall.com/2026/11/09/calls-to-delay-senate-gop-leadership-elections/" target="_blank" rel="noopener">Roll Call — Calls to delay Senate GOP leadership elections</a></li>
+<li><a href="https://abcnews.com/Politics/jordan-scalise-face-off-house-gop-leader-after/story?id=137980555" target="_blank" rel="noopener">ABC News — Jordan and Scalise face off for House GOP leader</a></li>
+<li><a href="https://www.senate.gov/senators/leadership.htm" target="_blank" rel="noopener">US Senate — leadership of the 119th Congress</a></li>
+<li><a href="https://www.sos.ms.gov/elections-voting/election-results" target="_blank" rel="noopener">Mississippi Secretary of State — election results</a></li>
+<li><a href="https://www.wlbt.com/2026/11/10/razor-thin-us-senate-race-mississippi-has-no-automatic-recount-law/" target="_blank" rel="noopener">WLBT — Mississippi has no automatic recount law</a></li>
+<li><a href="https://www.jpost.com/israel-election-2026/article-914409" target="_blank" rel="noopener">Jerusalem Post — the 26th Knesset&#x27;s inaugural session</a></li>
+<li><a href="https://www.israelhayom.com/2026/11/10/change-bloc-agrees-to-name-matan-kahana-knesset-speaker/" target="_blank" rel="noopener">Israel Hayom — bloc agrees on Matan Kahana for speaker</a></li>
+<li><a href="https://www.zdfheute.de/politik/deutschland/friedrich-merz-ilse-aigner-kandidatin-bundespraesidentin-100.html" target="_blank" rel="noopener">ZDFheute — Merz proposes Aigner for federal president</a></li>
+<li><a href="https://www.auswaertiges-amt.de/en/aussenpolitik/2809334-2809334" target="_blank" rel="noopener">German Federal Foreign Office — G7 foreign ministers in Paris</a></li>
+<li><a href="https://euromaidanpress.com/2026/11/10/russia-aims-to-split-ukraine-along-the-dnipro-ukraine-says-moscows-strikes-cut-power-in-dnipro-and-kamianske/" target="_blank" rel="noopener">Euromaidan Press — overnight strikes, Dnipro and Kamianske</a></li>
+<li><a href="https://www.middleeastmonitor.com/20261109-iranian-army-says-oil-tanker-catches-fire-after-hitting-mine-in-strait-of-hormuz/" target="_blank" rel="noopener">Middle East Monitor — Iranian navy on a tanker fire in Hormuz</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-10-daily.pdf">PDF</a></span>
+</div></div></body></html>
