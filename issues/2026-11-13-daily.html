@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Friday, November 13, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Friday, November 13, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Jensen Huang has resigned from Nvidia, the board acted a day before it said so, and the company has given no reason at all.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic&#x27;s listing finally has dates, and they are in a filing rather than a leak</h2>
+<p class="field">What happened</p><p>An issuer free writing prospectus dated 11 November, filed under Rule 433 and attaching a BaFin-approved European retail prospectus, puts a timetable on Anthropic's IPO for the first time: the offer period expires on or about <strong>18 November</strong> at 10:00 a.m. ET, trading in Class A stock begins <strong>19 November</strong> on the Nasdaq Global Select Market under the ticker <strong>ANT</strong>, and the offering completes 20 November. The base deal is 825,000,000 shares, of which up to 80,135,135 are carved out for European retail buyers, with a greenshoe of up to 123,750,000 on top. <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026073040/anthropicpbc-fwpxeeaprospea.htm">The document</a> calls the $70–78 range “estimated” and says it may be varied.</p>
+<p class="field">What it means</p><p>Until Thursday those dates were CNBC citing people familiar with the matter. They are now in a document the company filed, which is a different kind of fact. It is still not a priced deal: the same filing states that “the underwriters have not agreed to underwrite the shares of Class A common stock offered in the global offering.” Read it as a calendar committed to in public, not as money raised.</p>
+<p class="field">Watch next</p><p>Books close Wednesday 18 November at 10 a.m. ET; the final US price is due the same day.</p>
+</div>
+<div class="item">
+<h2>Four nonprofits sued five AI developers and asked a court to stop model development</h2>
+<p class="field">What happened</p><p>Public Citizen, the Heat Initiative, the Alliance for Secure AI and the Irreplaceable Education Fund filed suit Thursday in the <strong>Superior Court of California, County of San Francisco</strong> — a state court — against Anthropic, Google, Meta, OpenAI and SpaceXSI, asking for an injunction against further development of advanced AI models. The pleaded cause of action is California's Unfair Competition Law. It is brought by <strong>Matthew Platkin</strong>, the former New Jersey attorney general, who said in <a href="https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/">the plaintiffs' announcement</a> that “AI companies are causing a public nuisance.”</p>
+<p class="field">What it means</p><p>The remedy asked for — stop building — is far outside what courts normally grant, and the choice of a state consumer-protection statute is deliberate: California&#x27;s unfair-competition law is broad, and a state court is not the forum the defendants would choose. Treat it as the opening of an argument, not a threat to anyone&#x27;s roadmap. The only account of the filing so far is the plaintiffs&#x27; own.</p>
+<p class="field">Watch next</p><p>A docket number, and the defendants&#x27; first filings — a demurrer is the likely form.</p>
+</div>
+<div class="item">
+<h2>Commerce is reported to be closing the offshore chip-rental loophole</h2>
+<p class="field">What happened</p><p><em>The Information</em>, followed by Reuters citing three people, reports that Commerce is finalising a rule to stop Chinese firms renting advanced Nvidia chips through data centres in third countries. As described, moving Blackwell-class or newer parts into seven countries — Singapore, Malaysia, Thailand, Indonesia, Brazil, Norway and South Africa — would need a US export licence, while US-operated data centres abroad would be exempt if they block remote access from China and Russia. <strong>No BIS document and no Federal Register notice exists.</strong></p>
+<p class="field">What it means</p><p>Export controls stop chips crossing borders; they have never stopped anyone logging in. Renting compute offshore is the remaining legal route, and closing it would be the first control aimed at the service rather than the hardware. The seven-country list is a map of where the capacity has been built. Note how thin the sourcing is: two outlets, both citing people rather than documents.</p>
+<p class="field">Watch next</p><p>A Federal Register notice — until one appears, nothing has changed.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Jensen Huang has resigned. Nvidia&#x27;s finance chief is running the company.</h2>
+<p class="field">What happened</p><p>Nvidia said on Thursday morning that Huang “has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately.” <a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">The release</a> is titled “NVIDIA Announces CEO Transition” and <strong>gives no reason</strong> — none for the departure, no future role, no severance. <strong>Colette Kress</strong>, chief financial officer since 2013, becomes interim CEO while remaining CFO. <strong>Harvey C. Jones</strong>, a director since 1993 and a former chief executive of Synopsys, becomes the company's first-ever Chair. <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm">The 8-K</a> puts the date of earliest event at <strong>11 November</strong>: the board acted Wednesday and announced at 8:48 a.m. ET Thursday.</p>
+<p class="field">What it means</p><p>This closes the story we have reported all week as unresolved — a board that had met without deciding. It decided. What it did not do is say why, and the silence is the loudest part: the 8-K is equally blank, stating neither a reason nor the usual assurance that there was no disagreement with the company. Jones&#x27;s statement is pure continuity — “The Board has full confidence in Colette and the leadership team, and we expect the company&#x27;s operations, customer commitments and product roadmap to continue without interruption” — which is what a board says when the cause is the person, not the business. Nvidia&#x27;s word is “resigned”; others have written “ousted”. Only one of those is in a document.</p>
+<p class="field">Watch next</p><p>Q3 results Tuesday 17 November at about 1:20 p.m. PT, which Nvidia says stand “as previously scheduled”; and a later filing on Kress&#x27;s interim pay, which the 8-K does not disclose.</p>
+</div>
+<div class="item">
+<h2>The selling was in one ticker, not in chips</h2>
+<p class="field">What happened</p><p>Nvidia fell as much as <strong>14.35%</strong>, to $148.80 at 9:31 a.m. ET, and <a href="https://www.stocktitan.net/articles/stock-market-today-live-november-12-2026">closed down 4.34% at $166.19</a> against Wednesday's $173.73; it was already down 8.48% a minute before the announcement crossed. Everything else went the other way: AMD closed up 5.86%, Broadcom up 5.54%. The PHLX Semiconductor Index finished at <strong>10,506.67</strong> on <a href="https://indexes.nasdaqomx.com/index/overview/SOX">the operator's own page</a>, about half a percent below Wednesday's 10,564.11. Taipei took the first hit — the Taiex closed Thursday at 43,091.87, down 2.63%, with <a href="https://www.taiwannews.com.tw/news/6475787">TSMC down 2.3% at NT$2,340</a> — then <a href="https://focustaiwan.tw/business/202611130009">recovered Friday</a> to 43,675.12, up 1.35%.</p>
+<p class="field">What it means</p><p>A 14% intraday hole that closes at −4% is a market deciding the news is about a man rather than a franchise, and AMD and Broadcom rising on the same tape say it louder. The one number that matters is still unprinted: what Nvidia actually sold last quarter.</p>
+<p class="field">Watch next</p><p>Consensus for Tuesday is roughly $109bn of revenue against company guidance of $108bn plus or minus 2%, excluding China data-centre compute.</p>
+</div>
+<div class="item">
+<h2>Two congressional tracks opened on the day he quit</h2>
+<p class="field">What happened</p><p>House Foreign Affairs chairman <strong>Brian Mast</strong> said Thursday that Huang had agreed to a closed-door, transcribed session with Congress. The agreement was given <strong>Wednesday, before the resignation</strong>, and disclosed hours after it; no committee has confirmed it and no date is fixed. Separately, Rep. Richard Neal and Sen. Ron Wyden, the ranking Democrats on Ways and Means and Senate Finance, <a href="https://democrats-waysandmeans.house.gov/media-center/press-releases/neal-wyden-begin-investigate-trump-administrations-scheme-take-cut">wrote to Commerce Secretary Howard Lutnick</a> seeking records on the arrangement under which advanced Nvidia chips are imported into the US, charged a 25% Section 232 tariff, then licensed onward to Chinese buyers.</p>
+<p class="field">What it means</p><p>Neal and Wyden call it an “ostensible attempt to mask an unconstitutional export tax as a national security tariff action—benefitting both Nvidia and the Chinese government”. As ranking members they can ask for documents; they cannot compel. Their letter notes Nvidia and Huang have donated at least $26 million to the president&#x27;s pet projects. And a committee invitation to a sitting chief executive is leverage — as of Thursday he is a private citizen.</p>
+<p class="field">Watch next</p><p>The 18 November briefing date from the original request, and whether any committee confirms an appearance now that he has no title.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Stocks slipped; the 10-year came back above 5%</h2>
+<p class="field">What happened</p><p>Thursday's closes: the S&amp;P 500 at <strong>7,592.40</strong>, the Dow at 52,297.09 and the Nasdaq composite at 25,366.09, each down about four tenths of a percent, with the Russell 2000 off 1.7% at 2,799.06. The bond market, shut Wednesday for Veterans Day, reopened to a jump: <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">Treasury's par yield curve</a> has the 10-year at <strong>5.10%</strong> on 12 November against 4.98% on 10 November. Thursday's data was weak: <a href="https://www.nar.realtor/newsroom/existing-home-sales-decreased-5-5-percent-october-nar-report">existing-home sales fell 5.5%</a> in October to a 3.75m annual rate, the lowest since August 2010, and <a href="https://www.dol.gov/ui/data.pdf">initial jobless claims</a> rose 9,000 to 200,000.</p>
+<p class="field">What it means</p><p>Twelve basis points on the 10-year is a real move, but it spans a two-session gap rather than a day, so resist reading it as a reaction to any one thing. The housing print is the more interesting one: sales at a 2010 low with the median price still up 0.4% on the year is a market clearing by volume rather than by price. NAR&#x27;s Lawrence Yun put the cause at mortgage rates “at their highest levels since 2000” — Freddie Mac&#x27;s October monthly average was 7.33%, against 6.25% a year ago.</p>
+<p class="field">Watch next</p><p>Next week&#x27;s claims print, and whether the 10-year holds above 5%.</p>
+</div>
+<div class="item">
+<h2>Oil jumped 3.3% on claimed attacks on Saudi energy sites</h2>
+<p class="field">What happened</p><p>Brent settled Thursday at <strong>$95.82</strong>, up 3.3%, and WTI at $88.74, up 2.6%; both were still down about 2.5% on the week. The move followed claims by Houthi military spokesman <strong>Yahya Saree</strong> that the group had struck a pumping station on Saudi Arabia's east–west oil pipeline, a facility at Yanbu on the Red Sea and an Aramco building in Riyadh. <a href="https://www.aljazeera.com/news/2026/11/12/yemens-houthis-renew-strikes-on-saudi-arabia-as-unsc-extends-sanctions">Neither Saudi Arabia nor Aramco has confirmed damage at any of the three</a>. The one corroborated element runs the other way: coalition spokesman Maj. Gen. Turki al-Maliki announced interceptions over Riyadh and the Eastern Province.</p>
+<p class="field">What it means</p><p>The price moved on an attacker&#x27;s press release. That is the whole story: a 3.3% settlement built on claims the companies and government supposedly hit have not acknowledged. If damage is confirmed at Yanbu or on the east–west line — which exists precisely to move crude without passing Hormuz — the move will look small. If nothing is confirmed, it unwinds.</p>
+<p class="field">Watch next</p><p>Any Aramco or Saudi energy ministry statement, and loadings data from Yanbu.</p>
+</div>
+<div class="item">
+<h2>The DAX touched 27,000 for the first time and could not hold it</h2>
+<p class="field">What happened</p><p>The DAX closed Thursday at <strong>26,771.88</strong>, up 0.41% and a fourth straight daily gain — but <a href="https://ad-hoc-news.de/boerse/news/marktberichte/dax-schliesst-bei-26-771-88-punkten-rekord-ueber-27-000-im-handel/70503404">the session high was 27,001.67</a>, the first time the index has traded above 27,000, and it gave the round number back before the close. The CAC 40 closed up 0.34% at 8,361.36 and the FTSE 100 up 0.25% at 10,863.09. Asia on Friday, from an AFP wrap <a href="https://www.malaymail.com/news/money/2026/11/13/asian-markets-turn-negative-as-early-rally-fades-after-huang-downfall/243133">filed after every close</a>, went the other way: Tokyo and Taipei finished higher, Seoul ended down about 1%, Hong Kong and Shanghai fell.</p>
+<p class="field">What it means</p><p>Europe rose on the day American chips fell, which is the clearest evidence yet that this week&#x27;s selling is a single-name event rather than a repricing of the AI trade. The round-number failure is the detail to keep: four up days and a first touch of 27,000 that could not survive the afternoon is a market with buyers but no conviction.</p>
+<p class="field">Watch next</p><p>Whether the DAX closes above 27,000 next week.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing new. The two rounds circulating today both failed their dates — a $130m seed for Dulo, the Sebastian Thrun engineering-models company, was actually announced at the end of October, and Oura&#x27;s $625m acquisition of Counsel Health was Tuesday. Neither belongs in a Friday brief, and padding the section with them would be worse than leaving it empty.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>A discharge petition forced the Star Act to the floor, and it passed 392–18</h2>
+<p class="field">What happened</p><p>The House passed <strong>H.R. 2102, the Major Richard Star Act</strong>, on Thursday morning, <a href="https://clerk.house.gov/votes/membervotes">392–18</a>. It ends the dollar-for-dollar offset forcing combat-injured veterans medically retired with fewer than 20 years of service to give up military retirement pay against their VA disability compensation — roughly 59,000 people. It reached the floor over leadership objection: Mark Takano's discharge petition hit 218 signatures on 15 September, with Rep. Nancy Mace providing the decisive one; the House agreed to discharge 245–175 on Wednesday, then adopted the rule 271–135 before passing the bill.</p>
+<p class="field">What it means</p><p>The three tallies tell the story in order. A discharge petition is how a majority of members overrules its own leadership on what gets a vote, and it almost never works — signatures are public and the pressure to withhold them is intense. Then the bill passed 392–18. A measure with that much support had been kept off the floor for years, which is the real finding: the obstacle was never the votes.</p>
+<p class="field">Watch next</p><p>The Senate, where the companion bill S. 1032 sits in Armed Services and earlier attempts to pass it by unanimous consent were blocked.</p>
+</div>
+<div class="item">
+<h2>Mississippi&#x27;s deadline today is for counties, not for the state</h2>
+<p class="field">What happened</p><p>Friday 5:00 p.m. is the deadline for Mississippi's counties to send results to the secretary of state — not the date the state certifies the Senate race. Secretary of State <strong>Michael Watson</strong> said <a href="https://www.mpbonline.org/blogs/news/final-results-in-mississippi-us-senate-race-incoming-with-ballot-deadlines-passed/">in a post on Tuesday</a> that 76 counties had uploaded <em>uncertified</em> results and only four had certified theirs: “these counties have had ten days to do that.” More than 18,000 affidavit ballots had been processed. Scott Colom's lead was reported at about 3,100 votes on Wednesday morning and 4,404 on the Mississippi Free Press liveblog by Thursday.</p>
+<p class="field">What it means</p><p>Provisional, uncertified and certified are three different states, and coverage keeps merging them. Mississippi is in the second: the counting is done in most places, the paperwork is not. The AP called the race for Colom on Tuesday and Hyde-Smith conceded, so nothing in the sequence is disputed — but the state has produced no official number, and anyone quoting a precise margin today is quoting a liveblog.</p>
+<p class="field">Watch next</p><p>County returns at 5 p.m. today, then the State Board of Election Commissioners, which certifies separately and later.</p>
+</div>
+<div class="item">
+<h2>The judicial sprint, one name at a time</h2>
+<p class="field">What happened</p><p>The Senate convened at noon Thursday and did one thing: it invoked cloture 50–27 on <strong>Gregory Carl Cook</strong> for the Northern District of Alabama, then confirmed him 49–27, <a href="https://www.periodicalpress.senate.gov/thursday-november-12-2026/">per the Senate Periodical Press Gallery</a>. That is one of the 25 district and circuit nominations Majority Leader John Thune has said he means to clear before the chamber leaves for the year.</p>
+<p class="field">What it means</p><p>A full day of floor time for one district judge is the arithmetic of the sprint: cloture, ripening time, confirmation vote, repeat. At that rate the stated target needs most of the remaining session, and almost nothing else moves while it runs — which matters with funding expiring on 11 December.</p>
+<p class="field">Watch next</p><p>How many of the 25 clear before the December recess, and when funding returns to the floor.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Iran says it destroyed a US radar in Bahrain. Washington and Manama have said nothing.</h2>
+<p class="field">What happened</p><p>Iran's Revolutionary Guard said its Aerospace Force had “targeted and destroyed” a US early-warning radar installation in Bahrain, framing it as retaliation for a strike on a telecommunications tower in Sirik, in Hormozgan province. The wording comes from <em>Fars</em>, an IRGC-affiliated agency; the statement carried by <em>Tasnim</em> adds: “Should these violations and acts of aggression recur, the IRGC Aerospace Force stands in full readiness to engage without limits.” <a href="https://www.aljazeera.com/news/2026/11/13/iran-says-it-struck-us-radar-site-in-bahrain">There has been no comment from Washington or Manama</a> — no confirmation, no denial, no damage assessment. Bahrain is reported to have requested an urgent Security Council session; that rests on a single wire, and we cannot establish any meeting was held.</p>
+<p class="field">What it means</p><p>Every element here is a belligerent&#x27;s account of its own operation and should be read that way until something independent appears. The claim matters regardless of whether the radar was hit: Bahrain hosts the US Fifth Fleet, and an openly declared Iranian strike on a Gulf state housing American forces is a different order of escalation from attacks on shipping. The silence from the Pentagon and Manama is itself information, though not yet interpretable.</p>
+<p class="field">Watch next</p><p>Any CENTCOM or Bahraini statement, and whether the Security Council actually meets.</p>
+</div>
+<div class="item">
+<h2>Kushner and Witkoff saw Putin, then Zelensky, and Europe is being let into the room</h2>
+<p class="field">What happened</p><p>After the Abu Dhabi round closed without a breakthrough, Jared Kushner and Steve Witkoff met Vladimir Putin at the Kremlin, then met Volodymyr Zelensky in Ireland on Thursday evening, on the margins of the European Political Community summit in Dublin. Kushner then posted that “Both sides have now agreed to expand the next round of negotiations to include our European partners,” and that the US is working towards what would be the largest prisoner exchange of the war — <strong>he gave no figure</strong>. Overnight into Friday, Russia launched 117 drones, of which <a href="https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html">Ukraine's air force says 80 were downed or suppressed</a>; a Kyiv hospital was hit and caught fire.</p>
+<p class="field">What it means</p><p>Letting European governments into the round is the concession Kyiv has sought since the talks restarted, and it costs Washington little. The prisoner exchange is the tell: it is the one deliverable both sides can agree without touching territory, which is where every round has stalled. Nothing this week moved the line on Donbas, and the strikes continued through the diplomacy, as they have throughout.</p>
+<p class="field">Watch next</p><p>The Coalition of the Willing meeting in Berlin next week, and a number attached to the exchange.</p>
+</div>
+<div class="item">
+<h2>The Dutch coalition is in crisis talks nine months in</h2>
+<p class="field">What happened</p><p>Prime Minister <strong>Rob Jetten</strong> called an urgent meeting with his coalition partners' leaders for Friday after parliament passed a tax package on Thursday night in which his own D66 and the Christian Democrats backed opposition amendments while the VVD, the third governing party, voted against. <a href="https://www.irishexaminer.com/world/arid-41937138.html">Jetten said the coalition needs a serious fresh start</a> and that nobody is waiting for new elections; VVD parliamentary leader Ruben Brekelmans said he had not expected his partners to turn so sharply left. The government has <strong>not</strong> fallen — this is an attempt to stop it falling.</p>
+<p class="field">What it means</p><p>A minority government whose own parties vote with the opposition on tax has stopped being a coalition in anything but name. The Netherlands has held four general elections in a decade, and Jetten&#x27;s explicit appeal against another is an admission of how close this is. The VVD is the party with the decision to make.</p>
+<p class="field">Watch next</p><p>Whether the VVD stays in after Friday&#x27;s meeting.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener">NVIDIA — NVIDIA Announces CEO Transition</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm" target="_blank" rel="noopener">SEC — NVIDIA Form 8-K, Items 5.02 and 9.01</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026073040/anthropicpbc-fwpxeeaprospea.htm" target="_blank" rel="noopener">SEC — Anthropic free writing prospectus (Rule 433)</a></li>
+<li><a href="https://democrats-waysandmeans.house.gov/media-center/press-releases/neal-wyden-begin-investigate-trump-administrations-scheme-take-cut" target="_blank" rel="noopener">Ways and Means Democrats — Neal and Wyden letter to Commerce</a></li>
+<li><a href="https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/" target="_blank" rel="noopener">TechCrunch — Huang agrees to testify before Congress</a></li>
+<li><a href="https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/" target="_blank" rel="noopener">Public Citizen — nonprofits sue five AI developers</a></li>
+<li><a href="https://indexes.nasdaqomx.com/index/overview/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index (SOX)</a></li>
+<li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-12-2026" target="_blank" rel="noopener">StockTitan — market tape, 12 November</a></li>
+<li><a href="https://www.taiwannews.com.tw/news/6475787" target="_blank" rel="noopener">Taiwan News — Taiex and TSMC, Thursday close</a></li>
+<li><a href="https://focustaiwan.tw/business/202611130009" target="_blank" rel="noopener">Focus Taiwan — Taiex, Friday close</a></li>
+<li><a href="https://krmg.com/2026/11/12/how-major-us-stock-indexes-fared-thursday-11-12-2026/" target="_blank" rel="noopener">AP — how major US stock indexes fared, Thursday</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.nar.realtor/newsroom/existing-home-sales-decreased-5-5-percent-october-nar-report" target="_blank" rel="noopener">NAR — existing-home sales, October</a></li>
+<li><a href="https://www.dol.gov/ui/data.pdf" target="_blank" rel="noopener">Department of Labor — unemployment insurance weekly claims</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/12/yemens-houthis-renew-strikes-on-saudi-arabia-as-unsc-extends-sanctions" target="_blank" rel="noopener">Al Jazeera — Houthis renew strikes on Saudi Arabia</a></li>
+<li><a href="https://ad-hoc-news.de/boerse/news/marktberichte/dax-schliesst-bei-26-771-88-punkten-rekord-ueber-27-000-im-handel/70503404" target="_blank" rel="noopener">dpa-AFX via ad-hoc-news — DAX closing report</a></li>
+<li><a href="https://www.malaymail.com/news/money/2026/11/13/asian-markets-turn-negative-as-early-rally-fades-after-huang-downfall/243133" target="_blank" rel="noopener">AFP via Malay Mail — Asian markets, Friday</a></li>
+<li><a href="https://clerk.house.gov/votes/membervotes" target="_blank" rel="noopener">Clerk of the House — member votes, roll calls 320, 322, 323</a></li>
+<li><a href="https://democrats-veterans.house.gov/news/press-releases/house-passes-major-richard-star-act-ending-the-wounded-veterans-tax" target="_blank" rel="noopener">House Veterans&#x27; Affairs Democrats — House passes the Major Richard Star Act</a></li>
+<li><a href="https://www.mpbonline.org/blogs/news/final-results-in-mississippi-us-senate-race-incoming-with-ballot-deadlines-passed/" target="_blank" rel="noopener">MPB — Mississippi ballot deadlines</a></li>
+<li><a href="https://www.periodicalpress.senate.gov/thursday-november-12-2026/" target="_blank" rel="noopener">Senate Periodical Press Gallery — Thursday 12 November</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/13/iran-says-it-struck-us-radar-site-in-bahrain" target="_blank" rel="noopener">Al Jazeera — Iran says it struck a US radar site in Bahrain</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4184168-air-defense-downs-80-of-117-russian-drones-launched-overnight.html" target="_blank" rel="noopener">Ukrinform — air defence downs 80 of 117 drones</a></li>
+<li><a href="https://www.themoscowtimes.com/2026/11/13/kushner-says-us-working-toward-largest-prisoner-exchange-of-russias-war-in-ukraine-a94249" target="_blank" rel="noopener">The Moscow Times — Kushner on a prisoner exchange</a></li>
+<li><a href="https://www.irishexaminer.com/world/arid-41937138.html" target="_blank" rel="noopener">Irish Examiner (AP) — Dutch PM calls crisis talks</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-13-daily.pdf">PDF</a></span>
+</div></div></body></html>
