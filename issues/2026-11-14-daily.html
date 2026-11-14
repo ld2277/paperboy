@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Saturday, November 14, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Saturday, November 14, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The FAA grounded every departing flight in the United States for four hours on Friday evening, and the Transportation Secretary blames 1980s copper wire.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>China’s best open models look like they were trained on chips it cannot legally buy</h2>
+<p class="field">What happened</p><p>TechCrunch <a href="https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/">reported on Friday</a> that the leading open-weight models from DeepSeek, Moonshot AI, MiniMax and Ant Group carry what one researcher calls “fingerprints” of training on Nvidia Blackwell chips — silicon barred from export to China. The analysis is by Will DePue, a former OpenAI researcher now at the nonprofit Unemployment Labs, and it is inference from published model weights, not a seizure or a filing. One outlet has it. For scale: Epoch AI estimates roughly 2 million advanced chips reached China across 2024 and 2025 by destination-obscuring routes.</p>
+<p class="field">What it means</p><p>If it holds up, it collapses the premise the export-control architecture rests on. The controls would not have slowed China’s frontier models; they would only have moved the paperwork. It also hands Congress the argument that routing H200s so the US can claim a 25% tariff is leakage dressed as policy.</p>
+<p class="field">Watch next</p><p>Trump meets Xi next week at the APEC summit in Shenzhen. And whether anyone produces a seizure or a Commerce finding to replace a weights analysis.</p>
+</div>
+<div class="item">
+<h2>OpenAI’s agents can now pay</h2>
+<p class="field">What happened</p><p>OpenAI <a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/">launched ChatGPT Wallet</a> on Friday, letting its agents complete purchases rather than only recommend them. A user adds a card once; at checkout the Wallet charges it through a payment token, so card details reach neither the agent nor the merchant, while shipping details go to the retailer. Approval is by Face ID or fingerprint. It is United States only, limited to a subset of ChatGPT Pro subscribers aged 18 and over. Card rewards and dispute protections survive. Spending limits and purchase pre-approval are promised later.</p>
+<p class="field">What it means</p><p>The constraint on agentic shopping was never the model. It was that nobody would hand a model a card, and tokenised payment is how that gets solved. The retailers’ response matters more than the launch: DoorDash and Uber both report very few agent-placed orders, and Amazon bans agents outright.</p>
+<p class="field">Watch next</p><p>Whether spending limits ship before the first widely-reported mis-purchase. And which retailers sign OpenAI’s new commerce playbook.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>The chips handed back the rotation trade</h2>
+<p class="field">What happened</p><p>Friday was a split tape. The Dow closed up 0.1% while semiconductors were dumped. The PHLX Semiconductor Index <a href="https://indexes.nasdaqomx.com/index/overview/SOX">finished at 10,146.32</a>, down 3.4% from Thursday — that percentage is our own arithmetic, because the index operator’s change field renders as 0.00%, a fault we have now logged three times. Nvidia <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html">closed at $162.85</a>, down 2.01%. AMD and Broadcom, both sharply higher on Thursday on the rotate-out-of-Nvidia trade, reversed hard — but the day’s percentages for both are contested across four outlets and we are printing neither.</p>
+<p class="field">What it means</p><p>Thursday’s reading was that Jensen Huang’s exit was Nvidia’s problem and its rivals’ gift. Friday said otherwise. What is being repriced is not one company’s succession but the durability of US chip policy toward China, and that is a sector-wide input rather than a single-name one.</p>
+<p class="field">Watch next</p><p>Nvidia’s third quarter, Tuesday at about 1:20 p.m. PT, against guidance of $108bn plus or minus 2% that excludes China data-centre compute.</p>
+</div>
+<div class="item">
+<h2>Two chambers want Huang, and the Senate wants the Commerce Secretary too</h2>
+<p class="field">What happened</p><p>Senate Banking chair Tim Scott sent letters on Thursday requesting testimony from Huang — who had resigned that morning — and from Commerce Secretary Howard Lutnick, posting that “The American people deserve answers.” A US official <a href="https://www.cbsnews.com/news/howard-lutnick-scott-bessent-nvidia-megaspeed-testimony/">told CBS News</a> Lutnick has agreed to appear on 10 December; neither Commerce nor the committee has confirmed that, and it rests on one outlet and one unnamed official, so treat the date as unconfirmed. On the House side three Republican-led committees have demanded closed-door testimony and threatened a subpoena. None has issued one.</p>
+<p class="field">What it means</p><p>The resignation removed the company’s shield without removing the question, which was never about an affair. It is about the chips Megaspeed bought — more than $4.8bn worth over roughly two years, per Al Jazeera — and who in Washington signed off.</p>
+<p class="field">Watch next</p><p>Whether the committee itself confirms 10 December. Whether a House subpoena actually issues, or the threat was the point.</p>
+</div>
+<div class="item">
+<h2>Taipei’s record week, and TSMC’s four government paymasters</h2>
+<p class="field">What happened</p><p>Taiwan’s market swung from a record weekly loss to a record weekly gain. The TAIEX <a href="https://focustaiwan.tw/business/202611130009">closed Friday at 43,675.12</a>, up 1.35%, for a weekly rise of 10.01% that ended a four-week losing streak. TSMC closed at NT$2,350, up 0.43% — one source, Taiwan News staff copy. Separately, TSMC has taken NT$167.6bn in grants from the United States, Japan, Germany and China in the first nine months of the year, 2.3 times the same period last year, almost all of it in the third quarter. It is also <a href="https://www.taiwannews.com.tw/news/6476115">starting a US$500m venture fund</a> for chip startups.</p>
+<p class="field">What it means</p><p>The Taipei rally and the US chip selloff happened on the same calendar day, which tells you the American repricing arrived after Taipei shut. Expect it Monday. The subsidy figure is the more durable fact: TSMC is being paid at scale by four governments at once, three of them hedging against the fourth.</p>
+<p class="field">Watch next</p><p>Monday’s open in Taipei. MSCI raised Taiwan’s weighting in its Emerging Markets index to 29.01%, effective after the 30 November close.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>A winning week, and a long end that will not stop selling</h2>
+<p class="field">What happened</p><p>Friday closed mixed and the broad measures lower: the S&amp;P 500 at <a href="https://krmg.com/2026/11/13/how-major-us-stock-indexes-fared-friday-11-13-2026/">7,561.67</a>, down 0.4%; the Nasdaq Composite 25,136.27, down 0.9%; the Russell 2000 2,790.49, down 0.3%; the Dow the only gainer at 52,347.55. All four still finished the week up, the S&amp;P by 2.5%. Treasuries went the other way. The <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">10-year par yield</a> rose five basis points (five hundredths of a percentage point) to 5.15%, the 30-year to 5.47%, the two-year to 4.88%. The two-to-ten spread widened to 27 basis points from 24.</p>
+<p class="field">What it means</p><p>Equities had a good week by recovering from a bad one, which is not the same thing as conviction. The bond market is the better tell: a 10-year at 5.15% with a steepening curve is the market pricing more term premium, not more growth — a problem for exactly the long-duration assets that led the rebound.</p>
+<p class="field">Watch next</p><p>Whether the 10-year holds above 5.15%. It was 4.98% on Tuesday, so this is a three-day move, not yet a trend.</p>
+</div>
+<div class="item">
+<h2>Frankfurt pauses a day after touching 27,000</h2>
+<p class="field">What happened</p><p>The DAX <a href="https://www.ad-hoc-news.de/boerse/news/marktberichte/aktien-frankfurt-schluss-dax-trotzt-nasdaq-schwaeche-pause-nach-rekord/70506031">slipped 0.08% to 26,749.95</a>, a day after touching 27,001.67 intraday — above 27,000 for the first time ever — and failing to hold it. It still carried a 3.6% weekly gain and shrugged off the Nasdaq’s weakness. London closed at a three-month high, the FTSE 100 up 0.41% at 10,907.19, and Paris at a one-month high, the CAC 40 up 0.09% at 8,368.91. German mid-caps were the weak spot, the MDAX down 0.51%.</p>
+<p class="field">What it means</p><p>Europe did something it has barely managed this cycle: it outperformed on a day the US AI complex sold off. A 3.6% week in Frankfurt with no help from American tech is a real decoupling, even a one-week one. The mid-cap weakness underneath suggests the buying is in large exporters, not the German domestic economy.</p>
+<p class="field">Watch next</p><p>Whether the DAX takes 27,000 and holds it. It has now failed there once.</p>
+</div>
+<div class="item">
+<h2>Oil’s risk premium did not survive the week</h2>
+<p class="field">What happened</p><p>Friday’s settlements were effectively flat. WTI’s December contract <a href="https://marketscreener.com/news/december-wti-crude-oil-contract-closes-down-0-18-or-0-2-settles-at-88-56-per-barrel-january-br-ce785eded98bf326">settled at $88.56</a>, down 18 cents, confirmed independently by MT Newswires. Brent is reported to have settled at $95.84, up two cents, but that rests on a single second-hand source — the only independent print we reached was an intraday January Brent at $95.97 — so take the Brent settle as unconfirmed. Both benchmarks fell for a second straight week. Thursday’s 3.3% Brent spike came on Houthi claims of three Saudi targets that neither Saudi Arabia nor Aramco has confirmed.</p>
+<p class="field">What it means</p><p>A price that jumps on an attacker’s own account of its own operation and gives it all back inside a day is telling you the market does not believe the supply is actually at risk. The standing surplus is doing more work than the Gulf headlines are.</p>
+<p class="field">Watch next</p><p>Any Saudi or Aramco confirmation or denial of Thursday’s attack claims. The silence is now two days old.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Mirendil raises $1bn — in a Series A</h2>
+<p class="field">What happened</p><p>Mirendil Inc., a San Francisco company selling software to speed up AI model development, <a href="https://www.prnewswire.com/news-releases/mirendil-raises-1b-to-democratize-frontier-ai-rd-302937248.html">announced on Thursday</a> that it has raised $1bn in a Series A led by Kleiner Perkins and Clearlake Capital, with participation from Battery Ventures, Doerr Capital, Gil and Co, Google, M13, Pear VC and S32. Its first product, Lor, is in private beta and, in the company’s own words, involves “hundreds of agents writing code and running experiments for days at a time.” No valuation was disclosed, and the release says raised, not closed.</p>
+<p class="field">What it means</p><p>A billion dollars at Series A is a late-stage cheque wearing an early-stage label, and the investor list is the tell: a strategic in Google and a credit-and-private-equity house in Clearlake sitting beside a classic venture lead. That is infrastructure-project financing with a venture label on the term sheet, which is now how frontier AI tooling gets paid for.</p>
+<p class="field">Watch next</p><p>Whether a valuation emerges. Whether anything ships out of private beta before the next round.</p>
+</div>
+<div class="item">
+<h2>A pre-seed for compute in orbit</h2>
+<p class="field">What happened</p><p>NeuralSat GmbH, a German startup founded early this year, <a href="https://siliconangle.com/2026/11/13/neuralsat-raises-3-2m-to-bring-high-speed-data-connectivity-and-compute-to-space/">announced a EUR 2.9m pre-seed</a> — about $3.2m — led jointly by Capnamic and Bayern Kapital. It plans a 72-satellite relay and processing network letting satellite operators offload compute and communications, claiming up to 50 Gbps over optical and high-frequency radio links. The targets are real-time edge processing and hosted commercial and defence workloads, including Earth observation and signals intelligence. A first in-orbit demonstration node is planned for October 2027. One outlet has this.</p>
+<p class="field">What it means</p><p>The pitch only works if downlink bandwidth rather than compute is the binding constraint on satellite operators — which, for Earth observation at least, it increasingly is. Seventy-two satellites on EUR 2.9m is not a plan to build a constellation, though. It is a plan to demonstrate one node and raise again on it.</p>
+<p class="field">Watch next</p><p>The October 2027 demonstration node, and the Series A that will have to come first.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The FAA grounded every departing flight in America</h2>
+<p class="field">What happened</p><p>The FAA ordered a nationwide ground stop at around 4 p.m. ET on Friday, citing “extraordinary circumstances and reasons for safety”, and <a href="https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next">lifted it at 8:15 p.m. ET</a>. Transportation Secretary Sean Duffy first described a “communication issue impacting all Air Route Traffic Control Centers”; after the lift he was blunter: “We have old switches, old routers. We use 1980s little copper lines.” FlightRadar24 counted more than 4,700 cancellations and 10,000 delays on Friday, and another 700 cancellations already on Saturday. Cirium counted at least 827 diversions by 7:05 p.m.</p>
+<p class="field">What it means</p><p>Four hours in which nothing could take off from anywhere in the United States is not an IT incident. It is a demonstration that the air traffic system has a single point of failure nobody had mapped. Duffy’s copper-wire line is the politically useful explanation, because it asks for money — but it is a characterisation, not an engineering report.</p>
+<p class="field">Watch next</p><p>Whether the FAA publishes a cause; it has not. No official has ruled a cyber attack in or out in their own words.</p>
+</div>
+<div class="item">
+<h2>The Supreme Court takes the border asylum case</h2>
+<p class="field">What happened</p><p>The Court granted certiorari on Friday in <a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html">Mullin v. Refugee and Immigrant Center for Education and Legal Services</a>, No. 26-239, limited — in the docket’s own words — to “Questions 1 and 2 presented by the petition.” It comes up from the D.C. Circuit, which ruled against the administration on 24 April and denied rehearing on 23 July. No argument date is set. The docket does not characterise the instrument under challenge, so we are not calling it an executive order; the question is the administration’s restrictions on asylum access at the southern border.</p>
+<p class="field">What it means</p><p>A grant limited to two of the questions presented is the Court declining the whole case, which usually narrows the ruling without narrowing the stakes. The calendar is the real news: cases granted in November are normally argued in spring and decided by the end of June, so the policy stands for another seven months either way.</p>
+<p class="field">Watch next</p><p>The argument calendar when it posts. Whether the administration asks for expedition.</p>
+</div>
+<div class="item">
+<h2>Mississippi’s county deadline passed in silence</h2>
+<p class="field">What happened</p><p>Friday at 5 p.m. was the statutory deadline for Mississippi’s counties to submit certified results from the Senate election — ten days from the election under Miss. Code 23-15-603, a date the Secretary of State’s <a href="https://www.sos.ms.gov/news/official-statement-election-update">own 4 November statement</a> named. Nothing has been published since. The state results page still carries a “2026 General Election Results” link with no totals, no posting date and no certified-or-not label. The newest margin figure anywhere remains Scott Colom’s 4,404 over Cindy Hyde-Smith. The state Board of Election Commissioners certifies separately and has set no date.</p>
+<p class="field">What it means</p><p>A ten-day deadline passing with no announcement either way is not evidence of a problem. But this is the fourth consecutive day on which a state has published nothing at all about a US Senate seat that changed hands, with 18,000-plus affidavit ballots in the count. The silence has become the story.</p>
+<p class="field">Watch next</p><p>Any meeting notice from the state Board of Election Commissioners. Whether the Secretary of State’s page ever posts totals.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>CENTCOM says it shot down the drones Iran says destroyed a radar</h2>
+<p class="field">What happened</p><p>US Central Command flatly contradicted the Revolutionary Guard on Friday. Its post, headed with a green check mark, reads: “FACT: The IRGC launched two one-way attack drones toward Bahrain and both were shot down by U.S. forces.” and “There were no injuries or damage.” No spokesperson is named. The IRGC, via Fars and Tasnim, had said a US early-warning radar site in Bahrain was destroyed. Bahrain has not commented publicly. Hours earlier, Secretary of State Marco Rubio told the Federalist Society that <a href="https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-of-state-marco-rubio-at-the-federalist-societys-2026-national-lawyers-convention/">no military action is needed</a>, because “the economic pain that we are inflicting on that regime is so great”.</p>
+<p class="field">What it means</p><p>Two parties’ accounts of their own operations, pointing in opposite directions, with the host government silent. Bahrain’s silence is the interesting part: a destroyed radar on your own territory is something a government normally confirms or denies within a day. Rubio, meanwhile, narrowed the objective to “ensuring that they never have a nuclear weapon”. That is an easier victory to declare.</p>
+<p class="field">Watch next</p><p>Any Bahraini statement. And whether the administration answers the radar claim above the level of a CENTCOM social post.</p>
+</div>
+<div class="item">
+<h2>Europeans get a seat at the Ukraine talks, and object to the premise of them</h2>
+<p class="field">What happened</p><p>After an informal meeting of EU heads of state and government in Dublin on Friday, European Council President António Costa said <a href="https://kyivindependent.com/european-leaders-agree-on-joint-team-for-ukraine-peace-negotiations-costa-says/">a joint team will join</a> the next round of the US-led negotiations: the EU institutions plus France, Germany, Italy, Poland and the United Kingdom. The reception has been hostile to the premise. Chancellor Friedrich Merz has said, on a day we could not establish: “Russia wants to talk about questions of European security architecture. We don’t need to talk about that. There is one,” meaning NATO. Overnight, Russia launched 96 drones at Ukraine; the Air Force said 81 were downed by 07:30.</p>
+<p class="field">What it means</p><p>Europe has won a procedural fight and walked straight into a substantive one. Being in the room means being present when Russia’s demands on European security architecture are tabled — precisely what Merz says is not available to discuss.</p>
+<p class="field">Watch next</p><p>A date for the next round, which nobody has set. And whether Kaja Kallas is on the team — her participation is not established.</p>
+</div>
+<div class="item">
+<h2>The Dutch coalition survives seven hours and agrees on nothing</h2>
+<p class="field">What happened</p><p>Prime Minister Rob Jetten met VVD leader Dilan Yesilgöz and CDA deputy prime minister Bart van den Brink on Friday for <a href="https://www.dutchnews.nl/2026/11/jetten-cabinet-survives-crisis-talks-but-deadlock-continues/">more than seven hours</a>. The talks ended in deadlock. The cabinet has not fallen and stands for now. The VVD’s objection is that Thursday night’s tax-plan vote broke the coalition agreement; Yesilgöz called the minority coalition a “failed experiment” and a collapse a “possible solution.” Jetten said “things have not gone well recently, and that is affecting mutual relations.” Talks continue this weekend.</p>
+<p class="field">What it means</p><p>A party leader naming collapse in public as an acceptable outcome, after seven hours in the room, is not negotiating. She is pricing an election. Jetten’s minority arithmetic was always going to fail on a budget vote, and it has; the question is whether the VVD prefers the blame for pulling the plug to the cost of staying.</p>
+<p class="field">Watch next</p><p>The weekend talks. Whether the VVD formally withdraws support, which is the step that actually ends the cabinet.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/" target="_blank" rel="noopener">TechCrunch — Export-banned Nvidia chips are behind China’s most powerful AI models</a></li>
+<li><a href="https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/" target="_blank" rel="noopener">TechCrunch — ChatGPT’s new Wallet lets AI agents shop and check out for you</a></li>
+<li><a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" target="_blank" rel="noopener">TechCrunch — Jensen Huang’s affair with an alleged Chinese spy: a timeline</a></li>
+<li><a href="https://indexes.nasdaqomx.com/index/overview/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index (SOX) overview</a></li>
+<li><a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html" target="_blank" rel="noopener">Yahoo Finance — Stock market today, Friday 13 November (closing prints)</a></li>
+<li><a href="https://www.cbsnews.com/news/howard-lutnick-scott-bessent-nvidia-megaspeed-testimony/" target="_blank" rel="noopener">CBS News — Lutnick, Bessent and the Nvidia-Megaspeed testimony requests</a></li>
+<li><a href="https://www.theepochtimes.com/us/senate-banking-chair-asks-ex-nvidia-ceo-huang-commerce-chief-lutnick-to-testify-6124595" target="_blank" rel="noopener">The Epoch Times — Senate Banking chair asks Huang and Lutnick to testify</a></li>
+<li><a href="https://focustaiwan.tw/business/202611130009" target="_blank" rel="noopener">Focus Taiwan — TAIEX closes up 1.35% on Friday</a></li>
+<li><a href="https://www.taiwannews.com.tw/news/6475994" target="_blank" rel="noopener">Taiwan News — TAIEX swings from record weekly loss to record gain</a></li>
+<li><a href="https://www.taiwannews.com.tw/news/6476115" target="_blank" rel="noopener">Taiwan News — TSMC launches US$500m venture fund</a></li>
+<li><a href="https://focustaiwan.tw/business/202611120014" target="_blank" rel="noopener">Focus Taiwan — MSCI raises Taiwan’s weighting in three major indexes</a></li>
+<li><a href="https://www.tokenpost.com/news/business/57321" target="_blank" rel="noopener">TokenPost — TSMC’s NT$167.6bn in government grants</a></li>
+<li><a href="https://krmg.com/2026/11/13/how-major-us-stock-indexes-fared-friday-11-13-2026/" target="_blank" rel="noopener">Associated Press via KRMG — How major US stock indexes fared, Friday 13 November</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — Daily par yield curve, November 2026</a></li>
+<li><a href="https://www.ad-hoc-news.de/boerse/news/marktberichte/aktien-frankfurt-schluss-dax-trotzt-nasdaq-schwaeche-pause-nach-rekord/70506031" target="_blank" rel="noopener">dpa-AFX via ad-hoc-news — DAX closing report, 13 November</a></li>
+<li><a href="https://marketscreener.com/news/december-wti-crude-oil-contract-closes-down-0-18-or-0-2-settles-at-88-56-per-barrel-january-br-ce785eded98bf326" target="_blank" rel="noopener">MT Newswires via MarketScreener — December WTI settles at $88.56</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/mirendil-raises-1b-to-democratize-frontier-ai-rd-302937248.html" target="_blank" rel="noopener">Mirendil — $1bn Series A announcement (PR Newswire)</a></li>
+<li><a href="https://siliconangle.com/2026/11/13/neuralsat-raises-3-2m-to-bring-high-speed-data-connectivity-and-compute-to-space/" target="_blank" rel="noopener">SiliconANGLE — NeuralSat raises $3.2m for in-orbit compute</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next" target="_blank" rel="noopener">Al Jazeera — FAA ground stop lifted: why US flights were grounded</a></li>
+<li><a href="https://www.forbes.com/sites/antoniopequenoiv/2026/11/13/nationwide-ground-stop-at-airports-lifted-faa-says/" target="_blank" rel="noopener">Forbes — Nationwide ground stop at airports lifted, FAA says</a></li>
+<li><a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html" target="_blank" rel="noopener">Supreme Court of the United States — docket No. 26-239</a></li>
+<li><a href="https://www.sos.ms.gov/news/official-statement-election-update" target="_blank" rel="noopener">Mississippi Secretary of State — official statement, election update</a></li>
+<li><a href="https://x.com/CENTCOM/status/2121225254446018729" target="_blank" rel="noopener">US Central Command — statement on the Bahrain drone attack</a></li>
+<li><a href="https://www.state.gov/releases/office-of-the-spokesman/2026/11/secretary-of-state-marco-rubio-at-the-federalist-societys-2026-national-lawyers-convention/" target="_blank" rel="noopener">US State Department — Rubio at the Federalist Society’s 2026 National Lawyers Convention</a></li>
+<li><a href="https://kyivindependent.com/european-leaders-agree-on-joint-team-for-ukraine-peace-negotiations-costa-says/" target="_blank" rel="noopener">Kyiv Independent — European leaders agree on joint team for Ukraine talks, Costa says</a></li>
+<li><a href="https://censor.net/en/news/4033671/nighttime-drone-attack-on-november-14-how-many-targets-were-shot-down-by-ukrainian-air-defense" target="_blank" rel="noopener">Censor.net — Overnight drone attack of 14 November</a></li>
+<li><a href="https://www.dutchnews.nl/2026/11/jetten-cabinet-survives-crisis-talks-but-deadlock-continues/" target="_blank" rel="noopener">DutchNews.nl — Jetten cabinet survives crisis talks but deadlock continues</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-14-daily.pdf">PDF</a></span>
+</div></div></body></html>
