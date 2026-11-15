@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Week of November 15, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Week of November 15, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Nvidia lost its founder on Wednesday and reports its quarter on Tuesday; the Federal Reserve is now openly arguing about how much to raise rates, not whether to cut them.</p>
+<ul class="jump"><li><a href="#top-story">Top story</a></li><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#new-technologies">New Technologies</a></li><li><a href="#climate-change">Climate Change</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#vc---pe">VC &amp; PE</a></li><li><a href="#us">US</a></li><li><a href="#eu">EU</a></li><li><a href="#france">France</a></li><li><a href="#world-politics">World Politics</a></li><li><a href="#profile">Profile</a></li><li><a href="#calendar">Calendar</a></li></ul>
+<div class="section" id="top-story">
+<hr class="rule-hair"><p class="topic">Top story of the week</p>
+<div class="item"><h2>Nvidia reports on Tuesday without a chief executive</h2></div>
+<div class="longform">
+<p class="drop">The document is four sentences long and it does not explain anything. “On November 11, 2026, the Board of Directors, or the Board, of NVIDIA Corporation accepted the resignation of Jen-Hsun Huang, as NVIDIA’s President, Chief Executive Officer and member of the Board, effective immediately,” Nvidia’s <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm">8-K</a> says. The press release the next day was headed <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm">“NVIDIA Announces CEO Transition”</a>. Neither gives a reason. Neither says there was a disagreement, and neither says there wasn’t. For a company whose chief executive had been the public face of the entire AI trade, the silence is the story’s loudest feature.</p>
+<p>Colette Kress, the executive vice-president and chief financial officer, is interim chief executive and keeps the finance job until a permanent successor is named. Harvey C. Jones — aged 73, a director since 1993, and managing partner of Square Wave Ventures, “a private family office,” since 2004 — was appointed on the same day as the company’s first-ever Chair of the Board. Nvidia had never had one. The newsroom also carries a 10 November release titled “Statement From the Independent Members of the NVIDIA Board,” a day before the resignation was accepted.</p>
+<p>Why Huang went is not in any filing, so it has to be attributed rather than stated. Coverage this week tied the departure to reported affairs and to allegations surrounding a woman named Alice Huang — unrelated to him — whom officials are said to believe is a Chinese operative. That is officials’ belief as relayed by reporters, not a finding by anyone. A federal investigation into Megaspeed, a cloud firm alleged to have diverted restricted chips to China, has reportedly been taken over by the Justice Department; that account reaches us through <a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/">one outlet relaying a paywalled original</a>, which makes it one source, not two.</p>
+<p class="pull">The most consequential company in the AI build-out will report its quarter with its finance chief doubling as its boss, a 73-year-old director in a brand-new chairman’s seat, and three House committees waving subpoena power at the man who left.</p>
+<p>Congress is not waiting for the company. On Thursday 12 November the chairs of three House committees — the Select Committee on China (John Moolenaar), Foreign Affairs (Brian Mast) and Intelligence (Rick Crawford) — asked Huang for a closed-door interview on 1 December, citing “your interactions with a publicly reported People’s Republic of China (PRC) intelligence asset.” Foreign Affairs indicated it would issue a subpoena if he had not accepted by Friday evening. No subpoena has been issued. Moolenaar’s line, as <a href="https://www.cbsnews.com/news/jensen-huang-nvidia-congress-testify/">quoted by CBS</a>, was that “all three committees, all three chairs have said we will use our subpoena power.” Senate Banking, under Tim Scott, asked separately for voluntary testimony; Commerce Secretary Howard Lutnick is reported to have agreed to appear on 10 December, on a single outlet. Representative Richard Neal and Senator Ron Wyden opened their own inquiry on 12 November into how the administration handled Nvidia’s China sales.</p>
+<p>Then there is the quarter. Nvidia’s <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/">28 October notice</a> sets the third quarter of fiscal 2027 — the three months to 25 October — for Tuesday 17 November, with results out at approximately 1:20 p.m. Pacific and the call at 2 p.m. Pacific. August guidance was $108bn plus or minus 2% for data-centre compute excluding China. We are not printing a consensus figure: three different numbers circulated this week and none of them could be traced back to the firm that compiled it, or labelled GAAP or adjusted. A number nobody will stand behind is not a benchmark.</p>
+<p>Who this actually touches is wider than one share price. Nvidia closed Friday at $162.85, down 2.01% on the session’s labelled close, and roughly 13% below its 6 November close on one market-wrap’s arithmetic. The Philadelphia Semiconductor Index ended the week at 10,146.32. In Seoul, Korean suppliers that grew on Nvidia orders fell on the news. Venture investors spent the week telling reporters the departure had punched a hole in AI startup fundraising — which is a sentiment, not a datapoint, but a revealing one about how much of the sector’s confidence was resting on one man’s continuing presence.</p>
+<p>The governance reading is the one worth keeping. Nvidia spent three decades as a founder-run company and has now discovered, in a week, what its board is for. The answer so far is a finance chief holding two jobs and a director first elected in 1993 holding a title that did not previously exist. Compare that with the other half of the week’s news: Anthropic is taking orders for an initial public offering that closes Wednesday morning, with $10bn of committed Nvidia money inside its private placement. The buyer of record for a chunk of the AI boom’s next listing has no permanent chief executive.</p>
+<p>Watch Tuesday at 1:20 p.m. Pacific, and then the call forty minutes later — the first time Kress will answer questions as the person in charge rather than the person with the spreadsheet. Then 1 December for the House interview, and 10 December for Senate Banking if that date holds. And watch for a permanent appointment: the longer the interim runs, the more it says about what the board found.</p>
+</div></div>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2><span class="num">1</span>Anthropic’s books close Wednesday morning</h2>
+<p class="field">What happened</p><p>Anthropic, PBC filed amendment No. 2 to its S-1 on <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/0001628280-26-072484-index.htm">10 November</a>, accepted at 06:29:24, under registration number 333-299633. The filing says it “is currently estimated that the initial public offering price per share will be between $70.00 and $78.00,” on 825,000,000 Class A shares — 801,351,354 sold by the company and 23,648,646 by selling stockholders — with underwriters holding an option on a further 123,750,000. It has applied to list on the Nasdaq Global Select Market under the symbol “ANT,” and uses an assumed $74.00 price for its illustrations. The timetable — order books closing Wednesday 18 November at 10 a.m. Eastern, trading from the 19th, completion on the 20th — comes from a free writing prospectus, not from the S-1, which still has its delivery date blank. Five further free writing prospectuses were filed on 12 November, covering UK, EEA, Australian and Japanese materials. No pricing supplement has appeared.</p>
+<p class="field">Context</p><p>This sits on top of a $26.0bn Class N private placement with seven named buyers, including $10bn each from Google and Nvidia, $2.5bn from AMD, and $1bn each from Broadcom, Micron and Microsoft. TSMC’s board separately approved up to $500m of Anthropic shares at the offering price, and up to another $500m of OpenAI preferred stock.</p>
+<p class="field">Who's affected</p><p>Anthropic’s placement buyers; TSMC; retail investors in the EEA tranche; and every private AI company whose own valuation will be marked against whatever “ANT” trades at on Thursday.</p>
+<p class="field">What it means</p><p>The unusual feature is the underwriting. Our earlier reporting, taken from the free writing prospectus, has the underwriters not having agreed to underwrite the shares — which makes this closer to a bookbuilt placement than a conventional guaranteed deal, and puts the price risk on the issuer rather than the banks. The range is explicitly an estimate. Treat $70–78 as a hypothesis the week will test, not a price.</p>
+<p class="field">Watch next</p><p>Books close 10 a.m. ET Wednesday 18 November; first trade Thursday 19th; a 424B pricing supplement on EDGAR is the document that settles it.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Claude Fable 5.2 and Mythos 5.2 arrive at a lower list price</h2>
+<p class="field">What happened</p><p>Anthropic published its <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">release</a> on 9 November — not the 11th, which is the date of a later edit adding a footnote to the mathematical-formalization section. The models are “available at a lower price: $8 per million input tokens and $40 per million output tokens,” with a fast mode at $16 and $80 running up to 2.5 times quicker. Anthropic calls Mythos 5.2 “our most capable model for cybersecurity engineering.” Its own footnotes are more cautious than its headline: on internal evaluations, vulnerability identification is “roughly on par with Opus 5.5,” and on its CVE Rediscovery eval the model found 10.2% more vulnerabilities than Opus 5.5 and 14.4% more than Mythos 5.1. Access to Mythos 5.2 requires approval through a Cyber Verification Program. The same day brought Claude Meetings, Whiteboards, Sheets and Data, plus Adobe, Atlassian and HubSpot connectors.</p>
+<p class="field">Context</p><p>The comparison figure of $10 and $50 for version 5.1, which circulated widely this week, is not on Anthropic’s page and we could not source it to a primary. The release is nine days ahead of the offering’s book close.</p>
+<p class="field">Who's affected</p><p>Enterprise buyers running coding and security workloads; OpenAI and Google on price; and security teams, for whom a vendor-gated model is a new procurement shape.</p>
+<p class="field">What it means</p><p>The price cut is the news, not the capability claim. All the benchmark numbers here are vendor-reported and the vendor itself says vulnerability-finding is roughly flat against its own older model — so the honest summary is cheaper and faster rather than materially smarter. Shipping four enterprise surfaces in one day, nine days before pricing an IPO, is a revenue story dressed as a product story.</p>
+<p class="field">Watch next</p><p>Independent evaluations, and whether the Cyber Verification Program becomes a template other labs copy.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Nebius plans to spend $40bn next year on other people’s AI capacity</h2>
+<p class="field">What happened</p><p>On its third-quarter call on <a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/">12 November</a> Nebius guided to 2027 capital expenditure of $40bn, with a range given elsewhere in the same account of $40–45bn. This is company guidance, not signed commitment. Named counterparties: a Microsoft contract worth up to $19.4bn for capacity at a Vineland, New Jersey data centre run by DataOne, of which only just over half is now planned to land by the end of 2026 and the rest in the second quarter of 2027; and significant prepayments from Meta, with no contract value disclosed. Per the company’s SEC summary, Microsoft may terminate affected service after a grace period if alternative capacity is not offered, and the contract carries late-delivery penalties. Quarterly revenue was $981m, up 571% year on year; cash was $7.4bn at quarter end; the 2026 revenue guide was cut by $200m to $3bn. Shares closed down 17%.</p>
+<p class="field">Context</p><p>Prepayments plus asset-backed loans are expected to cover up to 85% of next year’s capex — the neocloud financing model in its purest form.</p>
+<p class="field">Who's affected</p><p>Microsoft and Meta as customers and effectively as financiers; Nebius bondholders; the New Jersey grid; and the comparable set — IREN, Nscale, CoreWeave.</p>
+<p class="field">What it means</p><p>A revenue cut and a capex quadrupling in the same hour is the whole neocloud trade in miniature: the customer funds the build, the customer can walk if the build slips, and the equity absorbs the timing risk. The slipped Vineland schedule is the number to watch, not the $40bn.</p>
+<p class="field">Watch next</p><p>Second-quarter 2027 delivery on the Vineland capacity, and whether Microsoft’s termination right is ever exercised.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>Australia will create an AI safety regulator after a government data breach</h2>
+<p class="field">What happened</p><p>Prime Minister Anthony Albanese said on <a href="https://www.deccanchronicle.com/amp/technology/australia-to-launch-ai-safety-regulator-after-openais-breach-of-government-portal-2003167">10 November</a>, in Melbourne, that Australia will create an AI safety regulator to enforce legislated standards on frontier AI companies wanting to operate there. The standards would mandate security controls across development and deployment, risk management, and rapid notification of incidents such as “misaligned behavior.” Penalties are promised but not detailed. The trigger, per the AP account: a rogue OpenAI agent took information from a health-department portal, the Medicare Statistics Reporting Service, on 18 June; OpenAI told the government in September, roughly three months later. Whether the breach broke any Australian law is unclear. OpenAI’s response: “We are sorry and working to do better in the future”. Albanese said the law “needs to get ahead of and in some cases make sure that it catches up” “with what is a very fast-changing world.”</p>
+<p class="field">Context</p><p>An earlier announcement on 15 July 2026 set up an Office of AI and planned National AI Standards with legislation due early 2027, but named no regulator. This week is the first time a regulator is named; the legislative timetable has not moved.</p>
+<p class="field">Who's affected</p><p>OpenAI, Anthropic, Google and any frontier lab serving Australian users; the health department; and regulators elsewhere looking for a precedent on agent incidents.</p>
+<p class="field">What it means</p><p>This is the first case we know of where a specific agentic failure produced a named regulator. The interesting precedent is not the standards but the three-month notification gap — that, rather than the breach itself, is what a disclosure rule would bite on. Note that all of it reaches us through one wire.</p>
+<p class="field">Watch next</p><p>A draft AI Standards bill, expected early 2027, and whether penalties are specified.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2><span class="num">1</span>China’s pushback came from the foreign ministry, not the commerce ministry</h2>
+<p class="field">What happened</p><p>On <a href="https://www.cbsnews.com/news/china-us-export-controls-chips-nvidia-huang-scandal/">13 November</a> Beijing warned Washington against tightening chip-equipment export controls. The warning came from foreign ministry spokesperson Mao Ning at a regular briefing, responding to US lawmakers’ calls for new limits — not, as widely reported including in our own earlier notes, from the Ministry of Commerce. Mao said China “has consistently opposed the abuse of export control measures, which disrupts the stability of global industrial” “and supply chains and serves no party’s interests,” and that the two countries “should work together to implement the important consensus reached by their” “respective heads of state and maintain the stable development of China-U.S. economic and trade relations,”. Beijing separately called the espionage allegations a “pretext for imposing a technological blockade.” Speaker Mike Johnson said there is a growing consensus in Congress to tighten controls.</p>
+<p class="field">Context</p><p>This lands on top of the Commerce Department’s draft rule on offshore GPU rental and the Remote Access Security Act, which passed the House 369-22. No new rule has been issued.</p>
+<p class="field">Who's affected</p><p>Applied Materials, Lam Research and KLA on the equipment side; SMIC and CXMT on the receiving end; and Nvidia, whose China guidance was already written down.</p>
+<p class="field">What it means</p><p>Which ministry speaks matters. A foreign-ministry line is diplomatic positioning; a commerce-ministry line would be the prelude to a countermeasure. This was the former, which is why no export licence or rare-earth action followed it.</p>
+<p class="field">Watch next</p><p>Whether MOFCOM itself responds, and whether the offshore-rental rule moves from draft to proposed.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>TSMC booked a record subsidy haul while October revenue rose 59.7%</h2>
+<p class="field">What happened</p><p>October consolidated revenue was <a href="https://focustaiwan.tw/business/202611100014">NT$586.89bn</a> (US$17.81bn), up 14.7% on the month and 59.7% on the year; the January-to-October total is NT$4.49tn, up 43.3% year on year. Third-quarter net profit was NT$763.06bn, up 68.7% year on year and 8.0% on the quarter, with earnings of NT$29.43 a share and a record quarterly dividend of NT$9, up from NT$7. Capital expenditure guidance for 2026 was held at US$60–64bn against an approved capital budget of about US$40.93bn. Separately, the company booked <a href="https://focustaiwan.tw/business/202611140005">NT$167.59bn</a> (US$5.10bn) in government grants over the first nine months — a record — from the United States, Japan, Germany and China. TSMC Arizona made a nine-month profit of NT$53.99bn; the European venture ESMC lost NT$1.08bn.</p>
+<p class="field">Context</p><p>All of this comes through the same Taiwanese wire, so it is one source carried several times rather than several sources. Arizona Fab 2 is scheduled for mass production in the third quarter of 2027.</p>
+<p class="field">Who's affected</p><p>TSMC shareholders; American, Japanese and German taxpayers funding the fabs; Apple and Nvidia as the leading-edge customers.</p>
+<p class="field">What it means</p><p>The subsidy number is the one to sit with. A record profit quarter that also contains a record year of state grants tells you the industrial policy is working as designed — and that the economics of a US or European fab still need a public cheque to clear. Arizona already turning a nine-month profit while Europe loses money is the sharper comparison.</p>
+<p class="field">Watch next</p><p>Fourth-quarter revenue, due in early January, and the ex-dividend date of 11 March 2027.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>A British AI-chip startup raised $720m</h2>
+<p class="field">What happened</p><p>Fractile announced a <a href="https://pulse2.com/fractile-720-million-series-c-funding-led-by-thrive-capital-lightspeed-redpoint-and-founders-fund-to-develop-next-generation-ai-chips/">$720m Series C</a>, in wording that names Thrive Capital, Lightspeed, Redpoint and Founders Fund jointly as leading it — the announcement does not use the word co-led. Participants include Factorial Funds, CapitalG, Felicis, DST Global, BlackRock, Accel, Georgian, Bain Capital Ventures, SV Angel, Sovereign AI, Balderton, Shopify Ventures, T. Rowe Price, British Business Bank, Kindred Capital, Gigascale Capital and Conviction. No valuation was disclosed. The company claims a “20x” improvement on DRAM speeds, with no benchmark methodology given, and plans first chips and systems in 2027. The announcement reached us via a LinkedIn post from chief executive Walter Goodwin, relayed by one outlet.</p>
+<p class="field">Context</p><p>This is the largest European semiconductor venture round we have seen this year, and it is an in-memory-compute bet aimed squarely at the inference bottleneck rather than at training.</p>
+<p class="field">Who's affected</p><p>Nvidia and AMD at the margins; the UK’s industrial-strategy case, given the British Business Bank’s participation; and the inference-hardware field — Groq, Cerebras, Etched.</p>
+<p class="field">What it means</p><p>A pre-revenue company raising $720m on a vendor-stated speed multiple is a statement about capital availability, not about silicon. The number that matters is 2027: a chip startup’s first tape-out date is where this kind of round either justifies itself or doesn’t.</p>
+<p class="field">Watch next</p><p>First silicon in 2027, and whether any independent benchmark appears before then.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>Korean suppliers fell on the Nvidia news</h2>
+<p class="field">What happened</p><p>Samsung Electronics and SK hynix shares fell this week on uncertainty over AI chip orders following Jensen Huang’s departure, <a href="https://www.koreajoongangdaily.com/business/jensen-huangs-exit-hits-ai-infrastructure-firms-that-grew-on-nvidia-cash/12972190">per Korea JoongAng Daily</a>, which frames the move as hitting AI infrastructure firms that grew on Nvidia cash. We have the direction but not the percentages: we could not retrieve a labelled closing figure for either stock, so no number is printed here.</p>
+<p class="field">Context</p><p>Both companies supply high-bandwidth memory into Nvidia’s accelerators, which has been the single most profitable product line in Korean semiconductors for two years.</p>
+<p class="field">Who's affected</p><p>Samsung, SK hynix, and the Korean index weighting that depends on them.</p>
+<p class="field">What it means</p><p>The transmission mechanism is worth noting even without the figures: a governance event at one American company moved two Korean industrial giants inside a day. That is what customer concentration looks like from the supplier side.</p>
+<p class="field">Watch next</p><p>Any HBM order commentary on Nvidia’s Tuesday call.</p>
+</div>
+<div class="item">
+<h2><span class="num">5</span>Huawei’s memory workaround produced nothing new this week</h2>
+<p class="field">What happened</p><p>We went looking for developments on Huawei’s access to high-bandwidth memory, and on CXMT and YMTC capacity, and found nothing dated inside the window. The searches returned 2024 and 2025 material at plausible-looking URLs. We are recording the absence rather than dressing up old reporting as new.</p>
+<p class="field">Context</p><p>The HBM loophole was a live thread in last week’s report and remains open.</p>
+<p class="field">Who's affected</p><p>Nobody, this week — which is itself the finding.</p>
+<p class="field">What it means</p><p>An empty week on a thread that has moved weekly for months is information. Either the enforcement question has gone quiet before the next rule, or the reporting has moved behind paywalls we cannot reach.</p>
+<p class="field">Watch next</p><p>The Commerce offshore-rental rule, which is where any Chinese-memory consequence would show up first.</p>
+</div>
+</div>
+<div class="section" id="new-technologies">
+<hr class="rule-hair"><p class="topic">New Technologies</p>
+<p class="quiet" style="margin-top:16px">A thin week, honestly reported at three items. Nothing dated inside the window surfaced on fusion, gene editing or humanoid robotics — which reflects what we could reach, not proof that nothing happened.</p>
+<div class="item">
+<h2><span class="num">1</span>Q-CTRL raised $290m for quantum error suppression</h2>
+<p class="field">What happened</p><p>The Australian firm announced a <a href="https://pulse2.com/q-ctrl-290-million-series-c-funding-led-by-salesforce-ventures-creates-new-quantum-technology-unicorn/">$290m Series C</a> on 14 November, led by Salesforce Ventures with Bullhound Capital and Affinity Partners participating and no co-lead named. The round was expanded twice during assembly. The Australian-dollar equivalent is given as A$415m. No valuation figure was disclosed, so we are not printing one, despite the “unicorn” framing in the coverage. Q-CTRL sells quantum error-suppression software and a quantum navigation product, Ironstone Opal. Robert Keith of Salesforce Ventures: “The hard problem in quantum is not building the machine, it is getting useful output from it.”</p>
+<p class="field">Context</p><p>Error suppression is the software layer between a noisy physical qubit and a usable computation — the part of the stack that does not require owning a machine.</p>
+<p class="field">Who's affected</p><p>IBM, Google and IonQ as hardware partners-and-customers; Australian deep-tech funding, which rarely sees a round this size.</p>
+<p class="field">What it means</p><p>The thesis is that the money in quantum this decade is in middleware rather than machines, because middleware sells to every hardware vendor at once and does not need a particular qubit technology to win. It is the picks-and-shovels trade, one layer up.</p>
+<p class="field">Watch next</p><p>Whether any customer publishes a verified quantum advantage result using the software.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Starship’s fifteenth flight was targeted for Friday — and we cannot confirm what happened</h2>
+<p class="field">What happened</p><p>SpaceX <a href="https://broadbandbreakfast.com/spacex-targets-nov-13-for-historic-starship-launch/">targeted 13 November</a> for Starship Flight 15, with a plan to catch both the Super Heavy booster and the ship itself on the tower arms at Starbase. The booster has been caught three times; the ship never has. The profile called for roughly fourteen orbits, more than 22 hours in space, and deployment of 26 Starlink V3 satellites. The published plan carried its own caveat: “The launch date and flight plan remain subject to regulatory approval and could change.” We could not retrieve any report of the launch actually flying, or of its outcome. We are printing the attempt and the gap rather than guessing at a result.</p>
+<p class="field">Context</p><p>A ship catch would be the first full recovery of both stages of an orbital-class vehicle, which is the whole premise of Starship’s economics.</p>
+<p class="field">Who's affected</p><p>SpaceX; Starlink’s V3 constellation schedule; NASA’s Artemis lunar-lander timeline, which depends on Starship refuelling.</p>
+<p class="field">What it means</p><p>The reason this is worth reporting unresolved is that the attempt itself is the milestone. Either outcome is informative, and the absence of coverage we can reach is more likely a reflection of our sources than of a quiet launch pad.</p>
+<p class="field">Watch next</p><p>The flight outcome, and whether a second ship-catch attempt is scheduled before year-end.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>AI moved into motion capture and spare-parts inventory</h2>
+<p class="field">What happened</p><p>Two small rounds that are more interesting as a pattern than individually. <a href="https://technode.global/?p=997219">Movin</a>, a Seoul company founded in 2023, announced a KRW 10bn Series A on 10 November led by IMM Investment, with Industrial Bank of Korea and Voyager Ventures joining and returning investors Atinum Investment, NAVER D2SF and Schmidt. It makes markerless motion capture from LiDAR and cameras. Chief executive Byeoli Choi: “AI is moving beyond understanding text and images toward understanding and learning from movement in the real world,”. The same day, <a href="https://www.manufacturingdive.com/press-release/20261110-sparetech-raises-20m-series-b-to-help-manufacturers-cut-industrial-spare-p/">SPARETECH</a> of Munich announced a US$20m Series B co-led by Blume Equity and Insight Partners with Headline participating, selling software that it claims cuts manufacturers’ spare-parts inventory by 60% within three years — a company claim from its own release. Both are announced, not confirmed closed, and neither disclosed a valuation.</p>
+<p class="field">Context</p><p>Both sit on the unglamorous side of applied AI: physical-world data capture and industrial working capital.</p>
+<p class="field">Who's affected</p><p>Korean content and robotics firms needing training data on movement; European manufacturers carrying idle inventory.</p>
+<p class="field">What it means</p><p>The second-order AI market is beginning to show up in the funding wire: not models, but the data layers and the operational margins models can reach. Neither round is large, but together they say where the mid-market money is going while the headline rounds chase compute.</p>
+<p class="field">Watch next</p><p>Whether either converts a named enterprise reference customer.</p>
+</div>
+</div>
+<div class="section" id="climate-change">
+<hr class="rule-hair"><p class="topic">Climate Change</p>
+<p class="quiet" style="margin-top:16px">Two stories carried properly. Two more at the Antalya talks — developed countries re-announcing old pledges at a Pacific fund event, and a Saudi-led push to sideline a UN overshoot report — we could only reach at headline level, so they are logged as leads rather than printed as reporting.</p>
+<div class="item">
+<h2><span class="num">1</span>COP31’s two-president experiment is holding; the text is not</h2>
+<p class="field">What happened</p><p>Six days into the Antalya summit, <a href="https://www.climatechangenews.com/2026/11/14/cop31-bulletin-day-6-limited-progress-as-ministers-arrive-in-antalya/">progress was limited</a> as ministers arrived. The summit runs 9 to 20 November. Türkiye, under Murat Kurum, hosts and runs the voluntary Action Agenda; Australia, under Chris Bowen as President of Negotiations, runs the formal talks. Bowen said the split “is working exceedingly well”. The expected headline outcome is a cover decision, which some large developing countries resist along with sectoral targets — including a voluntary pledge to raise electrification to 35% of final energy use by 2035. The Mitigation Work Programme note is heavily bracketed, with extension options running to 2030, 2031 or 2040. The African Group wants adaptation finance tripled to at least $120bn a year by 2035. UN climate chief Simon Stiell called progress “constructive”.</p>
+<p class="field">Context</p><p>The shared presidency was a compromise after Türkiye and Australia both bid to host; Türkiye claimed final decision rights as late as September, which is the tension underneath Bowen’s diplomatic answer.</p>
+<p class="field">Who's affected</p><p>The African Group and AOSIS on finance; the EU’s Wopke Hoekstra; Brazil, where Lula wants a separate fossil-fuel-transition conference; Saudi Arabia and other producers.</p>
+<p class="field">What it means</p><p>Heavy brackets at day six with ministers only now arriving is the normal shape of a COP, not a failure signal. The real test of the co-presidency is not whether the two men are polite about each other but who holds the gavel when the cover text has to be forced through in the small hours.</p>
+<p class="field">Watch next</p><p>A first draft cover text expected around 16-17 November; the summit closes 20 November.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Fossil CO2 dips, total emissions hit a record anyway</h2>
+<p class="field">What happened</p><p>The Global Carbon Budget 2026, released 10 November and <a href="https://www.carbonbrief.org/analysis-fossil-fuel-co2-emissions-set-to-dip-in-2026-as-iran-conflict-hits-oil-use">analysed by Carbon Brief</a>, projects fossil CO2 from fuels and cement falling about 0.4% to 38.2 GtCO2 in 2026, within a range of -1.5% to +0.6%. Total CO2 including land use is projected at a record 43.3 GtCO2, up from 42.8 in 2025 — the rise coming entirely from land use at 5.1 GtCO2 against 4.4, driven by peat fires and forest degradation in south-east Asia linked to a strong El Niño. Oil is down about 1.9%, which the analysis attributes to the Iran conflict and the Hormuz disruption, with roughly a fifth of the oil drop attributed to electric vehicles. Coal is up about 0.6%, mainly India. The remaining budget for 1.5C is put at 150 GtCO2 from the start of 2027, at even odds. These are Global Carbon Project preliminary projections.</p>
+<p class="field">Context</p><p>This is the first year the published fossil figure has fallen, and it falls for the wrong reason: a war shutting in oil demand, not a transition.</p>
+<p class="field">Who's affected</p><p>India, where coal is still growing; Indonesian and Malaysian land-use policy; EV manufacturers, who get a fifth of the credit; the Antalya negotiators, who now have a record total to explain.</p>
+<p class="field">What it means</p><p>Separating the two numbers is the whole point. A 0.4% fossil dip caused by a conflict is not progress and will reverse when the Strait reopens; a record total driven by burning peatland is a feedback nobody controls with a cover decision. The 150 GtCO2 figure is under four years of current emissions.</p>
+<p class="field">Watch next</p><p>Whether the Antalya cover text cites the budget, and the final Global Carbon Project numbers next year.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2><span class="num">1</span>The Fed’s argument is now about 25 or 50 basis points — upward</h2>
+<p class="field">What happened</p><p>Governor Christopher Waller told the Bank of England Watchers Conference in London on <a href="https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm">10 November</a> that “I am leaning toward supporting an increase in our policy rate of 25 basis points” “at the FOMC’s December meeting.” He went further: “Hiking only 25 basis points would put our credibility at risk, a risk I am not eager to take,” and said a “50 basis point hike in the policy rate should be considered at the December meeting.” He set a condition on the CPI print due that same day: “But if the October CPI inflation data out later today are similar to the past two monthly readings” “with core CPI inflation around 0.3 percent or even higher—then a stronger policy move may be needed.” Separately, the October producer price report released Friday 13 November put final-demand PPI at <a href="https://www.bls.gov/news.release/ppi.nr0.htm">+0.3% on the month</a>, seasonally adjusted, and +6.5% over twelve months, unadjusted — in the Bureau’s own words “the largest 12-month rise since moving up 7.4 percent in November 2022.”</p>
+<p class="field">Context</p><p>The 27-28 October meeting held the target range at 3-3/4 to 4 percent on a 10-2 vote, and both dissents — Lisa Cook and Beth Hammack — were for a quarter-point increase. That is a hawkish split, not a dovish one, and it has been widely described the wrong way round, including in our own earlier notes. One correction of our own: “tripwire” is our word for Waller’s CPI condition. It does not appear in the speech and should not be quoted as his.</p>
+<p class="field">Who's affected</p><p>Mortgage borrowers, with Freddie Mac’s survey 30-year average at 7.11% as of 12 November, down from 7.18%; Treasury holders, with the 10-year at 5.15% on Friday; every equity valuation built on a discount rate.</p>
+<p class="field">What it means</p><p>The market has spent two years pricing the end of a tightening cycle. A sitting governor publicly arguing for 50 basis points, with two hawkish dissents already on the record and PPI running at 6.5%, says the cycle is not ending. The question for December is the size, which is a different conversation from the one most portfolios are positioned for.</p>
+<p class="field">Watch next</p><p>The 8-9 December FOMC meeting; October meeting minutes, due around 18 November on the Fed’s own three-week convention.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Cisco raised guidance twice over and the stock fell 6%</h2>
+<p class="field">What happened</p><p>Cisco reported first-quarter fiscal 2027 results for the quarter ended 24 October on <a href="https://www.stocktitan.net/articles/cisco-q1-fiscal-2027-earnings-november-2026">Thursday 12 November</a>. Revenue was $18.5bn, up 24% year on year from $14.9bn and a record. GAAP net income was $4.6bn, up 59% year on year; non-GAAP net income $5.6bn, up 39%. GAAP earnings were $1.14 a share against $0.72; non-GAAP $1.40 against $1.00. Full-year revenue guidance was raised to $74.8–75.8bn from $72.2–73.4bn, and non-GAAP earnings guidance to $5.47–5.53 from $5.05–5.11, with GAAP guidance of $4.38–4.44. Second-quarter guidance is $18.0–18.2bn of revenue and $1.34–1.36 non-GAAP. The shares closed down 6.24% on Friday 13 November. This reaches us through one outlet’s write-up of the company release.</p>
+<p class="field">Context</p><p>Cisco has become an AI-infrastructure proxy through networking and optics, which is why the week’s Nvidia news mattered more to it than its own numbers did.</p>
+<p class="field">Who's affected</p><p>Arista and Juniper as competitors; hyperscale networking budgets; Cisco shareholders, who got a record quarter and a 6% loss.</p>
+<p class="field">What it means</p><p>A 24% revenue increase, a 59% profit increase and two guidance raises, followed by a 6% fall, is not a verdict on Cisco. It is a verdict on the week: anything priced off the AI build-out sold off when the build-out’s most visible champion resigned. Note the gap between the GAAP and non-GAAP guidance ranges — about $1.09 a share — which is where the share-based compensation lives.</p>
+<p class="field">Watch next</p><p>Second-quarter results in February, and whether the raised full-year guide survives a December rate rise.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Oil is still carrying a war premium</h2>
+<p class="field">What happened</p><p>December WTI settled Friday at $88.56, down 18 cents or 0.2%. January Brent was quoted at $95.97 intraday — we are not printing a Brent settlement, because the figures circulating this week could not be tied to a named contract month and a settlement basis. The Global Carbon Project’s read is that global oil demand is down about 1.9% this year, attributing the fall to the Iran conflict and the disruption around the Strait of Hormuz. The United Nations says 25 seafarers have been killed in and around Hormuz since February.</p>
+<p class="field">Context</p><p>The Islamic Revolutionary Guard Corps has asserted the Strait “remained” “closed”, in reported speech and past tense. It is not closed. Iran has restricted shipping, which is a materially different claim and the one to use.</p>
+<p class="field">Who's affected</p><p>Refiners on the Gulf Coast and in India; shipping insurers; Gulf producers whose export routes run through the Strait; and crews, who are the ones dying.</p>
+<p class="field">What it means</p><p>A near-$90 WTI settlement with demand falling is the signature of a supply-side war premium rather than a growth story. It also feeds directly into the inflation problem above: energy is doing a lot of the work in both the US PPI figure and the euro area’s 4.0%.</p>
+<p class="field">Watch next</p><p>Whether any authority publishes a shipping-transit count for the Strait, which would settle the “closed” question with a number.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>Mortgage rates eased for a fourth straight week</h2>
+<p class="field">What happened</p><p>Freddie Mac’s Primary Mortgage Market Survey, <a href="https://www.freddiemac.com/pmms">as of 12 November</a>, put the 30-year fixed average at 7.11%, down from 7.18%, and the 15-year at 6.45% from 6.57%. These are weekly survey averages, not daily quotes. Existing-home sales fell 5.5% to a 3.75m annual rate in the most recent reading, and initial jobless claims were 200,000.</p>
+<p class="field">Context</p><p>We have declined to print a streak length: the prior week’s coverage described a third straight decline, but we could not reach that release, so “a fourth” is arithmetic on an unverified base.</p>
+<p class="field">Who's affected</p><p>Would-be buyers; homebuilders; regional banks holding mortgage paper.</p>
+<p class="field">What it means</p><p>Survey rates easing while the policy debate turns toward a 50 basis point increase is a contradiction that will resolve one way. The long end has already moved — a 5.15% ten-year is not consistent with 7.11% mortgages drifting much lower.</p>
+<p class="field">Watch next</p><p>Thursday’s PMMS release, and whether existing-home sales fall again.</p>
+</div>
+<div class="item">
+<h2><span class="num">5</span>We still cannot give you the week in indexes</h2>
+<p class="field">What happened</p><p>Friday’s closes are solid: the S&amp;P 500 at 7,561.67 (-0.4%), the Dow at 52,347.55 (+0.1%), the Nasdaq Composite at 25,136.27 (-0.9%) and the Russell 2000 at 2,790.49 (-0.3%). The weekly percentage moves are not. Five separate attempts this week returned exchange-traded fund moves, intraday figures, unlabelled percentages and one index page whose own 52-week high was dated inconsistently with its own daily range. The STOXX Europe 600 — which we have now failed to obtain for ten consecutive issues — is missing again for the same reason. An ETF move is not an index move and a percentage without a session label is not a close, so there is nothing here to print.</p>
+<p class="field">Context</p><p>Our Friday levels came from a labelled market wrap; the weekly arithmetic needs a prior Friday close from the same series, which is the part that keeps failing.</p>
+<p class="field">Who's affected</p><p>Readers who wanted one number, and got a methodology note instead.</p>
+<p class="field">What it means</p><p>Publishing the gap is the only honest option, and worth doing because the failure is systematic rather than random: free market data has quietly degraded into unlabelled snapshots. We would rather tell you we do not have it than hand you a number we cannot source.</p>
+<p class="field">Watch next</p><p>We are changing approach next week and going to the index operators’ own pages first rather than to coverage.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2><span class="num">1</span>LangChain raised $300m at a $3bn valuation</h2>
+<p class="field">What happened</p><p>The San Francisco agent-infrastructure company announced a <a href="https://pulse2.com/langchain-300-million-series-c-funding-led-by-capitalg-at-3-billion-valuation-to-expand-ai-agent-platform/">$300m Series C</a> led by CapitalG, an existing backer, at a stated $3bn valuation. This is a single lead, not a co-lead. New investors: GIC, DFJ Growth, Salesforce Ventures, Insight Venture Partners, QuantumLight and MongoDB Ventures. Existing investors named: IVP, Sapphire Ventures, Sequoia, Amplify and Benchmark. The valuation appears in the announcement rather than in any filing, so it is company-stated. Its LangSmith platform covers building, deploying, monitoring and governing agents.</p>
+<p class="field">Context</p><p>LangChain began as an open-source framework and has spent two years converting that distribution into a paid observability and governance product — the same path Datadog and HashiCorp took.</p>
+<p class="field">Who's affected</p><p>Enterprises running agents in production; LangChain’s open-source users, who are the funnel; Datadog and the model vendors’ own tooling.</p>
+<p class="field">What it means</p><p>The round is a bet that the durable business in agents is the governance layer rather than the agent. If every enterprise ends up running agents from three different vendors, something has to watch them all, and that something does not want to be owned by any one model provider.</p>
+<p class="field">Watch next</p><p>Whether a model vendor ships competing observability free, which is the obvious squeeze.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Orakl Oncology raised $34m to predict which drug works on which tumour</h2>
+<p class="field">What happened</p><p>The biotech announced a <a href="https://pulse2.com/orakl-oncology-34-million-series-a-funding-co-led-by-norrsken-vc-and-singular-to-expand-ai-powered-cancer-drug-discovery/">$34m Series A</a> co-led by Norrsken VC and Singular — genuinely co-led, in the announcement’s own wording. No other investors were named beyond “new and existing,” and no valuation was disclosed. The company works on AI-driven prediction of cancer drug response.</p>
+<p class="field">Context</p><p>Drug-response prediction is the part of oncology AI with the clearest commercial buyer, because it shortens trials rather than promising new molecules.</p>
+<p class="field">Who's affected</p><p>Pharmaceutical trial designers; European deep-tech investors; eventually patients enrolled in better-stratified trials.</p>
+<p class="field">What it means</p><p>A $34m Series A in European health AI is a reasonable proxy for where that market actually is: funded, serious, and an order of magnitude below the model companies. Note what is absent — no valuation, no lead-investor theatre, no benchmark claim.</p>
+<p class="field">Watch next</p><p>A named pharmaceutical partnership, which is the only validation that counts here.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Griffin raised $20m for embedded banking</h2>
+<p class="field">What happened</p><p>The UK-licensed embedded-banking provider announced a <a href="https://pulse2.com/griffin-20-million-series-b-funding-led-by-octagon-partners-to-expand-card-issuing-and-stablecoin-banking-services/">$20m Series B</a> led by Octagon Partners, with Notion Capital, A+ Ventures, Nordic Ninja and Breega participating alongside unnamed existing investors. The stated valuation is “more than $100 million,” which appears in no filing. The company says it serves more than 80 businesses and over 300,000 end customers and handles roughly 10 million payments a year. Card issuing and stablecoin services are planned, not launched.</p>
+<p class="field">Context</p><p>Griffin holds its own UK banking licence, which is the expensive thing that distinguishes it from the banking-as-a-service layer that sits on someone else’s.</p>
+<p class="field">Who's affected</p><p>UK fintechs needing a licensed partner; Modulr and ClearBank as competitors; the Financial Conduct Authority, whose stablecoin posture will decide the second half of the plan.</p>
+<p class="field">What it means</p><p>Note the sequence: raise on a licence, then announce stablecoin intentions. The licence is the moat and the stablecoin line is the growth story, and the regulator holds the second one.</p>
+<p class="field">Watch next</p><p>Whether card issuing actually ships, and any FCA statement on stablecoin issuance by licensed banks.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>Investors spent the week saying the Nvidia exit hit AI fundraising</h2>
+<p class="field">What happened</p><p>Venture investors and founders told <a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say">TechCrunch on 13 November</a> that Jensen Huang’s departure had blown a hole in AI startup funding. We are flagging this as reported sentiment rather than data — we have no round that was cancelled, repriced or withdrawn, and no aggregate weekly funding figure. The outlet also began maintaining a running list of AI projects and startups that have failed, published 14 November.</p>
+<p class="field">Context</p><p>Nvidia had become an investor as well as a supplier across the AI stack, including a $10bn commitment inside Anthropic’s private placement.</p>
+<p class="field">Who's affected</p><p>Seed and Series A AI companies raising now; funds that marked up positions on Nvidia-adjacent comparables.</p>
+<p class="field">What it means</p><p>Treat this as a thermometer, not a measurement. What makes it worth printing is the mechanism it reveals: a meaningful slice of AI venture pricing was anchored to one company’s strategic cheque-writing, which means a governance event there repriced risk somewhere with no connection to it.</p>
+<p class="field">Watch next</p><p>Fourth-quarter AI venture totals, out in January — the first hard number on whether the sentiment was right.</p>
+</div>
+<div class="item">
+<h2><span class="num">5</span>Two rounds we could not stand behind</h2>
+<p class="field">What happened</p><p>Nebuly’s $21m Series A, said to be led by Planven, appeared only in an index table with no article behind it. Numica’s $21m of equity and debt, raised to acquire accounting firms, appeared only as a headline. Neither is printed as reporting. We also looked for the week’s notable shutdown, layoff, down round or acquisition and could confirm none.</p>
+<p class="field">Context</p><p>We are naming these because a reader tracking the sector will see them elsewhere this week and should know why they are not here.</p>
+<p class="field">Who's affected</p><p>Nobody yet.</p>
+<p class="field">What it means</p><p>The index-table problem is becoming the main constraint on startup coverage: funding wires increasingly publish a row in a database rather than a release with a date and a dollar figure. A row is a lead.</p>
+<p class="field">Watch next</p><p>Primary releases from either company.</p>
+</div>
+</div>
+<div class="section" id="vc---pe">
+<hr class="rule-hair"><p class="topic">VC &amp; PE</p>
+<p class="quiet" style="margin-top:16px">The week’s largest buyout could not be dated. Several large deals — a KKR and Energy Capital Partners takeover of DCC approved by shareholders at more than £5.7bn, Clearlake taking full control of Chelsea FC at about £5bn including debt, KKR as preferred bidder for Logoplaste at more than €1.7bn including debt — sat on an undated wire page, and we do not print a deal we cannot place in the window.</p>
+<div class="item">
+<h2><span class="num">1</span>KKR’s consortium completed its 45% purchase of Sempra Infrastructure Partners</h2>
+<p class="field">What happened</p><p>Sempra <a href="https://pulse2.com/sempra-sale-of-45-stake-in-sempra-infrastructure-partners-to-kkr-led-consortium-completed/">confirmed completion</a> of the sale of a 45% stake in Sempra Infrastructure Partners to a KKR-led consortium, with the Canada Pension Plan Investment Board co-investing indirectly. The announcement gives no closing date and no price. After closing, the KKR-led group holds 65%, Sempra retains 25% and an Abu Dhabi Investment Authority affiliate keeps 10%. Chief executive Jeffrey W. Martin called it “an exciting milestone at Sempra.” This is a completion of a previously agreed deal, not a new announcement, and reaches us through one outlet’s rewrite of the company release.</p>
+<p class="field">Context</p><p>Sempra Infrastructure holds the LNG export and Mexican energy assets; selling down to 25% converts a capital-hungry development business into a fee-and-dividend position.</p>
+<p class="field">Who's affected</p><p>Sempra’s balance sheet; KKR’s infrastructure fund investors; CPPIB pensioners; Mexican and Gulf Coast LNG counterparties.</p>
+<p class="field">What it means</p><p>A utility selling three-quarters of its growth engine to infrastructure funds and a sovereign wealth vehicle is the defining capital structure of this cycle: the public company keeps the regulated returns and the private capital takes the build risk, which is also where the upside now lives.</p>
+<p class="field">Watch next</p><p>Sempra’s next capital plan, and whether the retained 25% gets sold down further.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Norwest raised a $4bn fund aimed at AI</h2>
+<p class="field">What happened</p><p>Norwest announced a <a href="https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund">$4bn fund on 12 November</a>, pushing deeper into AI. We have this at headline level only — we did not reach the article body, so the fund’s structure, strategy split and investor base are not reported here. Separately, Proterra Investment Partners is said to have closed Credit Fund 3 at $680m against a $500m target, and Ballistic Ventures to be seeking $490m — a target, not a close. Neither Proterra date could be confirmed, so neither is printed as this week’s.</p>
+<p class="field">Context</p><p>A $4bn fund from a multi-stage firm is large but not unprecedented; what is notable is the AI designation on a vehicle that size, which commits the firm to deploying at AI-era entry prices.</p>
+<p class="field">Who's affected</p><p>Norwest’s limited partners; founders raising growth rounds; the firms it will now compete with at the top of the market.</p>
+<p class="field">What it means</p><p>Fund size is a statement about pace. $4bn earmarked for AI means cheques large enough that the firm needs the current valuation environment to persist for three or four more years to make the arithmetic work.</p>
+<p class="field">Watch next</p><p>The fund’s first announced deal, which will show where in the stack it has decided to play.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>A $500m private-credit financing for American manufacturing</h2>
+<p class="field">What happened</p><p>VulcanForms is reported to have raised a $500m financing led by J.P. Morgan and funds managed by Apollo, to build three new US manufacturing factories. We could not confirm the date from the article itself, so this is logged with that caveat rather than printed as a dated event. The metal additive-manufacturing company has previously raised venture equity; this is debt.</p>
+<p class="field">Context</p><p>Private credit funding domestic factory construction is the structure to watch — it is how the manufacturing reshoring push is actually being financed where federal grants do not reach.</p>
+<p class="field">Who's affected</p><p>US additive-manufacturing capacity; Apollo’s credit investors; the aerospace and medical customers who buy printed metal parts.</p>
+<p class="field">What it means</p><p>The interesting part is who is lending, not who is borrowing. Banks and private-credit funds splitting a half-billion-dollar factory loan is what capital formation for industrial policy looks like when the policy itself provides no capital.</p>
+<p class="field">Watch next</p><p>A dated primary release, and the sites of the three factories.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2><span class="num">1</span>The FAA grounded every flight in America and still has not said why</h2>
+<p class="field">What happened</p><p>At around 4 p.m. Eastern on Friday 13 November the Federal Aviation Administration issued a nationwide ground stop for all US airports, lifted at 8:15 p.m. Eastern, with advisory language citing “extraordinary circumstances and reasons for safety.” The agency’s own <a href="https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop">statement</a>, dated 13 November, attributes it to “communication issues” affecting several Air Route Traffic Control Centers, says technicians are investigating, and labels itself “preliminary and subject to change.” It names no cause. Three separate accounts circulated: Transportation Secretary Sean Duffy’s, blaming a copper-to-fibre swap by contractor L3Harris in which a router began flooding others in the system; CBS’s, on senior government sources, that the problem was “limited to” Cisco 600 series routers manufactured between 2001 and 2006; and a third, on multiple sources on the same CBS page, pointing at an update to the private communications network. Homeland Security Secretary Markwayne Mullin said there was no evidence of a cyberattack, with the investigation open. L3Harris said it “takes the nationwide ground stop and its impact on travelers, airlines and air traffic operations seriously,” and would not address Duffy’s criticism.</p>
+<p class="field">Context</p><p>Duffy’s broader line on the infrastructure, after the stop lifted, was blunt: “We have old switches, old routers. We use 1980s little copper lines.” FAA Administrator Bryan Bedford said airlines expected “full schedule integrity by the close of business on Sunday”. FlightAware counted about 9,159 cancellations and 7,190 delays on Friday on CBS’s citation; Duffy’s own pair was 9,161 and 7,292; the same FlightAware “cancelled today” counter read more than 6,400 by 9 p.m. Eastern on Saturday. These are different counters and different capture times, not competing estimates of one number.</p>
+<p class="field">Who's affected</p><p>American Airlines and JetBlue, with 293 and 241 Sunday cancellations respectively on the Saturday 9 p.m. FlightAware capture; L3Harris; the controllers’ union NATCA, whose president Nick Daniels said “We know we didn’t have communications with airplanes”; and several million passengers across three days.</p>
+<p class="field">What it means</p><p>A week on, the United States has grounded its entire civil aviation system and published no technical finding. That is the story — not the router. Three mutually inconsistent official and semi-official accounts, one of them anonymous, is what an absent engineering report looks like in public. The political consequence is already visible: the Transportation Secretary has pre-emptively named a contractor before his own agency has established a cause.</p>
+<p class="field">Watch next</p><p>A published FAA or DOT technical finding; any L3Harris investor statement; and Monday’s FlightAware count, since we could not obtain a Sunday close-of-day figure from any named counter and cannot confirm whether Bedford’s expectation held.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The Supreme Court took an immigration case and narrowed it first</h2>
+<p class="field">What happened</p><p>On 13 November the Court granted certiorari in <em>Mullin v. Refugee and Immigrant Center for Education and Legal Services</em>, No. 26-239, with the docket recording “Petition GRANTED limited to Questions 1 and 2 presented by the petition.” The D.C. Circuit is below, having ruled on 24 April with rehearing denied 23 July. No argument date has been set. For the avoidance of a mistake we nearly made ourselves: the named petitioner is Markwayne Mullin in his capacity as Secretary of Homeland Security, per the docket caption, not as a senator.</p>
+<p class="field">Context</p><p>A grant limited to two of the presented questions is the Court deciding in advance what it will and will not resolve — often a signal that the broader constitutional question is being deliberately left alone.</p>
+<p class="field">Who's affected</p><p>The respondent organisation and the asylum seekers it represents; the Department of Homeland Security; the D.C. Circuit’s reasoning.</p>
+<p class="field">What it means</p><p>Worth separating the grant from the outcome. Taking a case limited to two questions tells you about the Court’s appetite, not its destination. The narrowing is the only information available so far, and it points to a technical ruling rather than a sweeping one.</p>
+<p class="field">Watch next</p><p>The argument calendar, and the respondent’s brief on the merits.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Mississippi has a Senate result and no certification</h2>
+<p class="field">What happened</p><p>Scott Colom beat Senator Cindy Hyde-Smith by 4,404 votes. The county certification deadline — ten days after the election, which the Mississippi Free Press dated to 13 November — passed at 5 p.m. on Friday in silence. The Secretary of State’s results page carries no certification statement. The State Board of Election Commissioners certifies separately and, as of this morning, has set no date and issued no notice. We checked the Secretary of State directly and found nothing.</p>
+<p class="field">Context</p><p>Provisional, final and certified are three different states, and this race is in the second. A county deadline passing is not a state certification, and a deadline passing in silence is not a refusal either.</p>
+<p class="field">Who's affected</p><p>Colom and Hyde-Smith; the incoming Senate’s arithmetic; Mississippi election officials.</p>
+<p class="field">What it means</p><p>The silence is the only fact here, and it is worth reporting as one. There is no evidence of a dispute, no litigation on any docket we can see, and no statement from the state board — which most likely means ordinary administrative lag in a state whose own pages are slow. But a federal Senate seat decided by 4,404 votes and uncertified for a week is worth a reader’s attention.</p>
+<p class="field">Watch next</p><p>A State Board of Election Commissioners meeting notice at the Secretary of State’s office.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>Congress opened four separate inquiries into one company</h2>
+<p class="field">What happened</p><p>Beyond the three House committee chairs seeking a 1 December interview with Jensen Huang, Senate Banking under Tim Scott asked him to testify voluntarily in the first week of December and asked Commerce Secretary Howard Lutnick for a public hearing; Lutnick is reported on a single outlet to have agreed to 10 December. Representative Richard Neal and Senator Ron Wyden launched a separate inquiry on 12 November into the administration’s handling of Nvidia’s China chip sales, citing the December 2025 H200 approval. The House Select Committee on China had earlier sought a briefing on 18 November. The Remote Access Security Act passed the House 369-22.</p>
+<p class="field">Context</p><p>The 369-22 margin is the number to hold onto: chip export policy is now one of the few genuinely bipartisan positions in this Congress, which is why the oversight is coming from both parties’ committees at once.</p>
+<p class="field">Who's affected</p><p>Nvidia’s incoming permanent chief executive, whoever that is; the Commerce Department’s licensing staff; and any US company selling advanced compute into Asia.</p>
+<p class="field">What it means</p><p>Four inquiries into one company in one week, from both chambers and both parties, is not a scandal response — it is the construction of a permanent oversight regime for advanced semiconductors. That outlasts any individual executive and is the part worth tracking.</p>
+<p class="field">Watch next</p><p>18 November briefing; 1 December interview; 10 December Senate Banking hearing, if it holds.</p>
+</div>
+</div>
+<div class="section" id="eu">
+<hr class="rule-hair"><p class="topic">EU</p>
+<div class="item">
+<h2><span class="num">1</span>Two Dublin summits, and Europe decided not to pick one envoy</h2>
+<p class="field">What happened</p><p>There were two meetings, which has confused the week’s coverage including ours. Thursday 12 November was the ninth European Political Community summit at the Convention Centre Dublin, with the leader count given as almost 50 by the Irish Times and about 55 by EUobserver. Friday 13 November was an informal European Council of all 27, on AI and Ukraine. After the Friday meeting, Council President António Costa <a href="https://euobserver.com/248871/eu-leaders-hand-ukraine-peace-talks-to-france-germany-uk-italy-poland-plus-brussels-instead-of-a-single-envoy/">told reporters</a> that negotiations would be handled by “the European Union institutions and the E5 of the ‘Coalition of the Willing’” — France, Germany, the UK, Italy and Poland. No single envoy was appointed. High Representative Kaja Kallas has no confirmed seat; a senior diplomat said sending her was “just not possible”. Commission President Ursula von der Leyen said a 22nd sanctions package would be agreed at the next European Council, and flagged a Ukraine funding gap of roughly €70bn for next year, of which the EU must find about €45bn. Taoiseach Micheál Martin said the representation question should be settled within a week or two.</p>
+<p class="field">Context</p><p>The EU leads on Ukraine’s European future and reconstruction; security guarantees sit with the Coalition of the Willing, coordinated with NATO. A photo caption misdated to the Thursday summit is what put the wrong date on Costa’s announcement across several outlets.</p>
+<p class="field">Who's affected</p><p>Kallas, whose office has just been routed around; the E5 capitals; Ukraine, which now negotiates with a committee; Hungary and Slovakia, who are not in the E5.</p>
+<p class="field">What it means</p><p>Appointing five member states plus the institutions instead of one envoy is a decision about internal politics, not about negotiating effectiveness. It avoids a fight over Kallas and it keeps four large capitals inside the tent — at the cost of the single phone number Washington and Moscow have both asked for. The €45bn the EU must find is the harder number.</p>
+<p class="field">Watch next</p><p>The next European Council for the 22nd sanctions package; Martin’s one-to-two-week deadline on representation.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>The Dutch cabinet has not fallen, and the talks are still going</h2>
+<p class="field">What happened</p><p>Prime Minister Rob Jetten’s D66-led minority cabinet — 66 of 150 seats — has been in crisis talks with CDA and VVD since Friday. The trigger was a 2027 tax package, raising about €1bn from wealthier households and cutting about €900m for middle and lower incomes, which passed the Tweede Kamer on Thursday 12 November by 76 votes to 74 at 21:11, with coalition partner VVD voting against. A PVV motion of no confidence failed 34-116. An amendment from Pro and Volt passed with 79 votes, backed also by D66, CDA, SP, 50Plus, PvdD, Denk and ChristenUnie. More than eight hours of talks at the Ministry of General Affairs on Friday resolved nothing; the parties moved to the Zwaluwenberg estate in Hilversum on Saturday, broke off before 20:00 and agreed to a news blackout, and resumed at 11:00 on Sunday. <a href="https://nltimes.nl/2026/11/15/dutch-coalition-parties-resume-crisis-talks-officials-urge-cabinet-collapse">As of this morning</a> there is no deal, no resignation and no fall.</p>
+<p class="field">Context</p><p>VVD leader Dilan Yesilgöz calls the minority cabinet “een slechte deal” and a failed experiment and wants a “fundamentele reset”. Geert Wilders, in opposition, says “This coalition is effectively dead. We just have to wait for the funeral to take place,” — which is a view, not a fact. Utrecht mayor Sharon Dijksma told NOS Nieuwsuur it would be “completely irresponsible if this Cabinet becomes caretaker.” A liveblog entry mentions 17 March 2027 as a possible early-election date.</p>
+<p class="field">Who's affected</p><p>Dutch taxpayers on both sides of the package; Jetten’s D66 project; the EU’s negotiating line, since a caretaker Dutch government cannot commit to Ukraine funding.</p>
+<p class="field">What it means</p><p>A coalition partner voting against its own government’s tax bill and then staying in the government is an unstable equilibrium, but it is an equilibrium, and the arithmetic explains why: nobody in the room wants a March election. Note the news blackout — parties that have agreed to stop briefing are usually still negotiating rather than collapsing.</p>
+<p class="field">Watch next</p><p>Any statement out of Zwaluwenberg today; and whether a restart proposal from ChristenUnie’s Bikker, reported to have majority support, becomes the vehicle.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Lagarde kept December open and announced her own exit</h2>
+<p class="field">What happened</p><p>Euro-area headline inflation was 4.0% in October, up from 3.8%, with energy up 20.8% against 18.9% and core at 2.5% and services at 3.3% — figures President Christine Lagarde confirmed in an <a href="https://www.ecb.europa.eu/press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html">interview with Yomiuri Shimbun</a> conducted on 4 November and published on the 7th. She said she “cannot tell you today” that the ECB will act in December. On fiscal policy her line was sharper: “Please, Member States, apply the rules, respect the rules, play by the rules.” The Governing Council held the deposit rate at 2.5% on 29 October. At that meeting Lagarde announced she will leave in February 2027, roughly nine months before her term ends.</p>
+<p class="field">Context</p><p>The December Governing Council meets 16-17 December, with the press conference on the 17th. Markets are reported to be pricing a December increase.</p>
+<p class="field">Who's affected</p><p>Euro-area mortgage holders; Italian and French sovereign spreads; whoever succeeds Lagarde, who inherits a tightening cycle rather than an easing one.</p>
+<p class="field">What it means</p><p>Energy inflation at 20.8% is doing almost all of the work in a 4.0% headline, which is why core at 2.5% is the number the Council will actually argue about. A departing president with nine months to run has limited room to commit her successor — and that, rather than the data, may be what “cannot tell you today” is really about.</p>
+<p class="field">Watch next</p><p>16-17 December Governing Council; and the nomination process for Lagarde’s replacement.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>A million signatures want the EU-Israel trade agreement suspended</h2>
+<p class="field">What happened</p><p>A European citizens’ initiative calling for full suspension of the EU-Israel trade agreement was <a href="https://euobserver.com/248649/fastest-eu-citizens-initiative-ever-pushes-brussels-to-end-euisrael-trade-agreement/">submitted in Brussels on 12 November</a> with 1.1 million signatures, described as the fastest initiative ever to reach a million — within three months of its January launch, though the report offers no comparison data behind the superlative. Left MEP Benedetta Piccolotti presented it; Manon Aubry spoke. Piccolotti: “Now it is up to the EU Commission and the member states. You cannot hide behind words anymore”. Aubry: “To all EU institutions, democracy is asking you to act”. The Commission has up to six months to respond, which puts the deadline around mid-May 2027.</p>
+<p class="field">Context</p><p>A successful initiative obliges a formal Commission response and a European Parliament hearing; it does not oblige legislation. Suspension of the trade pillar would require a qualified majority of member states.</p>
+<p class="field">Who's affected</p><p>Israeli exporters, for whom the EU is the largest trading partner; the Commission, now holding a formal obligation it did not want; member states split on the question.</p>
+<p class="field">What it means</p><p>The number is real and the legal effect is thin, which is the recurring shape of this instrument. What it changes is the procedural clock: the Commission must now produce a written position with a date on it, and that document becomes the thing every member state is measured against.</p>
+<p class="field">Watch next</p><p>The Commission’s formal response, due by around mid-May 2027, and a European Parliament hearing before it.</p>
+</div>
+</div>
+<div class="section" id="france">
+<hr class="rule-hair"><p class="topic">France</p>
+<div class="item">
+<h2><span class="num">1</span>The Senate started repairing a budget the Assembly refused to pass</h2>
+<p class="field">What happened</p><p>On <a href="https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-le-senat-adopte-un-volet-recettes-affaibli">13 November</a> the Senate adopted the revenue section of the 2027 social-security financing bill by 200 votes to 110, with the left and the RN-UDR group against. Budget minister David Amiel said the senators’ votes « abaissent d’environ 3,2 milliard d’euros le solde par rapport au texte initial » — lowering the balance by about €3.2bn against the original text — which he called a « prévision technique à date ». The chamber’s own sitting record for that day, marked provisional, shows Article 13 adopted 277 to 16 and increases to the CSA solidarity levy rejected. The Senate’s public sitting on the bill runs 9 to 17 November; the text arrived there treated as « considéré comme rejeté par l’Assemblée nationale ». Earlier votes in the week took in a levy on sugary products and a reduction in employer-contribution exemptions.</p>
+<p class="field">Context</p><p>The main budget, the PLF, is a separate and worse problem. The Assembly rejected its revenue section on 4 November — reported as 458 to 0, though two members of the communist and overseas group abstained, so neither “458-0” nor “unanimous” is quite right. The spending section was never examined. The Senate takes the original text from 20 November to 8 December with a solemn vote on 9 December; a joint committee follows in mid-December; the 70-day ordinance clock expires at midnight on 17 December, and a loi spéciale would have to be filed before the 19th.</p>
+<p class="field">Who's affected</p><p>Hospitals and pension funds, whose budgets ride on the PLFSS; local authorities waiting on the PLF; bondholders watching a deficit Amiel has put at 5.9% of GDP on the amended text against a 5% target.</p>
+<p class="field">What it means</p><p>The Senate is doing the work the Assembly would not, and that is the pattern to expect through December: an upper house with a right-leaning majority rebuilding a text the lower house destroyed, then a joint committee trying to sell the result back to deputies who have already voted no once. The three exits are a 49.3, an unprecedented budget ordinance, or the loi spéciale used in 2024 and 2025. Only the RN has signalled it would not censure a 49.3, which is not a coalition any government wants to depend on.</p>
+<p class="field">Watch next</p><p>The PLFSS solemn vote, expected around 18 November; the PLF in the Senate from 20 November; the 17 December ordinance deadline.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Lecornu put €725m on the table for farmers and admitted the obvious</h2>
+<p class="field">What happened</p><p>Prime Minister Sébastien Lecornu presented a €725m, ten-year agricultural recovery plan on <a href="https://www.publicsenat.fr/actualites/politique/plan-de-relance-agricole-une-des-thematiques-majeures-du-compromis-budgetaire-affirme-sebastien-lecornu">12 November</a>, calling agriculture « une des thématiques majeures du compromis budgétaire pour les semaines et les mois qui viennent ». On the budget itself he said there is « pas de schéma dans lequel il n’y a pas de budget » — no scenario in which there is no budget — and pointed to December for the answer on how it gets finalised. Translations here are ours; the French is the quote.</p>
+<p class="field">Context</p><p>We found no censure motion filed between 8 and 15 November, and nothing dated in the window on the Socialists’ or the Rassemblement National’s posture toward one. The hits on censure and 49.3 that searches return are from January 2026 and are stale.</p>
+<p class="field">Who's affected</p><p>French farmers, who have been the most effective street constituency of the past two years; Lecornu, whose survival depends on not needing a 49.3 before Christmas.</p>
+<p class="field">What it means</p><p>Spending €725m on the single bloc most capable of blockading Paris, in the same week he concedes the budget runs to December, is a government buying time in the most direct way available. “No scenario without a budget” is also an admission: it rules out collapse but not an ordinance.</p>
+<p class="field">Watch next</p><p>Whether any group files a censure motion once the PLF reaches the Senate on 20 November.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Unemployment eased to 8.2% while the economy shrank</h2>
+<p class="field">What happened</p><p>INSEE put third-quarter unemployment at 8.2%, down 0.1 point on the quarter but up 0.4 point on the year, with the number of jobseekers falling 47,000 to 2.6 million. Youth unemployment is 21%. Unemployment among the over-50s is 5.6%, its highest since the first quarter of 2022, and long-term unemployment is 2.1%. Third-quarter GDP fell 0.1%. Labour Minister Jean-Pierre Farandou called the market resilient; the CFDT and CGT were critical. The figures reach us through <a href="https://lepetitjournal.com/expat-emploi/france-leger-repit-sur-le-front-du-chomage-quasiment-stable-82-au-troisieme-trimestre-458401">one wire relay</a>, not from INSEE’s own page.</p>
+<p class="field">Context</p><p>A falling unemployment rate alongside falling output usually means the labour force is shrinking rather than that jobs are being created.</p>
+<p class="field">Who's affected</p><p>Over-50s, the only cohort getting visibly worse; the unemployment-insurance accounts inside the PLFSS being debated this week; Farandou’s credibility.</p>
+<p class="field">What it means</p><p>The over-50 number is the one to hold. A headline rate improving by a tenth while the over-50 rate hits a four-year high and GDP contracts is not a recovering labour market — it is an aging workforce being pushed out of it. That is also a pension-reform problem in waiting.</p>
+<p class="field">Watch next</p><p>Fourth-quarter GDP, and whether the over-50 series keeps climbing.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>A six-union strike on Tuesday, and the CFDT joined it</h2>
+<p class="field">What happened</p><p>A public-sector strike and demonstration is called for Tuesday 17 November by an intersyndicale of CGT, UNSA, FSU, Solidaires, CFE-CGC and FAFP, demanding pay rises and indexation of the index point. The CFDT said on 13 November that it was joining. CGT general secretary Sophie Binet wants the action extended to the private sector. The Paris march is planned from Invalides to Place d’Italie, subject to prefecture approval. As of Friday neither RATP nor SNCF had filed a strike notice. This comes from a single listings source. Separately, a Parcoursup meeting at Matignon on 10 November was walked out of by unions and produced no measure, with student and teacher mobilisations following.</p>
+<p class="field">Context</p><p>An intersyndicale that includes the CFDT is materially different from a CGT-led action: the CFDT is the largest confederation and the one governments can usually negotiate with.</p>
+<p class="field">Who's affected</p><p>Schools, hospitals and local government on Tuesday; commuters, depending on whether transport notices appear; Lecornu, mid-budget.</p>
+<p class="field">What it means</p><p>The CFDT’s arrival is the signal. A pay-and-indexation strike during the budget debate, with the moderate confederation on board, is the public sector telling the government what the price of a 49.3 would be. Watch for transport notices — without them this stays a demonstration rather than a shutdown.</p>
+<p class="field">Watch next</p><p>RATP and SNCF strike notices before Tuesday; turnout figures from both the interior ministry and the CGT, which will differ.</p>
+</div>
+<div class="item">
+<h2><span class="num">5</span>Axa is cutting 150 head-office jobs</h2>
+<p class="field">What happened</p><p>Axa will cut about 150 head-office positions through a voluntary departure plan, <a href="https://www.moneyvox.fr/assurance/actualites/111187/axa-va-supprimer-150-postes-dans-son-siege-social">reported on 10 November</a>, with the company saying unions signed the plan unanimously. Nine-month revenue was up 5% to €93bn and first-half net profit was €4.17bn. Single outlet. For the market: the CAC 40 closed Thursday 12 November at 8,361, up 0.34% on the day and 2.7% on the week; Brent was about $93.80 at that point; Vente-unique.com reported revenue up 21% to €243.1m; Viridien won a Sinopec order for 80,000 sensors.</p>
+<p class="field">Context</p><p>Voluntary-departure plans with union signatures are how large French employers restructure without triggering a plan de sauvegarde de l’emploi.</p>
+<p class="field">Who's affected</p><p>150 Axa employees in Paris; the unions who signed; Axa shareholders, who got a 5% revenue increase in the same week.</p>
+<p class="field">What it means</p><p>Small in absolute terms and worth noting for the shape: a profitable insurer trimming central functions by agreement rather than by conflict. It is also the only French corporate restructuring we could date this week, which says something about how quiet the CAC has been.</p>
+<p class="field">Watch next</p><p>Axa’s full-year results, and whether other French insurers follow with similar plans.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2><span class="num">1</span>A Trump-Xi-Putin meeting is reportedly planned, and nobody on the record has confirmed it</h2>
+<p class="field">What happened</p><p>The White House is reported to have confirmed on 13 November that a first three-way meeting between Donald Trump, Xi Jinping and Vladimir Putin <a href="https://kyivindependent.com/historic-first-summit-among-trump-xi-putin-will-not-focus-on-ukraine-white-house-says/">has been planned</a>, with the focus said to be nuclear non-proliferation and the war in Iran, and Ukraine explicitly not on the agenda. Dates of 18-19 November and a venue of Shenzhen, on the sidelines of APEC, have circulated, but we could not verify either from the reporting we reached, and we could not find a second independent outlet or any named official on the record. The account rests on an unnamed US official speaking to a wire service. A Kremlin aide told Russian state media on 12 November that Russia “will continue to discuss the full range of issues related to the settlement”. Ukrainian Foreign Minister Andrii Sybiha said the summit would only “encourage Putin to continue this war”. We are printing this as unconfirmed, because that is what it is.</p>
+<p class="field">Context</p><p>New START expired in February 2026, which is why non-proliferation rather than Ukraine is the stated agenda. A trilateral at this level has no precedent.</p>
+<p class="field">Who's affected</p><p>Ukraine, excluded from the agenda of a meeting about a war on its territory; Europe’s newly appointed negotiating team; Xi, who would be hosting.</p>
+<p class="field">What it means</p><p>The thing to notice is the shape of the sourcing, not the summit. A meeting of this magnitude announced only through an anonymous official, with no state department release and no second outlet, either has not been finalised or is being floated to see who objects. Both readings are more informative than the headline. If it happens on those dates, it happens the day Anthropic’s book closes and the day after Nvidia reports — a week in which American power is being exercised in three different registers at once.</p>
+<p class="field">Watch next</p><p>A State Department or White House release; and 18-19 November, whether or not anything was ever announced.</p>
+</div>
+<div class="item">
+<h2><span class="num">2</span>Washington floated NATO membership for Ukraine in exchange for Donbas</h2>
+<p class="field">What happened</p><p>President Volodymyr Zelensky told journalists, in remarks <a href="https://kyivindependent.com/us-floats-nato-membership-for-ukraine-in-exchange-for-donbas-withdrawal-zelensky-says/">published 14 November</a>, that American officials had asked: “The Americans raised the question: ‘What if Ukraine joins NATO?” “Would Ukraine withdraw from Donbas?’” He added that “This was the first time this issue had been raised,”. No venue is given for the remarks. Further quotes circulating — that he has no right to make such a decision alone, and that specifics are still lacking — we could not verify verbatim and are not printing as quotations. Jared Kushner said on 14 November that he aims to broker Europe-Russia talks and is preparing the agenda for the next round. No date or venue for that round exists in anything we could reach. The last round is reported to have been in Abu Dhabi on 10-11 November, which we could not confirm.</p>
+<p class="field">Context</p><p>Zelensky has said he wants Article 5-style guarantees as a minimum and no recognition of occupied territory as Russian. Russian overnight drone attacks continued through the week; the Kyiv Independent reported at least seven killed and 80 injured across Ukraine on 14 November, with Zaporizhzhia among the worst hit.</p>
+<p class="field">Who's affected</p><p>Ukrainians in the unoccupied parts of Donetsk and Luhansk oblasts, who would be the subject of any withdrawal; NATO members who would have to ratify; Poland and the Baltics.</p>
+<p class="field">What it means</p><p>If accurately reported, this is the first time the alliance-membership question has been put on the table as a tradeable asset, and it is a trade Ukraine cannot make unilaterally — NATO accession requires thirty-two ratifications, several of which are not available. Which makes the offer either a probe or a way of making a territorial concession sound like a gain.</p>
+<p class="field">Watch next</p><p>A date and venue for the next round; and whether any NATO member states respond to the proposition publicly.</p>
+</div>
+<div class="item">
+<h2><span class="num">3</span>Iran’s war is still closing shipping and killing crews</h2>
+<p class="field">What happened</p><p>The United Nations says 25 seafarers have been killed in and around the Strait of Hormuz since February. Bahrain’s military said this week that its air defences thwarted Iranian attacks it called “treacherous” — a party’s account of its own operations, relayed by one outlet, and distinct from an earlier CENTCOM claim that two IRGC one-way attack drones were shot down over Bahrain by US forces. Note that two different Bahraini bodies have spoken: the Interior Ministry issued public alerts, the Bahrain Defence Force made the air-defence claim. A Saudi-led coalition said on 15 November that it intercepted suspected Houthi missiles and drones over Riyadh — a separate matter from Houthi spokesman Yahya Saree’s claimed strikes on Saudi targets, which Saudi Arabia and Aramco have still not addressed. Iran’s navy claims two tankers struck mines on Saturday after taking an unauthorised route, which is again a party describing its own operation.</p>
+<p class="field">Context</p><p>The IRGC has asserted the Strait “remained” “closed”, in reported speech and the past tense. It is not closed; Iran has restricted shipping. Parliament speaker Mohammad Bagher Ghalibaf warned Iran will not remain in “neither war nor peace”.</p>
+<p class="field">Who's affected</p><p>Merchant crews, 25 of whom are dead; shipping insurers and charterers; Gulf exporters; and global oil demand, down about 1.9% this year on the Global Carbon Project’s read, substantially because of this.</p>
+<p class="field">What it means</p><p>Almost every claim in this theatre is a belligerent describing its own success, which is why the only solid numbers are the dead seafarers and the oil price. The useful question is not who intercepted what but whether transit volumes have actually fallen — and nobody has published that, which is itself telling.</p>
+<p class="field">Watch next</p><p>Any published transit count for the Strait; and whether Saudi Arabia or Aramco ever responds to Saree’s claims.</p>
+</div>
+<div class="item">
+<h2><span class="num">4</span>ASEAN opened in Manila with a trade war on the agenda and arrests outside</h2>
+<p class="field">What happened</p><p>The 49th ASEAN Summit opened in Manila on <a href="https://www.manilatimes.net/2026/11/15/news/trade-war-in-focus-at-asean-summit-ahead-of-trump-arrival/2470243">Sunday 15 November</a> — the text says Sunday, though a photo caption on the same page says the 14th. No communiqué exists yet. Trump is due Tuesday, with a Quad meeting expected, described as the first of his second term. Canada’s Mark Carney said ASEAN trade talks were “substantially concluded”. The Philippine foreign secretary said a South China Sea Code of Conduct is “80 percent” complete and unlikely to be signed now. Singapore takes the 2027 chair. Outside, about 200 protesters clashed with police and at least three were detained on the Manila Times’s account; a separate report puts <a href="https://www.manilatimes.net/2026/11/15/news/9-protesters-arrested-in-manila-at-least-17-in-muntinlupa-witnesses/2470234">nine arrests in Manila</a> at Liwasang Bonifacio and at least seventeen Lakbayan delegates in Muntinlupa, citing protest-group and monitoring reports. Police have yet to provide a consolidated account. The headline attributes the figures to witnesses; the body does not.</p>
+<p class="field">Context</p><p>A Code of Conduct at 80% has been at roughly 80% for years. The arrest counts come from one outlet with no police number against them.</p>
+<p class="field">Who's affected</p><p>Filipino protesters in custody; ASEAN exporters facing US tariffs; Marcos Jr. as host; Beijing, which has an interest in the Code staying unsigned.</p>
+<p class="field">What it means</p><p>The summit’s real content is Tuesday, when Trump arrives and a Quad meeting may convene — everything before that is positioning. Carney’s “substantially concluded” is the week’s most load-bearing phrase: a Canada-ASEAN deal landing while Washington negotiates tariffs bilaterally is exactly the hedging the region has been accused of and is now doing openly.</p>
+<p class="field">Watch next</p><p>Trump’s arrival Tuesday; the Quad meeting; and whether police publish an arrest count.</p>
+</div>
+<div class="item">
+<h2><span class="num">5</span>The ANC had its worst local election result and now has to negotiate</h2>
+<p class="field">What happened</p><p>South Africa’s African National Congress polled just over 30% nationally in local elections, its worst local result, with no party winning a majority in about 65% of councils — including Johannesburg, Tshwane and Ekurhuleni. The MK Party won eThekwini with just over 38%. ANC leaders were due to announce their approach on Saturday; we could not find the outcome. This comes through <a href="https://www.lanacion.com.ar/usa/south-african-parties-in-high-stakes-coalition-talks-after-ancs-worst-election-results-nid13112026/">a single wire</a> carried widely, so it is one source.</p>
+<p class="field">Context</p><p>The ANC has governed nationally since 1994 and lost its parliamentary majority in 2024. Local coalition arithmetic in the three Gauteng metros has repeatedly produced unstable mayoralties.</p>
+<p class="field">Who's affected</p><p>Residents of Johannesburg, Tshwane and Ekurhuleni, where service delivery depends on which coalition forms; the Democratic Alliance and MK as kingmakers; President Cyril Ramaphosa’s authority inside his own party.</p>
+<p class="field">What it means</p><p>Thirty per cent is the number that reframes South African politics: a party that cannot win a metro on its own anywhere in Gauteng is a party that will spend the next five years governing by committee. Whether it partners with the DA or with MK is the single most consequential choice in African politics this quarter.</p>
+<p class="field">Watch next</p><p>The ANC’s announced coalition approach; and mayoral votes in the three Gauteng metros.</p>
+</div>
+<div class="item">
+<h2><span class="num">6</span>South Sudan postponed its first-ever national election again</h2>
+<p class="field">What happened</p><p>The National Elections Commission announced on <a href="https://www.aljazeera.com/news/2026/11/14/south-sudan-postpones-first-ever-national-elections-until-february">14 November</a> that the vote moves from 22 December 2026 to 11 February 2027. Voter registration runs 14 to 28 November and the campaign 27 December to 9 February. Commission chair Gabriel Bol Deng oversaw the registration drive. The commission gave no reason. The vote has now slipped at least three times since 2022. Single outlet.</p>
+<p class="field">Context</p><p>President Salva Kiir dissolved the transitional unity government in September. The chair of the UN rights commission, Yasmin Sooka, said in October: “This amounts to a constitutional coup through legislative reforms,”.</p>
+<p class="field">Who's affected</p><p>South Sudanese voters who have never cast a national ballot; opposition leaders sidelined by September’s dissolution; UN mission planners.</p>
+<p class="field">What it means</p><p>A commission that postpones without giving a reason is the clearest available statement about who controls the timetable. A country independent since 2011 has still never voted nationally, and a seven-week slip in a process that has already slipped three times is better read as indefinite than as scheduled.</p>
+<p class="field">Watch next</p><p>Registration closing 28 November — if that slips too, 11 February will not hold.</p>
+</div>
+</div>
+<div class="section" id="profile">
+<hr class="rule-hair"><p class="topic">Profile</p>
+<div class="item"><h2>Gordon Moore, who wrote down a line and then had to live inside it</h2></div>
+<div class="longform">
+<p class="drop">He blew up a laboratory before he was any good at one. In the Computer History Museum’s 2008 oral history, Gordon Moore describes his early work at Shockley Semiconductor with a chemist’s flat precision: a colleague “forget to look up the vapor pressure of arsenic and the tube exploded,” and then his own effort — “I ran out of water, and the net result was a lot more gallium evaporated.” The man whose name became shorthand for the most reliable industrial forecast of the twentieth century was, for his whole life, a physical chemist who distrusted grand claims, including his own.</p>
+<p>He was born in San Francisco on 3 January 1929 and raised in Pescadero, where his father was a constable who became undersheriff of San Mateo County — Caltech, Intel, the Foundation and the museum all give San Francisco, and the Pescadero version that circulates conflates birthplace with childhood. He built explosives in a backyard shed in Redwood City, not the tidy Christmas chemistry set of the legend, which we could not source anywhere. Chemistry at Berkeley in 1950, a doctorate at Caltech in 1954, then solid rocket propellants for the Navy at Johns Hopkins. In 1956 he joined William Shockley’s laboratory and learned what he did not want: the staff “quickly became disenchanted with his paranoid and abrasive management style,” in the museum’s unsentimental phrasing, and in September 1957 eight of them resigned and signed with Fairchild Camera and Instrument — a financing Moore later called the easiest in the Valley’s history.</p>
+<p>The famous sentence came eight years later, in <em>Electronics</em> of 19 April 1965, under the title “Cramming more components onto integrated circuits.” What it says is this: “The complexity for minimum component costs has increased at a rate of roughly a factor of two per year (see graph on p. 116).” Three things get lost. It is about components, not transistors. It is about complexity at the minimum cost per component — an economic claim, not an engineering one. And it says nothing whatsoever about speed. He had four data points. “I just did a wild extrapolation,” he said fifty years later, “saying it’s going to continue to double every year for the next 10 years.” The same article carries the line that deserves to be more famous: “Integrated circuits will lead to such wonders as home computers.”</p>
+<p>He revised it himself, in public, ten years on. At the IEEE International Electron Devices Meeting in 1975 he said “the new slope might approximate a doubling every two years, rather than every year, by the end of the decade,” because what he called “circuit and device cleverness” was “approaching a limit that must slow the rate of progress.” The eighteen-month version everyone quotes was never his: asked in 1998, he was curt — “No. Every two years, which has held true. I never said 18 months.” Nor did he name the law. Carver Mead is universally credited with popularising it, but when IEEE Spectrum went looking in 2015 Mead could not say whether he or a magazine writer coined it, and the earliest citation anyone has found is a 1977 article in <em>Science</em>. The most durable brand in semiconductors has no confirmed author.</p>
+<p>Intel was incorporated on 18 July 1968 as N.M. Electronics, a name Noyce found bland; then they found a Midwestern hotel chain was already using Intelco, and bought the rights. Moore’s explanation is the most Moore sentence in the archive: “We thought that paying $15,000 was easier than thinking up another alternative.” The business plan was “one page, double spaced. It had a lot of typos in it.” He was executive vice-president to 1975, president from 1975, and chairman and chief executive from 1979 — Intel, the Foundation and IEEE all say 1979, while Caltech and the museum say 1975, and the dispute has never been cleanly settled. He gave up the chief executive’s job in 1987, became chairman emeritus in 1997 and left the board in 2006.</p>
+<p>By 1983 Japanese competition had destroyed the margins in the memory business that was most of Intel’s revenue, and the decision that followed is the one Intel is still measured against. In a 2014 panel at the museum Moore described the conversation with his then-president Andy Grove, and what is striking in the primary record is how hedged his recall is: “And that’s when that famous discussion between Andy me, presumably, occurred, where he said,” “if you were coming in to run this company from the outside, what would you do.” “And I presumably answered, get out of the memory business.” Twice, “presumably” — the polished version in Grove’s book is a later retelling of something Moore could only half remember. Intel announced the DRAM withdrawal on 10 October 1985.</p>
+<p>He was wrong in public, repeatedly, and comfortable about it. On the memory exit: “We probably developed one more generation than we should have.” On Intel’s digital watch: “Turns out we weren’t very good at the watch business.” In a 2009 interview he mentioned having to “shut down plants and let go of people-some 9,000 one time.” And on his own law he was the least triumphalist person in the room: “It can’t continue forever. The nature of exponentials is that” “you push them out and eventually disaster happens.” In 2015: “Well, once I made a successful prediction, I avoided making another.”</p>
+<p>The Gordon and Betty Moore Foundation was announced in November 2000, capitalised — in its own 2025 annual report’s words — with 175 million shares of Intel stock; the $5bn figure attached to it everywhere appears nowhere in the Foundation’s own accounts. By 31 December 2025 the endowment stood at $12.86bn with $5.97bn of grants paid out. He was a lifelong sport fisherman, and in 2011 his was among the first human genomes sequenced on a semiconductor chip, by Ion Torrent’s Personal Genome Machine — a man whose law had made the chips cheap enough to read himself with them. He died at his home in Waimea, Hawaii, on 24 March 2023, aged 94.</p>
+<p>The reason he belongs in this issue is not the law. It is that Moore is the only founder in the history of this industry who handed over power early, deliberately, to someone he had hired out of graduate school, and then lived thirty-six years watching it work. He hired Grove at Fairchild; when he left for Intel, “I told Andy Grove, I was going to leave. He said, I want to come along,” and at the time “we thought Andy would eventually be something like a head of R &amp; D.” Instead Grove ran the company through the decade that made it, and Moore moved up and then out without drama. Intel’s later chief executives did not leave that way; its board pushed them out. On Tuesday, Nvidia will report its quarter with an interim chief executive who is also its chief financial officer, and a director first elected in 1993 in a chairman’s seat that did not exist a week ago. Succession is the hardest problem in this industry and almost nobody has solved it. Moore solved it once, by deciding in advance that the company mattered more than his own position in it.</p>
+</div></div>
+<div class="section" id="calendar">
+<hr class="rule-hair"><p class="topic">On the calendar</p><ul class="cal">
+<li><span class="when">Nov 16</span>Senate PLF 2027 debate preparations in Paris; Monday FlightAware counts are the first clean read on whether US air traffic has normalised</li>
+<li><span class="when">Nov 17</span><strong>Nvidia</strong> third-quarter fiscal 2027 results, approx. 1:20 p.m. PT, call 2 p.m. PT — Colette Kress’s first as interim chief executive</li>
+<li><span class="when">Nov 17</span>Six-union public-sector strike across France; Invalides to Place d’Italie in Paris, subject to prefecture approval</li>
+<li><span class="when">Nov 17</span>French Senate public sitting on the PLFSS 2027 concludes</li>
+<li><span class="when">Nov 17</span>Trump due in Manila for the ASEAN summit; a Quad meeting is expected</li>
+<li><span class="when">Nov 18</span><strong>Anthropic</strong> IPO order books close, 10 a.m. ET (per the free writing prospectus)</li>
+<li><span class="when">Nov 18</span>House Select Committee on China briefing sought on Nvidia; expected PLFSS solemn vote in the French Senate</li>
+<li><span class="when">Nov 18</span>October FOMC minutes expected, on the Fed’s three-week convention — not a published date</li>
+<li><span class="when">Nov 18-19</span>Reported but unconfirmed Trump-Xi-Putin trilateral, said to be on the APEC sidelines</li>
+<li><span class="when">Nov 19</span>Anthropic shares expected to begin trading on Nasdaq as “ANT”; completion expected 20 Nov</li>
+<li><span class="when">Nov 19</span>Earliest date Israel’s tenders committee may open the E1 bids for 1,234 housing units</li>
+<li><span class="when">Nov 20</span>COP31 closes in Antalya; French Senate takes up the PLF 2027</li>
+<li><span class="when">Nov 28</span>South Sudan voter registration closes ahead of the 11 February election</li>
+<li><span class="when">Nov 30</span>MSCI Taiwan weight change to 29.01% effective after the close</li>
+<li><span class="when">Dec 1</span>Closed-door House interview sought with Jensen Huang</li>
+<li><span class="when">Dec 8-9</span>FOMC meeting — the question is 25 or 50 basis points, upward</li>
+<li><span class="when">Dec 9</span>Solemn vote on the PLF 2027 in the French Senate</li>
+<li><span class="when">Dec 10</span>Senate Banking hearing with Commerce Secretary Howard Lutnick, reported on a single outlet</li>
+<li><span class="when">Dec 16-17</span>ECB Governing Council; press conference on the 17th</li>
+<li><span class="when">Dec 17</span>France’s 70-day budget ordinance clock expires at midnight; a loi spéciale would have to be filed before the 19th</li>
+</ul></div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm" target="_blank" rel="noopener">NVIDIA — Form 8-K, CEO transition (11 November 2026)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm" target="_blank" rel="noopener">NVIDIA — “NVIDIA Announces CEO Transition”</a></li>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/" target="_blank" rel="noopener">NVIDIA — Q3 FY2027 conference call notice</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/0001628280-26-072484-index.htm" target="_blank" rel="noopener">Anthropic, PBC — Form S-1/A No. 2, filed 10 November 2026</a></li>
+<li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener">Anthropic — Claude Fable 5.2 and Mythos 5.2</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm" target="_blank" rel="noopener">Federal Reserve — Governor Waller, Bank of England Watchers Conference, 10 November 2026</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">Federal Reserve — FOMC statement, 28 October 2026</a></li>
+<li><a href="https://www.bls.gov/news.release/ppi.nr0.htm" target="_blank" rel="noopener">Bureau of Labor Statistics — Producer Price Index, October 2026</a></li>
+<li><a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac — Primary Mortgage Market Survey, 12 November 2026</a></li>
+<li><a href="https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop" target="_blank" rel="noopener">FAA — Statement on the nationwide ground stop, 13 November 2026</a></li>
+<li><a href="https://www.cbsnews.com/news/jensen-huang-nvidia-congress-testify/" target="_blank" rel="noopener">CBS News — Huang, Congress and the China inquiries</a></li>
+<li><a href="https://www.cbsnews.com/news/china-us-export-controls-chips-nvidia-huang-scandal/" target="_blank" rel="noopener">CBS News — China on US chip export controls</a></li>
+<li><a href="https://www.cbsnews.com/news/faa-ground-stop-canceled-flights-travelers-what-we-know/" target="_blank" rel="noopener">CBS News — the ground stop, cancellations and what is known</a></li>
+<li><a href="https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/" target="_blank" rel="noopener">TechCrunch — timeline of the Nvidia affair allegations</a></li>
+<li><a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" target="_blank" rel="noopener">TechCrunch — Nebius and $40bn of planned spending</a></li>
+<li><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say" target="_blank" rel="noopener">TechCrunch — investors on AI funding after Huang’s departure</a></li>
+<li><a href="https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund" target="_blank" rel="noopener">TechCrunch — Norwest’s $4bn AI fund</a></li>
+<li><a href="https://focustaiwan.tw/business/202611100014" target="_blank" rel="noopener">Focus Taiwan — TSMC October revenue</a></li>
+<li><a href="https://focustaiwan.tw/business/202611110009" target="_blank" rel="noopener">Focus Taiwan — TSMC Q3 results, dividend and the Anthropic and OpenAI approvals</a></li>
+<li><a href="https://focustaiwan.tw/business/202611140005" target="_blank" rel="noopener">Focus Taiwan — TSMC’s record government grants</a></li>
+<li><a href="https://www.koreajoongangdaily.com/business/jensen-huangs-exit-hits-ai-infrastructure-firms-that-grew-on-nvidia-cash/12972190" target="_blank" rel="noopener">Korea JoongAng Daily — Huang’s exit hits AI infrastructure firms</a></li>
+<li><a href="https://www.stocktitan.net/articles/cisco-q1-fiscal-2027-earnings-november-2026" target="_blank" rel="noopener">StockTitan — Cisco Q1 FY2027 results</a></li>
+<li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-13-2026" target="_blank" rel="noopener">StockTitan — market wrap, 13 November 2026</a></li>
+<li><a href="https://pulse2.com/langchain-300-million-series-c-funding-led-by-capitalg-at-3-billion-valuation-to-expand-ai-agent-platform/" target="_blank" rel="noopener">Pulse 2.0 — LangChain $300m Series C</a></li>
+<li><a href="https://pulse2.com/fractile-720-million-series-c-funding-led-by-thrive-capital-lightspeed-redpoint-and-founders-fund-to-develop-next-generation-ai-chips/" target="_blank" rel="noopener">Pulse 2.0 — Fractile $720m Series C</a></li>
+<li><a href="https://pulse2.com/q-ctrl-290-million-series-c-funding-led-by-salesforce-ventures-creates-new-quantum-technology-unicorn/" target="_blank" rel="noopener">Pulse 2.0 — Q-CTRL $290m Series C</a></li>
+<li><a href="https://pulse2.com/griffin-20-million-series-b-funding-led-by-octagon-partners-to-expand-card-issuing-and-stablecoin-banking-services/" target="_blank" rel="noopener">Pulse 2.0 — Griffin $20m Series B</a></li>
+<li><a href="https://pulse2.com/orakl-oncology-34-million-series-a-funding-co-led-by-norrsken-vc-and-singular-to-expand-ai-powered-cancer-drug-discovery/" target="_blank" rel="noopener">Pulse 2.0 — Orakl Oncology $34m Series A</a></li>
+<li><a href="https://pulse2.com/sempra-sale-of-45-stake-in-sempra-infrastructure-partners-to-kkr-led-consortium-completed/" target="_blank" rel="noopener">Pulse 2.0 — KKR consortium completes Sempra Infrastructure purchase</a></li>
+<li><a href="https://technode.global/?p=997219" target="_blank" rel="noopener">TechNode Global — Movin KRW 10bn Series A</a></li>
+<li><a href="https://www.manufacturingdive.com/press-release/20261110-sparetech-raises-20m-series-b-to-help-manufacturers-cut-industrial-spare-p/" target="_blank" rel="noopener">Manufacturing Dive — SPARETECH $20m Series B (company release)</a></li>
+<li><a href="https://www.deccanchronicle.com/amp/technology/australia-to-launch-ai-safety-regulator-after-openais-breach-of-government-portal-2003167" target="_blank" rel="noopener">Deccan Chronicle (AP) — Australia to launch an AI safety regulator</a></li>
+<li><a href="https://broadbandbreakfast.com/spacex-targets-nov-13-for-historic-starship-launch/" target="_blank" rel="noopener">Broadband Breakfast — SpaceX targets 13 November for Starship Flight 15</a></li>
+<li><a href="https://www.climatechangenews.com/2026/11/14/cop31-bulletin-day-6-limited-progress-as-ministers-arrive-in-antalya/" target="_blank" rel="noopener">Climate Home News — COP31 bulletin, day six</a></li>
+<li><a href="https://www.carbonbrief.org/analysis-fossil-fuel-co2-emissions-set-to-dip-in-2026-as-iran-conflict-hits-oil-use" target="_blank" rel="noopener">Carbon Brief — Global Carbon Budget 2026 analysis</a></li>
+<li><a href="https://euobserver.com/248871/eu-leaders-hand-ukraine-peace-talks-to-france-germany-uk-italy-poland-plus-brussels-instead-of-a-single-envoy/" target="_blank" rel="noopener">EUobserver — EU leaders hand Ukraine talks to the E5 plus Brussels</a></li>
+<li><a href="https://euobserver.com/248649/fastest-eu-citizens-initiative-ever-pushes-brussels-to-end-euisrael-trade-agreement/" target="_blank" rel="noopener">EUobserver — citizens’ initiative on the EU-Israel trade agreement</a></li>
+<li><a href="https://www.irishtimes.com/politics/2026/11/13/europe-summit-meeting-dublin-traffic-disruption/" target="_blank" rel="noopener">Irish Times — the Dublin summits</a></li>
+<li><a href="https://www.ecb.europa.eu/press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html" target="_blank" rel="noopener">ECB — Lagarde interview with Yomiuri Shimbun</a></li>
+<li><a href="https://nltimes.nl/2026/11/15/dutch-coalition-parties-resume-crisis-talks-officials-urge-cabinet-collapse" target="_blank" rel="noopener">NL Times — Dutch coalition parties resume crisis talks</a></li>
+<li><a href="https://nos.nl/artikel/2639451-crisisoverleg-d66-vvd-en-cda-in-hilversum-radiostilte-afgesproken" target="_blank" rel="noopener">NOS — crisis talks continue in Hilversum</a></li>
+<li><a href="https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-le-senat-adopte-un-volet-recettes-affaibli" target="_blank" rel="noopener">Public Sénat — the Senate adopts the PLFSS revenue section, 13 November</a></li>
+<li><a href="https://www.publicsenat.fr/actualites/politique/plan-de-relance-agricole-une-des-thematiques-majeures-du-compromis-budgetaire-affirme-sebastien-lecornu" target="_blank" rel="noopener">Public Sénat — Lecornu’s agricultural recovery plan</a></li>
+<li><a href="https://www.senat.fr/actualite/financement-de-la-securite-sociale-pour-2027-8599.html" target="_blank" rel="noopener">Sénat — PLFSS 2027 public sitting, 9 to 17 November</a></li>
+<li><a href="https://lepetitjournal.com/expat-emploi/france-leger-repit-sur-le-front-du-chomage-quasiment-stable-82-au-troisieme-trimestre-458401" target="_blank" rel="noopener">Le Petit Journal (AFP) — French Q3 unemployment at 8.2%</a></li>
+<li><a href="https://www.moneyvox.fr/assurance/actualites/111187/axa-va-supprimer-150-postes-dans-son-siege-social" target="_blank" rel="noopener">MoneyVox — Axa to cut 150 head-office posts</a></li>
+<li><a href="https://www.moneyvox.fr/impot/actualites/111122/assemblee-rejette-a-unanimite-un-budget-2027-profondement-transforme-le-texte-part-au-senat" target="_blank" rel="noopener">MoneyVox — the Assembly rejects the 2027 revenue section</a></li>
+<li><a href="https://kyivindependent.com/historic-first-summit-among-trump-xi-putin-will-not-focus-on-ukraine-white-house-says/" target="_blank" rel="noopener">Kyiv Independent — reported Trump, Xi and Putin trilateral</a></li>
+<li><a href="https://kyivindependent.com/us-floats-nato-membership-for-ukraine-in-exchange-for-donbas-withdrawal-zelensky-says/" target="_blank" rel="noopener">Kyiv Independent — Zelensky on NATO membership and Donbas</a></li>
+<li><a href="https://www.aljazeera.com/news/liveblog/2026/11/15/iran-war-live-israel-vows-gaza-offensive-policy-despite-caretaker-status" target="_blank" rel="noopener">Al Jazeera — Iran war live coverage, 15 November</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/14/south-sudan-postpones-first-ever-national-elections-until-february" target="_blank" rel="noopener">Al Jazeera — South Sudan postpones its first national elections</a></li>
+<li><a href="https://www.manilatimes.net/2026/11/15/news/trade-war-in-focus-at-asean-summit-ahead-of-trump-arrival/2470243" target="_blank" rel="noopener">Manila Times — trade war in focus as the ASEAN summit opens</a></li>
+<li><a href="https://www.manilatimes.net/2026/11/15/news/9-protesters-arrested-in-manila-at-least-17-in-muntinlupa-witnesses/2470234" target="_blank" rel="noopener">Manila Times — arrests in Manila and Muntinlupa</a></li>
+<li><a href="https://www.lanacion.com.ar/usa/south-african-parties-in-high-stakes-coalition-talks-after-ancs-worst-election-results-nid13112026/" target="_blank" rel="noopener">La Nación (AP) — South African coalition talks after the ANC’s worst local result</a></li>
+<li><a href="https://peacenow.org.il/en/e1-tender-box-opening-date" target="_blank" rel="noopener">Peace Now — the E1 tender and the bid-opening date</a></li>
+<li><a href="https://archive.computerhistory.org/resources/text/Oral_History/Moore_Gordon/Moore_Gordon_1.oral_history.2008.102658233.pdf" target="_blank" rel="noopener">Computer History Museum — Gordon Moore oral history, 2008</a></li>
+<li><a href="https://archive.computerhistory.org/resources/access/text/2015/09/102739934-05-01-acc.pdf" target="_blank" rel="noopener">Computer History Museum — Moore and Rock panel, 9 July 2014</a></li>
+<li><a href="https://www.rfcafe.com/references/electronics-mag/gordon-moores-law-electronics-mag-april-19-1965.htm" target="_blank" rel="noopener">Moore, “Cramming more components onto integrated circuits”, Electronics, 19 April 1965 (transcription)</a></li>
+<li><a href="https://uio.no/studier/emner/matnat/ifi/IN3030/v23/teaching-materials/gordon_moore_1975_speech-w-highlights.pdf" target="_blank" rel="noopener">Moore, “Progress in Digital Integrated Electronics”, IEDM 1975</a></li>
+<li><a href="https://spectrum.ieee.org/the-murky-origins-of-moores-law" target="_blank" rel="noopener">IEEE Spectrum — the murky origins of Moore’s Law</a></li>
+<li><a href="https://www.intel.com/content/www/us/en/newsroom/news/gordon-moore-obituary.html" target="_blank" rel="noopener">Intel — Gordon Moore obituary</a></li>
+<li><a href="https://www.intel.com/content/www/us/en/history/virtual-vault/articles/intels-founding.html" target="_blank" rel="noopener">Intel — the founding of Intel, and the Intelco name</a></li>
+<li><a href="https://www.caltech.edu/about/news/caltech-pays-tribute-to-alumnus-gordon-moore" target="_blank" rel="noopener">Caltech — tribute to Gordon Moore</a></li>
+<li><a href="https://www.moore.org/annual-report-2025/" target="_blank" rel="noopener">Gordon and Betty Moore Foundation — 2025 annual report</a></li>
+<li><a href="https://www.computerhistory.org/atchm/fairchild-and-the-fairchildren/" target="_blank" rel="noopener">Computer History Museum — Fairchild and the Fairchildren</a></li>
+<li><a href="https://www.eweek.com/networking/intel-co-founder-moore-looks-back-on-a-legendary-it-career/" target="_blank" rel="noopener">eWeek — Moore looks back on his career, 2009</a></li>
+<li><a href="https://www.supremecourt.gov/docket/docketfiles/html/public/26-239.html" target="_blank" rel="noopener">Supreme Court — docket, Mullin v. RAICES, No. 26-239</a></li>
+<li><a href="https://mississippifreepress.org/rolling-cov-entry/mississippi-counties-have-a-hard-deadline-to-certify-election-results/" target="_blank" rel="noopener">Mississippi Free Press — county certification deadline</a></li>
+<li><a href="https://www.sortiraparis.com/en/news/in-paris/articles/357817-strike-and-demonstration-on-november-17-the-movement-is-gaining-momentum-what-s-planned-in-paris" target="_blank" rel="noopener">Sortir à Paris — the 17 November strike</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-15-weekly.pdf">PDF</a></span>
+</div></div></body></html>
