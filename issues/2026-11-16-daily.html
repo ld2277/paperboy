@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Monday, November 16, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Monday, November 16, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Beijing has put a Trump–Xi–Putin summit on the record for Thursday in Shenzhen, and as of this morning Washington has published nothing about it.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Huang’s allies want him back. Nvidia is saying nothing.</h2>
+<p class="field">What happened</p><p>The Financial Times reported on Sunday that Jensen Huang, who resigned as Nvidia’s chief executive on 12 November, has discussed returning to the job with confidants, and that one ally is assembling a “war room” of Silicon Valley executives to lobby for his return and will seek White House backing. Treat it carefully: every outlet carrying this is relaying the FT, which has it from one unnamed ally. Nvidia has published nothing in response — no leadership item since the 12 November transition release, which gave no reason for the departure. Independently, Elon Musk posted on Friday that he was signing a petition to reinstate Huang. The independent directors said on 10 November they had retained former acting US Attorney Joon H. Kim and Wachtell, Lipton, Rosen &amp; Katz for <a href="https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board">“a thorough and independent investigation”</a> whose subject they did not state.</p>
+<p class="field">What it means</p><p>A chief executive who left “effective immediately” does not get discussed as a returning chief executive unless someone with standing is pushing. But nothing here has touched the board: no director has spoken, the outside investigation the board commissioned has not reported, and the company has not acknowledged the story. For now this is a lobbying campaign conducted through a newspaper, and the one person who could end it in a sentence — chair Harvey C. Jones — has not said anything since 12 November.</p>
+<p class="field">Watch next</p><p>Colette Kress takes her first earnings call as interim chief executive on Tuesday at 2 p.m. PT. Whether a director appears alongside her is the tell.</p>
+</div>
+<div class="item">
+<h2>Anthropic has filed nothing since Thursday, and that is the news</h2>
+<p class="field">What happened</p><p>A full-text search of EDGAR returns no Anthropic filing dated 13, 14, 15 or 16 November. The record still ends with the amended registration statement of 10 November and five free-writing prospectuses filed on the 12th. There is no final prospectus — no 424B4 — and the company’s own newsroom has posted nothing since 10 November. The timetable in those prospectuses is therefore unchanged going into the decisive week: books close on Wednesday 18 November at 10 a.m. ET, the shares begin trading on Thursday the 19th under “ANT” on the Nasdaq Global Select Market, and the offering completes on Friday the 20th, at an estimated $70 to $78 a share.</p>
+<p class="field">What it means</p><p>An absence in a filing record is evidence, not a gap. Four days before the largest technology listing of the year, nothing about the terms has moved — no revised range, no enlarged greenshoe, no delay. The document that matters next is the 424B4, because that is where the actual price will appear rather than an estimate.</p>
+<p class="field">Watch next</p><p>The 424B4 on EDGAR, expected Wednesday evening or Thursday morning. Anything filed before that would mean the terms changed.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Taiwan posts its second-largest point fall ever; Korea down 3.6%</h2>
+<p class="field">What happened</p><p>The Taiex closed Monday at 41,040.08, down 2,635.04 points or 6.03%, finishing at the session low on turnover of NT$845.06bn. Only the 2,953.71-point fall of 17 July has been larger in points. TSMC closed down 5.74% at NT$2,215.00 and accounted for roughly a thousand points of the decline on its own; Delta Electronics fell the 10% daily limit, Nanya Technology 9.81% and Hon Hai 9.34%. Korea’s Kospi closed at 5,100.50, down 190.03 points or 3.59%, with SK hynix down 7.89% and Samsung Electronics 4.47%; foreigners net sold 1.38 trillion won. The Philadelphia Semiconductor Index had closed Friday at 10,146.32, down 3.43%.</p>
+<p class="field">What it means</p><p>This is positioning, not news about chips. Adam Lin of Moore Securities put Monday’s fall down to foreign institutional selling ahead of futures settlement, and the single largest contributor was the stock with the most to lose from a disappointing Nvidia quarter. Taiwan and Korea are where the Nvidia print gets traded first, because they close before it lands.</p>
+<p class="field">Watch next</p><p>Whether Taiwan’s national stabilisation fund intervenes — Lin expects it to. Wednesday’s Asian session is the first to trade the actual numbers.</p>
+</div>
+<div class="item">
+<h2>Nvidia reports Tuesday, and for once there is a named consensus</h2>
+<p class="field">What happened</p><p>Nvidia publishes third-quarter results for fiscal 2027 on Tuesday at about 1:20 p.m. PT, with the call at 2 p.m. PT; the quarter ended 25 October. This brief has twice declined to print a consensus because no compiler was named. Two now exist. Bloomberg’s, cited by Saxo, puts revenue at about $109.1bn and adjusted earnings at about $2.47 a share. MarketScreener’s own compilation of 45 analysts puts revenue at $108.7bn, on a basis it does not state. Company guidance — a different thing — was $108bn plus or minus 2%. Pepperstone’s Chris Weston says options imply a move of about 7% either way. Nvidia’s market value was roughly $3.9 trillion on Friday against about $5.8 trillion in early October, on LSEG data cited by Reuters.</p>
+<p class="field">What it means</p><p>Two compilers roughly $400m apart on a $109bn number is agreement, not disagreement — the gap is smaller than a rounding error at this scale. The interesting figure is the $1.9 trillion of market value that has gone since early October, most of it in the fortnight around the chief executive’s departure. The quarter itself is expected to be enormous; the question is what guidance sounds like from an interim chief executive.</p>
+<p class="field">Watch next</p><p>1:20 p.m. PT Tuesday for the release, 2 p.m. for the call. S&amp;amp;P 500 futures were down 0.37% and Nasdaq futures 0.99% at about 5 a.m. ET.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The FAA blames its own equipment, not its contractor</h2>
+<p class="field">What happened</p><p>In a <a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers">questions-and-answers document</a> dated Sunday 15 November, the FAA named a cause for Friday’s nationwide ground stop for the first time: “The FAA’s legacy equipment became unstable when data began flooding the FAA FTI network, at a rate of 1,000 connection attempts every 4 to 5 seconds.” It names a radar site in Amarillo, Texas and a radio site in El Dorado, Arkansas, where L3Harris had deployed a new router, and says instability reached 17 of 22 en-route control centres. It rules out an attack and rejects the idea that modernisation work caused it: “No, this is due to the legacy TDM system causing instabilities.” Operators cancelled approximately 12,462 flights on Friday, 9,082 of them by major airlines; approximately 3,500 aircraft landed safely.</p>
+<p class="field">What it means</p><p>For three days the Transportation Secretary has pointed at a contractor while the agency named no cause. The agency has now named one, and it is its own ageing network under load. Hewlett Packard Enterprise, which owns Juniper, pushed back in interviews — “operated according to its configuration” to ABC News, “did not fail” to the Wall Street Journal — while publishing no statement of its own; the FAA document never names either company. And the FAA’s 12,462 is an operator-reported whole-day count against FlightAware’s roughly 9,159 tracker count: two counters, not two estimates of one.</p>
+<p class="field">Watch next</p><p>The El Dorado router has gone to an L3Harris laboratory in Florida for testing. FlightAware counted about 2,100 cancellations on Sunday against roughly 6,700 on Saturday; Monday’s realised count is the test.</p>
+</div>
+<div class="item">
+<h2>A December increase is now fully priced — and the meeting is on the 8th and 9th</h2>
+<p class="field">What happened</p><p>Fed funds futures have a quarter-point increase in December as all but certain, with roughly a one-in-ten chance of a half point, and price at least three increases through next December. A correction we owe you: that meeting is <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">8–9 December</a>, not the 15–16 December this brief has printed — the Fed’s own calendar has no such date. The 10-year Treasury closed Friday at 5.15%, up 29 basis points on the week, the heaviest selling in Treasuries since April of last year; the 2-year closed at 4.88%. In Europe, the STOXX Europe 600 closed Friday at 664.14, flat on the day and more than 2% higher on the week.</p>
+<p class="field">What it means</p><p>The cycle is up and the argument has moved from whether to how much — Governor Waller said on 10 November that a 50 basis point move “should be considered” in December. Jefferies’ Mohit Kumar is on the other side: “We see one more hike from the Fed and ECB in December, but don’t see the case for a series of rate hikes.” A 10-year above 5% is the backdrop to every valuation in the first two sections of this brief.</p>
+<p class="field">Watch next</p><p>Chair Kevin Warsh speaks Monday at noon ET, Williams at 9 a.m. The October FOMC minutes land Wednesday — the first direct look at a committee that held 10–2 with both dissents wanting a rise.</p>
+</div>
+<div class="item">
+<h2>China’s October numbers land, and the consumer is flat</h2>
+<p class="field">What happened</p><p>The <a href="https://www.stats.gov.cn/english/PressRelease/202611/t20261116_1965843.html">National Bureau of Statistics</a> published October data on Monday morning. Industrial value added rose 4.8% against October last year, below the 5.3% pace of the first ten months. Retail sales came to 4,646.3bn yuan, up 0.4% year on year. Fixed-asset investment excluding rural households fell 8.1% over the first ten months, and property development investment 21.6%, both against the same period last year. Surveyed urban unemployment was 5.1%. Japan published the same morning: third-quarter GDP fell an annualised 0.1%, its first contraction in four quarters, against a QUICK consensus of 0.2% growth.</p>
+<p class="field">What it means</p><p>Retail sales growing 0.4% in nominal terms is a consumer who has stopped. Investment down 8.1% for the year to date, property down more than a fifth, is the other half of the sentence: both engines that carried China through the last decade are off. Industrial output at 4.8% is holding the number up, so exports are doing the work — just as the largest market for them raises rates.</p>
+<p class="field">Watch next</p><p>Whether Beijing moves before the December Central Economic Work Conference. Japan’s contraction lands with the Bank of Japan already expected to tighten in December.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Bharat Semi raises a $24m seed round for AI sensors</h2>
+<p class="field">What happened</p><p>The Indian chip startup Bharat Semi announced a $24m all-equity seed round on Sunday. The wording matters and we print it as given: the round “was led by Info Edge Group, South Park Commons, and Indus Bridge Ventures” — three firms described as leading, not co-leading. Valour Capital, Micromax, Gaingels and individual investors also took part. No valuation is stated anywhere in the announcement. Co-founder Vrinda Kapoor framed the ambition as moving “from sensors to sense-making solutions”, and asked whether “we build a global technology company out of India”.</p>
+<p class="field">What it means</p><p>A $24m seed is large for Indian semiconductors, where the money has historically gone to design services rather than product. The absence of a valuation is worth noticing in a week when every other round comes with one attached.</p>
+<p class="field">Watch next</p><p>Reported by one outlet only so far, with no company release. A second source, or the company’s own announcement, would settle the investor wording.</p>
+</div>
+<div class="item">
+<h2>Nebuly closes a $21m Series A led by Planven</h2>
+<p class="field">What happened</p><p>Turin-based Nebuly, whose software measures what enterprises actually get back from AI and agent deployments, raised a $21m Series A led by Planven, with Exor Ventures, Tenacity Capital, TGVG Capital, Fastweb plus Vodafone and CDP Venture Capital’s Digital Transition Fund joining. A single named lead, cleanly worded. No valuation was disclosed. This closes an item this brief has carried unresolved since last week, when we had only a headline and an index table.</p>
+<p class="field">What it means</p><p>The product is a bet that the next spending cycle is about proving the last one worked. That is a durable business if enterprise AI budgets come under scrutiny, which on current interest rates they will.</p>
+<p class="field">Watch next</p><p>Whether European corporate venture arms — Exor, Fastweb, Vodafone, CDP — keep showing up together. That consortium shape is becoming the Italian default.</p>
+</div>
+<div class="item">
+<h2>Fractile now has a valuation attached, and the outlets disagree</h2>
+<p class="field">What happened</p><p>The $720m Series C for the British inference-chip company Fractile, which this brief reported on Sunday without a valuation because none was disclosed, now has one — or two. Evertiq, DataCenterDynamics and Yahoo all report $7bn, with Evertiq specifying post-money; Dealroom reports $6.5bn. The round’s own wording names Thrive Capital, Founders Fund, Lightspeed and Redpoint jointly as leads and does not use the phrase co-led. UK ministers took the opportunity: business secretary Jonathan Reynolds called the company “a fantastic British success story”.</p>
+<p class="field">What it means</p><p>A $500m gap between reported valuations usually means one outlet has the pre-money and another the post-money, which Evertiq’s wording supports. It is a reminder that a valuation appearing in no filing is not a filing figure, whoever prints it.</p>
+<p class="field">Watch next</p><p>A company statement or a Companies House filing would settle it. Until then both numbers travel.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Mississippi’s final count is in. The margin is bigger than we said.</h2>
+<p class="field">What happened</p><p>Secretary of State Michael Watson released final statewide figures on Friday 13 November, the county certification deadline: Scott Colom 479,404 votes or 49.3%, Cindy Hyde-Smith 471,817 or 48.6%, Ty Pinkins 20,439 or 2.1%. The margin is 7,587 — not the 4,404 this brief has been carrying, which predated Hinds and DeSoto counties finishing their affidavit counts. Statewide, 21,344 affidavit ballots were processed and about 73% accepted. The state remains uncertified: the Secretary of State’s own website carries no certification statement and no results for the Senate race, and the State Board of Election Commissioners has still announced no meeting date.</p>
+<p class="field">What it means</p><p>Provisional, final and certified are three different things, and Mississippi is at the second. A 7,587-vote margin out of about 971,000 cast is 0.78% — outside the range where a recount changes anything, and wide enough that the delay is procedural rather than contested. But the silence from the state board is now a week old and nobody has explained it.</p>
+<p class="field">Watch next</p><p>A State Board of Election Commissioners meeting. Nothing is scheduled on the public record.</p>
+</div>
+<div class="item">
+<h2>Cassidy says he would not have picked Kennedy</h2>
+<p class="field">What happened</p><p>Senator Bill Cassidy of Louisiana, who chairs the Senate health committee and cast the decisive committee vote to confirm Robert F. Kennedy Jr., turned on him on CBS’s Face the Nation on Sunday. Kennedy is “obviously trying to provide cover for failure as Secretary of Health and Human Services”, Cassidy said, adding: “If I were president, I would choose someone else, because there needs to be accountability for higher healthcare costs.” He listed the charge sheet as higher costs, “losing measles elimination status, and no progress on addressing ultra-processed foods”, and said of vaccine messaging that “it should be pounded, pounded, pounded”. He dismissed impeachment as “more importantly the president’s decision”.</p>
+<p class="field">What it means</p><p>Cassidy is a physician who spent his confirmation vote on Kennedy and has been defending that choice for most of a year. Doing this on camera, as committee chairman, two days before his committee votes on an FDA nominee, is not a vent — it is leverage.</p>
+<p class="field">Watch next</p><p>The committee votes Wednesday on Heidi Overton for FDA commissioner. Cassidy says he has not decided: “I still have questions.”</p>
+</div>
+<div class="item">
+<h2>Starship catches its upper stage — and loses the booster</h2>
+<p class="field">What happened</p><p>Closing an item this brief left open: Starship Flight 15 launched from Starbase at 4:47 p.m. CST on Friday 13 November. The upper stage, Ship 42, reached orbit, deployed 26 Version 3 Starlink satellites, coasted 14 orbits and was caught by the launch tower on its return — the first time a Starship upper stage has been caught coming back from orbit. The Super Heavy booster was not: flight software triggered an abort after detecting it was out of position on its return to the pad, it diverted to an offshore splashdown, and exploded before reaching the water. SpaceX commentator Dan Huot said afterwards that “it was not a GNC issue that caused us not to come back”.</p>
+<p class="field">What it means</p><p>The catch is the harder half and SpaceX did it. An orbital vehicle coming through re-entry and plucked out of the air by the tower that launched it is the step the whole architecture depends on; booster catches are already routine. Huot’s denial is doing work, though — an out-of-position abort is what guidance and control failures look like from outside.</p>
+<p class="field">Watch next</p><p>A SpaceX statement on the booster loss, and whether it delays Flight 16. This is backfill from Friday, not news of the day.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Beijing confirms a Trump–Xi–Putin summit for Thursday. Washington has not.</h2>
+<p class="field">What happened</p><p>China’s foreign ministry said on Monday that Xi Jinping will hold a China–Russia–United States summit with Vladimir Putin and Donald Trump in Shenzhen on 19 November. Spokesperson Mao Ning said the three would exchange views on maintaining world peace and promoting strategic stability between major powers, which she called “of groundbreaking significance” — that is <a href="https://english.news.cn/20261116/1a98a50205c8447d9d08f1acd869b4ca/c.html">Xinhua’s English rendering</a>, not a verbatim quote. The date is the second day of the <a href="https://www.apec.org/">APEC leaders’ meeting</a>, which Shenzhen hosts on 18–19 November. This brief has carried the summit for a week as one unnamed American official’s claim to a wire, city and dates unverified. Beijing has now put both on the record; the White House briefings page has published nothing since 12 November.</p>
+<p class="field">What it means</p><p>It would be the first meeting of all three heads of state. The asymmetry is the story: Beijing has announced a summit with the American president and Washington has said nothing — meaning either the announcement got away from the White House or the terms are not settled. Russia has been pressing to put Ukraine on the agenda. Overnight it launched 158 drones at Ukraine, Kyiv’s air force said, killing one person in Dnipro and one in Zaporizhzhia and hitting energy infrastructure in four regions.</p>
+<p class="field">Watch next</p><p>Any White House confirmation — the absence of one is the thing to watch. Thursday 19 November, Shenzhen.</p>
+</div>
+<div class="item">
+<h2>ASEAN gives up on a South China Sea code this year</h2>
+<p class="field">What happened</p><p>Philippine foreign secretary Ma. Theresa Lazaro said on Monday there is “no conclusion yet” on the South China Sea code of conduct and that it will not be finished before the Philippines hands the ASEAN chairmanship to Singapore. Negotiations are, she said, “more than 80 percent complete” — a figure that has been quoted for years. Manila had promised a deal by the end of 2026. On Myanmar, leaders offered “a calibrated engagement” through “a phased and progress-based approach”, under which ASEAN “may consider the gradual restoration of Myanmar’s full political representation” if the junta implements the 2021 five-point consensus; the ban on its leader attending summits was extended.</p>
+<p class="field">What it means</p><p>Whether the code would be legally binding is the only question that has ever mattered about it, and “80 percent complete” is a way of not answering it. Handing it to Singapore admits that the chairmanship most motivated to get a binding text could not. On Myanmar, note the verb: “may consider” commits ASEAN to nothing.</p>
+<p class="field">Watch next</p><p>Trump arrives in Manila Tuesday for his first Quad meeting in two years, then goes on to Shenzhen.</p>
+</div>
+<div class="item">
+<h2>Another vessel hit off Hormuz as a third US carrier arrives</h2>
+<p class="field">What happened</p><p>UK Maritime Trade Operations reported that a vessel was struck by an unknown projectile on Monday morning as it left the Strait of Hormuz; it caught fire, with no casualties. The IRGC separately claimed two more tankers had struck sea mines, taking its own claimed total to six vessels set on fire and sunk since Sunday — a combatant’s account of its own operations, not independently verified — and its navy warned shipping off an American-backed southern route it called a “minefield of fire”. The USS Theodore Roosevelt entered Central Command’s area of responsibility on Sunday, joining the George H.W. Bush and the George Washington: three American carriers in theatre.</p>
+<p class="field">What it means</p><p>The strait is not closed, whatever the IRGC says, but the insurance market does not need it closed to reprice. What has changed in a week is the American force posture: three carriers is not a deterrent patrol, it is a build-up, and it arrives in the same week as a summit meant to be about strategic stability.</p>
+<p class="field">Watch next</p><p>UKMTO advisories, which are the only non-combatant count of vessels hit. Whether Saudi Arabia or Aramco says anything at all — the silence is now six runs old.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers" target="_blank" rel="noopener">FAA — Nationwide Ground Stop: Questions and Answers (15 Nov)</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC meeting calendar</a></li>
+<li><a href="https://www.stats.gov.cn/english/PressRelease/202611/t20261116_1965843.html" target="_blank" rel="noopener">National Bureau of Statistics of China — October 2026 economy</a></li>
+<li><a href="https://english.news.cn/20261116/1a98a50205c8447d9d08f1acd869b4ca/c.html" target="_blank" rel="noopener">Xinhua — Xi to hold China-Russia-U.S. summit in Shenzhen</a></li>
+<li><a href="https://www.apec.org/" target="_blank" rel="noopener">APEC — 2026 host economy and leaders’ meeting dates</a></li>
+<li><a href="https://nvidianews.nvidia.com/news/statement-from-the-independent-members-of-the-nvidia-board" target="_blank" rel="noopener">Nvidia — statement from the independent members of the board (10 Nov)</a></li>
+<li><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/" target="_blank" rel="noopener">Nvidia — Q3 FY2027 conference call notice</a></li>
+<li><a href="https://finance.yahoo.com/markets/stocks/articles/jensen-huang-discusses-comeback-nvidia-192628314.html" target="_blank" rel="noopener">Reuters via Yahoo Finance — Huang discusses comeback, FT reports</a></li>
+<li><a href="https://www.home.saxo/en-gb/content/articles/equities/nvidia-earnings-preview-the-first-big-test-after-jensen-huangs-exit-16112026" target="_blank" rel="noopener">Saxo — Nvidia earnings preview (Bloomberg consensus)</a></li>
+<li><a href="https://www.marketscreener.com/news/will-nvidia-s-earnings-be-strong-enough-to-put-the-huang-scandal-behind-us-ce785eded080f622" target="_blank" rel="noopener">MarketScreener — Nvidia consensus, 45 analysts</a></li>
+<li><a href="https://focustaiwan.tw/business/202611160014" target="_blank" rel="noopener">Focus Taiwan — Taiex posts 2nd-largest point drop</a></li>
+<li><a href="https://www.ajupress.com/view/20261116170123101" target="_blank" rel="noopener">AJU Press — Kospi close, 16 November</a></li>
+<li><a href="https://indexes.nasdaqomx.com/index/overview/SOX" target="_blank" rel="noopener">Nasdaq OMX — PHLX Semiconductor Index (SOX)</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop" target="_blank" rel="noopener">L3Harris — statement on the 13 November ground stop</a></li>
+<li><a href="https://aerospaceglobalnews.com/news/faa-router-ground-stop-flight-cancellations/" target="_blank" rel="noopener">Aerospace Global News — FAA identifies suspect router</a></li>
+<li><a href="https://www.rte.ie/news/us/2026/1116/1599324-us-flight-world/" target="_blank" rel="noopener">RTÉ — US air travel set to normalise (FlightAware counts)</a></li>
+<li><a href="https://www.wdam.com/2026/11/14/ms-secretary-state-releases-final-election-numbers/" target="_blank" rel="noopener">WDAM — Mississippi Secretary of State releases final numbers</a></li>
+<li><a href="https://www.cbsnews.com/news/bill-cassidy-louisiana-republican-face-the-nation-transcript-11-15-2026/" target="_blank" rel="noopener">CBS News — Face the Nation transcript, Bill Cassidy</a></li>
+<li><a href="https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/" target="_blank" rel="noopener">Spaceflight Now — Starship Flight 15 coverage</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/16/asean-china-fall-short-of-agreeing-on-south-china-sea-code" target="_blank" rel="noopener">Al Jazeera — ASEAN and China fall short on South China Sea code</a></li>
+<li><a href="https://www.manilatimes.net/2026/11/15/news/asean-seeks-calibrated-engagement-with-myanmar-statement/2470262" target="_blank" rel="noopener">Manila Times — ASEAN seeks calibrated engagement with Myanmar</a></li>
+<li><a href="https://www.thenationalnews.com/news/gulf/2026/11/16/iran-escalates-threats-against-us-forces-and-gulf-states-as-third-american-carrier-arrives/" target="_blank" rel="noopener">The National — Iran escalates as third US carrier arrives</a></li>
+<li><a href="https://www.kyivpost.com/post/90219" target="_blank" rel="noopener">Kyiv Post — 158 drones launched overnight</a></li>
+<li><a href="https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/" target="_blank" rel="noopener">TechCrunch — Bharat Semi $24m seed</a></li>
+<li><a href="https://www.datacenterdynamics.com/en/news/uk-chip-startup-fractile-valued-at-7bn-following-720m-series-c-funding-round/" target="_blank" rel="noopener">DataCenterDynamics — Fractile valued at $7bn</a></li>
+<li><a href="https://www.marketscreener.com/news/european-shares-end-best-week-since-june-as-strong-earnings-lift-sentiment-ce785ed9d08ef625" target="_blank" rel="noopener">MarketScreener — European shares end best week since June (STOXX 600 close)</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-16-daily.pdf">PDF</a></span>
+</div></div></body></html>
