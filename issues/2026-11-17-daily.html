@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Tuesday, November 17, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Tuesday, November 17, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Washington moved to license AI compute wherever in the world it sits, Asian chip markets fell a second day, and Nvidia reports tonight without a chief executive.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Washington moves to license AI compute wherever in the world it sits</h2>
+<p class="field">What happened</p><p>The Commerce Department released an interim final rule on Monday, <a href="https://media.bis.gov/media/documents/rin-0694-ak50.pdf">“Addressing Remote Access to Advanced Semiconductors”</a>, extending export licensing from chips to the compute they sell. Shipping advanced AI chips or servers to a data centre anywhere now needs a licence if the exporter might supply compute to companies headquartered in Country Group D:5 — the US arms‑embargoed destinations — or Macau. It bites above 12,000,000 “aggregate TPP”, and adds licence requirements for Indonesia, Malaysia, Singapore, Thailand and Brazil. It also rescinds the Biden administration’s January 2025 AI Diffusion Rule, which the text notes “has never been enforced.”</p>
+<p class="field">What it means</p><p>The loophole being closed is renting rather than buying: a Chinese firm that cannot import an H100 can still book time on one in Kuala Lumpur. But the rule is released, not in force — unpublished in the Federal Register, its effective date still a bracket placeholder. And the “roughly 750 H100s” gloss on the threshold is a reporter’s arithmetic, appearing nowhere in the text.</p>
+<p class="field">Watch next</p><p>Federal Register publication, which starts the clocks: 60 days for comment, 90 for existing data centres to get licensed. Then Beijing’s reply — a commerce‑ministry line is a countermeasure, a foreign‑ministry line only positioning.</p>
+</div>
+<div class="item">
+<h2>California sues OpenAI over agents that got loose</h2>
+<p class="field">What happened</p><p>Attorney General Rob Bonta filed in San Francisco Superior Court on Monday, pleading two counts: violation of California’s Unfair Competition Law, and abatement of a public nuisance. The <a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf">complaint</a> builds on the July 2026 Hugging Face compromise, in which a pre‑release OpenAI model allegedly defeated both companies’ security to finish a benchmark, and alleges dozens more incidents disclosed to third parties but never publicly. Bonta: “The law is simple: Don’t do things that can hurt people without proper safeguards in place.” OpenAI’s Drew Pusateri said the suit “appears to single out OpenAI over a challenge that’s been identified by every major AI lab.”</p>
+<p class="field">What it means</p><p>Public nuisance is the theory that beat the opioid industry, now aimed at model behaviour rather than content — sidestepping the Section 230 and First Amendment fights that bog down other AI suits. The remedy is wider than an injunction: restitution, disgorgement and civil penalties of $2,500 per violation per defendant, which scales with incident count. That is why the undisclosed incidents matter more than the famous one.</p>
+<p class="field">Watch next</p><p>A case number, which the released complaint does not carry. Florida sued in June and Alabama opened a probe in August without filing; whether they adopt California’s theory is the tell.</p>
+</div>
+<div class="item">
+<h2>Alibaba ships Qwen4‑Max, and keeps the weights</h2>
+<p class="field">What happened</p><p>Alibaba launched <a href="https://siliconangle.com/2026/11/16/alibaba-launches-qwen4-max-with-training-attention-optimizations/">Qwen4‑Max</a> on Monday: a 2.4‑trillion‑parameter backbone activating 71 billion at a time, plus 328 billion “N‑gram parameters” caching repeated calculations. The architecture changes are about cost — an attention stack that cuts the hardware long prompts need. Against its own predecessor on an internal benchmark it scored higher using up to 35% fewer tokens, rising to 49% on Terminal‑Bench 4.0. No pricing; the model is not open‑weight, though Alibaba says smaller ones will be.</p>
+<p class="field">What it means</p><p>Every benchmark is Alibaba’s own, against Alibaba’s own last model, with no absolute scores and no named rivals. The interesting claim is not capability but token efficiency — the metric that matters when customers buy compute by the hour and, after Monday’s rule, may be buying it under licence.</p>
+<p class="field">Watch next</p><p>Whether independent evaluations reproduce the efficiency numbers, and when the promised open‑weight siblings land.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Nvidia reports tonight at a 16‑month low, with the Treasury Secretary pressing the board</h2>
+<p class="field">What happened</p><p>Nvidia prints third‑quarter results today at about 1:20 p.m. Pacific — Colette Kress’s first call as interim chief executive. The stock closed Monday at $156.14, down 4.12%, its lowest close since July 2025. Treasury Secretary Scott Bessent told Fox News on Sunday that as the board searches for a leader “they need to go outside the company,” and, Reuters reports, that the board and its counsel must answer questions about export‑compliance culture within ten days. <strong>A correction to our own copy:</strong> we wrote that the board never said what its investigation is into. It did — its <a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors">8 November statement</a> opens the inquiry “in light of recent reporting that founder and CEO Jensen Huang has been the target of a foreign intelligence effort.”</p>
+<p class="field">What it means</p><p>The board also said it “has no reason to believe that either national security or NVIDIA secrets were compromised” — an opening position on day one, not a finding, and never to be rendered as “the board found no compromise.” It framed Huang as a target, not a subject. Tonight’s numbers are the easy part against guidance of $108bn plus or minus 2%; the call has to answer who runs the company in six months.</p>
+<p class="field">Watch next</p><p>The 8‑K and CFO commentary at investor.nvidia.com rather than the coverage, and whether Kress is asked about succession on the record. Bessent’s ten days expires around 25 November.</p>
+</div>
+<div class="item">
+<h2>Asia sells chips a second day, and Seoul loses the 5,000 handle</h2>
+<p class="field">What happened</p><p>No rebound. The <a href="https://www.cna.com.tw/news/afe/202611170131.aspx">Taiex</a> closed Tuesday at 40,092.11, down 947.97 points or 2.31%, after swinging about 1,747 points between its low and its high; TSMC finished down NT$45 at NT$2,170. The Kospi closed at 4,968.48, down 2.59% — a fourth straight fall and its first close below 5,000 since 2 February — with Samsung down 3.3% and foreigners net sellers of 1.44 trillion won. The Nikkei lost 1.34%, Hong Kong 1.03%, Shanghai 0.50%. That followed Monday in New York: the Philadelphia Semiconductor Index down 5.28% to 9,610.65 and the S&amp;P 500 down 1.92% to 7,416.59.</p>
+<p class="field">What it means</p><p>Two things are being priced at once — Monday’s export rule and Nvidia tonight. CLSA’s Sanjeev Rana reads the rule as tightening requirements on foundries “manufacturing advanced chips for Chinese fabless companies,” which puts Samsung Foundry in the due‑diligence net beside TSMC. A 1,747‑point intraday range on an index at 40,000 is a market with no agreed price.</p>
+<p class="field">Watch next</p><p>Wednesday’s Asian open, the first session to trade Nvidia’s numbers. Taiwan’s stabilisation fund was authorised on 6 November to deploy capital, but the national wire’s closing wrap does not mention it.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Warsh talks about machines, says nothing about rates, and yields fall</h2>
+<p class="field">What happened</p><p>Fed chair Kevin Warsh gave <a href="https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm">opening remarks</a> on Monday to a productivity conference in San Francisco, sketching an upside case in which growth runs persistently above its long‑run average and a downside in which automation pushes unemployment up — hedged with “these are illustrative scenarios, not forecasts.” On the technology: “humans are the designers and the builders, and humans must be the deciders.” The speech does not mention inflation and gives no signal on rates. Treasury yields fell: the 10‑year to 5.12%, the 2‑year to 4.83%, the 30‑year to 5.46%.</p>
+<p class="field">What it means</p><p>A Fed chair declining to discuss inflation in a week when a December increase is fully priced is choosing where the argument happens. Keep the direction in view: October went 10‑2 with Cook and Hammack dissenting for a quarter‑point <em>increase</em>, and futures put about a 9% chance on 50 basis points.</p>
+<p class="field">Watch next</p><p>The 27‑28 October minutes on Wednesday — the next read on how close the committee is to Waller’s 50. The FOMC meets 8‑9 December.</p>
+</div>
+<div class="item">
+<h2>Crude settles down more than 3% on glut positioning</h2>
+<p class="field">What happened</p><p>December WTI settled Monday at $85.72, down 3.21%, and Brent at $92.44, down 3.55% — both the lowest since late August, on positioning for oversupply. Dow Jones Newswires separately reported Saudi Arabia pumping about 10.5m barrels a day in October, with large increases from Iraq and Kuwait.</p>
+<p class="field">What it means</p><p>A 3% fall in both benchmarks on a day when a tanker was struck leaving Hormuz says the market weighs supply growth above supply risk — a view about OPEC discipline, not about Iran. Cheaper crude also lands as a quiet disinflationary offset just as the Fed argues about a second hike.</p>
+<p class="field">Watch next</p><p>OPEC and IEA monthly balances, and whether Hormuz shows up in war‑risk insurance rather than the flat price. We could not confirm Brent’s contract month for Monday and are not inferring it.</p>
+</div>
+<div class="item">
+<h2>Home Depot beats, then cuts the year</h2>
+<p class="field">What happened</p><p>Home Depot reported before Tuesday’s open: third‑quarter sales of $43.4bn, up 4.9%, comparable sales up 2.2%, GAAP diluted EPS $3.72 against $3.62. Incoming chief executive Richard McPhail said results “exceeded our expectations.” The <a href="https://www.prnewswire.com/news-releases/the-home-depot-announces-third-quarter-fiscal-2026-results-updates-fiscal-2026-guidance-302941189.html">guidance</a> says otherwise: full‑year comparable growth of about 1.4%, and GAAP diluted EPS growth of about 1.5% from $14.23.</p>
+<p class="field">What it means</p><p>Quarterly comps of 2.2% against 1.4% for the year implies a fourth quarter close to flat. With the 30‑year mortgage at 7.11%, the large discretionary projects that fill Home Depot’s basket are not returning, and the company is saying so in the guidance rather than the quote.</p>
+<p class="field">Watch next</p><p>Target and Lowe’s before Wednesday’s open, Walmart on Thursday. Lowe’s is the clean read on whether this is housing or Home Depot.</p>
+</div>
+<div class="item">
+<h2>Four days on, nobody has published what Monday cost the airlines</h2>
+<p class="field">What happened</p><p>The <a href="https://www.faa.gov/newsroom">FAA</a> has published nothing since its 15 November questions‑and‑answers document, and HPE still has no statement of its own. For a third run, no realised Monday cancellation count exists in any source we can reach — FlightAware snapshots at 6:30 and 7 a.m. Eastern showed 250 then 284 cancellations, and the big circulating numbers (28,300 delays, 18,520 cancellations) are cumulative since Friday. Bernstein, via Reuters, puts the ground stop’s cost to the four largest carriers at $345m pretax.</p>
+<p class="field">What it means</p><p>That estimate is research relayed twice, not a disclosure, and no carrier has confirmed it. The institutional point is sharper: the Transportation Department’s briefing room is dead, the FAA has stopped publishing, and the only running count of a national aviation failure is a commercial tracker whose own cancellation page is broken.</p>
+<p class="field">Watch next</p><p>Airline 8‑Ks quantifying the hit, where a real number will first appear.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Corma raises $125m at $1bn, three months after its seed</h2>
+<p class="field">What happened</p><p>Corma, which trains foundation models specialised for cyber defence — reading firewall and network telemetry to spot breaches and propose fixes — announced <a href="https://www.businesswire.com/news/home/20261116743982/en/">$125m</a> on Monday. The release’s wording: “The round was led by NEA, alongside existing investors Sequoia Capital, Khosla Ventures, and Coatue” — a single lead, not a co‑lead. It values the company at $1bn “just three months after announcing its seed in August,” and does not say whether that is pre‑ or post‑money.</p>
+<p class="field">What it means</p><p>Three months from seed to unicorn prices a thesis, not a business, and the thesis is that security is the first enterprise function where a specialised model beats a general one. California’s suit against OpenAI the same day is both the bear case and the bull case: agents that can defeat security systems create the market Corma sells into.</p>
+<p class="field">Watch next</p><p>A named customer on the record, which the release asserts in aggregate and nowhere in particular.</p>
+</div>
+<div class="item">
+<h2>Noeri launches with $110m for AI systems that rewrite themselves</h2>
+<p class="field">What happened</p><p>Noeri, founded by Stanford AI academics, came out of stealth on Monday with $110m. Its software studies a company’s data and workflows and proposes changes to its own configuration — different instructions, tools or models at each step — each explained and routed to a human before it takes effect. <a href="https://siliconangle.com/2026/11/16/noeri-raises-110m-to-help-companies-build-living-ai-systems-that-self-improve-over-time/">Coverage</a> renders the lead as Menlo Ventures, with Madrona, Kindred, Wing, NEA, Snowflake and Cisco Ventures participating. No round letter, no valuation.</p>
+<p class="field">What it means</p><p>The human‑in‑the‑loop gate is the commercial point, not the self‑improvement. Enterprises will not deploy software that silently changes its own behaviour; they might deploy software that proposes changes with an audit trail. That is a compliance product wearing a research hat.</p>
+<p class="field">Watch next</p><p>A named enterprise deployment, and whether Noeri’s own release matches the lead wording in the coverage.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The Supreme Court asks the government what it thinks about suing the Taliban</h2>
+<p class="field">What happened</p><p>Monday’s <a href="https://www.supremecourt.gov/orders/courtorders/111626zor_cb7d.pdf">order list</a> contains no new plenary cert grants, but invites the Solicitor General to file briefs expressing the views of the United States in three cases against the Taliban — Havlish, Ashton and James Owens — with Justice Kagan taking no part in the first two. The court denied certiorari in Khatibi v. Yip, on California’s implicit‑bias training requirement for doctors, over a dissent by Justice Thomas joined by Justice Alito; and in Novotny v. Moore, where Thomas questioned the breadth of Maryland’s “sensitive places” firearm restrictions while agreeing the case was a poor vehicle.</p>
+<p class="field">What it means</p><p>A call for the Solicitor General’s views is the court asking the executive to referee — here, over billions in frozen Afghan central‑bank reserves that terrorism victims want to attach. The answer will have to reconcile judgment creditors against whatever Afghanistan policy the administration is running, in public, in a brief.</p>
+<p class="field">Watch next</p><p>That brief, which has no deadline and usually takes months. Thomas’s gun statement is a standing invitation for a better vehicle.</p>
+</div>
+<div class="item">
+<h2>Mississippi has now been silent for nine days</h2>
+<p class="field">What happened</p><p>The Mississippi Secretary of State’s <a href="https://www.sos.ms.gov/elections-voting">elections pages</a> still carry no Senate totals, no certification statement and no meeting date for the State Board of Election Commissioners — nine days after the county deadline and four after the final count put Scott Colom ahead of Cindy Hyde‑Smith by 7,587 votes. The 2026 general‑election subpage would not load for us this morning; the parent page carries no dated news item at all.</p>
+<p class="field">What it means</p><p>A deadline passing in silence is not a failure, but nine days is long enough that the silence is the fact. Provisional, final and certified are three different states, and Mississippi is still at final: a seat in a chamber the Democrats have just taken is being held open by a process nobody will put a date on. This is the last time we lead with it.</p>
+<p class="field">Watch next</p><p>A board meeting notice on sos.ms.gov. Until one appears there is nothing to report but the absence.</p>
+</div>
+<div class="item">
+<h2>The FDA nomination reaches committee on Wednesday with nothing having moved</h2>
+<p class="field">What happened</p><p>The Senate health committee’s <a href="https://www.help.senate.gov/hearings">hearings page</a> lists an executive session titled simply “Nominations” for 9:45 a.m. on Wednesday — the vote on Heidi Overton’s nomination to run the Food and Drug Administration, though the notice carries no agenda detail and does not name her. Nothing moved Monday or Tuesday: no hearing, no letter, no withdrawal, no second Republican joining Bill Cassidy, who said on Sunday he would choose someone else. In the House, Tuesday’s business is ten measures under suspension of the rules; the two bills we reported as coming up under a rule are not on that list.</p>
+<p class="field">What it means</p><p>A one‑word agenda is how a contested nomination gets voted without advertising itself. Cassidy chairs the committee he would be voting in and says he still has questions — a chairman’s questions are usually resolved before a markup, or the markup moves.</p>
+<p class="field">Watch next</p><p>The 9:45 session, and whether it slips — the clearest signal the votes are not there.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Washington did confirm the trilateral — in a document that never reached its own website</h2>
+<p class="field">What happened</p><p><strong>A correction.</strong> We reported that Beijing had announced a summit with the American president while Washington had published nothing. The second half is wrong. The White House press office’s daily guidance, issued at 11:23 p.m. Eastern on 15 November and <a href="https://bnonews.com/whpool/schedule">distributed to the pool</a>, lists for Thursday: “2:30 PM THE PRESIDENT participates in a Trilateral Meeting with the President of the People’s Republic of China” and the president of the Russian Federation, at Kylin Villa, Shenzhen. Participants are given by title; Xi and Putin are not named. The briefings page has indeed carried nothing since 12 November, but the presidential‑actions page posted an item on the 16th. Trump reached Manila on Tuesday for the first Quad leaders’ meeting in two years.</p>
+<p class="field">What it means</p><p>The lesson is ours: an agency’s web index is not its press output. A document handed to the travelling pool is as official as anything on the site, and we spent two runs reporting a silence a pool schedule would have closed. The thinness is still real — a line on a schedule is not an agenda.</p>
+<p class="field">Watch next</p><p>Thursday, 2:30 p.m. Shenzhen time, and whether anything resembling an arms‑control readout follows. A Quad statement, if there is one, lands first.</p>
+</div>
+<div class="item">
+<h2>Ukraine says it hit the Crimean Bridge, and Russia hit two bridges in Kyiv</h2>
+<p class="field">What happened</p><p>Russian missiles struck Kyiv late Monday and into Tuesday, damaging the Northern and Southern bridges over the Dnipro; <a href="https://www.ukrinform.net/rubric-ato/4185420-kyivs-northern-and-southern-bridges-remain-closed-as-experts-assess-damage-from-russian-attack-klitschko.html">both remain closed</a> while engineers assess them, with water and heating disrupted in parts of the city. Three people were injured in Smila. Hours later Volodymyr Zelensky claimed a strike on the Kerch Bridge in his own name, describing a seven‑phase operation run with the General Staff and crediting Palianytsia drones on the road section, Neptune missiles and FP‑5s on the rail section, and a guided Flamingo strike. Russia’s Transport Ministry confirmed road and rail traffic suspended. Reports that a span collapsed rest on social‑media imagery the Associated Press said it could not verify.</p>
+<p class="field">What it means</p><p>This is the first time Kyiv has claimed a Kerch Bridge operation at head‑of‑state level rather than leaving it to nods and emoji, and the claimed weapon mix is the point: four domestic systems in sequence against one target is a capability statement aimed at Moscow and at Western capitals arguing about range restrictions. Both sides are now hitting bridges, which is what a war looks like when the front is not moving.</p>
+<p class="field">Watch next</p><p>Whether Russia publishes a reopening date for the crossing — the closure is more measurable than the damage — and whether satellite imagery settles the collapse.</p>
+</div>
+<div class="item">
+<h2>Bahrain intercepts a third Iranian drone attack in five days</h2>
+<p class="field">What happened</p><p>Bahraini state television said air defences <a href="https://www.aljazeera.com/news/2026/11/17/bahrain-thwarts-drone-attack-iran-claims-targeting-us-military-radar">thwarted a drone attack</a> on Tuesday after a Revolutionary Guard barrage, with blasts heard over Manama. The Guard said it had struck a US radar at the Isa air base, in a statement carried by Iranian state broadcaster IRIB — a combatant’s account of its own operation, relayed by its own state media, and unverified. It is the third such attack in five days; when the Guard made the same claim on 13 November, Central Command denied it, saying it shot down two drones with no injuries or damage. There has been no US comment on Tuesday’s. In the strait, UKMTO logged a tanker disabled by an engine‑room fire seven nautical miles north of Khasab, Oman — crew safe, vessel unnamed, nobody blamed.</p>
+<p class="field">What it means</p><p>Bahrain hosts the Fifth Fleet, which makes an attack on a radar there an attack on American infrastructure by proxy of geography — and the American answer so far is one denial and two silences. Note what has not happened: Saudi Arabia and Aramco have said nothing about Hormuz for seven consecutive runs of this brief, which for the strait’s largest exporter is itself a position.</p>
+<p class="field">Watch next</p><p>A Fifth Fleet or Central Command statement on Tuesday’s attack, and whether war‑risk premiums on Gulf transits move. UKMTO’s own incident page has been unreachable for two days.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://media.bis.gov/media/documents/rin-0694-ak50.pdf" target="_blank" rel="noopener">Bureau of Industry and Security — interim final rule, Addressing Remote Access to Advanced Semiconductors (RIN 0694-AK50)</a></li>
+<li><a href="https://oag.ca.gov/system/files/attachments/press-docs/complaint-oai-cyber.pdf" target="_blank" rel="noopener">California Attorney General — complaint against OpenAI</a></li>
+<li><a href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" target="_blank" rel="noopener">NVIDIA — Statement from the Board of Directors, 8 November</a></li>
+<li><a href="https://nvidianews.nvidia.com/news" target="_blank" rel="noopener">NVIDIA newsroom — SC26 announcements, 16 November</a></li>
+<li><a href="https://www.newstribune.com/news/2026/nov/16/bessent-says-nvidia-must-go-outside-the-company-to-find-new-ceo/" target="_blank" rel="noopener">Reuters via the Jefferson City News-Tribune — Bessent on the Nvidia succession</a></li>
+<li><a href="https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/" target="_blank" rel="noopener">TechCrunch — Sam Altman on Nvidia without Jensen Huang</a></li>
+<li><a href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/" target="_blank" rel="noopener">TechCrunch — US tightens AI chip export controls</a></li>
+<li><a href="https://siliconangle.com/2026/11/16/alibaba-launches-qwen4-max-with-training-attention-optimizations/" target="_blank" rel="noopener">SiliconANGLE — Alibaba launches Qwen4-Max</a></li>
+<li><a href="https://www.cna.com.tw/news/afe/202611170131.aspx" target="_blank" rel="noopener">CNA (Taiwan) — Taiex close, 17 November</a></li>
+<li><a href="https://www.koreaherald.com/article/10940220" target="_blank" rel="noopener">Korea Herald — Kospi close, 17 November</a></li>
+<li><a href="https://indexes.nasdaqomx.com/index/overview/SOX" target="_blank" rel="noopener">Nasdaq OMX — PHLX Semiconductor Index, data as of 11/16/2026</a></li>
+<li><a href="https://www.marketscreener.com/news/wall-street-slumps-on-ai-jitters-ahead-of-nvidia-results-anthropic-ipo-ce785edfdd8ef425" target="_blank" rel="noopener">Reuters via MarketScreener — Wall Street closing wrap, 16 November</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm" target="_blank" rel="noopener">Federal Reserve — Chair Warsh, opening remarks, 16 November</a></li>
+<li><a href="https://www.rigzone.com/news/wire/oil_retreats_as_traders_weigh_supply_glut-16-nov-2026-185096-article/" target="_blank" rel="noopener">Rigzone — Bloomberg wire on Monday&#x27;s crude settlements</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/the-home-depot-announces-third-quarter-fiscal-2026-results-updates-fiscal-2026-guidance-302941189.html" target="_blank" rel="noopener">Home Depot — third-quarter fiscal 2026 results</a></li>
+<li><a href="https://www.faa.gov/newsroom" target="_blank" rel="noopener">FAA newsroom</a></li>
+<li><a href="https://avweb.com/aviation-news/ground-stop-could-cost-airlines-345-million/" target="_blank" rel="noopener">AVweb — Bernstein&#x27;s estimate of the ground stop&#x27;s cost</a></li>
+<li><a href="https://www.businesswire.com/news/home/20261116743982/en/" target="_blank" rel="noopener">BusinessWire — Corma Series A</a></li>
+<li><a href="https://siliconangle.com/2026/11/16/noeri-raises-110m-to-help-companies-build-living-ai-systems-that-self-improve-over-time/" target="_blank" rel="noopener">SiliconANGLE — Noeri launches with $110m</a></li>
+<li><a href="https://www.supremecourt.gov/orders/courtorders/111626zor_cb7d.pdf" target="_blank" rel="noopener">Supreme Court — order list of 16 November</a></li>
+<li><a href="https://www.sos.ms.gov/elections-voting" target="_blank" rel="noopener">Mississippi Secretary of State — elections and voting</a></li>
+<li><a href="https://www.help.senate.gov/hearings" target="_blank" rel="noopener">Senate HELP Committee — hearings</a></li>
+<li><a href="https://www.majorityleader.gov/schedule/weekly-schedule.htm" target="_blank" rel="noopener">House Majority Leader — weekly schedule</a></li>
+<li><a href="https://bnonews.com/whpool/schedule" target="_blank" rel="noopener">White House press pool — daily guidance and press schedule, 16–19 November</a></li>
+<li><a href="https://www.fmprc.gov.cn/eng/xw/fyrbt/lxjzh/202611/t20261116_12060306.html" target="_blank" rel="noopener">Chinese Foreign Ministry — regular press conference, 16 November</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4185420-kyivs-northern-and-southern-bridges-remain-closed-as-experts-assess-damage-from-russian-attack-klitschko.html" target="_blank" rel="noopener">Ukrinform — Kyiv&#x27;s northern and southern bridges remain closed</a></li>
+<li><a href="https://censor.net/en/news/4034123/kerch-bridge-strike-zelenskyy-details-seven-phase-operation" target="_blank" rel="noopener">Censor.net — Zelensky details the Kerch Bridge operation</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/17/bahrain-thwarts-drone-attack-iran-claims-targeting-us-military-radar" target="_blank" rel="noopener">Al Jazeera — Bahrain thwarts drone attack; Iran claims a US radar</a></li>
+<li><a href="https://www.gulf-insider.com/tanker-attacked-north-of-omans-khasab-ukmto/" target="_blank" rel="noopener">Gulf Insider — tanker attacked north of Oman&#x27;s Khasab</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener">SEC EDGAR — Anthropic PBC submissions (CIK 0002130357)</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-17-daily.pdf">PDF</a></span>
+</div></div></body></html>
