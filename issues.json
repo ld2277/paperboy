@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-21",
+  "kind": "daily",
+  "dateline": "Saturday, November 21, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-21-daily.html",
+  "pdf": "pdf/2026-11-21-daily.pdf",
+  "standfirst": "The AI trade came apart on Friday: the Nasdaq had its worst week since 2020, the S&P 500 fell into correction, and the semiconductor index lost more than a tenth of its value in a single session."
+ },
+ {
   "date": "2026-11-20",
   "kind": "daily",
   "dateline": "Friday, November 20, 2026",

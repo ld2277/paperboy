@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Saturday, November 21, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Saturday, November 21, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The AI trade came apart on Friday: the Nasdaq had its worst week since 2020, the S&amp;P 500 fell into correction, and the semiconductor index lost more than a tenth of its value in a single session.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic gives back the pop on day two — and our own date was wrong</h2>
+<p class="field">What happened</p><p>Anthropic closed its second session as a public company at $88.91, down $8.26 or 8.50%, ending just $5.91 above the $83.00 offer. Volume was about 400 million shares, roughly half the debut; no two venues agree on a precise count, so we are not printing one. One venue puts the session low at $83.05, five cents above the offer — single-outlet, so treat “the offer held” as unconfirmed. A correction to our own record: Anthropic first traded on <strong>Thursday 19 November</strong>, not Friday. Its own pricing release says trading was expected to begin on the 19th, and the final prospectus and both S-8s are dated that day. The $111.50 opening print, the $97.17 close and the +17.1% all belong to Thursday. <a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering">Pricing release</a></p>
+<p class="field">What it means</p><p>The pop was never the story; the give-back is. A stock that round-trips 17% and then trades within pennies of its offer inside two days was priced to clear, not to hold. It now moves as AI beta rather than as a scarce asset. And the $1.18tn market cap needs its basis named every time — fully diluted is about a third larger.</p>
+<p class="field">Watch next</p><p>No 8-K of any kind existed on Anthropic’s EDGAR file on Saturday, so the 147,000,000-share over-allotment is still unreported; settlement was the 20th and the window runs about four business days, so expect it by Wednesday. A zero there means not yet reported, not not exercised.</p>
+</div>
+<div class="item">
+<h2>Apollo and Goldman price $44bn of debt for SpaceX’s GPUs</h2>
+<p class="field">What happened</p><p>Apollo and Goldman Sachs priced roughly $44bn on Friday to fund SpaceX’s purchase of Nvidia Vera Rubin chips for Earth-based AI data centres, upsized from the $40bn announced on 26 October. The tranches, as Reuters prints them: about $25.17bn of senior secured A3 notes due April 2033 at 8.259%; about $4.4bn of A2 notes due April 2031 at 7.66%; about $2.564bn of Class B subordinated notes due April 2033 at 8.36%. Those sum to about $32.1bn, not $44bn — so either tranches are undisclosed or the headline is a different aggregate. Do not read $44bn as the sum of three tranches. The structure is a lease: an Apollo affiliate buys the hardware and leases it to SpaceX from delivery in the first half of 2027. Priced, not closed. <a href="https://www.marketsmedia.com/apollo-goldman-sachs-price-record-44bn-spacex-gpu-financing/">Markets Media</a></p>
+<p class="field">What it means</p><p>This is what the AI capital cycle looks like once equity gets expensive: the compute still gets bought, but the risk moves into credit, and into structures where the lender owns the box. An 8.26% coupon on senior secured paper against hardware with a brutal depreciation curve is the residual-value question priced honestly. Nobody is pretending a 2027 GPU is a 2033 asset.</p>
+<p class="field">Watch next</p><p>Delivery in the first half of 2027, when the lease schedules start. And whether the unnamed $12bn of the $44bn surfaces in a later filing.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>We read the export rule, and one of our citations was in the wrong section</h2>
+<p class="field">What happened</p><p>We had been citing three provisions of the new Bureau of Industry and Security rule on a law firm’s reading rather than on the text. Having read the Federal Register version: two hold, one was misplaced. Section 744.23(a)(3)(i)(C) is confirmed as the operative foundry provision, covering an advanced logic chip in 3A090.a designed by a company that is neither an approved nor an authorised designer and shipped by a front-end fabricator or OSAT “to or within any destination” — not China-scoped on its face. But the five newly licence-required destinations are not there. Indonesia, Malaysia, Singapore, Brazil and Thailand sit in a new section 742.6 regional-stability requirement, and they are not a country group. <a href="https://media.bis.gov/media/documents/rin-0694-ak50.pdf">The rule</a></p>
+<p class="field">What it means</p><p>Section 743.10, which we had logged as a freestanding reporting burden, is headed as reporting to qualify for exclusion — the price of an exemption, not a standalone duty. A note to 742.6 exempts end users headquartered in the United States if they file it monthly: every party, the ultimate parent, the ECCN at paragraph level, the SKU, the processing performance. A disclosure regime that buys a US buyer out of a licence queue.</p>
+<p class="field">Watch next</p><p>The first compliance clock falls on 19 December. None of the five named governments had responded by Saturday.</p>
+</div>
+<div class="item">
+<h2>TSMC speaks, and it is a non-denial</h2>
+<p class="field">What happened</p><p>TSMC addressed the reports that it has suspended Chinese designers’ orders at 16nm and below, in a statement carried by Taiwan’s state news agency at 12:23 Taipei time on Friday: “不評論市場傳聞，已知悉BIS新發布的規範且將遵循適用的法令與法規。” In translation, outside the quotation marks: it does not comment on market rumours, is aware of the new BIS rules, and will comply with applicable law. No spokesperson is named. This corrects our own note, which said TSMC had not commented at all — it did, and what it did was decline to confirm while confirming it will comply. The underlying reporting still rests on unnamed sources. <a href="https://www.cna.com.tw/news/afe/202611200096.aspx">CNA</a></p>
+<p class="field">What it means</p><p>A non-denial from a company that routinely says nothing is information. TSMC had a clean way to kill the story — the reports are wrong — and did not use it. Separately Alibaba disclosed it has begun training models on its own T-Head silicon, targeting full domestic adoption by 2027: a substitution plan rather than a response, but the two sit together.</p>
+<p class="field">Watch next</p><p>No named Chinese designer — T-Head, Biren, Moore Threads, Cambricon, MetaX — has said anything on the record. One confirming a cancelled order is the first hard evidence.</p>
+</div>
+<div class="item">
+<h2>The curbs are freezing GPU financing across Southeast Asia</h2>
+<p class="field">What happened</p><p>Two deals have stalled. A $480m loan to Singapore-based Aolani Cloud, for Nvidia GPUs in a Malaysian data centre serving ByteDance, is paused, with bankers at five lenders discussing withdrawing; Aolani says it is “working with regulators and financing partners” to make the project compliant. That is Bloomberg’s 17 November reporting, carried forward. Moonshot AI cancelled a roughly $150m rental of Nvidia B300 parts in Indonesia over the new rules — twenty-plus carriers, all tracing to The Information, so one source. Indonesia and Malaysia are both on the section 742.6 list. Seoul Economic Daily reported on Saturday that Samsung has halted shipments to Baidu’s Kunlun unit and ByteDance; Samsung has not confirmed it, no spokesperson is quoted, and the piece is machine-translated, so we would not quote from it. <a href="https://www.trendforce.com/news/2026/11/20/news-u-s-ai-chip-curbs-hit-southeast-asia-gpu-financing-bytedance-linked-us480m-loan-reportedly-paused/">TrendForce</a></p>
+<p class="field">What it means</p><p>The rule’s practical bite is arriving through credit committees rather than enforcement. A lender cannot price a licence it does not know will be granted, so financing stops before the chips do — faster than any export-control process, and landing on the intermediaries rather than the designers the rule targets.</p>
+<p class="field">Watch next</p><p>Whether a lender confirms a withdrawal on the record.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The AI trade came apart — the Nasdaq’s worst week since 2020</h2>
+<p class="field">What happened</p><p>The Nasdaq Composite closed Friday at 22,617.73, down 1,261.47 points or 5.28%; the S&amp;P 500 at 6,910.39, down 265.44 or 3.70%; the Dow at 48,147.33, down 949.73 or 1.93%; the Russell 2000 at 2,581.79, down 73.32 or 2.76%. All four reconcile to the cent against Thursday. On the week, as the AP states them: Composite −10%, S&amp;P −8.6%, Dow −8%, Russell −7.5%. The AP puts the S&amp;P in correction, more than 10% below its 6 October record, and the Nasdaq down for the year. The damage concentrated in chips: the SOX index closed at 8,408.56, −10.73% in the session and −17.13% on the week, and Nvidia at $125.53, −$20.45 or −14.01%, on more than 600 million shares, roughly three times its thirty-day average. The Stoxx 600 fell 2.0% to 625.65, its worst week in over a year. Taiwan lost about 17.5%. <a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-11202026-nid20112026/">AP index wire</a></p>
+<p class="field">What it means</p><p>Two days after Nvidia beat and guided to $130bn, the market has decided the question is not whether the revenue arrives but who funds it and on what terms. The tell is the shape — the Dow lost under 2% while the Composite lost over 5%, so this is one trade repricing, not a growth scare. And nobody named a cause: the only new catalyst after the close was a Hunterbrook Media report alleging newer AMD firmware in products from IEIT Systems, a blacklisted Chinese server maker. It established no violation, and AMD says it complies. Thin ground for a 5% day.</p>
+<p class="field">Watch next</p><p>Flash purchasing managers’ indexes for France, Germany, the eurozone, the UK and the US land Monday 23 November — the first macro read since the unwind began.</p>
+</div>
+<div class="item">
+<h2>The market is priced for a rate rise, not a cut</h2>
+<p class="field">What happened</p><p>A correction to our own record that inverts a sentence we have been printing. Pricing for the 8–9 December Federal Open Market Committee meeting is for a 25 basis point increase — a quarter of a percentage point — at about 93%, with a hold at 7% and a cut at zero. Thursday’s 99% was 99% on a rise; our log kept the number and lost its direction. Kalshi had it at 90%. The Fed’s 28 October statement holds the range at “3-3/4 to 4 percent” on a 10–2 vote, Governors Lisa Cook and Beth Hammack each dissenting because they preferred a quarter-point increase: the only dissents are hawkish. Treasuries still rallied, the two-year falling about 13 basis points to 4.63% and the ten-year about 12 to 4.92%. <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm">FOMC statement</a></p>
+<p class="field">What it means</p><p>The yield move is the interesting part. A two-year that falls 13 basis points while hike odds stay above 90% is not the market changing its mind about December; it is money leaving risk for the front end regardless of the policy path. Separately, the final University of Michigan sentiment reading was 51.5, from a 51.0 preliminary, with year-ahead inflation expectations cut to 3.7% from 4.3% — a 60 basis point drop that looks like an orphan until you see current conditions revised down to 49.4 and expectations up to 52.9. It lives inside the forward-looking half. Coherent, not an outlier.</p>
+<p class="field">Watch next</p><p>8–9 December, with a Summary of Economic Projections attached. Our own calendar had this wrong for several runs — 15–16 December is a transposition of September’s meeting.</p>
+</div>
+<div class="item">
+<h2>TPG and Corpay take BILL private at about $6.0bn</h2>
+<p class="field">What happened</p><p>BILL Holdings agreed on 19 November to be taken private at $63.25 a share in cash — a 31% premium to its 60-day volume-weighted average through 16 November, valuing it at approximately $6.0bn on a fully diluted equity basis. The 8-K landed Friday. TPG affiliates are the buyers; Corpay is putting in $1.1bn for roughly a one-third stake with an option on the rest, its chief financial officer Peter Walker saying “We have the option to buy the rest of the company in 2030.” The company break fee is $180.51m, the parent fee $421.18m, and there is no go-shop. Financing is not a closing condition. Starboard Value and founder René Lacerte will vote in favour. One monitor circulated $6.55bn; $6.0bn is the company’s own figure. Announced, not closed. <a href="https://www.sec.gov/Archives/edgar/data/1786352/000119312526469396/d176726dex991.htm">The announcement</a></p>
+<p class="field">What it means</p><p>A 31% premium to a sixty-day average is thin for a payments business with a licence book, and no go-shop says the board expected no second bidder. The structure is the part to watch: Corpay has bought an option on a strategic acquisition at a 2026 price exercisable in 2030, with TPG carrying the equity risk in between. A cheap way to buy optionality on a competitor.</p>
+<p class="field">Watch next</p><p>Close expected in the first half of 2027, with state money-transmitter consents the slowest gate.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing. No venture round, no S-1 and no notable financing was announced on Friday or overnight — on a weekend that is a real zero rather than a gap, and TechCrunch’s venture index carried nothing dated the 20th or 21st. Two threads are live but not printable: a Delaware case number for ESS Tech’s Chapter 7 surfaced in a court index, but we could not read the document behind it; and the New York attorney general’s new AI-enforcement unit is still missing its own press release, so we have no acronym expansion, no headcount and no named head. Both go to the weekly if they firm up.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>An executive order routes congressional requests to contractors through the White House</h2>
+<p class="field">What happened</p><p>An order signed on 20 November, titled “Protecting the Executive’s Privileges and Enhancing Efficiencies in Federal Contracting,” requires every federal contractor to notify the White House and its contracting agency immediately of any pending or future congressional request touching its work with the executive branch, and to follow instructions to withhold communications the White House or an agency has deemed covered by executive privilege. The duty extends to subcontractors, with primes answerable for them. The Office of Management and Budget is to issue compliance guidance, and agencies are directed to consider contract termination and contractor debarment for noncompliance. The order disclaims enforceable rights. The fetch truncates section 2(a), so we are not quoting it. <a href="https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/">The order</a></p>
+<p class="field">What it means</p><p>Congressional oversight of the executive runs substantially through contractors, because that is where much of the work and most of the documents are. An order that makes a contractor’s answer to a committee letter contingent on White House instruction, and backs it with debarment, moves the leverage. Democrats hold both chambers, which is what makes this consequential rather than housekeeping — and also why durability is the question, since privilege is a claim a court adjudicates, not a direction an agency issues.</p>
+<p class="field">Watch next</p><p>The OMB guidance, which will show how far “any pending or future congressional request” reaches, and the first committee to test it.</p>
+</div>
+<div class="item">
+<h2>H.R. 2347 passed the Senate — our thread was one vote short</h2>
+<p class="field">What happened</p><p>The Senate passed H.R. 2347 on 19 November, 62 to 33 with five not voting, as roll call 270 at 9:30 in the morning. We had been carrying the bill as having no final-passage vote through roll call 269, and stopped one short of the event we were waiting for. The question was “On Passage of the Bill”; the measure is recorded as “H.R. 2347, as Amended,” a bill to exclude from gross income any damages, other than punitive damages, received on account of any sexual acts or sexual contact. Its short title is the Survivor Justice Tax Prevention Act. Friday produced eight roll calls, 272 to 279, every one a judicial nomination: two confirmations to Texas district courts at 49–43 and 49–41, and six cloture motions. <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00270.xml">Roll call 270</a></p>
+<p class="field">What it means</p><p>Eight roll calls on a Friday, all judicial, is a floor spent on confirmations rather than legislation — and it finally tests the three o’clock Friday last-votes convention we have watched for weeks: roll call 279 was taken at 4:49 in the afternoon, so it did not hold. The passage vote stands on its own terms: a 29-vote margin in a chamber that rejected the Iran war-powers resolution 48 to 51 two days earlier.</p>
+<p class="field">Watch next</p><p>Whether the House takes up the Senate’s amended text. H.R. 5267, H.R. 3495, H.R. 5490 and H.R. 7934 remain untallied, and the Senate HELP executive session is unreported for a fifth run.</p>
+</div>
+<div class="item">
+<h2>Mississippi has been silent on certification for fifteen days</h2>
+<p class="field">What happened</p><p>Mississippi’s window to certify its 3 November results closed around the 13th, and no certification announcement exists in anything we can read. The channels checked matter more than the silence: the secretary of state’s site served only PDFs — the elections calendar, last revised 8 September, and the qualifying guide — and we reached no dated news or certification page there. Mississippi Today was reachable and carried nothing; WJTV carried nothing new; Mississippi Public Broadcasting and the Mississippi Free Press returned nothing and we could not read either. Our own premise also needs naming: Mississippi does not hold runoffs in general elections for federal office — Senate and House races go by plurality, with a majority required only for the eight statewide offices and for judicial, county and municipal races.</p>
+<p class="field">What it means</p><p>An agency’s web index is not its press output, and a silence drawn from a stale index is not a silence — which is why the channel list is the reportable fact and the silence stays provisional. But the plurality rule is a real problem for our file: if the 1 December runoff we have on record is not federal, it is not the race we have been watching, and a separate thread about an uncalled Senate race may be the same story from the other end.</p>
+<p class="field">Watch next</p><p>1 December, and which races that runoff actually covers — no source we have read names them.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Three Russian objects crossed into Poland. Article 4 was not invoked.</h2>
+<p class="field">What happened</p><p>Three Russian objects entered Polish airspace during the overnight strike on Ukraine of 19–20 November, out of eleven that approached the border, according to General Ireneusz Nowak. All three came down in open ground and nobody was hurt. The defence minister, Władysław Kosiniak-Kamysz, named them: a Kh-101 cruise missile at Nowy Lipowiec in Biłgoraj county — “W Nowym Lipowcu już można powiedzieć, że była to rakieta Ch-101,” the only type he treats as settled — a second object at Rudnik nad Sanem he calls most likely a missile, and most likely a jet-powered drone at Mołodycz. He observed no damage to infrastructure. Two corrections to our file: Chmielek and Nowy Lipowiec are one impact under two namings, not two, and the investigation is led by the civilian district prosecutor in Lublin, with the Military Gendarmerie assisting. Poland has still not said what caused the explosion.</p>
+<p class="field">What it means</p><p>Poland has not invoked Article 4 of the North Atlantic Treaty, and that is the decision in the story. Warsaw asked NATO’s secretary general for additional forces under the existing Eastern Sentry mission instead — reinforcement rather than consultations, which keeps this inside a running mission and off the alliance’s formal agenda. Deliberate de-escalation by a government that also says the timing was no accident: “Data nie jest według mnie przypadkowa,” pointing at the Coalition of the Willing exercises on Polish soil. A retracted headline saying Poland did invoke Article 4 is still circulating through aggregators; treat any sighting of it as withdrawn.</p>
+<p class="field">Watch next</p><p>The forensics: full radar tracks, whether the warheads were armed, and why no interception was possible are all unresolved. Nowy Lipowiec and Rudnik nad Sanem were cleared Friday; Mołodycz was still being worked on Saturday.</p>
+</div>
+<div class="item">
+<h2>Another tanker hit off Khasab, and a figure we are not printing</h2>
+<p class="field">What happened</p><p>A tanker was struck by an unidentified projectile on the port bow about eight nautical miles north of Khasab, Oman, at around 1500 GMT on Friday, outbound from the Strait of Hormuz. The vessel’s company security officer reported a fire. No casualties, no environmental impact; the ship is unnamed in every account and no attacker identified. The Joint Maritime Information Center rates the threat “SEVERE.” Three outlets carry this, all resting on one UKMTO advisory. The Islamic Revolutionary Guard Corps navy, through Iranian state broadcasting and without naming anyone, asserts the tanker hit a sea mine and says it used an “unauthorized route with support from the US military.” The mine assertion is paraphrased in the coverage, not quoted. UKMTO says projectile, the Guard says mine; we confirm neither. <a href="https://gcaptain.com/another-tanker-hit-in-strait-of-hormuz-as-maritime-attacks-surge-worldwide/">gCaptain</a></p>
+<p class="field">What it means</p><p>The traffic numbers are the measure worth watching, and they are thinner than the attack reports. UKMTO’s weekly overview, carried by one outlet, gives 115 outbound and 148 inbound transits in the week to Friday against 139 and 169 the week before. We are dropping the claim that 28 million barrels transited on 18 November — one unnamed US official via one outlet, against an Energy Information Administration series putting Hormuz oil flows at 21.6 million barrels a day in the fourth quarter of 2025. And “about 65% below pre-conflict levels” is a reporting characterisation, not UKMTO’s; the same percentage has been attached to two different weeks’ counts.</p>
+<p class="field">Watch next</p><p>Next week’s transit count. The EIA now warns that vessel-tracking data in the strait has become especially unreliable, which is why no clean barrels-per-day figure exists.</p>
+</div>
+<div class="item">
+<h2>Cyclone Akvan crosses the coast at Gopalpur; no deaths reported yet</h2>
+<p class="field">What happened</p><p>Cyclonic Storm Akvan crossed the south Odisha and north Andhra Pradesh coast close to Gopalpur on Friday, the landfall beginning around eight in the morning and completed by 11:20, according to the India Meteorological Department. Winds in the hour beforehand ran 70 to 80 kilometres an hour gusting to 90, easing afterwards, with the system expected to weaken to a deep depression within the hour. Odisha’s chief secretary, Anu Garg, put the evacuation at 3.7 lakh people — about 370,000 — with 423 rescue teams deployed and 9,341 shelters opened. The disaster management minister, Suresh Pujari, said no major damage or loss of life had been reported so far: a preliminary, same-day assessment, and it should be read as one.</p>
+<p class="field">What it means</p><p>An evacuation of 370,000 ahead of a storm that came ashore at 90 kilometres an hour gusting is the system working as designed, and a first day without casualties is the return on it rather than luck. Hold that casualty count lightly — same-day assessments in coastal Odisha have historically risen as districts report in, and the flood risk outlasts the wind by days. This also settles the track disagreement we flagged: the department names both states.</p>
+<p class="field">Watch next</p><p>District-level damage returns over the weekend. Our own figure of 28 cancelled trains is not corroborated by the department’s account and stays on its earlier source.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.anthropic.com/news/anthropic-prices-initial-public-offering" target="_blank" rel="noopener">Anthropic — IPO pricing release</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener">SEC — Anthropic filing history (CIK 0002130357)</a></li>
+<li><a href="https://www.marketsmedia.com/apollo-goldman-sachs-price-record-44bn-spacex-gpu-financing/" target="_blank" rel="noopener">Markets Media — Apollo and Goldman price the SpaceX GPU financing</a></li>
+<li><a href="https://media.bis.gov/media/documents/rin-0694-ak50.pdf" target="_blank" rel="noopener">Bureau of Industry and Security — RIN 0694-AK50, the rule as published</a></li>
+<li><a href="https://www.cna.com.tw/news/afe/202611200096.aspx" target="_blank" rel="noopener">CNA — TSMC on the reported suspension of sub-16nm orders</a></li>
+<li><a href="https://www.trendforce.com/news/2026/11/20/news-u-s-ai-chip-curbs-hit-southeast-asia-gpu-financing-bytedance-linked-us480m-loan-reportedly-paused/" target="_blank" rel="noopener">TrendForce — US AI chip curbs hit Southeast Asian GPU financing</a></li>
+<li><a href="https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-11202026-nid20112026/" target="_blank" rel="noopener">AP via La Nacion — how the major US stock indexes fared, Friday 20 November</a></li>
+<li><a href="https://www.marketscreener.com/news/wall-st-ends-sharply-lower-on-ai-selloff-s-p-500-dow-in-correction-ce785ed3dd80f527" target="_blank" rel="noopener">MarketScreener — Wall Street ends sharply lower on the AI selloff</a></li>
+<li><a href="https://seekingalpha.com/symbol/SOX" target="_blank" rel="noopener">Seeking Alpha — SOX semiconductor index, Friday close</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">Federal Reserve — FOMC statement, 28 October 2026</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — 2026 and 2027 FOMC calendar</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.rigzone.com/news/oil_posts_third_weekly_loss_amid_surplus-20-nov-2026-185141-article" target="_blank" rel="noopener">Rigzone — oil posts a third weekly loss amid surplus</a></li>
+<li><a href="http://www.sca.isr.umich.edu/" target="_blank" rel="noopener">University of Michigan — Surveys of Consumers</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1786352/000119312526469396/d176726dex991.htm" target="_blank" rel="noopener">BILL Holdings — merger announcement, 8-K exhibit 99.1</a></li>
+<li><a href="https://www.corpay.com/corporate-newsroom/20691/corpay-invests-alongside-tpg-to-acquire-bill" target="_blank" rel="noopener">Corpay — investing alongside TPG to acquire BILL</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/" target="_blank" rel="noopener">The White House — Protecting the Executive&#x27;s Privileges in Federal Contracting</a></li>
+<li><a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00270.xml" target="_blank" rel="noopener">US Senate — roll call vote 270, H.R. 2347 on passage</a></li>
+<li><a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm" target="_blank" rel="noopener">US Senate — roll call vote menu, 119th Congress, 2nd session</a></li>
+<li><a href="https://wydarzenia.interia.pl/zagranica/news-rosyjskie-obiekty-nad-polska,nId,23576525" target="_blank" rel="noopener">Interia — Kosiniak-Kamysz on the three objects</a></li>
+<li><a href="https://defence24.pl/polityka-obronna/niezidentyfikowany-obiekt-uderzyl-i-wybuchl-w-powiecie-bilgorajskim" target="_blank" rel="noopener">Defence24 — what fell at Nowy Lipowiec</a></li>
+<li><a href="https://www.polsatnews.pl/wiadomosc/2026-11-21/rosyjskie-rakiety-nad-polska-sa-nowe-informacje-z-zandarmerii/" target="_blank" rel="noopener">Polsat News — Military Gendarmerie on the three sites</a></li>
+<li><a href="https://gcaptain.com/another-tanker-hit-in-strait-of-hormuz-as-maritime-attacks-surge-worldwide/" target="_blank" rel="noopener">gCaptain — another tanker hit in the Strait of Hormuz</a></li>
+<li><a href="https://ddnews.gov.in/en/cyclone-akvan-makes-landfall-along-odisha-coast-brings-in-heavy-rain/" target="_blank" rel="noopener">DD News — Cyclone Akvan makes landfall, carrying the IMD account</a></li>
+<li><a href="https://www.thestatesman.com/india/cyclone-akvan-hits-odisha-coast-with-90-kmph-gusts-3-72-lakh-evacuated-as-heavy-rain-and-flood-threat-persist-1503664745.html" target="_blank" rel="noopener">The Statesman — Akvan evacuation figures</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-21-daily.pdf">PDF</a></span>
+</div></div></body></html>
