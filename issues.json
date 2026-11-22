@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-22",
+  "kind": "daily",
+  "dateline": "Sunday, November 22, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-22-daily.html",
+  "pdf": "pdf/2026-11-22-daily.pdf",
+  "standfirst": "The Lean and Mathlib communities put their names to a machine-checked proof of the Riemann hypothesis \u2014 a smaller claim than the headlines, and a remarkable one anyway."
+ },
+ {
   "date": "2026-11-21",
   "kind": "daily",
   "dateline": "Saturday, November 21, 2026",

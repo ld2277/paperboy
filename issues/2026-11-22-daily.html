@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Sunday, November 22, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Sunday, November 22, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">The Lean and Mathlib communities put their names to a machine-checked proof of the Riemann hypothesis — a smaller claim than the headlines, and a remarkable one anyway.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Lean and Mathlib say they have full confidence in a machine-checked Riemann proof</h2>
+<p class="field">What happened</p><p>On Saturday morning the Lean and Mathlib communities — maintainers of the proof assistant and the mathematical library most formalisation work runs on — published a <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">joint statement</a> saying they have “full confidence that Alpöge’s proof of the Riemann Hypothesis is correct.” It is endorsed by the Lean FRO and the Mathlib Initiative and carries no individual signatories. The claim is Levent Alpöge’s: the Anthropic researcher and Harvard junior fellow wrote in a <a href="https://alpo.ge/remark.pdf">four-page note</a> that he believes he has, “working with Claude,” discovered a proof of the Riemann hypothesis, extending to the Generalized Riemann Hypothesis. MIT’s Andrew Sutherland has been <a href="https://math.mit.edu/~drew/grh/">compiling it independently</a>: 175,187 modules, zero errors, on Lean v4.33.1, the five headline theorems depending only on three standard axioms. Two independently written kernels, nanoda and con-leche, accept the full export. Lean’s own default and paranoid kernels were still running, with no verdict, as of early Sunday.</p>
+<p class="field">What it means</p><p>Two claims are circulating and only one is established. “The formalisation compiles and independent kernels accept it” is established. “The Riemann hypothesis is proved” is a different sentence: a Lean proof proves whatever the Lean statement says, and whether that statement means what the mathematical one means is a human judgement no kernel makes. Sutherland says so on his own page; the joint statement does not. It is narrower than the headlines, too — “GRH” there covers Dirichlet L-functions only.</p>
+<p class="field">Watch next</p><p>Whether Lean’s own kernels finish and agree, and whether a named number theorist puts a statement-matching objection on the record. No paper has been released.</p>
+</div>
+<div class="item">
+<h2>Four leveraged Anthropic ETFs list on Monday, three sessions into the stock’s life</h2>
+<p class="field">What happened</p><p>GraniteShares said on Saturday afternoon that its <a href="https://www.globenewswire.com/news-release/2026/11/21/3407923/0/en/graniteshares-introduces-2x-long-and-2x-short-anthropic-etfs.html">2x Long Anthropic Daily ETF (AIL) and 2x Short Anthropic Daily ETF (ANS)</a> are expected to begin trading on Nasdaq on Monday, targeting 200% and minus 200% of Anthropic’s daily move. ProShares is listing the same pair of bets the same day on the same exchange — <a href="https://www.proshares.com/anthropic-etfs">ProShares Ultra Anthropic (ANTU) and ProShares UltraShort Anthropic (ANTY)</a> — at a net expense ratio of 0.95%, 1.04% gross, under a waiver running to 30 September 2028. ProShares’ page still says its registration statements are “not yet effective”; that line is stale, since the post-effective amendment was filed under Rule 485(b) and states the prospectus took effect on 6 November.</p>
+<p class="field">What it means</p><p>Anthropic has existed as a listed security for three sessions and already carries four leveraged products. These funds reset daily, so over anything longer than a day they deliver twice each day’s move compounded, not twice the move. In a stock that rose 17.1% on Thursday and fell 8.5% on Friday, that difference is the whole product.</p>
+<p class="field">Watch next</p><p>Monday’s open against the $83.00 offer price, and whether an 8-K reporting the 147,000,000-share over-allotment appears. None had been filed as of the weekend; the settlement window points to Wednesday or Thursday.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Seoul’s chipmakers took their hit before Friday’s rout reached them</h2>
+<p class="field">What happened</p><p>Nothing on semiconductors was published inside this brief’s window, so one clause of explanation for a story just outside it. Samsung Electronics fell 7.01% to 183,100 won and SK hynix 5.92% to 1.113m won in <a href="https://www.koreaherald.com/article/10944729">Friday’s Seoul session</a>, with foreign investors selling a net 1.14tn won and institutions a net 951.3bn won. That move was a response to <em>Thursday’s</em> US session, where the Nasdaq fell 2.25% and the Philadelphia semiconductor index 2.42%. Friday’s far larger American selloff — the SOX down 10.73% on the day and 17.13% on the week — had not reached Korea when those closes printed. Analysts there are split on what comes next: KB Securities has DRAM revenue up 40% and NAND up 30% in 2027, with DRAM demand growing 25% against supply at 18%, against a bear case that valued Samsung at 70,000 won. Nothing was published by TSMC, Samsung, SK hynix, Micron, Intel, AMD, Broadcom or ASML on Saturday or Sunday.</p>
+<p class="field">What it means</p><p>The sequencing is what matters for Monday. Seoul has not yet traded Friday’s rout, and Tokyo is closed for Labour Thanksgiving, so Korea absorbs the adjustment without the usual regional cover. A week in which the SOX lost 17% has so far been priced by Asian memory makers against a 2.4% day.</p>
+<p class="field">Watch next</p><p>Monday’s Seoul open, and South Korea’s 1-20 November export figures, expected the same day — the cleanest early read on whether memory demand is softening or only memory multiples are.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Gold had its worst week in eight months and it went unreported</h2>
+<p class="field">What happened</p><p>Spot gold closed Friday at <a href="https://www.kitco.com/price/precious-metals">$3,537.90 bid</a> in New York, down $86.30 or 2.38% on the day and about 8.9% on the week — its largest weekly fall since the week ended 20 March. Silver fell further, roughly 12% to 13%, to about $41.12. Both moves are larger than anything in the equity indices that led Friday’s coverage, including the Nasdaq’s 5.28% day, and they ran in the same direction, which is the unusual part.</p>
+<p class="field">What it means</p><p>Gold falling alongside equities means the driver is the discount rate, not fear. A non-yielding asset loses twice over when the expected path of rates moves up, and that is what the week repriced. The safe-haven framing applies when the shock is to risk; this one was to money.</p>
+<p class="field">Watch next</p><p>Whether the metal steadies once December is priced, or keeps falling with the 2027 rate path.</p>
+</div>
+<div class="item">
+<h2>December is priced for a rate rise, and the two-year yield agrees</h2>
+<p class="field">What happened</p><p>Markets closed Friday pricing roughly a 93% chance that the Federal Reserve <em>raises</em> rates by 25 basis points (a quarter of a percentage point) on 8-9 December, a 7% chance of a hold, and no chance at all of a cut. The direction is the fact here. The two-year Treasury corroborates it: at Friday’s close of <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">4.63%</a> it sits about 76bp above the 3.875% midpoint of the current 3.75-4.00% target range, a level incompatible with cuts. October pointed the same way — the committee <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm">held at “3-3/4 to 4 percent”</a> on a 10-2 vote, Lisa Cook and Beth Hammack both dissenting in favour of raising.</p>
+<p class="field">What it means</p><p>The two-year fell 13bp on Friday, from 4.76%, and almost none of that can have come out of December, which was close to fully priced before and after. The rally reflects a softer expected path <em>beyond</em> next month — a market that still expects the rise and has begun to doubt what follows.</p>
+<p class="field">Watch next</p><p>Wednesday at 08:30 ET, when October PCE and the Q3 GDP second estimate land together, with jobless claims pulled forward from Thursday and durable goods alongside. Core PCE is expected at 3.2% against 3.1%.</p>
+</div>
+<div class="item">
+<h2>Oil’s front month steps down on Monday before anyone trades it</h2>
+<p class="field">What happened</p><p>December WTI expired Friday at <a href="https://energynow.ca/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/">$83.98</a>, up 0.93%, and January WTI, the contract quoted from Monday, settled at $83.41. Because the new front month sits $0.57 below the one that expired, the quoted price steps down about 0.68% on the roll alone, with no trading required. The curve is backwardated rather than in contango: February Brent at $89.95 sits $2.62 below January Brent’s $92.57. On the week WTI fell 5.17% against Brent’s 3.41%, a third consecutive weekly decline for both.</p>
+<p class="field">What it means</p><p>Expect Monday headlines reporting a fall in oil that did not happen. A roll changes which contract is quoted, not the price of anything.</p>
+<p class="field">Watch next</p><p>OPEC+ is reported to meet on Sunday 29 November on 2027 output, and January Brent stops trading on 30 November. US markets are closed Thursday and close at 13:00 ET on Friday.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Nothing. No funding round, acquisition, shutdown or filing was announced anywhere in the window — Saturday’s wire traffic amounted to a launch-site construction milestone and an esports marketing event. An honest blank is worth more than two minutes of padding.</p>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>A Senate week spent entirely on district judges, and a silent Saturday</h2>
+<p class="field">What happened</p><p>The Senate recorded no roll-call votes on Saturday. Its last was <a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm">vote 279</a> on Friday — cloture on Jesus A. Osete’s nomination to the Western District of Missouri, agreed 45-33 — and the whole of Friday’s floor time, votes 272 through 279, went to judicial nominations, including Courtney Leigh Coker confirmed 49-41 and Richard Wesley Bennet 49-43 to the Northern and Southern Districts of Texas. The <a href="https://www.whitehouse.gov/presidential-actions/2026/11/">White House</a> published no presidential action dated Saturday or Sunday; its two most recent are both Friday’s, one of them an order on executive privilege and federal contracting. Five House measures that moved this month still have no tally published through any channel readable from here.</p>
+<p class="field">What it means</p><p>A full week of floor time on district-court seats is a tell about what the majority thinks it can finish. Confirmations need no House partner, no conference and no negotiation, and judges outlast whoever confirmed them. With Thursday a holiday and Friday a half-day, this was realistically the last clear legislative week of the month, and it went to the one thing that cannot be amended into trouble.</p>
+<p class="field">Watch next</p><p>Whether Monday brings anything other than nominations to the floor, and whether Friday’s contracting order draws a challenge.</p>
+</div>
+<div class="item">
+<h2>The Mississippi runoff nobody could name is a county prosecutor’s race</h2>
+<p class="field">What happened</p><p>The 1 December runoff in Mississippi, which no national source had identified, is the special election for <a href="https://mississippitoday.org/2026/11/04/district-attorney-heads-to-runoff/">Hinds County district attorney</a>, between Darla Palmer and Gwen Agho, who advanced from a five-candidate field. That fits the rule which made the earlier reporting confusing: Mississippi requires a majority only in its eight statewide offices and in judicial, county and municipal races. Federal contests go by plurality, so no Senate or House race in the state can go to a runoff at all. The Senate race itself was called around 12 November for Scott Colom, the Democrat, over the incumbent Cindy Hyde-Smith — widely reported, though we have it from headlines rather than a page read in full, and the state’s certification has not surfaced.</p>
+<p class="field">What it means</p><p>A slow Senate count and a scheduled December runoff looked like one story for two weeks and were always two. The runoff was never federal and could not have been; the delayed Senate result is a separate matter, and it resolved without anyone announcing that it had. This is the shape most election-administration confusion takes — two unrelated clocks running in the same state.</p>
+<p class="field">Watch next</p><p>1 December for the Hinds County result, and the Mississippi secretary of state’s certification of the Senate race.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>COP31 runs into a second day of overtime with no deal and the text unpublished</h2>
+<p class="field">What happened</p><p>The Antalya climate conference, due to close Friday, ran through Saturday unresolved. A closing plenary from 23:30 to midnight saw Ghana say it was not ready to adopt; COP31’s president, Türkiye’s environment minister Murat Kurum, set the plenary to resume at 09:00. A <a href="https://docs.unfccc.int/documents/10000406/files/en/dt_cma8_cover_decision.pdf">fresh draft</a> circulated around 02:00 Sunday. It keeps a target of raising electricity to “35 per cent” of total final energy consumption globally by 2035 and recalls “the United Arab Emirates Consensus in its entirety”, but carries no explicit language on transitioning away from fossil fuels, and repeats the call to triple adaptation finance by 2035 with no figure — an earlier draft’s $120bn a year was dropped. Germany’s environment minister Carsten Schneider said the text was not something Germany could agree to, and the EU delegation was reported ready to vote against, which would block adoption.</p>
+<p class="field">What it means</p><p>Two years running, these conferences have ended with the fossil-fuel language negotiated out and the finance number deleted, — the result, whatever the cover decision eventually says. The 35% electrification target is the one substantive thing standing, and it survived because it names no fuel.</p>
+<p class="field">Watch next</p><p>Whether Sunday’s plenary gavels anything at all. An unadopted cover decision is not yet a failure.</p>
+</div>
+<div class="item">
+<h2>Iran says Qatari mediators came to Tehran, and ties Hormuz to sanctions relief</h2>
+<p class="field">What happened</p><p>A Qatari delegation held about two hours of talks in Tehran on Friday night, <a href="https://www.aljazeera.com/news/2026/11/21/iran-says-held-talks-with-qatari-mediators-urges-us-to-accept-conditions">according to Iranian officials</a>. The entire account comes from Iran and carries no Qatari comment — one party’s version of its own diplomacy. Deputy foreign minister Kazem Gharibabadi said on Saturday, via the Iranian agency Tasnim, that the contacts are not yet formal negotiations. Iran’s conditions, as it states them: the war ended on all fronts, its assets unfrozen, oil sanctions lifted, the US counter-blockade of its ports ended, its enriched uranium staying in the country. Foreign minister Abbas Araghchi, also via Tasnim, said that “as long as Iran’s demands are not met, the discussion on the Strait of Hormuz and its opening is pointless.”</p>
+<p class="field">What it means</p><p>Tehran has made the strait explicitly transactional, new in framing if not in substance. That is an opening bid, not a concession: it prices reopening at the full list of sanctions relief, and state channels are how such a bid is made without a meeting.</p>
+<p class="field">Watch next</p><p>Any Qatari confirmation that the meeting happened as described.</p>
+</div>
+<div class="item">
+<h2>Zelensky wants an agenda agreed before the next round convenes</h2>
+<p class="field">What happened</p><p>Volodymyr Zelensky said the next round of talks — Ukraine, Europe, Russia and the United States — should convene only once Washington has coordinated an agenda among all four delegations, and predicted Russia would try to delay it, <a href="https://www.kyivpost.com/post/90813">per Kyiv Post</a>. No date or venue was given. Rival framings circulated over the weekend — a G20 venue, a three-way format before Christmas — in outlets we could not open.</p>
+<p class="field">What it means</p><p>Requiring an agreed agenda refuses a meeting without refusing to meet, and puts the work on Washington.</p>
+<p class="field">Watch next</p><p>Whether the US produces an agenda and names a venue.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" target="_blank" rel="noopener">Lean and Mathlib communities — joint statement on the Riemann Hypothesis (21 Nov)</a></li>
+<li><a href="https://alpo.ge/remark.pdf" target="_blank" rel="noopener">Levent Alpöge — the four-page note</a></li>
+<li><a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener">Andrew Sutherland, MIT — independent compilation and axiom audit</a></li>
+<li><a href="https://www.globenewswire.com/news-release/2026/11/21/3407923/0/en/graniteshares-introduces-2x-long-and-2x-short-anthropic-etfs.html" target="_blank" rel="noopener">GraniteShares — 2x Long and 2x Short Anthropic ETFs (AIL, ANS)</a></li>
+<li><a href="https://www.proshares.com/anthropic-etfs" target="_blank" rel="noopener">ProShares — Anthropic ETFs (ANTU, ANTY)</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener">Anthropic PBC — EDGAR filing index, CIK 0002130357</a></li>
+<li><a href="https://www.koreaherald.com/article/10944729" target="_blank" rel="noopener">The Korea Herald — Samsung and SK hynix tumble as analysts split</a></li>
+<li><a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener">Kitco — New York spot precious metals, 17:00 EST 20 Nov</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm" target="_blank" rel="noopener">Federal Reserve — FOMC statement, 28 October 2026</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — 2026-2027 FOMC calendar</a></li>
+<li><a href="https://energynow.ca/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/" target="_blank" rel="noopener">EnergyNow — Friday crude settlements, 20 November</a></li>
+<li><a href="https://www.marketscreener.com/news/december-wti-crude-oil-contract-closes-down-0-18-or-0-2-settles-at-88-56-per-barrel-january-br-ce785eded98bf326" target="_blank" rel="noopener">MarketScreener — December WTI settles at $88.56, 13 November</a></li>
+<li><a href="https://www.bea.gov/news/schedule" target="_blank" rel="noopener">Bureau of Economic Analysis — release schedule</a></li>
+<li><a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="noopener">NYSE — holidays and trading hours</a></li>
+<li><a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm" target="_blank" rel="noopener">US Senate — roll call vote menu, 119th Congress, 2nd session</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/11/" target="_blank" rel="noopener">The White House — presidential actions, November 2026</a></li>
+<li><a href="https://mississippitoday.org/2026/11/04/district-attorney-heads-to-runoff/" target="_blank" rel="noopener">Mississippi Today — Hinds County district attorney contest heads to runoff</a></li>
+<li><a href="https://docs.unfccc.int/documents/10000406/files/en/dt_cma8_cover_decision.pdf" target="_blank" rel="noopener">UNFCCC — draft cover decision, version 22/11/2026 02:00</a></li>
+<li><a href="https://www.climatechangenews.com/2026/11/22/cop31-bulletin-day-13-new-draft-retains-electrification-goal-but-delays-adaptation-finance-and-science-decisions/" target="_blank" rel="noopener">Climate Home News — COP31 bulletin, day 13</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/21/iran-says-held-talks-with-qatari-mediators-urges-us-to-accept-conditions" target="_blank" rel="noopener">Al Jazeera — Iran says it held talks with Qatari mediators</a></li>
+<li><a href="https://www.kyivpost.com/post/90813" target="_blank" rel="noopener">Kyiv Post — Zelensky on the next round of talks</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-22-daily.pdf">PDF</a></span>
+</div></div></body></html>
