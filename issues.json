@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-11-22",
+  "kind": "weekly",
+  "dateline": "Sunday, November 22, 2026",
+  "month": "November 2026",
+  "href": "issues/2026-11-22-weekly.html",
+  "pdf": "pdf/2026-11-22-weekly.pdf",
+  "standfirst": "The AI trade unwound hard \u2014 the Nasdaq down 10%, the SOX down 17% \u2014 but the bond market rallied into it, which makes this a dollar-liquidity squeeze rather than the discount-rate repricing everyone is calling it; meanwhile COP31 collapsed without adopting anything, and Xi, Putin and Trump issued a peace declaration that never mentions Ukraine."
+ },
+ {
+  "date": "2026-11-22",
   "kind": "daily",
   "dateline": "Sunday, November 22, 2026",
   "month": "November 2026",
