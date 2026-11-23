@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Monday, November 23, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Monday, November 23, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Three Asian governments moved to stop the AI unwind before Monday’s open, and futures are up two to three per cent — while December is still priced for a rate rise.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Eleven leveraged Anthropic ETFs begin trading today</h2>
+<p class="field">What happened</p><p>Six start on Nasdaq at the 9:30 a.m. ET open: GraniteShares’ <a href="https://www.globenewswire.com/news-release/2026/11/22/3407951/0/en/one-day-to-go-graniteshares-set-to-bring-anthropic-linked-etfs-to-nasdaq-with-ail-and-ans.html">AIL and ANS</a>, ProShares’ <a href="https://www.proshares.com/anthropic-etfs">ANTU and ANTY</a>, and Defiance’s <a href="https://www.globenewswire.com/news-release/2026/11/22/3407972/0/en/defiance-2x-long-and-2x-short-daily-anthropic-etfs-antc-and-antq-begin-trading-monday-nov-23.html">ANTC and ANTQ</a>. Five more list on Cboe — Tradr’s ANTT and ANTZ, and Leverage Shares’ ANUU, ANDD and ANSS, the last a 1x short. Fees where disclosed: Defiance 0.71 per cent, ProShares 0.95 per cent net against 1.04 per cent gross with a waiver to 30 September 2028. The stock itself priced at $83 on 18 November and closed Friday at $88.91. Nothing has traded yet.</p>
+<p class="field">What it means</p><p>Three trading days after the largest IPO on record, the derivative complex around it is already eleven tickers from five issuers on two US exchanges, every one levered. That is what a crowded trade looks like once it gets plumbing: Anthropic’s realised volatility now has an amplifier bolted to both sides. A twelfth ticker, “ANTW”, circulating in quote pages, does not exist.</p>
+<p class="field">Watch next</p><p>First prints at 9:30 a.m. ET. The 147,000,000-share over-allotment should report Wednesday or Thursday.</p>
+</div>
+<div class="item">
+<h2>CrowdStrike pays $43.9bn for Zscaler in stock, and moves its results up a week</h2>
+<p class="field">What happened</p><p>CrowdStrike agreed to buy Zscaler at an enterprise value of about $43.9bn, all in stock, at 1.135 CrowdStrike shares per Zscaler share — roughly $260.41 a share and a 34 per cent premium to Friday’s close. CrowdStrike holders would own 84.1 per cent; Jay Chaudhry and affiliates, about 34 per cent of Zscaler, signed voting agreements. The combined company would open with more than $10bn of annual recurring revenue. The same morning CrowdStrike <a href="https://www.sec.gov/Archives/edgar/data/1535527/000153552726000035/crwd-20261123xex991.htm">reported</a> third-quarter revenue of $1.58bn, up 28 per cent, with ARR of $6.26bn — results it had scheduled for 1 December.</p>
+<p class="field">What it means</p><p>The premium is struck off a reference price set at the bottom of a 10 per cent Nasdaq week, and paid in paper that is itself marked down. George Kurtz’s framing is the pitch for why agent traffic needs network control: “Security used to be about keeping the adversary out. Today, safety is required to let AI in.” The closing date is the tell: fiscal 2028 is an antitrust runway.</p>
+<p class="field">Watch next</p><p>The HSR filing, and whether a second bidder surfaces in a review that runs through 2027.</p>
+</div>
+<div class="item">
+<h2>What the funds that got into Anthropic early actually paid</h2>
+<p class="field">What happened</p><p><a href="https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/">Notable Capital</a> entered at the Series E, at a $61.5bn valuation, putting about a tenth of the US portion of a fund over $1bn into it. GIC first invested at the Series F at $183bn, co-led the Series G at $380bn with Coatue, then co-led the pre-IPO round at $965bn — more than $4.5bn across three rounds for roughly 1 per cent of the company after listing. Baillie Gifford put in $1.5bn across three rounds from the Series F on. Anthropic raised $81.3bn on 18 November at about $1.5tn fully diluted.</p>
+<p class="field">What it means</p><p>The private marks were not the stretch. The public price came in well above the last private round, so for anyone reading this selloff as a reckoning for private AI valuations, the largest observation available points the other way: the gap opened upward, not down.</p>
+<p class="field">Watch next</p><p>The first post-lockup selling window, and GIC’s stake in a 13F or 13G.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Taipei, Beijing and Seoul all moved before Monday’s open</h2>
+<p class="field">What happened</p><p>Taiwan’s Financial Supervisory Commission announced on Saturday that from today <a href="https://www.taiwannews.com.tw/news/6479952">short sales below the previous day’s closing price</a> are banned across all listed stocks, widening a Thursday curb that had covered only stocks down 3.5 per cent or more, and raised the minimum short-sale margin from 130 to 150 per cent. New put-warrant listings are suspended; firms hedging their own books are exempt. China’s three exchanges, with CSRC approval, cut the minimum margin ratio for leveraged stock purchases from 100 to 80 per cent from 30 November, reversing a January increase. South Korea’s finance ministry, after a Sunday emergency meeting, said its stabilisation funds “can be activated immediately depending on market conditions.”</p>
+<p class="field">What it means</p><p>This is the policy response the Fed did not supply. Raising short margin and banning downtick shorting is aimed at exactly one thing — breaking a forced-selling spiral — and doing it over a weekend is an admission that Friday looked like one. Note where the interventions landed: the three jurisdictions whose semiconductor complexes had fallen furthest, not the market where the index did.</p>
+<p class="field">Watch next</p><p>Whether Korea actually deploys the fund rather than readying it; China’s margin cut takes effect 30 November.</p>
+</div>
+<div class="item">
+<h2>The tape split along the memory line, and Europe’s semicap led the bounce</h2>
+<p class="field">What happened</p><p>The TAIEX closed up 2.16 per cent, about 778 points, after opening lower and swinging 1,213 points intraday; TSMC rose 1.5 per cent in Taipei. Seoul went the other way — the <a href="https://en.sedaily.com/market/2026/11/23/kospi-closes-down-331-percent-at-470854">KOSPI fell 3.31 per cent to 4,708.54</a> after an intraday low near 5.8 per cent down, with Samsung Electronics off more than 3 per cent and SK Hynix more than 2. Tokyo was shut for Labour Thanksgiving, so there is no Nikkei print. In Europe the STOXX 600 rose 0.73 per cent to 630.24 by 09:33 GMT, its first gain in six sessions, technology the best sector at plus 2 per cent: ASML up 5.24, ASM International up 3.78. S&amp;P futures were up 2.4 per cent.</p>
+<p class="field">What it means</p><p>The headline index badly understates this. The SOX fell 17.13 per cent last week against the Nasdaq 100’s 10.5, and 10.73 per cent on Friday alone — the drawdown is a semiconductor drawdown wearing an index’s name. Seoul’s divergence from Taipei says the swing factor is now memory pricing rather than AI sentiment, which are not the same trade.</p>
+<p class="field">Watch next</p><p>US cash opens 9:30 a.m. ET. Kathleen Brooks of XTB warns that if sentiment stays sour “this could be a dead cat bounce.”</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Every tenor from a year out fell into a 10 per cent equity week — and December is still priced for a rise</h2>
+<p class="field">What happened</p><p><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">Treasury’s par yield curve</a> for the week to 20 November: the 2-year fell 25 basis points to 4.63 per cent, the 5-year 27bp to 4.71, the 10-year 23bp to 4.92 and the 30-year 16bp to 5.31. The front end rose — one month up 9bp, the three-month unchanged at 4.32. The Nasdaq 100 fell 10.5 per cent over the same week. Vendors read the 8–9 December FOMC at between 88.6 and 96 per cent priced for a 25bp rise from a 3.75–4.00 per cent range. Gold fell 2.47 per cent on Friday alongside equities, then was bid near $3,604; bitcoin bottomed near $55,100 on Saturday and sits 4.2 per cent above Friday.</p>
+<p class="field">What it means</p><p>A curve that falls from a year out while the front end rises is a market pricing tightening now and damage later. That is a rate event, not the absence of one. The real-rate shock arrived a week earlier: the 10-year’s 27bp rise over 9–13 November was 93 per cent real, breakevens flat. Through Thursday the real rate moved 3bp while the Nasdaq 100 was already down 5 per cent.</p>
+<p class="field">Watch next</p><p>Second-estimate Q3 GDP, October personal income and outlays and the Beige Book all land Wednesday. The NYSE is shut Thursday, 1 p.m. close Friday.</p>
+</div>
+<div class="item">
+<h2>ConocoPhillips leaves Norway after five decades</h2>
+<p class="field">What happened</p><p>ConocoPhillips agreed to <a href="https://www.conocophillips.com/news-media/story/conocophillips-announces-agreement-to-sell-norway-business-and-teesside-asset-to-var-energi-2/">sell its Norway business</a> and its 40.25 per cent interest in the UK Teesside oil terminal to Vår Energi. Total consideration is $4.425bn less about $0.5bn of agreed adjustments, so the company expects $3.9bn. Roughly $1.4bn of that is a 2026 tax liability payable in the first half of 2027, leaving about $2.5bn of net cash. The assets produced around 120,000 barrels of oil equivalent a day in 2025. Closing is expected by the end of Q1 2027.</p>
+<p class="field">What it means</p><p>Three different figures for this deal were circulating by Monday breakfast and the company’s own release reconciles all of them — gross, expected, net — so check which one a headline is quoting. What is being sold is a late-life North Sea position, traded for buyback capacity.</p>
+<p class="field">Watch next</p><p>Norwegian energy ministry approval, and whether the 2027 buyback guidance is raised explicitly.</p>
+</div>
+<div class="item">
+<h2>A Missouri judge signs off on Bayer’s $7.25bn Roundup settlement</h2>
+<p class="field">What happened</p><p>Judge Timothy Boyer, in Missouri state court in St. Louis, <a href="https://www.insurancejournal.com/news/national/2026/11/23/893405.htm">approved Bayer’s $7.25bn settlement</a> of Roundup cancer claims as “fair, reasonable, and adequate.” Announced in February, it is meant to resolve nearly all current and future US claims, with about 65,000 pending across state and federal courts. Boyer overruled objections that individual payouts were low against earlier cohorts, reasoning that delay could leave terminal patients waiting “an indeterminate number of years.”</p>
+<p class="field">What it means</p><p>This closes the largest open liability on a European industrial balance sheet, and a Supreme Court ruling five months ago holding that federal pesticide law pre-empts state failure-to-warn claims is what made it possible. Bayer paid $63bn for Monsanto in 2018 and the shares are down 46 per cent; future claimants have a far narrower path.</p>
+<p class="field">Watch next</p><p>Whether objectors appeal. Coverage gives no date for the ruling, so treat “Friday” as reported.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Bending Spoons buys Mailchimp for $3.68bn, and sells its own stock to pay for it</h2>
+<p class="field">What happened</p><p>Intuit agreed to sell Mailchimp to Bending Spoons for an <a href="https://www.sec.gov/Archives/edgar/data/896878/000119312526468834/d182669d8k.htm">all-cash base purchase price of $3.68bn</a>, subject to adjustments — Intuit’s filing calls it a base purchase price, not an enterprise value. Of that, $3.31bn is cash and $368m is Bending Spoons stock: 8,818,595 newly issued ordinary shares, about $41.73 each by arithmetic, though no per-share price is disclosed. Separately Bending Spoons announced an oversubscribed private placement of 32.5 million shares for about $1.3bn gross. Mailchimp revenue was $313m in the quarter to 31 October, down 1 per cent year on year. Closing is expected early 2027.</p>
+<p class="field">What it means</p><p>Intuit paid $12bn for Mailchimp in 2021. Taking $3.68bn for it is the cleanest mark-down of a 2021 software price printed this month. But read the other half: the buyer is placing fresh equity at a premium to its July IPO price, into the teeth of the rout, and the seller is reinvesting alongside. Two opposite signals inside one transaction.</p>
+<p class="field">Watch next</p><p>Whether the placement clears at the implied $40.00; the termination date is 19 August 2027, extendable three months.</p>
+</div>
+<div class="item">
+<h2>The “PitchBook” figure going round on private AI valuations is not PitchBook’s</h2>
+<p class="field">What happened</p><p>Figures circulating as PitchBook third-quarter data — ten of twelve stale-round unicorn exits priced below their prior round, a median discount near 73 per cent, $2.6tn of unicorn value perhaps worth $700bn — come from a <a href="https://ontheflyingbridge.wordpress.com/2026/11/16/triggering-events-impact-on-private-market-valuations/">16 November blog post</a> tied to a venture firm. The post cites PitchBook for one chart, captioned “Source: Pitchbook, Morningstar”, with no report named and no link. The $700bn is the author’s own conditional: should the discount pattern extend to the other companies, the $2.6tn “may only be worth $700 billion.” No PitchBook third-quarter valuations report is reachable.</p>
+<p class="field">What it means</p><p>A twelve-observation sample extrapolated into a $1.9tn implied write-down, wearing a data provider’s name. It is currently the most-cited number in the private-AI-repricing argument, and it is an argument rather than a measurement. Worth knowing before it turns up in a deck.</p>
+<p class="field">Watch next</p><p>If you see it cited again, check whether the citation names a report. PitchBook’s actual Q3 valuations publication is the thing to wait for.</p>
+</div>
+<div class="item">
+<h2>European venture wrote €6bn in the week of the rout — one deal was most of it</h2>
+<p class="field">What happened</p><p>More than 65 European tech funding deals worth over €6bn closed in the week to today, per <a href="https://tech.eu/2026/11/23/european-tech-weekly-recap-more-than-65-tech-funding-deals-worth-over-eur18b">Tech.eu’s weekly tally</a>. Isomorphic Labs’ $5bn Series C is the bulk of it. Behind that: Genesis AI at $500m on a $3.5bn valuation, Payhawk’s $280m, Model ML at $250m on $1.5bn, Stark Future at more than €150m on €1.2bn, and Boltz with a $110m Series A. None of those valuations carries a stated pre- or post-money basis. Separately, Swiss robotics component maker coprod raised a $6m pre-seed led by Founderful and Prototype Capital.</p>
+<p class="field">What it means</p><p>Read the aggregate carefully: one deal is roughly four-fifths of it, so this is depth at the very top rather than breadth. Still, a €6bn week during a 10 per cent Nasdaq drawdown is not a market that has shut — it is one where the largest rounds still clear and everything below them goes quiet first.</p>
+<p class="field">Watch next</p><p>Whether the next fortnight holds without a $5bn round propping up the total.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Congress is out all week, the funding cliff is 11 December, and three of twelve bills have cleared the House</h2>
+<p class="field">What happened</p><p>The Senate’s own <a href="https://www.senate.gov/legislative/2026_schedule.htm">2026 schedule</a> lists 23–27 November as a state work period; the House is in district work period to 29 November and next sits on the 30th. The Senate’s last roll call was vote 279 on 20 November, and there is no vote 280. Funding runs out on 11 December under the continuing resolution the Senate passed 90–6 in August and the House took 370–48 in September. Of twelve appropriations bills, three have passed the House and none is enacted. Five judicial nominees — Reardon, Ballou, Long, Mansfield and Osete — have cloture invoked and remain unconfirmed.</p>
+<p class="field">What it means</p><p>That leaves nine working days between the return and the cliff with nothing in conference, so another stopgap is close to certain and the only live question is its length — Republicans are floating the full fiscal year, Rosa DeLauro wants February. The complication is Iran: some House Democrats want to deny the Pentagon further war funding, and DeLauro’s answer is that a shutdown “doesn’t stop the war.”</p>
+<p class="field">Watch next</p><p>Both chambers return 30 November; the five confirmation votes are the first clean floor business.</p>
+</div>
+<div class="item">
+<h2>Senate Democrats choose a leader by secret ballot on 1 December</h2>
+<p class="field">What happened</p><p>Chris Van Hollen is challenging Chuck Schumer to lead the incoming Senate Democratic majority, in a <a href="https://www.aljazeera.com/news/2026/11/22/trump-criticises-schumer-amid-push-for-new-democrat-leadership-in-us-senate">closed-door secret ballot on 1 December</a>. Van Hollen told NBC’s Meet the Press that “if you look at our caucus, you can see a huge appetite for change”; Schumer says he has the votes and “will be elected majority leader.” Trump posted on Sunday that “it is going to be very hard for me to work with Chuck Schumer should he become Senate Majority Leader.” A mid-November Reuters/Ipsos poll put Schumer’s favourability among Democrats at 34 per cent, down from 38 in February.</p>
+<p class="field">What it means</p><p>Trump intervening against Schumer is, inside this caucus, closer to an endorsement than an attack — presumably not the intent. The real variable is the size of the incoming class, large enough that a leadership arithmetic settled in 2017 no longer holds by default.</p>
+<p class="field">Watch next</p><p>1 December, behind closed doors. Hakeem Jeffries is the House Democrats’ nominee for speaker.</p>
+</div>
+<div class="item">
+<h2>Democrats reach at least 258 House seats as Virginia Foxx loses a recount</h2>
+<p class="field">What happened</p><p>Chuck Hubbard beat eleven-term Republican Virginia Foxx in North Carolina’s 5th district, <a href="https://www.aljazeera.com/news/2026/11/23/democrats-win-largest-house-majority-since-1992-with-north-carolina-seat">called on Sunday after a recount</a>; Foxx conceded by phone. The margin was about 330 votes on the state board’s website as of Friday night, with other counts at 331 and at “fewer than 300” — nothing is official until the state canvass at 11 a.m. Tuesday. That takes Democrats to at least 258 of 435 seats with four races uncalled, on a network projection rather than a tally. Reporting calling 258 the largest Democratic House majority since 1992 fails on its own arithmetic: Democrats elected 258 in 1992, so this ties it.</p>
+<p class="field">What it means</p><p>It is the largest Democratic House caucus since Clinton’s first term, which matters less for the floor margin than for committee ratios and the discharge-petition threshold. And it is provisional — four races are still out.</p>
+<p class="field">Watch next</p><p>State canvass 11 a.m. Tuesday. Three election protests in NC-5 go to a formal hearing on 1 December, after certification.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Poland says all three objects that struck its territory were Russian cruise missiles</h2>
+<p class="field">What happened</p><p>The Lublin district prosecutor’s office said debris of Kh-101 cruise missiles was found at <a href="https://notesfrompoland.com/2026/11/23/poland-confirms-three-objects-that-struck-its-territory-were-all-russian-missiles/">all three sites</a> where objects fell on Polish soil on Friday — Nowy Lipowiec, Rudnik and Mołodycz. Its spokesman, Marcin Kozak, said preliminary analysis dates all three to fourth-quarter 2026 manufacture at a plant in Dubna, north of Moscow. That hardens Friday’s position, when the defence minister had called one a Kh-101, another likely a missile and the third probably a drone. Nobody was hurt; Swedish Gripens and Polish F-16s went up and no shot was taken.</p>
+<p class="field">What it means</p><p>Article 4 has not been invoked, and the two sides describe the meeting differently: Warsaw calls this afternoon’s North Atlantic Council session extraordinary, a NATO representative called it part of regular consultations. Poland wants allied aircraft and F-35s — and a change to rules of engagement so fighters need not identify every target visually. That last is the substantive request.</p>
+<p class="field">Watch next</p><p>The council session in Brussels this afternoon. Russia has said nothing at all about the incident.</p>
+</div>
+<div class="item">
+<h2>Eleven dead in a Kyiv-region apartment block, and Kyiv says it sank a Russian corvette in Libya</h2>
+<p class="field">What happened</p><p>Eleven bodies have been recovered from an apartment building in Dymer, Kyiv oblast, destroyed by a Russian drone — three by Sunday afternoon, four by Sunday night, <a href="https://www.ukrinform.net/rubric-ato/4187563-death-toll-from-russian-strike-on-apartment-building-in-kyiv-regions-dymer-rises-to-11.html">eleven by mid-morning today</a> per the State Emergency Service and the oblast administration, with clearance still going on. A seven-year-old boy, Davyd, was pulled out after fourteen hours. Zelensky says Russia launched 165 missiles and some 2,700 attack drones in a week. He also confirmed by video that Ukraine struck two Russian ships at Benghazi, the corvette Merkury “was sunk” by seven naval drones.</p>
+<p class="field">What it means</p><p>Two Libyan officials told the Associated Press the corvette was severely damaged rather than sunk, and that gap is the story — each account is a party’s or an official’s word, not independent confirmation. Russia has not commented. Zelensky also says he has still seen no written security guarantee: “So far, I have not seen such commitments on paper.”</p>
+<p class="field">Watch next</p><p>Ukraine says US Patriot deliveries are being delayed. No next negotiating round has a date.</p>
+</div>
+<div class="item">
+<h2>Trump says blockade runners will be sunk, and two tankers burn in Hormuz</h2>
+<p class="field">What happened</p><p>In a telephone interview with Fox News on Saturday, Trump said he was inclined to <a href="https://www.iranintl.com/en/202611226299">resume strikes on Iran after the new year</a> absent a deal, and that Iranian ships trying to run the US naval blockade would be sunk. He would “make a deal that is going to be permanent,” and on whether Iran’s government survives he “never cared too much about the regime.” The blockade is in its fifth month and was widened on 18 November to cover ship-to-ship transfers at sea. Deputy foreign minister Kazem Gharibabadi calls it “an act of war.”</p>
+<p class="field">What it means</p><p>CENTCOM says it has redirected 150 merchant vessels and disabled five since June — its own account of its own operations. British maritime authorities counted at least 19 strikes on vessels through 18 November. Iran’s output is near 1.8 million barrels a day, half pre-war. Brent is around $92, January WTI near $83: no closure is priced.</p>
+<p class="field">Watch next</p><p>Whether the Qatari mediation channel produces a date.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.globenewswire.com/news-release/2026/11/22/3407951/0/en/one-day-to-go-graniteshares-set-to-bring-anthropic-linked-etfs-to-nasdaq-with-ail-and-ans.html" target="_blank" rel="noopener">GraniteShares — AIL and ANS to list on Nasdaq</a></li>
+<li><a href="https://www.proshares.com/anthropic-etfs" target="_blank" rel="noopener">ProShares — Anthropic ETFs (ANTU, ANTY)</a></li>
+<li><a href="https://www.globenewswire.com/news-release/2026/11/22/3407972/0/en/defiance-2x-long-and-2x-short-daily-anthropic-etfs-antc-and-antq-begin-trading-monday-nov-23.html" target="_blank" rel="noopener">Defiance — ANTC and ANTQ begin trading Monday</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/tradrs-leveraged-etfs-on-anthropic-begin-trading-monday-302945779.html" target="_blank" rel="noopener">Tradr — leveraged Anthropic ETFs on Cboe</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1535527/000110465926130785/tm2630454d1_ex99-1.htm" target="_blank" rel="noopener">CrowdStrike 8-K, Exhibit 99.1 — Zscaler acquisition</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1535527/000153552726000035/crwd-20261123xex991.htm" target="_blank" rel="noopener">CrowdStrike 8-K, Exhibit 99.1 — Q3 FY2027 results</a></li>
+<li><a href="https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/" target="_blank" rel="noopener">TechCrunch — Notable, GIC and Baillie Gifford on Anthropic</a></li>
+<li><a href="https://www.taiwannews.com.tw/news/6479952" target="_blank" rel="noopener">Taiwan News — FSC short-selling restrictions</a></li>
+<li><a href="https://en.sedaily.com/market/2026/11/23/kospi-closes-down-331-percent-at-470854" target="_blank" rel="noopener">Seoul Economic Daily — KOSPI close</a></li>
+<li><a href="https://english.news.cn/20261123/4e3ca972a01a47a687ccdc205e285d2f/c.html" target="_blank" rel="noopener">Xinhua — China exchanges cut margin requirement</a></li>
+<li><a href="https://www.marketscreener.com/news/europe-s-stoxx-600-rises-as-tech-shares-rebound-after-ai-driven-rout-ce7851dad98cf522" target="_blank" rel="noopener">MarketScreener — European stocks recover, technology leads</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC calendar</a></li>
+<li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm" target="_blank" rel="noopener">Federal Reserve — implementation note, 28 October 2026</a></li>
+<li><a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener">Kitco — precious metals spot prices</a></li>
+<li><a href="https://www.conocophillips.com/news-media/story/conocophillips-announces-agreement-to-sell-norway-business-and-teesside-asset-to-var-energi-2/" target="_blank" rel="noopener">ConocoPhillips — agreement to sell Norway business</a></li>
+<li><a href="https://www.insurancejournal.com/news/national/2026/11/23/893405.htm" target="_blank" rel="noopener">Insurance Journal — judge approves Bayer Roundup settlement</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/896878/000119312526468834/d182669d8k.htm" target="_blank" rel="noopener">Intuit 8-K — Mailchimp sale agreement</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2004711/000200471126000025/bsp_ex99-1.htm" target="_blank" rel="noopener">Bending Spoons 6-K — private placement</a></li>
+<li><a href="https://ontheflyingbridge.wordpress.com/2026/11/16/triggering-events-impact-on-private-market-valuations/" target="_blank" rel="noopener">On the Flying Bridge — the origin of the 73 per cent discount figure</a></li>
+<li><a href="https://tech.eu/2026/11/23/european-tech-weekly-recap-more-than-65-tech-funding-deals-worth-over-eur18b" target="_blank" rel="noopener">Tech.eu — European tech weekly recap</a></li>
+<li><a href="https://www.senate.gov/legislative/2026_schedule.htm" target="_blank" rel="noopener">US Senate — 2026 legislative schedule</a></li>
+<li><a href="https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm" target="_blank" rel="noopener">US Senate — roll call votes, 119th Congress, 2nd session</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/22/trump-criticises-schumer-amid-push-for-new-democrat-leadership-in-us-senate" target="_blank" rel="noopener">Al Jazeera — Trump criticises Schumer amid leadership push</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/23/democrats-win-largest-house-majority-since-1992-with-north-carolina-seat" target="_blank" rel="noopener">Al Jazeera — Democrats win North Carolina seat</a></li>
+<li><a href="https://notesfrompoland.com/2026/11/23/poland-confirms-three-objects-that-struck-its-territory-were-all-russian-missiles/" target="_blank" rel="noopener">Notes from Poland — all three objects were Russian missiles</a></li>
+<li><a href="https://radio.lublin.pl/2026/11/szczatki-pociskow-w-trzech-lokalizacjach-prokuratura-podsumowala-dzialania-sluzb/" target="_blank" rel="noopener">Radio Lublin — prosecutor’s office on the missile debris</a></li>
+<li><a href="https://defence24.pl/polityka-obronna/rakiety-nad-polska-pilne-posiedzenie-nato-i-oczekiwania-warszawy-przyleca-f-35" target="_blank" rel="noopener">Defence24 — NATO session and Warsaw’s requests</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4187563-death-toll-from-russian-strike-on-apartment-building-in-kyiv-regions-dymer-rises-to-11.html" target="_blank" rel="noopener">Ukrinform — Dymer death toll rises to 11</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4187541-zelensky-confirms-strikes-on-russian-corvette-merkury-and-cargo-ship-in-libya-calls-operation-exemplary.html" target="_blank" rel="noopener">Ukrinform — Zelensky confirms strikes on Merkury and MV Angara</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/22/suspected-drone-strike-hits-russian-vessel-in-libya" target="_blank" rel="noopener">Al Jazeera — suspected drone strike on Russian vessel in Libya</a></li>
+<li><a href="https://www.iranintl.com/en/202611226299" target="_blank" rel="noopener">Iran International — Trump on the blockade and resuming strikes</a></li>
+<li><a href="https://www.aljazeera.com/news/liveblog/2026/11/22/iran-war-live-tankers-set-ablaze-in-hormuz-as-irgc-warns-of-unrest-threat" target="_blank" rel="noopener">Al Jazeera — tankers set ablaze in Hormuz</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-23-daily.pdf">PDF</a></span>
+</div></div></body></html>
