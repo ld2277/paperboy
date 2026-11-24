@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Tuesday, November 24, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Tuesday, November 24, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Nvidia put Jensen Huang back in the chief executive’s chair and the worst week since March 2020 reversed in a single session — while the Asian state rescue everyone credited for it had already failed.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nvidia reinstates Jensen Huang, and the market reprices everything</h2>
+<p class="field">What happened</p><p>Nvidia’s board <a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director">voted unanimously</a> to reinstate Huang as president, chief executive and a director, effective immediately; the release went out at 8:55 a.m. ET Monday. He had resigned effective 11 November, announced the following day. Colette Kress, interim chief executive since, stays on as finance chief; Harvey C. Jones remains chair. Huang: “I can’t wait to get back to work.” A committee of independent directors with its own counsel will finish investigating reports that Huang was targeted by a foreign intelligence effort; the board says it took input from “senior levels of the U.S. government” and sees no national security risk. Nvidia closed $165.05, up 31.48%.</p>
+<p class="field">What it means</p><p>Eleven days of a leaderless Nvidia were priced as an AI-cycle event. Unwinding them in a morning says the drawdown was about this company, not the capex thesis. Note what the board did not do: no reason given for the resignation, no vote count, and no 8-K — Nvidia’s last filing of any kind is dated 19 November.</p>
+<p class="field">Watch next</p><p>An 8-K on the reinstatement, and whether the independent committee reports before year-end.</p>
+</div>
+<div class="item">
+<h2>Anthropic sat out the rally</h2>
+<p class="field">What happened</p><p>On a day the S&amp;P 500 rose 4.73%, Anthropic closed at $87.64, <a href="https://seekingalpha.com/symbol/ANT">down 1.43%</a> from Friday’s $88.91 — confirmed on two venues. We could not obtain a first-day closing print for any of the eleven leveraged Anthropic ETFs that began trading Monday; the one seed quote circulating ($15.00 on one share outstanding) is a seeding, not a market print. EDGAR shows four Form 4s filed 23 November and nothing else since the 19 November prospectus stack. There is still no 8-K of any kind on file.</p>
+<p class="field">What it means</p><p>A fortnight after the biggest listing of the year, the stock is 21% below its first close and sat out the sharpest risk-on session in 18 months. That is a repricing of Anthropic specifically, not of AI.</p>
+<p class="field">Watch next</p><p>The 147,000,000-share over-allotment should report Wednesday or Thursday. First ETF prints, whenever a venue carries them.</p>
+</div>
+<div class="item">
+<h2>The CrowdStrike–Zscaler agreement is readable, and it gives the buyer an exit</h2>
+<p class="field">What happened</p><p>The merger agreement is dated 22 November; the 8-K is <a href="https://www.sec.gov/Archives/edgar/data/1535527/000110465926130785/tm2630454d1_8k.htm">now searchable</a>. Exchange ratio 1.135 CrowdStrike Class A shares per Zscaler share, adjusted down automatically if issuance would reach 20.0% of CrowdStrike’s outstanding shares under Nasdaq rules. Zscaler owes CrowdStrike a $1,400,000,000 termination fee; no reverse fee appears anywhere. Outside date 23 November 2027, extending automatically to 23 February 2028 if only antitrust or foreign-investment conditions remain, plus day-for-day relief capped at 60 days if a government shutdown stalls HSR review. Closing requires waiting periods to lapse “without the imposition of any Burdensome Condition” — unless the buyer, in its sole discretion, accepts one.</p>
+<p class="field">What it means</p><p>A $1.4bn one-way fee with no hell-or-high-water commitment puts the regulatory risk on the target. Section 8.01 does carry a reasonable-best-efforts covenant, but the served exhibit text truncates before it, so what that standard actually requires is not yet readable.</p>
+<p class="field">Watch next</p><p>The HSR filing, and whether Zscaler’s proxy discloses a second bidder.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>The SOX reversed two-thirds of its worst week on record</h2>
+<p class="field">What happened</p><p>The PHLX Semiconductor index closed <a href="https://indexes.nasdaq.com/Index/Overview/SOX">9,588.05</a>, up 1,179.46 points or 14.03%, from a 20 November close of 8,408.59. That arithmetic also closes last week’s loop: 10,146.32 on 13 November to 8,408.59 is the 17.13% weekly fall we printed. Micron rose 19.04%, AMD 6.85%, Broadcom 3.00%. On Tuesday in Taipei, TSMC went limit-up at NT$2,230, plus 9.85%, with MediaTek and ASE also limit-up; the TAIEX closed 40,122.35, up 3,310.46 points or 8.99%. Nasdaq’s own previous-close field on the SOX page echoes the current level and should be ignored; the net change reconciles.</p>
+<p class="field">What it means</p><p>Semis took the deepest cut on the way down and the largest bounce on the way up, which is what you would expect if the selling was positioning rather than demand. One session does not undo a 17% week — the index is still roughly 6% below 13 November.</p>
+<p class="field">Watch next</p><p>Whether Taiwan’s short-selling restrictions lapse now the tape has turned.</p>
+</div>
+<div class="item">
+<h2>The weekend rescue did not work, and Asia followed Wall Street</h2>
+<p class="field">What happened</p><p>Three governments moved before Monday’s open: Taiwan’s regulator banned short sales below the prior close on stocks down 3.5% or more, China’s CSRC cut margin requirements from 100% to 80% effective 30 November, and Korea readied a KRW 10.76tn stabilisation fund after a Sunday emergency meeting. On Monday itself only Taiwan bounced. The KOSPI fell 3.31%, with Samsung Electronics down 3.06% and SK Hynix down 2.52%; the CSI 300 kept sliding. Tokyo was shut for Labor Thanksgiving. Asia’s rally came on Tuesday, after Nvidia: the Nikkei closed about 58,650, up 3.9% with no intervening session, and the KOSPI finished back above 5,000, up roughly 6.4%.</p>
+<p class="field">What it means</p><p>We carried the interventions as the thing that stopped the unwind. They did not. The causal arrow runs the other way — a US corporate event moved Asia a day later — and China’s margin measure has not even taken effect yet.</p>
+<p class="field">Watch next</p><p>Whether the CSRC change lands on 30 November into a calmer tape or a renewed one.</p>
+</div>
+<div class="item">
+<h2>An export-control action we cannot confirm</h2>
+<p class="field">What happened</p><p>A single European market wrap reports that the US Commerce Department has blacklisted Megaspeed and six other South-East Asian companies, together with Apex Enterprise Solutions, Alibaba’s Singapore unit, and that Alibaba denied wrongdoing. We obtained no BIS entity-list notice, no Federal Register document and no second outlet. Treat it as unconfirmed.</p>
+<p class="field">What it means</p><p>If it holds, it is the first extension of the sub-16nm regime to third-country intermediaries rather than fabs — the route Chinese buyers have used since the diffusion rule was rescinded. That is a materially different policy from the one we reported on 19 November.</p>
+<p class="field">Watch next</p><p>A Federal Register entity-list notice. Without one, this story does not exist.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>December is priced for a hike, and the curve stopped behaving like a funding squeeze</h2>
+<p class="field">What happened</p><p>John Williams of the New York Fed spoke in New York on Monday, then to reporters. Reuters quotes him on inflation being “too high” and, on pace: “I would not exclude, you know, moving at consecutive meetings at all if that was what was needed.” “Back-to-back” is an outlet’s word, not his, and no Fed-published text exists. December pricing sits at 96% for a 25bp hike on <a href="https://frenzycap.com/fedwatch/">one venue</a> Monday morning and about 97% on another overnight — call it 96–97% and rising, against a 3.75–4.00% range.</p>
+<p class="field">What it means</p><p>Treasury par yields show where the energy went. Last week the 1-month bill led, up 9bp, which looked like funding stress; Monday it rose 1bp while the 3-month added 5bp and the 1-year 6bp, the 2-year and 10-year unchanged. That is a December meeting, not a dollar shortage. Breakevens fell anyway, 10-year 2.15 to 2.13, on the biggest risk-on day of the year: nobody bought this as reflation.</p>
+<p class="field">Watch next</p><p>8–9 December, with a dot plot. The 20s30s inversion widened to 4bp, fifteen straight November sessions.</p>
+</div>
+<div class="item">
+<h2>Sanofi buys Insmed for about $41bn in cash</h2>
+<p class="field">What happened</p><p>Sanofi agreed to <a href="https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-24-06-30-00-3409002">acquire Insmed</a> at $175 per share in cash. The release puts total equity value at approximately $41.0bn, or €37.6bn, and never uses the words enterprise value; its own highlights block calls the same figure total consideration. Funded by debt and cash on hand. Close expected in the first half of 2027, subject to an Insmed shareholder vote and regulatory approvals; accretive to business earnings per share by end-2028, with no change to 2026 guidance. No termination fee is disclosed. Insmed closed $149.09 Monday and traded up about 14.5% pre-market, still below the offer.</p>
+<p class="field">What it means</p><p>The asset is Brinsupri, which booked $1.09bn through September in its first full year. Sanofi is paying roughly 38 times that for a launch curve, which tells you what it thinks respiratory franchises are worth now.</p>
+<p class="field">Watch next</p><p>The proxy, for the termination fee and whether another bidder was in the room.</p>
+</div>
+<div class="item">
+<h2>Monday’s after-close prints: HPE beats and raises, Zoom guides below its own quarter</h2>
+<p class="field">What happened</p><p>HPE’s fiscal fourth quarter, ended 31 October, put revenue at <a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm">$14,547m, up 50.3%</a> year on year. GAAP diluted earnings were $1.26 a share and non-GAAP $1.43, against a $1.29 consensus struck on the non-GAAP measure — do not cross them. Cloud and AI revenue rose 68.6% to $11.3bn, server up 94.7%. 2027 guidance was raised to $59.4–63.1bn of revenue. Zoom’s third quarter brought revenue of $1,290.6m, up 4.9%, non-GAAP earnings of $1.59, and a first-ever dividend of $0.25 a quarter payable 17 December. Its fourth-quarter guide of $1.55–1.57 sits below the quarter it just reported.</p>
+<p class="field">What it means</p><p>HPE is now an AI-server business with a networking attachment, growing 50% at a 38% gross margin — volume, not pricing power. Zoom starting a dividend while guiding earnings down is a company saying the growth argument is over.</p>
+<p class="field">Watch next</p><p>Dell reports after Tuesday’s close — the cleanest read on AI-server demand.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<div class="item">
+<h2>Agon raises $70m at a $450m valuation, with two UK state funds in together</h2>
+<p class="field">What happened</p><p>London- and Berlin-based Agon, founded this year, <a href="https://tech.eu/2026/11/23/defence-startup-agon-raises-70m-with-uk-sovai-and-nssif-investing">raised a $70m Series A</a> at a $450m valuation led by existing investor Northzone, taking total funding to about $100m less than six months after a $30m seed. Lakestar, XYZ, Lux, Global Founders Capital and Speedinvest followed on. New money came from the UK Sovereign AI Fund and the National Security Strategic Investment Fund, which tech.eu says have invested together for the first time, and from Roelof Botha, who ran Sequoia from 2022 to 2025. The product is synthetic battlefields for training autonomous weapons. Single outlet; we found no company release and no government announcement.</p>
+<p class="field">What it means</p><p>A $450m mark on roughly six months of operating history is a valuation set by access, not traction. The interesting part is the two state funds: a sovereign AI vehicle and a national-security one co-investing is the UK building an industrial policy one cheque at a time.</p>
+<p class="field">Watch next</p><p>Confirmation from either fund. Until then the sovereign participation is one outlet’s reporting.</p>
+</div>
+<div class="item">
+<h2>Avenzo’s first session settles a question we carried for weeks</h2>
+<p class="field">What happened</p><p>The Rallybio merger <a href="https://www.biospace.com/press-releases/avenzo-therapeutics-announces-closing-of-merger-with-rallybio-corporation-and-previously-announced-215-million-concurrent-private-placement">closed on 20 November</a> and the combined company began trading Monday on the Nasdaq Capital Market as AVZO, after a one-for-two reverse split, with roughly 104.2m shares out. The concurrent private placement raised about $215m gross; net proceeds are not stated. Post-closing ownership runs about 56.6% to pre-merger Avenzo holders, 2.8% to Rallybio’s and 40.6% to the placement investors. Cash plus financing is said to fund operations into late 2028. Separately, Rallybio’s special distribution of $83.6m, or $13.90 a share, is payable 30 November, and Monday was expected to be AVZO’s first ex-dividend day. We could not obtain any actual trading print.</p>
+<p class="field">What it means</p><p>We held this open on the principle that a prospectus is not a completion. It was the right call and the answer arrived three weeks later. Anyone reading Monday’s price action should note the ex-dividend date — the chart will show a gap that is not a repricing.</p>
+<p class="field">Watch next</p><p>The first clean AVZO close, and whether the placement investors’ 40.6% comes with a lock-up.</p>
+</div>
+<div class="item">
+<h2>Three small European rounds</h2>
+<p class="field">What happened</p><p>Swiss robotics-hardware startup coprod raised $6m; Playbook, which keeps pharmaceutical AI agents inside compliance rules, raised €8m; and Good Heat, building industrial heat batteries, raised €2m to expand across Europe. All three come from a single outlet, tech.eu, on Monday and Tuesday, and we did not fetch beyond the headline figures. We reached no Italian or Iberian deal flow this run.</p>
+<p class="field">What it means</p><p>Nothing here is a thesis on its own. The signal is that European early-stage kept clearing at seed and Series A scale through a week in which the public AI complex fell 10% — the private market has not yet taken the mark.</p>
+<p class="field">Watch next</p><p>Whether December seed volumes hold. That is where a public drawdown shows up with a two-month delay.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Foxx conceded NC-5 on Sunday; the certification is at 11 this morning</h2>
+<p class="field">What happened</p><p>Virginia Foxx <a href="https://www.wxii12.com/article/virginia-foxx-concedes-recount-north-carolina-5th-congressional-district/74501474">conceded</a> to Chuck Hubbard in a Facebook statement on Sunday 22 November: “I recently called to congratulate Chuck Hubbard on his victory in this election.” She had requested a full machine recount, which ran in Guilford and Surry counties from Friday; Surry changed no votes. The margin is 330 after Caldwell County’s final canvass gave her one vote back; 331 was the pre-recount figure. The State Board meets at 11 a.m. today to certify NC-5 and NC-10. One protest remains, from a private citizen alleging three voters cast ballots in two counties.</p>
+<p class="field">What it means</p><p>A concession is not a certification, and a protest survives both. Guilford’s board found probable cause unanimously, which moves this to a formal hearing rather than settling it — though with Foxx conceded, the protest no longer has a candidate behind it.</p>
+<p class="field">Watch next</p><p>Certification at 11 a.m. The protest hearing is 1 December at 2 p.m., covering NC-5 and NC House District 62.</p>
+</div>
+<div class="item">
+<h2>An executive order tells federal contractors to route congressional requests through the White House</h2>
+<p class="field">What happened</p><p>Executive Order 14438, “Protecting the Executive’s Privileges and Enhancing Efficiencies in Federal Contracting,” signed 20 November, requires contractors to comply immediately with two obligations. They must <a href="https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/">notify the White House</a> and their contracting agency of any pending or future congressional request touching their communications or work with the executive branch; and they must follow White House or agency instructions to withhold communications determined to be covered by executive privilege. We could not retrieve Section 2(a) verbatim; the paraphrase above is ours, not the order’s wording.</p>
+<p class="field">What it means</p><p>Executive privilege has always been the executive’s to assert about its own documents. Extending it to a contractor’s files, enforced through the contract, puts a private company between a congressional committee and the White House. With Democrats taking both chambers on 3 January, this is a pre-positioning move against oversight that has not started yet.</p>
+<p class="field">Watch next</p><p>The first subpoena to a contractor after 3 January, and whether a contractor tests the order in court.</p>
+</div>
+<div class="item">
+<h2>The data calendar collapses into Wednesday morning</h2>
+<p class="field">What happened</p><p>Monday brought one US release: the Chicago Fed national activity index for October at minus 0.06, down from plus 0.05, with production a drag. Then nothing until Wednesday, when 8:30 a.m. carries the second estimate of third-quarter GDP, October personal income and outlays with the PCE price index, weekly jobless claims and durable goods orders, with new home sales at 10 and the Beige Book at 2 p.m. Markets are closed Thursday for Thanksgiving and shut at 1 p.m. Friday. Tuesday’s slate is thin: Richmond Fed manufacturing, two house-price indices and the discount-rate minutes.</p>
+<p class="field">What it means</p><p>Four releases in one minute, nine days before a meeting priced 96–97% for a hike, into a half-staffed week. Consensus has core PCE at 3.2% year on year. A tenth either way on Wednesday will move the December trade more than anything Williams said on Monday.</p>
+<p class="field">Watch next</p><p>8:30 a.m. Wednesday. Core PCE is the number.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>NATO sends Poland one AWACS; a drone crossed the border the same night</h2>
+<p class="field">What happened</p><p>NATO ambassadors met in the North Atlantic Council on Monday over Friday’s airspace violations. Spokesperson Allison Hart said the Supreme Allied Commander Europe “has authorized the forward deployment of a NATO Airborne Warning and Control System (AWACS) aircraft,” and that Russia “bears full responsibility.” One aircraft; further assets are under review. Article 4 has not been invoked. Then on Monday night Polish operational command tracked a Russian drone crossing the border, authorised a shoot-down, and held off after it turned east, citing risk to civilians. No commander is named. Deputy defence minister Paweł Zalewski said Tuesday that Poland assumes the crossing was deliberate.</p>
+<p class="field">What it means</p><p>One surveillance aircraft is a detection upgrade, not a deterrent, and it answers last week’s cruise missiles rather than Monday’s drone. The sharper fact is the second: Poland had permission to fire and chose not to. That threshold has been tested, and Moscow knows where it sits.</p>
+<p class="field">Watch next</p><p>Whether SACEUR adds air defence, not just sensors. Reported crossing durations vary from several minutes to nine.</p>
+</div>
+<div class="item">
+<h2>96 drones at Ukraine, and a rising toll in Zaporizhzhia</h2>
+<p class="field">What happened</p><p>Ukraine’s air force command said Russia launched <a href="https://censor.net/en/news/4035274/russia-launched-96-uavs-at-ukraine-air-defence-forces-destroyed-and-neutralized-73-of-them">96 attack drones</a> from 6 p.m. Monday, 64 of them jet-powered Shahed types, alongside Parodiya decoys and Gerberas, launched from Oryol, Bryansk, Primorsko-Akhtarsk, occupied Donetsk and Crimea. As of 8 a.m. Tuesday it counted 73 destroyed or suppressed, 45 jet-powered, with direct hits at thirteen locations and debris at two more. These are preliminary figures and the attack was still running. A separate dawn strike on Zaporizhzhia killed two; the injury toll from regional official Ivan Fedorov rose through the morning, 22 to 30 to more than 40.</p>
+<p class="field">What it means</p><p>This is one party’s account of its own air defence. The composition is the part to watch: two-thirds jet-powered, which flies higher and faster than propeller Shaheds and is harder for mobile fire groups to reach. The 76% interception rate is below the previous night’s 88%.</p>
+<p class="field">Watch next</p><p>A closed overnight count, and whether the jet-powered share climbs further.</p>
+</div>
+<div class="item">
+<h2>Iran threatens a response; Libya’s corvette strike gets a drone count</h2>
+<p class="field">What happened</p><p>Iran’s foreign ministry spokesman Esmail Baghaei said the Revolutionary Guard would answer any US attack on Iranian positions, and that aerospace commander Majid Mousavi would deliver it “at the appropriate time,” “neatly and elegantly packaged.” Tehran separately summoned Qatar’s chargé d’affaires over a joint Qatar–Germany statement on its nuclear programme and Hormuz shipping. On Benghazi, two Libyan officials speaking anonymously said two drones hit the corvette Merkury, launched from a base run by Ukrainian forces in western Libya.</p>
+<p class="field">What it means</p><p>Zelensky’s seven launched and two striking are not in conflict; the live discrepancy is still sunk against severely damaged. The Qatar summons is the more useful signal — Tehran now treats a Gulf state’s joint statement with a European government as a hostile act, narrowing its own mediation channel.</p>
+<p class="field">Watch next</p><p>Whether Qatar responds publicly. The White House has reportedly asked the Pentagon to model Iranian responses to US strikes.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank" rel="noopener">NVIDIA — Board reinstates Jensen Huang as President, CEO and Board Director</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm" target="_blank" rel="noopener">NVIDIA 8-K, 12 November 2026 — CEO transition</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener">Anthropic, PBC — EDGAR filing index</a></li>
+<li><a href="https://seekingalpha.com/symbol/ANT" target="_blank" rel="noopener">Anthropic (ANT) quote</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1535527/000110465926130785/tm2630454d1_8k.htm" target="_blank" rel="noopener">CrowdStrike 8-K — merger agreement with Zscaler</a></li>
+<li><a href="https://indexes.nasdaq.com/Index/Overview/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index (SOX)</a></li>
+<li><a href="https://www.marketscreener.com/quote/index/PHLX-SEMICONDUCTOR-5333609/quotes/" target="_blank" rel="noopener">MarketScreener — PHLX Semiconductor Index history</a></li>
+<li><a href="https://www.taipeitimes.com/News/biz/archives/2026/11/24/2003868252" target="_blank" rel="noopener">Taipei Times — TSMC and the TAIEX</a></li>
+<li><a href="https://www.kitco.com/news/off-the-wire/2026-11-23/feds-williams-says-inflation-still-too-high-signals-more-rate-hikes" target="_blank" rel="noopener">Reuters via Kitco — Fed’s Williams says inflation still too high</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC calendar</a></li>
+<li><a href="https://frenzycap.com/fedwatch/" target="_blank" rel="noopener">FrenzyCap — December FOMC implied probabilities</a></li>
+<li><a href="https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-24-06-30-00-3409002" target="_blank" rel="noopener">Sanofi — agreement to acquire Insmed</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1645590/000164559026000097/ex-991x11232026x8k.htm" target="_blank" rel="noopener">HPE — fiscal Q4 2026 results (8-K exhibit)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1585521/000158552126000170/zm-20261031ex991.htm" target="_blank" rel="noopener">Zoom — Q3 FY2027 results (8-K exhibit)</a></li>
+<li><a href="https://tech.eu/2026/11/23/defence-startup-agon-raises-70m-with-uk-sovai-and-nssif-investing" target="_blank" rel="noopener">tech.eu — Agon raises $70m</a></li>
+<li><a href="https://www.biospace.com/press-releases/avenzo-therapeutics-announces-closing-of-merger-with-rallybio-corporation-and-previously-announced-215-million-concurrent-private-placement" target="_blank" rel="noopener">Avenzo Therapeutics — closing of Rallybio merger</a></li>
+<li><a href="https://www.wxii12.com/article/virginia-foxx-concedes-recount-north-carolina-5th-congressional-district/74501474" target="_blank" rel="noopener">WXII — Foxx concedes NC-5</a></li>
+<li><a href="https://abc45.com/news/local/nc-district-5-election-protests-unanimously-approved-to-formal-hearing-recounts-pending" target="_blank" rel="noopener">ABC45 — NC-5 protest advances to formal hearing</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/" target="_blank" rel="noopener">The White House — Executive Order 14438</a></li>
+<li><a href="https://notesfrompoland.com/2026/11/24/nato-to-send-surveillance-aircraft-to-poland-after-russian-missile-strikes/" target="_blank" rel="noopener">Notes from Poland — NATO surveillance aircraft for Poland</a></li>
+<li><a href="https://censor.net/en/news/4035274/russia-launched-96-uavs-at-ukraine-air-defence-forces-destroyed-and-neutralized-73-of-them" target="_blank" rel="noopener">Censor.net — 96 drones launched at Ukraine overnight</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4187908-injury-toll-in-russian-attack-on-zaporizhzhia-rises-to-30-two-killed.html" target="_blank" rel="noopener">Ukrinform — Zaporizhzhia injury toll</a></li>
+<li><a href="https://www.ksat.com/news/world/2026/11/23/ukrainian-naval-drones-strike-new-russian-warship-in-libya-and-other-mideast-news/" target="_blank" rel="noopener">KSAT (AP) — Mideast roundup, 23 November</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-24-daily.pdf">PDF</a></span>
+</div></div></body></html>
