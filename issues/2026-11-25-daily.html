@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Wednesday, November 25, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Wednesday, November 25, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Monday’s melt-up lasted one day: the AI complex was sold hard on Tuesday while the Dow climbed back over 50,000, and the reinstatement that caused the melt-up now has three dates on Capitol Hill.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Nvidia’s 8-K lands — and corrects our own record</h2>
+<p class="field">What happened</p><p>Nvidia did file an <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm">Item 5.02 8-K</a> on the reinstatement, accession 0001045810-26-000090, accepted 08:57:54 Monday. We said twice that it had not. The filing dates the board’s act to <strong>Sunday 22 November</strong>, not Monday: “On November 22, 2026, the Board of Directors of NVIDIA Corporation reinstated Jen-Hsun Huang as NVIDIA’s President, Chief Executive Officer and member of the Board of Directors, effective immediately.” The body gives no reason for the 11 November resignation and <em>no compensation arrangement at all</em> — unusual for an Item 5.02 reinstating a chief executive. The attached release calls the vote unanimous, says the board is “confident that Mr. Huang’s reinstatement poses no national security risk,” and discloses that a committee of independent directors is still investigating reports Huang was targeted by a foreign intelligence effort. Nvidia is recruiting a new Chief Compliance Officer.</p>
+<p class="field">What it means</p><p>A board that reinstates a CEO without describing his pay is a board that has not finished. The compliance-officer search and the live investigation are the tell: this was a decision to restore the man, not to close the file.</p>
+<p class="field">Watch next</p><p>An amended 8-K or a Form 4 carrying Huang’s compensation terms.</p>
+</div>
+<div class="item">
+<h2>Huang gets three dates in December, two of them behind closed doors</h2>
+<p class="field">What happened</p><p>Senate Banking has <a href="https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls">noticed a hearing</a>: “Protecting America’s AI Advantage: Oversight of U.S. Export Controls,” <strong>Thursday 3 December, 10 a.m., Dirksen 106</strong>, with Huang as sole witness. Before that, he and Nvidia general counsel Tim Teter sit for <strong>transcribed interviews on 1 and 2 December</strong> with three House panels — Moolenaar’s Select Committee on China, Crawford’s Permanent Select Committee on Intelligence, Mast’s Foreign Affairs — per the chairmen’s <a href="https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia">own statement</a>. No subpoena has been reported; all three appearances are voluntary. Trump, in a CNBC interview Monday, on the board: “They did what we wanted them to do.”</p>
+<p class="field">What it means</p><p>Three appearances in ten days, two of them transcribed and closed, is an oversight posture rather than a theatre booking. The transcripts are where the risk sits — a closed interview under transcription is the format that produces referrals.</p>
+<p class="field">Watch next</p><p>Scott has also invited Commerce Secretary Howard Lutnick for 10 December. Watch whether any panel converts a request into a subpoena.</p>
+</div>
+<div class="item">
+<h2>Anthropic closed below its IPO price</h2>
+<p class="field">What happened</p><p>ANT closed Tuesday at <strong>$81.91, down $5.74 or 6.54%</strong>, on a day range of $75.61 to $83.49 — below the <strong>$83</strong> at which it priced on 19 November — its first close under the offer price. Meanwhile the filing record is still empty: Anthropic’s <a href="https://data.sec.gov/submissions/CIK0002130357.json">EDGAR file</a> shows 36 filings and <em>not one 8-K, ever</em>, the most recent being four Form 4s dated 23 November. The 147,000,000-share over-allotment has not been reported.</p>
+<p class="field">What it means</p><p>Breaking issue six sessions in is not a verdict on the company, but it removes the IPO’s floor as a reference point. The over-allotment silence matters more: underwriters who had 147m shares to take down have not said whether they took them.</p>
+<p class="field">Watch next</p><p>An 8-K or 424B on the over-allotment, due this week if it was exercised.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>The semis gave back more than half of Monday in one session</h2>
+<p class="field">What happened</p><p>The <a href="https://indexes.nasdaq.com/Index/Overview/SOX">SOX</a> fell <strong>755.55 points to 8,832.50, down 7.88%</strong>, one day after rising 14.03%. Nvidia closed <strong>$155.38, off $9.67 or 5.86%</strong>, on roughly 386 million shares — a quarter of Monday’s 31.48% gain returned, and still about 35% below its 6 October record. Asia then amplified it on Wednesday rather than cushioning it: <strong>Kospi 4,697.51, −6.2%</strong>; <strong>Nikkei 57,011.62, −2.8%</strong>; Taiex down 5% on AP’s figure and 4.8% on two others; Shanghai through 3,500 to close down 2.03%; ChiNext −4.19%. SK Hynix fell 11.1%, Samsung 9.9%, Kioxia 14.2%, SoftBank 14.8%.</p>
+<p class="field">What it means</p><p>Monday was one man returning to one company. Tuesday was the market pricing the thing that did not change — that the AI capex trade is still crowded, still levered and still waiting on a Fed that is tightening. The arrow ran US to Asia both days.</p>
+<p class="field">Watch next</p><p>Whether Wednesday’s core PCE at 08:30 ET gives the semis a reason to stop.</p>
+</div>
+<div class="item">
+<h2>The Megaspeed blacklist is real, and it published this morning</h2>
+<p class="field">What happened</p><p>We printed this as unconfirmed on Tuesday. The primary now exists: BIS rule <a href="https://public-inspection.federalregister.gov/2026-23999.pdf">“Additions to the Entity List,” RIN 0694-AK59</a>, document 2026-23999, <strong>published 25 November, effective 23 November</strong>. It adds <strong>seven entities, every one at a presumption of denial</strong> — in Malaysia MSFusion Sdn. Bhd., Pt Megaspeed International and Speedmatrix Sdn Bhd.; in Singapore Apex Enterprise Solutions (Singapore) Private Limited, Megaspeed International Pte. Ltd. and Swiftdata Pte. Ltd.; in Thailand Megaspeed (Thailand) Co., Ltd. Two carry the alias 7Road International. Apex is Alibaba’s Singapore unit; Alibaba has said it will seek all legal avenues. BIS has issued no press release, and the rule names no individual.</p>
+<p class="field">What it means</p><p>This is the first extension of the advanced-chip regime to third-country intermediaries rather than to Chinese end users. A presumption of denial on a Singapore subsidiary of a Chinese platform is the template, and every transshipment hub now reads it that way.</p>
+<p class="field">Watch next</p><p>Whether Singapore or Malaysia responds formally, and whether more names are added before the 3 December hearing.</p>
+</div>
+<div class="item">
+<h2>AMD registered 337 million shares for OpenAI and Meta</h2>
+<p class="field">What happened</p><p>AMD filed an <a href="https://www.sec.gov/Archives/edgar/data/2488/000119312526472370/d171551ds3asr.htm">automatic shelf registration</a> Monday covering <strong>336,934,324 shares</strong> for resale by selling stockholders: <strong>160,000,000 each</strong> against warrants held by Meta and OpenAI at a <strong>$0.01 exercise price</strong>, plus 14,978,322 from the World Labs acquisition and 1,956,002 from Taalas. The warrants vest in tranches against Instinct GPU deliveries — OpenAI’s first on an initial gigawatt of MI450, full vesting at six gigawatts, Meta’s on the same scale — and, less widely reported, <em>also against AMD share-price thresholds rising to $600</em>. AMD is selling nothing and receives no proceeds. The stock fell about 8.9%, on one venue’s figure.</p>
+<p class="field">What it means</p><p>Registration is plumbing, not selling — but it puts a number on what AMD has promised away to buy its two anchor customers: roughly a fifth of the company at a cent a share, if the gigawatts and the share price both arrive.</p>
+<p class="field">Watch next</p><p>The first vesting disclosure, which requires an actual MI450 gigawatt delivered.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>The Dow went back over 50,000 while the S&amp;P fell</h2>
+<p class="field">What happened</p><p>Tuesday split the market in two. <strong>Dow 50,018.70, up 423.39 or 0.85%</strong>; <strong>Russell 2000 2,684.94, +0.57%</strong>. Against that: <strong>S&amp;P 500 7,201.09, −0.50%</strong>; <strong>Nasdaq Composite 23,733.54, −1.48%</strong>; <strong>Nasdaq-100 26,214.17, −1.99%</strong>. One venue puts S&amp;P advancers at 346 to 154 decliners, the equal-weight index up 0.54%, health care the best sector and technology the worst at −3.26%; we have not matched that breadth detail elsewhere, so treat it as single-source. The Conference Board’s <a href="https://www.conference-board.org/topics/consumer-confidence/">preliminary November confidence reading</a> jumped 11.4 points to 103.3.</p>
+<p class="field">What it means</p><p>This is money leaving AI, not a rally widening. Evercore ISI’s Krishna Guha put the link plainly: “AI stress is not mostly due to the Fed. But it is not a coincidence it is occurring when the Fed is hiking.” The Dow at 50,018.70 is a re-crossing, not a record; it closed 51,983.98 on 2 November.</p>
+<p class="field">Watch next</p><p>Whether the rotation survives a hot core PCE, which would hit the defensives too.</p>
+</div>
+<div class="item">
+<h2>Dell’s AI backlog is now $132 billion</h2>
+<p class="field">What happened</p><p>Dell’s <a href="https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm">Q3 FY27</a>, for the quarter to 30 October, put revenue at <strong>$54,937m, up 103%</strong>, with <strong>$60.2bn of AI orders booked</strong> in the quarter, AI-optimised server revenue up 291%, and an ending AI server backlog the company calls a record at <strong>$132.3bn</strong>. Labelled separately: <strong>GAAP diluted EPS $8.82, +287%</strong>; <strong>non-GAAP $9.45, +265%</strong> — note GAAP grew faster, the reverse of the usual direction. Full-year FY27 guidance was raised to <strong>$202.0bn</strong> of revenue from $192.0bn and $78.0bn of AI servers from $74.0bn. The board authorised an <em>additional $25.0bn</em> of Class C buybacks.</p>
+<p class="field">What it means</p><p>A $132bn backlog built on $60bn of quarterly orders is the strongest single rebuttal to the AI-unwind thesis available this week — and it was published into a session that sold semis 8%. The market is not disputing the demand. It is disputing who keeps the margin.</p>
+<p class="field">Watch next</p><p>Q4 FY27 in late February, against guidance of $56.3bn and non-GAAP EPS of $8.40.</p>
+</div>
+<div class="item">
+<h2>Today is the whole week’s data in one minute</h2>
+<p class="field">What happened</p><p>At <strong>08:30 ET</strong>: Q3 GDP second estimate with corporate profits, and October personal income and outlays carrying the <strong>PCE deflator</strong> — consensus <strong>core +0.3% m/m and 3.2% y/y</strong>, up from 3.1%. Headline consensus is contested: one preview has 3.8% y/y, where 3.6% looks like October’s prior reading. Initial claims land at the same minute (201k or 200k against 203k), with durable goods; new home sales at 10:00, the <a href="https://www.federalreserve.gov/monetarypolicy/beige-book-default.htm">Beige Book</a> in the afternoon. <strong>Thursday is closed; Friday the NYSE shuts at 1 p.m.</strong> December pricing is unmoved: a hike of some size at 96–97%, the 25bp contract at 93–96%.</p>
+<p class="field">What it means</p><p>Core PCE is the only number that can move an 8–9 December meeting already priced at near-certainty for a hike. Tuesday’s curve says the market is braced: the five-year yield fell 5bp, four of which was breakeven compression rather than real rates, even with WTI settling up 2.3%.</p>
+<p class="field">Watch next</p><p>08:30 ET core PCE. A 3.3% print makes the hike a formality; 3.0% reopens the question.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">A genuinely thin day — two small European rounds and one deal that still has no price. Nothing here needs your two minutes, but the label discipline in the first item is worth thirty seconds.</p>
+<div class="item">
+<h2>Bound’s $50m is a debt facility, not a round</h2>
+<p class="field">What happened</p><p>Bound, which sells FX risk management to mid-market corporates, has taken <strong>$50m as a three-year debt facility</strong> from Viola Credit. No valuation, and no equity raised — its last equity round was a <strong>$24.5m Series A in February 2026</strong> led by AlbionVC with Notion Capital and GoHub Ventures. Chief executive Seth Phillips: “This $50m advances our mission of transforming the way that FX risk is managed by mid-market corporates.” Separately, <strong>Sequent</strong> raised a <strong>$2.2m pre-seed</strong> co-led by Frachtis and Metaplanet, the investment firm of Skype co-founder Jaan Tallinn, for a formal-verification tool that produces machine-checkable proofs of smart-contract behaviour. Curve is its first paying customer.</p>
+<p class="field">What it means</p><p>A facility’s size is not the amount drawn, and a credit line is not a valuation event. Half the coverage of Bound this week will call it a Series B; it is a loan against a receivables book, which tells you the FX hedging business has collateral, not momentum.</p>
+<p class="field">Watch next</p><p>Whether Bound raises equity in the first half of 2027, which is what a facility usually precedes.</p>
+</div>
+<div class="item">
+<h2>Clariant and Ashland: four days on, still no price in a primary</h2>
+<p class="field">What happened</p><p>Clariant’s <a href="https://www.globenewswire.com/news-release/2026/11/23/3408861/0/en/clariant-confirms-talks-regarding-a-potential-acquisition-of-ashland.html">ad hoc announcement</a> of 23 November confirms “discussions regarding a potential acquisition of Ashland in partnership with Clayton, Dubilier &amp; Rice” and nothing else — no price, no per-share figure, no structure, no financing, and the standard “there can be no certainty that a transaction will be agreed or completed.” The <strong>$3.39bn</strong> circulating in headlines is Bloomberg’s, described as valuing the company, with <em>no label saying whether it is equity or enterprise value</em> and no per-share price anywhere. How assets would divide between Clariant and CD&amp;R is not described by any source. There has been no advance since Tuesday morning.</p>
+<p class="field">What it means</p><p>An unlabelled valuation is three facts short of a deal. Until someone prints a per-share number, this is a confirmed conversation and a reported figure, which is a different thing from a $3.4bn acquisition.</p>
+<p class="field">Watch next</p><p>A further Clariant announcement, which the company has committed to make “if and when appropriate.”</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>Democrats clinch 259 seats, the biggest House majority since 1990</h2>
+<p class="field">What happened</p><p>The threshold fell Tuesday when Democrat Victoria Broderick beat Republican Rep. Scott DesJarlais in Tennessee, putting Democrats on <strong>at least 259 seats</strong> to Republicans’ <strong>at least 173</strong>, a gain of 45 since election day. <strong>Three races remain</strong>: one in Minnesota and two in Louisiana, which go to a December runoff, so the arithmetic closes exactly at 435. On the superlative, the House Historian’s own <a href="https://history.house.gov/Institution/Party-Divisions/Party-Divisions/">party-divisions table</a> is the proof rather than the wire copy: the Congress elected in <strong>1990 ran 267 Democrats to 167 Republicans</strong>, and nothing since has beaten 259.</p>
+<p class="field">What it means</p><p>259 is a governing margin, not a working one: it survives about twenty defections on a party-line vote. It is also why the incoming chairs quoted on Nvidia this week are already speaking as chairs.</p>
+<p class="field">Watch next</p><p>The Louisiana runoffs in December, and the speaker vote on 3 January.</p>
+</div>
+<div class="item">
+<h2>North Carolina certified Tuesday — but not, as far as anyone will say, the Fifth</h2>
+<p class="field">What happened</p><p>The State Board of Elections voted <strong>5-0</strong> to <a href="https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections">certify the midterms</a>, on turnout of “more than 4.2 million NC voters… a 53.8% turnout of registered voters,” and with audits finding “no evidence of fraud or other irregularities” affecting outcomes. Certification excluded contests still under recount, a list the board says <em>“includes”</em> House District 62 — so it is not exhaustive, and <strong>not one source names the Fifth District, Chuck Hubbard, Virginia Foxx or a certified margin</strong>. The last published figures are post-recount, not certified: <strong>Hubbard 139,769 (48.74%), Foxx 139,439 (48.62%), a margin of 330</strong>.</p>
+<p class="field">What it means</p><p>Foxx conceded on 22 November and the board certified on 24 November, and those are still two different facts. A concession is not a certification, and nor is an inference drawn from a list that says “includes.”</p>
+<p class="field">Watch next</p><p>The Guilford protest hearing on <strong>1 December at 2 p.m.</strong> — the county has not yet posted a location. Note that probable cause there is not a finding that anyone voted twice.</p>
+</div>
+<div class="item">
+<h2>The contracting order tells vendors to call the White House before answering Congress</h2>
+<p class="field">What happened</p><p>Executive Order 14438, signed 20 November, requires federal contractors to “immediately” notify the administration of “any pending or future congressional request respecting the contractors’ communications or work with the executive branch,” and to “abide by any instructions received from the White House and contracting agency.” Counsel at Covington &amp; Burling, in a <a href="https://www.cov.com/news-and-insights/insights/2026/11/new-executive-order-directs-federal-contractors-to-consult-the-white-house-before-responding-to-congressional-oversight">23 November client note</a>, flag that the order <strong>defines neither “federal contractor” nor “congressional request,” sets no dollar threshold, and gives OMB no deadline</strong>, while non-compliance may bring debarment. We have these fragments only through the law firm: our own fetch tool’s quotation limit, not the White House site, blocked the full section.</p>
+<p class="field">What it means</p><p>The live question is retroactivity — whether the order binds existing contracts or only those written after it. Answered the second way it is a drafting instruction; answered the first, it reaches every vendor already facing a committee that changes hands in January.</p>
+<p class="field">Watch next</p><p>OMB guidance, and the first contractor to receive a January committee request.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>A NATO jet was cleared to fire over Poland and did not shoot</h2>
+<p class="field">What happened</p><p>Swedish Gripens flying NATO air policing received <strong>conditional authorisation to engage a Russian Kh-101</strong> during the 20 November incursion, from NATO’s Combined Air Operations Centre at Uedem. No weapons were fired: severe weather prevented visual or electro-optical identification. Lt. Gen. Ireneusz Nowak, Poland’s operational commander, told <em>Rzeczpospolita</em> that 11 objects were tracked and three entered. Prosecutors in Lublin and Prosecutor General Waldemar Żurek have since established that <strong>all three were Kh-101 cruise missiles</strong>. In a second incursion <strong>late Monday 23 November</strong> — not Tuesday — a drone was authorised for shoot-down and again not engaged, after it turned east over a populated area.</p>
+<p class="field">What it means</p><p>Twice in four days Poland has had permission to fire and has not. That is a rules-of-engagement story, not a capability one, and it is why Warsaw’s ask has shifted from reassurance to hardware.</p>
+<p class="field">Watch next</p><p>One AWACS has been authorised forward by SACEUR Gen. Alexus Grynkewich — basing, arrival and duration all unspecified. Article 4 has not been invoked.</p>
+</div>
+<div class="item">
+<h2>112 drones overnight, and the attack was still running at 8 a.m.</h2>
+<p class="field">What happened</p><p>Ukraine’s Air Force says <strong>112 drones</strong> were launched overnight into 25 November, <strong>66 of them jet-powered</strong>, and that <strong>as of 08:00 Kyiv time 88 had been shot down or suppressed</strong>, with strikes recorded at 18 locations. No missiles. The statement adds: “The enemy attack is ongoing, with several UAVs in the airspace” — so this is an interim count, not a closed night, and it is <em>one source</em>, the Air Force’s own Telegram channel, however many outlets carry it. A 52-year-old man was killed at Bila Tserkva.</p>
+<p class="field">What it means</p><p>Two thirds jet-powered is the number to watch rather than the total: jet Shaheds fly higher and faster than the propeller fleet they are replacing.</p>
+<p class="field">Watch next</p><p>Fires were reported at Rosneft’s Syzran and Kuibyshev refineries, identified from footage by a Telegram outlet. No Russian official has named either plant.</p>
+</div>
+<div class="item">
+<h2>Iran says two more tankers hit mines in Hormuz, and nobody else can say</h2>
+<p class="field">What happened</p><p>The IRGC Navy, via Iranian state media, says <strong>two oil tankers</strong> struck naval mines and caught fire in their engine rooms off the Strait of Hormuz, having attempted “to pass through a fake route.” <strong>No vessel names, flags, casualties or times have been given, and there is no independent confirmation of any kind</strong> — this is a party’s account of its own military operation. Army spokesman Mohammad Akraminia separately warned ships transiting without coordinating with Iranian forces.</p>
+<p class="field">What it means</p><p>This is a distinct event from the three-tanker claim of 23 November; do not merge them. Three weeks of such claims have produced no verified hull. That does not make them false, but the pattern of unnamed ships is doing work of its own: for insurance purposes an unverifiable mine is as good as a real one.</p>
+<p class="field">Watch next</p><p>Tehran is said — via Qatari mediators, on a single wire report — to offer reopening the strait within 48 hours of the US blockade lifting.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm" target="_blank" rel="noopener">Nvidia Form 8-K, Item 5.02, accession 0001045810-26-000090</a></li>
+<li><a href="https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls" target="_blank" rel="noopener">Senate Banking — “Protecting America’s AI Advantage,” 3 December</a></li>
+<li><a href="https://chinaselectcommittee.house.gov/media/press-releases/statement-on-jensen-huang-s-reinstatement-at-nvidia" target="_blank" rel="noopener">House Select Committee on China — statement on the reinstatement</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener">Anthropic, PBC — EDGAR submissions file</a></li>
+<li><a href="https://indexes.nasdaq.com/Index/Overview/SOX" target="_blank" rel="noopener">Nasdaq — PHLX Semiconductor Index (SOX)</a></li>
+<li><a href="https://public-inspection.federalregister.gov/2026-23999.pdf" target="_blank" rel="noopener">BIS — “Additions to the Entity List,” RIN 0694-AK59</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2488/000119312526472370/d171551ds3asr.htm" target="_blank" rel="noopener">AMD — Form S-3ASR resale registration</a></li>
+<li><a href="https://www.conference-board.org/topics/consumer-confidence/" target="_blank" rel="noopener">The Conference Board — Consumer Confidence, November (preliminary)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1571996/000157199626000050/exhibit991earnings8kq3fy27.htm" target="_blank" rel="noopener">Dell Technologies — Q3 FY2027 results, 8-K Exhibit 99.1</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/beige-book-default.htm" target="_blank" rel="noopener">Federal Reserve — Beige Book release schedule</a></li>
+<li><a href="https://www.globenewswire.com/news-release/2026/11/23/3408861/0/en/clariant-confirms-talks-regarding-a-potential-acquisition-of-ashland.html" target="_blank" rel="noopener">Clariant — ad hoc announcement on Ashland talks</a></li>
+<li><a href="https://history.house.gov/Institution/Party-Divisions/Party-Divisions/" target="_blank" rel="noopener">House Historian — Party Divisions of the House</a></li>
+<li><a href="https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections" target="_blank" rel="noopener">NC State Board of Elections — certification release, 24 November</a></li>
+<li><a href="https://www.cov.com/news-and-insights/insights/2026/11/new-executive-order-directs-federal-contractors-to-consult-the-white-house-before-responding-to-congressional-oversight" target="_blank" rel="noopener">Covington &amp; Burling — client alert on Executive Order 14438</a></li>
+<li><a href="https://notesfrompoland.com/2026/11/23/poland-confirms-three-objects-that-struck-its-territory-were-all-russian-missiles/" target="_blank" rel="noopener">Notes from Poland — three objects confirmed as Russian missiles</a></li>
+<li><a href="https://www.stripes.com/theaters/europe/2026-11-24/nato-authorizes-awacs-deployment-poland-23564156.html" target="_blank" rel="noopener">Stars and Stripes — NATO authorises AWACS deployment to Poland</a></li>
+<li><a href="https://censor.net/en/news/4035475/russia-launched-112-uavs-at-ukraine-air-defense-forces-shot-down-88-targets" target="_blank" rel="noopener">Censor.NET — Ukrainian Air Force overnight count, 25 November</a></li>
+<li><a href="https://www.rudaw.net/english/categories/iran/1080307" target="_blank" rel="noopener">Rudaw — IRGC Navy statement on two tankers in Hormuz</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">US Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://kalshi.com/fed-rate-odds" target="_blank" rel="noopener">Kalshi — December FOMC rate odds</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-25-daily.pdf">PDF</a></span>
+</div></div></body></html>
