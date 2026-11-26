@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Thursday, November 26, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Thursday, November 26, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">October core inflation ran hotter than forecast and third-quarter growth was revised up nearly a full point — and the market answered a hawkish data day by buying the long end.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic files its first 8‑K, and the over‑allotment went in full</h2>
+<p class="field">What happened</p><p>Anthropic filed the first <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/ant-20261119.htm">8‑K of its existence</a> on Wednesday afternoon, closing the books on the IPO. The underwriters exercised their over‑allotment option in full — 147,000,000 extra Class A shares — taking the offering to 1,127,000,000 shares at $83.00 and gross proceeds to about $119.5 billion including a concurrent private placement. Net proceeds are not stated. That placement sold 313,253,007 non‑voting Class N shares at the same $83.00 to seven chipmakers and cloud buyers — AMD, Broadcom, Google LLC, Micron, Microsoft, NVIDIA and TSMC Partners — for roughly $26.0 billion.</p>
+<p class="field">What it means</p><p>The customer‑as‑shareholder structure is now on the record rather than in reporting. And the charter filed alongside it has five classes of common stock, not three: a single Class F share held by Anthropic Founders, LLC carries about 50.1% of the vote by formula, and a single Class T share elects a board majority outright.</p>
+<p class="field">Watch next</p><p>Both control shares sunset — Class F 450 days after the founder vehicle drops below three qualifying members. The first 10‑Q is the next disclosure.</p>
+</div>
+<div class="item">
+<h2>S&amp;P puts NVIDIA’s AA rating on CreditWatch negative</h2>
+<p class="field">What happened</p><p>S&amp;P Global Ratings placed NVIDIA’s AA rating on <a href="https://stockanalysis.com/news/nvidia-sp-rating-creditwatch-negative/">CreditWatch with negative implications</a> on Wednesday and cut its management‑and‑governance assessment to neutral from positive. That is a formal rating action rather than a warning: the senior unsecured bonds are covered, and S&amp;P expects to resolve it within 90 days. It said Jensen Huang’s reinstatement “does not sufficiently answer our questions regarding board oversight of executive code of conduct”, and named key man risk as one of three weak spots.</p>
+<p class="field">What it means</p><p>Moody’s read the same reinstatement as reducing near‑term uncertainty. Two agencies pointing opposite ways on one event is unusual, and the split is about governance process rather than the balance sheet — nobody is questioning the cash.</p>
+<p class="field">Watch next</p><p>Resolution inside 90 days. A one‑notch cut would land at AA−, a figure S&amp;P has not itself named.</p>
+</div>
+<div class="item">
+<h2>Huang is the only witness Senate Banking has called</h2>
+<p class="field">What happened</p><p>The Senate Banking Committee has posted the <a href="https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls">full notice</a> for Huang’s appearance: “Protecting America’s AI Advantage: Oversight of U.S. Export Controls”, full committee, open and hybrid, Thursday 3 December at 10:00 a.m. in Dirksen 106. The witness list has exactly one name on it. Three House committees are separately interviewing Huang and NVIDIA general counsel Tim Teter on 1–2 December, behind closed doors.</p>
+<p class="field">What it means</p><p>A single‑witness hearing is a committee deciding its subject is one man rather than an industry. Tim Scott still holds the gavel; Elizabeth Warren, who has said Huang and the board “still owe Congress answers”, looks likely to take it in January.</p>
+<p class="field">Watch next</p><p>3 December, 10:00 a.m. The transcribed House interviews come first.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>NVIDIA has stopped server shipments to four Southeast Asian countries</h2>
+<p class="field">What happened</p><p>NVIDIA has told server makers it will not allow orders to ship to Malaysia, Singapore, Thailand and Indonesia, <a href="https://www.cna.com.tw/news/aopl/202611260186.aspx">according to the Financial Times</a>, which cites three people familiar. Dell and Supermicro are named as the integrators that passed the news to buyers. The halt follows the Commerce rule on remote access to advanced semiconductors published on 19 November; cloud providers reportedly have 90 days to obtain licences and show their end users are not restricted entities. NVIDIA booked $104 billion of 2025 revenue through its Singapore subsidiary, up 72% year on year.</p>
+<p class="field">What it means</p><p>This is one story with twenty carriers. The FT is the only source, and neither NVIDIA, Dell nor Supermicro has said anything. Financing has already stopped regardless: a roughly $480 million loan to Singapore neocloud Aolani Cloud, which would have bought GPUs for a Malaysian site with ByteDance accessing them remotely, is paused.</p>
+<p class="field">Watch next</p><p>A second outlet, or a company statement. Malaysia is notifying all 117 approved data‑centre projects of the new rules.</p>
+</div>
+<div class="item">
+<h2>An 8% intraday fall that closed down 0.65%</h2>
+<p class="field">What happened</p><p>Wednesday was a violent reversal that barely showed up at the close. The PHLX Semiconductor Index <a href="https://indexes.nasdaqomx.com/Index/Overview/SOX">traded as low as 8,129.23</a> — about 8% below the prior close — and finished at 8,774.86, off just 0.65%. NVIDIA closed $149.30, down 3.91%, having touched $141.17. Asia took the first leg harder: Taiwan’s TAIEX lost 4.80% on Wednesday, with SK Hynix down 11.05%, Samsung Electronics 9.87% and Kioxia 14.18%. On Thursday, with Wall Street shut, it came back — <a href="https://focustaiwan.tw/business/202611260007">TAIEX +2.50% to 39,151.81</a>, Samsung +0.35%, SK Hynix +2.23%.</p>
+<p class="field">What it means</p><p>Two sessions of this and the index is roughly where it started, which suggests positioning rather than a view. A Taiwanese analyst suspected the National Stabilization Fund stepped in on Wednesday; that is a suspicion, not a disclosure.</p>
+<p class="field">Watch next</p><p>Friday’s half‑session, and whether 3 December is now the sector’s calendar event.</p>
+</div>
+<div class="item">
+<h2>Commodity memory is rolling over while HBM parts stretch to 40 weeks</h2>
+<p class="field">What happened</p><p>Two supply signals pointing opposite ways. Mainstream DDR4 spot fell 1.61% to $43.32 for the 1Gx8 3200MT/s part in the week to 24 November, and <a href="https://www.trendforce.com/news/2026/11/25/insights-memory-spot-price-update-ddr4-ddr3-bear-the-brunt-of-weak-consumer-demand-mainstream-ddr4-down-1-61/">512Gb TLC NAND wafers fell 3.18%</a> to $13.786. Meanwhile NVIDIA B300 lead times on new orders have reportedly stretched to 26–40 weeks, against 14–26 for GB300, with orders placed in the past two quarters not expected to ship before the second or third quarter of 2027.</p>
+<p class="field">What it means</p><p>The supercycle is not general. High‑bandwidth parts are tight enough to push a two‑quarter backlog out another two, while the commodity end has already turned. Anyone extrapolating HBM pricing to DRAM is reading the wrong chart.</p>
+<p class="field">Watch next</p><p>December contract pricing, and whether GeForce RTX 50 shipments really get cut to feed the AI queue.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Core PCE ran hot at 3.3%, and real spending stalled</h2>
+<p class="field">What happened</p><p>October’s inflation print came in hot where it counts. Core PCE prices — the Fed’s preferred gauge, stripping out food and energy — <a href="https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026">rose 0.3% on the month</a>, in line, but 3.3% on the year against a 3.2% consensus and up from 3.1% in September. Headline PCE was 3.8% year on year, matching forecasts, up from 3.6%. Underneath, spending stalled: real consumption fell by $5.8 billion, a decline of less than 0.1%, even as personal income rose 0.7%. The saving rate was 4.1%.</p>
+<p class="field">What it means</p><p>Income up and real spending flat is households banking the difference, and it is the first genuinely soft detail in months. But a core annual rate accelerating two tenths is the number a hawkish committee reads first, and the BEA revised April through September alongside it.</p>
+<p class="field">Watch next</p><p>November PCE lands after the 8–9 December meeting, so this is the last reading the committee gets.</p>
+</div>
+<div class="item">
+<h2>Third‑quarter GDP revised up nearly a full point, to 4.3%</h2>
+<p class="field">What happened</p><p>The second estimate of third‑quarter GDP was the day’s real surprise: <a href="https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026">4.3% annualised</a>, revised up 0.9 points from the 3.4% advance reading, on software and intellectual‑property investment and stronger goods consumption, partly offset by a downward revision to health‑care services. Corporate profits from current production rose $206.0 billion in the quarter against $384.0 billion in the second — still growing, growing half as fast. Jobless claims for the week to 21 November were 189,000, some 12,000 below consensus. Durable goods orders missed at +0.2%; new home sales were 701,000.</p>
+<p class="field">What it means</p><p>A 0.9‑point upward revision to a second estimate is close to unheard of, and it reframes the autumn: the economy was running hotter than anyone scoring it in October believed. The profits deceleration is the counterweight, and it is the line that matters for margins.</p>
+<p class="field">Watch next</p><p>Durable goods’ full October report on 3 December; the third GDP estimate on 23 December.</p>
+</div>
+<div class="item">
+<h2>The answer to a hawkish print was to buy duration</h2>
+<p class="field">What happened</p><p>The one‑month Treasury bill — the instrument that spans the 8–9 December meeting — <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">rose six basis points to 4.27%</a>, while everything from six months out to thirty years fell, the ten‑ and thirty‑year both off six basis points to 4.85% and 5.24%. Equities staged a reversal to match: the S&amp;P 500 was down 3.2% intraday and the Nasdaq Composite 4.6%, while the Dow erased a 1,105‑point hole to close up 164.25 at 50,182.95. The S&amp;P finished 7,182.78, off 0.25%.</p>
+<p class="field">What it means</p><p>December was not in doubt before the print and is not after it. What moved was everything beyond it: the market kept the hike and marked the path after it cheaper, which is a growth read rather than an inflation one. Quotes for the same quarter‑point contract ran from 94.4% to 99% on Wednesday — a dispersion wider than any move anyone claimed to see in it.</p>
+<p class="field">Watch next</p><p>The 8–9 December decision, with a Summary of Economic Projections attached.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">A thin two days, as Thanksgiving week always is. Two items, and the second is a correction rather than news.</p>
+<div class="item">
+<h2>WaterSense’s €5.75m is grants plus a pre‑seed, not a round</h2>
+<p class="field">What happened</p><p>WaterSense, a Polish‑founded water‑monitoring company, said on Thursday it has <a href="https://tech.eu/2026/11/26/watersense-raises-eur575m-to-build-europes-water-intelligence-infrastructure">raised €5.75 million in total</a> — grants combined with a pre‑seed round, the round’s own size undisclosed. b2venture and Movens Capital co‑led the equity, with vastpoint joining. The product pairs proprietary sensor hardware with software that reads water quality continuously, sold to industrial operators, utilities and public authorities. Founder Filip Budny built the technology during a PhD at Warsaw University of Technology; the company operates in four countries.</p>
+<p class="field">What it means</p><p>Composite figures are how small rounds look larger, and here the company did the combining rather than the coverage. It is still a real pre‑seed into continuous environmental sensing — a category mostly sold as a compliance line item rather than an operating one.</p>
+<p class="field">Watch next</p><p>Whether the next raise is labelled a seed or a Series A. The answer tells you what the grants bought.</p>
+</div>
+<div class="item">
+<h2>Zipher raised $45m, not $53m</h2>
+<p class="field">What happened</p><p>Zipher, a two‑year‑old developer‑infrastructure company, raised a <a href="https://www.calcalistech.com/ctechnews/article/bkreuwq1xg">$45 million Series A</a> co‑led by Maor Investments and Glilot Capital, with TLV Partners following on. It was announced on 24 November, a day before this brief’s window; we are carrying it because the figure in circulation is wrong. $53 million is the company’s total funding — this round plus an $8 million seed from August 2024. Founded by Dan Coster and Yoav Ben Ephraim, about forty people, New York and Tel Aviv, valuation undisclosed.</p>
+<p class="field">What it means</p><p>Several outlets printed the cumulative figure as the round. It is a common enough error to be worth watching for: a company’s total raised flatters its latest round by whatever it banked before.</p>
+<p class="field">Watch next</p><p>Nothing dated. Coster names Hertz as a client, which is a useful tell about where the revenue sits.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>The FCC conditionally cleared SpaceX for up to a million satellites</h2>
+<p class="field">What happened</p><p>The FCC’s Space Bureau conditionally authorised SpaceX on Wednesday to build an orbital data‑centre constellation of <a href="https://www.unite.ai/fcc-space-bureau-authorizes-spacexs-starmind-with-conditions/">up to one million satellites</a>, flying between 500 and 1,002 kilometres. This was an action under delegated authority, not a Commission vote, and it is hedged: operations above 600 kilometres are not approved, because the debris‑mitigation plan was found compliant only below that line. A request to dispose of some satellites in Earth‑disposal or heliocentric orbits rather than by reentry was deferred for want of information. Petitions from Kuiper Systems, Viasat and the American Astronomical Society were denied.</p>
+<p class="field">What it means</p><p>One million is not a headline’s exaggeration — the Bureau declined to impose a satellite cap its own rules do not contain, and narrowed the altitude instead. It also declined to judge whether orbital computing works as a business, which is the question everyone else is asking.</p>
+<p class="field">Watch next</p><p>Four hard gates, and the authorisation voids if one is missed: one satellite operating by 25 November 2033, 10% by 2035, 50% by 2038, all by 2040.</p>
+</div>
+<div class="item">
+<h2>North Carolina’s fifth district still has no certificate on the record</h2>
+<p class="field">What happened</p><p>Five weeks after the election, and two days after the state board certified the rest of the midterms, NC‑5 has no certification anyone can read. The board’s own release says the exceptions “include” House District 62 and the district attorney race in the 21st — an open list, not an exhaustive one — and the <a href="https://www.ncsbe.gov/news/press-releases">results portal</a> is a form no automated reader can drive. Post‑recount totals stand at Hubbard 139,769 to Foxx 139,439, a margin of 330. Carolina Journal, reporting separately, enumerates only those same two exceptions.</p>
+<p class="field">What it means</p><p>A reporter closing an open list is not a certification, and Virginia Foxx’s concession is not one either. The likeliest reading remains that NC‑5 is certified and nobody has published the certificate — but that is an inference, and we have declined to print it as fact five times.</p>
+<p class="field">Watch next</p><p>Guilford County’s board has a protest hearing noticed for 1 December at 2 p.m. Its subject is not stated and no source connects it to NC‑5.</p>
+</div>
+<div class="item">
+<h2>Washington produced a turkey proclamation and nothing else</h2>
+<p class="field">What happened</p><p>The only presidential action dated 25 or 26 November is the <a href="https://www.whitehouse.gov/presidential-actions/2026/11/thanksgiving-day-2026/">Thanksgiving Day proclamation</a>; the only statement is the First Lady’s, on nine children reunified with their families. The Supreme Court’s October Term 2026 slip‑opinion page still lists two decisions, the most recent dated 9 November. Congress is out. The federal government is running on a continuing resolution that expires on 11 December, with Senate Appropriations having released text for all twelve 2027 bills and the House having passed three of them.</p>
+<p class="field">What it means</p><p>Fifteen days, three bills of twelve, and a chamber that has to come back and find seven Democratic senators. None of that arithmetic changed this week, which is rather the point — nothing was being negotiated and the clock ran anyway.</p>
+<p class="field">Watch next</p><p>11 December. Nothing scheduled between here and there moves it.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>Missiles on a Kyiv shopping centre; 113 drones overnight</h2>
+<p class="field">What happened</p><p>Russia attacked Ukraine from 6 p.m. Wednesday into Thursday morning with Iskander‑M, Zircon and S‑400 missiles and 113 strike drones. By 08:00, on the Ukrainian air force’s own <a href="https://www.kyivpost.com/post/91254">preliminary count</a>, 87 had been shot down or jammed. In Kyiv, Mayor Vitali Klitschko said missiles struck a shopping centre and an industrial building in Desnianskyi district, with at least seven injured. Governor Vadym Filashkin put Sloviansk at two killed and twelve injured by morning, up from one and ten overnight.</p>
+<p class="field">What it means</p><p>The counts are one party’s account of its own air defence — claims with timestamps, not findings. Kharkiv is genuinely contested: the regional governor reported two dead in a high‑rise, while Reuters, quoting the mayor, reported three wounded and no deaths.</p>
+<p class="field">Watch next</p><p>Russia’s defence ministry named two Kyiv sites it says it hit, both drone‑related. Ukraine’s military has not commented.</p>
+</div>
+<div class="item">
+<h2>Poland wants a no‑fly zone, and asked NATO to shoot over Ukraine</h2>
+<p class="field">What happened</p><p>Poland is drafting a no‑fly zone extending more than ten kilometres along its eastern border, under a procedure that lets pilots engage targets identified by radar, altitude and speed rather than visually. It also raised, at a <a href="https://kyivindependent.com/poland-plans-no-fly-zone-near-ukraine-border-asks-nato-to-intercept-russian-missiles-over-ukraine/">meeting of NATO ambassadors in Brussels on 23 November</a>, the idea of the alliance intercepting Russian missiles over Ukraine at Kyiv’s request. Bloomberg reports some allies were supportive; Cezary Tomczyk, a secretary of state at the defence ministry, is reported as saying NATO was not. Neither account is a quotation, and they contradict each other.</p>
+<p class="field">What it means</p><p>The contradiction is probably the actual state of play rather than an error — a proposal floated by one capital, welcomed by a few governments and rejected by the institution. Article 4 has not been invoked, and no source says Warsaw declined to ask.</p>
+<p class="field">Watch next</p><p>The regulation is meant to be in force by late December or early January, though the same report elsewhere says early 2027. EU leaders meet 26–27 November on the budget and Ukraine financing, with no deal expected.</p>
+</div>
+<div class="item">
+<h2>Iran claims an LNG carrier mined in Hormuz; Reuters cannot verify it</h2>
+<p class="field">What happened</p><p>Iran’s Revolutionary Guards said on Wednesday evening that a liquefied natural gas carrier had struck a naval mine and caught fire in the Strait of Hormuz; <a href="https://www.arabnews.com/middle-east/iran-claims-lng-tanker-ablaze-in-hormuz-after-hitting-mine-3013942">Reuters said it could not independently verify</a> the report. Earlier the same day Fars, citing an army statement, reported an oil tanker mined in a “restricted zone”; the Guards’ navy separately said two tankers had struck mines and exploded, having been “attempting to use an unauthorized route”. Army spokesman Mohammad Akraminia warned vessels transiting without coordinating with Iranian forces.</p>
+<p class="field">What it means</p><p>Three claims in one day, all from the party conducting the operation, none carrying a vessel name, flag, casualty figure or time — and the channels that would normally supply one are unreachable. The warning is the substance: Iran is asserting a right to route traffic through an international strait.</p>
+<p class="field">Watch next</p><p>Independent confirmation — from a shipping registry, an insurer, or a navy that is not Iran’s.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026" target="_blank" rel="noopener">BEA — Personal Income and Outlays, October 2026</a></li>
+<li><a href="https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026" target="_blank" rel="noopener">BEA — GDP, second estimate, and corporate profits, Q3 2026</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/beigebook202611-summary.htm" target="_blank" rel="noopener">Federal Reserve — Beige Book, November 2026</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.dol.gov/ui/data.pdf" target="_blank" rel="noopener">Department of Labor — unemployment insurance weekly claims</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/ant-20261119.htm" target="_blank" rel="noopener">Anthropic, PBC — Form 8-K, 25 November 2026</a></li>
+<li><a href="https://www.banking.senate.gov/hearings/protecting-americas-ai-advantage-oversight-of-us-export-controls" target="_blank" rel="noopener">Senate Banking Committee — hearing notice, 3 December</a></li>
+<li><a href="https://indexes.nasdaqomx.com/Index/Overview/SOX" target="_blank" rel="noopener">Nasdaq OMX — PHLX Semiconductor Index</a></li>
+<li><a href="https://www.mymotherlode.com/news/national/11340405/how-major-us-stock-indexes-fared-wednesday-11-25-2026.html" target="_blank" rel="noopener">AP — how major US stock indexes fared, 25 November</a></li>
+<li><a href="https://focustaiwan.tw/business/202611260007" target="_blank" rel="noopener">Focus Taiwan — TAIEX close, 26 November</a></li>
+<li><a href="https://www.koreaherald.com/article/10950746" target="_blank" rel="noopener">Korea Herald — KOSPI close, 26 November</a></li>
+<li><a href="https://www.cna.com.tw/news/afe/202611260159.aspx" target="_blank" rel="noopener">CNA — Nikkei and TOPIX close, 26 November</a></li>
+<li><a href="https://www.cna.com.tw/news/aopl/202611260186.aspx" target="_blank" rel="noopener">CNA — NVIDIA halts Southeast Asian server shipments (FT)</a></li>
+<li><a href="https://www.trendforce.com/news/2026/11/25/insights-memory-spot-price-update-ddr4-ddr3-bear-the-brunt-of-weak-consumer-demand-mainstream-ddr4-down-1-61/" target="_blank" rel="noopener">TrendForce — memory spot price update, 25 November</a></li>
+<li><a href="https://stockanalysis.com/news/nvidia-sp-rating-creditwatch-negative/" target="_blank" rel="noopener">S&amp;P places NVIDIA on CreditWatch negative</a></li>
+<li><a href="https://www.taipeitimes.com/News/biz/archives/2026/11/26/2003868387" target="_blank" rel="noopener">Taipei Times — Taiwanese shares plunge, 25 November session</a></li>
+<li><a href="https://www.unite.ai/fcc-space-bureau-authorizes-spacexs-starmind-with-conditions/" target="_blank" rel="noopener">Unite.ai — FCC Space Bureau authorises Starmind with conditions</a></li>
+<li><a href="https://www.whitehouse.gov/presidential-actions/2026/11/thanksgiving-day-2026/" target="_blank" rel="noopener">The White House — Thanksgiving Day, 2026</a></li>
+<li><a href="https://www.carolinajournal.com/nc-board-certifies-most-midterm-results-after-heated-debate/" target="_blank" rel="noopener">Carolina Journal — state board certifies most midterm results</a></li>
+<li><a href="https://www.guilfordcountync.gov/government/board-elections/board-elections-meetings" target="_blank" rel="noopener">Guilford County Board of Elections — meetings calendar</a></li>
+<li><a href="https://www.kyivpost.com/post/91254" target="_blank" rel="noopener">Kyiv Post — overnight attack, 26 November</a></li>
+<li><a href="https://euromaidanpress.com/2026/11/26/russia-hit-a-kyiv-shopping-center-with-ballistic-missiles-and-kryvyi-rih-with-jet-drones-strikes-also-killed-four-in-kharkiv-oblast-and-two-in-sloviansk/" target="_blank" rel="noopener">Euromaidan Press — regional strike detail, 26 November</a></li>
+<li><a href="https://www.rte.ie/news/ukraine/2026/1126/1600710-ukraine-war/" target="_blank" rel="noopener">RTE — Ukraine war, 26 November (Reuters)</a></li>
+<li><a href="https://kyivindependent.com/poland-plans-no-fly-zone-near-ukraine-border-asks-nato-to-intercept-russian-missiles-over-ukraine/" target="_blank" rel="noopener">Kyiv Independent — Poland’s no-fly zone plan</a></li>
+<li><a href="https://www.gov.pl/web/obrona-narodowa/kierownictwo" target="_blank" rel="noopener">Polish Ministry of National Defence — leadership</a></li>
+<li><a href="https://www.arabnews.com/middle-east/iran-claims-lng-tanker-ablaze-in-hormuz-after-hitting-mine-3013942" target="_blank" rel="noopener">Arab News — Iran claims LNG tanker ablaze in Hormuz (Reuters)</a></li>
+<li><a href="https://tech.eu/2026/11/26/watersense-raises-eur575m-to-build-europes-water-intelligence-infrastructure" target="_blank" rel="noopener">Tech.eu — WaterSense raises €5.75m</a></li>
+<li><a href="https://www.calcalistech.com/ctechnews/article/bkreuwq1xg" target="_blank" rel="noopener">Calcalist — Zipher’s $45m Series A</a></li>
+<li><a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="noopener">NYSE — holidays and trading hours</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">FOMC — 2026 meeting calendar</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-26-daily.pdf">PDF</a></span>
+</div></div></body></html>
