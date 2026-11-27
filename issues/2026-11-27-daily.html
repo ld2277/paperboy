@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paperboy">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFF1E5">
+<link rel="apple-touch-icon" href="../icon.png">
+<title>Paperboy — Friday, November 27, 2026</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: #FFF1E5; color: #33302E;
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 28px 24px 64px; }
+a { color: #0D7680; text-decoration: none; border-bottom: 1px solid #C5D9DB; }
+a:hover { border-bottom-color: #0D7680; }
+
+/* ---- masthead ---- */
+.rule-hair { border: 0; border-top: 1px solid #E0D5CB; margin: 0; }
+.rule-heavy { border: 0; border-top: 2px solid #33302E; margin: 0; }
+.masthead { text-align: center; padding: 14px 0 10px; }
+.masthead h1 {
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', Times, serif; font-size: 40px; font-weight: 700;
+  letter-spacing: -0.5px; margin: 0 0 6px;
+}
+.dateline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 2px; color: #66605C; margin: 0;
+}
+.standfirst {
+  font-style: italic; font-size: 18px; color: #66605C;
+  margin: 22px 0 0; line-height: 1.5;
+}
+
+/* ---- jump links ---- */
+.jump {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 22px 0 0; padding: 0; list-style: none;
+}
+.jump a {
+  display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700;
+  color: #E3120B; border: 1px solid #E0D5CB; border-radius: 2px;
+  padding: 7px 11px; min-height: 34px; line-height: 20px;
+}
+.jump a:hover { border-color: #E3120B; }
+
+/* ---- sections ---- */
+.section { margin-top: 40px; scroll-margin-top: 12px; }
+.topic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #E3120B;
+  margin: 18px 0 0;
+}
+.item { margin-top: 26px; }
+.item h2 {
+  font-size: 22px; font-weight: 700; line-height: 1.25;
+  margin: 0 0 10px;
+}
+.item h2 .num {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; color: #E3120B;
+  letter-spacing: 1px; vertical-align: 3px; margin-right: 8px;
+}
+/* .item p resets margins below, so this needs the extra class to win */
+.item p.field, .field {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin: 20px 0 4px;
+}
+.item p { margin: 0; }
+.quiet { color: #66605C; font-style: italic; }
+
+/* ---- long-form (weekly) ---- */
+.longform p { margin: 0 0 16px; }
+.longform p.drop::first-letter {
+  font-size: 54px; float: left; line-height: 0.85;
+  padding: 4px 7px 0 0; color: #E3120B; font-weight: 700;
+}
+.pull {
+  font-style: italic; font-size: 21px; line-height: 1.4;
+  border-left: 3px solid #E3120B; padding-left: 16px;
+  margin: 24px 0; color: #33302E;
+}
+.cal { list-style: none; padding: 0; margin: 12px 0 0; }
+.cal li { padding: 8px 0; border-bottom: 1px solid #E0D5CB; }
+.cal .when {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.2px; color: #E3120B; display: block;
+}
+
+/* ---- footer ---- */
+.sources {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12.5px; color: #66605C; line-height: 1.9;
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.sources li { margin-bottom: 2px; }
+.foot {
+  margin-top: 48px; padding-top: 14px; border-top: 1px solid #E0D5CB;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.foot a { color: #66605C; border-bottom-color: #E0D5CB; }
+
+/* ---- archive ---- */
+.issue { padding: 16px 0; border-bottom: 1px solid #E0D5CB; }
+.issue a.t { font-size: 20px; font-weight: 700; color: #33302E; border: 0; }
+.issue .meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: #66605C; margin-top: 6px;
+}
+.issue .peek {
+  font-style: italic; color: #66605C; font-size: 16px;
+  line-height: 1.5; margin: 6px 0 0;
+}
+.badge { color: #E3120B; font-weight: 700; }
+.month {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase;
+  font-weight: 700; letter-spacing: 2px; color: #66605C;
+  margin: 36px 0 0; padding-bottom: 8px; border-bottom: 2px solid #33302E;
+}
+
+/* ---- phone ---- */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .wrap { padding: 20px 18px 56px; }
+  .masthead h1 { font-size: 31px; }
+  .dateline { font-size: 10px; letter-spacing: 1.4px; }
+  .standfirst { font-size: 17px; }
+  .item h2 { font-size: 20px; }
+  .section { margin-top: 34px; }
+}
+
+/* ---- print: ⌘P from the page still behaves ---- */
+@media print {
+  body { font-size: 11pt; }
+  .jump, .foot { display: none; }
+  .item, .issue { break-inside: avoid; page-break-inside: avoid; }
+  .item h2, .topic, .field { break-after: avoid; page-break-after: avoid; }
+  p, div { orphans: 3; widows: 3; }
+  a { border: 0; }
+}
+</style>
+</head><body><div class="wrap">
+
+<hr class="rule-hair">
+<div class="masthead"><h1>PAPERBOY</h1><p class="dateline">Friday, November 27, 2026</p></div>
+<hr class="rule-heavy">
+<p class="standfirst">Euro-area leaders settled the succession at the European Central Bank, recommending Spain’s Pablo Hernández de Cos — currently running the Bank for International Settlements — to replace Christine Lagarde on 8 February.</p>
+<ul class="jump"><li><a href="#ai">AI</a></li><li><a href="#semiconductors">Semiconductors</a></li><li><a href="#business">Business</a></li><li><a href="#startups">Startups</a></li><li><a href="#us">US</a></li><li><a href="#world-politics">World Politics</a></li></ul>
+<div class="section" id="ai">
+<hr class="rule-hair"><p class="topic">AI</p>
+<div class="item">
+<h2>Anthropic’s charter gets a name: Chris Liddell is the Class T director</h2>
+<p class="field">What happened</p><p>Exhibit 10.1 to Anthropic’s first-ever 8-K — a Stockholders’ Agreement among Anthropic, PBC, Anthropic Founders, LLC and the Anthropic Long-Term Benefit Trust — states in Section 2.8 that <a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/exhibit101-closing8xk.htm">“the Trust hereby designates Chris Liddell as the Specified Class T Director”</a>. Class T is the single non-participating share that elects the smallest number of directors constituting a board majority, so the exhibit puts a named person into machinery the certificate of incorporation only described. The agreement also grants irrevocable proxies to company officers and voting trustees and voids any sale of half the voting power without notice to the Trust. Dario Amodei signed for the company, Christopher Olah for the founder LLC and Neil “Buddy” Shah as voting trustee.</p>
+<p class="field">What it means</p><p>The governance story at Anthropic is not the Class F supervoting share that got written up last week. It is Class T, and Class T belongs to the Trust rather than to the founders. The exhibit gives no biographical detail and we have not established which Chris Liddell is meant.</p>
+<p class="field">Watch next</p><p>Exhibits 3.2, 10.2 and 10.3 of the same filing are still unread.</p>
+</div>
+<div class="item">
+<h2>Moody’s holds, S&amp;P has a notch at risk — and the quote everyone is using is not a quote</h2>
+<p class="field">What happened</p><p>Moody’s said on Wednesday that reinstating Jensen Huang as chief executive affects neither Nvidia’s Aa1 rating nor its stable outlook. S&amp;P put the company’s AA on CreditWatch negative the same day over board oversight and succession planning, with a 90-day resolution window and any downgrade “limited to one notch” — which would be AA–, a grade S&amp;P does not itself name. Narrower than the “opposite directions” framing: <a href="https://www.thestar.com.my/tech/tech-news/2026/11/26/moody039s-says-nvidia039s-huang-reinstatement-eases-uncertainty-ratings-unchanged">Moody’s had cut its own outlook to stable from positive</a> around 19 November, over the succession gap Huang’s exit opened.</p>
+<p class="field">What it means</p><p>Both agencies marked Nvidia down on governance this month; only one has put a notch at risk. Demand is not what either is pricing. And note the quoting — “reduces near-term uncertainty” is circulating in headline quotation marks as a Moody’s line, but the raw wire carries no direct Moody’s quote at all — a reporter’s summary a carrier promoted into quote marks.</p>
+<p class="field">Watch next</p><p>The CreditWatch window runs to roughly 23 February. Huang is Senate Banking’s only witness on 3 December.</p>
+</div>
+<div class="item">
+<h2>Two weekday filings missing, and Huang’s pay still undisclosed</h2>
+<p class="field">What happened</p><p>Nvidia’s most recent filing of any kind is still 23 November — nothing on the 24th or 25th, and the 26th was Thanksgiving with EDGAR shut. The terms on which Huang returned remain undisclosed.</p>
+<p class="field">What it means</p><p>The silence is weaker evidence than it looks: a Form 4 is due within two business days of a reportable transaction, so no filing may mean no transaction. Compensation terms are different — those would arrive in an 8-K, and none has.</p>
+<p class="field">Watch next</p><p>One 23 November accession carries a 19 November report date and a filer number matching general counsel Tim Teter’s past Form 4s.</p>
+</div>
+</div>
+<div class="section" id="semiconductors">
+<hr class="rule-hair"><p class="topic">Semiconductors</p>
+<div class="item">
+<h2>Asia’s second straight rebound nearly erases Japan’s rout and barely touches Taiwan’s</h2>
+<p class="field">What happened</p><p>Friday closes: the <a href="https://newsonjapan.com/article/151558.php">Nikkei 225 at 58,711.11, up 2.11%</a>; the <a href="https://www.businesskorea.co.kr/news/articleView.html?idxno=282404">KOSPI 4,915.68, up 4.34%</a>; Hong Kong up 2.11%, mainland China sharply more, ChiNext up 11.61%. TSMC closed at NT$2,180, up 1.63%; Samsung Electronics 179,100 won, up 4.55%; SK hynix 1,110,000 won, up 5.41%. The TAIEX closed 39,308.08, up 0.40%, having given back most of an intraday gain.</p>
+<p class="field">What it means</p><p>The retrace is wildly uneven. Japan has recovered essentially all of its 25 November fall — the Nikkei finished about 30 points below where it stood before the rout. Taiwan, the epicentre, has recovered a bit over half. Korea is still down around 16% on the month. Korean and Chinese coverage attributes Friday to expectations of state market support; Japan’s own sources call it bargain-hunting.</p>
+<p class="field">Watch next</p><p>The NYSE closes at 1:00 p.m. ET today. Newsquawk had Nasdaq futures up 2.3% and Nvidia up 5% pre-market.</p>
+</div>
+<div class="item">
+<h2>A day on, the Nvidia shipment halt still has one source — and Reuters says so</h2>
+<p class="field">What happened</p><p>The report that Nvidia told manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand and Indonesia is a day old and still uncorroborated. <a href="https://www.crnasia.com/news/2026/components-and-peripherals/nvidia-halts-server-shipments-to-southeast-asia-as-us-tighte">Every carrier credits the Financial Times</a>; Reuters relayed it and said it could not independently verify it; Nvidia declined to comment to the FT and Dell and Supermicro did not respond. Two accounts that looked contradictory — one with a Brazil carve-out and no clock, one with a 90-day clock and no Brazil — describe the same Bureau of Industry and Security interim final rule effective 19 November: a destination licence covering the four countries and Brazil, and a separate remote-access licence whose 90-day clock runs to 17 February.</p>
+<p class="field">What it means</p><p>The rule is real and dated; the commercial consequence is still one newspaper’s account, and it is the second of those that moved chip prices on Wednesday. The two-limb reading rests on a single trade site; the Federal Register confirms the rule’s title and date but served no section citations.</p>
+<p class="field">Watch next</p><p>Any statement at all from Nvidia, Dell or Supermicro. Comments on the rule close 19 January.</p>
+</div>
+<div class="item">
+<h2>Lead times blow out again, this time in substrate tooling</h2>
+<p class="field">What happened</p><p><a href="https://www.trendforce.com/news/">TrendForce reported on Thursday</a> that lead times for FC-BGA equipment — tooling for the substrates under high-end accelerator packages — have jumped roughly fivefold, to 30 months. Samsung is also short of HBM base dies, with internal demand seen doubling to 30,000 a month in 2027. Separately it flagged proposed US tariffs of 20% to 40% on 14 trading partners, largely sparing chipmakers but threatening Korean memory and testing tools.</p>
+<p class="field">What it means</p><p>Two lead-time blowouts now sit in one supply chain: 40 weeks on Nvidia’s B300 and 30 months on substrate tooling. The second is the more structural: accelerator supply can be reallocated, a machine-tool order book cannot. And the tariff item points at precisely the names that led Friday’s rally.</p>
+<p class="field">Watch next</p><p>TSMC’s Arizona expansion ceremony is reported for 4 December with Trump attending — the day after Huang’s Senate appearance. Huang’s attendance is unconfirmed.</p>
+</div>
+</div>
+<div class="section" id="business">
+<hr class="rule-hair"><p class="topic">Business</p>
+<div class="item">
+<h2>Euro-area leaders settle the ECB succession on Spain’s Hernández de Cos</h2>
+<p class="field">What happened</p><p>The Council of the EU published a <a href="https://data.consilium.europa.eu/doc/document/ST-15530-2026-INIT/en/pdf">recommendation on Thursday</a> that Pablo Hernández de Cos be appointed President of the European Central Bank with effect from 8 February 2027, for eight years. He governed the Banco de España from 2018 to 2024, chaired the Basel Committee on Banking Supervision, and has run the Bank for International Settlements since July 2025. Laurence Boone of France and Markus Brunnermeier of Germany were recommended to the Executive Board, terms from 4 January. Lagarde said on 29 October she will step down on 7 February, nine months early. European Council president António Costa said the outcome “will pave the way for the formal appointment of the new ECB leadership in December”.</p>
+<p class="field">What it means</p><p>This is a recommendation, not an appointment. Under Article 283(2) the European Parliament and the ECB’s Governing Council are consulted — they give opinions, not consent — and the European Council appoints by qualified majority. Copy calling the remaining steps formalities is a characterisation; copy calling him a former Spanish central bank chief understates his current job.</p>
+<p class="field">Watch next</p><p>December’s European Council meeting, and Sunday’s Spanish election, which Sánchez is campaigning on.</p>
+</div>
+<div class="item">
+<h2>December is still priced for a hike, and nothing has repriced it since Wednesday</h2>
+<p class="field">What happened</p><p>The 8–9 December meeting carries a 93% probability of a 25 basis point increase on <a href="https://kalshi.com/fed-rate-odds">Kalshi</a> and 99% on frenzycap’s futures-derived reading — the direction being up, from a target range of 3.75% to 4.00% held on 28 October. Both are stamped Thursday, Kalshi’s at 7:28 p.m. ET and frenzycap’s at 9:02 a.m. No fresher reading was obtainable.</p>
+<p class="field">What it means</p><p>The 93-to-99 band is not a move. It is dispersion across venues and across a day — the same contract ran 94.4% to 99% across outlets on Wednesday. Read the band as “settled” and anyone reporting a shift inside it as noise. Wednesday’s core PCE at 3.3% and the GDP revision to 4.3% did the work; the holiday has added nothing.</p>
+<p class="field">Watch next</p><p>December’s meeting carries new projections. Friday’s par curve publishes mid-afternoon; there was no Thursday row.</p>
+</div>
+<div class="item">
+<h2>Inflation prints split: euro-area prices cooled, expectations of them did not</h2>
+<p class="field">What happened</p><p>Spain’s flash November CPI came in at 4.1%, down eight tenths from October’s 4.9%. France’s <a href="https://www.insee.fr/fr/statistiques/9161375">provisional reading was 2.9%</a>, from 3.4%. German unemployment held at 6.4% seasonally adjusted, the adjusted count up 9,000. Tokyo’s mid-month November index excluding fresh food rose 2.9%, headline 2.8%. And the ECB’s own consumer expectations survey, out Friday, had median one-year-ahead expectations rising to 3.5% in October from 3.1%.</p>
+<p class="field">What it means</p><p>Actual euro-area prices are decelerating while the public’s expectations of them are climbing — a gap central bankers dislike more than either number alone. Tokyo’s is a third straight month in the 2% range, which Japanese coverage puts down to the end of electricity and gas subsidies rather than demand. The “16-month high” framing is the wires’; the Statistics Bureau says no such thing.</p>
+<p class="field">Watch next</p><p>Euro-area flash inflation for November follows within days. The Bank of Japan meets in December.</p>
+</div>
+</div>
+<div class="section" id="startups">
+<hr class="rule-hair"><p class="topic">Startups</p>
+<p class="quiet" style="margin-top:16px">Thanksgiving week, and it shows: six small European rounds, no US activity we could find, no acquisitions and no shutdowns — and the index they came off would not say what kind of rounds they were.</p>
+<div class="item">
+<h2>Six small European rounds, and five of them will not say what they are</h2>
+<p class="field">What happened</p><p><a href="https://tech.eu/">Tech.eu’s index</a> carried six raises across Thursday and Friday: Lampsy Health at €1.1m, ARK Capture Solutions, a Belgian cleantech, at €5.4m, Audun at $3m, WaterSense at €5.75m, an Irish fintech called Shuttle described as “$1M-backed”, and an unnamed Austrian quantitative trading startup at pre-seed with General Catalyst credited. For every one but the Austrian, the index states no stage, no lead investor and no instrument.</p>
+<p class="field">What it means</p><p>That is not a formatting complaint, it is where errors enter. Shuttle’s “$1M-backed” describes the company, not a raise this week. WaterSense’s entry reads “secured €5.75 million in funding through a” and then cuts off — and “through a” is where a grant, a facility or a blended instrument usually appears. We printed that €5.75m on Wednesday as a grants-plus-pre-seed composite, which was right, and anyone calling it a round is wrong.</p>
+<p class="field">Watch next</p><p>Whether any of the five publishes a stage and a lead.</p>
+</div>
+<div class="item">
+<h2>A cumulative total caught before it travelled</h2>
+<p class="field">What happened</p><p>Lampsy Health, a spin-off of Lisbon’s Instituto Superior Técnico working on epilepsy-detection lighting, announced €1.1m on Thursday. Trackers also carry €230,000 and a “$10M seed” for the same company. The €230,000 is a separate, earlier round announced in May 2025, led by the Ageas Foundation with angels Susana de Sousa and Ellie Asgari — and <a href="https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-spin-off-secures-investment-to-bring-epilepsy-detection-technology-to-the-european-market/">that announcement itself flagged a planned further million</a>, which is what Thursday’s figure is.</p>
+<p class="field">What it means</p><p>So €1.1m is the number, never €1.33m, and the $10m seed on one unvetted tracker is unsupported. This is the third time in a fortnight a cumulative total has circulated as a round — Zipher’s $45m travelled as $53m across four outlets, one of which had $45M in its headline and $53M in its own URL.</p>
+<p class="field">Watch next</p><p>Nothing. It is a €1.1m round.</p>
+</div>
+</div>
+<div class="section" id="us">
+<hr class="rule-hair"><p class="topic">US</p>
+<div class="item">
+<h2>North Carolina’s 5th is certified — and we had it wrong for five briefs</h2>
+<p class="field">What happened</p><p>The State Board of Elections <a href="https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections">voted 5–0 on Tuesday 24 November</a> to canvass “all ballot items within the jurisdiction of the State Board” and authenticate the count in “every ballot item, except for contests still under recount”. It named those exceptions as exactly two: District Attorney District 21, covering Anson, Richmond and Scotland counties, and State House District 62 in Guilford. Turnout was more than 4.2 million ballots, 53.8% of registered voters, against 51.1% in 2022. The release names neither the 5th district nor either of its candidates.</p>
+<p class="field">What it means</p><p>We have carried “NC-5 still uncertified on the record” for five briefs and it is wrong. The certifying body published a closed list of what it held back and the 5th is not on it. That is categorically different from the concession and the reporter’s enumeration we declined to accept earlier: a candidate conceding is not a certification, but an authority closing its own list is.</p>
+<p class="field">Watch next</p><p>Guilford County’s board meets at 2 p.m. on 1 December. House District 62 is now the only Guilford contest still before the State Board, which makes it the overwhelmingly likely subject — an inference, not evidence; the county calendar states no subject at all.</p>
+</div>
+<div class="item">
+<h2>Two weeks to the funding cliff and nothing moved over the holiday</h2>
+<p class="field">What happened</p><p>The 11 December government funding deadline is a fortnight out. <a href="https://www.rollcall.com/">Roll Call</a>, the one congressional outlet readable to us, carries nothing dated 24 to 27 November on funding, appropriations, an omnibus or a continuing resolution; its nearest items are a permitting-bill story from the 25th and a 2027 House calendar piece from the 20th. The House and Senate’s own sites remain unreadable. The White House published nothing after Wednesday’s turkey proclamation, and the Supreme Court has issued one opinion all month, on the 9th.</p>
+<p class="field">What it means</p><p>This upgrades our position from “we cannot see the channel” to “nothing appeared on the channel we can see” — not the same as nothing happening, since the appropriations committees’ own sites are still unchecked. Either way a fortnight is short for a deal nobody has visibly begun.</p>
+<p class="field">Watch next</p><p>Congress returns next week. Committee own-sites are the route round the blocked congressional domains.</p>
+</div>
+</div>
+<div class="section" id="world-politics">
+<hr class="rule-hair"><p class="topic">World Politics</p>
+<div class="item">
+<h2>A 400,000-barrel Saudi refinery is hit, and Brent is up 6% in two sessions</h2>
+<p class="field">What happened</p><p>Saudi Arabia’s energy ministry said a “hostile aerial projectile” struck Aramco’s <a href="https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations">Jazan refinery</a> on the Red Sea coast on Thursday, starting a fire that halted some operations. One worker, a Nepali national per the ministry, was killed and several more injured. The ministry named no attacker; the Saudi-led coalition blamed the Houthis, who have claimed nothing for this strike. Aramco designs the refinery for up to 400,000 barrels a day and has said nothing itself.</p>
+<p class="field">What it means</p><p>Brent sat near $96 on Friday morning, up almost 6% across two thin sessions — but that window also holds two tankers struck near the Strait of Hormuz, one the Hong Kong-flagged Kun Peng. Neither can be given a share of the move. And every strike named this week involved a projectile: Iran’s mine claims still carry no vessel, flag, time or coordinate.</p>
+<p class="field">Watch next</p><p>A damage assessment, and any restart figure.</p>
+</div>
+<div class="item">
+<h2>155 drones overnight, nine regions’ railways and energy hit, six oblasts dark</h2>
+<p class="field">What happened</p><p>Ukraine’s air force said Russia launched <a href="https://www.ukrinform.net/rubric-ato/4189128-air-defences-shoot-down-110-of-155-russian-drones-launched-against-ukraine-overnight.html">155 Shahed-type strike drones</a> from 6 p.m. Thursday, 83 of them jet-powered. As of 8 a.m. it put 110 down or suppressed, with impacts at 27 locations — figures it called preliminary while saying the attack was still running. Prime minister Serhii Koretskyi said rail and energy infrastructure was struck in nine regions, and that “One person was killed and at least six others were injured”. Six oblasts lost power, worst in Dnipropetrovsk and Kherson.</p>
+<p class="field">What it means</p><p>The target set is the point: substations feeding railway operations, not the track. Ukraine moves most freight and much military logistics by rail, and an electrified network fails where the grid does. Treat the counts carefully: every outlet carrying them reproduces one air force post, a belligerent describing its own air defence. A separate past-day tally of six killed and 25 injured covers a different period.</p>
+<p class="field">Watch next</p><p>A final rather than preliminary count, and whether the damage shows up in outage schedules.</p>
+</div>
+<div class="item">
+<h2>Trump reposts the NATO joint statement with Ukraine added to the warning</h2>
+<p class="field">What happened</p><p>NATO published the joint statement from Trump’s Wednesday meeting with Mark Rutte on Thursday. Its text stresses <a href="https://www.foxnews.com/politics/trump-nato-chief-push-russia-avoid-actions-expand-war-ukraine">“the importance of Russia avoiding any actions that intentionally, or unintentionally, expand the war”</a>. Hours later Trump posted a version on Truth Social reading “the importance of Russia and Ukraine avoiding any actions that intentionally, or unintentionally, expand the War”. Two outlets carry both strings; neither source is reachable to us. Politico reports an unnamed NATO official saying the original wording was what had been agreed.</p>
+<p class="field">What it means</p><p>In a negotiated joint statement the identity of the party being warned is the substance. Extending it to the invaded country reads as balancing a text that was not balanced. The textual difference is solid; the claim that the change was unilateral rests on one anonymous official at two removes, and is not.</p>
+<p class="field">Watch next</p><p>NATO foreign ministers meet in Brussels on 2 December; Washington has postponed releasing its US force-posture review until after.</p>
+</div>
+</div>
+<div class="section" id="sources">
+<hr class="rule-hair"><p class="topic">Sources</p>
+<ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/exhibit101-closing8xk.htm" target="_blank" rel="noopener">SEC — Anthropic, PBC 8-K, Exhibit 10.1 (Stockholders’ Agreement)</a></li>
+<li><a href="https://data.sec.gov/submissions/CIK0001045810.json" target="_blank" rel="noopener">SEC — Nvidia Corporation filing index (CIK 1045810)</a></li>
+<li><a href="https://www.thestar.com.my/tech/tech-news/2026/11/26/moody039s-says-nvidia039s-huang-reinstatement-eases-uncertainty-ratings-unchanged" target="_blank" rel="noopener">The Star / Reuters — Moody’s says Nvidia’s Huang reinstatement eases uncertainty, ratings unchanged</a></li>
+<li><a href="https://www.unite.ai/s-and-p-global-ratings-puts-nvidias-aa-ratings-on-creditwatch/" target="_blank" rel="noopener">Unite.ai — S&amp;P Global Ratings puts Nvidia’s AA ratings on CreditWatch</a></li>
+<li><a href="https://newsonjapan.com/article/151558.php" target="_blank" rel="noopener">News on Japan — Tokyo market close, 27 November</a></li>
+<li><a href="https://www.businesskorea.co.kr/news/articleView.html?idxno=282404" target="_blank" rel="noopener">Business Korea — KOSPI surges, 27 November close</a></li>
+<li><a href="https://www.koreatimes.co.kr/economy/20261127/kospi-surges-over-4-kosdaq-gains-top-8-on-hopes-for-market-stabilization-fund" target="_blank" rel="noopener">Korea Times — Kospi surges over 4%, Kosdaq gains top 8%</a></li>
+<li><a href="https://money.udn.com/money/story/5607/9905817" target="_blank" rel="noopener">udn — Taiwan market close and TSMC, 27 November</a></li>
+<li><a href="https://longbridge.com/en/news/306991932" target="_blank" rel="noopener">Longbridge — Hong Kong and mainland China closes, 27 November</a></li>
+<li><a href="https://www.crnasia.com/news/2026/components-and-peripherals/nvidia-halts-server-shipments-to-southeast-asia-as-us-tighte" target="_blank" rel="noopener">CRN Asia — Nvidia halts server shipments to Southeast Asia as US tightens controls</a></li>
+<li><a href="https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=semiconductor" target="_blank" rel="noopener">Federal Register — Addressing Remote Access to Advanced Semiconductors (BIS, 19 November 2026)</a></li>
+<li><a href="https://www.trendforce.com/news/" target="_blank" rel="noopener">TrendForce — news index (FC-BGA lead times, Samsung HBM base dies, Huawei memory, tariffs)</a></li>
+<li><a href="https://data.consilium.europa.eu/doc/document/ST-15530-2026-INIT/en/pdf" target="_blank" rel="noopener">Council of the EU — Recommendation on the appointment of the President of the ECB (ST 15530/2026)</a></li>
+<li><a href="https://data.consilium.europa.eu/doc/document/ST-14652-2026-INIT/en/pdf" target="_blank" rel="noopener">Council of the EU — Recommendation on an ECB Executive Board appointment (ST 14652/2026)</a></li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html" target="_blank" rel="noopener">ECB — Christine Lagarde to step down on 7 February 2027</a></li>
+<li><a href="https://wtvbam.com/2026/11/26/euro-countries-pick-spains-de-cos-as-ecb-chief-costa-says/" target="_blank" rel="noopener">WTVB / Reuters — Euro countries pick Spain’s de Cos as ECB chief, Costa says</a></li>
+<li><a href="https://www.bis.org/about/biophdc.htm" target="_blank" rel="noopener">BIS — Pablo Hernández de Cos, General Manager</a></li>
+<li><a href="https://kalshi.com/fed-rate-odds" target="_blank" rel="noopener">Kalshi — Fed rate odds for the 8–9 December meeting</a></li>
+<li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC calendar</a></li>
+<li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611" target="_blank" rel="noopener">Treasury — daily par yield curve, November 2026</a></li>
+<li><a href="https://www.insee.fr/fr/statistiques/9161375" target="_blank" rel="noopener">INSEE — Informations rapides no. 295, provisional November CPI</a></li>
+<li><a href="https://www.presseportal.de/pm/6776/6399040" target="_blank" rel="noopener">Bundesagentur für Arbeit — November labour market report</a></li>
+<li><a href="https://www.stat.go.jp/data/cpi/sokuhou/tsuki/pdf/kubu.pdf" target="_blank" rel="noopener">Statistics Bureau of Japan — Tokyo CPI, November 2026 (mid-month preliminary)</a></li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html" target="_blank" rel="noopener">ECB — Consumer Expectations Survey, October 2026</a></li>
+<li><a href="https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261127_1965950.html" target="_blank" rel="noopener">National Bureau of Statistics of China — industrial profits, January–October</a></li>
+<li><a href="https://tech.eu/" target="_blank" rel="noopener">Tech.eu — funding index</a></li>
+<li><a href="https://tecnico.ulisboa.pt/en/news/campus-community/tecnico-spin-off-secures-investment-to-bring-epilepsy-detection-technology-to-the-european-market/" target="_blank" rel="noopener">Instituto Superior Técnico — Lampsy Health earlier investment round</a></li>
+<li><a href="https://www.ncsbe.gov/news/press-releases/2026/11/24/state-board-unanimously-certifies-midterm-elections" target="_blank" rel="noopener">NC State Board of Elections — State Board unanimously certifies midterm elections</a></li>
+<li><a href="https://www.rollcall.com/" target="_blank" rel="noopener">Roll Call</a></li>
+<li><a href="https://www.aljazeera.com/news/2026/11/26/attack-on-saudi-aramcos-jazan-refinery-kills-worker-disrupts-operations" target="_blank" rel="noopener">Al Jazeera — Attack on Saudi Aramco’s Jazan refinery kills worker, disrupts operations</a></li>
+<li><a href="https://www.aramco.com/en/news-media/elements-magazine/2022/jazan-complex" target="_blank" rel="noopener">Aramco — Jazan complex</a></li>
+<li><a href="https://safety4sea.com/strait-of-hormuz-tanker-traffic-rises-despite-escalating-attacks/" target="_blank" rel="noopener">Safety4Sea — Strait of Hormuz tanker traffic rises despite escalating attacks</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4189128-air-defences-shoot-down-110-of-155-russian-drones-launched-against-ukraine-overnight.html" target="_blank" rel="noopener">Ukrinform — Air defences shoot down 110 of 155 Russian drones overnight</a></li>
+<li><a href="https://www.ukrinform.net/rubric-ato/4189218-russian-strikes-hit-railways-and-energy-infrastructure-in-nine-ukrainian-regions-overnight-pm-koretskyi.html" target="_blank" rel="noopener">Ukrinform — Russian strikes hit railways and energy in nine regions, PM Koretskyi</a></li>
+<li><a href="https://www.foxnews.com/politics/trump-nato-chief-push-russia-avoid-actions-expand-war-ukraine" target="_blank" rel="noopener">Fox News — Trump and NATO chief push Russia to avoid actions that expand war</a></li>
+<li><a href="https://www.kyivpost.com/post/91339" target="_blank" rel="noopener">Kyiv Post — Trump’s version of the joint statement with Rutte</a></li>
+<li><a href="https://www.nyse.com/markets/hours-calendars" target="_blank" rel="noopener">NYSE — markets hours and calendars</a></li>
+</ul></div>
+<div class="foot">
+<span><a href="../archive.html">Archive</a></span>
+<span><a href="../pdf/2026-11-27-daily.pdf">PDF</a></span>
+</div></div></body></html>
